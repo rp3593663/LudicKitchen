@@ -37,12 +37,3 @@ a#HeaderMenu-shop {
     height: 40px;
     border-radius: 100px;
 }
-h2.hero_title {
-    max-width: 924px;
-    font-weight: 800;
-    font-size: 76px;
-    line-height: 86px;
-    letter-spacing: -2.28px;
-    text-align: center;
-    margin: auto;
-}
