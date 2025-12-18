@@ -15,3 +15,6 @@ ul.list-menu.list-menu--inline {
     border-radius: 100px;
     padding: 9px 12px;
 }
+.header__menu-item {
+    padding: 0px;
+}
