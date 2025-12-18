@@ -9,18 +9,18 @@
  */
 {
   "sections": {
-    "custom_liquid_CwLt9T": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "hero_section_AaEYTV": {
+      "type": "hero-section",
+      "name": "Hero Section",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
       }
     }
   },
   "order": [
-    "custom_liquid_CwLt9T"
+    "hero_section_AaEYTV"
   ]
 }
