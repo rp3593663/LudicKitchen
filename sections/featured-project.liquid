@@ -227,7 +227,7 @@
                         {% endif %}
 
                         <div class="raised_goal">
-                            ₹ {{ raised_amount | money_without_currency }}
+                            ₹ {{ raised_amount | number_with_delimiter }}
                             <span>Raise of ₹ {{ goal_amount | money_without_currency }} goal</span>
                         </div>
 
