@@ -28,10 +28,21 @@
         "padding": "",
         "margin": ""
       }
+    },
+    "how_works_XGp7pm": {
+      "type": "how-works",
+      "name": "How Works",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
     }
   },
   "order": [
     "hero_section_waaiCe",
-    "animation_Q8D6yV"
+    "animation_Q8D6yV",
+    "how_works_XGp7pm"
   ]
 }
