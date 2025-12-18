@@ -94,51 +94,52 @@
 	</div>
 </div>
 <script>
-    gsap.registerPlugin(ScrollTrigger, SplitText);
-    document.fonts.ready.then(() => {
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
-    const section = document.querySelector(".horizontal-section");
-    const title   = document.querySelector(".horizontal-title");
+document.fonts.ready.then(() => {
 
-    const split = new SplitText(title, { type: "chars" });
+  const section = document.querySelector(".horizontal-section");
+  const wrapper = document.querySelector(".horizontal-wrapper");
+  const title   = document.querySelector(".horizontal-title");
 
-    // Start text off-screen right
-    gsap.set(title, {
-        x: window.innerWidth
+  const split = new SplitText(title, { type: "chars" });
+
+  // Start text just outside viewport
+  gsap.set(title, {
+    xPercent: 100
+  });
+
+  const horizontalTween = gsap.to(title, {
+    xPercent: -100,
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",       // ✅ IMMEDIATE START
+      end: "bottom top",      // uses section height
+      scrub: true,
+      pin: wrapper,
+      anticipatePin: 1
+    }
+  });
+
+  // Optional per-letter float (can remove if you want exact truus)
+  split.chars.forEach(char => {
+    gsap.from(char, {
+      yPercent: gsap.utils.random(-120, 120),
+      rotation: gsap.utils.random(-30, 30),
+      ease: "power2.out",
+      scrollTrigger: {
+        containerAnimation: horizontalTween,
+        start: "left 80%",
+        end: "left 20%",
+        scrub: true
+      }
     });
+  });
 
-
-    const horizontalTween = gsap.to(title, {
-        x: () => -title.scrollWidth,
-        ease: "none",
-        scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => "+=" + (window.innerWidth + title.scrollWidth),
-        scrub: true,
-        pin: ".horizontal-wrapper", 
-        }
-    });
-
-
-    // Per-letter animation
-    split.chars.forEach(char => {
-        gsap.from(char, {
-        yPercent: (Math.random() - 0.5) * 500,
-        rotation: (Math.random() - 0.5) * 60,
-        ease: "elastic.out(1.2, 1)",
-        scrollTrigger: {
-            trigger: char,
-            containerAnimation: horizontalTween,
-            start: 'left 90%',
-            end: 'left 10%',
-            scrub: 0.5
-        }
-        });
-    });
-
-    });
+});
 </script>
+
 {% schema %}
 {
   "name": "Home Animation",
