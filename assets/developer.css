@@ -47,5 +47,6 @@ a#HeaderMenu-shop {
     text-decoration: unset;
     background: var(--primary_color);
     color: var(--white);
+    display: inline-block;
     border-radius: 6px;
 }
