@@ -213,10 +213,6 @@
                 </h3>
                 <div class="project_data_container">
                     <div class="project_data_counter">
-                        <div class="raised_goal">
-                            ₹ 10,000
-                            <span>Raise of ₹ 75,00,000 goal</span>
-                        </div>
 
                         {% assign raised_amount = 10000 %}
                         {% assign goal_amount = 7500000 %}
@@ -229,6 +225,11 @@
                         {% if bar_width < 2 %}
                         {% assign bar_width = 2 %}
                         {% endif %}
+
+                        <div class="raised_goal">
+                            ₹ {{ raised_amount | money_without_currency }}
+                            <span>Raise of ₹ {{ goal_amount | money_without_currency }} goal</span>
+                        </div>
 
                         <div class="raised_progress_bar">
                             <div class="progress_track">
