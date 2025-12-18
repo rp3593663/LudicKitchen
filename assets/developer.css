@@ -21,7 +21,11 @@ ul.list-menu.list-menu--inline {
     gap: 48px;
 }
 .header__menu-item {
-    padding: 0px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1E1E1E;
+    letter-spacing: -0.84px;
 }
 a#HeaderMenu-shop {
     background: #214ECF;
