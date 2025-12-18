@@ -124,14 +124,14 @@
     // Per-letter animation
     split.chars.forEach(char => {
         gsap.from(char, {
-        yPercent: (Math.random() - 0.5) * 500,
+        yPercent: (Math.random() - 0.5) * 100,
         rotation: (Math.random() - 0.5) * 60,
         ease: "elastic.out(1.2, 1)",
         scrollTrigger: {
             trigger: char,
             containerAnimation: horizontalTween,
-            start: 'left 55%',
-            end: 'left 55%',
+            start: 'left 90%',
+            end: 'left 10%',
             scrub: 0.5
         }
         });
