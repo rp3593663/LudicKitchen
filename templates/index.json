@@ -18,9 +18,20 @@
         "padding": "60px 0px 0px",
         "margin": ""
       }
+    },
+    "animation_Q8D6yV": {
+      "type": "animation",
+      "name": "Home Animation",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
     }
   },
   "order": [
-    "hero_section_AaEYTV"
+    "hero_section_AaEYTV",
+    "animation_Q8D6yV"
   ]
 }
