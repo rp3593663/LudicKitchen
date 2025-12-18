@@ -217,21 +217,28 @@
                             ₹ 10,000
                             <span>Raise of ₹ 75,00,000 goal</span>
                         </div>
+
                         {% assign raised_amount = 10000 %}
                         {% assign goal_amount = 7500000 %}
-
-                        {% assign progress = raised_amount | times: 100 | divided_by: goal_amount %}
+                        {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount %}
+                        {% assign progress = progress | round: 2 %}
                         {% if progress > 100 %}
                         {% assign progress = 100 %}
                         {% endif %}
+                        {% assign bar_width = progress %}
+                        {% if bar_width < 2 %}
+                        {% assign bar_width = 2 %}
+                        {% endif %}
+
                         <div class="raised_progress_bar">
                             <div class="progress_track">
-                                <div class="progress_fill" style="width: {{ progress }}%;"> </div>
+                                <div class="progress_fill" style="width: {{ bar_width }}%;"></div>
                             </div>
                             <div class="progress_labels">
                                 <span>{{ progress }}% funded</span>
                             </div>
                         </div>
+
                         <div class="raised_counters_data">
                             <div class="count_data">
                                 <h5>2,182</h5>
