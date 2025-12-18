@@ -217,9 +217,13 @@
                             ₹ 10,000
                             <span>Raise of ₹ 75,00,000 goal</span>
                         </div>
-                        {% assign raised_amount = section.settings.raised_amount %}
-                        {% assign goal_amount = section.settings.goal_amount %}
+                        {% assign raised_amount = 10000 %}
+                        {% assign goal_amount = 7500000 %}
 
+                        {% assign progress = raised_amount | times: 100 | divided_by: goal_amount %}
+                        {% if progress > 100 %}
+                        {% assign progress = 100 %}
+                        {% endif %}
                         <div class="raised_progress_bar">
                             <div class="progress_track">
                                 <div class="progress_fill" style="width: {{ progress }}%;"></div>
