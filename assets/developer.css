@@ -23,3 +23,13 @@ ul.list-menu.list-menu--inline {
 .header__menu-item {
     padding: 0px;
 }
+a#HeaderMenu-shop {
+    background: #214ECF;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    height: 40px;
+    border-radius: 100px;
+}
