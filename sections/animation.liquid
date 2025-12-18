@@ -61,6 +61,52 @@
         </div>
 	</div>
 </div>
+<script>
+    gsap.registerPlugin(ScrollTrigger, SplitText);
+    document.fonts.ready.then(() => {
+
+    const section = document.querySelector(".horizontal-section");
+    const title   = document.querySelector(".horizontal-title");
+
+    const split = new SplitText(title, { type: "chars" });
+
+    // Start text off-screen right
+    gsap.set(title, {
+        x: window.innerWidth
+    });
+
+
+    const horizontalTween = gsap.to(title, {
+        x: () => -title.scrollWidth,
+        ease: "none",
+        scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => "+=" + (window.innerWidth + title.scrollWidth),
+        scrub: true,
+        pin: ".horizontal-wrapper", 
+        }
+    });
+
+
+    // Per-letter animation
+    split.chars.forEach(char => {
+        gsap.from(char, {
+        yPercent: (Math.random() - 0.5) * 500,
+        rotation: (Math.random() - 0.5) * 60,
+        ease: "elastic.out(1.2, 1)",
+        scrollTrigger: {
+            trigger: char,
+            containerAnimation: horizontalTween,
+            start: 'left 90%',
+            end: 'left 10%',
+            scrub: 0.5
+        }
+        });
+    });
+
+    });
+</script>
 {% schema %}
 {
   "name": "Home Animation",
