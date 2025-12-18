@@ -63,6 +63,11 @@
         top: 5px;
         width: 100%;
     }
+    .featured_project_container {
+        display: grid;
+        grid-template-columns: 1.36fr 0.64fr;
+        gap: 8px;
+    }   
 {%- endstyle -%}
 <div class="kretoss-section section-featured-project">
 	<div class="{{ container }}" {{ max_width }}>
@@ -83,6 +88,7 @@
                             <span>Raise of ₹ 75,00,000 goal</span>
                         </div>
                         <div class="raised_progress_bar">
+                            
                         </div>
                         <div class="raised_counters_data">
                             <div class="count_data">
