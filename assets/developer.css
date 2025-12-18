@@ -38,3 +38,15 @@ a#HeaderMenu-shop {
     height: 40px;
     border-radius: 100px;
 }
+.theme_btn {
+    padding: 14px 48px;
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.8px;
+    text-decoration: unset;
+    background: var(--primary_color);
+    color: var(--white);
+    border-radius: 6px;
+}
