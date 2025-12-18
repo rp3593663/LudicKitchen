@@ -5,7 +5,7 @@
     --grey: #F7F7F7;
 }
 body{
-    background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/page_bg_lines.svg?v=1766044402);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/page_bg_lines.svg?v=1766044402)!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
 }
