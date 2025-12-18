@@ -113,7 +113,7 @@
         ease: "none",
         scrollTrigger: {
         trigger: section,
-        start: "top top",
+        start: "",
         end: () => "+=" + (window.innerWidth + title.scrollWidth),
         scrub: true,
         pin: ".horizontal-wrapper", 
@@ -124,7 +124,7 @@
     // Per-letter animation
     split.chars.forEach(char => {
         gsap.from(char, {
-        yPercent: (Math.random() - 0.5) * 100,
+        yPercent: (Math.random() - 0.5) * 500,
         rotation: (Math.random() - 0.5) * 60,
         ease: "elastic.out(1.2, 1)",
         scrollTrigger: {
