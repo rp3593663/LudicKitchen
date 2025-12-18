@@ -38,11 +38,22 @@
         "padding": "",
         "margin": ""
       }
+    },
+    "featured_project_Kx6wiz": {
+      "type": "featured-project",
+      "name": "Featured Project",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
     }
   },
   "order": [
     "hero_section_waaiCe",
     "animation_Q8D6yV",
-    "how_works_XGp7pm"
+    "how_works_XGp7pm",
+    "featured_project_Kx6wiz"
   ]
 }
