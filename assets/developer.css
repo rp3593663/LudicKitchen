@@ -13,9 +13,12 @@ body{
 }
 
 ul.list-menu.list-menu--inline {
-    background: #F4F4F4;
+    background: #f4f4f4;
     border-radius: 100px;
     padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
 }
 .header__menu-item {
     padding: 0px;
