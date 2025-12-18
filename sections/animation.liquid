@@ -125,9 +125,9 @@ document.fonts.ready.then(() => {
   // Optional per-letter float (can remove if you want exact truus)
   split.chars.forEach(char => {
     gsap.from(char, {
-      yPercent: gsap.utils.random(-120, 120),
-      rotation: gsap.utils.random(-30, 30),
-      ease: "power2.out",
+      yPercent: (Math.random() - 0.5) * 500,
+      rotation: (Math.random() - 0.5) * 60,
+      ease: "elastic.out(1.2, 1)",
       scrollTrigger: {
         containerAnimation: horizontalTween,
         start: "left 80%",
