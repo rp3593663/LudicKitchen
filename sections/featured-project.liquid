@@ -226,12 +226,12 @@
                         {% assign bar_width = 2 %}
                         {% endif %}
 
-                       <div class="raised_goal">
-  ₹ {{ raised_amount | times: 100 | money_without_currency }}
-  <span>
-    Raise of ₹ {{ goal_amount | times: 100 | money_without_currency }} goal
-  </span>
-</div>
+                        <div class="raised_goal">
+                            ₹ {{ raised_amount | times: 100 | money_without_currency }}
+                            <span>
+                                Raise of ₹ {{ goal_amount | times: 100 | money_without_currency }} goal
+                            </span>
+                        </div>
 
 
                         <div class="raised_progress_bar">
