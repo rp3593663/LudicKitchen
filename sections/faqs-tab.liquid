@@ -68,6 +68,9 @@
   border-top:1px solid #e5e5e5;
 }
 
+/* ===============================
+   FAQ ACCORDION (SMOOTH)
+================================ */
 .faq-item{
   border-bottom:1px solid #e5e5e5;
 }
@@ -86,22 +89,28 @@
 
 .faq-icon{
   font-size:20px;
-  transition:transform .3s ease;
+  transition:transform .4s ease;
 }
 
+/* SMOOTH TOGGLE */
 .faq-answer{
-  display:none;
-  padding-bottom:20px;
-  color:#555;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:
+    max-height .45s ease,
+    opacity .35s ease;
 }
 
 .faq-item.active .faq-answer{
-  display:block;
+  max-height:500px; /* large enough for content */
+  opacity:1;
 }
 
 .faq-item.active .faq-icon{
   transform:rotate(45deg);
 }
+
 {%- endstyle -%}
 
 <div class="kretoss-section section-faqs-tab">
