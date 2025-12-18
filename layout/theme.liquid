@@ -94,10 +94,10 @@
       }
       {% endfor %}
 
-      {{ scheme_classes | prepend: 'body' }} {
+      /* {{ scheme_classes | prepend: 'body' }} {
         color: rgba(var(--color-foreground), 0.75);
         background-color: rgb(var(--color-background));
-      }
+      } */
 
       :root {
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
