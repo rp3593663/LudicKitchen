@@ -10,6 +10,7 @@ body{
     background-repeat: no-repeat!important;
     background-size: cover!important;
     font-family: var(--font-family)!important;
+    color: var(--black);
 }
 
 ul.list-menu.list-menu--inline {
