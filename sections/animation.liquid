@@ -118,8 +118,8 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top top",       // ✅ IMMEDIATE START
-     end: () => "+=" + (window.innerWidth + title.scrollWidth),
+      start: "top top",     
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
       anticipatePin: 1
