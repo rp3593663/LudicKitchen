@@ -129,6 +129,7 @@ document.fonts.ready.then(() => {
       rotation: (Math.random() - 0.5) * 60,
       ease: "elastic.out(1.2, 1)",
       scrollTrigger: {
+        trigger: char,
         containerAnimation: horizontalTween,
         start: "left 80%",
         end: "left 20%",
