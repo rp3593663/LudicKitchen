@@ -24,7 +24,7 @@
       "name": "Home Animation",
       "settings": {
         "max_width": "",
-        "fullwidth": false,
+        "fullwidth": true,
         "padding": "",
         "margin": ""
       }
