@@ -9,3 +9,9 @@ body{
     background-repeat: no-repeat!important;
     background-size: cover!important;
 }
+
+ul.list-menu.list-menu--inline {
+    background: #F4F4F4;
+    border-radius: 100px;
+    padding: 9px 12px;
+}
