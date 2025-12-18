@@ -1,97 +1,266 @@
 {%- if section.settings.fullwidth -%}
-	{%- assign container = 'container-full' -%}
+  {%- assign container = 'container-full' -%}
 {%- elsif section.settings.max_width != blank -%}
-	{%- assign container = 'kretoss-container' -%}
+  {%- assign container = 'kretoss-container' -%}
 {%- else -%}
-	{%- assign container = 'page-width' -%}
+  {%- assign container = 'page-width' -%}
 {%- endif -%}
 
 {%- assign max_width = '' -%}
 {%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
-	{%- assign width_container = section.settings.max_width | plus: 0 -%}
-	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
 {%- endif -%}
 
-{% assign margin 	= section.settings.margin | split: "|" %}
-{% assign padding 	= section.settings.padding | split: "|" %}
+{% assign margin  = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
 {%- style -%}
-  {%- if margin[0] != blank or padding[0] != blank -%}
-		#shopify-section-{{ section.id }} .section-faqs-tab{
-			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
-			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
-		}
-	{%- endif -%}
-	{%- if margin[1] != blank or padding[1] != blank -%}
-		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .section-faqs-tab{
-				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
-				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[2] != blank or padding[2] != blank -%}
-		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .section-faqs-tab{
-				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
-				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[3] != blank or padding[3] != blank -%}
-		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .section-faqs-tab{
-				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
-				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-    
+/* ===============================
+   SPACING
+================================ */
+#shopify-section-{{ section.id }} .section-faqs-tab{
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.faqs_tab_container{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:40px;
+}
+
+@media(max-width:991px){
+  .faqs_tab_container{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===============================
+   TABS
+================================ */
+.faq-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.faq-tab{
+  background:none;
+  border:none;
+  text-align:left;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  color:#999;
+}
+
+.faq-tab.active{
+  color:#0057ff;
+}
+
+/* ===============================
+   FAQ ACCORDION
+================================ */
+.faq-content{
+  border-top:1px solid #e5e5e5;
+}
+
+.faq-item{
+  border-bottom:1px solid #e5e5e5;
+}
+
+.faq-question{
+  width:100%;
+  background:none;
+  border:none;
+  padding:22px 0;
+  font-size:18px;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.faq-icon{
+  font-size:20px;
+  transition:transform .3s ease;
+}
+
+.faq-answer{
+  display:none;
+  padding-bottom:20px;
+  color:#555;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+.faq-item.active .faq-icon{
+  transform:rotate(45deg);
+}
 {%- endstyle -%}
+
 <div class="kretoss-section section-faqs-tab">
-	<div class="{{ container }}" {{ max_width }}>
-        <div class="faqs_tab_container">
-            
-        </div>
-	</div>
+  <div class="{{ container }}" {{ max_width }}>
+    <div class="faqs_tab_container">
+
+      <!-- LEFT TABS -->
+      <div class="faq-tabs">
+        {% assign first_tab = '' %}
+        {% for block in section.blocks %}
+          {% if block.type == 'tab' %}
+            {% if first_tab == '' %}
+              {% assign first_tab = block.settings.tab_handle %}
+            {% endif %}
+            <button
+              class="faq-tab {% if forloop.first %}active{% endif %}"
+              data-tab="{{ block.settings.tab_handle }}"
+              {{ block.shopify_attributes }}>
+              {{ block.settings.tab_title }}
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- RIGHT FAQ CONTENT -->
+      <div class="faq-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'faq' %}
+            <div
+              class="faq-item"
+              data-tab="{{ block.settings.tab_handle }}"
+              {% unless block.settings.tab_handle == first_tab %}
+                style="display:none"
+              {% endunless %}
+              {{ block.shopify_attributes }}>
+
+              <button class="faq-question">
+                {{ block.settings.question }}
+                <span class="faq-icon">+</span>
+              </button>
+
+              <div class="faq-answer">
+                {{ block.settings.answer }}
+              </div>
+
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  // TAB SWITCH
+  document.querySelectorAll("#shopify-section-{{ section.id }} .faq-tab").forEach(tab=>{
+    tab.addEventListener("click",()=>{
+      const key = tab.dataset.tab;
+
+      document.querySelectorAll("#shopify-section-{{ section.id }} .faq-tab")
+        .forEach(t=>t.classList.remove("active"));
+      tab.classList.add("active");
+
+      document.querySelectorAll("#shopify-section-{{ section.id }} .faq-item")
+        .forEach(item=>{
+          item.style.display = item.dataset.tab === key ? "block" : "none";
+          item.classList.remove("active");
+        });
+    });
+  });
+
+  // ACCORDION
+  document.querySelectorAll("#shopify-section-{{ section.id }} .faq-question")
+    .forEach(q=>{
+      q.addEventListener("click",()=>{
+        q.closest(".faq-item").classList.toggle("active");
+      });
+    });
+
+});
+</script>
+
 {% schema %}
 {
   "name": "FAQs Tab",
   "settings": [
     {
-      "type": "header",
-      "content": "Layout settings"
-    },
-    {
       "type": "text",
       "id": "max_width",
-      "label": "Width container",
-      "info": "Default: 1296px"
+      "label": "Max width",
+      "default": "1296px"
     },
     {
       "type": "checkbox",
       "id": "fullwidth",
-      "label": "Fullwidth"
+      "label": "Full width"
     },
     {
       "type": "text",
       "id": "padding",
       "label": "Padding",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "placeholder": "0px 0px 0px 0px"
     },
     {
       "type": "text",
       "id": "margin",
       "label": "Margin",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "placeholder": "0px 0px 0px 0px"
     }
   ],
-	"presets": [
-		{
-			"name": "FAQs Tab"
-		}
-    ]
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "FAQ Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab title",
+          "default": "Funding"
+        },
+        {
+          "type": "text",
+          "id": "tab_handle",
+          "label": "Tab handle",
+          "info": "Example: funding"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_handle",
+          "label": "Tab handle",
+          "info": "Must match tab handle"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs Tab"
+    }
+  ]
 }
 {% endschema %}
