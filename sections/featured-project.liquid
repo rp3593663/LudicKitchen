@@ -216,8 +216,9 @@
                 <div class="project_data_container">
                     <div class="project_data_counter">
 
-                        {% assign raised_amount = 500000 %}
-                        {% assign goal_amount = 7500000 %}
+                        {% assign raised_amount = project_product.metafields.custom.raised_amount | default: 0 %}
+                        {% assign goal_amount = project_product.metafields.custom.project_goal | default: 1 %}
+
                         {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount %}
                         {% assign progress = progress | round: 2 %}
                         {% if progress > 100 %}
