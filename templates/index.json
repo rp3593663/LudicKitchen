@@ -92,6 +92,22 @@
             "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
           }
         },
+        "faq_DPLak9": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_EHnaJt": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
         "faq_f39TgX": {
           "type": "faq",
           "settings": {
@@ -193,6 +209,8 @@
         "faq_PNhBrP",
         "faq_haiHwj",
         "faq_84CQyd",
+        "faq_DPLak9",
+        "faq_EHnaJt",
         "faq_f39TgX",
         "tab_EU8eXh",
         "faq_CDrb3k",
