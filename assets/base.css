@@ -2453,9 +2453,12 @@ input[type='checkbox'] {
 .header__heading-logo {
   height: auto;
   max-width: 100%;
-  width: 74px;
 }
-
+@media(max-width: 767px){
+  .header__heading-logo {
+    width: 74px;
+  }
+}
 .header__heading-logo-wrapper {
   width: 100%;
   display: inline-block;
