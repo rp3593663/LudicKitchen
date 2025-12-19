@@ -11,6 +11,17 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "pre_footer_6BwzaT": {
+      "type": "pre-footer",
+      "name": "Pre Footer",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": "",
+        "menu": "footer"
+      }
+    },
     "footer": {
       "type": "footer",
       "disabled": true,
@@ -31,6 +42,7 @@
     }
   },
   "order": [
+    "pre_footer_6BwzaT",
     "footer"
   ]
 }
