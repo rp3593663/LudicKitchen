@@ -23,24 +23,12 @@
   {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
 }
 
-/* ===============================
-   LAYOUT
-================================ */
 .faqs_tab_container{
   display:grid;
   grid-template-columns:260px 1fr;
   gap:40px;
 }
 
-@media(max-width:991px){
-  .faqs_tab_container{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ===============================
-   TABS
-================================ */
 .faq-tabs{
   display:flex;
   flex-direction:column;
@@ -61,16 +49,10 @@
   color:#0057ff;
 }
 
-/* ===============================
-   FAQ ACCORDION
-================================ */
 .faq-content{
   border-top:1px solid #e5e5e5;
 }
 
-/* ===============================
-   FAQ ACCORDION (SMOOTH)
-================================ */
 .faq-item{
   border-bottom:1px solid #e5e5e5;
 }
@@ -92,7 +74,6 @@
   transition:transform .4s ease;
 }
 
-/* SMOOTH TOGGLE */
 .faq-answer{
   max-height:0;
   overflow:hidden;
@@ -103,7 +84,7 @@
 }
 
 .faq-item.active .faq-answer{
-  max-height:500px; /* large enough for content */
+  max-height:500px;
   opacity:1;
 }
 
