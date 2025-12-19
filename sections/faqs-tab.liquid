@@ -167,46 +167,71 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
+  const scope = document.querySelector("#shopify-section-{{ section.id }}");
+
+  function openFirstFaq(tabKey){
+    const items = scope.querySelectorAll(".faq-item");
+    let firstOpened = false;
+
+    items.forEach(item => {
+      const answer = item.querySelector(".faq-answer");
+
+      if(item.dataset.tab === tabKey){
+        item.style.display = "block";
+
+        if(!firstOpened){
+          item.classList.add("active");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          firstOpened = true;
+        } else {
+          item.classList.remove("active");
+          answer.style.maxHeight = null;
+        }
+      } else {
+        item.style.display = "none";
+        item.classList.remove("active");
+        answer.style.maxHeight = null;
+      }
+    });
+  }
+
+  // 👉 Init: open first FAQ of first tab
+  const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
+  if(firstTab){
+    openFirstFaq(firstTab);
+  }
 
   // TAB SWITCH
-  document.querySelectorAll("#shopify-section-{{ section.id }} .faq-tab").forEach(tab=>{
+  scope.querySelectorAll(".faq-tab").forEach(tab=>{
     tab.addEventListener("click",()=>{
       const key = tab.dataset.tab;
 
-      document.querySelectorAll("#shopify-section-{{ section.id }} .faq-tab")
+      scope.querySelectorAll(".faq-tab")
         .forEach(t=>t.classList.remove("active"));
       tab.classList.add("active");
 
-      document.querySelectorAll("#shopify-section-{{ section.id }} .faq-item")
-        .forEach(item=>{
-          item.style.display = item.dataset.tab === key ? "block" : "none";
-          item.classList.remove("active");
-        });
+      openFirstFaq(key);
     });
   });
 
-  // ACCORDION
-  document.querySelectorAll("#shopify-section-{{ section.id }} .faq-question")
-  // ACCORDION (SMOOTH HEIGHT)
-document.querySelectorAll("#shopify-section-{{ section.id }} .faq-question")
-  .forEach(q=>{
+  // ACCORDION CLICK
+  scope.querySelectorAll(".faq-question").forEach(q=>{
     q.addEventListener("click",()=>{
       const item = q.closest(".faq-item");
       const answer = item.querySelector(".faq-answer");
 
       if(item.classList.contains("active")){
-        answer.style.maxHeight = null;
         item.classList.remove("active");
+        answer.style.maxHeight = null;
       } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
         item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
       }
     });
   });
-
-
 });
 </script>
+
 
 {% schema %}
 {
