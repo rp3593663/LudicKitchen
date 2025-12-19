@@ -316,6 +316,25 @@
         </div>
 	</div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#shopify-section-{{ section.id }} .work_step_header')
+    .forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.work_step_item');
+
+        // Close others
+        item.parentElement.querySelectorAll('.work_step_item')
+          .forEach(i => {
+            if (i !== item) i.classList.remove('active');
+          });
+
+        item.classList.toggle('active');
+      });
+    });
+});
+</script>
+
 {% schema %}
 {
   "name": "How Works",
