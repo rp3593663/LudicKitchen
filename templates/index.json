@@ -208,7 +208,7 @@
       ],
       "name": "FAQs Tab",
       "settings": {
-        "max_width": "1296px",
+        "max_width": "",
         "fullwidth": false,
         "padding": "",
         "margin": ""
