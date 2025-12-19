@@ -97,6 +97,9 @@
 .field__input {
     background: transparent !important;
 }
+.field::after{
+    content: unset;
+}
 {%- endstyle -%}
 <div class="kretoss-section section-pre-footer">
 	<div class="{{ container }}" {{ max_width }}>
