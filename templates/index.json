@@ -46,8 +46,8 @@
         "max_width": "",
         "fullwidth": false,
         "project_product": "ludic-clogs-2025",
-        "padding": "98px 0px",
-        "margin": ""
+        "padding": "",
+        "margin": "98px 0px"
       }
     },
     "faqs_tab_8XxyKg": {
@@ -283,7 +283,7 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": ""
+        "margin": "98px 0px"
       }
     }
   },
