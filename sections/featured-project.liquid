@@ -196,7 +196,20 @@
         letter-spacing: -0.3px;
         color: var(--black);
     }
-
+@media(max-width: 767px){
+.section-featured-project h2.h2_title {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.84px;
+}
+.section-featured-project h2.h2_title span.border_text {
+    padding: 0px 0px 0px 10px;
+}
+.featured_project_container {
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+}
+}
 
 {%- endstyle -%}
 {% assign project_product = all_products[section.settings.project_product] %}
