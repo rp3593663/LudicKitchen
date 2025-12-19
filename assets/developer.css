@@ -51,3 +51,13 @@ a#HeaderMenu-shop {
     display: inline-block;
     border-radius: 6px;
 }
+
+@media(max-width: 767px){
+    .theme_btn {
+        padding: 11px 30px;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.6px;
+        border-radius: 4px;
+    }
+}
