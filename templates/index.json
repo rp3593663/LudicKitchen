@@ -15,7 +15,7 @@
       "settings": {
         "max_width": "",
         "fullwidth": false,
-        "padding": "60px 0px 0px",
+        "padding": "60px 0px 0px | | | 72px 0px 0px",
         "margin": ""
       }
     },
