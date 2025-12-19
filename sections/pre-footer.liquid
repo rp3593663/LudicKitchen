@@ -127,7 +127,20 @@
                 <span>Subscribe to stay updated on the latest Updates.</span>
             </div>
             <div class="right_pre_footer">
-
+                <div class="menu_block">
+                    <ul class="pre_footer_menu">
+                        {%- for link in block.settings.menu.links -%}
+                          <li>
+                            <a
+                              href="{{ link.url }}"
+                              class="pre_footer_list-menu__item"
+                            >
+                              {{ link.title | escape }}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
             </div>
         </div>
 	</div>
