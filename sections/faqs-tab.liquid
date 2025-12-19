@@ -117,25 +117,28 @@
   <div class="{{ container }}" {{ max_width }}>
     <div class="faqs_tab_container">
 
-      <!-- LEFT TABS -->
-      <div class="faq-tabs">
-        {% assign first_tab = '' %}
-        {% for block in section.blocks %}
-          {% if block.type == 'tab' %}
-            {% if first_tab == '' %}
-              {% assign first_tab = block.settings.tab_handle %}
-            {% endif %}
-            <button
-              class="faq-tab {% if forloop.first %}active{% endif %}"
-              data-tab="{{ block.settings.tab_handle }}"
-              {{ block.shopify_attributes }}>
-              {{ block.settings.tab_title }}
-            </button>
-          {% endif %}
-        {% endfor %}
+      <div class="faqs_left_content">
+        <div class="faqs_top">
+          <div class="faq-tabs">
+            {% assign first_tab = '' %}
+            {% for block in section.blocks %}
+              {% if block.type == 'tab' %}
+                {% if first_tab == '' %}
+                  {% assign first_tab = block.settings.tab_handle %}
+                {% endif %}
+                <button
+                  class="faq-tab {% if forloop.first %}active{% endif %}"
+                  data-tab="{{ block.settings.tab_handle }}"
+                  {{ block.shopify_attributes }}>
+                  {{ block.settings.tab_title }}
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
       </div>
 
-      <!-- RIGHT FAQ CONTENT -->
       <div class="faq-content">
         {% for block in section.blocks %}
           {% if block.type == 'faq' %}
