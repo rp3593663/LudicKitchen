@@ -45,6 +45,12 @@
 			}
 		}
 	{%- endif -%}
+
+.pre_footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
 {%- endstyle -%}
 <div class="kretoss-section section-pre-footer">
 	<div class="{{ container }}" {{ max_width }}>
