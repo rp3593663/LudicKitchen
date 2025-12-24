@@ -26,12 +26,17 @@
         "short_description_hWpmcz": {
           "type": "short_description",
           "settings": {}
+        },
+        "project_info_points_4rFK8g": {
+          "type": "project_info_points",
+          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "short_description_hWpmcz"
+        "short_description_hWpmcz",
+        "project_info_points_4rFK8g"
       ],
       "settings": {
         "enable_sticky_info": true,
