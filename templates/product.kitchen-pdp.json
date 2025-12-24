@@ -30,13 +30,18 @@
         "project_info_points_4rFK8g": {
           "type": "project_info_points",
           "settings": {}
+        },
+        "raised_goal_q7H3MD": {
+          "type": "raised_goal",
+          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
         "short_description_hWpmcz",
-        "project_info_points_4rFK8g"
+        "project_info_points_4rFK8g",
+        "raised_goal_q7H3MD"
       ],
       "settings": {
         "enable_sticky_info": true,
