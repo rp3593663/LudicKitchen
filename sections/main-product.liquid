@@ -154,13 +154,7 @@
 
                   {%- comment -%} ---------------- FORMAT GOAL AMOUNT ---------------- {%- endcomment -%}
                   {% assign goal = goal_amount | times: 1.0 %}
-                  {% if goal >= 10000000 %}
-                    {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
-                  {% elsif goal >= 100000 %}
-                    {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
-                  {% else %}
-                    {% assign goal_display = goal | money_without_currency %}
-                  {% endif %}
+                  {% assign goal_display = goal | money_without_currency %}
 
                   {%- comment -%} ---------------- OUTPUT ---------------- {%- endcomment -%}
                   <div class="raised_goal">
