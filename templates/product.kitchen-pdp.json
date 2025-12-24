@@ -34,6 +34,10 @@
         "raised_goal_q7H3MD": {
           "type": "raised_goal",
           "settings": {}
+        },
+        "custom_join_btns_XDY8qB": {
+          "type": "custom_join_btns",
+          "settings": {}
         }
       },
       "block_order": [
@@ -41,7 +45,8 @@
         "title",
         "short_description_hWpmcz",
         "project_info_points_4rFK8g",
-        "raised_goal_q7H3MD"
+        "raised_goal_q7H3MD",
+        "custom_join_btns_XDY8qB"
       ],
       "settings": {
         "enable_sticky_info": true,
