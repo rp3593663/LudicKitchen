@@ -106,6 +106,45 @@ a#HeaderMenu-shop {
     border-radius: 20px;
     overflow: hidden;
 }
+.raised_progress_track {
+    position: relative;
+}
+
+/* 75% vertical line */
+.milestone-75 {
+    position: absolute;
+    left: 75%;
+    top: -6px;
+    transform: translateX(-50%);
+    height: 28px;
+    width: 2px;
+    background: var(--primary_color);
+    z-index: 2;
+}
+.milestone-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    background: #EDEDED;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.milestone-tooltip::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #EDEDED;
+}
+
 .total_raised_percentage {
     margin: 32px 0px 28px;
     display: flex;
