@@ -1572,3 +1572,9 @@ p.product__text {
     display: grid;
     gap: 14px;
 }
+span.raised_amount {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 25px;
+    color: var(--primary_color);
+}
