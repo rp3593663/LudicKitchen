@@ -107,3 +107,6 @@ a#HeaderMenu-shop {
     border-radius: 20px;
     overflow: hidden;
 }
+.total_raised_percentage {
+    margin: 32px 0px 28px;
+}
