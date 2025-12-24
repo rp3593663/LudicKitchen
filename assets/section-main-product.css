@@ -245,10 +245,7 @@ a.product__text {
   text-transform: uppercase;
 }
 
-.product__title {
-  word-break: break-word;
-  margin-bottom: 1.5rem;
-}
+
 
 .product__title > * {
   margin: 0;
@@ -1529,4 +1526,16 @@ p.product__text {
     font-size: 14px;
     line-height: 12px;
     letter-spacing: -0.6px;
+}
+.product__title {
+    word-break: break-word;
+    margin: 10px 0px 16px;
+}
+.product__title h1 {
+    color: var(--primary_color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1.4px;
+    text-align: left;
 }
