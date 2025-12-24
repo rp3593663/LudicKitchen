@@ -106,9 +106,11 @@
                   </a>
                 </div>
               {%- when 'short_description' -%}
-                <div class="product__short_description">
+                {% if project_product.metafields.custom.project_info_points %}
+                  <div class="product__short_description">
 
-                </div>
+                  </div>
+                {% endif %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
