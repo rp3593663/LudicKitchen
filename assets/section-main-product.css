@@ -1559,3 +1559,7 @@ p.product__text {
 .product__raised_goal {
     margin: 30px 0px;
 }
+.raised_goal {
+    display: grid;
+    gap: 14px;
+}
