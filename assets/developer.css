@@ -85,3 +85,11 @@ a#HeaderMenu-shop {
     display: grid;
     gap: 14px;
 }
+.progress_data h2 {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 27px;
+    letter-spacing: -1.5px;
+    color: var(--primary_color);
+}
