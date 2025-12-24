@@ -55,13 +55,32 @@
             {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
             {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 2 %}
             {% if progress > 100 %}
-            {% assign progress = 100 %}
+                {% assign progress = 100 %}
             {% endif %}
 
             {% assign bar_width = progress %}
             {% if bar_width < 2 %}
-            {% assign bar_width = 2 %}
+                {% assign bar_width = 2 %}
             {% endif %}
+
+            {% assign raised = raised_amount | times: 1.0 %}
+            {% if raised >= 10000000 %}
+                {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+            {% elsif raised >= 100000 %}
+                {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
+            {% else %}
+                {% assign raised_display = raised | money_without_currency %}
+            {% endif %}
+
+            {% assign goal = goal_amount | times: 1.0 %}
+            {% if goal >= 10000000 %}
+                {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+            {% elsif goal >= 100000 %}
+                {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
+            {% else %}
+                {% assign goal_display = goal | money_without_currency %}
+            {% endif %}
+
             <div class="goal_progress">
                 <div class="progress_data">
                     <div class="goal_raised">
