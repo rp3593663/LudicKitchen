@@ -1501,3 +1501,6 @@ a.product__text {
 .product--thumbnail_slider .thumbnail-slider {
     margin-top: -200px;
 }
+.thumbnail-list__item:before {
+    padding-bottom: 58%;
+}
