@@ -104,7 +104,6 @@ a#HeaderMenu-shop {
     height: 15px;
     background: #ddd;
     border-radius: 20px;
-    overflow: hidden;
 }
 .raised_progress_track {
     position: relative;
@@ -114,7 +113,7 @@ a#HeaderMenu-shop {
     left: 75%;
     top: -6px;
     transform: translateX(-50%);
-    height: 28px;
+    height: 15px;
     width: 2px;
     background: var(--primary_color);
     z-index: 2;
