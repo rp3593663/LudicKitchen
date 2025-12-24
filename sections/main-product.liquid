@@ -131,7 +131,7 @@
                   {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
                   {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
 
-                  {%- comment -%} ---------------- PROGRESS ---------------- {%- endcomment -%}
+                  {%- comment -%} -------- PROGRESS -------- {%- endcomment -%}
                   {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 2 %}
                   {% if progress > 100 %}
                     {% assign progress = 100 %}
@@ -142,7 +142,7 @@
                     {% assign bar_width = 2 %}
                   {% endif %}
 
-                  {%- comment -%} ---------------- FORMAT RAISED AMOUNT ---------------- {%- endcomment -%}
+                  {%- comment -%} -------- FORMAT RAISED (SHORT) -------- {%- endcomment -%}
                   {% assign raised = raised_amount | times: 1.0 %}
                   {% if raised >= 10000000 %}
                     {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
@@ -152,11 +152,10 @@
                     {% assign raised_display = raised | money_without_currency %}
                   {% endif %}
 
-                  {%- comment -%} ---------------- FORMAT GOAL AMOUNT ---------------- {%- endcomment -%}
-                  {% assign goal = goal_amount | times: 1.0 %}
-                  {% assign goal_display = goal | money_without_currency %}
+                  {%- comment -%} -------- FORMAT GOAL (FULL VALUE) -------- {%- endcomment -%}
+                  {% assign goal_display = goal_amount | times: 100 | money_without_currency %}
 
-                  {%- comment -%} ---------------- OUTPUT ---------------- {%- endcomment -%}
+                  {%- comment -%} -------- OUTPUT -------- {%- endcomment -%}
                   <div class="raised_goal">
                     ₹ {{ raised_display }}
                     <span>Raised of ₹ {{ goal_display }} goal</span>
@@ -171,6 +170,7 @@
                     </div>
                   </div>
                 </div>
+
 
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
