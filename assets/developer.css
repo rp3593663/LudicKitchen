@@ -113,3 +113,11 @@ a#HeaderMenu-shop {
     gap: 4px;
     align-items: flex-end;
 }
+.total_raised_percentage h3 {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 62px;
+    letter-spacing: -3.2px;
+    color: var(--primary_color);
+}
