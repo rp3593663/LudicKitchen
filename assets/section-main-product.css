@@ -1629,3 +1629,13 @@ a.join_project_btn {
     letter-spacing: -0.54px;
     color: #F4F4F4;
 }
+.product__custom_btns p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.36px;
+    text-align: justify;
+    vertical-align: middle;
+    color: #949598;
+    margin: 0px;
+}
