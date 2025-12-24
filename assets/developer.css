@@ -131,15 +131,15 @@ a#HeaderMenu-shop {
     font-weight: 500;
     white-space: nowrap;
 }
-.milestone-tooltip::before {
+.milestone-tooltip:before {
     content: "";
     position: absolute;
-    top: -6px;
+    top: 0px;
     left: 50%;
-    transform: translateX(-50%);
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #EDEDED;
+    transform: translate(-50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ab6363;
 }
 
 .total_raised_percentage {
