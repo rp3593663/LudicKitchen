@@ -61,3 +61,12 @@ a#HeaderMenu-shop {
         border-radius: 4px;
     }
 }
+
+
+
+
+.project_progress_inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
