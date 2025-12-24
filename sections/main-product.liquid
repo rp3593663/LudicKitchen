@@ -105,6 +105,10 @@
                     </h2>
                   </a>
                 </div>
+              {%- when 'short_description' -%}
+                <div class="product__short_description">
+
+                </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
