@@ -75,3 +75,9 @@ a#HeaderMenu-shop {
     border-radius: 16px;
     padding: 30px 32px;
 }
+.progress_data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
