@@ -1539,3 +1539,10 @@ p.product__text {
     letter-spacing: -1.4px;
     text-align: left;
 }
+.product__short_description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    text-align: justify;
+}
