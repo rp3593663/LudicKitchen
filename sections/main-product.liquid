@@ -106,9 +106,9 @@
                   </a>
                 </div>
               {%- when 'short_description' -%}
-                {% if project_product.metafields.custom.project_info_points %}
+                {% if product.metafields.custom.short_description %}
                   <div class="product__short_description">
-
+                    {{ product.metafields.custom.short_description }}
                   </div>
                 {% endif %}
               {%- when 'price' -%}
