@@ -1082,11 +1082,7 @@ a.product__text {
   }
 }
 
-.js .product__media {
-  overflow: hidden !important;
-  border-radius: 16px;
-  padding-top: 58% !important;
-}
+
 
 .thumbnail[aria-current]:focus-visible {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
@@ -1493,4 +1489,15 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+
+
+.js .product__media {
+  overflow: hidden !important;
+  border-radius: 16px;
+  padding-top: 58% !important;
+}
+.product--thumbnail_slider .thumbnail-slider {
+    margin-top: -200px;
 }
