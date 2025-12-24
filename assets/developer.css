@@ -70,3 +70,8 @@ a#HeaderMenu-shop {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+.project_progress_left {
+    background: #F7F7F7;
+    border-radius: 16px;
+    padding: 30px 32px;
+}
