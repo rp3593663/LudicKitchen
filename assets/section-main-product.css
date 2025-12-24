@@ -1579,3 +1579,9 @@ span.raised_amount {
     letter-spacing: -1.4px;
     color: var(--primary_color);
 }
+span.total_goal {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.7px;
+}
