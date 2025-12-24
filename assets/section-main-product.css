@@ -1551,3 +1551,8 @@ p.product__text {
     display: grid;
     gap: 14px;
 }
+.info_li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
