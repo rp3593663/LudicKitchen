@@ -1596,3 +1596,21 @@ span.total_goal {
     align-items: center;
     width: 100%;
 }
+.product__custom_btns .share-button__button {
+    color: var(--primary_color);
+    margin: 0;
+    padding: 0;
+    min-width: 106px;
+    height: 48px;
+    width: 100%;
+    background: #E7E7E7!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.54px;
+}
