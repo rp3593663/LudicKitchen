@@ -137,12 +137,12 @@ a#HeaderMenu-shop {
 .milestone-tooltip:before {
     content: "";
     position: absolute;
-    top: 0px;
+    top: -15px;
     left: 50%;
     transform: translate(-50%);
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid #ab6363;
+    border-bottom: 15px solid #E7E7E7;
 }
 
 .total_raised_percentage {
