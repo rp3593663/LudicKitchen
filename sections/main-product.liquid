@@ -127,7 +127,7 @@
                   </div>
                 {% endif %}
               {%- when 'raised_goal' -%}
-                <div class="product__raised_goal">
+               <div class="product__raised_goal">
                   {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
                   {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
 
