@@ -51,6 +51,17 @@
 <div class="kretoss-section section-project_progress_data">
 	<div class="{{ container }}" {{ max_width }}>
         <div class="project_progress_left">
+            {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+            {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
+            {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 2 %}
+            {% if progress > 100 %}
+            {% assign progress = 100 %}
+            {% endif %}
+
+            {% assign bar_width = progress %}
+            {% if bar_width < 2 %}
+            {% assign bar_width = 2 %}
+            {% endif %}
             <div class="goal_progress">
                 <div class="progress_data">
                     <div class="goal_raised">
