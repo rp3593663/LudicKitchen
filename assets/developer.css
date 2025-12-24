@@ -93,8 +93,8 @@ a#HeaderMenu-shop {
     letter-spacing: -1.5px;
     color: var(--primary_color);
 }
-.progress_data span {
-    font-family: Inter;
+.progress_data span,
+.total_raised_percentage span {
     font-weight: 500;
     font-size: 15px;
     line-height: 15px;
