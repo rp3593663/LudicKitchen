@@ -109,8 +109,6 @@ a#HeaderMenu-shop {
 .raised_progress_track {
     position: relative;
 }
-
-/* 75% vertical line */
 .milestone-75 {
     position: absolute;
     left: 75%;
