@@ -109,4 +109,7 @@ a#HeaderMenu-shop {
 }
 .total_raised_percentage {
     margin: 32px 0px 28px;
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
 }
