@@ -1590,3 +1590,9 @@ span.total_goal {
     display: grid;
     gap: 8px;
 }
+.share_join_btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
