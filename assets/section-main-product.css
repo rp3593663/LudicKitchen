@@ -1505,3 +1505,6 @@ a.product__text {
 .thumbnail-list__item:before {
     padding-bottom: 58%;
 }
+.product--thumbnail_slider .thumbnail-slider .thumbnail{
+  border-radius: 6px;
+}
