@@ -126,6 +126,38 @@
                     </div>
                   </div>
                 {% endif %}
+              {%- when 'raised_goal' -%}
+                <div class="product__raised_goal">
+                  {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+                  {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
+
+                  {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount %}
+                  {% assign progress = progress | round: 2 %}
+                  {% if progress > 100 %}
+                  {% assign progress = 100 %}
+                  {% endif %}
+                  {% assign bar_width = progress %}
+                  {% if bar_width < 2 %}
+                  {% assign bar_width = 2 %}
+                  {% endif %}
+
+                  <div class="raised_goal">
+                      ₹ {{ raised_amount | times: 100 | money_without_currency }}
+                      <span>
+                          Raise of ₹ {{ goal_amount | times: 100 | money_without_currency }} goal
+                      </span>
+                  </div>
+
+
+                  <div class="raised_progress_bar">
+                      <div class="progress_track">
+                          <div class="progress_fill" style="width: {{ bar_width }}%;"> </div>
+                      </div>
+                      <div class="progress_labels">
+                          <span>{{ progress }}% funded</span>
+                      </div>
+                  </div>
+                </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
