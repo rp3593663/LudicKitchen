@@ -84,6 +84,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -99,10 +100,258 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "how_works_KjUCqJ": {
+      "type": "how-works",
+      "name": "How Works",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
+    },
+    "faqs_tab_gt77PK": {
+      "type": "faqs-tab",
+      "blocks": {
+        "tab_h9mYwR": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Funding",
+            "tab_handle": "funding"
+          }
+        },
+        "faq_EacTmH": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_DgArdM": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_fGnHPt": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_7RpK4N": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_BVNfKn": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_fEJNah": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_8NXp8x": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "tab_Lgw9fc": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Kitchen",
+            "tab_handle": "kitchen"
+          }
+        },
+        "faq_XMmVjr": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_m8VfpD": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_36gaMn": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_qE7xmG": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_WGwcYK": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_3zGghY": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_TYQJgV": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_3t8Emw": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "kitchen",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "tab_8pdh3H": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Funding1",
+            "tab_handle": "funding1"
+          }
+        },
+        "faq_NnLBJ7": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_Mhnr4q": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_teTjjf": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_HDTCdY": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_nyYdWn": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_jrGtH6": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        },
+        "faq_cRfW6m": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "funding1",
+            "question": "How do I decode the wash care label on my Ludic apparel?",
+            "answer": "<p>Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal—whether it’s a yes or a big no. Think of the wash care label as your garment’s cheat sheet. The little water tub? That’s telling you how to wash it—cold, warm, or hot. The triangle? That’s your bleach signal— whether it’s a yes or a big no.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_h9mYwR",
+        "faq_EacTmH",
+        "faq_DgArdM",
+        "faq_fGnHPt",
+        "faq_7RpK4N",
+        "faq_BVNfKn",
+        "faq_fEJNah",
+        "faq_8NXp8x",
+        "tab_Lgw9fc",
+        "faq_XMmVjr",
+        "faq_m8VfpD",
+        "faq_36gaMn",
+        "faq_qE7xmG",
+        "faq_WGwcYK",
+        "faq_3zGghY",
+        "faq_TYQJgV",
+        "faq_3t8Emw",
+        "tab_8pdh3H",
+        "faq_NnLBJ7",
+        "faq_Mhnr4q",
+        "faq_teTjjf",
+        "faq_HDTCdY",
+        "faq_nyYdWn",
+        "faq_jrGtH6",
+        "faq_cRfW6m"
+      ],
+      "name": "FAQs Tab",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": "98px 0px"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "how_works_KjUCqJ",
+    "faqs_tab_gt77PK"
   ]
 }
