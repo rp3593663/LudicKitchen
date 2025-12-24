@@ -1545,4 +1545,5 @@ p.product__text {
     line-height: 24px;
     letter-spacing: -0.6px;
     text-align: justify;
+    margin-bottom: 14px;
 }
