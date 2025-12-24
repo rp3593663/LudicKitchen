@@ -37,7 +37,9 @@
         },
         "custom_join_btns_XDY8qB": {
           "type": "custom_join_btns",
-          "settings": {}
+          "settings": {
+            "share_label": "Share"
+          }
         }
       },
       "block_order": [
@@ -62,6 +64,16 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "project_progress_P8bzdV": {
+      "type": "project-progress",
+      "name": "Project Progress Data",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
       }
     },
     "related-products": {
@@ -332,6 +344,7 @@
   },
   "order": [
     "main",
+    "project_progress_P8bzdV",
     "related-products",
     "how_works_KjUCqJ",
     "faqs_tab_gt77PK"
