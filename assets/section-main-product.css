@@ -1571,6 +1571,7 @@ p.product__text {
 .raised_goal {
     display: grid;
     gap: 14px;
+    margin-bottom: 18px;
 }
 span.raised_amount {
     font-weight: 700;
