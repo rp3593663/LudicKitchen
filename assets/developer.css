@@ -81,3 +81,7 @@ a#HeaderMenu-shop {
     justify-content: space-between;
     margin-bottom: 14px;
 }
+.progress_data > * {
+    display: grid;
+    gap: 14px;
+}
