@@ -93,8 +93,7 @@ a#HeaderMenu-shop {
     letter-spacing: -1.5px;
     color: var(--primary_color);
 }
-.progress_data span,
-.total_raised_percentage span {
+.progress_data span {
     font-weight: 500;
     font-size: 15px;
     line-height: 15px;
@@ -120,4 +119,10 @@ a#HeaderMenu-shop {
     line-height: 62px;
     letter-spacing: -3.2px;
     color: var(--primary_color);
+}
+.total_raised_percentage span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 3015px;
+    letter-spacing: -0.75px;
 }
