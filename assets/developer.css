@@ -126,3 +126,14 @@ a#HeaderMenu-shop {
     line-height: 30px;
     letter-spacing: -0.75px;
 }
+p.goal_info {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.75px;
+    text-align: justify;
+    margin: 0px;
+}
+p.goal_info span{
+    font-weight: 700;
+}
