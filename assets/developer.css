@@ -217,14 +217,14 @@ p.goal_info span{
   font-size: 12px;
 }
 .gauge-wrapper {
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   position: relative;
 }
 
 .gauge-svg {
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   display: block;
 }
 
