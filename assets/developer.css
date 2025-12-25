@@ -217,6 +217,19 @@ p.goal_info span{
     transition: width 0.6s ease;
     min-width: 4px; 
 }
+.total_backers_percentage {
+    display: flex;
+    gap: 4px;
+    align-items: end;
+}
+.total_backers_percentage h3{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -2px;
+    color: var(--primary_color);
+}
+
 
 
 
