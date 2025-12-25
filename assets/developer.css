@@ -187,7 +187,8 @@ p.goal_info span{
     gap: 8px;
     grid-template-columns: 1fr 1fr;
 }
-.project_progress_right .total_backers_data {
+.project_progress_right .total_backers_data,
+.tier_wised_contribution {
     background: #F6F6F6;
     border-radius: 16px;
     padding: 20px;
