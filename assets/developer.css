@@ -220,7 +220,7 @@ p.goal_info span{
 .total_backers_percentage {
     display: flex;
     gap: 4px;
-    align-items: end;
+    align-items: baseline;
 }
 .total_backers_percentage h3{
     font-weight: 600;
@@ -230,10 +230,11 @@ p.goal_info span{
     color: var(--primary_color);
     margin: 0px;
 }
-.total_backers_percentage {
-    display: flex;
-    gap: 4px;
-    align-items: baseline;
+.total_backers_percentage span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.75px;
 }
 
 
