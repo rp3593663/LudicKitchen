@@ -330,12 +330,15 @@ p.goal_info span{
 /*-----------------------------------------------*/
 
 
-.pdp_muticolumn  .multicolumn-card {
+.pdp_muticolumn .multicolumn-card {
     padding: 26px;
     border-radius: 20px!important;
     background: #F7F7F7;
 }
-.multicolumn-card__image-wrapper {
+.pdp_muticolumn .multicolumn-card__image-wrapper {
     margin: 0px!important;
     border-radius: 10px!important;
+}
+.pdp_muticolumn .multicolumn-card__image-wrapper .media {
+    border-radius: 10px;
 }
