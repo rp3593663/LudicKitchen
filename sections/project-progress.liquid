@@ -171,21 +171,24 @@
                     </div>
                 </div>
                 <div class="bottom_data">
-                    {% for variant in product.variants %}
-                        <div class="variant-tier-item">
-                            <h4>{{ variant.title }}</h4>
+                    <div class="tier_wised_contribution">
+                        <h3>Tier wise contribution</h3>
+                        {% for variant in product.variants %}
+                            <div class="variant-tier-item">
+                                <h4>{{ variant.title }}</h4>
 
-                            <p>
-                            Total Tier Goal:
-                            {{ variant.metafields.custom.total_tier_goal | default: 0 }}
-                            </p>
+                                <p>
+                                Total Tier Goal:
+                                {{ variant.metafields.custom.total_tier_goal | default: 0 }}
+                                </p>
 
-                            <p>
-                            Current Reached:
-                            {{ variant.metafields.custom.current_reached_tier_goal | default: 0 }}
-                            </p>
-                        </div>
-                    {% endfor %}
+                                <p>
+                                Current Reached:
+                                {{ variant.metafields.custom.current_reached_tier_goal | default: 0 }}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
