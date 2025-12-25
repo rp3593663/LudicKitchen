@@ -395,3 +395,12 @@ p.goal_info span{
     text-align: center;
     vertical-align: middle;
 }
+
+
+
+.tier_table_inner {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
