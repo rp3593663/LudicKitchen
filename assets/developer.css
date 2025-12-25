@@ -194,7 +194,6 @@ p.goal_info span{
 }
 .total_backers_data h4 {
     margin: 0px;
-    font-family: Inter;
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
@@ -251,8 +250,11 @@ p.goal_info span{
   align-items: center;
 }
 .gauge-header h3 {
-  margin: 0;
-  font-size: 20px;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -1.1px;
 }
 .early-end {
   background: #f3f3f3;
