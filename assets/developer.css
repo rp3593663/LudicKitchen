@@ -191,6 +191,8 @@ p.goal_info span{
     min-width: 4px; 
 }
 
+
+
 .days-gauge {
   background: #fff;
   border-radius: 16px;
@@ -198,18 +200,15 @@ p.goal_info span{
   max-width: 360px;
   font-family: Inter, sans-serif;
 }
-
 .gauge-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .gauge-header h3 {
   margin: 0;
   font-size: 20px;
 }
-
 .early-end {
   background: #f3f3f3;
   padding: 6px 10px;
@@ -221,14 +220,11 @@ p.goal_info span{
   height: 150px;
   position: relative;
 }
-
 .gauge-svg {
   width: 250px;
   height: 150px;
   display: block;
 }
-
-
 .gauge-center {
   position: absolute;
   bottom: 10px;
@@ -236,14 +232,11 @@ p.goal_info span{
   transform: translateX(-50%);
   text-align: center;
 }
-
-
 .gauge-center h2 {
   margin: 0;
   font-size: 28px;
   color: #1e6bff;
 }
-
 .gauge-center span {
   font-size: 14px;
   color: #666;
