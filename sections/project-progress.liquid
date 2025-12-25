@@ -159,15 +159,31 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = 15; 
+  const DAYS_LEFT = 15;
 
-  const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
+  const ticksContainer = document.getElementById("ticks");
+  const progressTicks = TOTAL_DAYS - DAYS_LEFT;
+  const angleStep = 180 / TOTAL_DAYS;
 
-  document.getElementById("progressArc")
-    .setAttribute("stroke-dasharray", `${progressPercent} 100`);
+  for (let i = 0; i <= TOTAL_DAYS; i++) {
+    const tick = document.createElement("div");
+    tick.classList.add("tick");
+
+    if (i <= progressTicks) {
+      tick.classList.add("blue");
+    }
+
+    tick.style.transform = `
+      rotate(${i * angleStep - 90}deg)
+      translateY(-110px)
+    `;
+
+    ticksContainer.appendChild(tick);
+  }
 
   document.getElementById("daysLeft").innerText = DAYS_LEFT;
 </script>
+
 
 {% schema %}
 {
