@@ -285,9 +285,12 @@ p.goal_info span{
   text-align: center;
 }
 .gauge-center h2 {
-  margin: 0;
-  font-size: 28px;
-  color: #1e6bff;
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: var(--primary_color);
 }
 .gauge-center span {
   font-size: 14px;
