@@ -450,3 +450,11 @@ p.goal_info span{
     text-align: justify;
     vertical-align: middle;
 }
+.tier_information {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.42px;
+    text-align: justify;
+    vertical-align: middle;
+}
