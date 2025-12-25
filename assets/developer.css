@@ -335,3 +335,7 @@ p.goal_info span{
     border-radius: 20px!important;
     background: #F7F7F7;
 }
+.multicolumn-card__image-wrapper {
+    margin: 0px!important;
+    border-radius: 10px!important;
+}
