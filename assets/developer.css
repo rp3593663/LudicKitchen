@@ -472,5 +472,12 @@ p.goal_info span{
     font-weight: 500;
     font-size: 14px;
     line-height: 12px;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.42px;
+}
+.tier_estimated {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    color: #949598;
 }
