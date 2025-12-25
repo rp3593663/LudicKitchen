@@ -312,3 +312,7 @@ p.goal_info span{
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 10px;
 }
+.variant-tier-contribution {
+    display: grid;
+    gap: 28px;
+}
