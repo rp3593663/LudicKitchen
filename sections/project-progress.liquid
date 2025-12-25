@@ -177,6 +177,17 @@
         </div>
 	</div>
 </div>
+<script>
+  const TOTAL_DAYS = 60;
+  const DAYS_LEFT = 15; 
+
+  const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
+
+  document.getElementById("progressArc")
+    .setAttribute("stroke-dasharray", `${progressPercent} 100`);
+
+  document.getElementById("daysLeft").innerText = DAYS_LEFT;
+</script>
 
 {% schema %}
 {
