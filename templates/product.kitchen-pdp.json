@@ -134,6 +134,16 @@
         "padding_bottom": 0
       }
     },
+    "variant_table_iPnWKa": {
+      "type": "variant-table",
+      "name": "Project Variant Table",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -404,6 +414,7 @@
     "main",
     "project_progress_P8bzdV",
     "multicolumn_hdVUc3",
+    "variant_table_iPnWKa",
     "related-products",
     "how_works_KjUCqJ",
     "faqs_tab_gt77PK"
