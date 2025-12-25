@@ -409,3 +409,8 @@ p.goal_info span{
     border-radius: 20px;
     padding: 30px;
 }
+.tier_box .tier_image {
+    background: #F1F0F0;
+    padding-top: 100%;
+    position: relative;
+}
