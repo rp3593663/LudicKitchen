@@ -384,3 +384,14 @@ p.goal_info span{
     top: -3px;
     width: 100%;
 }
+.section-project_variant_table .section_heading p {
+    margin: 24px auto 0px;
+    max-width: 410px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    vertical-align: middle;
+}
