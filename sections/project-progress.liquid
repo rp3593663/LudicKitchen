@@ -112,26 +112,26 @@
             <div class="project_progress_right">
                 <div class="top_data">
                     <div class="total_backers_data">
-                        {% assign raised_backers = 1000 %}
-                        {% assign total_backers = 500 %}
-                        {% assign backers_progress = raised_backers | times: 100.0 | divided_by: total_backers | round: 2 %}
+                        {% assign current_backers = 500 %}
+                        {% assign target_backers = 1000 %}
+                        {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
                         {% if backers_progress > 100 %}
                             {% assign backers_progress = 100 %}
                         {% endif %}
-
                         {% assign backers_bar_width = backers_progress %}
                         {% if backers_bar_width < 2 %}
                             {% assign backers_bar_width = 2 %}
                         {% endif %}
-                        <h4>Total backer</h4>
+                        <h4>Total Backers</h4>
                         <div class="raised_progress_bar">
                             <div class="total_backers_track">
                                 <div class="total_backers_progress_fill" style="width: {{ backers_bar_width }}%;"> </div>
                             </div>
                         </div>
                         <div class="total_backers_percentage">
-                            <h3>{{ total_backers }}</h3><span>Backers</span>
-                        </div>  
+                            <h3>{{ current_backers }}</h3>
+                            <span>of {{ target_backers }} Backers</span>
+                        </div>
                     </div>  
                 </div>
                 <div class="bottom_data">
