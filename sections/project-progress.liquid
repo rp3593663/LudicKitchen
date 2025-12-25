@@ -110,157 +110,136 @@
                 </div>
             </div>
            <div class="project_progress_right">
-  <div class="top_data">
+                <div class="top_data">
 
-    {% comment %}
-    ==============================
-    TOTAL BACKERS (FROM VARIANTS)
-    ==============================
-    {% endcomment %}
+                    {% assign current_backers = 0 %}
+                    {% assign target_backers = 0 %}
 
-    {% assign current_backers = 0 %}
-    {% assign target_backers = 0 %}
+                    {% for variant in product.variants %}
+                        {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                        {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
 
-    {% for variant in product.variants %}
-      {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-      {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
+                        {% assign current_backers = current_backers | plus: variant_current %}
+                        {% assign target_backers = target_backers | plus: variant_total %}
+                    {% endfor %}
 
-      {% assign current_backers = current_backers | plus: variant_current %}
-      {% assign target_backers = target_backers | plus: variant_total %}
-    {% endfor %}
+                    {% if target_backers > 0 %}
+                    {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
+                    {% else %}
+                    {% assign backers_progress = 0 %}
+                    {% endif %}
 
-    {% if target_backers > 0 %}
-      {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
-    {% else %}
-      {% assign backers_progress = 0 %}
-    {% endif %}
+                    {% if backers_progress > 100 %}
+                    {% assign backers_progress = 100 %}
+                    {% endif %}
 
-    {% if backers_progress > 100 %}
-      {% assign backers_progress = 100 %}
-    {% endif %}
+                    {% assign backers_bar_width = backers_progress %}
+                    {% if backers_bar_width < 2 %}
+                    {% assign backers_bar_width = 2 %}
+                    {% endif %}
 
-    {% assign backers_bar_width = backers_progress %}
-    {% if backers_bar_width < 2 %}
-      {% assign backers_bar_width = 2 %}
-    {% endif %}
+                    <div class="total_backers_data">
+                    <h4>Total Backers</h4>
+                    <div class="raised_progress_bar">
+                        <div class="total_backers_track">
+                        <div
+                            class="total_backers_progress_fill"
+                            style="width: {{ backers_bar_width }}%;">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="total_backers_percentage">
+                        <h3>{{ current_backers }}</h3>
+                        <span>Backers</span>
+                    </div>
+                    </div>
 
-    <div class="total_backers_data">
-      <h4>Total Backers</h4>
+                    <div class="days-gauge">
+                        <div class="gauge-header">
+                            <h3>Days</h3>
+                            <span class="early-end">
+                            Early ends in <strong>5 Days</strong>
+                            </span>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <svg viewBox="0 0 200 120" class="gauge-svg">
+                            <g id="gaugeTicks"></g>
 
-      <div class="raised_progress_bar">
-        <div class="total_backers_track">
-          <div
-            class="total_backers_progress_fill"
-            style="width: {{ backers_bar_width }}%;">
-          </div>
-        </div>
-      </div>
+                            <path
+                                d="M30 100 A70 70 0 0 1 170 100"
+                                fill="none"
+                                stroke="#D9D9D9"
+                                stroke-width="5"
+                                pathLength="100"
+                            />
 
-      <div class="total_backers_percentage">
-        <h3>{{ current_backers }}</h3>
-        <span>Backers</span>
-      </div>
-    </div>
+                            <path
+                                id="progressArc"
+                                d="M30 100 A70 70 0 0 1 170 100"
+                                fill="none"
+                                stroke="#214ECF"
+                                stroke-width="5"
+                                stroke-linecap="round"
+                                pathLength="100"
+                                stroke-dasharray="0 100"
+                            />
+                            </svg>
 
-    {% comment %}
-    ==============================
-    DAYS GAUGE (UNCHANGED)
-    ==============================
-    {% endcomment %}
+                            <div class="gauge-center">
+                            <h2 id="daysLeft">15</h2>
+                            <span>Days left</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="days-gauge">
-      <div class="gauge-header">
-        <h3>Days</h3>
-        <span class="early-end">
-          Early ends in <strong>5 Days</strong>
-        </span>
-      </div>
-
-      <div class="gauge-wrapper">
-        <svg viewBox="0 0 200 120" class="gauge-svg">
-          <g id="gaugeTicks"></g>
-
-          <path
-            d="M30 100 A70 70 0 0 1 170 100"
-            fill="none"
-            stroke="#D9D9D9"
-            stroke-width="5"
-            pathLength="100"
-          />
-
-          <path
-            id="progressArc"
-            d="M30 100 A70 70 0 0 1 170 100"
-            fill="none"
-            stroke="#214ECF"
-            stroke-width="5"
-            stroke-linecap="round"
-            pathLength="100"
-            stroke-dasharray="0 100"
-          />
-        </svg>
-
-        <div class="gauge-center">
-          <h2 id="daysLeft">15</h2>
-          <span>Days left</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  {% comment %}
-  ==============================
-  TIER WISE CONTRIBUTION
-  ==============================
-  {% endcomment %}
-
-  <div class="bottom_data">
-    <div class="tier_wised_contribution">
-      <h3>Tier wise contribution</h3>
-
-      <div class="all_variant-tier-contribution">
-        {% for variant in product.variants %}
-
-          {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-          {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
-
-          {% if total_tier_goal > 0 %}
-            {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
-          {% else %}
-            {% assign tier_progress = 0 %}
-          {% endif %}
-
-          {% if tier_progress > 100 %}
-            {% assign tier_progress = 100 %}
-          {% endif %}
-
-          {% assign tier_bar_width = tier_progress %}
-          {% if tier_bar_width < 2 %}
-            {% assign tier_bar_width = 2 %}
-          {% endif %}
-
-          <div class="variant-tier-contribution">
-            <div class="raised_progress_bar">
-              <div class="total_backers_track">
-                <div
-                  class="total_backers_progress_fill"
-                  style="width: {{ tier_bar_width }}%;">
                 </div>
-              </div>
-            </div>
 
-            <div class="tier_current_reached_data">
-              <h3>{{ current_reached_goal }}</h3>
-              <span>{{ variant.title }}</span>
-            </div>
-          </div>
+                <div class="bottom_data">
+                    <div class="tier_wised_contribution">
+                    <h3>Tier wise contribution</h3>
 
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+                    <div class="all_variant-tier-contribution">
+                        {% for variant in product.variants %}
+
+                        {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                        {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
+
+                        {% if total_tier_goal > 0 %}
+                            {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
+                        {% else %}
+                            {% assign tier_progress = 0 %}
+                        {% endif %}
+
+                        {% if tier_progress > 100 %}
+                            {% assign tier_progress = 100 %}
+                        {% endif %}
+
+                        {% assign tier_bar_width = tier_progress %}
+                        {% if tier_bar_width < 2 %}
+                            {% assign tier_bar_width = 2 %}
+                        {% endif %}
+
+                        <div class="variant-tier-contribution">
+                            <div class="raised_progress_bar">
+                            <div class="total_backers_track">
+                                <div
+                                class="total_backers_progress_fill"
+                                style="width: {{ tier_bar_width }}%;">
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="tier_current_reached_data">
+                                <h3>{{ current_reached_goal }}</h3>
+                                <span>{{ variant.title }}</span>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                    </div>
+                </div>
+                </div>
 
         </div>
 	</div>
