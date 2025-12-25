@@ -483,6 +483,8 @@ p.goal_info span{
 }
 .tier_price_block {
     margin: 34px 0px;
+    display: grid;
+    gap: 8px;
 }
 .tier_price {
     display: flex;
