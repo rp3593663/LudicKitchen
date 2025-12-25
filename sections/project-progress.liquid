@@ -131,7 +131,7 @@
                         </div>
                         <div class="total_backers_percentage">
                             <h3>{{ current_backers }}</h3>
-                            <span>of {{ target_backers }} Backers</span>
+                            <span>Backers</span>
                         </div>
                     </div>  
 
@@ -190,10 +190,11 @@
                                     <div class="total_backers_track">
                                         <div class="total_backers_progress_fill" style="width: {{ tier_bar_width }}%;"> </div>
                                     </div>
-                                </div>           
-
-                                <h4>{{ variant.title }}</h4>
-
+                                </div>
+                                <div class="total_backers_percentage">
+                                    <h3>{{ current_reached_goal }}</h3>
+                                    <span>variant.title</span>
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
