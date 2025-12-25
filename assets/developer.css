@@ -279,7 +279,7 @@ p.goal_info span{
 }
 .gauge-center {
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
