@@ -205,6 +205,14 @@ p.goal_info span{
     border-radius: 16px;
     padding: 20px;
 }
+.total_backers_data h4 {
+    margin: 0px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -1.1px;
+}
 
 
 
