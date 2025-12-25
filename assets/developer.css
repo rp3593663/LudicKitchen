@@ -514,3 +514,7 @@ p.goal_info span{
     letter-spacing: -0.39px;
     color: #949598;
 }
+.tier_progress_btn {
+    display: grid;
+    gap: 12px;
+}
