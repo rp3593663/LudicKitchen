@@ -272,6 +272,7 @@ p.goal_info span{
   width: 250px;
   height: 125px;
   position: relative;
+  margin: auto;
 }
 .gauge-svg {
   width: 250px;
