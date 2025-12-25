@@ -463,3 +463,8 @@ p.goal_info span{
     display: grid;
     gap: 20px;
 }
+.tier_feature {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
