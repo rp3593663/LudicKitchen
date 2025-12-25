@@ -216,16 +216,18 @@ p.goal_info span{
   border-radius: 8px;
   font-size: 12px;
 }
-
 .gauge-wrapper {
+  width: 200px;
+  height: 100px;
   position: relative;
-  margin-top: 20px;
 }
 
 .gauge-svg {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 100px;
+  display: block;
 }
+
 
 .gauge-center {
   position: absolute;
