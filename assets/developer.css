@@ -468,3 +468,9 @@ p.goal_info span{
     gap: 8px;
     align-items: center;
 }
+.tier_feature span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: -0.7px;
+}
