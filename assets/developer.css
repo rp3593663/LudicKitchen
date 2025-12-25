@@ -353,3 +353,12 @@ p.goal_info span{
     color: var(--primary_color);
     letter-spacing: -1.2px;
 }
+.pdp_muticolumn .multicolumn-card__info .rte {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.48px;
+    text-align: justify;
+    vertical-align: middle;
+}
