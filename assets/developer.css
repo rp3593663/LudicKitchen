@@ -50,6 +50,7 @@ a#HeaderMenu-shop {
     color: var(--white);
     display: inline-block;
     border-radius: 6px;
+    text-align: center;
 }
 
 @media(max-width: 767px){
