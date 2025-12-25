@@ -82,8 +82,9 @@
         "column_8NGWgX": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/product_img4.png",
+            "title": "Why this is worth backing ?",
+            "text": "<p>You're the steady hand in the Kitchen: a safe player who lives in the sweet middle ground. Not too much, not too little, you like standing close enough to the action to feel the spark, while keeping room for your just-in-case.</p>",
             "link_label": "",
             "link": ""
           }
@@ -124,7 +125,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
