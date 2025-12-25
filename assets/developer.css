@@ -191,6 +191,12 @@ p.goal_info span{
     min-width: 4px; 
 }
 
+.project_progress_right {
+    display: grid;
+    gap: 8px;
+}
+
+
 
 
 .days-gauge {
