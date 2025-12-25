@@ -200,6 +200,11 @@ p.goal_info span{
     gap: 8px;
     grid-template-columns: 1fr 1fr;
 }
+.project_progress_right .total_backers_data {
+    background: #F6F6F6;
+    border-radius: 16px;
+    padding: 20px;
+}
 
 
 
