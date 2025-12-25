@@ -328,3 +328,10 @@ p.goal_info span{
 /*-----------------------------------------------*/
 /*---------- PDP Project Progess CSS ------------*/
 /*-----------------------------------------------*/
+
+
+.pdp_muticolumn  .multicolumn-card {
+    padding: 26px;
+    border-radius: 20px!important;
+    background: #F7F7F7;
+}
