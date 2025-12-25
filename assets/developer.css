@@ -217,12 +217,14 @@ p.goal_info span{
     transition: width 0.6s ease;
     min-width: 4px; 
 }
-.total_backers_percentage {
+.total_backers_percentage,
+.tier_current_reached_data {
     display: flex;
     gap: 4px;
     align-items: baseline;
 }
-.total_backers_percentage h3{
+.total_backers_percentage h3,
+.tier_current_reached_data h3{
     font-weight: 600;
     font-size: 40px;
     line-height: 52px;
