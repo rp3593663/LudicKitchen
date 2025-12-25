@@ -381,6 +381,6 @@ p.goal_info span{
 .section-project_variant_table h2.h2_title span.border_text img{
     position: absolute;
     left: 0px;
-    top: 5px;
+    top: 0px;
     width: 100%;
 }
