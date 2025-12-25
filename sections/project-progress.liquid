@@ -114,7 +114,7 @@
                     <div class="total_backers_data">
                         {% assign raised_backers = 1000 %}
                         {% assign total_backers = 500 %}
-                        {% assign backers_progress = raised_backers | times: 100.0 | divided_by: goal_amount | round: 2 %}
+                        {% assign backers_progress = raised_backers | times: 100.0 | divided_by: total_backers | round: 2 %}
                         {% if backers_progress > 100 %}
                             {% assign backers_progress = 100 %}
                         {% endif %}
