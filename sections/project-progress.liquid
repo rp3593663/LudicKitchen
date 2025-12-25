@@ -177,14 +177,20 @@
                             <div class="variant-tier-contribution">
                                 {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
                                 {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
-                                {% assign backers_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
-                                {% if backers_progress > 100 %}
-                                    {% assign backers_progress = 100 %}
+                                {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
+                                {% if tier_progress > 100 %}
+                                    {% assign tier_progress = 100 %}
                                 {% endif %}
-                                {% assign backers_bar_width = backers_progress %}
-                                {% if backers_bar_width < 2 %}
-                                    {% assign backers_bar_width = 2 %}
+                                {% assign tier_bar_width = tier_progress %}
+                                {% if tier_bar_width < 2 %}
+                                    {% assign tier_bar_width = 2 %}
                                 {% endif %}
+
+                                <div class="raised_progress_bar">
+                                    <div class="total_backers_track">
+                                        <div class="total_backers_progress_fill" style="width: {{ tier_bar_width }}%;"> </div>
+                                    </div>
+                                </div>           
 
                                 <h4>{{ variant.title }}</h4>
 
