@@ -229,11 +229,12 @@ p.goal_info span{
 
 .gauge-center {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
+
 
 .gauge-center h2 {
   margin: 0;

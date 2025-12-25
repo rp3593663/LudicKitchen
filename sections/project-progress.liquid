@@ -136,42 +136,37 @@
                 </div>
                 <div class="bottom_data">
                     <div class="days-gauge">
-  <div class="gauge-header">
-    <h3>Days</h3>
-    <span class="early-end">Early ends in <strong>5 Days</strong></span>
-  </div>
+                        <div class="gauge-header">
+                            <h3>Days</h3>
+                            <span class="early-end">Early ends in <strong>5 Days</strong></span>
+                        </div>
 
-  <div class="gauge-wrapper">
-    <svg viewBox="0 0 200 120" class="gauge-svg">
-      <!-- Background arc -->
-      <path
-        d="M20 100 A80 80 0 0 1 180 100"
-        fill="none"
-        stroke="#e5e5e5"
-        stroke-width="5"
-        pathLength="100"
-      />
-
-      <!-- Progress arc -->
-      <path
-        id="progressArc"
-        d="M20 100 A80 80 0 0 1 180 100"
-        fill="none"
-        stroke="#1e6bff"
-        stroke-width="5"
-        stroke-linecap="round"
-        pathLength="100"
-        stroke-dasharray="0 100"
-      />
-    </svg>
-
-    <div class="gauge-center">
-      <h2 id="daysLeft">15</h2>
-      <span>Days left</span>
-    </div>
-  </div>
-</div>
-
+                        <div class="gauge-wrapper">
+                            <svg viewBox="0 0 200 120" class="gauge-svg">
+                            <path
+                                d="M20 100 A80 80 0 0 1 180 100"
+                                fill="none"
+                                stroke="#e5e5e5"
+                                stroke-width="5"
+                                pathLength="100"
+                            />
+                            <path
+                                id="progressArc"
+                                d="M20 100 A80 80 0 0 1 180 100"
+                                fill="none"
+                                stroke="#1e6bff"
+                                stroke-width="5"
+                                stroke-linecap="round"
+                                pathLength="100"
+                                stroke-dasharray="0 100"
+                            />
+                            </svg>
+                            <div class="gauge-center">
+                            <h2 id="daysLeft">15</h2>
+                            <span>Days left</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,15 +174,55 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = 30; 
+  const DAYS_LEFT = 15;
 
   const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
 
-  document.getElementById("progressArc")
+  // Progress arc
+  document
+    .getElementById("progressArc")
     .setAttribute("stroke-dasharray", `${progressPercent} 100`);
 
   document.getElementById("daysLeft").innerText = DAYS_LEFT;
+
+  // -------- TICKS --------
+  const ticksGroup = document.getElementById("gaugeTicks");
+  const TICK_COUNT = 40; // more = denser ticks
+  const centerX = 100;
+  const centerY = 100;
+  const radiusOuter = 92;
+  const radiusInnerSmall = 86;
+  const radiusInnerBig = 82;
+
+  for (let i = 0; i <= TICK_COUNT; i++) {
+    const angle = Math.PI * (i / TICK_COUNT); // 180°
+    const cos = Math.cos(Math.PI - angle);
+    const sin = Math.sin(Math.PI - angle);
+
+    const isMajor = i % 5 === 0;
+
+    const x1 = centerX + radiusOuter * cos;
+    const y1 = centerY - radiusOuter * sin;
+
+    const x2 = centerX + (isMajor ? radiusInnerBig : radiusInnerSmall) * cos;
+    const y2 = centerY - (isMajor ? radiusInnerBig : radiusInnerSmall) * sin;
+
+    const tick = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    tick.setAttribute("x1", x1);
+    tick.setAttribute("y1", y1);
+    tick.setAttribute("x2", x2);
+    tick.setAttribute("y2", y2);
+    tick.setAttribute(
+      "stroke",
+      i / TICK_COUNT * 100 <= progressPercent ? "#1e6bff" : "#111"
+    );
+    tick.setAttribute("stroke-width", isMajor ? "3" : "2");
+    tick.setAttribute("stroke-linecap", "round");
+
+    ticksGroup.appendChild(tick);
+  }
 </script>
+
 
 {% schema %}
 {
