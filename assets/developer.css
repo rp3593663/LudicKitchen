@@ -270,7 +270,7 @@ p.goal_info span{
 }
 .gauge-wrapper {
   width: 250px;
-  height: 195px;
+  height: 150px;
   position: relative;
 }
 .gauge-svg {
