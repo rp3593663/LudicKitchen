@@ -226,7 +226,7 @@ p.goal_info span{
     font-weight: 600;
     font-size: 40px;
     line-height: 52px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     color: var(--primary_color);
     margin: 0px;
 }
