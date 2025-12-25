@@ -59,147 +59,81 @@
             <p>How close you sit defines your role in the making. Pick your tier and choose how involved you want to be.</p>
         </div>
         <div class="tier_table_inner">
-            <div class="tier_box">
+            {% for variant in product.variants %}
+                <div class="tier_box">
+
+                <!-- Variant Image (fallback to product image) -->
                 <div class="tier_image">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/taster_img.svg?v=1766552310">
+                    <img
+                    src="{{ variant.image | default: product.featured_image }}"
+                    alt="{{ variant.title }}"
+                    loading="lazy">
                 </div>
+
                 <div class="tier_data">
+
+                    <!-- Variant Title -->
                     <div class="tier_title">
-                        <h3>Taster</h3>
-                        <div class="current_tier_reached">213 backers</div>
+                    <h3>{{ variant.title }}</h3>
                     </div>
+
+                    <!-- Short Description -->
+                    {% if variant.metafields.custom.variant_short_info != blank %}
                     <div class="tier_information">
-                        For the explorers who take it slow: watching, easing in, and choosing the right moment to participate. A calm tester of things.
+                        {{ variant.metafields.custom.variant_short_info | metafield_text }}
                     </div>
+                    {% endif %}
+
+                    <!-- Info Points -->
+                    {% if variant.metafields.custom.variant_info_points.value != blank %}
                     <div class="tier_info_points">
+                        {% for point in variant.metafields.custom.variant_info_points.value %}
                         <div class="tier_feature">
                             <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited product & store reviews</span>
+                            <span>{{ point }}</span>
                         </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited photo & video reviews</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Google Rich Snippets</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>24/7 chat and email support</span>
-                        </div>
+                        {% endfor %}
                     </div>
+                    {% endif %}
+
+                    <!-- Estimated Delivery Date -->
+                    {% if variant.metafields.custom.estimated_delivery_date != blank %}
                     <div class="tier_estimated">
-                        Estimate Delivery date 25 April 2025
+                        Estimated delivery date
+                        {{ variant.metafields.custom.estimated_delivery_date | date: "%d %B %Y" }}
                     </div>
+                    {% endif %}
+
+                    <!-- Prices -->
                     <div class="tier_price_block">
-                        <div class="tier_price">
-                            <div class="sale_price">₹ 2,000</div>
-                            <div class="regular_price">₹ 2,500</div>
+                    <div class="tier_price">
+                        <div class="sale_price">
+                        {{ variant.price | money }}
                         </div>
-                        <span>Lorem Ipsum</span>
+
+                        {% if variant.compare_at_price > variant.price %}
+                        <div class="regular_price">
+                            {{ variant.compare_at_price | money }}
+                        </div>
+                        {% endif %}
                     </div>
+                    </div>
+
+                    <!-- Progress + Button -->
                     <div class="tier_progress_btn">
-                        <div class="tier_progress_bar">
-                        </div>
-                        <a href="#" class="theme_btn tier_btn">Become a Taster</a>
+                    <div class="tier_progress_bar"></div>
+
+                    <!-- Direct Checkout Link -->
+                    <a
+                        href="/checkout?variant={{ variant.id }}&quantity=1"
+                        class="theme_btn tier_btn">
+                        Choose {{ variant.title }}
+                    </a>
                     </div>
+
                 </div>
-            </div>
-            <div class="tier_box">
-                <div class="tier_image">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef_img.svg?v=1766552310">
                 </div>
-                <div class="tier_data">
-                    <div class="tier_title">
-                        <h3>Sous Chef</h3>
-                        <div class="current_tier_reached">213 backers</div>
-                    </div>
-                    <div class="tier_information">
-                        For the explorers who take it slow: watching, easing in, and choosing the right moment to participate. A calm tester of things.
-                    </div>
-                    <div class="tier_info_points">
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited product & store reviews</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited photo & video reviews</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Google Rich Snippets</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>24/7 chat and email support</span>
-                        </div>
-                    </div>
-                    <div class="tier_estimated">
-                        Estimate Delivery date 25 April 2025
-                    </div>
-                    <div class="tier_price_block">
-                        <div class="tier_price">
-                            <div class="sale_price">₹ 2,000</div>
-                            <div class="regular_price">₹ 2,500</div>
-                        </div>
-                        <span>Lorem Ipsum</span>
-                    </div>
-                    <div class="tier_progress_btn">
-                        <div class="tier_progress_bar">
-                        </div>
-                        <a href="#" class="theme_btn tier_btn">Become a Taster</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tier_box">
-                <div class="tier_image">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/head_chef_img.svg?v=1766552310">
-                </div>
-                <div class="tier_data">
-                    <div class="tier_title">
-                        <h3>Head Chef</h3>
-                        <div class="current_tier_reached">213 backers</div>
-                    </div>
-                    <div class="tier_information">
-                        For the explorers who take it slow: watching, easing in, and choosing the right moment to participate. A calm tester of things.
-                    </div>
-                    <div class="tier_info_points">
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited product & store reviews</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Unlimited photo & video reviews</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>Google Rich Snippets</span>
-                        </div>
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>24/7 chat and email support</span>
-                        </div>
-                    </div>
-                    <div class="tier_estimated">
-                        Estimate Delivery date 25 April 2025
-                    </div>
-                    <div class="tier_price_block">
-                        <div class="tier_price">
-                            <div class="sale_price">₹ 2,000</div>
-                            <div class="regular_price">₹ 2,500</div>
-                        </div>
-                        <span>Lorem Ipsum</span>
-                    </div>
-                    <div class="tier_progress_btn">
-                        <div class="tier_progress_bar">
-                        </div>
-                        <a href="#" class="theme_btn tier_btn">Become a Taster</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 	</div>
 </div>
