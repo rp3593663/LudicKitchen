@@ -64,6 +64,10 @@ a#HeaderMenu-shop {
 
 
 
+/*-----------------------------------------------*/
+/*---------- PDP Project Progess CSS ------------*/
+/*-----------------------------------------------*/
+
 
 .project_progress_inner {
     display: grid;
@@ -173,11 +177,6 @@ p.goal_info {
 p.goal_info span{
     font-weight: 700;
 }
-
-
-
-
-
 .project_progress_right {
     display: grid;
     gap: 8px;
@@ -324,3 +323,8 @@ p.goal_info span{
     display: grid;
     gap: 26px;
 }
+
+
+/*-----------------------------------------------*/
+/*---------- PDP Project Progess CSS ------------*/
+/*-----------------------------------------------*/
