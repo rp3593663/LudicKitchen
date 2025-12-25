@@ -283,6 +283,7 @@ p.goal_info span{
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  display: grid;
 }
 .gauge-center h2 {
     margin: 0;
