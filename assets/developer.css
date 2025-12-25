@@ -237,9 +237,6 @@ p.goal_info span{
     letter-spacing: -0.75px;
 }
 
-
-
-
 .days-gauge {
     background: #F6F6F6;
     border-radius: 16px;
@@ -295,4 +292,12 @@ p.goal_info span{
 .gauge-center span {
   font-size: 14px;
   color: #666;
+}
+
+.tier_wised_contribution h3 {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -1.1px;
 }
