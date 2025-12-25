@@ -421,3 +421,6 @@ p.goal_info span{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.tier_data {
+    margin-top: 18px;
+}
