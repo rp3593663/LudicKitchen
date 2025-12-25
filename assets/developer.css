@@ -424,3 +424,18 @@ p.goal_info span{
 .tier_data {
     margin-top: 18px;
 }
+.tier_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.tier_title h3 {
+    margin: 0;
+    font-weight: 700;
+    font-style: Italic;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: -1.3px;
+    color: var(--primary_color);
+}
