@@ -232,6 +232,12 @@ p.goal_info span{
     color: var(--primary_color);
     margin: 0px;
 }
+.tier_current_reached_data span{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.65px;
+}
 .total_backers_percentage span {
     font-weight: 500;
     font-size: 15px;
