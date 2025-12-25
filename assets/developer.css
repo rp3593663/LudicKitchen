@@ -342,3 +342,7 @@ p.goal_info span{
 .pdp_muticolumn .multicolumn-card__image-wrapper .media {
     border-radius: 10px;
 }
+.pdp_muticolumn .multicolumn-card__info {
+    padding: 0px!important;
+    margin-top: 24px;
+}
