@@ -375,12 +375,12 @@ p.goal_info span{
 }
 .section-project_variant_table h2.h2_title span.border_text {
     position: relative;
-    padding: 0px 20px;
+    padding: 0px 10px;
     color: var(--primary_color);
 }
 .section-project_variant_table h2.h2_title span.border_text img{
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: -5px;
+    top: -3px;
     width: 100%;
 }
