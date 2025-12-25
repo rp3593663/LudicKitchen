@@ -362,3 +362,25 @@ p.goal_info span{
     text-align: justify;
     vertical-align: middle;
 }
+
+
+
+.section-project_variant_table h2.h2_title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+    text-align: center;
+    margin: 0px;
+}
+.section-project_variant_table h2.h2_title span.border_text {
+    position: relative;
+    padding: 0px 20px;
+    color: var(--primary_color);
+}
+.section-project_variant_table h2.h2_title span.border_text img{
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 100%;
+}
