@@ -65,7 +65,7 @@
                 <!-- Variant Image (fallback to product image) -->
                 <div class="tier_image">
                     <img
-                    src="{{ variant.image | default: product.featured_image }}"
+                    src="{{ variant.image | image_url }}"
                     alt="{{ variant.title }}"
                     loading="lazy">
                 </div>
