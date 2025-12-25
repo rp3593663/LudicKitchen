@@ -307,7 +307,7 @@ p.goal_info span{
     line-height: 10px;
     letter-spacing: -0.5px;
 }
-.tier_wised_contribution h3 {
+.tier_wised_contribution h3.title {
     margin: 0px;
     font-weight: 600;
     font-size: 22px;
