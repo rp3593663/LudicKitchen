@@ -504,3 +504,11 @@ p.goal_info span{
     letter-spacing: -0.72px;
     text-decoration: line-through;
 }
+.tier_price_block span {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.39px;
+    color: #949598;
+}
