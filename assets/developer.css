@@ -230,6 +230,11 @@ p.goal_info span{
     color: var(--primary_color);
     margin: 0px;
 }
+.total_backers_percentage {
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+}
 
 
 
