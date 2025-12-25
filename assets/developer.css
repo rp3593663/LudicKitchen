@@ -257,10 +257,16 @@ p.goal_info span{
     letter-spacing: -1.1px;
 }
 .early-end {
-  background: #f3f3f3;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 12px;
+    background: #E7E7E7;
+    padding: 6px 10px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: -0.4px;
+}
+.early-end strong{
+    color: var(--primary_color);
 }
 .gauge-wrapper {
   width: 250px;
