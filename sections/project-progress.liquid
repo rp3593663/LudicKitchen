@@ -181,7 +181,7 @@
         </div>
 	</div>
 </div>
-<script>
+{% comment %} <script>
   const TOTAL_DAYS = 60;
   const DAYS_LEFT = 15;
 
@@ -226,6 +226,61 @@
       i / TICK_COUNT * 100 <= progressPercent ? "#1e6bff" : "#111"
     );
     tick.setAttribute("stroke-width", isMajor ? "2" : "1");
+    tick.setAttribute("stroke-linecap", "round");
+
+    ticksGroup.appendChild(tick);
+  }
+</script> {% endcomment %}
+<script>
+  const TOTAL_DAYS = 60;
+  const DAYS_LEFT = 15;
+
+  const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
+
+  document
+    .getElementById("progressArc")
+    .setAttribute("stroke-dasharray", `${progressPercent} 100`);
+
+  document.getElementById("daysLeft").innerText = DAYS_LEFT;
+
+  // ---------- TICKS ----------
+  const ticksGroup = document.getElementById("gaugeTicks");
+  const TICK_COUNT = 36;
+
+  const cx = 100;
+  const cy = 100;
+
+  // GAP BETWEEN ARC & TICKS
+  const outerRadius = 98;
+  const innerMinor = 90;
+  const innerMajor = 82;
+
+  for (let i = 0; i <= TICK_COUNT; i++) {
+    const angle = Math.PI * (i / TICK_COUNT);
+    const cos = Math.cos(Math.PI - angle);
+    const sin = Math.sin(Math.PI - angle);
+
+    const isMajor = i % 4 === 0;
+
+    const x1 = cx + outerRadius * cos;
+    const y1 = cy - outerRadius * sin;
+
+    const x2 = cx + (isMajor ? innerMajor : innerMinor) * cos;
+    const y2 = cy - (isMajor ? innerMajor : innerMinor) * sin;
+
+    const tick = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "line"
+    );
+
+    tick.setAttribute("x1", x1);
+    tick.setAttribute("y1", y1);
+    tick.setAttribute("x2", x2);
+    tick.setAttribute("y2", y2);
+
+    // STYLE MATCHING IMAGE-2
+    tick.setAttribute("stroke", isMajor ? "#1e6bff" : "#000");
+    tick.setAttribute("stroke-width", isMajor ? "4" : "2");
     tick.setAttribute("stroke-linecap", "round");
 
     ticksGroup.appendChild(tick);
