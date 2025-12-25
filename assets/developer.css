@@ -195,7 +195,11 @@ p.goal_info span{
     display: grid;
     gap: 8px;
 }
-
+.project_progress_right .top_data {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+}
 
 
 
