@@ -489,3 +489,11 @@ p.goal_info span{
     gap: 10px;
     align-items: center;
 }
+.tier_price .sale_price {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 34px;
+    letter-spacing: -1.7px;
+    color: var(--primary_color);
+}
