@@ -269,14 +269,14 @@ p.goal_info span{
     color: var(--primary_color);
 }
 .gauge-wrapper {
-  width: 250px;
-  height: 125px;
+  width: 220px;
+  height: 110px;
   position: relative;
   margin: auto;
 }
 .gauge-svg {
-  width: 250px;
-  height: 148px;
+  width: 220px;
+  height: 128px;
   display: block;
 }
 .gauge-center {
