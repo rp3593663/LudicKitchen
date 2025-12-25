@@ -458,3 +458,8 @@ p.goal_info span{
     text-align: justify;
     vertical-align: middle;
 }
+.tier_info_points {
+    margin: 34px 0px;
+    display: grid;
+    gap: 20px;
+}
