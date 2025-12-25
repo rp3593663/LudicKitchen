@@ -59,6 +59,8 @@
             <p>How close you sit defines your role in the making. Pick your tier and choose how involved you want to be.</p>
         </div>
         <div class="tier_table_inner">
+           
+            {% assign current_backers = 0 %}
             {% for variant in product.variants %}
                 <div class="tier_box">
 
@@ -71,11 +73,13 @@
                 </div>
 
                 <div class="tier_data">
-
+                    
+                    {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                    {% assign current_backers = current_backers | plus: variant_current %}
                     <!-- Variant Title -->
                     <div class="tier_title">
                         <h3>{{ variant.title }}</h3>
-                        <div class="current_tier_reached">213 backers</div>
+                        <div class="current_tier_reached">{{ current_backers }} backers</div>
                     </div>
 
                     <!-- Short Description -->
