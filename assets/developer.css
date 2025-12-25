@@ -439,3 +439,14 @@ p.goal_info span{
     letter-spacing: -1.3px;
     color: var(--primary_color);
 }
+.tier_title .current_tier_reached {
+    background: #EBEBEB;
+    padding: 6px 10px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: -0.6px;
+    text-align: justify;
+    vertical-align: middle;
+}
