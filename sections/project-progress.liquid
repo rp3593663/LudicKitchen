@@ -141,8 +141,29 @@
     <span class="early-end">Early ends in <strong>5 Days</strong></span>
   </div>
 
-  <div class="ticks-wrapper">
-    <div class="ticks" id="ticks"></div>
+  <div class="gauge-wrapper">
+    <svg viewBox="0 0 200 120" class="gauge-svg">
+      <!-- Background arc -->
+      <path
+        d="M20 100 A80 80 0 0 1 180 100"
+        fill="none"
+        stroke="#e5e5e5"
+        stroke-width="10"
+        pathLength="100"
+      />
+
+      <!-- Progress arc -->
+      <path
+        id="progressArc"
+        d="M20 100 A80 80 0 0 1 180 100"
+        fill="none"
+        stroke="#1e6bff"
+        stroke-width="10"
+        stroke-linecap="round"
+        pathLength="100"
+        stroke-dasharray="0 100"
+      />
+    </svg>
 
     <div class="gauge-center">
       <h2 id="daysLeft">15</h2>
@@ -151,7 +172,6 @@
   </div>
 </div>
 
-
                 </div>
             </div>
         </div>
@@ -159,31 +179,15 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = 15;
+  const DAYS_LEFT = 15; 
 
-  const ticksContainer = document.getElementById("ticks");
-  const progressTicks = TOTAL_DAYS - DAYS_LEFT;
-  const angleStep = 180 / TOTAL_DAYS;
+  const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
 
-  for (let i = 0; i <= TOTAL_DAYS; i++) {
-    const tick = document.createElement("div");
-    tick.classList.add("tick");
-
-    if (i <= progressTicks) {
-      tick.classList.add("blue");
-    }
-
-    tick.style.transform = `
-      rotate(${i * angleStep - 90}deg)
-      translateY(-110px)
-    `;
-
-    ticksContainer.appendChild(tick);
-  }
+  document.getElementById("progressArc")
+    .setAttribute("stroke-dasharray", `${progressPercent} 100`);
 
   document.getElementById("daysLeft").innerText = DAYS_LEFT;
 </script>
-
 
 {% schema %}
 {
