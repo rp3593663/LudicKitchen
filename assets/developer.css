@@ -404,3 +404,8 @@ p.goal_info span{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 }
+.tier_box {
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 30px;
+}
