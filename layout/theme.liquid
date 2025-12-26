@@ -313,6 +313,14 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  
+    <div id="site-preloader">
+      <div class="preloader-content">
+        <img src="{{ 'your-logo-white.png' | asset_url }}" alt="Logo" class="preloader-logo">
+      </div>
+    </div>
+
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
