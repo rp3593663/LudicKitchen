@@ -567,3 +567,11 @@ p.goal_info span{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.tier_benefits_head h2 {
+    font-weight: 700;
+    font-style: Italic;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: var(--primary_color);
+}
