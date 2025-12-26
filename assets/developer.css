@@ -658,7 +658,8 @@ p.goal_info span{
         grid-template-columns: 1fr;
         gap: 6px;
     }
-    .project_progress_right {
+    .project_progress_right,
+    .project_progress_right .top_data  {
         gap: 6px;
     }
     .project_progress_left {
