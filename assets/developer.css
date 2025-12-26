@@ -938,9 +938,9 @@ p.goal_info span{
         color:#949598;
     }
     .tier_benefits.active{
-        padding: 8px 0;
+        padding: 16px 0 8px;
     }
     .tier_benefits.active .tier_mobile_description{
-        margin-top: 8px;
+        margin-top: 16px;
     }
 }
