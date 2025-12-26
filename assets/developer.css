@@ -800,6 +800,11 @@ p.goal_info span{
     .pdp_muticolumn .multicolumn-card__info {
         margin-top: 20px;
     }
+    .pdp_muticolumn .multicolumn-card__info h3 {
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -1px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
