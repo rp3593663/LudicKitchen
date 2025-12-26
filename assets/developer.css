@@ -476,13 +476,13 @@ p.goal_info span{
     font-weight: 500;
     font-size: 14px;
     line-height: 12px;
-    letter-spacing: -0.42px;
+    letter-spacing: -0.7px;
 }
 .tier_estimated {
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
-    letter-spacing: -0.42px;
+    letter-spacing: -0.7px;
     color: #949598;
 }
 .tier_price_block {
