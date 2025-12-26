@@ -295,6 +295,62 @@
         "icon_no": "shopify://shop_images/benefits_false.svg"
       }
     },
+    "how_works_EgDMtH": {
+      "type": "how-works",
+      "blocks": {
+        "step_wGchFW": {
+          "type": "step",
+          "settings": {
+            "step_number": "01",
+            "title": "Choose Tier",
+            "text": "Pick the tier that matches how much you want to contribute and how closely you want to be involved."
+          }
+        },
+        "step_zR8BJ4": {
+          "type": "step",
+          "settings": {
+            "step_number": "02",
+            "title": "Contribute",
+            "text": "Make your payment for the tier you've chosen. This secures your participation and unlocks your tier access."
+          }
+        },
+        "step_bCm3rM": {
+          "type": "step",
+          "settings": {
+            "step_number": "03",
+            "title": "Co-create",
+            "text": "The project begins. Follow the process, explore your access, and participate as your tier allows."
+          }
+        },
+        "step_cc8TbH": {
+          "type": "step",
+          "settings": {
+            "step_number": "04",
+            "title": "Redeem",
+            "text": "When the project is complete, claim your product and all your co- creator benefits included in your tier."
+          }
+        }
+      },
+      "block_order": [
+        "step_wGchFW",
+        "step_zR8BJ4",
+        "step_bCm3rM",
+        "step_cc8TbH"
+      ],
+      "name": "How Works",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "heading_before": "How",
+        "heading_highlight": "Kitchen",
+        "heading_after": "works",
+        "description": "Many hands, one shared intention. Every project here follows a simple, 4-folded path -- pick your tier, make your contribution, join the creative process, and finally collect what you helped bring to life. Here's how it unfolds:",
+        "button_label": "Learn more",
+        "button_link": "#",
+        "padding": "0px",
+        "margin": "98px 0px"
+      }
+    },
     "faqs_tab_gt77PK": {
       "type": "faqs-tab",
       "blocks": {
@@ -557,6 +613,7 @@
     "multicolumn_hdVUc3",
     "variant_table_iPnWKa",
     "tier_benefits_eQC8pN",
+    "how_works_EgDMtH",
     "faqs_tab_gt77PK",
     "related-products"
   ]
