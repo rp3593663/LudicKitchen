@@ -1077,6 +1077,11 @@ p.goal_info span{
     .faq-content {
         gap: 12px;
     }
+    .tier_price .sale_price {
+        font-size: 25px;
+        line-height: 25px;
+        letter-spacing: -1.25px;
+    }
 }
 
 
