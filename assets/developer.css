@@ -677,11 +677,15 @@ p.goal_info span{
         line-height: 8px;
         letter-spacing: -.24px;
     }
-    .raised_progress_track {
-        height: 8px;
-    }
+    .raised_progress_track,
     .milestone-75 {
         height: 8px;
+    }
+    .milestone-tooltip:before {
+        top: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #E7E7E7;
     }
 
     /*---------- PDP Project Tier Table ------------*/
