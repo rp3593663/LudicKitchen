@@ -154,35 +154,6 @@
         "margin": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "how_works_KjUCqJ": {
-      "type": "how-works",
-      "name": "How Works",
-      "settings": {
-        "max_width": "",
-        "fullwidth": false,
-        "padding": "",
-        "margin": "98px 0px"
-      }
-    },
     "faqs_tab_gt77PK": {
       "type": "faqs-tab",
       "blocks": {
@@ -418,6 +389,25 @@
         "padding": "",
         "margin": "98px 0px"
       }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
@@ -426,7 +416,6 @@
     "multicolumn_hdVUc3",
     "variant_table_iPnWKa",
     "tier_benefits_eQC8pN",
-    "how_works_KjUCqJ",
     "faqs_tab_gt77PK",
     "related-products"
   ]
