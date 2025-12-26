@@ -898,7 +898,8 @@ p.goal_info span{
         border-radius: 0px;
         padding: 0px;
     }
-    .tier_benefits_head h2 {
+    .tier_benefits_head h2,
+    .features_info .description {
         display: none;
     }
     .tier_benefits_head div {
@@ -917,4 +918,11 @@ p.goal_info span{
         width: 16px;
         height: 16px;
     }
+    .features_info h4 {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -.7px;
+        margin: 0;
+    }
+
 }
