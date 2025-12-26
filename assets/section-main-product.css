@@ -1680,4 +1680,9 @@ a.join_project_btn {
     line-height: 24px;
     letter-spacing: -1.2px;
   }
+  span.total_goal {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -.36px;
+  }
 }
