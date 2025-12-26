@@ -57,38 +57,40 @@
 
             <div class="tier_benefits_body">
                 {% for block in section.blocks %}
-                    <div class="tier_features">
-                        <div class="features_info">
-                            <h4>{{ block.settings.title }}</h4>
-                            <div class="description">
-                            {{ block.settings.short_text }}
-                            {% if block.settings.more_text != blank %}
-                                <span class="more_info"> Learn More</span>
-                                <div class="more_info_block">
-                                {{ block.settings.more_text }}
+                    <div {{ block.shopify_attributes }}>
+                        <div class="tier_features">
+                            <div class="features_info">
+                                <h4>{{ block.settings.title }}</h4>
+                                <div class="description">
+                                {{ block.settings.short_text }}
+                                {% if block.settings.more_text != blank %}
+                                    <span class="more_info"> Learn More</span>
+                                    <div class="more_info_block">
+                                    {{ block.settings.more_text }}
+                                    </div>
+                                {% endif %}
                                 </div>
-                            {% endif %}
                             </div>
                         </div>
-                    </div>
-                    {% for variant in product.variants %}
-                        {% case forloop.index %}
-                            {% when 1 %}{% assign enabled = block.settings.tier_1 %}
-                            {% when 2 %}{% assign enabled = block.settings.tier_2 %}
-                            {% when 3 %}{% assign enabled = block.settings.tier_3 %}
-                            {% when 4 %}{% assign enabled = block.settings.tier_4 %}
-                            {% when 5 %}{% assign enabled = block.settings.tier_5 %}
-                            {% when 6 %}{% assign enabled = block.settings.tier_6 %}
-                            {% else %}{% assign enabled = false %}
-                        {% endcase %}
+                        {% for variant in product.variants %}
+                            {% case forloop.index %}
+                                {% when 1 %}{% assign enabled = block.settings.tier_1 %}
+                                {% when 2 %}{% assign enabled = block.settings.tier_2 %}
+                                {% when 3 %}{% assign enabled = block.settings.tier_3 %}
+                                {% when 4 %}{% assign enabled = block.settings.tier_4 %}
+                                {% when 5 %}{% assign enabled = block.settings.tier_5 %}
+                                {% when 6 %}{% assign enabled = block.settings.tier_6 %}
+                                {% else %}{% assign enabled = false %}
+                            {% endcase %}
 
-                        <div class="tier_benefit_yes_no">
-                            <img
-                            src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}"
-                            alt="{{ variant.title }}"
-                            >
-                        </div>
-                    {% endfor %}
+                            <div class="tier_benefit_yes_no">
+                                <img
+                                src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}"
+                                alt="{{ variant.title }}"
+                                >
+                            </div>
+                        {% endfor %}
+                    </div>  
                 {% endfor %}
             </div>
         </div>
