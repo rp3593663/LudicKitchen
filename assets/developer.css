@@ -736,8 +736,14 @@ p.goal_info span{
     .gauge-wrapper {
         width: 110px;
         height: 58px;
-        position: relative;
-        margin: auto;
+    }
+    .gauge-svg {
+        width: 110px;
+        height: 58px;
+    }
+    .gauge-center {
+        bottom: 4px;
+        gap: 2px;
     }
 
     /*---------- PDP Project Tier Table ------------*/
