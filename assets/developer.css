@@ -622,3 +622,13 @@ p.goal_info span{
     letter-spacing: -0.3px;
     text-align: justify;
 }
+.more_info_block:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #E7E7E7;
+}
