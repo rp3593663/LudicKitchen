@@ -805,6 +805,12 @@ p.goal_info span{
         line-height: 20px;
         letter-spacing: -1px;
     }
+    .pdp_muticolumn .multicolumn-card__info .rte {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -.36px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
