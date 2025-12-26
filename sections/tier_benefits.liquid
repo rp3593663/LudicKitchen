@@ -99,13 +99,51 @@
 </div>
 
 <script>
-{% comment %} document.addEventListener("click", function(e){
-  if(e.target.classList.contains("more_info")){
-    const block = e.target.nextElementSibling;
-    block.style.display = block.style.display === "block" ? "none" : "block";
-  }
-}); {% endcomment %}
+document.addEventListener('DOMContentLoaded', function () {
+  const tierItems = document.querySelectorAll('.tier_benefits');
+
+  if (!tierItems.length) return;
+
+  // Close all except first on load
+  tierItems.forEach((item, index) => {
+    const desc = item.querySelector('.tier_mobile_description');
+    if (!desc) return;
+
+    if (index === 0) {
+      desc.style.display = 'block';
+      item.classList.add('active');
+    } else {
+      desc.style.display = 'none';
+    }
+  });
+
+  // Click handler
+  tierItems.forEach(item => {
+    const title = item.querySelector('.features_info h4');
+    const desc = item.querySelector('.tier_mobile_description');
+
+    if (!title || !desc) return;
+
+    title.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Close all
+      tierItems.forEach(i => {
+        i.classList.remove('active');
+        const d = i.querySelector('.tier_mobile_description');
+        if (d) d.style.display = 'none';
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        desc.style.display = 'block';
+        item.classList.add('active');
+      }
+    });
+  });
+});
 </script>
+
 
 {% schema %}
 {
