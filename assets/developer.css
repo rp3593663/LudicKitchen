@@ -783,6 +783,9 @@ p.goal_info span{
     .variant-tier-contribution {
         gap: 14px;
     }
+    .all_variant-tier-contribution {
+        margin-top: 12px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
