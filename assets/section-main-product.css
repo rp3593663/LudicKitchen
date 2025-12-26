@@ -1691,4 +1691,9 @@ a.join_project_btn {
   .share_join_btn {
     gap: 6px;
   }
+  a.join_project_btn {
+    font-size: 16px;
+    line-height: 16;
+    letter-spacing: -.48px;
+  }
 }
