@@ -259,7 +259,10 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = document.getElementById("leftDays");
+  const daysLeftEl = document.getElementById("leftDays");
+
+// Extract number from text like "15 Days"
+const DAYS_LEFT = parseInt(daysLeftEl.textContent, 10);
 
   const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
 
