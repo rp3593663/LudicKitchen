@@ -81,14 +81,11 @@
                                 {% else %}{% assign enabled = false %}
                             {% endcase %}
 
-                            <div class="tier_value_row">
-                              <span>{{ variant.title }}</span>
-                              <div class="tier_benefit_yes_no">
+                            <div class="tier_benefit_yes_no">
                                 <img
-                                  src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}"
-                                  alt="{{ variant.title }}"
+                                src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}"
+                                alt="{{ variant.title }}"
                                 >
-                              </div>
                             </div>
                         {% endfor %}
                     </div>  
@@ -100,18 +97,13 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth > 767) return;
-
-  document.querySelectorAll(".tier_features").forEach(feature => {
-    feature.addEventListener("click", () => {
-      const parent = feature.closest(".tier_benefits");
-      parent.classList.toggle("active");
-    });
-  });
-});
+{% comment %} document.addEventListener("click", function(e){
+  if(e.target.classList.contains("more_info")){
+    const block = e.target.nextElementSibling;
+    block.style.display = block.style.display === "block" ? "none" : "block";
+  }
+}); {% endcomment %}
 </script>
-
 
 {% schema %}
 {

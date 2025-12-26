@@ -893,53 +893,5 @@ p.goal_info span{
     }
 
 
-  .tier_benefits_head {
-    display: none;
-  }
-
-  .tier_benefits_body .tier_benefits {
-    display: block;
-    padding: 0;
-    border-top: 1px dotted #AEAEAE;
-  }
-
-  .tier_features {
-    padding: 16px;
-    cursor: pointer;
-  }
-
-  .tier_features h4 {
-    font-size: 16px;
-  }
-
-  /* Accordion content */
-  .tier_benefits_values {
-    display: none;
-    padding: 12px 16px 16px;
-    border-top: 1px dashed #ddd;
-  }
-
-  .tier_benefits.active .tier_benefits_values {
-    display: block;
-  }
-
-  /* Each tier row */
-  .tier_value_row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 0;
-  }
-
-  .tier_value_row span {
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--primary_color);
-  }
-
-  .tier_benefit_yes_no img {
-    width: 22px;
-    height: 22px;
-  }
-
+    
 }
