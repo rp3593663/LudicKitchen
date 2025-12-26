@@ -822,4 +822,11 @@ p.goal_info span{
         line-height: 26px;
         letter-spacing: -0.78px;
     }
+    .section-project_variant_table .section_heading p {
+        margin: 20px auto 0;
+        max-width: 282px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -.6px;
+    }
 }
