@@ -925,7 +925,7 @@ p.goal_info span{
         letter-spacing: -.7px;
         margin: 0;
     }
-    .mobile_description {
+    .tier_mobile_description {
         grid-column: span 4;
         font-family: Inter;
         font-weight: 400;
