@@ -915,9 +915,6 @@ p.goal_info span{
         grid-template-columns: 2fr 1fr 1fr 1fr;
         border-top: 1px dotted #1A1A1A;
     }
-    .tier_benefits.active{
-        padding: 16px 0 8px;
-    }
     .tier_benefit_yes_no img {
         width: 16px;
         height: 16px;
@@ -938,5 +935,11 @@ p.goal_info span{
         text-align: justify;
         padding: 8px 0px 0px;
         border-top: dotted 1px #1A1A1A;
+    }
+    .tier_benefits.active{
+        padding: 16px 0 8px;
+    }
+    .tier_benefits.active .tier_mobile_description{
+        margin-top: 8px;
     }
 }
