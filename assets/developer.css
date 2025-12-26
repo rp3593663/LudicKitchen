@@ -935,6 +935,7 @@ p.goal_info span{
         text-align: justify;
         padding: 8px 0px 0px;
         border-top: dotted 1px #1A1A1A;
+        color:#949598;
     }
     .tier_benefits.active{
         padding: 8px 0;
