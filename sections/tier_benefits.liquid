@@ -16,14 +16,14 @@
 {% assign padding 	= section.settings.padding | split: "|" %}
 {%- style -%}
   {%- if margin[0] != blank or padding[0] != blank -%}
-		#shopify-section-{{ section.id }} .section-project_variant_table{
+		#shopify-section-{{ section.id }} .section-project_tier_benefits{
 			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
 			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
 		}
 	{%- endif -%}
 	{%- if margin[1] != blank or padding[1] != blank -%}
 		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .section-project_variant_table{
+			#shopify-section-{{ section.id }} .section-project_tier_benefits{
 				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
 				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
 			}
@@ -31,7 +31,7 @@
 	{%- endif -%}
 	{%- if margin[2] != blank or padding[2] != blank -%}
 		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .section-project_variant_table{
+			#shopify-section-{{ section.id }} .section-project_tier_benefits{
 				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
 				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
 			}
@@ -39,138 +39,17 @@
 	{%- endif -%}
 	{%- if margin[3] != blank or padding[3] != blank -%}
 		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .section-project_variant_table{
+			#shopify-section-{{ section.id }} .section-project_tier_benefits{
 				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
 				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
 			}
 		}
 	{%- endif -%}
-
-
-
 {%- endstyle -%}
 
-<div class="kretoss-section section-project_variant_table">
+<div class="kretoss-section section-project_tier_benefits">
 	<div class="{{ container }}" {{ max_width }}>
-        <div class="section_heading">
-            <h2 class="h2_title">
-                Take a seat at <span class="border_text"><img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/title_round.svg?v=1766058214">our table</span>
-            </h2>
-            <p>How close you sit defines your role in the making. Pick your tier and choose how involved you want to be.</p>
-        </div>
-        <div class="tier_table_inner">
-           
-            {% assign current_backers = 0 %}
-            {% assign target_backers = 0 %}
 
-            {% for variant in product.variants %}
-                {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
-
-                {% assign current_backers = current_backers | plus: variant_current %}
-                {% assign target_backers = target_backers | plus: variant_total %}
-            {% endfor %}
-            {% for variant in product.variants %}
-                <div class="tier_box">
-
-                <!-- Variant Image (fallback to product image) -->
-                <div class="tier_image">
-                    <img
-                    src="{{ variant.metafields.custom.tier_image | image_url }}"
-                    alt="{{ variant.title }}"
-                    loading="lazy">
-                </div>
-
-                <div class="tier_data">
-                    
-                    
-                    <!-- Variant Title -->
-                    <div class="tier_title">
-                        <h3>{{ variant.title }}</h3>
-                        <div class="current_tier_reached">{{ current_backers }} backers</div>
-                    </div>
-
-                    <!-- Short Description -->
-                    {% if variant.metafields.custom.variant_short_info != blank %}
-                    <div class="tier_information">
-                        {{ variant.metafields.custom.variant_short_info | metafield_text }}
-                    </div>
-                    {% endif %}
-
-                    <!-- Info Points -->
-                    {% if variant.metafields.custom.variant_info_points.value != blank %}
-                    <div class="tier_info_points">
-                        {% for point in variant.metafields.custom.variant_info_points.value %}
-                        <div class="tier_feature">
-                            <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/askrisk_blue.svg?v=1766058821">
-                            <span>{{ point }}</span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-
-                    <!-- Estimated Delivery Date -->
-                    {% if variant.metafields.custom.estimated_delivery_date != blank %}
-                    <div class="tier_estimated">
-                        Estimated delivery date
-                        {{ variant.metafields.custom.estimated_delivery_date | date: "%d %B %Y" }}
-                    </div>
-                    {% endif %}
-
-                    <!-- Prices -->
-                    <div class="tier_price_block">
-                      <div class="tier_price">
-                          <div class="sale_price">
-                          {{ variant.price | money }}
-                          </div>
-
-                          {% if variant.compare_at_price > variant.price %}
-                          <div class="regular_price">
-                              {{ variant.compare_at_price | money }}
-                          </div>
-                          {% endif %}
-                      </div>
-                      <span>Lorem Ipsum</span>
-                    </div>
-
-                    <!-- Progress + Button -->
-                    <div class="tier_progress_btn">
-                      {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                      {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
-
-                      {% if total_tier_goal > 0 %}
-                          {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
-                      {% else %}
-                          {% assign tier_progress = 0 %}
-                      {% endif %}
-
-                      {% if tier_progress > 100 %}
-                          {% assign tier_progress = 100 %}
-                      {% endif %}
-
-                      {% assign tier_bar_width = tier_progress %}
-                      {% if tier_bar_width < 2 %}
-                          {% assign tier_bar_width = 2 %}
-                      {% endif %}
-                      <div class="tier_progress_bar">
-                        <div class="tier_track segmented">
-                          <div class="tier_track_progress_fill" style="width: {{ tier_bar_width }}%;">
-                          </div>
-                        </div>  
-                      </div>
-
-                      <!-- Direct Checkout Link -->
-                      <a
-                          href="/checkout?variant={{ variant.id }}&quantity=1"
-                          class="theme_btn tier_btn">
-                          Choose {{ variant.title }}
-                      </a>
-                    </div>
-
-                </div>
-                </div>
-            {% endfor %}
-        </div>
 	</div>
 </div>
 
