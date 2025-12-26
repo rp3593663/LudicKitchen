@@ -791,7 +791,7 @@ p.goal_info span{
 
     .pdp_muticolumn .multicolumn-list {
         gap: 20px!important;
-        padding: unset;
+        padding: 0px !important;
     }
 
     /*---------- PDP Project Tier Table ------------*/
