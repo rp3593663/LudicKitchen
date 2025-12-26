@@ -733,6 +733,12 @@ p.goal_info span{
         line-height: 6px;
         letter-spacing: -.3px;
     }
+    .gauge-wrapper {
+        width: 110px;
+        height: 58px;
+        position: relative;
+        margin: auto;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
