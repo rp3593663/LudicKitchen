@@ -19,82 +19,97 @@
   {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
   {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
 }
-@media(max-width:1200px){
+@media (max-width:1200px){
   #shopify-section-{{ section.id }} .section-project_tier_benefits{
     {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
     {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
   }
 }
-@media(max-width:991px){
+@media (max-width:991px){
   #shopify-section-{{ section.id }} .section-project_tier_benefits{
     {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
     {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
   }
 }
-@media(max-width:767px){
+@media (max-width:767px){
   #shopify-section-{{ section.id }} .section-project_tier_benefits{
     {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
     {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
   }
 }
+
 .more_info_block{display:none;}
 .more_info{cursor:pointer;font-weight:600;}
 {%- endstyle -%}
 
 <div class="kretoss-section section-project_tier_benefits">
   <div class="{{ container }}" {{ max_width }}>
-    <div class="tier_benefits_inner">
 
-      <!-- BENEFITS COLUMN -->
-      <div class="tier_features">
-        <div></div>
+    <table class="tier_benefits_inner">
+      <thead>
+        <tr>
+          <th></th>
+          <th><h2>{{ section.settings.tier_1 }}</h2></th>
+          <th><h2>{{ section.settings.tier_2 }}</h2></th>
+          <th><h2>{{ section.settings.tier_3 }}</h2></th>
+        </tr>
+      </thead>
+
+      <tbody>
         {% for block in section.blocks %}
-          {% if block.type == 'benefit' %}
-            <div class="features_info" {{ block.shopify_attributes }}>
-              <h4>{{ block.settings.title }}</h4>
-              <div class="description">
-                {{ block.settings.short_text }}
-                {% if block.settings.more_text != blank %}
-                  <span class="more_info"> Learn More</span>
-                  <div class="more_info_block">{{ block.settings.more_text }}</div>
-                {% endif %}
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <!-- TIERS -->
-      {% for block in section.blocks %}
-        {% if block.type == 'tier' %}
-          <div class="features_info" {{ block.shopify_attributes }}>
-            <div><h2>{{ block.settings.tier_name }}</h2></div>
-
-            {% for i in (1..10) %}
-              {% assign key = 'benefit_' | append: i %}
-              {% if block.settings[key] != blank %}
-                <div class="tier_benefit_yes_no">
-                  <img
-                    src="{% if block.settings[key] %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
-                    alt="benefit"
-                  >
+          <tr {{ block.shopify_attributes }}>
+            <!-- BENEFIT -->
+            <td class="tier_features">
+              <div class="features_info">
+                <h4>{{ block.settings.title }}</h4>
+                <div class="description">
+                  {{ block.settings.short_text }}
+                  {% if block.settings.more_text != blank %}
+                    <span class="more_info"> Learn More</span>
+                    <div class="more_info_block">
+                      {{ block.settings.more_text }}
+                    </div>
+                  {% endif %}
                 </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endfor %}
+              </div>
+            </td>
 
-    </div>
+            <!-- TIER 1 -->
+            <td class="tier_benefit_yes_no">
+              <img
+                src="{% if block.settings.tier_1 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
+                alt="tier-1"
+              >
+            </td>
+
+            <!-- TIER 2 -->
+            <td class="tier_benefit_yes_no">
+              <img
+                src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
+                alt="tier-2"
+              >
+            </td>
+
+            <!-- TIER 3 -->
+            <td class="tier_benefit_yes_no">
+              <img
+                src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
+                alt="tier-3"
+              >
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
   </div>
 </div>
 
 <script>
 document.addEventListener("click", function(e){
   if(e.target.classList.contains("more_info")){
-    e.target.nextElementSibling.classList.toggle("active");
-    e.target.nextElementSibling.style.display =
-      e.target.nextElementSibling.style.display === "block" ? "none" : "block";
+    const block = e.target.nextElementSibling;
+    block.style.display = block.style.display === "block" ? "none" : "block";
   }
 });
 </script>
@@ -103,10 +118,51 @@ document.addEventListener("click", function(e){
 {
   "name": "Project Tier Benefits",
   "settings": [
-    { "type": "text", "id": "max_width", "label": "Container width" },
-    { "type": "checkbox", "id": "fullwidth", "label": "Full width" },
-    { "type": "text", "id": "padding", "label": "Padding (desktop|1200|991|767)" },
-    { "type": "text", "id": "margin", "label": "Margin (desktop|1200|991|767)" },
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "text",
+      "id": "max_width",
+      "label": "Width container",
+      "info": "Default: 1296px"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Fullwidth"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "info": "desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "margin",
+      "label": "Margin",
+      "info": "desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "tier_1",
+      "label": "Tier 1 name",
+      "default": "Taster"
+    },
+    {
+      "type": "text",
+      "id": "tier_2",
+      "label": "Tier 2 name",
+      "default": "Sous Chef"
+    },
+    {
+      "type": "text",
+      "id": "tier_3",
+      "label": "Tier 3 name",
+      "default": "Head Chef"
+    },
     {
       "type": "image_picker",
       "id": "icon_yes",
@@ -123,32 +179,43 @@ document.addEventListener("click", function(e){
       "type": "benefit",
       "name": "Benefit row",
       "settings": [
-        { "type": "text", "id": "title", "label": "Title" },
-        { "type": "text", "id": "short_text", "label": "Short text" },
-        { "type": "textarea", "id": "more_text", "label": "More info text" }
-      ]
-    },
-    {
-      "type": "tier",
-      "name": "Tier column",
-      "settings": [
-        { "type": "text", "id": "tier_name", "label": "Tier name" },
-
-        { "type": "checkbox", "id": "benefit_1", "label": "Benefit 1" },
-        { "type": "checkbox", "id": "benefit_2", "label": "Benefit 2" },
-        { "type": "checkbox", "id": "benefit_3", "label": "Benefit 3" },
-        { "type": "checkbox", "id": "benefit_4", "label": "Benefit 4" },
-        { "type": "checkbox", "id": "benefit_5", "label": "Benefit 5" },
-        { "type": "checkbox", "id": "benefit_6", "label": "Benefit 6" },
-        { "type": "checkbox", "id": "benefit_7", "label": "Benefit 7" },
-        { "type": "checkbox", "id": "benefit_8", "label": "Benefit 8" },
-        { "type": "checkbox", "id": "benefit_9", "label": "Benefit 9" },
-        { "type": "checkbox", "id": "benefit_10", "label": "Benefit 10" }
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Benefit title"
+        },
+        {
+          "type": "text",
+          "id": "short_text",
+          "label": "Short description"
+        },
+        {
+          "type": "textarea",
+          "id": "more_text",
+          "label": "Learn more text"
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_1",
+          "label": "Tier 1"
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_2",
+          "label": "Tier 2"
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_3",
+          "label": "Tier 3"
+        }
       ]
     }
   ],
   "presets": [
-    { "name": "Project Tier Benefits" }
+    {
+      "name": "Project Tier Benefits"
+    }
   ]
 }
 {% endschema %}
