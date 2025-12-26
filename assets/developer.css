@@ -883,4 +883,12 @@ p.goal_info span{
         line-height: 10px;
         letter-spacing: -.3px;
     }
+    .tier_btn {
+        position: relative;
+        cursor: pointer;
+        padding: 12px 30px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -.6px;
+    }
 }
