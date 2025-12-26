@@ -79,7 +79,7 @@
               <img src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-2">
             </td>
             <td class="tier_benefit_yes_no">
-              <img src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}" alt="tier-3">
+              <img src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-3">
             </td>
           </tr>
         {% endfor %}
