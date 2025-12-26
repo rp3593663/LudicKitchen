@@ -1667,4 +1667,7 @@ a.join_project_btn {
   .info_points {
     gap: 16px;
   }
+  .product__raised_goal {
+    margin: 24px 0;
+  }
 }
