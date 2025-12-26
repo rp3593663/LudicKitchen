@@ -178,6 +178,54 @@
         </div>
 	</div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".js-tier-checkout").forEach(button => {
+    button.addEventListener("click", function () {
+
+      const variantId = this.dataset.variantId;
+      const btnText = this.querySelector(".btn-text");
+      const btnLoader = this.querySelector(".btn-loader");
+
+      // UI: loading state
+      this.disabled = true;
+      btnText.style.display = "none";
+      btnLoader.style.display = "inline-block";
+
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: 1
+        })
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Add to cart failed");
+        return response.json();
+      })
+      .then(() => {
+        // Redirect ONLY after successful add
+        window.location.href = "/checkout";
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Something went wrong. Please try again.");
+
+        // Restore button state
+        this.disabled = false;
+        btnLoader.style.display = "none";
+        btnText.style.display = "inline-block";
+      });
+    });
+  });
+
+});
+</script>
 
 
 
