@@ -1090,6 +1090,9 @@ p.goal_info span{
     .theme_btn {
         padding: 12px 24px;
     }
+    a.faq_btn.theme_btn {
+        margin-top: 20px;
+    }
 }
 
 
