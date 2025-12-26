@@ -586,6 +586,6 @@ p.goal_info span{
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.54px;
-    margin: 0px;
+    margin: 0 0 6px;
     color: var(--primary_color);
 }
