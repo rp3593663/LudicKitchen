@@ -664,6 +664,9 @@ p.goal_info span{
     .progress_data {
         margin-bottom: 12px;
     }
+    .progress_data > * {
+        gap: 6px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
