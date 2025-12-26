@@ -155,6 +155,19 @@
                     </div>
 
                     <div class="days-gauge">
+                        {% assign total_days = 60 %}
+                        {% assign start_date = product.metafields.custom.project_goal_start_date %}
+                        {% assign start_ts = start_date | date: "%s" %}
+                        {% assign today_ts = "now" | date: "%s" %}
+                        {% assign seconds_diff = today_ts | minus: start_ts %}
+                        {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
+                        {% assign days_left = total_days | minus: days_passed %}
+                        {% if days_left < 0 %}
+                            {% assign days_left = 0 %}
+                        {% endif %}
+                        {% if days_left > total_days %}
+                            {% assign days_left = total_days %}
+                        {% endif %}
                         <div class="gauge-header">
                             <h3>Days</h3>
                             <span class="early-end">
