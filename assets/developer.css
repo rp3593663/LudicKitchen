@@ -878,4 +878,9 @@ p.goal_info span{
         line-height: 18px;
         letter-spacing: -.8px;
     }
+    .tier_price_block span {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: -.3px;
+    }
 }
