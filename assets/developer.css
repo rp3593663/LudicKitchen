@@ -451,7 +451,7 @@ p.goal_info span{
     line-height: 26px;
     letter-spacing: -1.1px;
 }
-.total_backers_data .raised_progress_bar {
+.total_backers_data .total_raised_progress_bar {
     margin: 16px 0px 16px;
 }
 .total_backers_track {
@@ -1182,7 +1182,7 @@ p.goal_info span{
         line-height: 14px;
         letter-spacing: -0.7px;
     }
-    .total_backers_data .raised_progress_bar {
+    .total_backers_data .total_raised_progress_bar {
         margin: 8px 0 16px;
     }
     .total_backers_track {
