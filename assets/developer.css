@@ -606,6 +606,10 @@ p.goal_info span{
     text-decoration: underline;
     cursor: pointer;
 }
+.description span.more_info:hover + .more_info_block{
+    opacity: 1;
+    visibility: visible;
+}
 .more_info_block {
     opacity: 0;
     visibility: hidden;
