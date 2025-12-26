@@ -1621,7 +1621,7 @@ span.total_goal {
 a.join_project_btn {
     height: 48px;
     width: 100%;
-    background: #214ECF;
+    background: var(--primary_color);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -1691,9 +1691,11 @@ a.join_project_btn {
   .share_join_btn {
     gap: 6px;
   }
-  a.join_project_btn {
+  a.join_project_btn,
+  .product__custom_btns .share-button__button {
     font-size: 16px;
     line-height: 16;
     letter-spacing: -.48px;
+    border-radius: 4px;
   }
 }
