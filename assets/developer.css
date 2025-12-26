@@ -534,7 +534,7 @@ p.goal_info span{
   inset: 0;
   background: repeating-linear-gradient(to right,#e4e4e4 0,#e4e4e4 2px,transparent 2px,transparent 20px),repeating-linear-gradient(to right,#e4e4e4 0,#e4e4e4 2px,transparent 2px,transparent 10px);
   background-size: auto 12px, auto 6px;
-  background-position: center;
+  background-position: bottom;
   background-repeat: repeat-x;
 }
 .tier_track_progress_fill {
@@ -551,6 +551,6 @@ p.goal_info span{
   inset: 0;
   background:repeating-linear-gradient(to right,var(--primary_color) 0,var(--primary_color) 2px,transparent 2px,transparent 20px),repeating-linear-gradient(to right,var(--primary_color) 0,var(--primary_color) 2px,transparent 2px,transparent 10px);
   background-size: auto 12px, auto 6px;
-  background-position: center;
+  background-position: bottom;
   background-repeat: repeat-x;
 }
