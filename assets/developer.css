@@ -831,4 +831,8 @@ p.goal_info span{
         line-height: 18px;
         letter-spacing: -.6px;
     }
+    .tier_box {
+        border-radius: 16px;
+        padding: 25px;
+    }
 }
