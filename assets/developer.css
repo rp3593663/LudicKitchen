@@ -532,24 +532,8 @@ p.goal_info span{
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    /* BIG */
-    repeating-linear-gradient(
-      to right,
-      #e4e4e4 0,
-      #e4e4e4 3px,
-      transparent 3px,
-      transparent 28px
-    ),
-    /* SMALL */
-    repeating-linear-gradient(
-      to right,
-      #e4e4e4 0,
-      #e4e4e4 3px,
-      transparent 3px,
-      transparent 14px
-    );
-  background-size: auto 10px, auto 5px;
+  background: repeating-linear-gradient(to right,#e4e4e4 0,#e4e4e4 2px,transparent 2px,transparent 20px),repeating-linear-gradient(to right,#e4e4e4 0,#e4e4e4 2px,transparent 2px,transparent 10px);
+  background-size: auto 12px, auto 6px;
   background-position: center;
   background-repeat: repeat-x;
 }
