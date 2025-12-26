@@ -797,6 +797,9 @@ p.goal_info span{
         padding: 22px;
         border-radius: 10px!important;
     }
+    .pdp_muticolumn .multicolumn-card__info {
+        margin-top: 20px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
