@@ -769,6 +769,9 @@ p.goal_info span{
     .total_backers_data .raised_progress_bar {
         margin: 8px 0 16px;
     }
+    .total_backers_track {
+        height: 5px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
