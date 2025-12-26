@@ -562,10 +562,13 @@ p.goal_info span{
 .tier_benefits_head {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 24px 0px;
 }
 .tier_benefits_body .tier_benefits{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 24px 0px;
+    border-top: 2px dotted #AEAEAE;
 }
 .tier_benefits_head h2 {
     font-weight: 700;
