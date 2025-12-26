@@ -656,6 +656,7 @@ p.goal_info span{
 
     .project_progress_inner {
         grid-template-columns: 1fr;
+        gap: 6px;
     }
     .project_progress_left {
         border-radius: 8px;
