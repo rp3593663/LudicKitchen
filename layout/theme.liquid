@@ -402,6 +402,23 @@
     <!------------------------------------------>
 
     <script src="{{ 'developer.js' | asset_url }}" defer="defer"></script>
+    <script>
+      window.addEventListener("load", function() {
+        const preloader = document.getElementById("site-preloader");
+
+        // wait for fade animation (4 seconds)
+        setTimeout(() => {
+          // add exit animation class
+          preloader.classList.add("preloader-exit");
+
+          // wait for exit animation to finish
+          preloader.addEventListener("animationend", () => {
+            preloader.style.display = "none";
+          });
+        }, 4000); // adjust if needed
+      });
+    </script>
+
 
     <!------------------------------------------>
     <!------------------------------------------>
