@@ -66,6 +66,89 @@ a#HeaderMenu-shop {
 }
 
 
+/*-----------------------------------------------*/
+/*---------- How Works Section ------------*/
+/*-----------------------------------------------*/
+
+.how_works_container {
+    background: var(--grey);
+    border-radius: 20px;
+    padding: 40px 40px 40px 26px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 28px;
+}
+.work_steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+}
+.work_step {
+    min-height: 368px;
+    background: #F1F0F0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.steps_top {
+    display: grid;
+    gap: 12px;
+}
+.steps_top h5 {
+    margin: 0px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 24px;
+    letter-spacing: -1.6px;
+}
+.steps_top p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+    margin: 0px;
+    color: var(--primary_color);
+}
+.steps_bottom p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -1px;
+    margin: 0px;
+}
+.works_left_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.works_left_content .top_content {
+    display: grid;
+    gap: 30px;
+}   
+.works_left_content .top_content h2 {
+    margin: 0px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.4px;
+}
+.works_left_content .top_content h2 span{
+    color: var(--primary_color);
+}
+.works_left_content .top_content p {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.9px;
+    text-align: justify;
+}
+.work_steps_mobile {
+    display: none;
+}
 
 /*-----------------------------------------------*/
 /*---------- PDP Project Progess CSS ------------*/
