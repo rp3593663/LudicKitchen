@@ -52,6 +52,7 @@ a#HeaderMenu-shop {
     border-radius: 6px;
     text-align: center;
     border: 0px;
+    font-family: var(--font-family);
 }
 
 @media(max-width: 767px){
