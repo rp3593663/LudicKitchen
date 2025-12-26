@@ -170,7 +170,9 @@
         "margin": "",
         "tier_1": "Taster",
         "tier_2": "Sous Chef",
-        "tier_3": "Head Chef"
+        "tier_3": "Head Chef",
+        "icon_yes": "shopify://shop_images/benefits_true.svg",
+        "icon_no": "shopify://shop_images/benefits_false.svg"
       }
     },
     "faqs_tab_gt77PK": {
