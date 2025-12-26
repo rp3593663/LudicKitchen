@@ -524,15 +524,19 @@ p.goal_info span{
 .tier_track {
   position: relative;
   width: 100%;
-  height: 14px;            /* container height */
+  height: 16px;              /* container only */
   background: transparent;
 }
 
-/* light grey ticks (background) */
+/* BACKGROUND (grey ticks) */
 .tier_track::before {
   content: "";
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 6px;              /* SHORT TICKS */
+  transform: translateY(-50%);
   background:
     repeating-linear-gradient(
       to right,
@@ -541,22 +545,24 @@ p.goal_info span{
       transparent 3px,
       transparent 14px
     );
-  background-size: auto 6px;   /* TICK HEIGHT */
-  background-position: center;
-  background-repeat: repeat-x;
 }
 
-/* blue filled ticks */
+/* progress container MUST have no height */
 .tier_track_progress_fill {
   position: relative;
-  height: 100%;
-  overflow: hidden;
+  height: 0;                /* 🔴 IMPORTANT */
+  overflow: visible;
 }
 
+/* FILLED (blue ticks) */
 .tier_track_progress_fill::before {
   content: "";
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: 50%;
+  height: 6px;              /* SAME tick height */
+  width: 100%;
+  transform: translateY(-50%);
   background:
     repeating-linear-gradient(
       to right,
@@ -565,8 +571,4 @@ p.goal_info span{
       transparent 3px,
       transparent 14px
     );
-  background-size: auto 6px;   /* SAME tick height */
-  background-position: center;
-  background-repeat: repeat-x;
 }
-
