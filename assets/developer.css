@@ -772,6 +772,12 @@ p.goal_info span{
     .total_backers_track {
         height: 5px;
     }
+    .total_backers_percentage h3, 
+    .tier_current_reached_data h3 {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -1.2px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
