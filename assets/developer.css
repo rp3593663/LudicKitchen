@@ -657,6 +657,10 @@ p.goal_info span{
     .project_progress_inner {
         grid-template-columns: 1fr;
     }
+    .project_progress_left {
+        border-radius: 8px;
+        padding: 16px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
