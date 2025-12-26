@@ -698,6 +698,11 @@ p.goal_info span{
     .total_raised_percentage {
         margin: 18px 0 12px;
     }
+    .total_raised_percentage h3 {
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: -0.96px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
