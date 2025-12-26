@@ -911,7 +911,7 @@ p.goal_info span{
     }
     .tier_benefits_body .tier_benefits,
     .tier_benefits_head {
-        padding: 16px 0;
+        padding: 16px 0 0;
         grid-template-columns: 2fr 1fr 1fr 1fr;
     }
     .tier_benefit_yes_no img {
