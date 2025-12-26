@@ -600,3 +600,6 @@ p.goal_info span{
     letter-spacing: -0.3px;
     text-align: justify;
 }
+.description span.more_info{
+    text-decoration: underline;
+}
