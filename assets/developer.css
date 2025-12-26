@@ -559,7 +559,11 @@ p.goal_info span{
     border-radius: 20px;
     padding: 30px;
 }
-.tier_benefits_head, .tier_benefits_body {
+.tier_benefits_head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tier_benefits_body .tier_benefits{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
