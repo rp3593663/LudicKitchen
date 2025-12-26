@@ -677,6 +677,9 @@ p.goal_info span{
         line-height: 8px;
         letter-spacing: -.24px;
     }
+    .raised_progress_track {
+        height: 8px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
