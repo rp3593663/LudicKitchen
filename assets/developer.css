@@ -780,6 +780,9 @@ p.goal_info span{
         line-height: 24px;
         letter-spacing: -1.2px;
     }
+    .variant-tier-contribution {
+        gap: 14px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
