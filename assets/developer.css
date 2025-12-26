@@ -745,6 +745,11 @@ p.goal_info span{
         bottom: 4px;
         gap: 2px;
     }
+    .gauge-center h2 {
+        font-size: 14px;
+        line-height: 12px;
+        letter-spacing: -0.7px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
