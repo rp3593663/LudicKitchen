@@ -589,3 +589,6 @@ p.goal_info span{
     margin: 0 0 6px;
     color: var(--primary_color);
 }
+.tier_benefit_yes_no {
+    margin: auto;
+}
