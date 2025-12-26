@@ -1688,4 +1688,7 @@ a.join_project_btn {
   .product__custom_btns {
     gap: 10px;
   }
+  .share_join_btn {
+    gap: 6px;
+  }
 }
