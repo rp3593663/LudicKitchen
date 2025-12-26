@@ -329,7 +329,7 @@ p.goal_info span{
 
 
 /*-----------------------------------------------*/
-/*---------- PDP Project Progess CSS ------------*/
+/*---------- PDP Multicolumn CSS ------------*/
 /*-----------------------------------------------*/
 
 
@@ -368,6 +368,10 @@ p.goal_info span{
 
 
 
+/*-----------------------------------------------*/
+/*---------- PDP Project Tier Table ------------*/
+/*-----------------------------------------------*/
+
 .section-project_variant_table h2.h2_title {
     font-weight: 800;
     font-size: 48px;
@@ -398,9 +402,6 @@ p.goal_info span{
     text-align: center;
     vertical-align: middle;
 }
-
-
-
 .tier_table_inner {
     margin-top: 55px;
     display: grid;
@@ -553,6 +554,10 @@ p.goal_info span{
   background-repeat: repeat-x;
 }
 
+
+/*-----------------------------------------------*/
+/*---------- PDP Project Tier Benefits CSS ------------*/
+/*-----------------------------------------------*/
 
 
 
