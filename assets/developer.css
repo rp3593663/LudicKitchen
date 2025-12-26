@@ -599,8 +599,25 @@ p.goal_info span{
     line-height: 10px;
     letter-spacing: -0.3px;
     text-align: justify;
+    width: fit-content;
 }
 .description span.more_info{
     text-decoration: underline;
     cursor: pointer;
+}
+.more_info_block {
+    background: #E7E7E7;
+    border-radius: 6px;
+    padding: 8px 12px;
+    max-width: 252px;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    text-align: justify;
 }
