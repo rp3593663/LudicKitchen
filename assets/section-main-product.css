@@ -1644,5 +1644,7 @@ a.join_project_btn {
 }
 
 @media(max-width: 767px){
-
+  .product__media-wrapper .slider-buttons {
+      display: none!important;
+  }
 }
