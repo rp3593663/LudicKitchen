@@ -865,4 +865,7 @@ p.goal_info span{
         margin: 28px 0;
         gap: 6px;
     }
+    .tier_price {
+        gap: 8px;
+    }
 }
