@@ -500,7 +500,7 @@ p.goal_info span{
     font-weight: 700;
     font-size: 34px;
     line-height: 34px;
-    letter-spacing: -1px;
+    letter-spacing: -1.7px;
     color: var(--primary_color);
 }
 .regular_price {
@@ -867,5 +867,10 @@ p.goal_info span{
     }
     .tier_price {
         gap: 8px;
+    }
+    .tier_price .sale_price {
+        font-size: 28px;
+        line-height: 28px;
+        letter-spacing: -1.4px;
     }
 }
