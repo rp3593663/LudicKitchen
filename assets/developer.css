@@ -1082,6 +1082,11 @@ p.goal_info span{
         line-height: 25px;
         letter-spacing: -1.25px;
     }
+    .regular_price {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -.9px;
+    }
 }
 
 
