@@ -842,4 +842,9 @@ p.goal_info span{
     .tier_data {
         margin-top: 15px;
     }
+    .tier_title h3 {
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: -1.1px;
+    }
 }
