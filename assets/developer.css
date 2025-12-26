@@ -947,13 +947,12 @@ p.goal_info span{
         line-height: 26px;
         letter-spacing: -1.2px;
     }
-        .work_step_item {
+    .work_step_item {
         background: #F1F0F0;
         border-radius: 6px;
         margin-bottom: 12px;
         overflow: hidden;
     }
-
     .work_step_header {
         width: 100%;
         background: none;
@@ -965,7 +964,6 @@ p.goal_info span{
         cursor: pointer;
         text-align: left;
     }
-
     .step_number {
         letter-spacing: -0.9px;
         font-size: 18px;
@@ -973,7 +971,6 @@ p.goal_info span{
         font-weight: 800;
         color: var(--primary_color);
     }
-
     .step_title {
         flex: 1;
         font-size: 18px;
@@ -981,13 +978,11 @@ p.goal_info span{
         font-weight: 700;
         letter-spacing: -0.9px;
     }
-
     .step_icon {
         font-size: 20px;
         font-weight: 600;
         transition: transform 0.3s ease;
     }
-
     .work_step_content {
         max-height: 0;
         overflow: hidden;
@@ -996,7 +991,6 @@ p.goal_info span{
         padding-top: 0px;
         margin: 0px 20px;
     }
-
     .work_step_content p {
         padding: 0 0px 20px;
         font-size: 14px;
@@ -1005,23 +999,72 @@ p.goal_info span{
         letter-spacing: -0.7px;
         margin: 0px;
     }
-
     .work_step_item.active .work_step_content {
         max-height: 200px;
         border-top: dotted 1.5px var(--black);
         padding-top: 24px;
     }
-
     .work_step_item.active .step_icon {
         transform: rotate(45deg);
     }
     .works_right_content {
         display: none;
     }
-
     .work_steps_mobile {
         display: block;
     }
+
+    /*---------- FAQs Tab CSS ------------*/
+
+    .faqs_tab_container {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 1fr;
+    }
+    .faqs_top h2 {
+        font-size: 26px;
+        line-height: 26px;
+        letter-spacing: -1.3px;
+    }
+    .faqs_top .faqs_description {
+        margin: 16px 0px 28px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.7px;
+    }
+    .faq-tabs {
+        gap: 10px;
+    }
+    .faq-tab {
+        gap: 4px;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.48px;
+    }
+    .faq-tab img {
+        width: 16px;
+        height: 16px;
+    }
+    a.faq_btn.theme_btn {
+        display: none;
+    }
+    .faq-content {
+        gap: 28px;
+    }
+    .faq-item {
+        padding: 0px;
+    }
+    .faq-question {
+        font-size: 14px;
+        line-height: 20px;
+        gap: 28px;
+        letter-spacing: -0.42px;
+    }
+    .faq-icon svg {
+        width: 14px;
+    }
+
+
 
     /*---------- PDP Project Progess CSS ------------*/
 
