@@ -858,4 +858,7 @@ p.goal_info span{
         line-height: 18px;
         letter-spacing: -.36px;
     }
+    .tier_info_points {
+        margin: 28px 0;
+    }
 }
