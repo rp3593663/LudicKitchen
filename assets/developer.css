@@ -647,7 +647,13 @@ p.goal_info span{
     border-right: 10px solid #E7E7E7;
 }
 
-
+@media(min-width: 768px){
+    .tier_benefits_head img,
+    .tier_mobile_description
+    {
+        display: none!important;
+    }
+}
 
 
 @media(max-width: 767px){
