@@ -727,6 +727,12 @@ p.goal_info span{
         line-height: 14px;
         letter-spacing: -0.7px;
     }
+    .early-end {
+        padding: 3px 5px;
+        font-size: 6px;
+        line-height: 6px;
+        letter-spacing: -.3px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
