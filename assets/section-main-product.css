@@ -1661,4 +1661,7 @@ a.join_project_btn {
     line-height: 24px;
     letter-spacing: -1.2px;
   }
+  .product__short_description {
+    margin-bottom: 18px;
+  }
 }
