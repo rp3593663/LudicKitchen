@@ -718,6 +718,10 @@ p.goal_info span{
         line-height: 12px;
         letter-spacing: -.4px;
     }
+    .days-gauge {
+        border-radius: 8px;
+        padding: 12px 12px 0;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
