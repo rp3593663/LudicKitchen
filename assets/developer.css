@@ -519,15 +519,11 @@ p.goal_info span{
     display: grid;
     gap: 12px;
 }
-
-
 .tier_track {
   position: relative;
   width: 100%;
   height: 18px;
 }
-
-/* BACKGROUND ticks */
 .tier_track::before {
   content: "";
   position: absolute;
@@ -553,4 +549,13 @@ p.goal_info span{
   background-size: auto 12px, auto 6px;
   background-position: bottom;
   background-repeat: repeat-x;
+}
+
+
+
+
+.tier_benefits_inner {
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 30px;
 }
