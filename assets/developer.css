@@ -893,5 +893,9 @@ p.goal_info span{
     }
 
 
-    
+    .tier_benefits_inner {
+        background: unset;
+        border-radius: 0px;
+        padding: 0px;
+    }
 }
