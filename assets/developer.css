@@ -667,6 +667,11 @@ p.goal_info span{
     .progress_data > * {
         gap: 6px;
     }
+    .progress_data h2 {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.8px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
