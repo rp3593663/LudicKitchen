@@ -51,6 +51,7 @@ a#HeaderMenu-shop {
     display: inline-block;
     border-radius: 6px;
     text-align: center;
+    border: 0px;
 }
 
 @media(max-width: 767px){
