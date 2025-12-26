@@ -537,18 +537,14 @@ p.goal_info span{
   background-position: center;
   background-repeat: repeat-x;
 }
-
-/* PROGRESS WIDTH CONTROLLER */
 .tier_track_progress_fill {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  overflow: hidden;              /* 🔥 REQUIRED */
+  overflow: hidden;           
   width: 0;
 }
-
-/* ACTIVE (BLUE) TICKS */
 .tier_track_progress_fill::before {
   content: "";
   position: absolute;
