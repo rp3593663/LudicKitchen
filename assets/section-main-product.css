@@ -1529,6 +1529,7 @@ p.product__text {
     font-size: 14px;
     line-height: 12px;
     letter-spacing: -0.6px;
+    margin: 0px;
 }
 .product__title {
     word-break: break-word;
