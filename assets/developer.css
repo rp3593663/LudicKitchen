@@ -680,6 +680,9 @@ p.goal_info span{
     .raised_progress_track {
         height: 8px;
     }
+    .milestone-75 {
+        height: 8px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
