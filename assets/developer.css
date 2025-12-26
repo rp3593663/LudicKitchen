@@ -602,4 +602,5 @@ p.goal_info span{
 }
 .description span.more_info{
     text-decoration: underline;
+    cursor: pointer;
 }
