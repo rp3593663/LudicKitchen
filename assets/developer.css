@@ -839,4 +839,7 @@ p.goal_info span{
         width: 150px;
         height: auto;
     }
+    .tier_data {
+        margin-top: 15px;
+    }
 }
