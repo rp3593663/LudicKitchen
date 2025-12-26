@@ -44,48 +44,48 @@
 
 <div class="kretoss-section section-project_tier_benefits">
   <div class="{{ container }}" {{ max_width }}>
+    <div class="tier_benefits_inner">
+        <table class="tier_benefits_table">
+        <thead>
+            <tr>
+            <th></th>
+            <th><h2>{{ section.settings.tier_1 }}</h2></th>
+            <th><h2>{{ section.settings.tier_2 }}</h2></th>
+            <th><h2>{{ section.settings.tier_3 }}</h2></th>
+            </tr>
+        </thead>
 
-    <table class="tier_benefits_inner">
-      <thead>
-        <tr>
-          <th></th>
-          <th><h2>{{ section.settings.tier_1 }}</h2></th>
-          <th><h2>{{ section.settings.tier_2 }}</h2></th>
-          <th><h2>{{ section.settings.tier_3 }}</h2></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {% for block in section.blocks %}
-          <tr {{ block.shopify_attributes }}>
-            <td class="tier_features">
-              <div class="features_info">
-                <h4>{{ block.settings.title }}</h4>
-                <div class="description">
-                  {{ block.settings.short_text }}
-                  {% if block.settings.more_text != blank %}
-                    <span class="more_info"> Learn More</span>
-                    <div class="more_info_block">
-                      {{ block.settings.more_text }}
+        <tbody>
+            {% for block in section.blocks %}
+            <tr {{ block.shopify_attributes }}>
+                <td class="tier_features">
+                <div class="features_info">
+                    <h4>{{ block.settings.title }}</h4>
+                    <div class="description">
+                    {{ block.settings.short_text }}
+                    {% if block.settings.more_text != blank %}
+                        <span class="more_info"> Learn More</span>
+                        <div class="more_info_block">
+                        {{ block.settings.more_text }}
+                        </div>
+                    {% endif %}
                     </div>
-                  {% endif %}
                 </div>
-              </div>
-            </td>
-            <td class="tier_benefit_yes_no">
-              <img src="{% if block.settings.tier_1 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-1">
-            </td>
-            <td class="tier_benefit_yes_no">
-              <img src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-2">
-            </td>
-            <td class="tier_benefit_yes_no">
-              <img src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-3">
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
+                </td>
+                <td class="tier_benefit_yes_no">
+                <img src="{% if block.settings.tier_1 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-1">
+                </td>
+                <td class="tier_benefit_yes_no">
+                <img src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-2">
+                </td>
+                <td class="tier_benefit_yes_no">
+                <img src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-3">
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
   </div>
 </div>
 
