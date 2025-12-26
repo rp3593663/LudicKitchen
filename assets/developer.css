@@ -592,3 +592,11 @@ p.goal_info span{
 .tier_benefit_yes_no {
     margin: auto;
 }
+.description {
+    position: relative;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -0.3px;
+    text-align: justify;
+}
