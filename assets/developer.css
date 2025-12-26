@@ -853,4 +853,9 @@ p.goal_info span{
         line-height: 10px;
         letter-spacing: -.5px;
     }
+    .tier_information {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -.36px;
+    }
 }
