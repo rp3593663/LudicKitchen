@@ -562,3 +562,7 @@ p.goal_info span{
 table.tier_benefits_table {
     width: 100%;
 }
+table.tier_benefits_table td,
+table.tier_benefits_table th {
+    width: 25%;
+}
