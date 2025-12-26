@@ -1664,4 +1664,7 @@ a.join_project_btn {
   .product__short_description {
     margin-bottom: 18px;
   }
+  .info_points {
+    gap: 16px;
+  }
 }
