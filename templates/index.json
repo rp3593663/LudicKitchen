@@ -57,10 +57,56 @@
     },
     "how_works_XGp7pm": {
       "type": "how-works",
+      "blocks": {
+        "step_iKDYbH": {
+          "type": "step",
+          "settings": {
+            "step_number": "01",
+            "title": "Choose Tier",
+            "text": "Pick the tier that matches how much you want to contribute and how closely you want to be involved."
+          }
+        },
+        "step_cAKipH": {
+          "type": "step",
+          "settings": {
+            "step_number": "02",
+            "title": "Contribute",
+            "text": "Make your payment for the tier you've chosen. This secures your participation and unlocks your tier access."
+          }
+        },
+        "step_kmmyYP": {
+          "type": "step",
+          "settings": {
+            "step_number": "03",
+            "title": "Co-create",
+            "text": "The project begins. Follow the process, explore your access, and participate as your tier allows."
+          }
+        },
+        "step_Cepxjf": {
+          "type": "step",
+          "settings": {
+            "step_number": "04",
+            "title": "Redeem",
+            "text": "When the project is complete, claim your product and all your co- creator benefits included in your tier."
+          }
+        }
+      },
+      "block_order": [
+        "step_iKDYbH",
+        "step_cAKipH",
+        "step_kmmyYP",
+        "step_Cepxjf"
+      ],
       "name": "How Works",
       "settings": {
         "max_width": "",
         "fullwidth": false,
+        "heading_before": "How",
+        "heading_highlight": "Kitchen",
+        "heading_after": "works",
+        "description": "Many hands, one shared intention. Every project here follows a simple, 4-folded path -- pick your tier, make your contribution, join the creative process, and finally collect what you helped bring to life. Here's how it unfolds:",
+        "button_label": "",
+        "button_link": "",
         "padding": "",
         "margin": ""
       }
