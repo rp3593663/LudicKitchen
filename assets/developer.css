@@ -1087,6 +1087,9 @@ p.goal_info span{
         line-height: 18px;
         letter-spacing: -.9px;
     }
+    .theme_btn {
+        padding: 12px 24px;
+    }
 }
 
 
