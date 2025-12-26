@@ -937,7 +937,7 @@ p.goal_info span{
         border-top: dotted 1px #1A1A1A;
     }
     .tier_benefits.active{
-        padding: 16px 0 8px;
+        padding: 8px 0;
     }
     .tier_benefits.active .tier_mobile_description{
         margin-top: 8px;
