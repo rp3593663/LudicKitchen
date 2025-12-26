@@ -48,9 +48,11 @@
         <div class="tier_benefits_table">
             <div class="tier_benefits_head">
                 <div> </div>
-                <div><h2>{{ section.settings.tier_1 }}</h2></div>
-                <div><h2>{{ section.settings.tier_2 }}</h2></div>
-                <div><h2>{{ section.settings.tier_3 }}</h2></div>
+                {% for variant in product.variants %}
+                <div>
+                    <h2>{{ variant.title }}</h2>
+                </div>
+                {% endfor %}
             </div>
 
             <div class="tier_benefits_body">
