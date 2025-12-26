@@ -170,7 +170,7 @@
                         {% endif %}
                         <div class="gauge-header">
                             <h3>Days</h3>
-                            <span class="early-end">
+                            <span class="early-end" id="leftDays">
                             Early ends in <strong>{{ days_left }} Days</strong>
                             </span>
                         </div>
@@ -199,7 +199,7 @@
                             </svg>
 
                             <div class="gauge-center">
-                            <h2 id="daysLeft">15</h2>
+                            <h2 id="daysLeft">{{ days_left }}</h2>
                             <span>Days left</span>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = document.getElementById("daysLeft");
+  const DAYS_LEFT = document.getElementById("leftDays");
 
   const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
 
