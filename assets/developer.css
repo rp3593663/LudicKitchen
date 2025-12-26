@@ -901,4 +901,11 @@ p.goal_info span{
     .tier_benefits_head h2 {
         display: none;
     }
+    .tier_benefits_head div {
+        margin: auto;
+    }
+    .tier_benefits_head img {
+        width: 48px;
+        height: auto;
+    }
 }
