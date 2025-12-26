@@ -591,6 +591,7 @@ p.goal_info span{
 }
 .tier_benefit_yes_no {
     margin: auto;
+    display: flex;
 }
 .description {
     position: relative;
