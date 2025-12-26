@@ -1670,4 +1670,9 @@ a.join_project_btn {
   .product__raised_goal {
     margin: 24px 0;
   }
+  .raised_goal {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
 }
