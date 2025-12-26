@@ -134,14 +134,33 @@
 
                     <!-- Progress + Button -->
                     <div class="tier_progress_btn">
-                    <div class="tier_progress_bar"></div>
+                      {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                      {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
 
-                    <!-- Direct Checkout Link -->
-                    <a
-                        href="/checkout?variant={{ variant.id }}&quantity=1"
-                        class="theme_btn tier_btn">
-                        Choose {{ variant.title }}
-                    </a>
+                      {% if total_tier_goal > 0 %}
+                          {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
+                      {% else %}
+                          {% assign tier_progress = 0 %}
+                      {% endif %}
+
+                      {% if tier_progress > 100 %}
+                          {% assign tier_progress = 100 %}
+                      {% endif %}
+
+                      {% assign tier_bar_width = tier_progress %}
+                      {% if tier_bar_width < 2 %}
+                          {% assign tier_bar_width = 2 %}
+                      {% endif %}
+                      <div class="tier_progress_bar">
+
+                      </div>
+
+                      <!-- Direct Checkout Link -->
+                      <a
+                          href="/checkout?variant={{ variant.id }}&quantity=1"
+                          class="theme_btn tier_btn">
+                          Choose {{ variant.title }}
+                      </a>
                     </div>
 
                 </div>
