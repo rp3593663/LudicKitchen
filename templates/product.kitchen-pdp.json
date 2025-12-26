@@ -144,6 +144,16 @@
         "margin": "98px 0px 16px"
       }
     },
+    "tier_benefits_eQC8pN": {
+      "type": "tier_benefits",
+      "name": "Project Tier Benefits",
+      "settings": {
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -415,8 +425,9 @@
     "project_progress_P8bzdV",
     "multicolumn_hdVUc3",
     "variant_table_iPnWKa",
-    "related-products",
+    "tier_benefits_eQC8pN",
     "how_works_KjUCqJ",
-    "faqs_tab_gt77PK"
+    "faqs_tab_gt77PK",
+    "related-products"
   ]
 }
