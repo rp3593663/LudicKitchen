@@ -316,7 +316,6 @@ a#HeaderMenu-shop {
 }
 
 
-
 /*-----------------------------------------------*/
 /*---------- PDP Project Progess CSS ------------*/
 /*-----------------------------------------------*/
@@ -913,7 +912,14 @@ p.goal_info span{
     .works_left_content .top_content {
         margin-bottom: 20px;
     }
+    .faq-item {
+        padding: 10px 0px;
+    }
+    .faq-content {
+        gap: 12px;
+    }
 }
+
 
 @media(max-width: 767px){
 
