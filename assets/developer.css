@@ -793,6 +793,10 @@ p.goal_info span{
         gap: 20px!important;
         padding: 0px !important;
     }
+    .pdp_muticolumn .multicolumn-card {
+        padding: 22px;
+        border-radius: 10px!important;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
