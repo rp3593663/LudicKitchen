@@ -194,6 +194,130 @@ a#HeaderMenu-shop {
 }
 
 /*-----------------------------------------------*/
+/*---------- FAQS tab CSS ------------*/
+/*-----------------------------------------------*/
+
+
+.faqs_tab_container {
+    display: grid;
+    gap: 54px;
+    grid-template-columns: 1.05fr 1.95fr;
+}
+
+.faqs_top h2 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.4px;
+    margin: 0px;
+}
+.faqs_top h2 span{
+    color: var(--primary_color);
+}
+.faqs_top .faqs_description {
+    margin: 24px 0px 54px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.9px;
+    text-align: justify;
+}
+.faqs_top p {
+  margin: 0px;
+}
+.faq-tabs {
+    display: grid;
+    gap: 18px;
+}
+.faq-tab {
+    padding: 0px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    font-family: 'Inter';
+    align-items: center;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.72px;
+    color: #C4C4C4;
+}
+.faq-tab img {
+    opacity: 0.3;
+    filter: grayscale(1);
+}
+.faq-tab.active img {
+    opacity: 1;
+    filter: unset;
+}
+.faq-tab.active{
+  color: var(--primary_color);
+}
+.faqs_left_content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.faq-content {
+    display: grid;
+    gap: 24px;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+    line-height: 26px;
+    letter-spacing: -0.6px;
+}
+.faq-item {
+    padding: 18px 28px;
+}
+.faq-item.active .faq-answer {
+    padding-top: 12px;
+}
+.faq-icon{
+  font-size:20px;
+  transition:transform .4s ease;
+}
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:
+  max-height .45s ease,
+  opacity .35s ease;
+}
+.faq-answer p {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.7px;
+    text-align: justify;
+}
+.faq-item.active .faq-answer{
+  max-height:500px;
+  opacity:1;
+}
+.faq-item.active .faq-icon{
+  transform:rotate(45deg);
+}
+
+
+
+/*-----------------------------------------------*/
 /*---------- PDP Project Progess CSS ------------*/
 /*-----------------------------------------------*/
 
