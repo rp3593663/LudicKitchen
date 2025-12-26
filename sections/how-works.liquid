@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 {% schema %}
 {
-  "name": "How Works",
-  "settings": [
+    "name": "How Works",
+    "settings": [
     {
       "type": "header",
       "content": "Layout settings"
@@ -144,33 +144,87 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       "type": "text",
       "id": "max_width",
-      "label": "Width container",
-      "info": "Default: 1296px"
+      "label": "Max width"
     },
     {
       "type": "checkbox",
       "id": "fullwidth",
-      "label": "Fullwidth"
+      "label": "Full width"
+    },
+    {
+      "type": "text",
+      "id": "heading_before",
+      "label": "Heading (before highlight)",
+      "default": "How"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Highlighted word",
+      "default": "Kitchen"
+    },
+    {
+      "type": "text",
+      "id": "heading_after",
+      "label": "Heading (after highlight)",
+      "default": "works"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "text",
       "id": "padding",
-      "label": "Padding",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "label": "Padding (desktop | 1200 | 991 | 767)"
     },
     {
       "type": "text",
       "id": "margin",
-      "label": "Margin",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "label": "Margin (desktop | 1200 | 991 | 767)"
     }
   ],
-	"presets": [
-		{
-			"name": "How Works"
-		}
-    ]
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Work step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_number",
+          "label": "Step number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Step description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How Works"
+    }
+  ]
 }
+
 {% endschema %}
