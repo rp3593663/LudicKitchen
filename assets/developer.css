@@ -581,3 +581,11 @@ p.goal_info span{
     margin: 0px;
     text-align: center;
 }
+.features_info h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    margin: 0px;
+    color: var(--primary_color);
+}
