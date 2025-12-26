@@ -1685,4 +1685,7 @@ a.join_project_btn {
     line-height: 12px;
     letter-spacing: -.36px;
   }
+  .product__custom_btns {
+    gap: 10px;
+  }
 }
