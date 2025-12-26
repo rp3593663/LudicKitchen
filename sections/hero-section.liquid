@@ -1,166 +1,168 @@
 {%- if section.settings.fullwidth -%}
-	{%- assign container = 'container-full' -%}
+  {%- assign container = 'container-full' -%}
 {%- elsif section.settings.max_width != blank -%}
-	{%- assign container = 'kretoss-container' -%}
+  {%- assign container = 'kretoss-container' -%}
 {%- else -%}
-	{%- assign container = 'page-width' -%}
+  {%- assign container = 'page-width' -%}
 {%- endif -%}
 
 {%- assign max_width = '' -%}
 {%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
-	{%- assign width_container = section.settings.max_width | plus: 0 -%}
-	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
 {%- endif -%}
 
-{% assign margin 	= section.settings.margin | split: "|" %}
-{% assign padding 	= section.settings.padding | split: "|" %}
+{% assign margin = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
 {%- style -%}
-  {%- if margin[0] != blank or padding[0] != blank -%}
-		#shopify-section-{{ section.id }} .section-hero{
-			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
-			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
-		}
-	{%- endif -%}
-	{%- if margin[1] != blank or padding[1] != blank -%}
-		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .section-hero{
-				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
-				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[2] != blank or padding[2] != blank -%}
-		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .section-hero{
-				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
-				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[3] != blank or padding[3] != blank -%}
-		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .section-hero{
-				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
-				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-    #shopify-section-{{ section.id }} h2.hero_title {
-        max-width: 924px;
-        font-weight: 800;
-        font-size: 76px;
-        line-height: 86px;
-        letter-spacing: -2.28px;
-        text-align: center;
-        margin: auto;
-    }
-    #shopify-section-{{ section.id }} .hero_title span.img_text {
-        color: var(--primary_color);
-        position: relative;
-    }
-    #shopify-section-{{ section.id }} .hero_title span.img_text img {
-        position: absolute;
-        left: 48px;
-        top: -65px;
-    }
-    #shopify-section-{{ section.id }} span.border_text {
-        position: relative;
-        padding: 0px 10px;
-    }
-    #shopify-section-{{ section.id }} span.border_text img {
-        position: absolute;
-        left: 0px;
-        top: 14px;
-        width: 100%;
-    }
-    #shopify-section-{{ section.id }} .hero_description {
-        margin: 76px 0px 46px;
-        display: grid;
-        gap: 28px;
-    }
-    #shopify-section-{{ section.id }} .hero_description p {
-        margin: 0px;
-        font-weight: 500;
-        font-size: 26px;
-        line-height: 40px;
-        letter-spacing: -1.3px;
-        text-align: justify;
-    }
-    @media(max-width: 767px){
-      #shopify-section-{{ section.id }} .hero_title span.img_text img {
-          left: 30px;
-          top: -30px;
-          width: 78px;
-      }
-      #shopify-section-{{ section.id }} h2.hero_title {
-          max-width: 324px;
-          font-size: 40px;
-          line-height: 42px;
-          letter-spacing: -1.2px;
-      }
-      #shopify-section-{{ section.id }} .hero_description {
-          margin: 54px 0px 24px;
-          gap: 16px;
-      }
-      #shopify-section-{{ section.id }} .hero_description p {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: -0.8px;
-      }   
-    }
+#shopify-section-{{ section.id }} .section-hero{
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+@media (max-width:1200px){
+  #shopify-section-{{ section.id }} .section-hero{
+    {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
+    {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
+  }
+}
+@media (max-width:991px){
+  #shopify-section-{{ section.id }} .section-hero{
+    {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
+    {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
+  }
+}
+@media (max-width:767px){
+  #shopify-section-{{ section.id }} .section-hero{
+    {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
+    {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
+  }
+}
+#shopify-section-{{ section.id }} h2.hero_title{
+  max-width: 924px;
+  font-weight: 800;
+  font-size: 76px;
+  line-height: 86px;
+  letter-spacing: -2.28px;
+  text-align: center;
+  margin: auto;
+}
+#shopify-section-{{ section.id }} .img_text{
+  color: var(--primary_color);
+  position: relative;
+}
+#shopify-section-{{ section.id }} .img_text img{
+  position: absolute;
+  left: 48px;
+  top: -65px;
+}
+#shopify-section-{{ section.id }} .border_text{
+  position: relative;
+  padding: 0 10px;
+}
+#shopify-section-{{ section.id }} .border_text img{
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 100%;
+}
+#shopify-section-{{ section.id }} .hero_description{
+  margin: 76px 0 46px;
+  display: grid;
+  gap: 28px;
+}
+#shopify-section-{{ section.id }} .hero_description p{
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: -1.3px;
+  margin: 0;
+}
+@media(max-width:767px){
+  #shopify-section-{{ section.id }} h2.hero_title{
+    max-width: 324px;
+    font-size: 40px;
+    line-height: 42px;
+  }
+  #shopify-section-{{ section.id }} .hero_description{
+    margin: 54px 0 24px;
+    gap: 16px;
+  }
+  #shopify-section-{{ section.id }} .hero_description p{
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 {%- endstyle -%}
+
 <div class="kretoss-section section-hero">
-	<div class="{{ container }}" {{ max_width }}>
+  <div class="{{ container }}" {{ max_width }}>
     <div class="hero_container">
-        <h2 class="hero_title">
-            Where <span class="img_text"><img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Silver_icon_485aa947-c2ab-4cb1-ae86-6f2f612e403d.svg?v=1766052088">creations</span> unfold at a <span class="border_text"><img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/round.svg?v=1766052707">shared table</span>
-        </h2>
-        <div class="hero_description">
-            <p>Ludic Kitchen is our community-led space where ideas are made on a shared table and the community becomes co-creators.</p>
-            <p>It's where you, a curious, observant, and collaborative enthusiast, who believes in the Ludic way, gets a space to help shape what Ludic makes next. No credentials needed, just a willingness to stir the pot. Here, ideas are open, processes are transparent, and every project is built with collective hands. You can follow it, fund it, vote on it, and be part of the journey as our creation takes shape. Your contribution doesn't buy you ownership - it gives you something better: a legacy; the pride of saying, "I helped make this."</p>
-        </div>
-        <a href="#" class="hero_btn theme_btn">View Project</a>
+
+      <h2 class="hero_title">
+        {{ section.settings.title_before }}
+        <span class="img_text">
+          {% if section.settings.highlight_icon %}
+            <img src="{{ section.settings.highlight_icon | image_url }}">
+          {% endif %}
+          {{ section.settings.title_highlight }}
+        </span>
+        {{ section.settings.title_after }}
+        <span class="border_text">
+          {% if section.settings.border_image %}
+            <img src="{{ section.settings.border_image | image_url }}">
+          {% endif %}
+          {{ section.settings.border_text }}
+        </span>
+      </h2>
+
+      <div class="hero_description">
+        {% for block in section.blocks %}
+          <p>{{ block.settings.text }}</p>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="hero_btn theme_btn">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+
     </div>
-	</div>
+  </div>
 </div>
+
 {% schema %}
 {
   "name": "Hero Section",
   "settings": [
+    { "type": "text", "id": "max_width", "label": "Max width" },
+    { "type": "checkbox", "id": "fullwidth", "label": "Full width" },
+
+    { "type": "text", "id": "title_before", "label": "Title before highlight" },
+    { "type": "text", "id": "title_highlight", "label": "Highlighted title text" },
+    { "type": "image_picker", "id": "highlight_icon", "label": "Highlight icon" },
+    { "type": "text", "id": "title_after", "label": "Title after highlight" },
+
+    { "type": "text", "id": "border_text", "label": "Border text" },
+    { "type": "image_picker", "id": "border_image", "label": "Border underline image" },
+
+    { "type": "text", "id": "button_text", "label": "Button text" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+
+    { "type": "text", "id": "padding", "label": "Padding (desktop | 1200 | 991 | 767)" },
+    { "type": "text", "id": "margin", "label": "Margin (desktop | 1200 | 991 | 767)" }
+  ],
+  "blocks": [
     {
-      "type": "header",
-      "content": "Layout settings"
-    },
-    {
-      "type": "text",
-      "id": "max_width",
-      "label": "Width container",
-      "info": "Default: 1296px"
-    },
-    {
-      "type": "checkbox",
-      "id": "fullwidth",
-      "label": "Fullwidth"
-    },
-    {
-      "type": "text",
-      "id": "padding",
-      "label": "Padding",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
-    },
-    {
-      "type": "text",
-      "id": "margin",
-      "label": "Margin",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "type": "description",
+      "name": "Description paragraph",
+      "settings": [
+        { "type": "textarea", "id": "text", "label": "Paragraph text" }
+      ]
     }
   ],
-	"presets": [
-		{
-			"name": "Hero Section"
-		}
-    ]
+  "presets": [
+    { "name": "Hero Section (Dynamic)" }
+  ]
 }
 {% endschema %}
