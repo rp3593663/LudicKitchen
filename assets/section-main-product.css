@@ -1656,4 +1656,9 @@ a.join_project_btn {
   .product__title {
     margin: 8px 0 18px;
   } 
+  .product__title h1 {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+  }
 }
