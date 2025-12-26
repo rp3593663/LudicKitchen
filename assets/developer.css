@@ -687,6 +687,14 @@ p.goal_info span{
         border-right: 8px solid transparent;
         border-bottom: 8px solid #E7E7E7;
     }
+    .milestone-tooltip {
+        top: calc(100% + 12px);
+        padding: 5px 7px;
+        border-radius: 2px;
+        font-size: 6px;
+        line-height: 6px;
+        letter-spacing: -.3px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
