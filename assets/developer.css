@@ -115,7 +115,7 @@ a#HeaderMenu-shop {
 }
 .milestone-75 {
     position: absolute;
-    left: 75%;
+    left: var(--milestone_percentage)%;
     top: 0px;
     transform: translateX(-50%);
     height: 15px;
