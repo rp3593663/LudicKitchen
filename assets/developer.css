@@ -932,5 +932,7 @@ p.goal_info span{
         line-height: 16px;
         letter-spacing: -0.5px;
         text-align: justify;
+        padding-top: 8px;
+        border-top: dotted 2px #1A1A1A;
     }
 }
