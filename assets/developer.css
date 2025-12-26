@@ -908,7 +908,9 @@ p.goal_info span{
         width: 48px;
         height: auto;
     }
-    .tier_benefits_body .tier_benefits {
+    .tier_benefits_body .tier_benefits,
+    .tier_benefits_head {
         padding: 16px 0;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
     }
 }
