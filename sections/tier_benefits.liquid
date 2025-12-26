@@ -1,169 +1,154 @@
 {%- if section.settings.fullwidth -%}
-	{%- assign container = 'container-full' -%}
+  {%- assign container = 'container-full' -%}
 {%- elsif section.settings.max_width != blank -%}
-	{%- assign container = 'kretoss-container' -%}
+  {%- assign container = 'kretoss-container' -%}
 {%- else -%}
-	{%- assign container = 'page-width' -%}
+  {%- assign container = 'page-width' -%}
 {%- endif -%}
 
 {%- assign max_width = '' -%}
 {%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
-	{%- assign width_container = section.settings.max_width | plus: 0 -%}
-	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+  {%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
 {%- endif -%}
 
-{% assign margin 	= section.settings.margin | split: "|" %}
-{% assign padding 	= section.settings.padding | split: "|" %}
+{% assign margin  = section.settings.margin | split: "|" %}
+{% assign padding = section.settings.padding | split: "|" %}
+
 {%- style -%}
-  {%- if margin[0] != blank or padding[0] != blank -%}
-		#shopify-section-{{ section.id }} .section-project_tier_benefits{
-			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
-			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
-		}
-	{%- endif -%}
-	{%- if margin[1] != blank or padding[1] != blank -%}
-		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .section-project_tier_benefits{
-				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
-				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[2] != blank or padding[2] != blank -%}
-		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .section-project_tier_benefits{
-				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
-				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
-	{%- if margin[3] != blank or padding[3] != blank -%}
-		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .section-project_tier_benefits{
-				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
-				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
-			}
-		}
-	{%- endif -%}
+#shopify-section-{{ section.id }} .section-project_tier_benefits{
+  {% if margin[0] != blank %}margin: {{ margin[0] }};{% endif %}
+  {% if padding[0] != blank %}padding: {{ padding[0] }};{% endif %}
+}
+@media(max-width:1200px){
+  #shopify-section-{{ section.id }} .section-project_tier_benefits{
+    {% if margin[1] != blank %}margin: {{ margin[1] }};{% endif %}
+    {% if padding[1] != blank %}padding: {{ padding[1] }};{% endif %}
+  }
+}
+@media(max-width:991px){
+  #shopify-section-{{ section.id }} .section-project_tier_benefits{
+    {% if margin[2] != blank %}margin: {{ margin[2] }};{% endif %}
+    {% if padding[2] != blank %}padding: {{ padding[2] }};{% endif %}
+  }
+}
+@media(max-width:767px){
+  #shopify-section-{{ section.id }} .section-project_tier_benefits{
+    {% if margin[3] != blank %}margin: {{ margin[3] }};{% endif %}
+    {% if padding[3] != blank %}padding: {{ padding[3] }};{% endif %}
+  }
+}
+.more_info_block{display:none;}
+.more_info{cursor:pointer;font-weight:600;}
 {%- endstyle -%}
 
 <div class="kretoss-section section-project_tier_benefits">
-	<div class="{{ container }}" {{ max_width }}>
-        <div class="tier_benefits_inner">
-            <div class="tier_features">
-                <div></div>
-                <div class="features_info">
-                    <h4>Recipe Card</h4>
-                    <div class="description">
-                        Lorem Ipsum is simply dummy text of the... <span class="more_info">Learn More</span>
-                        <div class="more_info_block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-                    </div>
-                </div>
-                <div class="features_info">
-                    <h4>Recipe Card</h4>
-                    <div class="description">
-                        Lorem Ipsum is simply dummy text of the... <span class="more_info">Learn More</span>
-                        <div class="more_info_block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-                    </div>
-                </div>
-                <div class="features_info">
-                    <h4>Recipe Card</h4>
-                    <div class="description">
-                        Lorem Ipsum is simply dummy text of the... <span class="more_info">Learn More</span>
-                        <div class="more_info_block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-                    </div>
-                </div>
+  <div class="{{ container }}" {{ max_width }}>
+    <div class="tier_benefits_inner">
+
+      <!-- BENEFITS COLUMN -->
+      <div class="tier_features">
+        <div></div>
+        {% for block in section.blocks %}
+          {% if block.type == 'benefit' %}
+            <div class="features_info" {{ block.shopify_attributes }}>
+              <h4>{{ block.settings.title }}</h4>
+              <div class="description">
+                {{ block.settings.short_text }}
+                {% if block.settings.more_text != blank %}
+                  <span class="more_info"> Learn More</span>
+                  <div class="more_info_block">{{ block.settings.more_text }}</div>
+                {% endif %}
+              </div>
             </div>
-            <div class="features_info">
-                <div><h2>Taster</h2></div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- TIERS -->
+      {% for block in section.blocks %}
+        {% if block.type == 'tier' %}
+          <div class="features_info" {{ block.shopify_attributes }}>
+            <div><h2>{{ block.settings.tier_name }}</h2></div>
+
+            {% for i in (1..10) %}
+              {% assign key = 'benefit_' | append: i %}
+              {% if block.settings[key] != blank %}
                 <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
+                  <img
+                    src="{% if block.settings[key] %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
+                    alt="benefit"
+                  >
                 </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-            </div>
-            <div class="features_info">
-                <div><h2>Sous Chef</h2></div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-            </div>
-            <div class="features_info">
-                <div><h2>Head Chef</h2></div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_true.svg?v=1766727057">
-                </div>
-                <div class="tier_benefit_yes_no">
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/benefits_false.svg?v=1766727055">
-                </div>
-            </div>
-            
-        </div>
-	</div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
 </div>
 
-
+<script>
+document.addEventListener("click", function(e){
+  if(e.target.classList.contains("more_info")){
+    e.target.nextElementSibling.classList.toggle("active");
+    e.target.nextElementSibling.style.display =
+      e.target.nextElementSibling.style.display === "block" ? "none" : "block";
+  }
+});
+</script>
 
 {% schema %}
 {
   "name": "Project Tier Benefits",
   "settings": [
+    { "type": "text", "id": "max_width", "label": "Container width" },
+    { "type": "checkbox", "id": "fullwidth", "label": "Full width" },
+    { "type": "text", "id": "padding", "label": "Padding (desktop|1200|991|767)" },
+    { "type": "text", "id": "margin", "label": "Margin (desktop|1200|991|767)" },
     {
-      "type": "header",
-      "content": "Layout settings"
+      "type": "image_picker",
+      "id": "icon_yes",
+      "label": "Yes icon"
     },
     {
-      "type": "text",
-      "id": "max_width",
-      "label": "Width container",
-      "info": "Default: 1296px"
-    },
-    {
-      "type": "checkbox",
-      "id": "fullwidth",
-      "label": "Fullwidth"
-    },
-    {
-      "type": "text",
-      "id": "padding",
-      "label": "Padding",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
-    },
-    {
-      "type": "text",
-      "id": "margin",
-      "label": "Margin",
-      "placeholder": "0px 0px 0px 0px",
-      "info":"Screen: desktop | 1200px | 991px | 767px"
+      "type": "image_picker",
+      "id": "icon_no",
+      "label": "No icon"
     }
   ],
-	"presets": [
-		{
-			"name": "Project Tier Benefits"
-		}
-    ]
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit row",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "short_text", "label": "Short text" },
+        { "type": "textarea", "id": "more_text", "label": "More info text" }
+      ]
+    },
+    {
+      "type": "tier",
+      "name": "Tier column",
+      "settings": [
+        { "type": "text", "id": "tier_name", "label": "Tier name" },
+
+        { "type": "checkbox", "id": "benefit_1", "label": "Benefit 1" },
+        { "type": "checkbox", "id": "benefit_2", "label": "Benefit 2" },
+        { "type": "checkbox", "id": "benefit_3", "label": "Benefit 3" },
+        { "type": "checkbox", "id": "benefit_4", "label": "Benefit 4" },
+        { "type": "checkbox", "id": "benefit_5", "label": "Benefit 5" },
+        { "type": "checkbox", "id": "benefit_6", "label": "Benefit 6" },
+        { "type": "checkbox", "id": "benefit_7", "label": "Benefit 7" },
+        { "type": "checkbox", "id": "benefit_8", "label": "Benefit 8" },
+        { "type": "checkbox", "id": "benefit_9", "label": "Benefit 9" },
+        { "type": "checkbox", "id": "benefit_10", "label": "Benefit 10" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Project Tier Benefits" }
+  ]
 }
 {% endschema %}
