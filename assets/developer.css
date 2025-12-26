@@ -708,7 +708,9 @@ p.goal_info span{
         line-height: 32px;
         letter-spacing: -1.6px;
     }
-    .total_raised_percentage span {
+    .total_raised_percentage span,
+    .total_backers_percentage span,
+    .tier_current_reached_data span {
         font-size: 8px;
         line-height: 8px;
         letter-spacing: -.4px;
