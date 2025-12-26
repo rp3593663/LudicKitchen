@@ -259,15 +259,13 @@
 </div>
 <script>
   const TOTAL_DAYS = 60;
-  const DAYS_LEFT = 30;
+  const DAYS_LEFT = document.getElementById("daysLeft");
 
   const progressPercent = (DAYS_LEFT / TOTAL_DAYS) * 100;
 
   document
     .getElementById("progressArc")
     .setAttribute("stroke-dasharray", `${progressPercent} 100`);
-
-  document.getElementById("daysLeft").innerText = DAYS_LEFT;
 
   // ---------- TICKS ----------
   const ticksGroup = document.getElementById("gaugeTicks");
