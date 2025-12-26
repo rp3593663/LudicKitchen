@@ -847,4 +847,10 @@ p.goal_info span{
         line-height: 22px;
         letter-spacing: -1.1px;
     }
+    .tier_title .current_tier_reached {
+        padding: 5px 10px;
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: -.5px;
+    }
 }
