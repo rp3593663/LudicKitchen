@@ -659,7 +659,7 @@ p.goal_info span{
     }
     .project_progress_left {
         border-radius: 8px;
-        padding: 16px;
+        padding: 15px 18px 12px;
     }
     .progress_data {
         margin-bottom: 12px;
@@ -706,6 +706,11 @@ p.goal_info span{
     .total_raised_percentage span {
         font-size: 8px;
         line-height: 8px;
+        letter-spacing: -.4px;
+    }
+    p.goal_info {
+        font-size: 8px;
+        line-height: 12px;
         letter-spacing: -.4px;
     }
 
