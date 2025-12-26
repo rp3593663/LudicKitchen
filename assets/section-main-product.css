@@ -382,7 +382,7 @@ a.product__text {
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 767px) {
   .product__media-list {
     margin-left: -2.5rem;
     margin-bottom: 3rem;
@@ -408,7 +408,8 @@ a.product__text {
   }
 
   .product__media-list .product__media-item {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+    /* width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing)); */
+    width: 100%;
   }
 
   .product--mobile-columns .product__media-item {
@@ -1637,4 +1638,8 @@ a.join_project_btn {
     vertical-align: middle;
     color: #949598;
     margin: 0px;
+}
+
+@media(max-width: 767px){
+
 }
