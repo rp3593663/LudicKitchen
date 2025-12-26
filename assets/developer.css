@@ -613,7 +613,7 @@ p.goal_info span{
 .more_info_block {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s all;
+    transition: all 0.5s ease;
     background: #E7E7E7;
     border-radius: 6px;
     padding: 8px 12px;
