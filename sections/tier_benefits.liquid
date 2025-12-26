@@ -58,7 +58,6 @@
       <tbody>
         {% for block in section.blocks %}
           <tr {{ block.shopify_attributes }}>
-            <!-- BENEFIT -->
             <td class="tier_features">
               <div class="features_info">
                 <h4>{{ block.settings.title }}</h4>
@@ -73,29 +72,14 @@
                 </div>
               </div>
             </td>
-
-            <!-- TIER 1 -->
             <td class="tier_benefit_yes_no">
-              <img
-                src="{% if block.settings.tier_1 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
-                alt="tier-1"
-              >
+              <img src="{% if block.settings.tier_1 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-1">
             </td>
-
-            <!-- TIER 2 -->
             <td class="tier_benefit_yes_no">
-              <img
-                src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
-                alt="tier-2"
-              >
+              <img src="{% if block.settings.tier_2 %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="tier-2">
             </td>
-
-            <!-- TIER 3 -->
             <td class="tier_benefit_yes_no">
-              <img
-                src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}"
-                alt="tier-3"
-              >
+              <img src="{% if block.settings.tier_3 %}{{ section.settings.icon_yes }}{% else %}{{ section.settings.icon_no }}{% endif %}" alt="tier-3">
             </td>
           </tr>
         {% endfor %}
