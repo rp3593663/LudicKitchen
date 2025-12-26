@@ -913,6 +913,7 @@ p.goal_info span{
     .tier_benefits_head {
         padding: 16px 0 0;
         grid-template-columns: 2fr 1fr 1fr 1fr;
+        border-top: 2px dotted #1A1A1A;
     }
     .tier_benefit_yes_no img {
         width: 16px;
