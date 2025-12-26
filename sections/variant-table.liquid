@@ -160,11 +160,16 @@
                       </div>
 
                       <!-- Direct Checkout Link -->
-                      <a
+                      <button type="button" class="theme_btn tier_btn js-tier-checkout" data-variant-id="{{ variant.id }}">
+                        <span class="btn-text">Choose {{ variant.title }}</span>
+                        <span class="btn-loader" style="display:none;">Adding...</span>
+                      </button>   
+
+                      {% comment %} <a
                           href="/checkout?variant={{ variant.id }}&quantity=1"
                           class="theme_btn tier_btn">
                           Choose {{ variant.title }}
-                      </a>
+                      </a> {% endcomment %}
                     </div>
 
                 </div>
