@@ -1648,4 +1648,9 @@ a.join_project_btn {
   .product__media-wrapper .slider-buttons {
       display: none!important;
   }
+  p.product__text {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -.36px;
+  }
 }
