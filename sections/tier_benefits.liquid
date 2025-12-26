@@ -97,12 +97,12 @@
 </div>
 
 <script>
-document.addEventListener("click", function(e){
+{% comment %} document.addEventListener("click", function(e){
   if(e.target.classList.contains("more_info")){
     const block = e.target.nextElementSibling;
     block.style.display = block.style.display === "block" ? "none" : "block";
   }
-});
+}); {% endcomment %}
 </script>
 
 {% schema %}
