@@ -835,4 +835,8 @@ p.goal_info span{
         border-radius: 16px;
         padding: 25px;
     }
+    .tier_image img {
+        width: 150px;
+        height: auto;
+    }
 }
