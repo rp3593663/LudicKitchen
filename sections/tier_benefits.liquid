@@ -61,13 +61,13 @@
                             <div class="features_info">
                                 <h4>{{ block.settings.title }}</h4>
                                 <div class="description">
-                                {{ block.settings.short_text }}
-                                {% if block.settings.more_text != blank %}
-                                    <span class="more_info"> Learn More</span>
-                                    <div class="more_info_block">
-                                    {{ block.settings.more_text }}
-                                    </div>
-                                {% endif %}
+                                  {{ block.settings.short_text }}
+                                  {% if block.settings.more_text != blank %}
+                                      <span class="more_info"> Learn More</span>
+                                      <div class="more_info_block">
+                                      {{ block.settings.more_text }}
+                                      </div>
+                                  {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -89,6 +89,7 @@
                                 >
                             </div>
                         {% endfor %}
+                        {{ block.settings.more_text }}
                     </div>  
                 {% endfor %}
             </div>
