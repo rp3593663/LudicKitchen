@@ -755,6 +755,11 @@ p.goal_info span{
         line-height: 6px;
         letter-spacing: -.3px;
     }
+    .project_progress_right .total_backers_data, 
+    .tier_wised_contribution {
+        border-radius: 8px;
+        padding: 12px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
