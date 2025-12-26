@@ -67,6 +67,49 @@ a#HeaderMenu-shop {
 
 
 /*-----------------------------------------------*/
+/*---------- Site Preloader CSS ------------*/
+/*-----------------------------------------------*/
+
+#site-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#site-preloader .preloader-logo {
+  width: 200px;
+  opacity: 0;
+  animation: logoFade 3s ease-in-out infinite forwards;
+}
+
+@keyframes logoFade {
+  0% { opacity: 0; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 0; transform: scale(1); }
+  75% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+.preloader-exit {
+  animation: slideDown 1s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
+/*-----------------------------------------------*/
 /*---------- How Works Section ------------*/
 /*-----------------------------------------------*/
 
@@ -1145,41 +1188,4 @@ p.goal_info span{
 
 
 
-/* Full blue page */
-#site-preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--primary_color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  overflow: hidden;
-}
 
-#site-preloader .preloader-logo {
-  width: 200px;
-  opacity: 0;
-  animation: logoFade 3s ease-in-out infinite forwards;
-}
-
-@keyframes logoFade {
-  0% { opacity: 0; transform: scale(1); }
-  25% { opacity: 1; transform: scale(1.05); }
-  50% { opacity: 0; transform: scale(1); }
-  75% { opacity: 1; transform: scale(1.05); }
-  100% { opacity: 0; transform: scale(1); }
-}
-
-.preloader-exit {
-  animation: slideDown 1s ease-in-out forwards;
-}
-
-@keyframes slideDown {
-  to {
-    transform: translateY(-100%);
-  }
-}
