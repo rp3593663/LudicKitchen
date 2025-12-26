@@ -574,4 +574,5 @@ p.goal_info span{
     line-height: 30px;
     letter-spacing: -1px;
     color: var(--primary_color);
+    margin: 0px;
 }
