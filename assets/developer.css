@@ -787,6 +787,13 @@ p.goal_info span{
         margin-top: 12px;
     }
 
+    /*---------- PDP Project Multicolumn ------------*/
+
+    .pdp_muticolumn .multicolumn-list {
+        gap: 20px!important;
+        padding: unset;
+    }
+
     /*---------- PDP Project Tier Table ------------*/
 
     .tier_table_inner {
