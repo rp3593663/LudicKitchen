@@ -559,3 +559,6 @@ p.goal_info span{
     border-radius: 20px;
     padding: 30px;
 }
+table.tier_benefits_table {
+    width: 100%;
+}
