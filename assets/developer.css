@@ -1008,20 +1008,20 @@ p.goal_info span{
     margin: auto;
     display: flex;
 }
-.description {
+.features_info .description {
     position: relative;
     font-weight: 500;
     font-size: 10px;
-    line-height: 10px;
+    line-height: 14px;
     letter-spacing: -0.3px;
     text-align: justify;
     width: fit-content;
 }
-.description span.more_info{
+.features_info .description span.more_info{
     text-decoration: underline;
     cursor: pointer;
 }
-.description span.more_info:hover + .more_info_block{
+.features_info .description span.more_info:hover + .more_info_block{
     opacity: 1;
     visibility: visible;
 }
