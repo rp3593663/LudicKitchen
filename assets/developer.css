@@ -722,6 +722,11 @@ p.goal_info span{
         border-radius: 8px;
         padding: 12px 12px 0;
     }
+    .gauge-header h3 {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -0.7px;
+    }
 
     /*---------- PDP Project Tier Table ------------*/
 
