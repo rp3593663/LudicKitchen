@@ -646,3 +646,21 @@ p.goal_info span{
     border-bottom: 10px solid transparent;
     border-right: 10px solid #E7E7E7;
 }
+
+
+
+
+@media(max-width: 767px){
+
+    /*---------- PDP Project Progess CSS ------------*/
+
+    .project_progress_inner {
+        grid-template-columns: 1fr;
+    }
+
+    /*---------- PDP Project Tier Table ------------*/
+
+    .tier_table_inner {
+        grid-template-columns: 1fr;
+    }
+}
