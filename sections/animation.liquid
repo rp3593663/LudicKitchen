@@ -135,28 +135,18 @@ document.fonts.ready.then(() => {
   // Move title horizontally
   gsap.set(title, { xPercent: 100 });
 
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
-const horizontalTween = gsap.to(title, {
-  xPercent: -100,
-  ease: "none",
-  scrollTrigger: {
-    trigger: section,
-
-    // 🔥 START EARLIER ON MOBILE
-    start: isMobile ? "top 80%" : "top top",
-
-    // 🔥 SHORTER SCROLL DISTANCE ON MOBILE
-    end: isMobile
-      ? "+=" + title.scrollWidth * 0.6
-      : "+=" + (window.innerWidth + title.scrollWidth),
-
-    scrub: true,
-    pin: wrapper,
-    anticipatePin: 1
-  }
-});
-
+  const horizontalTween = gsap.to(title, {
+    xPercent: -100,
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
+      scrub: true,
+      pin: wrapper,
+      anticipatePin: 1
+    }
+  });
 
   // ✨ Letter animation (already working)
   split.chars.forEach(char => {
