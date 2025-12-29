@@ -455,8 +455,10 @@ a.go_btn {
     padding-top: 12px;
 }
 .faq-icon{
-  font-size:20px;
-  transition:transform .4s ease;
+    font-size:20px;
+    transition: transform .4s ease;
+    line-height: 20px;
+    height: 20px;
 }
 .faq-answer{
   max-height:0;
