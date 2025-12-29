@@ -1233,7 +1233,7 @@ p.goal_info span{
     .work_step_content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        transition: all 0.4s ease;
         border-top: solid 0px;
         padding-top: 0px;
         margin: 0px 20px;
