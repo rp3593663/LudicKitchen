@@ -1304,6 +1304,10 @@ p.goal_info span{
         gap: 28px;
         letter-spacing: -0.42px;
     }
+    .faq-icon {
+        line-height: 14px;
+        height: 14px;
+    }
     .faq-icon svg {
         width: 14px;
         height: 14px;
