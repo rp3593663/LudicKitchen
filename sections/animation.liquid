@@ -123,17 +123,15 @@ document.fonts.ready.then(() => {
 
   const split = new SplitText(title, { type: "chars" });
 
-  // Start text just outside viewport
-  gsap.set(title, {
-    xPercent: 100
-  });
+  // Move title horizontally
+  gsap.set(title, { xPercent: 100 });
 
   const horizontalTween = gsap.to(title, {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top top",     
+      start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
@@ -141,7 +139,7 @@ document.fonts.ready.then(() => {
     }
   });
 
-  // Optional per-letter float (can remove if you want exact truus)
+  // ✨ Letter animation (already working)
   split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
@@ -157,7 +155,29 @@ document.fonts.ready.then(() => {
     });
   });
 
+  // 👉 ARROW SVG DRAW ANIMATION
+  const arrowPaths = document.querySelectorAll(
+    ".horizontal-words__arrow-end-svg path"
+  );
+
+  gsap.set(arrowPaths, {
+    drawSVG: "0% 0%"
+  });
+
+  gsap.to(arrowPaths, {
+    drawSVG: "0% 100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: arrowPaths[0],
+      containerAnimation: horizontalTween,
+      start: "left 90%",
+      end: "left 30%",
+      scrub: 0.5
+    }
+  });
+
 });
+
 </script>
 
 {% schema %}
