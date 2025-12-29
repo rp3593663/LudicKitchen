@@ -130,55 +130,62 @@ document.fonts.ready.then(() => {
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
 
-  const split = new SplitText(title, { type: "chars" });
-
-  // Move title horizontally
-  gsap.set(title, { xPercent: 100 });
+  if (!section || !wrapper || !title) return;
 
   const isMobile = window.innerWidth <= 767;
 
+  const split = new SplitText(title, { type: "chars" });
+
+  // Start title off-screen
+  gsap.set(title, { xPercent: 100 });
+
+  // ✅ MOBILE-FIRST SCROLL DISTANCE
   const scrollDistance = isMobile
-    ? title.scrollWidth * 2.2   // 👈 more scroll on mobile
+    ? title.scrollWidth * 3       // 👈 MUCH longer scroll on mobile
     : window.innerWidth + title.scrollWidth;
 
-
+  // ✅ HORIZONTAL SCROLL ANIMATION
   const horizontalTween = gsap.to(title, {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top top",
+
+      // 🔥 KEY FIX — START EARLIER ON MOBILE
+      start: isMobile ? "top 80%" : "top top",
+
       end: () => "+=" + scrollDistance,
       scrub: true,
       pin: wrapper,
-      anticipatePin: 1
+      anticipatePin: 1,
+      invalidateOnRefresh: true
     }
   });
 
-  // ✨ Letter animation (already working)
+  // ✅ LETTER ANIMATIONS (FASTER ON MOBILE)
   split.chars.forEach(char => {
     gsap.from(char, {
-      yPercent: (Math.random() - 0.5) * 300,
-      rotation: (Math.random() - 0.5) * 60,
-      ease: "elastic.out(1.2, 1)",
+      yPercent: isMobile ? 120 : (Math.random() - 0.5) * 300,
+      rotation: isMobile ? 0 : (Math.random() - 0.5) * 60,
+      ease: "elastic.out(1.1, 0.9)",
       scrollTrigger: {
         trigger: char,
         containerAnimation: horizontalTween,
-        start: "left 80%",
-        end: "left 20%",
+
+        // 🔥 START IMMEDIATELY ON MOBILE
+        start: isMobile ? "left 98%" : "left 80%",
+        end:   isMobile ? "left 60%" : "left 20%",
         scrub: true
       }
     });
   });
 
-  // 👉 ARROW SVG DRAW ANIMATION
+  // ✅ ARROW SVG DRAW
   const arrowPaths = document.querySelectorAll(
     ".horizontal-words__arrow-end-svg path"
   );
 
-  gsap.set(arrowPaths, {
-    drawSVG: "0% 0%"
-  });
+  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
 
   gsap.to(arrowPaths, {
     drawSVG: "0% 100%",
@@ -186,15 +193,17 @@ document.fonts.ready.then(() => {
     scrollTrigger: {
       trigger: arrowPaths[0],
       containerAnimation: horizontalTween,
-      start: "left 90%",
-      end: "left 30%",
-      scrub: 0.5
+      start: isMobile ? "left 95%" : "left 90%",
+      end:   isMobile ? "left 60%" : "left 30%",
+      scrub: true
     }
   });
 
+  // ✅ FORCE REFRESH (IMPORTANT FOR MOBILE)
+  ScrollTrigger.refresh();
 });
-
 </script>
+
 
 {% schema %}
 {
