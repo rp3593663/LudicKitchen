@@ -332,6 +332,7 @@ a.go_btn {
     margin-top: 30px;
     display: block;
     padding: 14px 26px;
+    text-align: left;
 }
 .raised_progress_bar {
     display: grid;
