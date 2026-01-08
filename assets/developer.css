@@ -1083,7 +1083,6 @@ p.goal_info span{
     border: 1px solid #EDEDED;
     box-shadow: 0px 15px 35px 0px #00000029;
     max-width: 398px;
-    min-width: 398px;
     width: 100%;
     border-radius: 12px;
 }
@@ -1280,6 +1279,9 @@ a.redirect_recover {
     .tier_mobile_description
     {
         display: none!important;
+    }
+    .account_box {
+        min-width: 398px;
     }
 }
 
