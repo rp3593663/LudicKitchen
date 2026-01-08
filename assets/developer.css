@@ -1144,6 +1144,13 @@ img.account_head_logo {
 .customer .field input::placeholder {
     color: #D7D7D7;
 }
+button.customer_submit_btn.theme_btn {
+    width: 100%;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -.42px;
+}
 
 
 
