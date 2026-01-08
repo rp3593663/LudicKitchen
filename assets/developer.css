@@ -1159,6 +1159,12 @@ button.customer_submit_btn.theme_btn {
     padding: 10px;
     margin-bottom: 16px;
 }
+.form_error_wrapper h2.form__message {
+    margin: 0px;
+    font-size: 13px;
+    letter-spacing: -0.39px;
+    font-weight: 600;
+}
 
 
 
