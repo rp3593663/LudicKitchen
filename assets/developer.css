@@ -1136,7 +1136,7 @@ img.account_head_logo {
     vertical-align: middle;
     color: var(--black);
 }
-.customer .field input:placeholder {
+.customer .field input::placeholder {
     color: #D7D7D7;
 }
 
