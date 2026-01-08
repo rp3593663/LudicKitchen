@@ -9,27 +9,31 @@ window.addEventListener("load", function() {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
-  const toggleBtn = document.querySelector(".toggle-password");
-  const passwordInput = document.getElementById("RegisterForm-password");
+  const eyeOpen = document.getElementById("icon-eye-open")?.innerHTML;
+  const eyeClosed = document.getElementById("icon-eye-closed")?.innerHTML;
 
-  if (!toggleBtn || !passwordInput) return;
+  document.querySelectorAll(".toggle-password").forEach(function(btn) {
+    const targetId = btn.getAttribute("data-target");
+    const input = document.getElementById(targetId);
 
-  const eyeOpen = document.getElementById("icon-eye-open").innerHTML;
-  const eyeClosed = document.getElementById("icon-eye-closed").innerHTML;
+    if (!input) return;
 
-  // Default state = hidden password
-  toggleBtn.innerHTML = eyeOpen;
+    // default state
+    btn.innerHTML = eyeClosed;
 
-  toggleBtn.addEventListener("click", function() {
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleBtn.innerHTML = eyeClosed;
-    } else {
-      passwordInput.type = "password";
-      toggleBtn.innerHTML = eyeOpen;
-    }
+    btn.addEventListener("click", function() {
+      if (input.type === "password") {
+        input.type = "text";
+        btn.innerHTML = eyeOpen;
+      } else {
+        input.type = "password";
+        btn.innerHTML = eyeClosed;
+      }
+    });
   });
 });
+
 
 
