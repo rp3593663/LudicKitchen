@@ -118,8 +118,7 @@
             <h2>Create your account</h2>
             <p>Use the method you originally signed up with</p>
           </div>
-        </div>
-        <div>
+          <div>
           {%- if recover_success == true -%}
             <h3 class="form__message" tabindex="-1" autofocus>
               <span class="svg-wrapper">
@@ -202,6 +201,8 @@
             </a>
           {%- endform -%}
         </div>
+        </div>
+        
 
         {% comment %} {%- if shop.checkout.guest_login -%}
           <div>
