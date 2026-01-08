@@ -1156,6 +1156,9 @@ img.account_head_logo {
     line-height: 10px;
     bottom: 13px;
 }
+.password_field{
+    padding-right: 30px;
+}
 .customer .field label {
     font-weight: 500;
     font-size: 14px;
