@@ -138,6 +138,9 @@
                   {% endif %}
                   placeholder="Enter password"
                 >
+                <button type="button" class="toggle-password" aria-label="Toggle password">
+                  👁
+                </button>
               </div>
               {%- if form.errors contains 'password' -%}
                 <span id="RegisterForm-password-error" class="form__message">
