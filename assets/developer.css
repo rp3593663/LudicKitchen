@@ -1320,6 +1320,10 @@ a.redirect_recover {
 
 @media(max-width: 767px){
 
+    .account_box .customer {
+        padding: 28px;
+    }
+
 
     /*---------- Featured Project Section ------------*/
 
