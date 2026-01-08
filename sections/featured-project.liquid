@@ -65,6 +65,15 @@
                 <div class="project_data_container">
                     <div class="project_data_counter">
 
+                        {% assign current_backers = 0 %}
+
+                        {% for variant in project_product.variants %}
+                            {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                            {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
+
+                            {% assign current_backers = current_backers | plus: variant_current %}
+                        {% endfor %}
+
                         {% assign raised_amount = project_product.metafields.custom.raised_amount | default: 0 %}
                         {% assign goal_amount = project_product.metafields.custom.project_goal | default: 1 %}
 
