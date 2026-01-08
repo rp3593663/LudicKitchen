@@ -1180,6 +1180,13 @@ button.customer_submit_btn.theme_btn {
     line-height: 13px;
     text-decoration: unset;
 }
+.form_field .form__message {
+    color: red;
+    letter-spacing: -0.36px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 6px;
+}
     
 
 
