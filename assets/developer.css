@@ -1078,6 +1078,7 @@ p.goal_info span{
     justify-content: center;
 }
 .account_box {
+    background: var(--white);
     border: 1px solid #EDEDED;
     box-shadow: 0px 15px 35px 0px #00000029;
     padding: 28px 38px;
