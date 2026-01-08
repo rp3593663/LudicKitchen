@@ -1094,6 +1094,9 @@ img.account_head_logo {
     width: 62px;
     height: auto;
 }
+.account_head_info {
+    margin-bottom: 32px;
+}
 .account_head_info h2 {
     font-weight: 700;
     font-size: 18px;
@@ -1111,6 +1114,7 @@ img.account_head_logo {
     color: #949598;
     margin: 0px;
 }
+
 
 
 
