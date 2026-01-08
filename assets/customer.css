@@ -1,4 +1,4 @@
-.customer:not(.account):not(.order) {
+/* .customer:not(.account):not(.order) {
   margin: 0 auto;
   text-align: center;
 }
@@ -742,4 +742,4 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7),
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
-}
+} */
