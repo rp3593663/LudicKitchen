@@ -1224,7 +1224,7 @@ button.customer_submit_btn.theme_btn {
 }
 a.redirect_recover {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 12px!important;
     letter-spacing: -0.36px;
     font-weight: 600;
     color: var(--primary_color);
