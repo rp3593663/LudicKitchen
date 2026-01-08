@@ -1090,10 +1090,6 @@ p.goal_info span{
 .account_box .customer{
     padding: 28px 38px;
 }
-.account_header {
-    display: grid;
-    gap: 32px;
-}
 img.account_head_logo {
     width: 62px;
     height: auto;
