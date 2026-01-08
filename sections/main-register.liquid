@@ -186,27 +186,32 @@
   "settings": [
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "Layout settings"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "type": "text",
+      "id": "max_width",
+      "label": "Width container",
+      "info": "Default: 1296px"
     },
     {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Fullwidth"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "placeholder": "0px 0px 0px 0px",
+      "info":"Screen: desktop | 1200px | 991px | 767px"
+    },
+    {
+      "type": "text",
+      "id": "margin",
+      "label": "Margin",
+      "placeholder": "0px 0px 0px 0px",
+      "info":"Screen: desktop | 1200px | 991px | 767px"
     }
   ]
 }
