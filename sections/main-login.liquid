@@ -111,10 +111,11 @@
               <button class="customer_submit_btn theme_btn">
                 {{ 'customer.login_page.submit' | t }}
               </button>
-
-              <a href="#login">
-                {{ 'customer.login_page.cancel' | t }}
-              </a>
+              <div class="login_redirect">
+                <a href="#login">
+                  {{ 'customer.login_page.cancel' | t }}
+                </a>
+              </div>
             {%- endform -%}
           </div>
 
