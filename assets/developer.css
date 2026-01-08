@@ -1194,6 +1194,11 @@ button.customer_submit_btn.theme_btn {
 }
 .form_error_wrapper li{
     line-height: 13px;
+    display: block;
+    font-size: 13px!important;
+    letter-spacing: -0.39px;
+    line-height: 13px;
+    text-decoration: unset!important;
 }
 .form_error_wrapper a {
     display: block;
