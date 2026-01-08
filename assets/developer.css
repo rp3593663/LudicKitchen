@@ -1181,6 +1181,13 @@ button.customer_submit_btn.theme_btn {
     padding: 10px;
     margin-bottom: 16px;
 }
+.form_success_wrapper {
+    background: #d8ffd8;
+    border: solid 1px green;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 10px;
+}
 .form_error_wrapper h2.form__message {
     margin: 0px;
     font-size: 13px;
