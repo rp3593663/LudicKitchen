@@ -1175,10 +1175,10 @@ button.customer_submit_btn.theme_btn {
 }
 .form_error_wrapper a {
     display: block;
-    font-size: 13px;
+    font-size: 13px!important;
     letter-spacing: -0.39px;
     line-height: 13px;
-    text-decoration: unset;
+    text-decoration: unset!important;
 }
 .form_field .form__message {
     color: red;
