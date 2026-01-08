@@ -1071,7 +1071,8 @@ p.goal_info span{
 /*---------- Login Register Page CSS ------------*/
 /*-----------------------------------------------*/
 
-.kretoss-section.section-customer_register {
+.section-customer_register,
+.section-customer_login {
     min-height: 100dvh;
     display: flex;
     align-items: center;
