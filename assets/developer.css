@@ -1089,6 +1089,10 @@ p.goal_info span{
     display: grid;
     gap: 32px;
 }
+img.account_head_logo {
+    width: 62px;
+    height: auto;
+}
 
 
 
