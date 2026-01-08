@@ -1102,6 +1102,15 @@ img.account_head_logo {
     vertical-align: middle;
     margin: 0px 0px 10px;
 }
+.account_head_info p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    text-align: left;
+    color: #949598;
+    margin: 0px;
+}
 
 
 
