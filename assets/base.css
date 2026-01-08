@@ -1826,7 +1826,7 @@ input[type='checkbox'] {
 .customer .form__message .svg-wrapper {
   height: 1.5rem;
   width: 1.5rem;
-  margin-right: 1rem;
+  margin-right: 0rem;
 }
 
 .customer .field .form__message .svg-wrapper {
