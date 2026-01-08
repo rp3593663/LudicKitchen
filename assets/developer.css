@@ -1114,7 +1114,10 @@ img.account_head_logo {
     color: #949598;
     margin: 0px;
 }
-
+.customer .field {
+    display: grid;
+    gap: 8px;
+}
 
 
 
