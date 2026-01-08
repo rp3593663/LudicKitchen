@@ -1136,11 +1136,7 @@ img.account_head_logo {
 .account_footer p a{
     font-weight: 600;
     color: var(--primary_color);
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: -0.42px;
-    vertical-align: middle;
-    margin: 0px;
+    text-decoration: unset;
 }
 .form_all_fields{
     display: grid;
