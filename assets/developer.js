@@ -13,13 +13,23 @@ document.addEventListener("DOMContentLoaded", function() {
   const toggleBtn = document.querySelector(".toggle-password");
   const passwordInput = document.getElementById("RegisterForm-password");
 
-  if (toggleBtn && passwordInput) {
-    toggleBtn.addEventListener("click", function() {
-      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-      passwordInput.setAttribute("type", type);
+  if (!toggleBtn || !passwordInput) return;
 
-      this.textContent = type === "password" ? "👁" : "🙈";
-    });
-  }
+  const eyeOpen = document.getElementById("icon-eye-open").innerHTML;
+  const eyeClosed = document.getElementById("icon-eye-closed").innerHTML;
+
+  // Default state = hidden password
+  toggleBtn.innerHTML = eyeClosed;
+
+  toggleBtn.addEventListener("click", function() {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleBtn.innerHTML = eyeOpen;
+    } else {
+      passwordInput.type = "password";
+      toggleBtn.innerHTML = eyeClosed;
+    }
+  });
 });
+
 
