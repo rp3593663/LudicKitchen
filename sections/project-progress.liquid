@@ -15,7 +15,7 @@
 {% assign margin 	= section.settings.margin | split: "|" %}
 {% assign padding 	= section.settings.padding | split: "|" %}
 {%- style -%}
-  {%- if margin[0] != blank or padding[0] != blank -%}
+    {%- if margin[0] != blank or padding[0] != blank -%}
 		#shopify-section-{{ section.id }} .section-project_progress_data{
 			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
 			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
