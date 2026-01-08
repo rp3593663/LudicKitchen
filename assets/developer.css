@@ -1152,6 +1152,13 @@ button.customer_submit_btn.theme_btn {
     letter-spacing: -.42px;
     cursor: pointer;
 }
+.form_error_wrapper {
+    background: #ffe0e0;
+    border-radius: 6px;
+    border: solid 1px red;
+    padding: 10px;
+    margin-bottom: 16px;
+}
 
 
 
