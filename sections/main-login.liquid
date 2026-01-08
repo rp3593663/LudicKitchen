@@ -197,11 +197,10 @@
                         aria-invalid="true"
                       {% endif %}
                       placeholder="Enter password"
-                       class="password_field"
+                      class="password_field"
                     >
+                    <button type="button" class="toggle-password" data-target="CustomerPassword" aria-label="Toggle password"></button>
                   </div>
-
-                  <button type="button" class="toggle-password" data-target="CustomerPassword" aria-label="Toggle password"></button>
 
                   <a href="#recover" class="redirect_recover">
                     {{ 'customer.login_page.forgot_password' | t }}
