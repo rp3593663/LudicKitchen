@@ -1286,6 +1286,10 @@ a.redirect_recover {
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px)  {
+    .project_progress_inner {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
     .how_works_container,
     .featured_project_container {
         grid-template-columns: 1fr;
