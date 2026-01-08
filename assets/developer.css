@@ -1095,6 +1095,7 @@ img.account_head_logo {
     height: auto;
 }
 .account_head_info {
+    margin-top: 32px;
     margin-bottom: 32px;
 }
 .account_head_info h2 {
