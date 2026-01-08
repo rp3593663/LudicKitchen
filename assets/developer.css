@@ -1125,6 +1125,23 @@ img.account_head_logo {
     align-items: center;
     justify-content: center;
 }
+.account_footer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    vertical-align: middle;
+    margin: 0px;
+}
+.account_footer p a{
+    font-weight: 600;
+    color: var(--primary_color);
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    vertical-align: middle;
+    margin: 0px;
+}
 .form_all_fields{
     display: grid;
     gap: 16px;
