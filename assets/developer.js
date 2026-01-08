@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!input) return;
 
     // default state
-    btn.innerHTML = eyeClosed;
+    btn.innerHTML = eyeOpen;
 
     btn.addEventListener("click", function() {
       if (input.type === "password") {
         input.type = "text";
-        btn.innerHTML = eyeOpen;
+        btn.innerHTML = eyeClosed;
       } else {
         input.type = "password";
-        btn.innerHTML = eyeClosed;
+        btn.innerHTML = eyeOpen;
       }
     });
   });
