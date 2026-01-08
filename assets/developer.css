@@ -1093,6 +1093,14 @@ img.account_head_logo {
     width: 62px;
     height: auto;
 }
+.account_head_info h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.9px;
+    vertical-align: middle;
+    margin: 0px 0px 10px;
+}
 
 
 
