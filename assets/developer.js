@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
   const eyeClosed = document.getElementById("icon-eye-closed").innerHTML;
 
   // Default state = hidden password
-  toggleBtn.innerHTML = eyeClosed;
+  toggleBtn.innerHTML = eyeOpen;
 
   toggleBtn.addEventListener("click", function() {
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
-      toggleBtn.innerHTML = eyeOpen;
+      toggleBtn.innerHTML = eyeClosed;
     } else {
       passwordInput.type = "password";
-      toggleBtn.innerHTML = eyeClosed;
+      toggleBtn.innerHTML = eyeOpen;
     }
   });
 });
