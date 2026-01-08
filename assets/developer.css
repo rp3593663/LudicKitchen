@@ -1166,9 +1166,9 @@ button.customer_submit_btn.theme_btn {
     font-weight: 600;
 }
 .form_error_wrapper ul {
-    margin: 5px 0px 0px;
+    margin: 10px 0px 0px;
     display: grid;
-    gap: 4px;
+    gap: 8px;
 }
 .form_error_wrapper li{
     line-height: 13px;
