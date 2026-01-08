@@ -1563,7 +1563,7 @@ details[open] > .share-button__fallback {
 }
 
 /* component-form */
-.field__input,
+/* .field__input,
 .select__select,
 .customer .field input,
 .customer select {
@@ -1584,9 +1584,9 @@ details[open] > .share-button__fallback {
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
   position: relative;
   border: 0;
-}
+} */
 
-.field:before,
+/* .field:before,
 .select:before,
 .customer .field:before,
 .customer select:before,
@@ -1621,7 +1621,7 @@ details[open] > .share-button__fallback {
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
-}
+} */
 
 .select__select {
   font-family: var(--font-body-family);
