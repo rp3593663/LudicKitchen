@@ -203,7 +203,7 @@
           {%- endform -%}
         </div>
 
-        {%- if shop.checkout.guest_login -%}
+        {% comment %} {%- if shop.checkout.guest_login -%}
           <div>
             <hr>
             <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
@@ -214,7 +214,7 @@
               </button>
             {%- endform -%}
           </div>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
       </div>
       <div class="account_footer">
         <p>
