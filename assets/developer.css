@@ -1124,6 +1124,11 @@ img.account_head_logo {
     line-height: 14px;
     letter-spacing: -0.42px;
 }
+.customer .field  input {
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    padding: 10px 12px;
+}
 
 
 
