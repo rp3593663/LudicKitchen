@@ -157,6 +157,9 @@
             {%- endif -%}
 
             <div class="field">
+              <label for="CustomerEmail">
+                Email address
+              </label>
               <input
                 type="email"
                 name="customer[email]"
@@ -167,15 +170,16 @@
                 {% if form.errors contains 'form' %}
                   aria-invalid="true"
                 {% endif %}
-                placeholder="{{ 'customer.login_page.email' | t }}"
+                placeholder="Enter email address"
               >
-              <label for="CustomerEmail">
-                {{ 'customer.login_page.email' | t }}
-              </label>
+              
             </div>
 
             {%- if form.password_needed -%}
               <div class="field">
+                <label for="CustomerPassword">
+                  {{ 'customer.login_page.password' | t }}
+                </label>
                 <input
                   type="password"
                   value=""
@@ -185,11 +189,8 @@
                   {% if form.errors contains 'form' %}
                     aria-invalid="true"
                   {% endif %}
-                  placeholder="{{ 'customer.login_page.password' | t }}"
+                  placeholder="Enter password"
                 >
-                <label for="CustomerPassword">
-                  {{ 'customer.login_page.password' | t }}
-                </label>
               </div>
 
               <a href="#recover">
