@@ -3080,8 +3080,7 @@ details-disclosure > details {
 /* outline and border styling for Windows High Contrast Mode */
 @media (forced-colors: active) {
   .button,
-  .shopify-challenge__button,
-  .customer button {
+  .shopify-challenge__button   {
     border: transparent solid 1px;
   }
 
@@ -3317,7 +3316,6 @@ details-disclosure > details {
   .animate--hover-3d-lift .card-wrapper .card--standard .card__inner,
   .animate--hover-3d-lift .button:not(.button--tertiary),
   .animate--hover-3d-lift .shopify-challenge__button,
-  .animate--hover-3d-lift .customer button,
   .animate--hover-3d-lift .shopify-payment-button__button,
   .animate--hover-3d-lift .deferred-media .deferred-media__poster-button {
     transition: transform var(--duration-long) ease, box-shadow var(--duration-long) ease;
@@ -3328,7 +3326,6 @@ details-disclosure > details {
   .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__inner,
   .animate--hover-3d-lift .button:not(.button--tertiary):not([disabled]):hover,
   .animate--hover-3d-lift .shopify-challenge__button:not([disabled]):hover,
-  .animate--hover-3d-lift .customer button:not([disabled]):hover,
   .animate--hover-3d-lift .shopify-payment-button__button:hover,
   .animate--hover-3d-lift .deferred-media:hover .deferred-media__poster-button {
     transition: transform var(--duration-extended) ease, box-shadow var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
@@ -3433,7 +3430,6 @@ details-disclosure > details {
 
   .animate--hover-vertical-lift .button:not(.button--tertiary),
   .animate--hover-vertical-lift .shopify-challenge__button,
-  .animate--hover-vertical-lift .customer button,
   .animate--hover-vertical-lift .shopify-payment-button__button {
     transition: transform var(--duration-default) var(--ease-out-slow);
   }
@@ -3455,20 +3451,17 @@ details-disclosure > details {
 
   .animate--hover-vertical-lift .button:not(.button--tertiary):not([disabled]):hover,
   .animate--hover-vertical-lift .shopify-challenge__button:not([disabled]):hover,
-  .animate--hover-vertical-lift .customer button:not([disabled]):hover,
   .animate--hover-vertical-lift .shopify-payment-button__button:hover {
     transform: translateY(-0.25rem);
   }
 
   .animate--hover-vertical-lift .button:not(.button--tertiary):not([disabled]):active,
   .animate--hover-vertical-lift .shopify-challenge__button:not([disabled]):active,
-  .animate--hover-vertical-lift .customer button:not([disabled]):active,
   .animate--hover-vertical-lift .shopify-payment-button__button:active {
     transform: translateY(0);
   }
 
   .animate--hover-vertical-lift .button:not([disabled]):hover:after,
-  .animate--hover-vertical-lift .customer button:not([disabled]):hover:after,
   .animate--hover-vertical-lift .shopify-payment-button__button:not([disabled]):hover:after {
     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
     box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
