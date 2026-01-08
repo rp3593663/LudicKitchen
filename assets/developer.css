@@ -1222,6 +1222,13 @@ button.customer_submit_btn.theme_btn {
     line-height: 13px;
     text-decoration: unset!important;
 }
+a.redirect_recover {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: -0.36px;
+    font-weight: 600;
+    color: var(--primary_color);
+}
 
 
 @media(min-width: 768px){
