@@ -1117,6 +1117,14 @@ img.account_head_logo {
     color: #949598;
     margin: 0px;
 }
+.account_footer {
+    border-top: 1px solid #EFEFEF;
+    background: #F9F9F9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .form_all_fields{
     display: grid;
     gap: 16px;
