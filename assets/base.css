@@ -1179,7 +1179,6 @@ deferred-media {
 
 .button,
 .shopify-challenge__button,
-.customer button,
 button.shopify-payment-button__button--unbranded {
   --shadow-horizontal-offset: var(--buttons-shadow-horizontal-offset);
   --shadow-vertical-offset: var(--buttons-shadow-vertical-offset);
