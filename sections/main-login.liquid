@@ -172,31 +172,32 @@
                 {% endif %}
                 placeholder="Enter email address"
               >
-              
             </div>
 
-            {%- if form.password_needed -%}
-              <div class="field">
-                <label for="CustomerPassword">
-                  {{ 'customer.login_page.password' | t }}
-                </label>
-                <input
-                  type="password"
-                  value=""
-                  name="customer[password]"
-                  id="CustomerPassword"
-                  autocomplete="current-password"
-                  {% if form.errors contains 'form' %}
-                    aria-invalid="true"
-                  {% endif %}
-                  placeholder="Enter password"
-                >
-              </div>
+            <div class="form_field">
+              {%- if form.password_needed -%}
+                <div class="field">
+                  <label for="CustomerPassword">
+                    {{ 'customer.login_page.password' | t }}
+                  </label>
+                  <input
+                    type="password"
+                    value=""
+                    name="customer[password]"
+                    id="CustomerPassword"
+                    autocomplete="current-password"
+                    {% if form.errors contains 'form' %}
+                      aria-invalid="true"
+                    {% endif %}
+                    placeholder="Enter password"
+                  >
+                </div>
 
-              <a href="#recover">
-                {{ 'customer.login_page.forgot_password' | t }}
-              </a>
-            {%- endif -%}
+                <a href="#recover">
+                  {{ 'customer.login_page.forgot_password' | t }}
+                </a>
+              {%- endif -%}
+            </div>
 
             <button class="customer_submit_btn theme_btn">
               {{ 'customer.login_page.sign_in' | t }}
