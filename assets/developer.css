@@ -1212,8 +1212,10 @@ button.customer_submit_btn.theme_btn {
     font-weight: 500;
     margin-top: 6px;
 }
-    
-
+.login_redirect {
+    text-align: center;
+    margin: 10px auto 0px;
+}
 
 
 
