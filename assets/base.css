@@ -1623,7 +1623,7 @@ details[open] > .share-button__fallback {
   z-index: 1;
 } */
 
-.select__select {
+/* .select__select {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
@@ -1673,7 +1673,7 @@ details[open] > .share-button__fallback {
   display: flex;
   position: relative;
   width: 100%;
-}
+} */
 
 /* Select */
 
