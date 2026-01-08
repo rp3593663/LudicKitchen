@@ -1165,6 +1165,11 @@ button.customer_submit_btn.theme_btn {
     letter-spacing: -0.39px;
     font-weight: 600;
 }
+.form_error_wrapper ul {
+    margin: 5px 0px 0px;
+    display: grid;
+    gap: 4px;
+}
 
 
 
