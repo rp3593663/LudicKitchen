@@ -1154,7 +1154,11 @@ img.account_head_logo {
     right: 10px;
     padding: 0px;
     line-height: 10px;
-    bottom: 13px;
+    bottom: 9px;
+}
+.customer .field button.toggle-password svg {
+    width: 16px;
+    height: 16px;
 }
 .password_field{
     padding-right: 30px!important;
