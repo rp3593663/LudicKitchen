@@ -136,7 +136,7 @@
                 aria-invalid="true"
                 aria-describedby="RegisterForm-email-error"
               {% endif %}
-              placeholder="{{ 'customer.register.email' | t }}"
+              placeholder="Enter email address"
             >
           </div>
           {%- if form.errors contains 'email' -%}
@@ -161,7 +161,7 @@
                 aria-invalid="true"
                 aria-describedby="RegisterForm-password-error"
               {% endif %}
-              placeholder="{{ 'customer.register.password' | t }}"
+              placeholder="Enter password"
             >
           </div>
           {%- if form.errors contains 'password' -%}
