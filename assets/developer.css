@@ -1188,9 +1188,20 @@ button.customer_submit_btn.theme_btn {
     margin-bottom: 16px;
     padding: 10px;
 }
+h3.form__message {
+    margin: 0px;
+    font-size: 13px;
+    letter-spacing: -0.39px;
+    font-weight: 600;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 .form_error_wrapper h2.form__message {
     margin: 0px;
     font-size: 13px;
+    line-height: 16px;
     letter-spacing: -0.39px;
     font-weight: 600;
 }
