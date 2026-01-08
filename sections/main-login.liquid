@@ -156,47 +156,51 @@
               </section>
             {%- endif -%}
 
-            <div class="field">
-              <label for="CustomerEmail">
-                Email address
-              </label>
-              <input
-                type="email"
-                name="customer[email]"
-                id="CustomerEmail"
-                autocomplete="email"
-                autocorrect="off"
-                autocapitalize="off"
-                {% if form.errors contains 'form' %}
-                  aria-invalid="true"
-                {% endif %}
-                placeholder="Enter email address"
-              >
-            </div>
-
-            <div class="form_field">
-              {%- if form.password_needed -%}
+            <div class="form_all_fields">
+              <div class="form_field">
                 <div class="field">
-                  <label for="CustomerPassword">
-                    {{ 'customer.login_page.password' | t }}
+                  <label for="CustomerEmail">
+                    Email address
                   </label>
                   <input
-                    type="password"
-                    value=""
-                    name="customer[password]"
-                    id="CustomerPassword"
-                    autocomplete="current-password"
+                    type="email"
+                    name="customer[email]"
+                    id="CustomerEmail"
+                    autocomplete="email"
+                    autocorrect="off"
+                    autocapitalize="off"
                     {% if form.errors contains 'form' %}
                       aria-invalid="true"
                     {% endif %}
-                    placeholder="Enter password"
+                    placeholder="Enter email address"
                   >
                 </div>
+              </div>
 
-                <a href="#recover">
-                  {{ 'customer.login_page.forgot_password' | t }}
-                </a>
-              {%- endif -%}
+              <div class="form_field">
+                {%- if form.password_needed -%}
+                  <div class="field">
+                    <label for="CustomerPassword">
+                      {{ 'customer.login_page.password' | t }}
+                    </label>
+                    <input
+                      type="password"
+                      value=""
+                      name="customer[password]"
+                      id="CustomerPassword"
+                      autocomplete="current-password"
+                      {% if form.errors contains 'form' %}
+                        aria-invalid="true"
+                      {% endif %}
+                      placeholder="Enter password"
+                    >
+                  </div>
+
+                  <a href="#recover">
+                    {{ 'customer.login_page.forgot_password' | t }}
+                  </a>
+                {%- endif -%}
+              </div>
             </div>
 
             <button class="customer_submit_btn theme_btn">
