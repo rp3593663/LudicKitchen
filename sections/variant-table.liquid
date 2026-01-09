@@ -229,24 +229,45 @@ document.addEventListener("DOMContentLoaded", function () {
       btnText.style.display = "none";
       btnLoader.style.display = "inline-block";
 
-      fetch("/cart/add.js", {
+      // 🧹 First clear the cart completely
+      fetch("/cart/clear.js", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          id: variantId,
-          quantity: 1
-        })
+        }
+      })
+      .then(() => {
+        // ➕ Then add only this variant
+        return fetch("/cart/add.js", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: 1
+          })
+        });
       })
       .then(response => {
         if (!response.ok) throw new Error("Add to cart failed");
         return response.json();
       })
       .then(() => {
+        // 🚀 Go to checkout with ONLY this product
         window.location.href = "/checkout";
       })
+      .catch(error => {
+        console.error(error);
+        alert("Something went wrong. Please try again.");
+
+        // Restore button state
+        this.disabled = false;
+        btnLoader.style.display = "none";
+        btnText.style.display = "inline-block";
+      });
+
       .catch(error => {
         console.error(error);
         alert("Something went wrong. Please try again.");
