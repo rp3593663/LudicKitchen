@@ -143,6 +143,16 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "3149989000263460623": {
+        "type": "shopify://apps/miniorange-otp-login-register/blocks/update-profile-app-embed/dba67ab6-2825-41e1-83fd-7500e426945d",
+        "disabled": false,
+        "settings": {
+          "button_color": "#f16c13",
+          "text_color": "#ffffff"
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
