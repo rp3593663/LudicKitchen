@@ -1339,6 +1339,7 @@ a.redirect_recover {
 .edit_account_block .field_head {
     display: grid;
     gap: 8px;
+    margin-bottom: 20px;
 }
 .edit_account_block .field_head h4 {
     margin: 0px;
