@@ -185,23 +185,37 @@
 <script>
   {% if customer %}
     window.__customerLoggedIn = true;
+    window.__customerHasOrders = {{ customer.orders_count | json }};
   {% else %}
     window.__customerLoggedIn = false;
+    window.__customerHasOrders = 0;
   {% endif %}
 
   window.__currentPageUrl = {{ request.path | json }};
 </script>
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".js-tier-checkout").forEach(button => {
+
+    const btnText = button.querySelector(".btn-text");
+    const btnLoader = button.querySelector(".btn-loader");
+
+    // 🚫 If user is logged in AND already has an order → disable button
+    if (window.__customerLoggedIn && window.__customerHasOrders > 0) {
+      button.disabled = true;
+      button.classList.add("is-disabled");
+      btnText.textContent = "Already Joined";
+      return; // stop here, do not attach click event
+    }
+
+    // Otherwise normal behavior
     button.addEventListener("click", function () {
 
       const variantId = this.dataset.variantId;
-      const btnText = this.querySelector(".btn-text");
-      const btnLoader = this.querySelector(".btn-loader");
 
       // 🔒 If not logged in → redirect to login first
       if (!window.__customerLoggedIn) {
@@ -209,8 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = `/account/login?return_url=${returnUrl}`;
         return;
       }
-
-      // ✅ If logged in → continue normal flow
 
       // UI loading state
       this.disabled = true;
@@ -233,7 +245,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(() => {
-        // 🚀 Go directly to checkout
         window.location.href = "/checkout";
       })
       .catch(error => {
@@ -247,9 +258,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
     });
+
   });
 
 });
+
 </script>
 
 
