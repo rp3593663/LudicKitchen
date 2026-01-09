@@ -57,9 +57,20 @@
         <h2>My Account</h2>
       </div>
       <div class="edit_account_block">
-        <form id="profile-form">
+        <form id="profile-form" class="profile_edit_form">
           <input type="hidden" name="customer_id" value="{{ customer.id }}">
-          <h3>Profile</h3>
+          <div class="all_forms_field_blocks">
+            <div class="form_field_box">
+              <div class="field_head">
+                <h4>Profile image</h4>
+                <p>This image appears in your profile, comments, and shared caps.</p>
+              </div>
+              <div class="fields">
+
+              </div>
+            </div>
+          </div>
+          {% comment %} <h3>Profile</h3>
           <input name="first_name" value="{{ customer.first_name }}">
           <input name="last_name" value="{{ customer.last_name }}">
           <input name="email" value="{{ customer.email }}">
@@ -77,7 +88,7 @@
           <input name="gender" value="{{ customer.metafields.custom.gender }}">
           <input name="shoe_size" value="{{ customer.metafields.custom.shoe_size }}">
           <input name="instagram" value="{{ customer.metafields.custom.instagram }}">
-          <button type="submit">Save</button>
+          <button type="submit">Save</button> {% endcomment %}
         </form>
       </div>
       {% comment %} <div>
