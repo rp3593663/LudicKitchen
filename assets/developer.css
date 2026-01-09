@@ -1008,7 +1008,8 @@ p.goal_info span{
   cursor: pointer;
 }
 .tier_btn.is-disabled {
-  background: var(--grey);
+  background: #c5c5c5;
+  color: var(--black);
 }
 
 
