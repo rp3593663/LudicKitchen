@@ -1375,7 +1375,7 @@ a.redirect_recover {
     font-size: 13px;
     line-height: 13px;
     letter-spacing: -0.39px;
-    font-family: 'Inter';
+    font-family: var(--font-family);
 }
 
 
