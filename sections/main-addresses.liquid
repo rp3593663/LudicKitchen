@@ -193,14 +193,17 @@
           <div id="EditAddress_{{ address.id }}">
             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
             {%- form 'customer_address', address -%}
-              <input
-  type="text"
-  id="AddressFirstName_{{ form.id }}"
-  name="address[first_name]"
-  value="{% if form.first_name != blank %}{{ form.first_name }}{% else %}{{ customer.first_name }}{% endif %}"
-  autocomplete="given-name"
-  placeholder="{{ 'customer.addresses.first_name' | t }}"
->
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressFirstName_{{ form.id }}"
+                  name="address[first_name]"
+                  value="{{ form.first_name }}"
+                  autocomplete="given-name"
+                  placeholder="{{ 'customer.addresses.first_name' | t }}"
+                >
+                <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+              </div>
               <div class="field">
                 <input
                   type="text"
