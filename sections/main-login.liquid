@@ -1,4 +1,4 @@
-{% comment %} {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.fullwidth -%}
 	{%- assign container = 'container-full' -%}
@@ -298,4 +298,4 @@
     }
   ]
 }
-{% endschema %} {% endcomment %}
+{% endschema %}
