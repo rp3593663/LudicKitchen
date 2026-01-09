@@ -1320,7 +1320,17 @@ a.redirect_recover {
 /*-----------------------------------------------*/
 
 
-
+.all_forms_field_blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.edit_account_block {
+    border: 1px solid #EFEFEF;
+    background: #F9F9F9;
+    padding: 36px 45px;
+    border-radius: 16px;
+}
 
 
 @media(min-width: 768px){
