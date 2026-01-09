@@ -144,9 +144,14 @@
     },
     "content_for_index": [],
     "blocks": {
+      "18378115731771045039": {
+        "type": "shopify://apps/miniorange-otp-login-register/blocks/otp-login-popup/dba67ab6-2825-41e1-83fd-7500e426945d",
+        "disabled": true,
+        "settings": {}
+      },
       "3149989000263460623": {
         "type": "shopify://apps/miniorange-otp-login-register/blocks/update-profile-app-embed/dba67ab6-2825-41e1-83fd-7500e426945d",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "button_color": "#f16c13",
           "text_color": "#ffffff"
