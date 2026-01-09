@@ -25,7 +25,7 @@ body{
     border-radius: 100px;
     display: flex;
     align-items: center;
-    gap: 34px;
+    gap: 38px;
 }
 .desktop_menu_linklist a {
     display: flex;
