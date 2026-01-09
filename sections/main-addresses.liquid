@@ -404,6 +404,40 @@
   </div>
 {%- endpaginate -%}
 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("form[action^='/account/addresses']").forEach(form => {
+
+    form.addEventListener("submit", function() {
+      const age = form.querySelector("[id^='CustomerAge_']")?.value || "";
+      const gender = form.querySelector("[id^='CustomerGender_']")?.value || "";
+
+      if (!age && !gender) return;
+
+      fetch("/account", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          customer: {
+            metafields: {
+              custom: {
+                age: age,
+                gender: gender
+              }
+            }
+          }
+        })
+      });
+    });
+
+  });
+});
+</script>
+
 <script>
   window.addEventListener('load', () => {
     typeof CustomerAddresses !== 'undefined' && new CustomerAddresses();
