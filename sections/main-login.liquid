@@ -234,7 +234,15 @@
       <div class="account_footer">
         <p>
           Don't have an account?
-          <a href="{{ routes.account_register_url }}">Sign up</a>
+          <a href="
+            {% if request.query_string contains 'return_url=' %}
+              {{ routes.account_register_url }}?{{ request.query_string }}
+            {% else %}
+              {{ routes.account_register_url }}
+            {% endif %}
+          ">
+            Sign up
+          </a>
         </p>
       </div>
     </div>
