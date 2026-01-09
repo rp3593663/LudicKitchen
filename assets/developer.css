@@ -1358,6 +1358,10 @@ a.redirect_recover {
     vertical-align: middle;
     color: #838383;
 }
+.edit_account_block .form_field_box .fields {
+    display: grid;
+    gap: 12px;
+}
 
 
 
