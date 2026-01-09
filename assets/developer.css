@@ -1331,7 +1331,11 @@ a.redirect_recover {
     padding: 36px 45px;
     border-radius: 16px;
 }
-
+.edit_account_block .form_field_box {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 18px 20px 36px;
+}
 
 @media(min-width: 768px){
     .tier_benefits_head img,
