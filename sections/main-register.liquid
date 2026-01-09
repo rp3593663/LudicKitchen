@@ -168,6 +168,21 @@
   </div>
 </div>
 
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const returnUrl = params.get("return_url");
+
+  if (returnUrl) {
+    const input = document.getElementById("registerReturnTo");
+    if (input) {
+      input.value = returnUrl;
+    }
+  }
+})();
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-register.name",
