@@ -217,6 +217,28 @@
               </div>
               <div class="field">
                 <input
+                  type="number"
+                  id="CustomerAge_{{ form.id }}"
+                  placeholder="Age"
+                  value="{{ customer.metafields.custom.age }}"
+                >
+                <label for="CustomerAge_{{ form.id }}">Age</label>
+              </div>
+
+              <div>
+                <label for="CustomerGender_{{ form.id }}">Gender</label>
+                <div class="select">
+                  <select id="CustomerGender_{{ form.id }}">
+                    <option value="">Select Gender</option>
+                    <option value="Male" {% if customer.metafields.custom.gender == 'Male' %}selected{% endif %}>Male</option>
+                    <option value="Female" {% if customer.metafields.custom.gender == 'Female' %}selected{% endif %}>Female</option>
+                    <option value="Other" {% if customer.metafields.custom.gender == 'Other' %}selected{% endif %}>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <input
                   type="text"
                   id="AddressCompany_{{ form.id }}"
                   name="address[company]"
