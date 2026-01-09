@@ -325,7 +325,7 @@
         {{ 'customer.register.password' | t }}
       </label>
     </div> {% endcomment %}
-    {%- if form.errors contains 'password' -%}
+    {% comment %} {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
@@ -333,7 +333,7 @@
         {{ form.errors.translated_fields.password | capitalize }}
         {{ form.errors.messages.password }}.
       </span>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
