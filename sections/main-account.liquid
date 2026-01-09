@@ -121,6 +121,20 @@
                 </div>
               </div>
             </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Social Profiles</h4>
+                <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="instagram" value="{{ customer.metafields.custom.instagram }}">
+                </div>
+                <div class="edit_account_field">
+                  <input name="twitter" value="{{ customer.metafields.custom.twitter }}">
+                </div>
+              </div>
+            </div>
           </div>
           {% comment %} <h3>Profile</h3>
           <input name="first_name" value="{{ customer.first_name }}">
