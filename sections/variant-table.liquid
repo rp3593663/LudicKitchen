@@ -183,6 +183,17 @@
 	</div>
 </div>
 <script>
+  {% if customer %}
+    window.__customerLoggedIn = true;
+  {% else %}
+    window.__customerLoggedIn = false;
+  {% endif %}
+
+  window.__currentPageUrl = {{ request.path | json }};
+</script>
+
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".js-tier-checkout").forEach(button => {
