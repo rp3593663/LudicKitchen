@@ -62,7 +62,7 @@
           </div>
         </div>
         {%- form 'create_customer', novalidate: 'novalidate' -%}
-          <input type="hidden" name="return_to" id="registerReturnTo">
+          {% comment %} <input type="hidden" name="return_to" id="registerReturnTo"> {% endcomment %}
           {%- if form.errors -%}
             <div class="form_error_wrapper">
               <h2 class="form__message" tabindex="-1" autofocus>
@@ -123,7 +123,7 @@
               {%- endif -%}
             </div> {% endcomment %}
 
-            <div class="form_field df">
+            <div class="form_field">
               <div class="field">
                 <label for="RegisterForm-password">
                   {{ 'customer.register.password' | t }}
