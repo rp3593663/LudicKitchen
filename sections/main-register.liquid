@@ -309,7 +309,7 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
-    <div class="field">
+    {% comment %} <div class="field">
       <input
         type="password"
         name="customer[password]"
@@ -324,7 +324,7 @@
       <label for="RegisterForm-password">
         {{ 'customer.register.password' | t }}
       </label>
-    </div>
+    </div> {% endcomment %}
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         <span class="svg-wrapper">
