@@ -62,6 +62,7 @@
           </div>
         </div>
         {%- form 'create_customer', novalidate: 'novalidate' -%}
+          <input type="hidden" name="return_to" id="registerReturnTo">
           {%- if form.errors -%}
             <div class="form_error_wrapper">
               <h2 class="form__message" tabindex="-1" autofocus>
