@@ -27,8 +27,23 @@ body{
     align-items: center;
     gap: 34px;
 }
-.desktop_menu_linklist a:last-child{
-    
+.desktop_menu_linklist a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    text-decoration: unset;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17.1px;
+    letter-spacing: -0.42px;
+}
+.desktop_menu_linklist a:last-child {
+    width: 120px;
+    height: 40px;
+    background: var(--primary_color);
+    border-radius: 100px;
+    color: var(--white);
 }
 ul.list-menu.list-menu--inline {
     background: #f4f4f4;
