@@ -107,6 +107,20 @@
                 </div>
               </div>
             </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Extra Fields</h4>
+                <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="gender" value="{{ customer.metafields.custom.gender }}" class="edit_account_input" placeholder="Gender">
+                </div>
+                <div class="edit_account_field">
+                  <input name="age" value="{{ customer.metafields.custom.age }}" class="edit_account_input" placeholder="Age">
+                </div>
+              </div>
+            </div>
           </div>
           {% comment %} <h3>Profile</h3>
           <input name="first_name" value="{{ customer.first_name }}">
