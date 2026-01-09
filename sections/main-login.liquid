@@ -234,20 +234,28 @@
       <div class="account_footer">
         <p>
           Don't have an account?
-          <a href="
-            {% if request.query_string contains 'return_url=' %}
-              {{ routes.account_register_url }}?{{ request.query_string }}
-            {% else %}
-              {{ routes.account_register_url }}
-            {% endif %}
-          ">
-            Sign up
-          </a>
+          <a id="signupLink" href="{{ routes.account_register_url }}">Sign up</a>
         </p>
       </div>
+
     </div>
   </div>
 </div>
+
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const returnUrl = params.get("return_url");
+
+  if (returnUrl) {
+    const signupLink = document.getElementById("signupLink");
+    if (signupLink) {
+      signupLink.href = "/account/register?return_url=" + encodeURIComponent(returnUrl);
+    }
+  }
+})();
+</script>
+
 
 {% schema %}
 {
