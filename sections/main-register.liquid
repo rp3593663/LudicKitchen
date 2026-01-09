@@ -61,7 +61,7 @@
             <p>Use the method you originally signed up with</p>
           </div>
         </div>
-        {%- form 'create_customer', novalidate: 'novalidate' -%}
+        {% comment %} {%- form 'create_customer', novalidate: 'novalidate' -%}
           {% comment %} <input type="hidden" name="return_to" id="registerReturnTo"> {% endcomment %}
           {%- if form.errors -%}
             <div class="form_error_wrapper">
@@ -157,7 +157,7 @@
           <button class="customer_submit_btn theme_btn">
             {{ 'customer.register.submit' | t }}
           </button>
-        {%- endform -%}
+        {%- endform -%} {% endcomment %}
       </div>
       <div class="account_footer">
         <p>
