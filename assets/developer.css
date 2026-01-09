@@ -1380,6 +1380,11 @@ a.redirect_recover {
 .edit_account_field input::placeholder{
     color: #C6C6C6;
 }
+.edit_account_col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
 
 
 
