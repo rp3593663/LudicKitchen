@@ -19,14 +19,14 @@
 {% assign padding 	= section.settings.padding | split: "|" %}
 {%- style -%}
   {%- if margin[0] != blank or padding[0] != blank -%}
-    #shopify-section-{{ section.id }} .section-customer_login{
+    #shopify-section-{{ section.id }} .section-customer_account{
       {%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
       {%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
     }
 	{%- endif -%}
 	{%- if margin[1] != blank or padding[1] != blank -%}
 		@media (max-width:1200px){
-			#shopify-section-{{ section.id }} .section-customer_login{
+			#shopify-section-{{ section.id }} .section-customer_account{
 				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
 				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
 			}
@@ -34,7 +34,7 @@
 	{%- endif -%}
 	{%- if margin[2] != blank or padding[2] != blank -%}
 		@media (max-width:991px){
-			#shopify-section-{{ section.id }} .section-customer_login{
+			#shopify-section-{{ section.id }} .section-customer_account{
 				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
 				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
 			}
@@ -42,7 +42,7 @@
 	{%- endif -%}
 	{%- if margin[3] != blank or padding[3] != blank -%}
 		@media (max-width:767px){
-			#shopify-section-{{ section.id }} .section-customer_login{
+			#shopify-section-{{ section.id }} .section-customer_account{
 				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
 				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
 			}
@@ -50,7 +50,7 @@
 	{%- endif -%}
 {%- endstyle -%}
 
-<div class="kretoss-section section-customer_login">
+<div class="kretoss-section section-customer_account">
   <div class="{{ container }}" {{ max_width }}>
     <div class="customer account">
       {% comment %} <div>
