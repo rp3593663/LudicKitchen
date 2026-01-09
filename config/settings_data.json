@@ -156,6 +156,11 @@
           "button_color": "#f16c13",
           "text_color": "#ffffff"
         }
+      },
+      "12740457995979556186": {
+        "type": "shopify://apps/authyo/blocks/otp_login/71d0a7b0-ebc2-442f-a7a6-0b2a46a31504",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

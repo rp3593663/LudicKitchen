@@ -11,27 +11,15 @@
   "sections": {
     "main": {
       "type": "main-register",
-      "disabled": true,
-      "settings": {}
-    },
-    "1767941030c697e850": {
-      "type": "apps",
-      "blocks": {
-        "miniorange_otp_login_register_otp_register_6nk88H": {
-          "type": "shopify://apps/miniorange-otp-login-register/blocks/otp-register/dba67ab6-2825-41e1-83fd-7500e426945d",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "miniorange_otp_login_register_otp_register_6nk88H"
-      ],
       "settings": {
-        "include_margins": true
+        "max_width": "",
+        "fullwidth": false,
+        "padding": "",
+        "margin": ""
       }
     }
   },
   "order": [
-    "main",
-    "1767941030c697e850"
+    "main"
   ]
 }
