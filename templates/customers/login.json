@@ -11,13 +11,7 @@
   "sections": {
     "main": {
       "type": "main-login",
-      "settings": {
-        "enable_shop_login_button": false,
-        "max_width": "",
-        "fullwidth": false,
-        "padding": "",
-        "margin": ""
-      }
+      "settings": {}
     },
     "17679440948195fb9c": {
       "type": "apps",
@@ -33,10 +27,26 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1767944606f9810e25": {
+      "type": "apps",
+      "blocks": {
+        "miniorange_otp_login_register_otp_login_popup_button_bhr4ti": {
+          "type": "shopify://apps/miniorange-otp-login-register/blocks/otp-login-popup-button/dba67ab6-2825-41e1-83fd-7500e426945d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "miniorange_otp_login_register_otp_login_popup_button_bhr4ti"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "17679440948195fb9c"
+    "17679440948195fb9c",
+    "1767944606f9810e25"
   ]
 }
