@@ -1377,6 +1377,9 @@ a.redirect_recover {
     letter-spacing: -0.39px;
     font-family: var(--font-family);
 }
+.edit_account_field input::placeholder{
+    color: #C6C6C6;
+}
 
 
 
