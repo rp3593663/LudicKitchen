@@ -203,7 +203,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const btnText = this.querySelector(".btn-text");
       const btnLoader = this.querySelector(".btn-loader");
 
-      // UI: loading state
+      // 🔒 If not logged in → redirect to login first
+      if (!window.__customerLoggedIn) {
+        const returnUrl = encodeURIComponent(window.__currentPageUrl);
+        window.location.href = `/account/login?return_url=${returnUrl}`;
+        return;
+      }
+
+      // ✅ If logged in → continue normal flow
+
+      // UI loading state
       this.disabled = true;
       btnText.style.display = "none";
       btnLoader.style.display = "inline-block";
@@ -224,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(() => {
-        // Redirect ONLY after successful add
+        // 🚀 Go directly to checkout
         window.location.href = "/checkout";
       })
       .catch(error => {
@@ -236,11 +245,13 @@ document.addEventListener("DOMContentLoaded", function () {
         btnLoader.style.display = "none";
         btnText.style.display = "inline-block";
       });
+
     });
   });
 
 });
 </script>
+
 
 
 
