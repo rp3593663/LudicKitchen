@@ -19,6 +19,17 @@ body{
     padding: 6px 10px 6px 24px;
     border-radius: 100px;
 }
+.desktop_menu_linklist {
+    background: #f7f7f7;
+    padding: 6px 10px 6px 24px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+.desktop_menu_linklist a:last-child{
+    
+}
 ul.list-menu.list-menu--inline {
     background: #f4f4f4;
     border-radius: 100px;
