@@ -11,12 +11,8 @@
   "sections": {
     "main": {
       "type": "main-register",
-      "settings": {
-        "max_width": "",
-        "fullwidth": false,
-        "padding": "",
-        "margin": ""
-      }
+      "disabled": true,
+      "settings": {}
     },
     "1767941030c697e850": {
       "type": "apps",
