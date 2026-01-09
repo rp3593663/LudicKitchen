@@ -89,7 +89,7 @@
           {%- endif -%}
 
           <div class="form_all_fields">
-            <div class="form_field">
+            {% comment %} <div class="form_field">
               <div class="field">
                 <label for="RegisterForm-email">
                   {{ 'customer.register.email' | t }}
@@ -121,7 +121,7 @@
                   {{ form.errors.messages.email }}.
                 </span>
               {%- endif -%}
-            </div>
+            </div> {% endcomment %}
 
             <div class="form_field">
               <div class="field">
