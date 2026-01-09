@@ -1348,6 +1348,15 @@ a.redirect_recover {
     letter-spacing: -0.54px;
     vertical-align: middle;
 }
+.edit_account_block .field_head p {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.39px;
+    vertical-align: middle;
+    color: #838383;
+}
 
 
 
