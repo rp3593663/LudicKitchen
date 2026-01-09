@@ -1003,6 +1003,11 @@ p.goal_info span{
   background-position: bottom;
   background-repeat: repeat-x;
 }
+.tier_btn {
+  position: relative;
+  cursor: pointer;
+}
+
 
 
 /*-----------------------------------------------*/
