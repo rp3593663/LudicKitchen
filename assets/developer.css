@@ -1366,11 +1366,16 @@ a.redirect_recover {
     display: flex;
     width: 100%;
 }
-.edit_account_field input{
+.edit_account_field input {
     width: 100%;
     border: 1px solid #E8E8E8;
     border-radius: 6px;
     padding: 15px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.39px;
+    font-family: 'Inter';
 }
 
 
