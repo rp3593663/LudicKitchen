@@ -1362,6 +1362,16 @@ a.redirect_recover {
     display: grid;
     gap: 12px;
 }
+.edit_account_field {
+    display: flex;
+    width: 100%;
+}
+.edit_account_field input{
+    width: 100%;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    padding: 15px;
+}
 
 
 
