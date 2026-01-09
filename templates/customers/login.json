@@ -11,7 +11,6 @@
   "sections": {
     "main": {
       "type": "main-login",
-      "disabled": true,
       "settings": {
         "enable_shop_login_button": true,
         "max_width": "",
@@ -25,6 +24,7 @@
       "blocks": {
         "otp_login_notify_app_section_block_mWLWhr": {
           "type": "shopify://apps/otp-login-notify/blocks/app-section-block/c26b7b17-273d-4800-af62-8ec88ba18251",
+          "disabled": true,
           "settings": {}
         }
       },
