@@ -135,6 +135,36 @@
                 </div>
               </div>
             </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Address</h4>
+                <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="address1" value="{{ addr.address1 }}">
+                </div>
+                <div class="edit_account_field">
+                  <input name="address2" value="{{ addr.address2 }}">
+                </div>
+                <div class="edit_account_col">
+                  <div class="edit_account_field">
+                    <input name="city" value="{{ addr.city }}">
+                  </div>
+                  <div class="edit_account_field">
+                    <input name="province" value="{{ addr.province }}">
+                  </div>
+                </div>
+                <div class="edit_account_col">
+                  <div class="edit_account_field">
+                    <input name="zip" value="{{ addr.zip }}">
+                  </div>
+                  <div class="edit_account_field">
+                    <input name="country" value="{{ addr.country }}">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {% comment %} <h3>Profile</h3>
           <input name="first_name" value="{{ customer.first_name }}">
