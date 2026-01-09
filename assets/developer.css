@@ -1340,6 +1340,14 @@ a.redirect_recover {
     display: grid;
     gap: 8px;
 }
+.edit_account_block .field_head h4 {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    vertical-align: middle;
+}
 
 
 
