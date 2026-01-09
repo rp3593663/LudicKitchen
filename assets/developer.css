@@ -16,7 +16,7 @@ body{
 
 .desktop_menu_linklist {
     background: #F7F7F7;
-    padding: 6px 8px;
+    padding: 6px 10px 6px 24px;
     border-radius: 100px;
 }
 ul.list-menu.list-menu--inline {
