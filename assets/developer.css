@@ -1370,7 +1370,9 @@ a.redirect_recover {
     gap: 12px;
 }
 .edit_account_field {
+    display: grid;
     width: 100%;
+    gap: 5px;width: 100%;
 }
 .edit_account_field input {
     width: 100%;
