@@ -359,6 +359,50 @@
     </div>
   </div>
 </div>
+<script>
+const input = document.getElementById('avatarInput');
+const preview = document.getElementById('avatarPreview');
+const removeBtn = document.getElementById('removeAvatar');
+
+let uploadedImageURL = null;
+
+// Preview
+input.addEventListener('change', function() {
+  const file = this.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    preview.innerHTML = `<img src="${e.target.result}">`;
+  };
+  reader.readAsDataURL(file);
+
+  uploadToShopify(file);
+});
+
+// Remove
+removeBtn.addEventListener('click', function() {
+  preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
+  uploadedImageURL = '';
+});
+
+// Upload to Shopify Files
+async function uploadToShopify(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch("/admin/api/2024-01/files.json", {
+    method: "POST",
+    headers: {
+      "X-Shopify-Access-Token": "YOUR_ADMIN_API_TOKEN"
+    },
+    body: formData
+  });
+
+  const data = await res.json();
+  uploadedImageURL = data.file.public_url;
+}
+</script>
 
 {% schema %}
 {
