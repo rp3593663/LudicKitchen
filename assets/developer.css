@@ -1377,6 +1377,20 @@ a.redirect_recover {
 .form_submit_wrap {
     grid-column: span 2;
 }
+.form-message.success {
+    background: #d0ecd0;
+    border: solid 1px green;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: -.3px;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+    margin: 15px auto 0px;
+}
 .field-error {
     color: red;
     font-size: 12px;
