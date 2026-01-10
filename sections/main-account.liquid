@@ -144,7 +144,6 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
-                    <input name="gender" value="{{ customer.metafields.custom.gender }}" class="edit_account_input" placeholder="Gender">
                     <select name="gender" class="edit_account_input">
                       <option value="">Select Gender</option>
                       <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
@@ -222,7 +221,6 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
-                  <input name="shoe_size" value="{{ customer.metafields.custom.shoe_size }}" class="edit_account_input" placeholder="Shoe Size">
                   <select name="shoe_size" class="edit_account_input">
                     <option value="">Select Shoe Size</option>
                     {% for i in (3..12) %}
