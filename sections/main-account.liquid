@@ -515,6 +515,23 @@ function scrollToFirstError() {
   if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
 }
 
+function syncFormStateAfterSuccess() {
+  // Update existing image URL if new file was uploaded
+  if (selectedImageFile && preview.querySelector("img")) {
+    existingImageURL = preview.querySelector("img").src;
+  }
+
+  // If image was removed
+  if (removeImage) {
+    existingImageURL = "";
+  }
+
+  // Reset flags
+  selectedImageFile = null;
+  removeImage = false;
+}
+
+
 // --------------------
 // SUBMIT
 // --------------------
