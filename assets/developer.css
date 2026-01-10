@@ -1408,7 +1408,8 @@ a.redirect_recover {
     font-weight: 600;
     line-height: 12px;
 }
-.edit_account_field input {
+.edit_account_field input,
+.edit_account_field select {
     width: 100%;
     border: 1px solid #E8E8E8;
     border-radius: 6px;
