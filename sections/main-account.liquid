@@ -380,6 +380,34 @@
 const form = document.getElementById('profile-form');
 const btn = document.getElementById("saveProfileBtn");
 
+
+// --------------------
+// DROPDOWN COLOR STATE
+// --------------------
+function updateSelectState(select) {
+  if (!select) return;
+
+  if (!select.value || select.selectedIndex === 0) {
+    select.classList.remove("is-selected");
+    select.classList.add("is-empty");
+  } else {
+    select.classList.add("is-selected");
+    select.classList.remove("is-empty");
+  }
+}
+
+// Apply only to SELECT fields
+document.querySelectorAll("select.edit_account_input").forEach(select => {
+  // Initial state on page load
+  updateSelectState(select);
+
+  // On change
+  select.addEventListener("change", function () {
+    updateSelectState(this);
+  });
+});
+
+
 // --------------------
 // IMAGE HANDLING
 // --------------------
