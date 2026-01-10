@@ -545,17 +545,17 @@ async function submitProfile() {
       method: "POST",
       body: formData
     });
-
     const result = await res.json();
-
     if (!res.ok) throw result;
-
-    alert("Profile updated successfully!");
-    //location.reload();
+    msgBox.innerText = "Profile updated successfully.";
+    msgBox.classList.add("success");
+    msgBox.style.display = "block";
 
   } catch (err) {
     console.error(err);
-    alert("Something went wrong. Please try again.");
+    msgBox.innerText = "Something went wrong. Please try again.";
+    msgBox.classList.add("error");
+    msgBox.style.display = "block";
   } finally {
     btn.disabled = false;
     btn.innerText = "Save Profile";
