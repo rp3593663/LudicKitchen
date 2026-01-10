@@ -1372,7 +1372,7 @@ a.redirect_recover {
 .edit_account_field {
     display: grid;
     width: 100%;
-    gap: 5px;width: 100%;
+    gap: 8px;
 }
 .field-error {
     color: red;
