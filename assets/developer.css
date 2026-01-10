@@ -1383,9 +1383,9 @@ a.redirect_recover {
     color: #008000;
 }
 .profile_edit_form .form-message.error {
-    background: #d0ecd0;
-    border: solid 1px #008000;
-    color: green;
+    background: #ecd0d0;
+    border: solid 1px #c70000;
+    color: #c70000;
 }
 .profile_edit_form .form-message {
     padding: 5px 10px;
