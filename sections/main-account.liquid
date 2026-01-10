@@ -68,31 +68,31 @@
               <div class="fields">
                 <div class="edit_account_field">
                   <div class="profile_pic_field">
-  <div class="profile-image-uploader">
-
-    {% assign profile_img = customer.metafields.custom.profile_image.value %}
-
-    <div class="avatar-preview" id="avatarPreview">
-      {% if profile_img != blank %}
-        <img src="{{ profile_img | image_url: width: 240 }}" id="avatarImg">
-      {% else %}
-        <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
-      {% endif %}
-    </div>
-
-    <div class="avatar-actions">
-      <label class="upload-btn">
-        Upload Image
-        <input type="file" id="avatarInput" accept="image/*" hidden>
-      </label>
-
-      <button type="button" id="removeAvatar" class="remove-btn">🗑</button>
-
-      <small>Recommended size: 120×120</small>
-    </div>
-
-  </div>
-</div>
+                    <div class="profile-image-uploader">
+                      {% assign profile_img = customer.metafields.custom.profile_image %}
+                      <div class="avatar-preview" id="avatarPreview">
+                        {% if profile_img != blank %}
+                          <img src="{{ profile_img }}" id="avatarImg">
+                        {% else %}
+                          <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
+                        {% endif %}
+                      </div>
+                      <div class="avatar-actions_info">
+                        <div class="avatar-actions">
+                          <label class="upload-btn">
+                            Upload Image
+                            <input type="file" id="avatarInput" accept="image/*" hidden>
+                          </label>
+                          <button type="button" id="removeAvatar" class="remove-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.0062 14H6.9938C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#C6C6C6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <small>Recommended size: 120x120</small>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -105,9 +105,11 @@
               <div class="fields">
                 <div class="edit_account_field">
                    <input name="first_name" value="{{ customer.first_name }}" class="edit_account_input" placeholder="First Name">
+                   <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
                   <input name="last_name" value="{{ customer.last_name }}" class="edit_account_input" placeholder="Last Name">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
@@ -119,6 +121,7 @@
               <div class="fields">
                 <div class="edit_account_field">
                   <input name="email" value="{{ customer.email }}" class="edit_account_input" placeholder="Email Address">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
@@ -130,6 +133,7 @@
               <div class="fields">
                 <div class="edit_account_field">
                   <input name="phone" value="{{ customer.phone }}" class="edit_account_input" placeholder="phone">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
@@ -141,9 +145,11 @@
               <div class="fields">
                 <div class="edit_account_field">
                    <input name="gender" value="{{ customer.metafields.custom.gender }}" class="edit_account_input" placeholder="Gender">
+                   <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
                   <input name="age" value="{{ customer.metafields.custom.age }}" class="edit_account_input" placeholder="Age">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
@@ -155,9 +161,11 @@
               <div class="fields">
                 <div class="edit_account_field">
                    <input name="instagram" value="{{ customer.metafields.custom.instagram }}" class="edit_account_input" placeholder="Instagram">
+                   <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
                   <input name="twitter" value="{{ customer.metafields.custom.twitter }}" class="edit_account_input" placeholder="Twitter">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
@@ -169,6 +177,7 @@
               <div class="fields">
                 <div class="edit_account_field">
                    <input name="address1" value="{{ customer.default_address.address1 }}" class="edit_account_input" placeholder="Address Line 1">
+                   <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
                   <input name="address2" value="{{ customer.default_address.address2 }}" class="edit_account_input" placeholder="Address Line 2">
@@ -176,17 +185,21 @@
                 <div class="edit_account_col">
                   <div class="edit_account_field">
                     <input name="city" value="{{ customer.default_address.city }}" class="edit_account_input" placeholder="City / District">
+                    <div class="field-error"></div>
                   </div>
                   <div class="edit_account_field">
                     <input name="province" value="{{ customer.default_address.province }}" class="edit_account_input" placeholder="State / Province">
+                    <div class="field-error"></div>
                   </div>
                 </div>
                 <div class="edit_account_col">
                   <div class="edit_account_field">
                     <input name="zip" value="{{ customer.default_address.zip }}" class="edit_account_input" placeholder="Postal Code">
+                    <div class="field-error"></div>
                   </div>
                   <div class="edit_account_field">
                     <input name="country" value="{{ customer.default_address.country }}" class="edit_account_input" placeholder="Country">
+                    <div class="field-error"></div>
                   </div>
                 </div>
               </div>
@@ -199,9 +212,13 @@
               <div class="fields">
                 <div class="edit_account_field">
                   <input name="shoe_size" value="{{ customer.metafields.custom.shoe_size }}" class="edit_account_input" placeholder="Shoe Size">
+                  <div class="field-error"></div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="form_submit_wrap">
+            <button type="submit" id="saveProfileBtn" class="btn">Save Profile</button>
           </div>
           {% comment %} <h3>Profile</h3>
           <input name="first_name" value="{{ customer.first_name }}">
@@ -360,49 +377,169 @@
   </div>
 </div>
 <script>
+const form = document.getElementById('profile-form');
+const btn = document.getElementById("saveProfileBtn");
+
+// --------------------
+// IMAGE PREVIEW ONLY (UPLOAD MUST GO TO YOUR BACKEND)
+// --------------------
 const input = document.getElementById('avatarInput');
 const preview = document.getElementById('avatarPreview');
 const removeBtn = document.getElementById('removeAvatar');
 
-let uploadedImageURL = null;
+let uploadedImageURL = "{{ customer.metafields.custom.profile_image | default: this.files[0] }}";
 
-// Preview
-input.addEventListener('change', function() {
-  const file = this.files[0];
-  if (!file) return;
+if (input) {
+  input.addEventListener('change', function() {
+    const file = this.files[0];
+    if (!file) return;
 
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    preview.innerHTML = `<img src="${e.target.result}">`;
-  };
-  reader.readAsDataURL(file);
+    // Preview only
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      preview.innerHTML = `<img src="${e.target.result}">`;
+    };
+    reader.readAsDataURL(file);
 
-  uploadToShopify(file);
-});
+    // TODO: Upload this file to your backend and get URL
+    // uploadedImageURL = "https://cdn....jpg";
+  });
+}
 
-// Remove
-removeBtn.addEventListener('click', function() {
-  preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
-  uploadedImageURL = '';
-});
+if (removeBtn) {
+  removeBtn.addEventListener('click', function() {
+    preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
+    uploadedImageURL = "";
+  });
+}
 
-// Upload to Shopify Files
-async function uploadToShopify(file) {
-  const formData = new FormData();
-  formData.append("file", file);
+// --------------------
+// VALIDATION
+// --------------------
+const requiredFields = [
+  "first_name","last_name","email","phone",
+  "address1","city","zip","province","country",
+  "age","gender","shoe_size","instagram"
+];
 
-  const res = await fetch("/admin/api/2024-01/files.json", {
-    method: "POST",
-    headers: {
-      "X-Shopify-Access-Token": "YOUR_ADMIN_API_TOKEN"
-    },
-    body: formData
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let valid = true;
+
+  // Reset errors
+  document.querySelectorAll(".field-error").forEach(el => {
+    el.innerText = "";
+    el.style.display = "none";
+  });
+  document.querySelectorAll(".edit_account_input").forEach(el => {
+    el.classList.remove("input-error");
   });
 
-  const data = await res.json();
-  uploadedImageURL = data.file.public_url;
+  // Required check
+  requiredFields.forEach(name => {
+    const input = form.querySelector(`[name="${name}"]`);
+    if (!input || input.value.trim() === "") {
+      showError(input, "This field is required");
+      valid = false;
+    }
+  });
+
+  // Email check
+  const emailInput = form.querySelector('[name="email"]');
+  if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
+    showError(emailInput, "Enter valid email address");
+    valid = false;
+  }
+
+  // Phone check (+91XXXXXXXXXX)
+  const phoneInput = form.querySelector('[name="phone"]');
+  if (phoneInput) {
+    let phone = phoneInput.value.trim();
+
+    // Auto-fix if user enters 10 digits only
+    if (/^[0-9]{10}$/.test(phone)) {
+      phone = "+91" + phone;
+      phoneInput.value = phone;
+    }
+
+    if (!/^\+91[0-9]{10}$/.test(phone)) {
+      showError(phoneInput, "Phone must be in format +91XXXXXXXXXX");
+      valid = false;
+    }
+  }
+
+  // Age numeric check
+  const ageInput = form.querySelector('[name="age"]');
+  if (ageInput && isNaN(ageInput.value)) {
+    showError(ageInput, "Age must be a number");
+    valid = false;
+  }
+
+  if (!valid) {
+    scrollToFirstError();
+    return;
+  }
+
+  submitProfile();
+});
+
+// --------------------
+// ERROR UI
+// --------------------
+function showError(input, message) {
+  if (!input) return;
+  input.classList.add("input-error");
+  let errorDiv = input.parentElement.querySelector(".field-error");
+  if (!errorDiv) {
+    errorDiv = document.createElement("div");
+    errorDiv.className = "field-error";
+    input.parentElement.appendChild(errorDiv);
+  }
+  errorDiv.innerText = message;
+  errorDiv.style.display = "block";
+}
+
+function scrollToFirstError() {
+  const first = document.querySelector(".input-error");
+  if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+// --------------------
+// SUBMIT
+// --------------------
+async function submitProfile() {
+  btn.disabled = true;
+  btn.innerText = "Saving...";
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  // Attach profile image
+  data.profile_picture = uploadedImageURL || "";
+
+  try {
+    const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (!res.ok) throw result;
+
+    alert("Profile updated successfully!");
+
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    btn.disabled = false;
+    btn.innerText = "Save Profile";
+  }
 }
 </script>
+
 
 {% schema %}
 {
