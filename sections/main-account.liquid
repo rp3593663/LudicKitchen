@@ -451,7 +451,7 @@ form.addEventListener("submit", function(e){
   requiredFields.forEach(name => {
     const input = form.querySelector(`[name="${name}"]`);
     if (!input || input.value.trim() === "") {
-      showError(input, "This field is required");
+      showError(input, "This Field is Required");
       valid = false;
     }
   });
