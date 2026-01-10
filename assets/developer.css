@@ -1460,6 +1460,9 @@ a.redirect_recover {
     cursor: pointer;
     padding: 0px;
 }
+.saveProfileBtn{
+    cursor: pointer;
+}
 
 
 
