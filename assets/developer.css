@@ -1420,6 +1420,11 @@ a.redirect_recover {
     letter-spacing: -0.39px;
     font-family: var(--font-family);
 }
+.edit_account_field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 .edit_account_field input::placeholder,
 .edit_account_field select.edit_account_input.is-empty-select{
     color: #C6C6C6;
