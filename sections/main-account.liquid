@@ -154,7 +154,12 @@
                    <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
-                  <input name="age" value="{{ customer.metafields.custom.age }}" class="edit_account_input" placeholder="Age">
+                  <select name="age" class="edit_account_input">
+                    <option value="">Select Age</option>
+                    {% for i in (18..99) %}
+                      <option value="{{ i }}" {% if customer.metafields.custom.age == i %}selected{% endif %}>{{ i }}</option>
+                    {% endfor %}
+                  </select>
                   <div class="field-error"></div>
                 </div>
               </div>
