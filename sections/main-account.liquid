@@ -451,7 +451,7 @@ form.addEventListener("submit", function(e){
   requiredFields.forEach(name => {
     const input = form.querySelector(`[name="${name}"]`);
     if (!input || input.value.trim() === "") {
-      showError(input, "This Field is Required");
+      showError(input, "This Field is Required.");
       valid = false;
     }
   });
@@ -459,7 +459,7 @@ form.addEventListener("submit", function(e){
   // Email
   const emailInput = form.querySelector('[name="email"]');
   if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
-    showError(emailInput, "Enter valid email address");
+    showError(emailInput, "Enter valid email address.");
     valid = false;
   }
 
@@ -482,7 +482,7 @@ form.addEventListener("submit", function(e){
   // Age number
   const ageInput = form.querySelector('[name="age"]');
   if (ageInput && isNaN(ageInput.value)) {
-    showError(ageInput, "Age must be a number");
+    showError(ageInput, "Age must be a number.");
     valid = false;
   }
 
