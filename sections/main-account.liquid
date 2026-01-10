@@ -381,20 +381,26 @@ const form = document.getElementById('profile-form');
 const btn = document.getElementById("saveProfileBtn");
 
 // --------------------
-// IMAGE PREVIEW ONLY (UPLOAD MUST GO TO YOUR BACKEND)
+// IMAGE HANDLING
 // --------------------
 const input = document.getElementById('avatarInput');
 const preview = document.getElementById('avatarPreview');
 const removeBtn = document.getElementById('removeAvatar');
 
-let uploadedImageURL = "{{ customer.metafields.custom.profile_image | default: this.files[0] }}";
+// Existing saved image (string URL from metafield)
+let existingImageURL = "{{ customer.metafields.custom.profile_image | escape }}";
+
+// Newly selected file
+let selectedImageFile = null;
 
 if (input) {
   input.addEventListener('change', function() {
     const file = this.files[0];
     if (!file) return;
 
-    // Preview only
+    selectedImageFile = file;
+
+    // Preview
     const reader = new FileReader();
     reader.onload = function(e) {
       preview.innerHTML = `<img src="${e.target.result}">`;
@@ -406,7 +412,8 @@ if (input) {
 if (removeBtn) {
   removeBtn.addEventListener('click', function() {
     preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
-    uploadedImageURL = "";
+    selectedImageFile = null;
+    existingImageURL = "";
   });
 }
 
@@ -433,7 +440,7 @@ form.addEventListener("submit", function(e){
     el.classList.remove("input-error");
   });
 
-  // Required check
+  // Required fields
   requiredFields.forEach(name => {
     const input = form.querySelector(`[name="${name}"]`);
     if (!input || input.value.trim() === "") {
@@ -442,19 +449,18 @@ form.addEventListener("submit", function(e){
     }
   });
 
-  // Email check
+  // Email
   const emailInput = form.querySelector('[name="email"]');
   if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
     showError(emailInput, "Enter valid email address");
     valid = false;
   }
 
-  // Phone check (+91XXXXXXXXXX)
+  // Phone +91XXXXXXXXXX
   const phoneInput = form.querySelector('[name="phone"]');
   if (phoneInput) {
     let phone = phoneInput.value.trim();
 
-    // Auto-fix if user enters 10 digits only
     if (/^[0-9]{10}$/.test(phone)) {
       phone = "+91" + phone;
       phoneInput.value = phone;
@@ -466,7 +472,7 @@ form.addEventListener("submit", function(e){
     }
   }
 
-  // Age numeric check
+  // Age number
   const ageInput = form.querySelector('[name="age"]');
   if (ageInput && isNaN(ageInput.value)) {
     showError(ageInput, "Age must be a number");
@@ -503,22 +509,26 @@ function scrollToFirstError() {
 }
 
 // --------------------
-// SUBMIT
+// SUBMIT (IMPORTANT PART)
 // --------------------
 async function submitProfile() {
   btn.disabled = true;
   btn.innerText = "Saving...";
 
-  const data = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
 
-  // Attach profile image
-  data.profile_picture = uploadedImageURL || "";
+  // If user selected new image → send file
+  if (selectedImageFile) {
+    formData.append("profile_image_file", selectedImageFile);
+  } else {
+    // Else send old URL
+    formData.append("profile_picture", existingImageURL || "");
+  }
 
   try {
     const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      body: formData // DO NOT SET content-type
     });
 
     const result = await res.json();
