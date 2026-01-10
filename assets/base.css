@@ -398,7 +398,6 @@ blockquote {
 }
 
 .caption-large,
-.customer select,
 .field__input,
 .form__label,
 .select__select {
@@ -1670,8 +1669,7 @@ details[open] > .share-button__fallback {
   right: 0;
 }
 
-.select__select,
-.customer select {
+.select__select {
   cursor: pointer;
   line-height: calc(1 + 0.6 / var(--font-body-scale));
   padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem;
@@ -3096,7 +3094,6 @@ details-disclosure > details {
   .field__input:focus,
   .select__select:focus,
   .customer .field input:focus,
-  .customer select:focus,
   .localization-form__select:focus.localization-form__select:after {
     outline: transparent solid 1px;
   }
