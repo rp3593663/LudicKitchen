@@ -223,6 +223,15 @@
               <div class="fields">
                 <div class="edit_account_field">
                   <input name="shoe_size" value="{{ customer.metafields.custom.shoe_size }}" class="edit_account_input" placeholder="Shoe Size">
+                  <select name="shoe_size" class="edit_account_input">
+                    <option value="">Select Shoe Size</option>
+                    {% for i in (3..12) %}
+                      {% assign size_value = "UK " | append: i %}
+                      <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
+                        {{ size_value }}
+                      </option>
+                    {% endfor %}
+                  </select>
                   <div class="field-error"></div>
                 </div>
               </div>
