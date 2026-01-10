@@ -555,6 +555,66 @@ async function submitProfile() {
     btn.innerText = "Save Profile";
   }
 }
+
+// --------------------
+// LIVE ERROR CLEARING
+// --------------------
+document.querySelectorAll(".edit_account_input").forEach(input => {
+  input.addEventListener("input", function() {
+    clearErrorIfValid(this);
+  });
+
+  input.addEventListener("change", function() {
+    clearErrorIfValid(this);
+  });
+});
+
+function clearErrorIfValid(input) {
+  let isValid = true;
+  const name = input.name;
+  const value = input.value.trim();
+
+  // Required check
+  if (requiredFields.includes(name) && value === "") {
+    isValid = false;
+  }
+
+  // Email
+  if (name === "email" && value !== "" && !/^\S+@\S+\.\S+$/.test(value)) {
+    isValid = false;
+  }
+
+  // Phone
+  if (name === "phone") {
+    let phone = value;
+    if (/^[0-9]{10}$/.test(phone)) {
+      phone = "+91" + phone;
+      input.value = phone;
+    }
+    if (!/^\+91[0-9]{10}$/.test(phone)) {
+      isValid = false;
+    }
+  }
+
+  // Age
+  if (name === "age" && value !== "" && isNaN(value)) {
+    isValid = false;
+  }
+
+  if (isValid) {
+    removeError(input);
+  }
+}
+
+function removeError(input) {
+  input.classList.remove("input-error");
+  const errorDiv = input.parentElement.querySelector(".field-error");
+  if (errorDiv) {
+    errorDiv.innerText = "";
+    errorDiv.style.display = "none";
+  }
+}
+
 </script>
 
 
