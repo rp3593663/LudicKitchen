@@ -1374,6 +1374,13 @@ a.redirect_recover {
     width: 100%;
     gap: 5px;width: 100%;
 }
+.field-error {
+    color: red;
+    font-size: 12px;
+    letter-spacing: -0.3px;
+    font-weight: 600;
+    line-height: 12px;
+}
 .edit_account_field input {
     width: 100%;
     border: 1px solid #E8E8E8;
