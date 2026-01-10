@@ -1421,8 +1421,12 @@ a.redirect_recover {
     font-family: var(--font-family);
 }
 .edit_account_field input::placeholder,
-select.edit_account_input.is-empty-select{
+.edit_account_field select.edit_account_input.is-empty-select{
     color: #C6C6C6;
+}
+.edit_account_field select option {
+  background-color: var(--white);
+  color: var(--black);
 }
 .edit_account_col {
     display: grid;
