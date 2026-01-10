@@ -1374,6 +1374,9 @@ a.redirect_recover {
     width: 100%;
     gap: 8px;
 }
+.form_submit_wrap {
+    grid-column: span 2;
+}
 .field-error {
     color: red;
     font-size: 12px;
