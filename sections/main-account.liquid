@@ -522,6 +522,10 @@ async function submitProfile() {
   btn.disabled = true;
   btn.innerText = "Saving...";
 
+  const msgBox = document.getElementById("formMessage");
+  msgBox.style.display = "none";
+  msgBox.className = "form-message";
+
   const formData = new FormData(form);
 
   // IMAGE LOGIC
