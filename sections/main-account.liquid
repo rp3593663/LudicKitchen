@@ -67,7 +67,33 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
-                  <div class="profile_pic_field"></div>
+                  <div class="profile_pic_field">
+  <div class="profile-image-uploader">
+
+    {% assign profile_img = customer.metafields.custom.profile_image.value %}
+
+    <div class="avatar-preview" id="avatarPreview">
+      {% if profile_img != blank %}
+        <img src="{{ profile_img | image_url: width: 240 }}" id="avatarImg">
+      {% else %}
+        <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
+      {% endif %}
+    </div>
+
+    <div class="avatar-actions">
+      <label class="upload-btn">
+        Upload Image
+        <input type="file" id="avatarInput" accept="image/*" hidden>
+      </label>
+
+      <button type="button" id="removeAvatar" class="remove-btn">🗑</button>
+
+      <small>Recommended size: 120×120</small>
+    </div>
+
+  </div>
+</div>
+
                 </div>
               </div>
             </div>
