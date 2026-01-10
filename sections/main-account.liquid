@@ -388,11 +388,11 @@ function updateSelectState(select) {
   if (!select) return;
 
   if (!select.value || select.selectedIndex === 0) {
-    select.classList.remove("is-selected");
-    select.classList.add("is-empty");
+    select.classList.remove("is-selected-select");
+    select.classList.add("is-empty-select");
   } else {
-    select.classList.add("is-selected");
-    select.classList.remove("is-empty");
+    select.classList.add("is-selected-select");
+    select.classList.remove("is-empty-select");
   }
 }
 
