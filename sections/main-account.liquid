@@ -519,7 +519,7 @@ async function submitProfile() {
 
   // If user selected new image → send file
   if (selectedImageFile) {
-    formData.append("profile_image_file", selectedImageFile);
+    formData.append("profile_picture", selectedImageFile);
   } else {
     // Else send old URL
     formData.append("profile_picture", existingImageURL || "");
