@@ -1392,6 +1392,56 @@ a.redirect_recover {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
+.profile-image-uploader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eee;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-letter {
+  font-size: 32px;
+  font-weight: bold;
+  color: #888;
+}
+
+.avatar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload-btn {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
 
 
 
