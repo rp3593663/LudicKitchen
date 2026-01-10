@@ -144,7 +144,13 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
-                   <input name="gender" value="{{ customer.metafields.custom.gender }}" class="edit_account_input" placeholder="Gender">
+                    <input name="gender" value="{{ customer.metafields.custom.gender }}" class="edit_account_input" placeholder="Gender">
+                    <select name="gender" class="edit_account_input">
+                      <option value="">Select Gender</option>
+                      <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
+                      <option value="Female" {% if customer.metafields.custom.gender == "Female" %}selected{% endif %}>Female</option>
+                      <option value="Prefer not to say" {% if customer.metafields.custom.gender == "Prefer not to say" %}selected{% endif %}>Prefer not to say</option>
+                    </select>
                    <div class="field-error"></div>
                 </div>
                 <div class="edit_account_field">
@@ -221,26 +227,6 @@
               <div id="formMessage" class="form-message"></div>
             </div>
           </div>
-          
-          {% comment %} <h3>Profile</h3>
-          <input name="first_name" value="{{ customer.first_name }}">
-          <input name="last_name" value="{{ customer.last_name }}">
-          <input name="email" value="{{ customer.email }}">
-          <input name="phone" value="{{ customer.phone }}">
-          <h3>Address</h3>
-          {% assign addr = customer.default_address %}
-          <input name="address1" value="{{ addr.address1 }}">
-          <input name="address2" value="{{ addr.address2 }}">
-          <input name="city" value="{{ addr.city }}">
-          <input name="zip" value="{{ addr.zip }}">
-          <input name="province" value="{{ addr.province }}">
-          <input name="country" value="{{ addr.country }}">
-          <h3>Extra</h3>
-          <input name="age" value="{{ customer.metafields.custom.age }}">
-          <input name="gender" value="{{ customer.metafields.custom.gender }}">
-          <input name="shoe_size" value="{{ customer.metafields.custom.shoe_size }}">
-          <input name="instagram" value="{{ customer.metafields.custom.instagram }}">
-          <button type="submit">Save</button> {% endcomment %}
         </form>
       </div>
       {% comment %} <div>
