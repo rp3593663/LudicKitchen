@@ -1390,6 +1390,9 @@ a.redirect_recover {
     text-align: center;
     width: 50%;
     margin: 15px auto 0px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
 .field-error {
     color: red;
