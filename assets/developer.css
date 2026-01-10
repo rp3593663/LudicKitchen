@@ -1381,6 +1381,13 @@ a.redirect_recover {
     background: #d0ecd0;
     border: solid 1px green;
     color: green;
+}
+.form-message.error {
+    background: #d0ecd0;
+    border: solid 1px green;
+    color: green;
+}
+.form-message {
     padding: 5px 10px;
     border-radius: 6px;
     font-size: 13px;
