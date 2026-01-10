@@ -1377,17 +1377,17 @@ a.redirect_recover {
 .form_submit_wrap {
     grid-column: span 2;
 }
-.form-message.success {
+.profile_edit_form .form-message.success {
     background: #d0ecd0;
-    border: solid 1px green;
+    border: solid 1px #008000;
+    color: #008000;
+}
+.profile_edit_form .form-message.error {
+    background: #d0ecd0;
+    border: solid 1px #008000;
     color: green;
 }
-.form-message.error {
-    background: #d0ecd0;
-    border: solid 1px green;
-    color: green;
-}
-.form-message {
+.profile_edit_form .form-message {
     padding: 5px 10px;
     border-radius: 6px;
     font-size: 13px;
@@ -1401,7 +1401,7 @@ a.redirect_recover {
     gap: 6px;
     justify-content: center;
 }
-.field-error {
+.profile_edit_form .field-error {
     color: red;
     font-size: 12px;
     letter-spacing: -0.3px;
