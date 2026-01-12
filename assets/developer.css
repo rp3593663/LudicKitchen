@@ -2111,7 +2111,9 @@ a.redirect_recover {
         letter-spacing: -.36px;
     }
     .upload-btn,
-    .avatar-actions_info small {
+    .avatar-actions_info small,
+    .edit_account_field input, 
+    .edit_account_field select {
         font-size: 12px;
         line-height: 12px;
         letter-spacing: -.36px;
