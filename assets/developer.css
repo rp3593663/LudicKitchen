@@ -1594,8 +1594,6 @@ a.redirect_recover {
         background: #FFF;
     }
 
-   
-
     /*---------- Featured Project Section ------------*/
 
     .section-featured-project h2.h2_title {
@@ -2141,7 +2139,11 @@ a.redirect_recover {
         line-height: 12px;
         letter-spacing: -.36px;
     }
+    #saveProfileBtn {
+        margin-top: 50px;
+    }
 }
+
 
 
 
