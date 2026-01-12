@@ -41,7 +41,7 @@
         "border_image": "shopify://shop_images/round.svg",
         "button_text": "View Project",
         "button_link": "shopify://products/ludic-clogs-2025",
-        "padding": "60px 0px 0px | | | 72px 0px 0px",
+        "padding": "60px 0px 0px | | | 55px 0px 0px",
         "margin": ""
       }
     },
