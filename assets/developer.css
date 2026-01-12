@@ -1581,6 +1581,10 @@ a.redirect_recover {
         padding: 4px 6px 4px 40px;
         gap: 24px;
     }
+    .desktop_menu_linklist a:last-child {
+        width: 99px;
+        height: 26px;
+    }
 
    
 
