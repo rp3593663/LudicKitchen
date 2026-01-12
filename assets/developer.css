@@ -1319,6 +1319,12 @@ a.redirect_recover {
 /*---------- Edit Account Form CSS ------------*/
 /*-----------------------------------------------*/
 
+
+.kretoss-section.section-customer_account .page-width {
+    padding: 0px;
+}
+
+
 .main_account_head h2 {
     font-weight: 600;
     font-size: 24px;
