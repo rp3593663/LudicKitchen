@@ -2100,6 +2100,11 @@ a.redirect_recover {
     .edit_account_block .field_head {
         margin-bottom: 22px;
     }
+    .edit_account_block .field_head p {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -.36px;
+    }
 }
 
 
