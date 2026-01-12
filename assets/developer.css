@@ -2089,7 +2089,8 @@ a.redirect_recover {
         border-radius: 0;
     }
     .all_forms_field_blocks {
-        grid-template-columns: 1fr!important;
+        display: flex;
+        flex-direction: column;
         gap: 22px;
     }
 }
