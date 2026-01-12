@@ -340,7 +340,7 @@
       {{ content_for_layout }}
     </main>
 
-    {% unless template.name == 'login' or template.name == 'register' %}
+    {% unless template.name == 'login' or template.name == 'register' or template.name == 'account' %}
       {% sections 'footer-group' %}
     {% endunless %}
 
