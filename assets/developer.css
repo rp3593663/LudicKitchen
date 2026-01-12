@@ -2097,6 +2097,9 @@ a.redirect_recover {
     .edit_account_block .form_field_box {
         padding: 20px;
     }
+    .edit_account_block .field_head {
+        margin-bottom: 22px;
+    }
 }
 
 
