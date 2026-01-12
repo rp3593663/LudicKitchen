@@ -1571,10 +1571,11 @@ a.redirect_recover {
 
 @media(max-width: 767px){
 
-    .account_box .customer {
-        padding: 28px;
-    }
 
+    /*---------- Header Section ------------*/
+    
+
+   
 
     /*---------- Featured Project Section ------------*/
 
@@ -2074,6 +2075,9 @@ a.redirect_recover {
 
     /*---------- Edit Account Form CSS ------------*/
 
+     .account_box .customer {
+        padding: 28px;
+    }
     .section-customer_account .page-width {
         padding: 0px;
     }
