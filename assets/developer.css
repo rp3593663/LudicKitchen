@@ -1379,6 +1379,11 @@ a.redirect_recover {
 .form_submit_wrap {
     grid-column: span 2;
 }
+.profile_pic_field {
+    border: 1px solid #E8E8E8;
+    padding: 20px;
+    border-radius: 6px;
+}
 .profile_edit_form .form-message.success {
     background: #d0ecd0;
     border: solid 1px #008000;
