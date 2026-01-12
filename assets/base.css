@@ -2328,9 +2328,10 @@ input[type='checkbox'] {
 
 .header {
   display: grid;
-  grid-template-areas: 'heading';
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'heading navigation';
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 749px) {
