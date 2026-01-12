@@ -2066,11 +2066,21 @@ a.redirect_recover {
         margin-top: 16px;
     }
 
-
     /*---------- Edit Account Form CSS ------------*/
 
     .kretoss-section.section-customer_account .page-width {
         padding: 0px;
+    }
+    .main_account_head h2 {
+        font-weight: 650;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.9px;
+        margin: 0;
+        padding: 20px 18px;
+        background: #FFFFFF;
+        border-top: 1px solid #F0F0F0;
+        border-bottom: 1px solid #F0F0F0;
     }
 }
 
