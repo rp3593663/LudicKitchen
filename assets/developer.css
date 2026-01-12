@@ -1577,6 +1577,11 @@ a.redirect_recover {
     .desktop_menu_linklist > a:nth-child(2) {
         display: none;
     }
+    .desktop_menu_linklist {
+        padding: 4px 6px 4px 40px;
+        gap: 24px;
+    }
+
    
 
     /*---------- Featured Project Section ------------*/
