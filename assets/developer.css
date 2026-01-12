@@ -2088,6 +2088,10 @@ a.redirect_recover {
         padding: 15px 18px;
         border-radius: 0;
     }
+    .all_forms_field_blocks {
+        grid-template-columns: 1fr!important;
+        gap: 22px;
+    }
 }
 
 
