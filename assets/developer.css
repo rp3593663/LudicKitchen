@@ -1590,6 +1590,9 @@ a.redirect_recover {
         line-height: 11px;
         letter-spacing: -.33px;
     }
+    .header {
+        background: #FFF;
+    }
 
    
 
