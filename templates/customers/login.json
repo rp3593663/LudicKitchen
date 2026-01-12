@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-login",
+      "disabled": true,
       "settings": {
         "enable_shop_login_button": true,
         "max_width": "",
