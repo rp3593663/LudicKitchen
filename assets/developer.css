@@ -1574,7 +1574,9 @@ a.redirect_recover {
 
     /*---------- Header Section ------------*/
     
-
+    .desktop_menu_linklist > a:nth-child(2) {
+        display: none;
+    }
    
 
     /*---------- Featured Project Section ------------*/
