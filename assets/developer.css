@@ -1585,6 +1585,11 @@ a.redirect_recover {
         width: 99px;
         height: 26px;
     }
+    .desktop_menu_linklist a {
+        font-size: 11px;
+        line-height: 11px;
+        letter-spacing: -.33px;
+    }
 
    
 
