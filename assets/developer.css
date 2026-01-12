@@ -2110,6 +2110,11 @@ a.redirect_recover {
         line-height: 16px;
         letter-spacing: -.36px;
     }
+    .upload-btn {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.36px;
+    }
 }
 
 
