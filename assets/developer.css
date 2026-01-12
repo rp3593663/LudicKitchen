@@ -1356,6 +1356,7 @@ a.redirect_recover {
     line-height: 18px;
     letter-spacing: -0.54px;
     vertical-align: middle;
+    color: var(--primary_color);
 }
 .edit_account_block .field_head p {
     margin: 0px;
