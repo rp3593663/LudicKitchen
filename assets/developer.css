@@ -2078,7 +2078,7 @@ a.redirect_recover {
         letter-spacing: -0.9px;
         margin: 0;
         padding: 20px 18px;
-        background: #FFFFFF;
+        background: var(--white);
         border-top: 1px solid #F0F0F0;
         border-bottom: 1px solid #F0F0F0;
     }
