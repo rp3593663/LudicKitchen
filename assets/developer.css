@@ -1124,7 +1124,8 @@ p.goal_info span{
 /*-----------------------------------------------*/
 
 .section-customer_register,
-.section-customer_login {
+.section-customer_login,
+div#sotp-widget-loader {
     min-height: 100dvh;
     display: flex;
     align-items: center;
