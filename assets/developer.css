@@ -1159,7 +1159,7 @@ button.send-btn.otp-btn {
     display: flex;
     flex-wrap: wrap;
     font-family: 'Inter';
-    font-weight: 500;
+    font-weight: 500!important;
     font-size: 11px;
     line-height: 15px;
     letter-spacing: -0.3px;
@@ -1168,10 +1168,10 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
-    color: #949598;
-    font-size: 11px;
-    text-decoration-thickness: 1px;
-    font-weight: 500;
+    color: #949598!important;
+    font-size: 11px!important;
+    text-decoration-thickness: 1px!important;
+    font-weight: 400!important;
 }
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
