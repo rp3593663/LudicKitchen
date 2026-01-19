@@ -1319,7 +1319,7 @@ button.send-btn.otp-btn {
     outline: none;
     font-size: 18px!important;
     letter-spacing: 36px!important;
-    padding-left: 0!important;
+    padding: 0!important;
     text-align: left;
     background: repeating-linear-gradient(
       to right,
