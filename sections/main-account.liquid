@@ -132,7 +132,7 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
-                  <input name="phone" value="{{ customer.phone }}" class="edit_account_input" placeholder="phone">
+                  <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input" placeholder="phone">
                   <div class="field-error"></div>
                 </div>
               </div>
