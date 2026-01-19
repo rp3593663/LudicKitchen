@@ -1151,6 +1151,12 @@ button.send-btn.otp-btn {
 .sotp-widget .olWrapper .ol .login-box .other-options-box{
     margin-top: 0!important;
 }
+.simply-otp-wrapper .olWrapper .ol .login-box,
+.simply-otp-wrapper .olWrapper .ol .update-user-box,
+.sotp-widget .olWrapper .ol .login-box, 
+.sotp-widget .olWrapper .ol .update-user-box {
+    min-width: unset!important;
+}
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper {
     margin-top: 0px!important;
