@@ -1301,7 +1301,6 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content, 
 .sotp-widget .olWrapper .ol .verify-box .verify-content {
-    justify-content: left!important;
     margin: 0px 0 16px!important;
     padding-top: 0!important;
 }
