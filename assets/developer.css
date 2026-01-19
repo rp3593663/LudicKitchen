@@ -1165,7 +1165,7 @@ button.send-btn.otp-btn {
     display: flex;
     align-items: baseline;
     justify-content: left;
-    gap: 4px;
+    gap: 0px 4px;
     flex-wrap: wrap;
     font-family: 'Inter';
 }
