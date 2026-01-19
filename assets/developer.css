@@ -1939,8 +1939,11 @@ a.redirect_recover {
         padding: 4px 6px 4px 26px;
         gap: 20px;
     }
-    .desktop_menu_linklist a:last-child {
+    .desktop_menu_linklist a.header_account {
         width: 48px;
+    }
+    .desktop_menu_linklist a:last-child {
+        width: 78px;
         height: 26px;
     }
     .desktop_menu_linklist a span {
