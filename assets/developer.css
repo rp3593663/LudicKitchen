@@ -1407,6 +1407,10 @@ span.error-message-phone, .error-message {
     margin-top: -10px!important;
     display: block;
 }
+.country-selector-main svg {
+    width: 8px!important;
+    margin-left: 4px;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
