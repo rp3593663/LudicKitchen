@@ -1130,6 +1130,9 @@ div#sotp-widget-loader {
     align-items: center;
     justify-content: center;
 }
+.login-box.step-box-wrapper {
+    display: grid;
+}
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
     position: relative!important;
