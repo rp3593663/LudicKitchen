@@ -1289,6 +1289,12 @@ button.send-btn.otp-btn {
     line-height: 14px;
     letter-spacing: -0.42px;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .mn-container svg, 
+.sotp-widget .olWrapper .ol .verify-box .mn-container svg {
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+}
 .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
