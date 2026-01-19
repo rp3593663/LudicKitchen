@@ -423,7 +423,7 @@
       // Get URL parameters
       const urlParams = new URLSearchParams(window.location.search);
       const returnUrl = urlParams.get('return_url');
-
+      console.log(returnUrl,"returnUrl")
       // Override pageUrl if return_url exists
       if (returnUrl && window.simplyOtp && window.simplyOtp.settings) {
         window.simplyOtp.settings.pageUrl = returnUrl;
