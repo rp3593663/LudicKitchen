@@ -1312,7 +1312,7 @@ button.send-btn.otp-btn {
     content: unset!important;
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6, .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
-    width: 300px!important;
+    width: 302px!important;
     height: 40px!important;
     border: none;
     outline: none;
