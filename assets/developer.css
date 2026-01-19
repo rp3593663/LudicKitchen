@@ -1157,6 +1157,9 @@ button.send-btn.otp-btn {
     text-align: left;
     margin-bottom: 16px;
     display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 4px;
     flex-wrap: wrap;
     font-family: 'Inter';
     font-weight: 500!important;
