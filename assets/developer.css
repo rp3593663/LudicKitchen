@@ -1413,7 +1413,7 @@ span.error-message-phone, .error-message {
 }
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper .checkbox-main-label, .sotp-widget .update-user-box .update-checkbox-wrapper .checkbox-main-label {
     width: calc(100% - 30px);
-    margin: 0 0 10px;
+    margin: 0!important;
     font-weight: 500;
     font-size: 11px;
     line-height: 15px;
