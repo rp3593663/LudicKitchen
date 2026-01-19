@@ -1167,6 +1167,31 @@ div#sotp-widget-loader {
     color: #949598!important;
     margin: 0 0 32px!important;
 }
+.simply-otp-wrapper .olWrapper .ol .input-box-content, 
+.sotp-widget .olWrapper .ol .input-box-content {
+    border: 1px solid #E8E8E8!important;
+    border-radius: 4px!important;
+    margin-top: 0px!important;
+    margin-bottom: 16px!important;
+}
+.simply-otp-wrapper .olWrapper .ol .input-box-content input, 
+.sotp-widget .olWrapper .ol .input-box-content input {
+    padding: 10px 12px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+    background: transparent;
+    text-indent: 0px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 12px!important;
+    line-height: 12px;
+    letter-spacing: -0.36px;
+}
+.simply-otp-wrapper .olWrapper .ol .input-box-content input::placeholder,
+.sotp-widget .olWrapper .ol .input-box-content input::placeholder {
+    color: #D7D7D7!important;
+}
 /* .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
