@@ -133,31 +133,31 @@ document.fonts.ready.then(() => {
 
   const split = new SplitText(title, { type: "chars" });
 
-  // Initial position
   gsap.set(title, { xPercent: 100 });
 
-  // 🔹 Calculate scroll end when arrow reaches center
-  function getScrollEnd() {
-    const titleWidth = title.scrollWidth;
-    const arrowRect = arrow.getBoundingClientRect();
-    const arrowCenter = arrowRect.left + arrowRect.width / 2;
-    const viewportCenter = window.innerWidth / 2;
-
-    return titleWidth - (viewportCenter - arrowCenter);
-  }
-
-  // 🔹 Horizontal scroll + pin (ENDS at arrow center)
+  // 🔹 Horizontal scroll + pin
   const horizontalTween = gsap.to(title, {
-    x: () => -getScrollEnd(),
+    xPercent: -100,
     ease: "none",
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + getScrollEnd(),
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
-      pinSpacing: true,
-      anticipatePin: 1
+      anticipatePin: 1,
+
+      // ⭐ FORCE UNPIN WHEN ARROW HITS CENTER
+      onUpdate(self) {
+        const arrowRect = arrow.getBoundingClientRect();
+        const arrowCenter = arrowRect.left + arrowRect.width / 2;
+        const viewportCenter = window.innerWidth / 2;
+
+        if (arrowCenter >= viewportCenter) {
+          self.kill();                  // remove ScrollTrigger
+          gsap.set(wrapper, { clearProps: "all" }); // remove pin styles
+        }
+      }
     }
   });
 
@@ -196,13 +196,9 @@ document.fonts.ready.then(() => {
     }
   });
 
-  // 🔁 Refresh on resize (important)
-  window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
-  });
-
 });
 </script>
+
 
 
 {% schema %}
