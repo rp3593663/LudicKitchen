@@ -1148,6 +1148,9 @@ button.send-btn.otp-btn {
 .sotp-consent-wrapper {
     order: 3;
 }
+.sotp-widget .olWrapper .ol .login-box .other-options-box{
+    margin-top: 0!important;
+}
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper {
     margin-top: 0px;
