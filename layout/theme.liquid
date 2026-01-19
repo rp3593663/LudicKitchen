@@ -419,12 +419,6 @@
       </svg>
     </script>
 
-    <script src="{{ 'developer.js' | asset_url }}" defer="defer"></script>
-
-    <!------------------------------------------>
-    <!------------------------------------------>
-    <!------------------------------------------>
-
     <script>
       // Get URL parameters
       const urlParams = new URLSearchParams(window.location.search);
@@ -436,5 +430,11 @@
         console.log('pageUrl overridden to:', returnUrl);
       }
     </script>
+
+    <script src="{{ 'developer.js' | asset_url }}" defer="defer"></script>
+
+    <!------------------------------------------>
+    <!------------------------------------------>
+    <!------------------------------------------>
   </body>
 </html>
