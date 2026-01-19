@@ -526,6 +526,49 @@ a.pre_footer_list-menu__item {
         </div>
 	</div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.querySelectorAll(".share-btn").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const type = this.dataset.type;
+      let shareUrl = "";
+
+      if (type === "facebook") {
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+      }
+      if (type === "instagram") {
+        alert("Instagram sharing works via app only.");
+        return;
+      }
+      if (type === "linkedin") {
+        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}`;
+      }
+      if (type === "whatsapp") {
+        shareUrl = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+      }
+
+      window.open(shareUrl, "_blank", "width=600,height=500");
+    });
+  });
+
+  const copyBtn = document.getElementById("copyLinkBtn");
+  const copyMsg = document.getElementById("copyMsg");
+
+  copyBtn.addEventListener("click", function () {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      copyMsg.style.display = "block";
+      setTimeout(() => copyMsg.style.display = "none", 2000);
+    });
+  });
+});
+</script>
+
+
 {% schema %}
 {
   "name": "Pre Footer",
