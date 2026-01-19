@@ -1174,7 +1174,7 @@ button.send-btn.otp-btn {
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
     text-decoration-thickness: 1px!important;
-    font-weight: 400!important;
+    font-weight: 500!important;
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text {
@@ -1182,6 +1182,7 @@ button.send-btn.otp-btn {
     color: #949598;
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
+    font-weight: 500!important;
 }
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
