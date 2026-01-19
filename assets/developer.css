@@ -1344,46 +1344,45 @@ button.send-btn.otp-btn {
   padding-left: 15px !important;
   text-align: left;
 
-  /* FULL 1px BORDER BOXES */
-  background:
-    /* top border */
+ background:
+    /* TOP */
     repeating-linear-gradient(
       to right,
-      #d0d0d0 0,
-      #d0d0d0 40px,
+      #cfcfcf 0,
+      #cfcfcf 40px,
       transparent 40px,
       transparent 52px
     ),
-    /* bottom border */
+    /* BOTTOM */
     repeating-linear-gradient(
       to right,
-      #d0d0d0 0,
-      #d0d0d0 40px,
+      #cfcfcf 0,
+      #cfcfcf 40px,
       transparent 40px,
       transparent 52px
     ),
-    /* left & right borders */
+    /* LEFT + RIGHT */
     repeating-linear-gradient(
       to right,
-      #d0d0d0 0,
-      #d0d0d0 1px,
+      #cfcfcf 0,
+      #cfcfcf 1px,
       transparent 1px,
       transparent 40px,
-      #d0d0d0 40px,
-      #d0d0d0 41px,
+      #cfcfcf 40px,
+      #cfcfcf 41px,
       transparent 41px,
       transparent 52px
     ) !important;
 
   background-size:
-    52px 1px,  
-    52px 1px,  
-    52px 40px!important;  
+    52px 1px,
+    52px 1px,
+    52px 40px !important;
 
   background-position:
-    left top,
-    left bottom,
-    left center;
+    left 0,
+    left calc(100% - 1px),
+    left 0 !important;
 
   background-repeat: repeat-x !important;
 
