@@ -141,7 +141,7 @@ document.fonts.ready.then(() => {
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth) / 2,
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
       anticipatePin: 1
