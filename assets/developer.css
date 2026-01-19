@@ -1381,6 +1381,11 @@ button.send-btn.otp-btn {
     margin-bottom: 8px;
     color: #000000;
 }
+.simply-otp-wrapper .olWrapper .ol .update-user-box .input-box-content input,
+ .sotp-widget .olWrapper .ol .update-user-box .input-box-content input {
+    border: 1px solid #E8E8E8!important;
+    height: 36px;
+}
 .simply-otp-wrapper .olWrapper .ol .update-user-box .input-box-content, 
 .sotp-widget .olWrapper .ol .update-user-box .input-box-content {
     border: unset!important;
