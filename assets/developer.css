@@ -1320,15 +1320,76 @@ button.send-btn.otp-btn {
     letter-spacing: 42px !important;
     padding: 0 0 0 15px !important;
     text-align: left;
-    background: repeating-linear-gradient(to right,#ccc 0,#ccc 40px,transparent 40px,transparent 52px)!important;
+    /* background: repeating-linear-gradient(to right,#ccc 0,#ccc 40px,transparent 40px,transparent 52px)!important;
     background-size: 52px 52px !important;
     background-position: 0 100%!important;
-    background-repeat: repeat-x!important;
+    background-repeat: repeat-x!important; */
     caret-color: transparent!important;
     position: relative!important;
     left: unset!important;
     transform: unset!important;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
+.sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
+
+  width: 300px !important;
+  height: 40px !important;
+
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+
+  font-size: 18px !important;
+  letter-spacing: 42px !important;
+  padding-left: 15px !important;
+  text-align: left;
+
+  /* FULL 1px BORDER BOXES */
+  background:
+    /* top border */
+    repeating-linear-gradient(
+      to right,
+      #d0d0d0 0,
+      #d0d0d0 40px,
+      transparent 40px,
+      transparent 52px
+    ),
+    /* bottom border */
+    repeating-linear-gradient(
+      to right,
+      #d0d0d0 0,
+      #d0d0d0 40px,
+      transparent 40px,
+      transparent 52px
+    ),
+    /* left & right borders */
+    repeating-linear-gradient(
+      to right,
+      #d0d0d0 0,
+      #d0d0d0 1px,
+      transparent 1px,
+      transparent 40px,
+      #d0d0d0 40px,
+      #d0d0d0 41px,
+      transparent 41px,
+      transparent 52px
+    ) !important;
+
+  background-size:
+    52px 1px,   /* top */
+    52px 1px,   /* bottom */
+    52px 40px;  /* sides */
+
+  background-position:
+    left top,
+    left bottom,
+    left center;
+
+  background-repeat: repeat-x !important;
+
+  caret-color: transparent !important;
+}
+
 .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
