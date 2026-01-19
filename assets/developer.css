@@ -1269,7 +1269,7 @@ button.send-btn.otp-btn {
     height: 16px;
     width: 16px;
 }
-/* .section-customer_register,
+.section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
     display: flex;
@@ -1302,7 +1302,7 @@ img.account_head_logo {
     letter-spacing: -0.9px;
     vertical-align: middle;
     margin: 0px 0px 10px;
-} */
+} 
 .account_head_info p {
     font-weight: 400;
     font-size: 14px;
