@@ -1411,6 +1411,16 @@ span.error-message-phone, .error-message {
     width: 8px!important;
     margin-left: 4px;
 }
+.simply-otp-wrapper .update-user-box .update-checkbox-wrapper .checkbox-main-label, .sotp-widget .update-user-box .update-checkbox-wrapper .checkbox-main-label {
+    width: calc(100% - 30px);
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -0.3px;
+    vertical-align: middle;
+    color: #949598;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
