@@ -25,12 +25,12 @@ body{
     background: #FFF;
 }
 .desktop_menu_linklist {
-    background: #F9F9F9;
+    background: var(--grey);
     padding: 6px 10px 6px 24px;
     border-radius: 100px;
 }
 .desktop_menu_linklist {
-    background: #F9F9F9;
+    background: var(--grey);
     padding: 6px 10px 6px 24px;
     border-radius: 100px;
     display: flex;
@@ -547,7 +547,7 @@ a.go_btn {
     gap: 10px;
 }
 .project_progress_left {
-    background: #F9F9F9;
+    background: var(--grey);
     border-radius: 16px;
     padding: 30px 32px;
 }
@@ -878,7 +878,7 @@ p.goal_info span{
     gap: 16px;
 }
 .tier_box {
-    background: #F9F9F9;
+    background: var(--grey);
     border-radius: 20px;
     padding: 30px;
 }
@@ -1042,7 +1042,7 @@ p.goal_info span{
 
 
 .tier_benefits_inner {
-    background: #F9F9F9;
+    background: var(--grey);
     border-radius: 20px;
     padding: 30px 30px 0px;
 }
@@ -1510,7 +1510,7 @@ img.account_head_logo {
 }
 .account_footer {
     border-top: 1px solid #EFEFEF;
-    background: #F9F9F9;
+    background: var(--grey);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -1687,7 +1687,7 @@ a.redirect_recover {
 }
 .edit_account_block {
     border: 1px solid #EFEFEF;
-    background: #F9F9F9;
+    background: var(--grey);
     padding: 36px 45px;
     border-radius: 16px;
 }
@@ -2479,7 +2479,7 @@ a.redirect_recover {
     }
     .edit_account_block {
         border: unset;
-        background: #f9f9f9;
+        background: var(--grey);
         padding: 15px 18px;
         border-radius: 0;
     }
