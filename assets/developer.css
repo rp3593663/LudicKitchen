@@ -1157,7 +1157,7 @@ button.send-btn.otp-btn {
     text-align: left;
     margin-bottom: 16px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: left;
     gap: 4px;
     flex-wrap: wrap;
@@ -1166,6 +1166,7 @@ button.send-btn.otp-btn {
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper,
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper {
     line-height: 15px!important;
+    height: 15px!important;
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
