@@ -1323,8 +1323,8 @@ button.send-btn.otp-btn {
     background: repeating-linear-gradient(
       to right,
       #ccc 0,
-      #ccc 40px,
-      transparent 40px,
+      #ccc 30px,
+      transparent 30px,
       transparent 40px
     )!important;
     background-size: 40px 40px!important;
