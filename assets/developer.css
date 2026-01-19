@@ -1771,6 +1771,11 @@ a.redirect_recover {
 input.edit_account_input.phone_input {
     padding-left: 40px;
 }
+.phone_edit_field svg {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
 .edit_account_field input,
 .edit_account_field select {
     width: 100%;
