@@ -1275,6 +1275,20 @@ button.send-btn.otp-btn {
     height: 16px;
     width: 16px;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .mn-container, 
+.sotp-widget .olWrapper .ol .verify-box .mn-container {
+    justify-content: left!important;
+    margin-bottom: 20px!important;
+}
+.simply-otp-wrapper .olWrapper .ol .verify-box .mn-container p, 
+.sotp-widget .olWrapper .ol .verify-box .mn-container p {
+    margin: 0 4px 0 0!important;
+    color: #949598;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+}
 .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
