@@ -1932,8 +1932,8 @@ a.redirect_recover {
         display: none;
     }
     .desktop_menu_linklist {
-        padding: 4px 6px 4px 40px;
-        gap: 24px;
+        padding: 4px 6px 4px 26px;
+        gap: 20px;
     }
     .desktop_menu_linklist a:last-child {
         width: 48px;
