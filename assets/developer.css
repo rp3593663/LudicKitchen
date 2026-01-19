@@ -1940,7 +1940,7 @@ a.redirect_recover {
         gap: 20px;
     }
     .desktop_menu_linklist a.header_account {
-        width: 48px;
+        width: 48px!important;
     }
     .desktop_menu_linklist a:last-child {
         width: 78px;
