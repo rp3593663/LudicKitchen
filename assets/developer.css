@@ -1318,7 +1318,7 @@ button.send-btn.otp-btn {
     outline: none;
     font-size: 15px !important;
     font-family: inter;
-    letter-spacing: 44px !important;
+    letter-spacing: 43px !important;
     padding: 0 0 0 15px !important;
     text-align: left;
     background: repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 40px, transparent 40px, transparent 52px),
