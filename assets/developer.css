@@ -2252,6 +2252,7 @@ a.redirect_recover {
     .sotp-widget .olWrapper .ol{
         padding: 28px!important;
         min-width: unset!important;
+        width: calc(100% - 32px) !important;
     }
     .section-customer_account .page-width {
         padding: 0px;
