@@ -1424,6 +1424,9 @@ span.error-message-phone, .error-message {
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
 }
+.loader-innerDiv {
+    display: none!important;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
