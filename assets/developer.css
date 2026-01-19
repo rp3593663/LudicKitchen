@@ -1131,15 +1131,14 @@ div#sotp-widget-loader {
     justify-content: center;
 }
 .simply-otp-wrapper .olWrapper .ol, .sotp-widget .olWrapper .ol {
-    color: #000;
-    position: relative;
+    position: relative!important;
     background: var(--white);
     border: 1px solid #EDEDED;
     box-shadow: 0px 15px 35px 0px #00000029;
     max-width: 398px!important;
     width: 100%;
-    border-radius: 12px;
-    padding: 28px 38px;
+    border-radius: 12px!important;
+    padding: 28px 38px!important;
 }
 /* .section-customer_register,
 .section-customer_login{
