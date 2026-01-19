@@ -1133,6 +1133,21 @@ div#sotp-widget-loader {
 .login-box.step-box-wrapper {
     display: grid;
 }
+h3.login-header {
+    order: 0;
+}
+p.login-description {
+    order: 1;
+}
+.login-inputBox {
+    order: 2;
+}
+button.send-btn.otp-btn {
+    order: 4;
+}
+.sotp-consent-wrapper {
+    order: 3;
+}
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
     position: relative!important;
