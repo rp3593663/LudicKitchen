@@ -372,9 +372,11 @@ h3.project_title {
 }
 a.go_btn {
     margin-top: 30px;
-    display: block;
+    display: flex;
     padding: 14px 26px;
     text-align: left;
+    align-items: center;
+    justify-content: space-between;
 }
 .raised_progress_bar {
     display: grid;
