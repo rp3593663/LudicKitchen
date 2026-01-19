@@ -129,13 +129,11 @@ document.fonts.ready.then(() => {
   const section = document.querySelector(".horizontal-section");
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
-  const arrow   = document.querySelector(".horizontal-words__arrow-end-svg");
 
   const split = new SplitText(title, { type: "chars" });
 
+  // Move title horizontally
   gsap.set(title, { xPercent: 100 });
-
-  let releaseScroll = null;
 
   const horizontalTween = gsap.to(title, {
     xPercent: -100,
@@ -143,34 +141,14 @@ document.fonts.ready.then(() => {
     scrollTrigger: {
       trigger: section,
       start: "top top",
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
-      pinSpacing: true,
-      anticipatePin: 1,
-
-      end: () => {
-        // calculate dynamically
-        return releaseScroll || "+=" + (window.innerWidth + title.scrollWidth);
-      },
-
-      onUpdate(self) {
-        if (releaseScroll) return;
-
-        const arrowRect = arrow.getBoundingClientRect();
-        const arrowCenter = arrowRect.left + arrowRect.width / 2;
-        const viewportCenter = window.innerWidth / 2;
-
-        // ⭐ Detect arrow reaching center
-        if (arrowCenter >= viewportCenter) {
-          releaseScroll = self.scroll(); // lock end here
-          self.end = releaseScroll;
-          self.refresh();
-        }
-      }
+      anticipatePin: 1
     }
   });
 
-  // ✨ Letter animation
+  // ✨ Letter animation (already working)
   split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
@@ -186,12 +164,14 @@ document.fonts.ready.then(() => {
     });
   });
 
-  // 👉 Arrow draw animation
+  // 👉 ARROW SVG DRAW ANIMATION
   const arrowPaths = document.querySelectorAll(
     ".horizontal-words__arrow-end-svg path"
   );
 
-  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
+  gsap.set(arrowPaths, {
+    drawSVG: "0% 0%"
+  });
 
   gsap.to(arrowPaths, {
     drawSVG: "0% 100%",
@@ -206,10 +186,8 @@ document.fonts.ready.then(() => {
   });
 
 });
+
 </script>
-
-
-
 
 {% schema %}
 {
