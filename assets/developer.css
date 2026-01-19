@@ -1130,7 +1130,8 @@ div#sotp-widget-loader {
     align-items: center;
     justify-content: center;
 }
-.simply-otp-wrapper .olWrapper .ol, .sotp-widget .olWrapper .ol {
+.simply-otp-wrapper .olWrapper .ol, 
+.sotp-widget .olWrapper .ol {
     position: relative!important;
     background: var(--white);
     border: 1px solid #EDEDED;
@@ -1139,6 +1140,11 @@ div#sotp-widget-loader {
     width: 100%;
     border-radius: 12px!important;
     padding: 28px 38px!important;
+}
+.simply-otp-wrapper .olWrapper .ol .login-img, 
+.sotp-widget .olWrapper .ol .login-img {
+    width: 62px!important;
+    margin: 0 0 32px!important;
 }
 /* .section-customer_register,
 .section-customer_login{
