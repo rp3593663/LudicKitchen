@@ -1153,7 +1153,7 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper {
-    margin-top: 0px;
+    margin-top: 0px!important;
     text-align: left;
     margin-bottom: 16px;
     display: flex;
