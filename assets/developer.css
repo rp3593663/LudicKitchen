@@ -1146,6 +1146,16 @@ div#sotp-widget-loader {
     width: 62px!important;
     margin: 0 0 32px!important;
 }
+.simply-otp-wrapper .olWrapper .ol .login-header, 
+.sotp-widget .olWrapper .ol .login-header {
+    text-align: left!important;
+    min-height: unset!important;
+    font-weight: 700!important;
+    font-size: 18px!important;
+    line-height: 18px!important;
+    letter-spacing: -0.9px!important;
+    margin: 0px 0px 10px!important;
+}
 /* .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
@@ -1163,7 +1173,7 @@ div#sotp-widget-loader {
 }
 .account_box .customer{
     padding: 28px 38px;
-} */
+}
 img.account_head_logo {
     width: 62px;
     height: auto;
@@ -1179,7 +1189,7 @@ img.account_head_logo {
     letter-spacing: -0.9px;
     vertical-align: middle;
     margin: 0px 0px 10px;
-}
+} */
 .account_head_info p {
     font-weight: 400;
     font-size: 14px;
