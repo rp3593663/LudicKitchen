@@ -1169,9 +1169,9 @@ button.send-btn.otp-btn {
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
     color: #949598!important;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: -0.3px;
+    font-size: 11px!important;
+    line-height: 15px!important;
+    letter-spacing: -0.3px!important;
     text-decoration-thickness: 1px!important;
     font-weight: 400!important;
 }
