@@ -2521,7 +2521,8 @@ input.edit_account_input.phone_input {
     .upload-btn,
     .avatar-actions_info small,
     .edit_account_field input, 
-    .edit_account_field select {
+    .edit_account_field select,
+    .phone_edit_field span {
         font-size: 12px;
         line-height: 12px;
         letter-spacing: -.36px;
