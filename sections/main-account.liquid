@@ -557,6 +557,12 @@ async function submitProfile() {
 
   const formData = new FormData(form);
 
+  const phoneInput = form.querySelector('[name="phone"]');
+  if (phoneInput) {
+    const rawPhone = phoneInput.value.trim(); // 10 digits from UI
+    formData.set("phone", "+91" + rawPhone);
+  }
+
   // IMAGE LOGIC
   if (removeImage) {
     // Tell backend to remove image
