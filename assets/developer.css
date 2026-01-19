@@ -1313,7 +1313,7 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6, .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
     width: 300px!important;
-    height: 48px!important;
+    height: 40px!important;
     border: none;
     outline: none;
     font-size: 18px!important;
@@ -1325,9 +1325,9 @@ button.send-btn.otp-btn {
       #ccc 0,
       #ccc 40px,
       transparent 40px,
-      transparent 48px
+      transparent 40px
     )!important;
-    background-size: 48px 48px!important;
+    background-size: 40px 40px!important;
     background-position: 0 100%!important;
     background-repeat: repeat-x!important;
     caret-color: transparent!important;
