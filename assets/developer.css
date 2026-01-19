@@ -1202,7 +1202,7 @@ div#sotp-widget-loader {
     cursor: pointer!important;
     text-align: center!important;
     padding: 10px 48px!important;
-    font-weight: 600!important;
+    font-weight: 500!important;
     background: var(--primary_color)!important;
     color: var(--white)!important;
     font-family: var(--font-family)!important;
