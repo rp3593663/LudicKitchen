@@ -1400,7 +1400,7 @@ button.send-btn.otp-btn {
 .sotp-widget .olWrapper .ol .update-user-box .input-box-content.mobile-no-inner input {
     border: unset!important;
 }
-span.error-message-phone {
+span.error-message-phone, .error-message {
     font-size: 12px;
     letter-spacing: -0.2px;
     font-weight: 500;
