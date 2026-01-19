@@ -1302,7 +1302,6 @@ button.send-btn.otp-btn {
 .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content, 
 .sotp-widget .olWrapper .ol .verify-box .verify-content {
     margin: 0px 0 16px!important;
-    padding-top: 0!important;
 }
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content:after, 
 .sotp-widget .olWrapper .ol .verify-box .verify-content:after,
