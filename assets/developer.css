@@ -1311,24 +1311,37 @@ button.send-btn.otp-btn {
     display: none!important;
     content: unset!important;
 }
-.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6, .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
-    width: 300px!important;
-    height: 40px!important;
-    border: none;
-    outline: none;
-    font-size: 18px!important;
-    letter-spacing: 48px !important;
-    padding: 0 18px !important;
-    text-align: left;
-    background: repeating-linear-gradient(to right,#ccc 0,#ccc 40px,transparent 40px,transparent 52px)!important;
-    background-size: 52px 52px !important;
-    background-position: 0 100%!important;
-    background-repeat: repeat-x!important;
-    caret-color: transparent!important;
-    position: relative!important;
-    left: unset!important;
-    transform: unset!important;
+.verify-content .otp-input-main {
+  width: 312px;                 /* 6 × 44px + gaps */
+  height: 44px;
+
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+
+  /* text */
+  font-size: 18px !important;
+  letter-spacing: 34px !important;   /* EXACT spacing */
+  padding-left: 14px !important;
+  text-align: left;
+
+  /* fake boxes */
+  background:
+    repeating-linear-gradient(
+      to right,
+      #d9d9d9 0,
+      #d9d9d9 44px,
+      transparent 44px,
+      transparent 52px
+    ) !important;
+
+  background-size: 52px 44px !important;
+  background-repeat: repeat-x !important;
+  background-position: left bottom !important;
+
+  caret-color: transparent !important;
 }
+
 .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
