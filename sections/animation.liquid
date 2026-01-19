@@ -129,26 +129,39 @@ document.fonts.ready.then(() => {
   const section = document.querySelector(".horizontal-section");
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
+  const arrow   = document.querySelector(".horizontal-words__arrow-end-svg");
 
   const split = new SplitText(title, { type: "chars" });
 
-  // Move title horizontally
+  // Initial position
   gsap.set(title, { xPercent: 100 });
 
+  // 🔹 Calculate scroll end when arrow reaches center
+  function getScrollEnd() {
+    const titleWidth = title.scrollWidth;
+    const arrowRect = arrow.getBoundingClientRect();
+    const arrowCenter = arrowRect.left + arrowRect.width / 2;
+    const viewportCenter = window.innerWidth / 2;
+
+    return titleWidth - (viewportCenter - arrowCenter);
+  }
+
+  // 🔹 Horizontal scroll + pin (ENDS at arrow center)
   const horizontalTween = gsap.to(title, {
-    xPercent: -100,
+    x: () => -getScrollEnd(),
     ease: "none",
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
+      end: () => "+=" + getScrollEnd(),
       scrub: true,
       pin: wrapper,
+      pinSpacing: true,
       anticipatePin: 1
     }
   });
 
-  // ✨ Letter animation (already working)
+  // ✨ Letter animation
   split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
@@ -164,14 +177,12 @@ document.fonts.ready.then(() => {
     });
   });
 
-  // 👉 ARROW SVG DRAW ANIMATION
+  // 👉 Arrow SVG draw animation
   const arrowPaths = document.querySelectorAll(
     ".horizontal-words__arrow-end-svg path"
   );
 
-  gsap.set(arrowPaths, {
-    drawSVG: "0% 0%"
-  });
+  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
 
   gsap.to(arrowPaths, {
     drawSVG: "0% 100%",
@@ -185,9 +196,14 @@ document.fonts.ready.then(() => {
     }
   });
 
-});
+  // 🔁 Refresh on resize (important)
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
 
+});
 </script>
+
 
 {% schema %}
 {
