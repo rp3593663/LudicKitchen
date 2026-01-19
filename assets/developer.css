@@ -1352,6 +1352,10 @@ button.send-btn.otp-btn {
 .customFieldsBox {
     display: none;
 }
+.sotp-widget .olWrapper .ol .update-user-box .login-header {
+    margin-bottom: 32px!important;
+    position: relative;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
