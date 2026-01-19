@@ -1381,7 +1381,7 @@ button.send-btn.otp-btn {
 
   background-position:
     left 0,
-    left calc(100% - 1px),
+    left calc(100% - 0px),
     left 0 !important;
 
   background-repeat: repeat-x !important;
