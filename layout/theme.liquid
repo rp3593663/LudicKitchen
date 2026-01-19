@@ -419,20 +419,19 @@
       </svg>
     </script>
 
+    <!-- OTP Login App Code -->
     <script>
       setTimeout(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const returnUrl = urlParams.get('return_url');
-        console.log(returnUrl,"returnUrl");
-        console.log(window.simplyOtp,"window.simplyOtp")
         // Override pageUrl if return_url exists
         if (returnUrl && window.simplyOtp && window.simplyOtp.settings) {
-
+          console.log("window.simplyOtp Exists;")
           window.simplyOtp.settings.pageUrl = returnUrl;
-          console.log('pageUrl overridden to:', returnUrl);
         }
       }, 2500);
     </script>
+    <!-- OTP Login App Code End -->
 
     <script src="{{ 'developer.js' | asset_url }}" defer="defer"></script>
 
