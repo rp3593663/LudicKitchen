@@ -1166,6 +1166,13 @@ button.send-btn.otp-btn {
     vertical-align: middle;
     color: #949598;
 }
+.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
+.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
+    color: #949598;
+    font-size: 11px;
+    text-decoration-thickness: 1px;
+    font-weight: 500;
+}
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
     position: relative!important;
