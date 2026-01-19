@@ -1727,6 +1727,7 @@ a.redirect_recover {
     display: grid;
     width: 100%;
     gap: 8px;
+    position: relative;
 }
 .form_submit_wrap {
     grid-column: span 2;
