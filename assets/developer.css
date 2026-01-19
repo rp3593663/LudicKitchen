@@ -1332,6 +1332,15 @@ button.send-btn.otp-btn {
     left: unset!important;
     transform: unset!important;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .resend-otp p, 
+.sotp-widget .olWrapper .ol .verify-box .resend-otp p {
+    color: #949598!important;
+    margin: 12px 0 0px!important;
+    font-weight: 400;
+    font-size: 14px!important;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
