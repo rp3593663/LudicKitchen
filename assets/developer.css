@@ -1341,6 +1341,14 @@ button.send-btn.otp-btn {
     line-height: 14px;
     letter-spacing: -0.42px;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .resend-otp .resend-btn, .sotp-widget .olWrapper .ol .verify-box .resend-otp .resend-btn {
+    color: #2343c8;
+    font-size: 14px!important;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    text-decoration: unset!important;
+    cursor: pointer;
+}
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
