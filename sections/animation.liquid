@@ -135,27 +135,36 @@ document.fonts.ready.then(() => {
 
   gsap.set(title, { xPercent: 100 });
 
-  // 🔹 Horizontal scroll + pin
+  let releaseScroll = null;
+
   const horizontalTween = gsap.to(title, {
     xPercent: -100,
     ease: "none",
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
+      pinSpacing: true,
       anticipatePin: 1,
 
-      // ⭐ FORCE UNPIN WHEN ARROW HITS CENTER
+      end: () => {
+        // calculate dynamically
+        return releaseScroll || "+=" + (window.innerWidth + title.scrollWidth);
+      },
+
       onUpdate(self) {
+        if (releaseScroll) return;
+
         const arrowRect = arrow.getBoundingClientRect();
         const arrowCenter = arrowRect.left + arrowRect.width / 2;
         const viewportCenter = window.innerWidth / 2;
 
+        // ⭐ Detect arrow reaching center
         if (arrowCenter >= viewportCenter) {
-          self.kill();                  // remove ScrollTrigger
-          gsap.set(wrapper, { clearProps: "all" }); // remove pin styles
+          releaseScroll = self.scroll(); // lock end here
+          self.end = releaseScroll;
+          self.refresh();
         }
       }
     }
@@ -177,7 +186,7 @@ document.fonts.ready.then(() => {
     });
   });
 
-  // 👉 Arrow SVG draw animation
+  // 👉 Arrow draw animation
   const arrowPaths = document.querySelectorAll(
     ".horizontal-words__arrow-end-svg path"
   );
@@ -198,6 +207,7 @@ document.fonts.ready.then(() => {
 
 });
 </script>
+
 
 
 
