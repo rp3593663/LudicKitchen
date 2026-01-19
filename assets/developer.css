@@ -1299,6 +1299,10 @@ button.send-btn.otp-btn {
 .sotp-widget .olWrapper .ol .verify-box .mn-container svg path {
     fill: var(--primary_color)!important;
 }
+.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content, 
+.sotp-widget .olWrapper .ol .verify-box .verify-content {
+    justify-content: left!important;
+}
 .section-customer_register,
 .section-customer_login{
     min-height: 100dvh;
