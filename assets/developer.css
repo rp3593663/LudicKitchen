@@ -55,6 +55,7 @@ body{
     border-radius: 100px;
     color: var(--white);
 }
+
 .desktop_nav_menu {
     justify-content: end;
     display: flex;
@@ -1882,6 +1883,9 @@ a.redirect_recover {
     }
     .account_box {
         min-width: 398px;
+    }
+    .desktop_menu_linklist a:last-child svg{
+        display: none;
     }
 }
 
