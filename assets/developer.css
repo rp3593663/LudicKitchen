@@ -1376,9 +1376,9 @@ button.send-btn.otp-btn {
     ) !important;
 
   background-size:
-    52px 1px,   /* top */
-    52px 1px,   /* bottom */
-    52px 40px;  /* sides */
+    52px 1px,  
+    52px 1px,  
+    52px 40px!important;  
 
   background-position:
     left top,
