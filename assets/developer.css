@@ -1123,8 +1123,7 @@ p.goal_info span{
 /*---------- Login Register Page CSS ------------*/
 /*-----------------------------------------------*/
 
-.section-customer_register,
-.section-customer_login,
+
 div#sotp-widget-loader {
     min-height: 100dvh;
     display: flex;
@@ -1142,6 +1141,13 @@ div#sotp-widget-loader {
     border-radius: 12px;
     padding: 28px 38px;
 }
+/* .section-customer_register,
+.section-customer_login{
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .account_box {
     background: var(--white);
     border: 1px solid #EDEDED;
@@ -1152,7 +1158,7 @@ div#sotp-widget-loader {
 }
 .account_box .customer{
     padding: 28px 38px;
-}
+} */
 img.account_head_logo {
     width: 62px;
     height: auto;
