@@ -1932,8 +1932,11 @@ a.redirect_recover {
         gap: 24px;
     }
     .desktop_menu_linklist a:last-child {
-        width: 99px;
+        width: 48px;
         height: 26px;
+    }
+    .desktop_menu_linklist a span {
+        display: none;
     }
     .desktop_menu_linklist a {
         font-size: 11px;
