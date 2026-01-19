@@ -132,6 +132,7 @@
               </div>
               <div class="fields">
                 <div class="edit_account_field">
+                  <span>+91</span>
                   <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input" placeholder="phone">
                   <div class="field-error"></div>
                 </div>
@@ -495,21 +496,17 @@ form.addEventListener("submit", function(e){
     valid = false;
   }
 
-  // Phone +91XXXXXXXXXX
+  // Phone (10 digits only)
   const phoneInput = form.querySelector('[name="phone"]');
   if (phoneInput) {
-    let phone = phoneInput.value.trim();
+    const phone = phoneInput.value.trim();
 
-    if (/^[0-9]{10}$/.test(phone)) {
-      phone = "+91" + phone;
-      phoneInput.value = phone;
-    }
-
-    if (!/^\+91[0-9]{10}$/.test(phone)) {
-      showError(phoneInput, "Phone must be in format +91XXXXXXXXXX");
+    if (!/^[0-9]{10}$/.test(phone)) {
+      showError(phoneInput, "Phone must be 10 digits.");
       valid = false;
     }
   }
+
 
   // Age number
   const ageInput = form.querySelector('[name="age"]');
