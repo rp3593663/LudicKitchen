@@ -1979,8 +1979,10 @@ a.redirect_recover {
     }
     a.go_btn {
         margin-top: 18px;
-        display: block;
         padding: 12px 20px;
+    }
+    a.go_btn svg {
+        width: 6px;
     }
     .p_right_image img {
         width: 90%;
