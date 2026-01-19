@@ -1376,7 +1376,7 @@ button.send-btn.otp-btn {
 .simply-otp-wrapper .olWrapper .ol .update-user-box .input-box-content, 
 .sotp-widget .olWrapper .ol .update-user-box .input-box-content {
     border: unset!important;
-    display: block!important;
+    display: grid!important;
 }
 /* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
