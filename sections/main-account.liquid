@@ -149,17 +149,7 @@
                     </defs>
                   </svg>
                   <span>+91</span>
-                  <input
-                    name="phone"
-                    value="{{ customer.phone | remove: '+91' | strip }}"
-                    class="edit_account_input phone_input"
-                    placeholder="phone"
-                    type="tel"
-                    inputmode="numeric"
-                    pattern="[0-9]{10}"
-                    minlength="10"
-                    maxlength="10"
-                  >
+                  <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input phone_input" placeholder="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10">
                   <div class="field-error"></div>
                 </div>
               </div>
