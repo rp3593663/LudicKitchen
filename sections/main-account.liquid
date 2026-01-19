@@ -507,7 +507,6 @@ form.addEventListener("submit", function(e){
     }
   }
 
-
   // Age number
   const ageInput = form.querySelector('[name="age"]');
   if (ageInput && isNaN(ageInput.value)) {
@@ -637,16 +636,10 @@ function clearErrorIfValid(input) {
   }
 
   // Phone
-  if (name === "phone") {
-    let phone = value;
-    if (/^[0-9]{10}$/.test(phone)) {
-      phone = "+91" + phone;
-      input.value = phone;
-    }
-    if (!/^\+91[0-9]{10}$/.test(phone)) {
-      isValid = false;
-    }
+  if (name === "phone" && value !== "" && !/^[0-9]{10}$/.test(value)) {
+    isValid = false;
   }
+
 
   // Age
   if (name === "age" && value !== "" && isNaN(value)) {
