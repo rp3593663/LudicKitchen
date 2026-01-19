@@ -1320,16 +1320,18 @@ button.send-btn.otp-btn {
     letter-spacing: 42px !important;
     padding: 0 0 0 15px !important;
     text-align: left;
-    /* background: repeating-linear-gradient(to right,#ccc 0,#ccc 40px,transparent 40px,transparent 52px)!important;
-    background-size: 52px 52px !important;
-    background-position: 0 100%!important;
-    background-repeat: repeat-x!important; */
-    caret-color: transparent!important;
+    background: repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 40px, transparent 40px, transparent 52px),
+    repeating-linear-gradient(to right, #cfcfcf 0, #cfcfcf 40px,transparent 40px, transparent 52px),
+    repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 1px, transparent 1px, transparent 40px, #cfcfcf 40px,  #cfcfcf 41px, transparent 41px, transparent 52px) !important;
+    background-size: 52px 1px, 52px 1px,52px 40px !important;
+    background-position: left 0, left calc(100% - 0px), left 0 !important;
+    background-repeat: repeat-x !important;
+    caret-color: transparent !important;
     position: relative!important;
     left: unset!important;
     transform: unset!important;
 }
-.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
+/* .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content .otp-input.otp6,
 .sotp-widget .olWrapper .ol .verify-box .verify-content .otp-input.otp6 {
 
   width: 300px !important;
@@ -1344,50 +1346,14 @@ button.send-btn.otp-btn {
   padding-left: 15px !important;
   text-align: left;
 
- background:
-    /* TOP */
-    repeating-linear-gradient(
-      to right,
-      #cfcfcf 0,
-      #cfcfcf 40px,
-      transparent 40px,
-      transparent 52px
-    ),
-    /* BOTTOM */
-    repeating-linear-gradient(
-      to right,
-      #cfcfcf 0,
-      #cfcfcf 40px,
-      transparent 40px,
-      transparent 52px
-    ),
-    /* LEFT + RIGHT */
-    repeating-linear-gradient(
-      to right,
-      #cfcfcf 0,
-      #cfcfcf 1px,
-      transparent 1px,
-      transparent 40px,
-      #cfcfcf 40px,
-      #cfcfcf 41px,
-      transparent 41px,
-      transparent 52px
-    ) !important;
-
-  background-size:
-    52px 1px,
-    52px 1px,
-    52px 40px !important;
-
-  background-position:
-    left 0,
-    left calc(100% - 0px),
-    left 0 !important;
-
+ background: repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 40px, transparent 40px, transparent 52px),
+    repeating-linear-gradient(to right, #cfcfcf 0, #cfcfcf 40px,transparent 40px, transparent 52px),
+    repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 1px, transparent 1px, transparent 40px, #cfcfcf 40px,  #cfcfcf 41px, transparent 41px, transparent 52px) !important;
+  background-size: 52px 1px, 52px 1px,52px 40px !important;
+  background-position: left 0, left calc(100% - 0px), left 0 !important;
   background-repeat: repeat-x !important;
-
   caret-color: transparent !important;
-}
+} */
 
 .section-customer_register,
 .section-customer_login{
