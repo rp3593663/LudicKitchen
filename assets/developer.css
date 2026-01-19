@@ -1767,6 +1767,9 @@ a.redirect_recover {
     font-weight: 600;
     line-height: 12px;
 }
+input.edit_account_input.phone_input {
+    padding-left: 40px;
+}
 .edit_account_field input,
 .edit_account_field select {
     width: 100%;
