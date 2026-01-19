@@ -1305,8 +1305,8 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .verify-content:after, 
 .sotp-widget .olWrapper .ol .verify-box .verify-content:after,
-.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content:after, 
-.sotp-widget .olWrapper .ol .verify-box .verify-content:after{
+.simply-otp-wrapper .olWrapper .ol .verify-box .verify-content:before, 
+.sotp-widget .olWrapper .ol .verify-box .verify-content:before{
     display: none!important;
     content: unset!important;
 }
