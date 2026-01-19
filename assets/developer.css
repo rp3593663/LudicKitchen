@@ -1349,9 +1349,7 @@ button.send-btn.otp-btn {
     text-decoration: unset!important;
     cursor: pointer;
 }
-.customFieldsBox {
-    display: none;
-}
+
 .sotp-widget .olWrapper .ol .update-user-box .login-header {
     margin-bottom: 32px!important;
     position: relative;
@@ -1424,7 +1422,11 @@ span.error-message-phone, .error-message {
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
 }
-/* .loader-innerDiv {
+/* 
+.customFieldsBox {
+    display: none;
+}
+.loader-innerDiv {
     display: none!important;
 }
 .toast-box-wrapper {
