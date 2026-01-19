@@ -1165,7 +1165,7 @@ div#sotp-widget-loader {
     letter-spacing: -0.42px!important;
     text-align: left!important;
     color: #949598!important;
-    margin: 0px!important;
+    margin: 0 0 32px!important;
 }
 /* .section-customer_register,
 .section-customer_login{
