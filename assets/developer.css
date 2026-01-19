@@ -1125,7 +1125,7 @@ p.goal_info span{
 
 
 div#sotp-widget-loader {
-    min-height: 100dvh;
+    min-height: 100dvh!important;
     display: flex;
     align-items: center;
     justify-content: center;
