@@ -1380,6 +1380,7 @@ button.send-btn.otp-btn {
     vertical-align: middle;
     margin-bottom: 8px;
     color: #000000;
+    transform: unset !important;
 }
 .simply-otp-wrapper .olWrapper .ol .update-user-box .input-box-content input,
  .sotp-widget .olWrapper .ol .update-user-box .input-box-content input {
