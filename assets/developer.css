@@ -1773,8 +1773,18 @@ input.edit_account_input.phone_input {
 }
 .phone_edit_field svg {
     position: absolute;
-    top: 50px;
+    top: 13px;
     left: 15px;
+}
+.phone_edit_field span {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.39px;
+    color: #1a1a1a;
+    font-weight: 500;
+    position: absolute;
+    left: 45px;
+    top: 15px;
 }
 .edit_account_field input,
 .edit_account_field select {
