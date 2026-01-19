@@ -85,7 +85,7 @@ a#HeaderMenu-shop {
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.48px;
     text-decoration: unset;
     background: var(--primary_color);
     color: var(--white);
