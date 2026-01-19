@@ -424,5 +424,17 @@
     <!------------------------------------------>
     <!------------------------------------------>
     <!------------------------------------------>
+
+    <script>
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const returnUrl = urlParams.get('return_url');
+
+      // Override pageUrl if return_url exists
+      if (returnUrl && window.simplyOtp && window.simplyOtp.settings) {
+        window.simplyOtp.settings.pageUrl = returnUrl;
+        console.log('pageUrl overridden to:', returnUrl);
+      }
+    </script>
   </body>
 </html>
