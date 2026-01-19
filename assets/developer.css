@@ -1148,6 +1148,21 @@ button.send-btn.otp-btn {
 .sotp-consent-wrapper {
     order: 3;
 }
+.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper, 
+.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper {
+    margin-top: 0px;
+    text-align: left;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -0.3px;
+    vertical-align: middle;
+    color: #949598;
+}
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
     position: relative!important;
