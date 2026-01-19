@@ -129,11 +129,13 @@ document.fonts.ready.then(() => {
   const section = document.querySelector(".horizontal-section");
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
+  const arrow   = document.querySelector(".horizontal-words__arrow-end-svg");
 
   const split = new SplitText(title, { type: "chars" });
 
-  // Move title horizontally
   gsap.set(title, { xPercent: 100 });
+
+  let released = false;
 
   const horizontalTween = gsap.to(title, {
     xPercent: -100,
@@ -144,11 +146,27 @@ document.fonts.ready.then(() => {
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
-      anticipatePin: 1
+      pinSpacing: true,
+      anticipatePin: 1,
+
+      onUpdate(self) {
+        if (released) return;
+
+        const arrowRect = arrow.getBoundingClientRect();
+        const arrowCenter = arrowRect.left + arrowRect.width / 2;
+        const viewportCenter = window.innerWidth / 2;
+
+        // ✅ Release pin when arrow reaches center
+        if (arrowCenter >= viewportCenter) {
+          released = true;
+          self.end(self.scroll());
+          self.refresh();
+        }
+      }
     }
   });
 
-  // ✨ Letter animation (already working)
+  // ✨ Letter animation
   split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
@@ -164,14 +182,12 @@ document.fonts.ready.then(() => {
     });
   });
 
-  // 👉 ARROW SVG DRAW ANIMATION
+  // 👉 Arrow draw animation
   const arrowPaths = document.querySelectorAll(
     ".horizontal-words__arrow-end-svg path"
   );
 
-  gsap.set(arrowPaths, {
-    drawSVG: "0% 0%"
-  });
+  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
 
   gsap.to(arrowPaths, {
     drawSVG: "0% 100%",
@@ -186,8 +202,8 @@ document.fonts.ready.then(() => {
   });
 
 });
-
 </script>
+
 
 {% schema %}
 {
