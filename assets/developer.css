@@ -1297,7 +1297,7 @@ button.send-btn.otp-btn {
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .mn-container svg path, 
 .sotp-widget .olWrapper .ol .verify-box .mn-container svg path {
-    fill: var(--primary_color);
+    fill: var(--primary_color)!important;
 }
 .section-customer_register,
 .section-customer_login{
