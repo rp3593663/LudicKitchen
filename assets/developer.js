@@ -53,55 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  function initFlipbook() {
-
-    if (typeof jQuery === "undefined" || typeof jQuery.fn.flipBook === "undefined") {
-      setTimeout(initFlipbook, 200);
-      return;
-    }
-
-    const pages = [];
-
-    document.querySelectorAll(".flipbook-page").forEach(el => {
-      pages.push(el.getAttribute("href"));
-    });
-
-    if (!pages.length) return;
-
-    $("#product-flipbook").flipBook({
-      pages: pages,
-
-      // Size
-      width: 500,
-      height: 600,
-
-      // Enable 3D
-      webgl: true,
-
-      // ✅ CDN Three.js
-      threejs: "https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js",
-
-      // ❌ Disable sound (because CDN does not exist)
-      enableSound: false,
-
-      // UI
-      lightBox: false,
-      showPageNumber: true,
-      zoomRatio: 1.2,
-      showDownloadControl: false,
-      showPrintControl: false,
-      showBookmarkControl: false,
-      showShareControl: false
-    });
-
-  }
-
-  initFlipbook();
-});
-
-
 
 
 
