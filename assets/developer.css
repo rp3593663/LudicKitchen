@@ -1160,7 +1160,8 @@ button.otp-btn {
 .sotp-widget .update-user-box .update-checkbox-wrapper {
     order: 3;
 }
-.toast-box-wrapper{
+.toast-box-wrapper,
+.sotp-widget .update-user-box .button-wrapper{
     order: 4;
 }
 div#resend-otp {
