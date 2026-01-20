@@ -58,8 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!$flipbook.length) return;
 
-  $flipbook.turn({
-    display: 'single',     
+  $flipbook.turn({    
     autoCenter: true,
     acceleration: true,
     gradients: true,      
