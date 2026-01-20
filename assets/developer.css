@@ -1956,57 +1956,54 @@ input.edit_account_input.phone_input {
 /*---------- Product Page Gallery CSS ------------*/
 /*-----------------------------------------------*/
 
-.flipbook-wrapper {
+.single-flipbook-wrapper {
   position: relative;
   width: 100%;
-  perspective: 1600px;
+  max-width: 520px;
+  margin: auto;
 }
-.flipbook {
-  position: relative;
+
+#product-flipbook {
   width: 100%;
-  height: auto;
+  height: 720px;
 }
-.flip-page {
-  position: absolute;
-  inset: 0;
-  transform-origin: left center;
-  transform: rotateY(0deg);
-  transition: transform 0.8s ease, z-index 0.8s;
-  backface-visibility: hidden;
-  opacity: 0;
+
+#product-flipbook .page {
+  background: #fff;
 }
-.flip-page img {
+
+#product-flipbook img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: contain;
 }
-.flip-page.active {
-  opacity: 1;
-  z-index: 2;
-}
-.flip-page.flip-out {
-  transform: rotateY(-180deg);
-  z-index: 1;
-}
-.flip-page.flip-in {
-  transform: rotateY(0deg);
-}
-.flip-nav {
+
+/* Arrows */
+.flip-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: none;
   background: rgba(0,0,0,0.6);
   color: #fff;
+  border: none;
   font-size: 26px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
 }
-.flip-nav.prev { left: 10px; }
-.flip-nav.next { right: 10px; }
+
+.flip-btn.prev { left: -16px; }
+.flip-btn.next { right: -16px; }
+
+/* Mobile */
+@media(max-width: 768px) {
+  #product-flipbook {
+    height: 520px;
+  }
+}
+
 
 
 
