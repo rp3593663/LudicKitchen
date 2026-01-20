@@ -1221,7 +1221,7 @@ button.send-btn.otp-btn {
 .sotp-widget .olWrapper .ol .login-header {
     text-align: left!important;
     min-height: unset!important;
-    font-weight: 700!important;
+    font-weight: 600!important;
     font-size: 18px!important;
     line-height: 18px!important;
     letter-spacing: -0.9px!important;
