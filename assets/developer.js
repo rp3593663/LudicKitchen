@@ -59,11 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!$flipbook.length) return;
 
   $flipbook.turn({    
-    autoCenter: true,
-    acceleration: true,
-    gradients: true,      
-    elevation: 0,
-    duration: 900          
+    autoCenter: true,         
   });
 
   document.querySelector('.flip-btn.next')
