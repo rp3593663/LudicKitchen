@@ -54,27 +54,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
 
-  const flipEl = document.getElementById("product-flipbook");
-  if (!flipEl) return;
+  const el = document.getElementById("product-flipbook");
+  if (!el) return;
 
-  const images = document.querySelectorAll("#product-flipbook-images img");
-  if (!images.length) return;
+  const imgs = document.querySelectorAll("#product-flipbook-images img");
+  if (!imgs.length) {
+    console.warn("No product images found for flipbook");
+    return;
+  }
 
+  // Build simple array of URLs (IMPORTANT)
   let pages = [];
-
-  images.forEach(img => {
-    pages.push(img.src);
+  imgs.forEach(img => {
+    if (img.src && img.src.includes("http")) {
+      pages.push(img.src);
+    }
   });
 
-  $("#product-flipbook").flipBook({
-    source: pages,          // 👈 IMPORTANT
-    type: "image",          // 👈 IMPORTANT
+  console.log("Flipbook pages:", pages);
+
+  if (pages.length < 1) {
+    console.error("No valid images for flipbook");
+    return;
+  }
+
+  // Destroy if already initialized
+  if ($(el).data("df")) {
+    $(el).flipBook("destroy");
+  }
+
+  // Initialize DearFlip in IMAGE MODE
+  $(el).flipBook({
+    source: pages,      // MUST be array of strings
+    type: "image",      // FORCE image mode
 
     viewMode: "3d",
     pageMode: "double",
-    shadowOpacity: 0.4,
+
+    webgl: true,
+    singlePageMode: false,
 
     btnNext: true,
     btnPrev: true,
@@ -82,12 +103,11 @@ document.addEventListener("DOMContentLoaded", function() {
     btnZoomOut: true,
     btnFullscreen: true,
 
-    webgl: true,
-    singlePageMode: false,
-    autoPlay: false
+    height: 600
   });
 
 });
+
 
 
 
