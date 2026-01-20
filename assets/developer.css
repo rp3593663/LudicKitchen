@@ -1495,6 +1495,11 @@ span.error-message-phone, .error-message {
     border: 1px solid #EDEDED;
     background: #F2F2F2;
     border-radius: 0px 0px 12px 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    vertical-align: middle;
 }
 /* 
 .customFieldsBox {
