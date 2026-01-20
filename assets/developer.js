@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const $flipbook = $('#product-flipbook');
   if (!$flipbook.length) return;
-
   $flipbook.turn({
     display: 'single',
     page: 1,
@@ -76,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.querySelector('.flip-btn.next')
     .addEventListener('click', () => $flipbook.turn('next'));
-
   document.querySelector('.flip-btn.prev')
     .addEventListener('click', () => $flipbook.turn('previous'));
 });
