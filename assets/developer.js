@@ -57,8 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!$flipbook.length) return;
 
   $flipbook.turn({
-    width: 420,
-    height: 600,
     display: 'single',
     page: 1,
     autoCenter: true,
