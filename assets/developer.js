@@ -54,40 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
 
-  function initFlipbook() {
-    if (typeof jQuery === "undefined" || typeof jQuery.fn.flipBook === "undefined") {
-      setTimeout(initFlipbook, 200);
-      return;
-    }
-
-    const pages = [];
-
-    document.querySelectorAll(".flipbook-page").forEach(el => {
-      pages.push(el.getAttribute("href"));
-    });
-
-    if (!pages.length) return;
-
-    $("#product-flipbook").flipBook({
-      pages: pages,
-      height: 600,
-      width: 500,
-      lightBox: false,
-      webgl: true,
-      zoomRatio: 1.2,
-      showDownloadControl: false,
-      showPrintControl: false,
-      showBookmarkControl: false,
-      showShareControl: false,
-      showPageNumber: true
-    });
-  }
-
-  initFlipbook();
-
-});
 
 
 
