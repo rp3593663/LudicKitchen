@@ -59,12 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!$flipbook.length) return;
 
   $flipbook.turn({
-    display: 'single',      // ✅ ONE PAGE ONLY
+    display: 'single',     
     autoCenter: true,
-    acceleration: true,
-    gradients: true,        // page shadow
-    elevation: 80,
-    duration: 900           // flip speed (similar to FlipHTML5)
+    acceleration: false,         
   });
 
   document.querySelector('.flip-btn.next')
