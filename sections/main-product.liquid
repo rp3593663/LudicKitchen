@@ -82,14 +82,12 @@
         {% if template == 'product.kitchen-pdp'  %}
 <div id="product-flipbook" class="_df_book" style="width:100%; height:600px;"></div>
 
-  <!-- Hidden product images -->
-  <div id="product-flipbook-images" style="display:none;">
-    {% for media in product.media %}
-      {% if media.media_type == 'image' %}
-        <img src="{{ media | image_url: width: 2000 }}">
-      {% endif %}
-    {% endfor %}
-  </div>
+<div id="product-flipbook-images" style="display:none;">
+  {% for media in product.media %}
+    {% if media.media_type == 'image' %}
+      <img src="{{ media | image_url: width: 2000 }}">
+    {% endif %}
+  {% endfor %}
         {%- endif -%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
