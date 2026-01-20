@@ -1501,6 +1501,11 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.42px;
     vertical-align: middle;
 }
+.help-support-box a {
+    text-decoration: unset;
+    color: var(--primary_color);
+    font-weight: 600;
+}
 /* 
 .customFieldsBox {
     display: none;
