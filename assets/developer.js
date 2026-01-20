@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   const $flipbook = $('#product-flipbook');
 
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector('.flip-btn.prev')
     .addEventListener('click', () => $flipbook.turn('previous'));
 });
-</script>
+
 
 
 
