@@ -1956,53 +1956,22 @@ input.edit_account_input.phone_input {
 /*---------- Product Page Gallery CSS ------------*/
 /*-----------------------------------------------*/
 
-.single-flipbook-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
+.dflip-container {
+  max-width: 520px;
   margin: auto;
 }
 
-#product-flipbook {
+#productFlipbook {
   width: 100%;
-  height: 474px;
+  height: 720px;
 }
 
-#product-flipbook .page {
-  background: #fff;
-}
-
-#product-flipbook img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Arrows */
-.flip-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.flip-btn.prev { left: -16px; }
-.flip-btn.next { right: -16px; }
-
-/* Mobile */
-@media(max-width: 768px) {
-  #product-flipbook {
+@media (max-width: 768px) {
+  #productFlipbook {
     height: 520px;
   }
 }
+
 
 
 
