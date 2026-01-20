@@ -1433,6 +1433,9 @@ span.error-message-phone, .error-message {
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
 }
+.toast-box-wrapper .toast-content{
+    border: unset!important
+}
 /* 
 .customFieldsBox {
     display: none;
