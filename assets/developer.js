@@ -53,6 +53,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+jQuery(function ($) {
+
+  $("#df_manual_book").flipBook({
+    source: "https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/examples/example-assets/books/intro.pdf",
+
+    // 🔥 SINGLE PAGE MODE
+    singlePageMode: true,
+    pageMode: "single",
+
+    // 🔥 UI SETTINGS
+    backgroundColor: "teal",
+    height: 500,
+
+    // 🔥 SHOW ONLY ARROWS
+    controlsPosition: "inside",
+    showControls: true,
+
+    // ❌ HIDE EVERYTHING ELSE
+    showThumbs: false,
+    showSearchControl: false,
+    showPrintControl: false,
+    showDownloadControl: false,
+    showZoomControl: false,
+    showShareControl: false,
+    showBookmarkControl: false,
+    showPageModeControl: false,
+    showFullscreenControl: false,
+
+    // 🔥 SMOOTH FLIP
+    duration: 700,
+    autoEnableOutline: false
+  });
+
+});
+
 
 
 
