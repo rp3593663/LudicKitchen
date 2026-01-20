@@ -56,33 +56,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  const pages = [];
+  function initFlipbook() {
+    if (typeof jQuery === "undefined" || typeof jQuery.fn.flipBook === "undefined") {
+      setTimeout(initFlipbook, 200);
+      return;
+    }
 
-  document.querySelectorAll(".flipbook-page").forEach(el => {
-    pages.push(el.getAttribute("href"));
-  });
+    const pages = [];
 
-  if (!pages.length) return;
+    document.querySelectorAll(".flipbook-page").forEach(el => {
+      pages.push(el.getAttribute("href"));
+    });
 
-  new DearFlip.DFLipBook(document.getElementById("product-flipbook"), {
-    height: 600,
-    width: 500,
-    pages: pages,
-    autoEnableOutline: false,
-    autoEnableThumbnail: false,
-    enableSound: false,
-    showDownloadControl: false,
-    showPrintControl: false,
-    showSearchControl: false,
-    showBookmarkControl: false,
-    showShareControl: false,
-    showFullscreenControl: true,
-    showPageNumber: true,
-    flipbook3D: true,
-    duration: 800
-  });
+    if (!pages.length) return;
+
+    $("#product-flipbook").flipBook({
+      pages: pages,
+      height: 600,
+      width: 500,
+      lightBox: false,
+      webgl: true,
+      zoomRatio: 1.2,
+      showDownloadControl: false,
+      showPrintControl: false,
+      showBookmarkControl: false,
+      showShareControl: false,
+      showPageNumber: true
+    });
+  }
+
+  initFlipbook();
 
 });
+
 
 
 
