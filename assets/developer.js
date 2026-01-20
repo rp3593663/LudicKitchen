@@ -66,36 +66,36 @@ document.addEventListener("DOMContentLoaded", function() {
     return;
   }
 
-  // Build simple array of URLs (IMPORTANT)
   let pages = [];
   imgs.forEach(img => {
-    if (img.src && img.src.includes("http")) {
+    if (img.src && img.src.startsWith("http")) {
       pages.push(img.src);
     }
   });
 
   console.log("Flipbook pages:", pages);
 
-  if (pages.length < 1) {
-    console.error("No valid images for flipbook");
-    return;
-  }
+  if (!pages.length) return;
 
-  // Destroy if already initialized
-  if ($(el).data("df")) {
+  // Destroy old instance if exists
+  try {
     $(el).flipBook("destroy");
-  }
+  } catch(e){}
 
-  // Initialize DearFlip in IMAGE MODE
+  // Init DearFlip
   $(el).flipBook({
-    source: pages,      // MUST be array of strings
-    type: "image",      // FORCE image mode
+    source: pages,
+    type: "image",
 
     viewMode: "3d",
     pageMode: "double",
 
     webgl: true,
-    singlePageMode: false,
+    threejs: THREE,     // ✅ VERY IMPORTANT: use CDN THREE
+
+    soundEnable: false, // ✅ Disable missing sound file
+
+    pdfjs: false,       // ✅ Disable PDF system
 
     btnNext: true,
     btnPrev: true,
