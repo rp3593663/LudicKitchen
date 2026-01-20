@@ -1965,7 +1965,10 @@ input.edit_account_input.phone_input {
   height: auto;
   display: block;
 }
-
+.product__media-list,
+.product__media-gallery {
+  display: none !important;
+}
 
 
 

@@ -109,18 +109,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (!window.jQuery || !jQuery.fn.flipBook) return;
 
-  $("#product-flipbook").flipBook({
-    pdf: false,
-    webgl: false,
-    height: 600,
-    pageMode: 2,
-    backgroundColor: "#fff",
-    showControls: true,
-    showNavigation: true
+  var pages = [];
+
+  document.querySelectorAll("#product-flipbook-images a").forEach(function(el){
+    pages.push({ src: el.href });
   });
+
+  if (pages.length <= 1) return; // No flip if only 1 image
+
+  $("#product-flipbook").dearFlip({
+    height: "100%",
+    width: "100%",
+    autoCenter: true,
+
+    pages: pages,
+
+    flipbook: {
+      pageMode: 2,
+      singlePageMode: false
+    },
+
+    controls: {
+      arrows: true,        // ✅ Prev / Next arrows
+      thumbnails: false,
+      fullscreen: true,
+      zoomIn: true,
+      zoomOut: true
+    }
+  });
+
 });
+
 
 
 
