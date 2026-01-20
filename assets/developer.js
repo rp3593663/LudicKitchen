@@ -37,3 +37,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const verifyBox = document.querySelector(".verify-box.step-box-wrapper");
+  if (!verifyBox) return;
+
+  // Avoid duplicate injection
+  if (document.querySelector(".help-support-box")) return;
+
+  const helpBox = document.createElement("div");
+  helpBox.className = "help-support-box";
+  helpBox.innerHTML = `
+    Facing any problem? <a href="/contact" target="_blank">Contact us</a>
+  `;
+
+  verifyBox.insertAdjacentElement("afterend", helpBox);
+});
+
+
+
+
