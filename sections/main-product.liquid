@@ -80,7 +80,8 @@
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
         {% if template == 'product.kitchen-pdp'  %}
-          <div id="df_manual_book" style="height:500px;"></div>
+          <div class="_df_book" height="500" webgl="true" source="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/examples/example-assets/books/intro.pdf"  id="df_manual_book">
+          </div>
         {%- endif -%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
