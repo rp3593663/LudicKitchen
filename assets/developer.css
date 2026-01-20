@@ -1440,8 +1440,8 @@ span.error-message-phone, .error-message {
     font-size: 12px!important;
     line-height: 12px!important;
     letter-spacing: -0.6px!important;
-    box-shadow: unset;
-    padding: 0px;
+    box-shadow: unset!important;
+    padding: 0px!important;
     text-align: center;
     justify-content: center!important;
 }
