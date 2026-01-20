@@ -1222,6 +1222,10 @@ div#resend-otp {
     border-radius: 12px!important;
     padding: 28px 38px 82px!important;
 }
+.simply-otp-wrapper .update-user-box .input-box-content .olInput:disabled, 
+.sotp-widget .update-user-box .input-box-content .olInput:disabled {
+    background: #f0f0f0 !important;
+}
 .simply-otp-wrapper .olWrapper .ol .login-img, 
 .sotp-widget .olWrapper .ol .login-img {
     width: 62px!important;
