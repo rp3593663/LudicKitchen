@@ -51,42 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const pages = document.querySelectorAll(".flip-page");
-  const nextBtn = document.querySelector(".flip-nav.next");
-  const prevBtn = document.querySelector(".flip-nav.prev");
+  const $flipbook = $('#product-flipbook');
 
-  if (!pages.length) return;
+  if (!$flipbook.length) return;
 
-  let current = 0;
-
-  function showPage(newIndex, direction) {
-    if (newIndex === current) return;
-
-    const currentPage = pages[current];
-    const nextPage = pages[newIndex];
-
-    // Flip out current
-    currentPage.classList.remove("active");
-    currentPage.classList.add("flip-out");
-
-    // Prepare next
-    nextPage.classList.remove("flip-out");
-    nextPage.classList.add("active");
-
-    current = newIndex;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    const newIndex = (current + 1) % pages.length;
-    showPage(newIndex, "next");
+  $flipbook.turn({
+    display: 'single',      // ✅ ONE PAGE ONLY
+    autoCenter: true,
+    acceleration: true,
+    gradients: true,        // page shadow
+    elevation: 80,
+    duration: 900           // flip speed (similar to FlipHTML5)
   });
 
-  prevBtn.addEventListener("click", () => {
-    const newIndex = (current - 1 + pages.length) % pages.length;
-    showPage(newIndex, "prev");
-  });
+  document.querySelector('.flip-btn.next')
+    .addEventListener('click', () => $flipbook.turn('next'));
+
+  document.querySelector('.flip-btn.prev')
+    .addEventListener('click', () => $flipbook.turn('previous'));
 });
+
+
 
 
 
