@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
     acceleration: true,
     gradients: true,      
     elevation: 80,
-    duration: 900        
+    duration: 900,
+    turnCorners: true      
   });
 
   document.querySelector('.flip-btn.next')
