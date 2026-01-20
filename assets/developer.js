@@ -55,16 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
 
   const el = document.getElementById("product-flipbook");
   if (!el) return;
 
   const imgs = document.querySelectorAll("#product-flipbook-images img");
-  if (!imgs.length) {
-    console.warn("No product images found for flipbook");
-    return;
-  }
+  if (!imgs.length) return;
 
   let pages = [];
   imgs.forEach(img => {
@@ -77,25 +75,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (!pages.length) return;
 
-  // Destroy old instance if exists
-  try {
-    $(el).flipBook("destroy");
-  } catch(e){}
+  // HARD KILL old instance
+  try { $(el).flipBook("destroy"); } catch(e){}
 
-  // Init DearFlip
+  // CRITICAL CONFIG
   $(el).flipBook({
     source: pages,
     type: "image",
 
+    // 3D settings
     viewMode: "3d",
     pageMode: "double",
-
     webgl: true,
-    threejs: THREE,     // ✅ VERY IMPORTANT: use CDN THREE
 
-    soundEnable: false, // ✅ Disable missing sound file
+    // IMPORTANT: tell DearFlip to NOT load its own libs
+    threejs: window.THREE,
+    pdfjs: false,
+    soundEnable: false,
 
-    pdfjs: false,       // ✅ Disable PDF system
+    // Prevent internal asset loading
+    assets: {
+      js: "",
+      sound: ""
+    },
 
     btnNext: true,
     btnPrev: true,
@@ -107,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
 
 
 
