@@ -1482,6 +1482,20 @@ span.error-message-phone, .error-message {
 .sotp-widget .toast-box-wrapper .toast-content {
     margin: 0px 0 16px!important;
 }
+.help-support-box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #EDEDED;
+    background: #F2F2F2;
+    border-radius: 0px 0px 12px 12px;
+}
 /* 
 .customFieldsBox {
     display: none;
