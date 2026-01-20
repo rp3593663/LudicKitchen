@@ -1152,13 +1152,16 @@ p.login-description {
     order: 2;
 }
 button.otp-btn {
-    order: 4;
+    order: 5;
 }
 .sotp-consent-wrapper {
     order: 3;
 }
+.toast-box-wrapper{
+    order: 4;
+}
 div#resend-otp {
-    order: 5;
+    order: 6;
 }
 .sotp-widget .olWrapper .ol .login-box .other-options-box{
     margin-top: 0!important;
