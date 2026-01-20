@@ -54,4 +54,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const pages = document.querySelectorAll(".flip-page");
+  const prevBtn = document.querySelector(".flip-nav.prev");
+  const nextBtn = document.querySelector(".flip-nav.next");
+
+  if (!pages.length) return;
+
+  let current = 0;
+
+  function showPage(index, direction) {
+    if (index < 0 || index >= pages.length) return;
+
+    const currentPage = pages[current];
+    const nextPage = pages[index];
+
+    currentPage.classList.remove("active");
+    currentPage.classList.add("flip-out");
+
+    nextPage.classList.add("active", "flip-in");
+
+    setTimeout(() => {
+      currentPage.classList.remove("flip-out");
+      nextPage.classList.remove("flip-in");
+      current = index;
+    }, 800);
+  }
+
+  prevBtn.addEventListener("click", () => {
+    showPage(current - 1);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showPage(current + 1);
+  });
+});
+
+
+
+
 
