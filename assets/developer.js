@@ -55,6 +55,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (!document.getElementById("product-flipbook")) return;
+
+  let pages = [];
+
+  document.querySelectorAll("#flipbook-images img").forEach(img => {
+    pages.push(img.src);
+  });
+
+  if (pages.length === 0) return;
+
+  $("#product-flipbook").flipBook({
+    pages: pages,
+    backgroundColor: "#fff",
+    webgl: true,
+    height: 600,
+    pageMode: 2,
+    controlsPosition: "bottom",
+    showControls: true,
+    showNavigation: true,
+    btnNext: true,
+    btnPrev: true
+  });
+});
+
 
 
 
