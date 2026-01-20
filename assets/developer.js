@@ -63,8 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
     autoCenter: true,
     acceleration: true,
     gradients: true,      
-    elevation: 0,
-    duration: 900          
+    elevation: 90,
+    duration: 1000,
+    page: 1        
   });
 
   document.querySelector('.flip-btn.next')
