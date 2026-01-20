@@ -1156,7 +1156,8 @@ button.otp-btn {
     order: 5;
 }
 .sotp-consent-wrapper,
-.sotp-widget .olWrapper .ol .verify-box .verify-content {
+.sotp-widget .olWrapper .ol .verify-box .verify-content, 
+.sotp-widget .update-user-box .update-checkbox-wrapper {
     order: 3;
 }
 .toast-box-wrapper{
