@@ -80,13 +80,13 @@
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
         {% if template == 'product.kitchen-pdp'  %}
-          <div class="flipbook-wrapper">
-            <div class="flipbook" id="flipbook">
+          <div class="single-flipbook-wrapper">
+            <div id="product-flipbook">
               {% for media in product.media %}
                 {% if media.media_type == 'image' %}
-                  <div class="flip-page {% if forloop.first %}active{% endif %}">
+                  <div class="page">
                     <img
-                      src="{{ media | image_url: width: 1200 }}"
+                      src="{{ media | image_url: width: 1400 }}"
                       alt="{{ media.alt | escape }}"
                       loading="lazy"
                     >
@@ -94,8 +94,9 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <button class="flip-nav prev" aria-label="Previous image">‹</button>
-            <button class="flip-nav next" aria-label="Next image">›</button>
+
+            <button class="flip-btn prev" aria-label="Previous">‹</button>
+            <button class="flip-btn next" aria-label="Next">›</button>
           </div>
         {%- endif -%}
       </div>
