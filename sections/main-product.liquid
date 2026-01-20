@@ -79,6 +79,25 @@
         {% if template != 'product.kitchen-pdp'  %}
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
+        {% if template == 'product.kitchen-pdp'  %}
+          <div class="flipbook-wrapper">
+            <div class="flipbook" id="flipbook">
+              {% for media in product.media %}
+                {% if media.media_type == 'image' %}
+                  <div class="flip-page {% if forloop.first %}active{% endif %}">
+                    <img
+                      src="{{ media | image_url: width: 1200 }}"
+                      alt="{{ media.alt | escape }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <button class="flip-nav prev" aria-label="Previous image">‹</button>
+            <button class="flip-nav next" aria-label="Next image">›</button>
+          </div>
+        {%- endif -%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
