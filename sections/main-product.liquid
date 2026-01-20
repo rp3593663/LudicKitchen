@@ -80,15 +80,16 @@
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
         {% if template == 'product.kitchen-pdp'  %}
-          <div id="product-flipbook" class="dflip-book"></div>
+          <div id="product-flipbook" class="dflip-book">
 
-  <!-- Collect images for JS -->
-  <div id="flipbook-images" style="display:none;">
     {% for media in product.media %}
       {% if media.media_type == 'image' %}
-        <img src="{{ media | image_url: width: 2000 }}">
+        <div class="df-page">
+          <img src="{{ media | image_url: width: 2000 }}" />
+        </div>
       {% endif %}
     {% endfor %}
+
   </div>
         {%- endif -%}
       </div>
