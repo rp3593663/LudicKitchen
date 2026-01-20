@@ -1446,6 +1446,13 @@ span.error-message-phone, .error-message {
     text-align: center;
     justify-content: center!important;
 }
+.simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card.success .toast-card-content .toast-title, 
+.sotp-widget .toast-box-wrapper .toast-content .toast-card.success .toast-card-content .toast-title{
+    font-weight: 500!important;
+    font-size: 12px!important;
+    line-height: 12px!important;
+    letter-spacing: -0.6px!important;
+}
 .simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper, 
 .sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper,
 .simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-close-icon, 
