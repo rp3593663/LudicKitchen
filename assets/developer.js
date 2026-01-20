@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const verifyBox = document.querySelector(".verify-box.step-box-wrapper");
+  const verifyBox = document.querySelector(".sotp-widget .olWrapper .ol");
   if (!verifyBox) return;
 
   // Avoid duplicate injection
