@@ -1959,7 +1959,7 @@ input.edit_account_input.phone_input {
 .single-flipbook-wrapper {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 100%;
   margin: auto;
 }
 
