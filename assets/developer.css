@@ -1444,6 +1444,7 @@ span.error-message-phone, .error-message {
     box-shadow: unset;
     padding: 0px;
     text-align: center;
+    justify-content: center!important;
 }
 .simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper, 
 .sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper,
