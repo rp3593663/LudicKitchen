@@ -2557,6 +2557,12 @@ input.edit_account_input.phone_input {
         padding: 28px 28px 70px!important;
         min-width: unset!important;
     }
+    .help-support-box {
+        padding: 14px 0;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.36px;
+    }
     .section-customer_account .page-width {
         padding: 0px;
     }
