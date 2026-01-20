@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     autoCenter: true,
     acceleration: true,
     gradients: true,      
-    elevation: 90,
+    elevation: 100,
     duration: 1000,
     page: 1        
   });
