@@ -1446,9 +1446,12 @@ span.error-message-phone, .error-message {
     text-align: center;
 }
 .simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper, 
-.sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper {
+.sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-icon-wrapper,
+.simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-close-icon, 
+.sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-close-icon {
     display: none;
 }
+
 /* 
 .customFieldsBox {
     display: none;
