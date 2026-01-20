@@ -1383,12 +1383,13 @@ button.send-btn.otp-btn {
     order: -1;
     font-weight: 500;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 14px!important;
     letter-spacing: -0.42px;
     vertical-align: middle;
     margin-bottom: 8px;
-    color: #000000;
+    color: var(--black)!important;
     transform: unset !important;
+    padding: 0px !important;
 }
 .simply-otp-wrapper .olWrapper .ol .update-user-box .input-box-content input,
  .sotp-widget .olWrapper .ol .update-user-box .input-box-content input {
