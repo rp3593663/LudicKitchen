@@ -80,24 +80,15 @@
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
         {% if template == 'product.kitchen-pdp'  %}
-          <div class="dflip-container">
-            <div
-              class="_df_book"
-              id="productFlipbook"
-              data-viewmode="single"
-              data-singlepage="true"
-              data-hard="false"
-              data-bgcolor="#ffffff"
-              data-enable_download="false"
-              data-enable_print="false"
-            >
-              {% for media in product.media %}
-                {% if media.media_type == 'image' %}
-                  <div data-image="{{ media | image_url: width: 1600 }}"></div>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
+          <div id="product-flipbook" class="df-container"></div>
+
+  <div style="display:none">
+    {% for media in product.media %}
+      {% if media.media_type == 'image' %}
+        <a class="flipbook-page" href="{{ media | image_url: width: 2000 }}"></a>
+      {% endif %}
+    {% endfor %}
+  </div>
 
         {%- endif -%}
       </div>
