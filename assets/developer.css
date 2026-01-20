@@ -1452,6 +1452,10 @@ span.error-message-phone, .error-message {
 .sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-close-icon {
     display: none;
 }
+.simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card .toast-card-content, 
+.sotp-widget .toast-box-wrapper .toast-content .toast-card .toast-card-content {
+    padding-left: 0!important;
+}
 
 /* 
 .customFieldsBox {
