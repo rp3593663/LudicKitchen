@@ -108,21 +108,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (!window.jQuery || !jQuery.fn.flipBook) return;
-
-  $("#product-flipbook").flipBook({
-    pdf: false,
-    webgl: false,
-    height: 600,
-    pageMode: 2,
-    backgroundColor: "#fff",
-    showControls: true,
-    showNavigation: true
-  });
-});
-
-
-
-
-
