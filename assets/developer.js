@@ -53,32 +53,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
 
+  function initFlipbook() {
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (!document.getElementById("product-flipbook")) return;
+    if (typeof jQuery === "undefined" || typeof jQuery.fn.flipBook === "undefined") {
+      setTimeout(initFlipbook, 200);
+      return;
+    }
 
-  let pages = [];
+    const pages = [];
 
-  document.querySelectorAll("#flipbook-images img").forEach(img => {
-    pages.push(img.src);
-  });
+    document.querySelectorAll(".flipbook-page").forEach(el => {
+      pages.push(el.getAttribute("href"));
+    });
 
-  if (pages.length === 0) return;
+    if (!pages.length) return;
 
-  $("#product-flipbook").flipBook({
-    pages: pages,
-    backgroundColor: "#fff",
-    webgl: true,
-    height: 600,
-    pageMode: 2,
-    controlsPosition: "bottom",
-    showControls: true,
-    showNavigation: true,
-    btnNext: true,
-    btnPrev: true
-  });
+    $("#product-flipbook").flipBook({
+      pages: pages,
+
+      // Size
+      width: 500,
+      height: 600,
+
+      // Enable 3D
+      webgl: true,
+
+      // ✅ CDN Three.js
+      threejs: "https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js",
+
+      // ❌ Disable sound (because CDN does not exist)
+      enableSound: false,
+
+      // UI
+      lightBox: false,
+      showPageNumber: true,
+      zoomRatio: 1.2,
+      showDownloadControl: false,
+      showPrintControl: false,
+      showBookmarkControl: false,
+      showShareControl: false
+    });
+
+  }
+
+  initFlipbook();
 });
+
+
 
 
 
