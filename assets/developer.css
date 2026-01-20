@@ -1983,7 +1983,7 @@ input.edit_account_input.phone_input {
   backface-visibility: hidden;
   opacity: 0;
   transform: rotateY(0deg);
-  transition: transform 0.8s ease, opacity 0.4s ease;
+  transition: transform 2s ease, opacity 1s ease;
 }
 
 .flip-page img {
