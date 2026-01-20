@@ -53,35 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-jQuery(function ($) {
-
-  $("#df_manual_book").flipBook({
-    pdf: true,                // ✅ FORCE PDF MODE
-    singlePageMode: true,
-    pageMode: "single",
-
-    height: 500,
-    backgroundColor: "teal",
-
-    // UI
-    controlsPosition: "inside",
-
-    // show only arrows
-    showThumbs: false,
-    showSearchControl: false,
-    showPrintControl: false,
-    showDownloadControl: false,
-    showZoomControl: false,
-    showShareControl: false,
-    showBookmarkControl: false,
-    showPageModeControl: false,
-    showFullscreenControl: false
-  });
-
-});
-
-
-
 
 
 
