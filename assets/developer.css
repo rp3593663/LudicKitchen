@@ -1198,7 +1198,7 @@ button.send-btn.otp-btn {
     color: #949598;
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
-    font-weight: 500!important;
+    font-weight: 400!important;
 }
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
@@ -1272,7 +1272,7 @@ button.send-btn.otp-btn {
     cursor: pointer!important;
     text-align: center!important;
     padding: 10px 48px!important;
-    font-weight: 500!important;
+    font-weight: 600!important;
     background: var(--primary_color)!important;
     color: var(--white)!important;
     font-family: var(--font-family)!important;
@@ -1283,6 +1283,7 @@ button.send-btn.otp-btn {
 .simply-otp-wrapper .olWrapper .ol .otp-btn svg, .sotp-widget .olWrapper .ol .otp-btn svg {
     height: 16px;
     width: 16px;
+    display: none;
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .mn-container, 
 .sotp-widget .olWrapper .ol .verify-box .mn-container {
