@@ -1139,7 +1139,7 @@ div#sotp-widget-loader {
     align-items: center;
     justify-content: center;
 }
-.login-box.step-box-wrapper {
+.step-box-wrapper {
     display: grid;
 }
 h3.login-header {
@@ -1151,11 +1151,14 @@ p.login-description {
 .login-inputBox {
     order: 2;
 }
-button.send-btn.otp-btn {
+button.otp-btn {
     order: 4;
 }
 .sotp-consent-wrapper {
     order: 3;
+}
+div#resend-otp {
+    order: 5;
 }
 .sotp-widget .olWrapper .ol .login-box .other-options-box{
     margin-top: 0!important;
