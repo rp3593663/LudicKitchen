@@ -54,26 +54,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const $flipbook = $('#product-flipbook');
+  if (typeof DFLIP === "undefined") {
+    console.error("DearFlip not loaded");
+    return;
+  }
 
-  if (!$flipbook.length) return;
-
-  $flipbook.turn({
-    display: 'single',     
-    autoCenter: true,
-    acceleration: true,
-    gradients: true,      
-    elevation: 100,
-    duration: 1000,
-    page: 1        
+  new DFLIP.Book(document.getElementById("productFlipbook"), {
+    viewMode: "single",        // ONE PAGE ONLY
+    singlePageMode: true,
+    pageMode: DFLIP.PAGE_MODE.SINGLE,
+    hard: false,
+    duration: 900,
+    zoomRatio: 1.2,
+    backgroundColor: "#fff",
+    enableDownload: false,
+    enablePrint: false,
+    webgl: true                // IMPORTANT: real 3D
   });
-
-  document.querySelector('.flip-btn.next')
-    .addEventListener('click', () => $flipbook.turn('next'));
-
-  document.querySelector('.flip-btn.prev')
-    .addEventListener('click', () => $flipbook.turn('previous'));
 });
+
 
 
 
