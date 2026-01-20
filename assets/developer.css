@@ -1218,7 +1218,7 @@ div#resend-otp {
     min-width: 398px;
     width: 100%;
     border-radius: 12px!important;
-    padding: 28px 38px!important;
+    padding: 28px 38px 82px!important;
 }
 .simply-otp-wrapper .olWrapper .ol .login-img, 
 .sotp-widget .olWrapper .ol .login-img {
