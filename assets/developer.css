@@ -1433,13 +1433,17 @@ span.error-message-phone, .error-message {
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
 }
-.toast-box-wrapper .toast-content .toast-card-success{
+.simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card.success, 
+.sotp-widget .toast-box-wrapper .toast-content .toast-card.success {
     border: unset!important;
     font-weight: 500!important;
     font-size: 12px!important;
     line-height: 12px!important;
     letter-spacing: -0.6px!important;
     color: #138808!important;
+    box-shadow: unset;
+    padding: 0px;
+    text-align: center;
 }
 /* 
 .customFieldsBox {
