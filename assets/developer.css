@@ -1441,6 +1441,10 @@ span.error-message-phone, .error-message {
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
 }
+.simply-otp-wrapper .toast-box-wrapper,
+.sotp-widget .toast-box-wrapper{
+    margin-top: 0px!important;
+}
 .simply-otp-wrapper .toast-box-wrapper .toast-content .toast-card, 
 .sotp-widget .toast-box-wrapper .toast-content .toast-card {
     border: unset!important;
