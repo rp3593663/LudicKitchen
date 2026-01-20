@@ -1270,6 +1270,7 @@ div#resend-otp {
     font-size: 12px!important;
     line-height: 12px;
     letter-spacing: -0.36px;
+    color: var(--black) !important;
 }
 .simply-otp-wrapper .olWrapper .ol .input-box-content input::placeholder,
 .sotp-widget .olWrapper .ol .input-box-content input::placeholder {
