@@ -56,64 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  const el = document.getElementById("product-flipbook");
-  if (!el) return;
-
-  const imgs = document.querySelectorAll("#product-flipbook-images img");
-  if (!imgs.length) return;
-
-  let pages = [];
-  imgs.forEach(img => {
-    if (img.src && img.src.startsWith("http")) {
-      pages.push(img.src);
-    }
-  });
-
-  console.log("Flipbook pages:", pages);
-
-  if (!pages.length) return;
-
-  // HARD KILL old instance
-  try { $(el).flipBook("destroy"); } catch(e){}
-
-  // CRITICAL CONFIG
-  $(el).flipBook({
-    source: pages,
-    type: "image",
-
-    // 3D settings
-    viewMode: "3d",
-    pageMode: "double",
-    webgl: true,
-
-    // IMPORTANT: tell DearFlip to NOT load its own libs
-    threejs: window.THREE,
-    pdfjs: false,
-    soundEnable: false,
-
-    // Prevent internal asset loading
-    assets: {
-      js: "",
-      sound: ""
-    },
-
-    btnNext: true,
-    btnPrev: true,
-    btnZoomIn: true,
-    btnZoomOut: true,
-    btnFullscreen: true,
-
-    height: 600
-  });
-
-});
-
-
-
-
-
 
 
 
