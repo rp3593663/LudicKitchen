@@ -53,25 +53,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (typeof DFLIP === "undefined") {
-    console.error("DearFlip not loaded");
-    return;
-  }
 
-  new DFLIP.Book(document.getElementById("productFlipbook"), {
-    viewMode: "single",        // ONE PAGE ONLY
-    singlePageMode: true,
-    pageMode: DFLIP.PAGE_MODE.SINGLE,
-    hard: false,
-    duration: 900,
-    zoomRatio: 1.2,
-    backgroundColor: "#fff",
-    enableDownload: false,
-    enablePrint: false,
-    webgl: true                // IMPORTANT: real 3D
+document.addEventListener("DOMContentLoaded", function() {
+
+  const pages = [];
+
+  document.querySelectorAll(".flipbook-page").forEach(el => {
+    pages.push(el.getAttribute("href"));
   });
+
+  if (!pages.length) return;
+
+  new DearFlip.DFLipBook(document.getElementById("product-flipbook"), {
+    height: 600,
+    width: 500,
+    pages: pages,
+    autoEnableOutline: false,
+    autoEnableThumbnail: false,
+    enableSound: false,
+    showDownloadControl: false,
+    showPrintControl: false,
+    showSearchControl: false,
+    showBookmarkControl: false,
+    showShareControl: false,
+    showFullscreenControl: true,
+    showPageNumber: true,
+    flipbook3D: true,
+    duration: 800
+  });
+
 });
+
 
 
 
