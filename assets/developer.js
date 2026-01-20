@@ -41,17 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const verifyBox = document.querySelector(".sotp-widget .olWrapper .ol");
   if (!verifyBox) return;
 
-  // Avoid duplicate injection
-  if (document.querySelector(".help-support-box")) return;
-
-  const helpBox = document.createElement("div");
-  helpBox.className = "help-support-box";
-  helpBox.innerHTML = `
-    Facing any problem? <a href="/contact" target="_blank">Contact us</a>
-  `;
-
-  verifyBox.insertAdjacentElement("afterend", helpBox);
+  if (!verifyBox.querySelector(".help-support-box")) {
+    verifyBox.insertAdjacentHTML(
+      "beforeend",
+      `<div class="help-support-box">
+        Facing any problem? <a href="/contact" target="_blank">Contact us</a>
+      </div>`
+    );
+  }
 });
+
 
 
 
