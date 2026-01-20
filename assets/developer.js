@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     autoCenter: true,
     acceleration: true,
     gradients: true,
-    elevation: 120,          // 🔥 KEY FOR DEPTH
+    elevation: 120,      
     duration: 900,
     turnCorners: 'tl,tr',
     when: {
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
   document.querySelector('.flip-btn.next')
     .addEventListener('click', () => $flipbook.turn('next'));
 
