@@ -1148,13 +1148,15 @@ h3.login-header {
 p.login-description {
     order: 1;
 }
-.login-inputBox {
+.login-inputBox,
+.sotp-widget .olWrapper .ol .verify-box .mn-container {
     order: 2;
 }
 button.otp-btn {
     order: 5;
 }
-.sotp-consent-wrapper {
+.sotp-consent-wrapper,
+.sotp-widget .olWrapper .ol .verify-box .verify-content {
     order: 3;
 }
 .toast-box-wrapper{
