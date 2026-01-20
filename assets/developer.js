@@ -53,42 +53,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
 
-  if (!document.getElementById("product-flipbook")) return;
+  const flipEl = document.getElementById("product-flipbook");
+  if (!flipEl) return;
 
   const images = document.querySelectorAll("#product-flipbook-images img");
-
   if (!images.length) return;
 
   let pages = [];
 
   images.forEach(img => {
-    pages.push({
-      src: img.src
-    });
+    pages.push(img.src);
   });
 
   $("#product-flipbook").flipBook({
-    pages: pages,
+    source: pages,          // 👈 IMPORTANT
+    type: "image",          // 👈 IMPORTANT
 
     viewMode: "3d",
     pageMode: "double",
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.4,
 
-    // Navigation
     btnNext: true,
     btnPrev: true,
     btnZoomIn: true,
     btnZoomOut: true,
     btnFullscreen: true,
 
-    // Behavior
-    autoPlay: false,
-    webgl: true
+    webgl: true,
+    singlePageMode: false,
+    autoPlay: false
   });
 
 });
+
 
 
 
