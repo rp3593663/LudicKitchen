@@ -1956,9 +1956,11 @@ input.edit_account_input.phone_input {
 /*---------- Product Page Gallery CSS ------------*/
 /*-----------------------------------------------*/
 #product-flipbook {
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
+
 
 
 
