@@ -53,6 +53,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  if (!document.getElementById("product-flipbook")) return;
+
+  const images = document.querySelectorAll("#product-flipbook-images img");
+
+  if (!images.length) return;
+
+  let pages = [];
+
+  images.forEach(img => {
+    pages.push({
+      src: img.src
+    });
+  });
+
+  $("#product-flipbook").flipBook({
+    pages: pages,
+
+    viewMode: "3d",
+    pageMode: "double",
+    shadowOpacity: 0.3,
+
+    // Navigation
+    btnNext: true,
+    btnPrev: true,
+    btnZoomIn: true,
+    btnZoomOut: true,
+    btnFullscreen: true,
+
+    // Behavior
+    autoPlay: false,
+    webgl: true
+  });
+
+});
+
+
 
 
 
