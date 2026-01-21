@@ -1613,10 +1613,10 @@ span.total_goal {
     justify-content: center;
     border-radius: 6px;
     font-family: Inter;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.54px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.48px;
 }
 a.join_project_btn {
     height: 48px;
