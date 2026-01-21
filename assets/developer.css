@@ -460,7 +460,7 @@ a.go_btn {
     cursor: pointer;
     display: flex;
     gap: 8px;
-    font-family: 'Inter';
+    font-family: var(--font-family);
     align-items: center;
     font-weight: 500;
     font-size: 22px;
@@ -501,12 +501,13 @@ a.faq_btn.theme_btn {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    font-family: 'Inter';
+    font-family: var(--font-family);
     font-weight: 600;
     font-size: 20px;
     text-align: left;
     line-height: 26px;
     letter-spacing: -0.6px;
+    color: var(--black);
 }
 .faq-item {
     padding: 18px 28px;
@@ -1196,7 +1197,7 @@ div#resend-otp {
     justify-content: left;
     gap: 0px 4px;
     flex-wrap: wrap;
-    font-family: 'Inter';
+    font-family: var(--font-family);
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper,
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper {
@@ -1275,7 +1276,7 @@ div#resend-otp {
     border-bottom-right-radius: 4px!important;
     width: 100%;
     text-indent: 0px!important;
-    font-family: 'Inter';
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px!important;
     line-height: 12px;
@@ -1636,7 +1637,7 @@ img.account_head_logo {
     border: 1px solid #E8E8E8;
     border-radius: 4px;
     padding: 10px 12px;
-    font-family: 'Inter';
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
