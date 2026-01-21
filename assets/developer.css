@@ -1076,7 +1076,7 @@ p.goal_info span{
 .features_info h4 {
     font-weight: 600;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 24px;
     letter-spacing: -0.54px;
     margin: 0 0 6px;
     color: var(--primary_color);
