@@ -217,6 +217,45 @@
             "question": "Is my contribution safe?",
             "answer": "<p>Yes.<br/>Every contribution leads to one of the following outcomes:</p><ul><li>Product delivery</li><li>Ludic Credit of equal value</li><li>A full refund if the project does not activate</li></ul><p>There is no scenario where a contribution is lost.</p>"
           }
+        },
+        "tab_FaMVwi": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Campaign Activation, Cancellation & Outcomes",
+            "tab_handle": "campaign_activation_cancellation_outcomes"
+          }
+        },
+        "faq_ktqRx6": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "campaign_activation_cancellation_outcomes",
+            "question": "What does “project activation” mean?",
+            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><ul><li>Once 75% of the target is reached:</li><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
+          }
+        },
+        "faq_gJChJK": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "campaign_activation_cancellation_outcomes",
+            "question": "Can I cancel my participation after contributing?",
+            "answer": "<p>No.<br/>All contributions are non-refundable, unless the project doesn't move forward and we decide to close the project. </p>"
+          }
+        },
+        "faq_7jrrQN": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "campaign_activation_cancellation_outcomes",
+            "question": "What if the campaign does not reach the activation threshold?",
+            "answer": ""
+          }
+        },
+        "faq_NfQQHU": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "campaign_activation_cancellation_outcomes",
+            "question": "What if Ludic bridges a small shortfall?",
+            "answer": "<p>If a project reaches close to the threshold (70–74%), Ludic may choose to bridge the gap internally.</p><p>If this happens:</p><ul><li>The contribution is disclosed publicly</li><li>Contributor benefits remain unchanged</li><li>No campaign terms are altered mid-way</li></ul>"
+          }
         }
       },
       "block_order": [
@@ -231,7 +270,12 @@
         "tab_ynnFFL",
         "faq_F864Ar",
         "faq_XBEH6c",
-        "faq_jJzDej"
+        "faq_jJzDej",
+        "tab_FaMVwi",
+        "faq_ktqRx6",
+        "faq_gJChJK",
+        "faq_7jrrQN",
+        "faq_NfQQHU"
       ],
       "name": "FAQs Tab",
       "settings": {
