@@ -185,6 +185,29 @@ document.fonts.ready.then(() => {
     }
   });
 
+  // 👉 DESCRIPTION FADE-UP ANIMATION
+  const desc = document.querySelector(".horizontal-desc");
+
+  // initial hidden state
+  gsap.set(desc, {
+    opacity: 0,
+    y: 40
+  });
+
+  gsap.to(desc, {
+    opacity: 1,
+    y: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: arrowPaths[0],            // sync with arrow
+      containerAnimation: horizontalTween,
+      start: "left 55%",                 // when arrow reaches center-ish
+      end: "left 35%",
+      scrub: true
+    }
+  });
+
+
 });
 
 </script>
