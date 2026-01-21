@@ -252,15 +252,18 @@
               </div>
             </div>
             <div class="form_submit_wrap">
-              <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
+              <div class="save_btn">
+                <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
+                <a href="{{ routes.account_logout_url }}" class="logout_link">
+                  <span class="svg-wrapper">
+                    {{- 'icon-account.svg' | inline_asset_content -}}
+                  </span>
+                  {{ 'customer.log_out' | t }}
+                </a>
+              </div>
               <div id="formMessage" class="form-message"></div>
             </div>
-            <a href="{{ routes.account_logout_url }}" class="logout_link">
-              <span class="svg-wrapper">
-                {{- 'icon-account.svg' | inline_asset_content -}}
-              </span>
-              {{ 'customer.log_out' | t }}
-            </a>
+            
           </div>
         </form>
       </div>
