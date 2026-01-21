@@ -1798,13 +1798,13 @@ a.redirect_recover {
     grid-column: span 2;
 }
 a.logout_link {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 16px;
-    letter-spacing: -0.54px;
-    text-decoration: unset;
-    color: #AAAAAAAA;
-    margin-left: 32px;
+    font-weight: 600!important;
+    font-size: 18px!important;
+    line-height: 16px!important;
+    letter-spacing: -0.54px!important;
+    text-decoration: unset!important;
+    color: #AAAAAAAA!important;
+    margin-left: 32px!important;
 }
 .profile_pic_field {
     border: 1px solid #E8E8E8;
