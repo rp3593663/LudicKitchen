@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
   const OFFSET = 100;
 
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-</script>
 
 
 
