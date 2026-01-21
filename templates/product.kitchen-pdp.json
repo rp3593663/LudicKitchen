@@ -384,6 +384,76 @@
             "tier_5": false,
             "tier_6": false
           }
+        },
+        "benefit_QfnyAn": {
+          "type": "benefit",
+          "settings": {
+            "title": "Future Product Recommendations",
+            "short_text": "Ability to submit ideas for future Ludic products.",
+            "more_text": "Submissions open post-project via form. Feedback may be provided. Final decisions rest with Ludic.",
+            "tier_1": false,
+            "tier_2": false,
+            "tier_3": true,
+            "tier_4": false,
+            "tier_5": false,
+            "tier_6": false
+          }
+        },
+        "benefit_Xra7Ry": {
+          "type": "benefit",
+          "settings": {
+            "title": "Exclusive Launch Gatherings",
+            "short_text": "Invitation to closed-door product launches.",
+            "more_text": "Shared post-production. Attendance depends on location, capacity, and event format.",
+            "tier_1": false,
+            "tier_2": false,
+            "tier_3": true,
+            "tier_4": false,
+            "tier_5": false,
+            "tier_6": false
+          }
+        },
+        "benefit_tWb4wH": {
+          "type": "benefit",
+          "settings": {
+            "title": "Beta Tester Slot",
+            "short_text": "Early access to prototypes or first-run products.",
+            "more_text": "Offered via closed testing groups post-development for wear-testing and feedback.",
+            "tier_1": false,
+            "tier_2": false,
+            "tier_3": true,
+            "tier_4": false,
+            "tier_5": false,
+            "tier_6": false
+          }
+        },
+        "benefit_UaccpA": {
+          "type": "benefit",
+          "settings": {
+            "title": "Limited Edition Custom Colour",
+            "short_text": "Participation in creating an exclusive colourway.",
+            "more_text": "Head Chefs vote on shade and naming. Released as a limited edition after exclusivity period.",
+            "tier_1": false,
+            "tier_2": false,
+            "tier_3": true,
+            "tier_4": false,
+            "tier_5": false,
+            "tier_6": false
+          }
+        },
+        "benefit_knqrHw": {
+          "type": "benefit",
+          "settings": {
+            "title": "Core Heavy T-Shirt",
+            "short_text": "Customized Ludic Kitchen Core Heavy T-Shirt.",
+            "more_text": "",
+            "tier_1": false,
+            "tier_2": false,
+            "tier_3": true,
+            "tier_4": false,
+            "tier_5": false,
+            "tier_6": false
+          }
         }
       },
       "block_order": [
@@ -403,7 +473,12 @@
         "benefit_gERRrj",
         "benefit_YXNcjy",
         "benefit_pkwBg7",
-        "benefit_zjrFBi"
+        "benefit_zjrFBi",
+        "benefit_QfnyAn",
+        "benefit_Xra7Ry",
+        "benefit_tWb4wH",
+        "benefit_UaccpA",
+        "benefit_knqrHw"
       ],
       "name": "Project Tier Benefits",
       "settings": {
