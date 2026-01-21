@@ -777,8 +777,8 @@ p.goal_info span{
 .gauge-center h2 {
     margin: 0;
     font-weight: 650;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 28px;
+    line-height: 28px;
     letter-spacing: -1px;
     color: var(--primary_color);
 }
