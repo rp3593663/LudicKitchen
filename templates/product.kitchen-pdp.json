@@ -641,6 +641,21 @@
             "question": "What colors and design options will Ludic Clogs be available in?",
             "answer": "<p>(Clubs: What colors? + design direction)</p><p>The final colourways are community-driven.</p><p>Backers participate in voting and selection rounds, helping shape the final design before production. Every release reflects collective input.</p>"
           }
+        },
+        "tab_e7M4Pp": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping Updates",
+            "tab_handle": "shipping_updates"
+          }
+        },
+        "faq_acCT4P": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "shipping_updates",
+            "question": "What if my clogs don’t fit or arrive damaged?",
+            "answer": "<p>(Clubs: exchange policy + returns/refunds + damaged/defective product)</p><p>If there’s an issue with your clogs, you can request an exchange within 7 days of delivery, in line with Ludic’s exchange policy.</p><p>Refunds are non-applicable in Ludic Kitchen. Any refunds only happen if the campaign does not meet the 75% threshold and fails to activate. </p>"
+          }
         }
       },
       "block_order": [
@@ -655,7 +670,9 @@
         "faq_HQKGhV",
         "faq_LQWPQC",
         "faq_Kxhrtf",
-        "faq_dCjD3U"
+        "faq_dCjD3U",
+        "tab_e7M4Pp",
+        "faq_acCT4P"
       ],
       "name": "FAQs Tab",
       "settings": {
