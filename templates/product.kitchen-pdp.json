@@ -549,218 +549,43 @@
     "faqs_tab_JC9MXE": {
       "type": "faqs-tab",
       "blocks": {
-        "tab_JBKKh6": {
+        "tab_dpnmxj": {
           "type": "tab",
           "settings": {
-            "tab_title": "About Ludic Kitchen",
-            "tab_handle": "about_ludic_kitchen"
+            "tab_title": "Comfort",
+            "tab_handle": "comfort"
           }
         },
-        "faq_J88AqE": {
+        "faq_fBQJHx": {
           "type": "faq",
           "settings": {
-            "tab_handle": "about_ludic_kitchen",
-            "question": "What is Ludic Kitchen?",
-            "answer": "<p>Ludic Kitchen is a community-backed creation space by Ludic, where new products are developed with direct participation from the people who believe in the brand.<br/>Instead of working behind closed doors, we open up the process from early ideas to final production and invite the community to be part of it.</p>"
+            "tab_handle": "comfort",
+            "question": "Are Ludic Clogs comfortable for all-day wear and long walks?",
+            "answer": "<p>(Clubs: <em>All-day comfort</em> + <em>long walks / travel / daily commute</em>)</p><p><em>Yes. Ludic Clogs are built for extended wear — from daily movement to long travel days, across seasons.</em></p><p><em>The footbed is made from soft EVA foam (35–40A Shore hardness) for cushioning and shock absorption, paired with a firmer TPU outsole for stability, grip, and durability. The relaxed fit and breathable construction help reduce fatigue over time.</em></p>"
           }
         },
-        "faq_AqaCAX": {
+        "faq_MUtwiY": {
           "type": "faq",
           "settings": {
-            "tab_handle": "about_ludic_kitchen",
-            "question": "Is Ludic Kitchen a campaign or a membership?",
-            "answer": "<p>Ludic Kitchen is neither a one-time campaign nor a membership.<br/>Each Kitchen project runs for a limited time. Once it ends, the Kitchen closes until the next project begins.</p>"
+            "tab_handle": "comfort",
+            "question": "Will Ludic Clogs cause sweating or odor?",
+            "answer": "<p>(Stands alone, but related to comfort)</p><p><em>Ludic Clogs feature integrated side air vents that allow continuous airflow and reduce heat build-up.</em></p><p><em>While no closed footwear can completely eliminate sweating, the ventilated design improves breathability and keeps the foot cooler during prolonged wear.</em></p>"
           }
         },
-        "faq_7PrKwm": {
+        "faq_jKR3ji": {
           "type": "faq",
           "settings": {
-            "tab_handle": "about_ludic_kitchen",
-            "question": "Is this similar to crowd-funding platforms?",
-            "answer": "<p>There are similarities in spirit, but the structure is different.<br/>Ludic Kitchen is run directly by Ludic, with contributions converting into products, access, or Ludic Credit not third-party rewards. It’s also designed specifically for Indian consumers and regulations.</p>"
-          }
-        },
-        "tab_V67NBT": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Participation & Contribution",
-            "tab_handle": "participation_contribution"
-          }
-        },
-        "faq_x8XCyt": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "participation_contribution",
-            "question": "How do I participate in Ludic Kitchen?",
-            "answer": "<p>When a Ludic Kitchen project is live, you can participate by choosing a contribution tier.<br/><br/>Each tier includes:</p><ul><li>Access to the creation journey</li><li>The Ludic Kitchen product from that project</li><li>Tier-specific privileges like voting, previews, or recognition</li><li>In certain tiers, Ludic Credit for future use</li></ul><p>You can participate actively or simply follow along.</p>"
-          }
-        },
-        "faq_Xmj9Xe": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "participation_contribution",
-            "question": "What are the contribution tiers?",
-            "answer": "<p>There are three contribution tiers for you to pick: </p><ul><li>The Taster - entry-level participation </li><li>The Sous Chef - deeper creative involvement </li><li>The Head Chef - long-term, legacy-level participation </li></ul><p>These tiers decide how close you work with the project in the Kitchen. <br/>All tiers receive the core product created through the Kitchen.</p>"
-          }
-        },
-        "faq_tFp7P8": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "participation_contribution",
-            "question": "Why should I participate in Ludic Kitchen?",
-            "answer": "<p>Because it offers a more transparent, intentional way to support and create products you care about.</p><ul><li>You receive the product.</li><li>You follow the process.</li><li>You know how it was made.</li></ul>"
-          }
-        },
-        "tab_PftLUm": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Credit & Value",
-            "tab_handle": "credit_value"
-          }
-        },
-        "faq_BbwfnA": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "credit_value",
-            "question": "Is my contribution an investment?",
-            "answer": "<p>No.<br/>Your contribution is treated as a consumer advance, not an investment. There is no equity, ownership, profit sharing, or financial return involved.</p>"
-          }
-        },
-        "faq_J3gAwT": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "credit_value",
-            "question": "What is Ludic Credit?",
-            "answer": "<p>Ludic Credit is closed-loop store credit that can be redeemed only on Ludic’s official website.<br/>It is:</p><ul><li>Issued shortly after the campaign closes</li><li>Valid for 12 months</li><li>Non-transferable and non-redeemable for cash</li></ul>"
-          }
-        },
-        "faq_FUCyfz": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "credit_value",
-            "question": "Is my contribution safe?",
-            "answer": "<p>Yes.<br/>Every contribution leads to one of the following outcomes:</p><ul><li>Product delivery</li><li>Ludic Credit of equal value</li><li>A full refund if the project does not activate</li></ul><p>There is no scenario where a contribution is lost.</p>"
-          }
-        },
-        "tab_4rqcHf": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Campaign Activation, Cancellation & Outcomes",
-            "tab_handle": "campaign_activation_cancellation_outcomes"
-          }
-        },
-        "faq_gjaP48": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "campaign_activation_cancellation_outcomes",
-            "question": "What does “project activation” mean?",
-            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><ul><li>Once 75% of the target is reached:</li><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
-          }
-        },
-        "faq_WNAqWQ": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "campaign_activation_cancellation_outcomes",
-            "question": "Can I cancel my participation after contributing?",
-            "answer": "<p>No.<br/>All contributions are non-refundable, unless the project doesn't move forward and we decide to close the project. </p>"
-          }
-        },
-        "faq_RFmMiE": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "campaign_activation_cancellation_outcomes",
-            "question": "What if the campaign does not reach the activation threshold?",
-            "answer": ""
-          }
-        },
-        "faq_QwDb77": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "campaign_activation_cancellation_outcomes",
-            "question": "What if Ludic bridges a small shortfall?",
-            "answer": "<p>If a project reaches close to the threshold (70–74%), Ludic may choose to bridge the gap internally.</p><p>If this happens:</p><ul><li>The contribution is disclosed publicly</li><li>Contributor benefits remain unchanged</li><li>No campaign terms are altered mid-way</li></ul>"
-          }
-        },
-        "tab_cbxYN9": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Transparency & Updates",
-            "tab_handle": "transparency_updates"
-          }
-        },
-        "faq_enBXPy": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "transparency_updates",
-            "question": "How can I track what’s happening during the campaign?",
-            "answer": "<p>very project is tracked through The Kitchen Ledger.<br/>It provides:</p><ul><li>Funding progress</li><li>Production milestones</li><li>Visual updates</li><li>Delivery timelines</li></ul><p>All updates are time-stamped and remain accessible.</p>"
-          }
-        },
-        "faq_x4z6LX": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "transparency_updates",
-            "question": "What is The Kitchen Ledger?",
-            "answer": "<p>The Kitchen Ledger is project's transparency dashboard. It exists to ensure contributors always know where the project stands and what comes next.</p>"
-          }
-        },
-        "tab_XqCtXw": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Delivery, Timelines & Quality",
-            "tab_handle": "delivery_timelines_quality"
-          }
-        },
-        "faq_NTmQ4N": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "delivery_timelines_quality",
-            "question": "When will I receive my product?",
-            "answer": "<p>Products are typically delivered 8–10 weeks after the campaign closes.<br/>Fulfillment happens in stages based on contribution tiers to maintain quality and clarity.</p>"
-          }
-        },
-        "faq_Didzp6": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "delivery_timelines_quality",
-            "question": "Are delivery timelines guaranteed?",
-            "answer": ""
-          }
-        },
-        "faq_DbNaE7": {
-          "type": "faq",
-          "settings": {
-            "tab_handle": "delivery_timelines_quality",
-            "question": "What if there is a delay?",
-            "answer": ""
+            "tab_handle": "comfort",
+            "question": "What does “relaxed fit” mean in footwear?",
+            "answer": "<p>(Clubs: <em>Are they unisex?</em> + <em>men’s/women’s vs universal sizing</em>)</p><p><em>A relaxed fit refers to footwear that isn’t designed to tightly hug or lock the foot in place.</em></p><p><em>Clogs belong to a category of slip-on footwear without laces or multi-point adjustments, unlike sneakers that rely on tightening systems to secure the foot. Because there’s no lace structure to fine-tune fit, clogs are intentionally designed with a slightly roomier shape that allows natural foot movement, easier on-off wear.</em></p>"
           }
         }
       },
       "block_order": [
-        "tab_JBKKh6",
-        "faq_J88AqE",
-        "faq_AqaCAX",
-        "faq_7PrKwm",
-        "tab_V67NBT",
-        "faq_x8XCyt",
-        "faq_Xmj9Xe",
-        "faq_tFp7P8",
-        "tab_PftLUm",
-        "faq_BbwfnA",
-        "faq_J3gAwT",
-        "faq_FUCyfz",
-        "tab_4rqcHf",
-        "faq_gjaP48",
-        "faq_WNAqWQ",
-        "faq_RFmMiE",
-        "faq_QwDb77",
-        "tab_cbxYN9",
-        "faq_enBXPy",
-        "faq_x4z6LX",
-        "tab_XqCtXw",
-        "faq_NTmQ4N",
-        "faq_Didzp6",
-        "faq_DbNaE7"
+        "tab_dpnmxj",
+        "faq_fBQJHx",
+        "faq_MUtwiY",
+        "faq_jKR3ji"
       ],
       "name": "FAQs Tab",
       "settings": {
