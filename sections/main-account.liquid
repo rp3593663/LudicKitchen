@@ -198,8 +198,8 @@
             </div>
             <div class="form_field_box">
                <div class="field_head">
-                <h4>Address</h4>
-                <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.</p>
+                <h4>Shipping Address</h4>
+                <p>This is where your co-created product will be delivered.</p>
               </div>
               <div class="fields">
                 <div class="edit_account_field">
@@ -255,9 +255,6 @@
               <div class="save_btn">
                 <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
                 <a href="{{ routes.account_logout_url }}" class="logout_link">
-                  <span class="svg-wrapper">
-                    {{- 'icon-account.svg' | inline_asset_content -}}
-                  </span>
                   {{ 'customer.log_out' | t }}
                 </a>
               </div>
