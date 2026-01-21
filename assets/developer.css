@@ -2607,7 +2607,7 @@ input.edit_account_input.disabled {
         letter-spacing: -0.36px;
         text-align: justify;
         padding: 8px 0px 0px;
-        border-top: dotted 1px #1A1A1A;
+        border-top: dotted 1px #949494;
         color:#949598;
     }
     .tier_benefits.active{
