@@ -145,7 +145,7 @@
           "settings": {
             "tab_handle": "about_ludic_kitchen",
             "question": "Is Ludic Kitchen a campaign or a membership?",
-            "answer": "<p>Ludic Kitchen is neither a one-time campaign nor a membership.<br/><br/>Each Kitchen project runs for a limited time. Once it ends, the Kitchen closes until the next project begins.</p>"
+            "answer": "<p>Ludic Kitchen is neither a one-time campaign nor a membership.<br/>Each Kitchen project runs for a limited time. Once it ends, the Kitchen closes until the next project begins.</p>"
           }
         },
         "faq_mtAW7n": {
@@ -153,7 +153,7 @@
           "settings": {
             "tab_handle": "about_ludic_kitchen",
             "question": "Is this similar to crowd-funding platforms?",
-            "answer": "<p>There are similarities in spirit, but the structure is different.<br/><br/>Ludic Kitchen is run directly by Ludic, with contributions converting into products, access, or Ludic Credit not third-party rewards. It’s also designed specifically for Indian consumers and regulations.</p>"
+            "answer": "<p>There are similarities in spirit, but the structure is different.<br/>Ludic Kitchen is run directly by Ludic, with contributions converting into products, access, or Ludic Credit not third-party rewards. It’s also designed specifically for Indian consumers and regulations.</p>"
           }
         }
       },
