@@ -334,6 +334,16 @@
     simplyOtp.permanentDomain = "{{ shop.permanent_domain }}";
     simplyOtp.shopId = "{{ shop.id }}";
     {% comment %} simplyOtp.myFirebaseApi = '{{ shop.metafields.simply-otp-login.firebase_config }}'; {% endcomment %}
+
+    setTimeout(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const returnUrl = urlParams.get('return_url');
+        // Override pageUrl if return_url exists
+        if (returnUrl && window.simplyOtp && window.simplyOtp.settings) {
+            console.log("window.simplyOtp Exists;")
+            window.simplyOtp.settings.pageUrl = returnUrl;
+        }
+    }, 2500);
   </script>
 
   {% comment %} local {% endcomment %}
