@@ -420,6 +420,7 @@ a.go_btn {
     display: grid;
     gap: 54px;
     grid-template-columns: 1.05fr 1.95fr;
+    align-items: flex-start;
 }
 
 .faqs_top h2 {
