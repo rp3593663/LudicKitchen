@@ -256,6 +256,29 @@
             "question": "What if Ludic bridges a small shortfall?",
             "answer": "<p>If a project reaches close to the threshold (70–74%), Ludic may choose to bridge the gap internally.</p><p>If this happens:</p><ul><li>The contribution is disclosed publicly</li><li>Contributor benefits remain unchanged</li><li>No campaign terms are altered mid-way</li></ul>"
           }
+        },
+        "tab_G8M8iG": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Transparency & Updates",
+            "tab_handle": "transparency_updates"
+          }
+        },
+        "faq_AArfnM": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "transparency_updates",
+            "question": "How can I track what’s happening during the campaign?",
+            "answer": "<p>very project is tracked through The Kitchen Ledger.<br/>It provides:</p><ul><li>Funding progress</li><li>Production milestones</li><li>Visual updates</li><li>Delivery timelines</li></ul><p>All updates are time-stamped and remain accessible.</p>"
+          }
+        },
+        "faq_hANViY": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "transparency_updates",
+            "question": "What is The Kitchen Ledger?",
+            "answer": "<p>The Kitchen Ledger is project's transparency dashboard. It exists to ensure contributors always know where the project stands and what comes next.</p>"
+          }
         }
       },
       "block_order": [
@@ -275,7 +298,10 @@
         "faq_ktqRx6",
         "faq_gJChJK",
         "faq_7jrrQN",
-        "faq_NfQQHU"
+        "faq_NfQQHU",
+        "tab_G8M8iG",
+        "faq_AArfnM",
+        "faq_hANViY"
       ],
       "name": "FAQs Tab",
       "settings": {
