@@ -300,7 +300,7 @@
           "settings": {
             "tab_handle": "delivery_timelines_quality",
             "question": "Are delivery timelines guaranteed?",
-            "answer": ""
+            "answer": "<p>No.<br/>Delivery timelines are estimated, not guaranteed.<br/>For activated campaigns, fulfillment is typically planned within 8–10 weeks after the campaign closes. This includes production prep, manufacturing, quality checks, packing, and dispatch.<br/><br/>Because everything is built only after activation, timelines can vary based on product complexity, vendors, and real-world production conditions. We don’t rush or artificially shorten timelines just to promise speed.</p>"
           }
         },
         "faq_UHAmz4": {
@@ -308,7 +308,7 @@
           "settings": {
             "tab_handle": "delivery_timelines_quality",
             "question": "What if there is a delay?",
-            "answer": ""
+            "answer": "<p>If there’s a delay, we communicate it openly.<br/>Delays can happen due to factors like supply chain issues, regulatory changes, logistics disruptions, or other force-majeure situations. <br/>When that happens:</p><ul><li>Updated timelines are shared transparently</li><li>Progress and reasons are communicated via official campaign channels and the Ludic Ledger</li></ul><p>Delays don’t mean the project is stalled or cancelled. They mean we’re choosing to build it right, not rushed.</p>"
           }
         }
       },
