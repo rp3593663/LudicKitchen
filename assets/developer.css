@@ -2677,6 +2677,12 @@ input.edit_account_input.disabled {
     #saveProfileBtn {
         margin-top: 50px;
     }
+    a.logout_link {
+        font-size: 14px!important;
+        line-height: 14px!important;
+        letter-spacing: -.42px!important;
+        margin-left: 16px!important;
+    }
 }
 
 
