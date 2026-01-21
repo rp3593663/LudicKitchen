@@ -155,13 +155,48 @@
             "question": "Is this similar to crowd-funding platforms?",
             "answer": "<p>There are similarities in spirit, but the structure is different.<br/>Ludic Kitchen is run directly by Ludic, with contributions converting into products, access, or Ludic Credit not third-party rewards. It’s also designed specifically for Indian consumers and regulations.</p>"
           }
+        },
+        "tab_FHEXpU": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Participation & Contribution",
+            "tab_handle": "participation_contribution"
+          }
+        },
+        "faq_epdnp8": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "participation_contribution",
+            "question": "How do I participate in Ludic Kitchen?",
+            "answer": "<p>When a Ludic Kitchen project is live, you can participate by choosing a contribution tier.<br/><br/>Each tier includes:</p><ul><li>Access to the creation journey</li><li>The Ludic Kitchen product from that project</li><li>Tier-specific privileges like voting, previews, or recognition</li><li>In certain tiers, Ludic Credit for future use</li></ul><p>You can participate actively or simply follow along.</p>"
+          }
+        },
+        "faq_w7DYc3": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "participation_contribution",
+            "question": "What are the contribution tiers?",
+            "answer": "<p>There are three contribution tiers for you to pick: </p><ul><li>The Taster - entry-level participation </li><li>The Sous Chef - deeper creative involvement </li><li>The Head Chef - long-term, legacy-level participation </li></ul><p>These tiers decide how close you work with the project in the Kitchen. <br/>All tiers receive the core product created through the Kitchen.</p>"
+          }
+        },
+        "faq_LBBDMa": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "participation_contribution",
+            "question": "Why should I participate in Ludic Kitchen?",
+            "answer": "<p>Because it offers a more transparent, intentional way to support and create products you care about.</p><ul><li>You receive the product.</li><li>You follow the process.</li><li>You know how it was made.</li></ul>"
+          }
         }
       },
       "block_order": [
         "tab_cnwFF6",
         "faq_8LRBtC",
         "faq_t4j7b4",
-        "faq_mtAW7n"
+        "faq_mtAW7n",
+        "tab_FHEXpU",
+        "faq_epdnp8",
+        "faq_w7DYc3",
+        "faq_LBBDMa"
       ],
       "name": "FAQs Tab",
       "settings": {
