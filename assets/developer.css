@@ -1385,7 +1385,7 @@ div#resend-otp {
     position: relative;
 }
 .sotp-widget .olWrapper .ol .update-user-box .login-header:after {
-    content: "Use the method you originally signed up with";
+    content: "The email you're trying to use is not registered with Ludic Kitchen.";
     display: block;
     font-weight: 400;
     font-size: 14px;
