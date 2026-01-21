@@ -90,7 +90,7 @@
                         {% assign goal_amount = project_product.metafields.custom.project_goal | default: 1 %}
 
                         {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount %}
-                        {% assign progress = progress | round: 2 %}
+                        {% assign progress = progress | round: 0 %}
                         {% if progress > 100 %}
                         {% assign progress = 100 %}
                         {% endif %}
