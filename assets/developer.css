@@ -464,6 +464,9 @@ a.go_btn {
     letter-spacing: -0.72px;
     color: #C4C4C4;
 }
+a.faq_btn.theme_btn {
+    margin-top: 100px;
+}
 .faq-tab img {
     opacity: 0.3;
     filter: grayscale(1);
