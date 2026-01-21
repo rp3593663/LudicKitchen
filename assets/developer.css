@@ -75,7 +75,7 @@ ul.list-menu.list-menu--inline {
 .header__menu-item {
     padding: 0;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 650;
     color: #1E1E1E;
     letter-spacing: -0.84px;
 }
@@ -205,7 +205,7 @@ a#HeaderMenu-shop {
     letter-spacing: -1.6px;
 }
 .steps_top p {
-    font-weight: 700;
+    font-weight: 650;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: -1.2px;
@@ -297,7 +297,7 @@ a#HeaderMenu-shop {
     padding: 24px 40px 32px;
 } 
 h3.project_title {
-    font-weight: 700;
+    font-weight: 650;
     font-size: 32px;
     line-height: 42px;
     letter-spacing: -1.6px;
@@ -341,7 +341,7 @@ h3.project_title {
     gap: 4px;
 }
 .count_data h5 {
-    font-weight: 700;
+    font-weight: 650;
     font-size: 22px;
     line-height: 25px;
     letter-spacing: -1.1px;
@@ -359,7 +359,7 @@ h3.project_title {
 .raised_goal {
     display: grid;
     gap: 6px;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 22px;
     line-height: 25px;
     letter-spacing: -1.1px;
@@ -573,7 +573,7 @@ a.faq_btn.theme_btn {
 }
 .progress_data h2 {
     margin: 0px;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 30px;
     line-height: 27px;
     letter-spacing: -1.5px;
@@ -657,7 +657,7 @@ p.goal_info {
     margin: 0px;
 }
 p.goal_info span{
-    font-weight: 700;
+    font-weight: 650;
 }
 .project_progress_right {
     display: grid;
@@ -747,7 +747,7 @@ p.goal_info span{
     background: #E7E7E7;
     padding: 6px 10px;
     border-radius: 2px;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 8px;
     line-height: 10px;
     letter-spacing: -0.4px;
@@ -776,7 +776,7 @@ p.goal_info span{
 }
 .gauge-center h2 {
     margin: 0;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: -1px;
@@ -829,7 +829,7 @@ p.goal_info span{
     margin-top: 24px;
 }
 .pdp_muticolumn .multicolumn-card__info h3 {
-    font-weight: 700;
+    font-weight: 650;
     font-size: 24px;
     line-height: 24px;
     color: var(--primary_color);
@@ -915,7 +915,7 @@ p.goal_info span{
 }
 .tier_title h3 {
     margin: 0;
-    font-weight: 700;
+    font-weight: 650;
     font-style: Italic;
     font-size: 26px;
     line-height: 26px;
@@ -976,7 +976,7 @@ p.goal_info span{
 }
 .tier_price .sale_price {
     font-family: Inter;
-    font-weight: 700;
+    font-weight: 650;
     font-size: 34px;
     line-height: 34px;
     letter-spacing: -1.7px;
@@ -1069,7 +1069,7 @@ p.goal_info span{
     align-items: center;
 }
 .tier_benefits_head h2 {
-    font-weight: 700;
+    font-weight: 650;
     font-style: Italic;
     font-size: 25px;
     line-height: 30px;
@@ -1562,7 +1562,7 @@ img.account_head_logo {
     margin-bottom: 32px;
 }
 .account_head_info h2 {
-    font-weight: 700;
+    font-weight: 650;
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.9px;
@@ -2230,7 +2230,7 @@ input.edit_account_input.disabled {
         flex: 1;
         font-size: 18px;
         line-height: 18px;
-        font-weight: 700;
+        font-weight: 650;
         letter-spacing: -0.9px;
         color: var(--black);
     }
