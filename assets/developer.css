@@ -784,8 +784,8 @@ p.goal_info span{
 }
 .gauge-center span {
     font-weight: 500;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     letter-spacing: -0.5px;
 }
 .tier_wised_contribution h3.title {
