@@ -246,7 +246,7 @@
           "settings": {
             "tab_handle": "campaign_activation_cancellation_outcomes",
             "question": "What if the campaign does not reach the activation threshold?",
-            "answer": ""
+            "answer": "<p>If the campaign doesn’t reach the activation threshold, the project doesn’t move forward.<br/>All contributions are returned as full refunds, no questions asked.<br/><br/>Nothing is forced into production, and nothing is held back quietly.</p>"
           }
         },
         "faq_NfQQHU": {
