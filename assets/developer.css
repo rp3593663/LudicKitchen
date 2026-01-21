@@ -458,10 +458,10 @@ a.go_btn {
     gap: 8px;
     font-family: 'Inter';
     align-items: center;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: -0.72px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.6px;
     color: #C4C4C4;
 }
 a.faq_btn.theme_btn {
@@ -477,6 +477,7 @@ a.faq_btn.theme_btn {
 }
 .faq-tab.active{
   color: var(--primary_color);
+  font-weight: 600;
 }
 .faqs_left_content {
     display: flex;
