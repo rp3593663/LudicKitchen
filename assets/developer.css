@@ -2227,6 +2227,7 @@ input.edit_account_input.disabled {
         line-height: 18px;
         font-weight: 700;
         letter-spacing: -0.9px;
+        color: var(--black);
     }
     .step_icon {
         font-size: 20px;
