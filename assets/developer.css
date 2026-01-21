@@ -1860,6 +1860,7 @@ input.edit_account_input.disabled {
     pointer-events: none;
     background: #efefef;
     opacity: 1!important;
+    color: #555555;
 }
 .phone_edit_field span {
     font-size: 13px;
