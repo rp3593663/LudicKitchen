@@ -2586,7 +2586,7 @@ input.edit_account_input.disabled {
     .tier_benefits_head {
         padding: 16px 0;
         grid-template-columns: 2fr 1fr 1fr 1fr;
-        border-top: 1px dotted #1A1A1A;
+        border-top: 1px dotted #949494;
     }
     .tier_benefit_yes_no img {
         width: 16px;
