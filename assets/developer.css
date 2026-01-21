@@ -1524,13 +1524,14 @@ span.error-message-phone, .error-message {
     color: var(--primary_color);
     font-weight: 600;
 }
+.loader-innerDiv {
+    display: none!important;
+}
 /* 
 .customFieldsBox {
     display: none;
 }
-.loader-innerDiv {
-    display: none!important;
-}
+
 .toast-box-wrapper {
     display: none!important;
 } */
