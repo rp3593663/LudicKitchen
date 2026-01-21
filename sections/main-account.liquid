@@ -255,15 +255,16 @@
               <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
               <div id="formMessage" class="form-message"></div>
             </div>
+            <a href="{{ routes.account_logout_url }}" class="logout_link">
+              <span class="svg-wrapper">
+                {{- 'icon-account.svg' | inline_asset_content -}}
+              </span>
+              {{ 'customer.log_out' | t }}
+            </a>
           </div>
         </form>
       </div>
-      <a href="{{ routes.account_logout_url }}">
-          <span class="svg-wrapper">
-            {{- 'icon-account.svg' | inline_asset_content -}}
-          </span>
-          {{ 'customer.log_out' | t }}
-        </a>
+      
       {% comment %} <div>
         <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
         <a href="{{ routes.account_logout_url }}">
