@@ -561,7 +561,7 @@
           "settings": {
             "tab_handle": "comfort",
             "question": "Are Ludic Clogs comfortable for all-day wear and long walks?",
-            "answer": "<p>(Clubs: <em>All-day comfort</em> + <em>long walks / travel / daily commute</em>)</p><p><em>Yes. Ludic Clogs are built for extended wear — from daily movement to long travel days, across seasons.</em></p><p><em>The footbed is made from soft EVA foam (35–40A Shore hardness) for cushioning and shock absorption, paired with a firmer TPU outsole for stability, grip, and durability. The relaxed fit and breathable construction help reduce fatigue over time.</em></p>"
+            "answer": "<p>(Clubs: All-day comfort + long walks / travel / daily commute)</p><p>Yes. Ludic Clogs are built for extended wear — from daily movement to long travel days, across seasons.</p><p>The footbed is made from soft EVA foam (35–40A Shore hardness) for cushioning and shock absorption, paired with a firmer TPU outsole for stability, grip, and durability. The relaxed fit and breathable construction help reduce fatigue over time.</p>"
           }
         },
         "faq_MUtwiY": {
@@ -569,7 +569,7 @@
           "settings": {
             "tab_handle": "comfort",
             "question": "Will Ludic Clogs cause sweating or odor?",
-            "answer": "<p>(Stands alone, but related to comfort)</p><p><em>Ludic Clogs feature integrated side air vents that allow continuous airflow and reduce heat build-up.</em></p><p><em>While no closed footwear can completely eliminate sweating, the ventilated design improves breathability and keeps the foot cooler during prolonged wear.</em></p>"
+            "answer": "<p>(Stands alone, but related to comfort)</p><p>Ludic Clogs feature integrated side air vents that allow continuous airflow and reduce heat build-up.</p><p>While no closed footwear can completely eliminate sweating, the ventilated design improves breathability and keeps the foot cooler during prolonged wear.</p>"
           }
         },
         "faq_jKR3ji": {
@@ -577,7 +577,7 @@
           "settings": {
             "tab_handle": "comfort",
             "question": "What does “relaxed fit” mean in footwear?",
-            "answer": "<p>(Clubs: <em>Are they unisex?</em> + <em>men’s/women’s vs universal sizing</em>)</p><p><em>A relaxed fit refers to footwear that isn’t designed to tightly hug or lock the foot in place.</em></p><p><em>Clogs belong to a category of slip-on footwear without laces or multi-point adjustments, unlike sneakers that rely on tightening systems to secure the foot. Because there’s no lace structure to fine-tune fit, clogs are intentionally designed with a slightly roomier shape that allows natural foot movement, easier on-off wear.</em></p>"
+            "answer": "<p>(Clubs: Are they unisex? + men’s/women’s vs universal sizing)</p><p>A relaxed fit refers to footwear that isn’t designed to tightly hug or lock the foot in place.</p><p>Clogs belong to a category of slip-on footwear without laces or multi-point adjustments, unlike sneakers that rely on tightening systems to secure the foot. Because there’s no lace structure to fine-tune fit, clogs are intentionally designed with a slightly roomier shape that allows natural foot movement, easier on-off wear.</p>"
           }
         },
         "tab_hxhwgy": {
@@ -592,7 +592,7 @@
           "settings": {
             "tab_handle": "sizing",
             "question": "How do I choose the right size for Ludic Clogs?",
-            "answer": "<p>(Clubs: <em>How do I choose the right size?</em> + <em>How do I measure my foot correctly?</em>)</p><p><em>Ludic Clogs are designed with a relaxed, true-to-size fit for Indian foot profiles. Choose the size you normally wear in your everyday footwear, especially from the likes of a crocs.</em></p><p><em>If you prefer to measure, place your foot flat on the floor and measure from heel to toe using a measuring tape or steel scale. Match the length to our size guide for the most accurate fit.</em></p>"
+            "answer": "<p>(Clubs: How do I choose the right size? + How do I measure my foot correctly?)</p><p>Ludic Clogs are designed with a relaxed, true-to-size fit for Indian foot profiles. Choose the size you normally wear in your everyday footwear, especially from the likes of a crocs.</p><p>If you prefer to measure, place your foot flat on the floor and measure from heel to toe using a measuring tape or steel scale. Match the length to our size guide for the most accurate fit.</p>"
           }
         },
         "faq_EF9zyH": {
@@ -600,7 +600,46 @@
           "settings": {
             "tab_handle": "sizing",
             "question": "Are Ludic Clogs unisex, and how does the sizing work?",
-            "answer": "<p>(Clubs: <em>Are they unisex?</em> + <em>men’s/women’s vs universal sizing</em>)</p><p><em>Yes, Ludic Clogs follow a unisex sizing system. Sizes UK 3–6 are graded for women, while sizes above are graded for men. If you’re a woman with larger feet, we recommend using the centimetre (cm) measurement as a reference to select the best fit.</em></p>"
+            "answer": "<p>(Clubs: Are they unisex? + men’s/women’s vs universal sizing)</p><p>Yes, Ludic Clogs follow a unisex sizing system. Sizes UK 3–6 are graded for women, while sizes above are graded for men. If you’re a woman with larger feet, we recommend using the centimetre (cm) measurement as a reference to select the best fit.</p>"
+          }
+        },
+        "tab_HF3nAw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Material & Build",
+            "tab_handle": "material_build"
+          }
+        },
+        "faq_HQKGhV": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "material_build",
+            "question": "What materials are Ludic Clogs made from, and are they waterproof?",
+            "answer": "<p>(Clubs: material used + waterproof / sweat-resistant)</p><p>Ludic Clogs are made using EVA, a non-porous material that doesn’t absorb water. This allows the clogs to dry quickly and handle moisture with ease. They’re water-resistant and easy to clean, making them suitable for wet environments like pool sides, beaches, rainy days and everyday spills.</p>"
+          }
+        },
+        "faq_LQWPQC": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "material_build",
+            "question": "What makes Ludic Clogs different from other clogs?",
+            "answer": "<p>(Clubs: What makes them different? + What problem are they solving?)</p><p>Ludic Clogs are designed as a complete system rather than a single product. Comfort, grip, breathability, and visual language are developed together, seen in the dual-material construction, wave-pattern footbed, side air vents, and elastic woven back straps. Each element connects back to Ludic’s design philosophy, making the clogs adaptable, customisable, and part of a larger ecosystem rather than a usual one-off slip-on.</p>"
+          }
+        },
+        "faq_Kxhrtf": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "material_build",
+            "question": "Can you explain the dual-density construction of Ludic Clogs?",
+            "answer": "<p>(Clubs: Talk about dual density / dual part construction + Comfortable EVA + Grippy TPU)</p><p>Ludic Clogs use two materials to deliver both comfort and durability. The body is made from soft EVA that provides cushioning and ease for long wear, while the outsole is crafted from grippier  TPU to improve stability , and resistance to wear.<em> </em></p>"
+          }
+        },
+        "faq_dCjD3U": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "material_build",
+            "question": "What colors and design options will Ludic Clogs be available in?",
+            "answer": "<p>(Clubs: What colors? + design direction)</p><p>The final colourways are community-driven.</p><p>Backers participate in voting and selection rounds, helping shape the final design before production. Every release reflects collective input.</p>"
           }
         }
       },
@@ -611,7 +650,12 @@
         "faq_jKR3ji",
         "tab_hxhwgy",
         "faq_Q96dx8",
-        "faq_EF9zyH"
+        "faq_EF9zyH",
+        "tab_HF3nAw",
+        "faq_HQKGhV",
+        "faq_LQWPQC",
+        "faq_Kxhrtf",
+        "faq_dCjD3U"
       ],
       "name": "FAQs Tab",
       "settings": {
