@@ -36,6 +36,34 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const OFFSET = 100;
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId.length <= 1) return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - OFFSET;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+});
+</script>
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const verifyBox = document.querySelector(".sotp-widget .olWrapper .ol");
