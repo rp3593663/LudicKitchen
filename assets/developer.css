@@ -1876,6 +1876,7 @@ input.edit_account_input.disabled {
     line-height: 13px;
     letter-spacing: -0.39px;
     font-family: var(--font-family);
+    color: var(--black);
 }
 .edit_account_field select {
     appearance: none;
@@ -1884,6 +1885,7 @@ input.edit_account_input.disabled {
     background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/down_arrow.svg?v=1768821846);
     background-repeat: no-repeat;
     background-position: right 12px center;
+    color: var(--black);
 }
 .edit_account_field input::placeholder,
 .edit_account_field select.edit_account_input.is-empty-select{
