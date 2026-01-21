@@ -279,6 +279,37 @@
             "question": "What is The Kitchen Ledger?",
             "answer": "<p>The Kitchen Ledger is project's transparency dashboard. It exists to ensure contributors always know where the project stands and what comes next.</p>"
           }
+        },
+        "tab_bq9c46": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Delivery, Timelines & Quality",
+            "tab_handle": "delivery_timelines_quality"
+          }
+        },
+        "faq_7rMLbH": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "delivery_timelines_quality",
+            "question": "When will I receive my product?",
+            "answer": "<p>Products are typically delivered 8–10 weeks after the campaign closes.<br/>Fulfillment happens in stages based on contribution tiers to maintain quality and clarity.</p>"
+          }
+        },
+        "faq_64A7kX": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "delivery_timelines_quality",
+            "question": "Are delivery timelines guaranteed?",
+            "answer": ""
+          }
+        },
+        "faq_UHAmz4": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "delivery_timelines_quality",
+            "question": "What if there is a delay?",
+            "answer": ""
+          }
         }
       },
       "block_order": [
@@ -301,7 +332,11 @@
         "faq_NfQQHU",
         "tab_G8M8iG",
         "faq_AArfnM",
-        "faq_hANViY"
+        "faq_hANViY",
+        "tab_bq9c46",
+        "faq_7rMLbH",
+        "faq_64A7kX",
+        "faq_UHAmz4"
       ],
       "name": "FAQs Tab",
       "settings": {
