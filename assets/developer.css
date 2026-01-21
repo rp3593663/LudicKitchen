@@ -519,7 +519,8 @@ a.go_btn {
   max-height .45s ease,
   opacity .35s ease;
 }
-.faq-answer p {
+.faq-answer p,
+.faq-answer li {
     margin: 0px;
     font-weight: 400;
     font-size: 14px;
