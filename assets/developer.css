@@ -1850,11 +1850,16 @@ input.edit_account_input.phone_input {
     top: 13px;
     left: 15px;
 }
+input.edit_account_input.disabled {
+    pointer-events: none;
+    background: #efefef;
+    opacity: 1!important;
+}
 .phone_edit_field span {
     font-size: 13px;
     line-height: 13px;
     letter-spacing: -0.39px;
-    color: #1a1a1a;
+    color: #555555;
     font-weight: 500;
     position: absolute;
     left: 45px;
