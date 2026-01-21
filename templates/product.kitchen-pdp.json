@@ -486,8 +486,8 @@
         "fullwidth": false,
         "padding": "",
         "margin": "",
-        "icon_yes": "shopify://shop_images/benefits_true.svg",
-        "icon_no": "shopify://shop_images/benefits_false.svg"
+        "icon_yes": "shopify://shop_images/Frame.svg",
+        "icon_no": "shopify://shop_images/Frame-1.svg"
       }
     },
     "how_works_qkYpfj": {
