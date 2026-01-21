@@ -579,13 +579,39 @@
             "question": "What does “relaxed fit” mean in footwear?",
             "answer": "<p>(Clubs: <em>Are they unisex?</em> + <em>men’s/women’s vs universal sizing</em>)</p><p><em>A relaxed fit refers to footwear that isn’t designed to tightly hug or lock the foot in place.</em></p><p><em>Clogs belong to a category of slip-on footwear without laces or multi-point adjustments, unlike sneakers that rely on tightening systems to secure the foot. Because there’s no lace structure to fine-tune fit, clogs are intentionally designed with a slightly roomier shape that allows natural foot movement, easier on-off wear.</em></p>"
           }
+        },
+        "tab_hxhwgy": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Sizing",
+            "tab_handle": "sizing"
+          }
+        },
+        "faq_Q96dx8": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "sizing",
+            "question": "How do I choose the right size for Ludic Clogs?",
+            "answer": "<p>(Clubs: <em>How do I choose the right size?</em> + <em>How do I measure my foot correctly?</em>)</p><p><em>Ludic Clogs are designed with a relaxed, true-to-size fit for Indian foot profiles. Choose the size you normally wear in your everyday footwear, especially from the likes of a crocs.</em></p><p><em>If you prefer to measure, place your foot flat on the floor and measure from heel to toe using a measuring tape or steel scale. Match the length to our size guide for the most accurate fit.</em></p>"
+          }
+        },
+        "faq_EF9zyH": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "sizing",
+            "question": "Are Ludic Clogs unisex, and how does the sizing work?",
+            "answer": "<p>(Clubs: <em>Are they unisex?</em> + <em>men’s/women’s vs universal sizing</em>)</p><p><em>Yes, Ludic Clogs follow a unisex sizing system. Sizes UK 3–6 are graded for women, while sizes above are graded for men. If you’re a woman with larger feet, we recommend using the centimetre (cm) measurement as a reference to select the best fit.</em></p>"
+          }
         }
       },
       "block_order": [
         "tab_dpnmxj",
         "faq_fBQJHx",
         "faq_MUtwiY",
-        "faq_jKR3ji"
+        "faq_jKR3ji",
+        "tab_hxhwgy",
+        "faq_Q96dx8",
+        "faq_EF9zyH"
       ],
       "name": "FAQs Tab",
       "settings": {
