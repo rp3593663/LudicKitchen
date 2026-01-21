@@ -123,29 +123,53 @@
 
                     <!-- Progress + Button -->
                     <div class="tier_progress_btn">
-                      {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                      {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
+                      {%- comment -%}
+  Time-based progress bar
+  Metafield: product.metafields.custom.project_goal_start_date
+  Total duration: 15 days
+{%- endcomment -%}
 
-                      {% if total_tier_goal > 0 %}
-                          {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
-                      {% else %}
-                          {% assign tier_progress = 0 %}
-                      {% endif %}
+{% assign goal_start_date = product.metafields.custom.project_goal_start_date %}
+{% assign total_days = 15 %}
 
-                      {% if tier_progress > 100 %}
-                          {% assign tier_progress = 100 %}
-                      {% endif %}
+{% if goal_start_date != blank %}
 
-                      {% assign tier_bar_width = tier_progress %}
-                      {% if tier_bar_width < 2 %}
-                          {% assign tier_bar_width = 2 %}
-                      {% endif %}
-                      <div class="tier_progress_bar">
-                        <div class="tier_track segmented">
-                          <div class="tier_track_progress_fill" style="width: {{ tier_bar_width }}%;">
-                          </div>
-                        </div>  
-                      </div>
+  {%- assign goal_start_ts = goal_start_date | date: "%s" -%}
+  {%- assign today_ts = 'now' | date: "%s" -%}
+
+  {%- assign seconds_passed = today_ts | minus: goal_start_ts -%}
+  {%- assign days_passed = seconds_passed | divided_by: 86400 -%}
+
+  {%- assign tier_progress = days_passed | times: 100.0 | divided_by: total_days | round: 2 -%}
+
+{% else %}
+  {% assign tier_progress = 0 %}
+{% endif %}
+
+{%- comment -%} Clamp progress between 0 and 100 {%- endcomment -%}
+{% if tier_progress > 100 %}
+  {% assign tier_progress = 100 %}
+{% endif %}
+
+{% if tier_progress < 0 %}
+  {% assign tier_progress = 0 %}
+{% endif %}
+
+{%- comment -%} Minimum visible bar width {%- endcomment -%}
+{% assign tier_bar_width = tier_progress %}
+{% if tier_bar_width < 2 %}
+  {% assign tier_bar_width = 2 %}
+{% endif %}
+
+<div class="tier_progress_bar">
+  <div class="tier_track segmented">
+    <div
+      class="tier_track_progress_fill"
+      style="width: {{ tier_bar_width }}%;"
+    ></div>
+  </div>
+</div>
+
 
                       <!-- Direct Checkout Link -->
                       <button type="button" class="theme_btn tier_btn js-tier-checkout" data-variant-id="{{ variant.id }}">
