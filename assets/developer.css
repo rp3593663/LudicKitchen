@@ -2037,6 +2037,12 @@ input.edit_account_input.disabled {
 .account_content > div.active {
   display: block;
 }
+.account_dashboard {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    min-height: 100vh;
+    height: 100vh;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
