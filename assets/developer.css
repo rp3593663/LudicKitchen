@@ -2178,6 +2178,10 @@ input.edit_account_input.disabled {
     .sidebar_borders {
         border-top: 2px dotted #C7C8CA;
     }
+    .account_nav {
+        gap: 24px;
+        margin: 30px 0px;
+    }
     .account_sidebar.is-open {
         transform: translateX(0);
     }
