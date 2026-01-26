@@ -2116,10 +2116,7 @@ input.edit_account_input.disabled {
         line-height: 18px;
         letter-spacing: -0.9px;
         margin: 0;
-        padding: 20px 18px;
-        background: var(--white);
-        border-top: 1px solid #F0F0F0;
-        border-bottom: 1px solid #F0F0F0;
+        padding: 10px 18px 20px;
     }
     .dashboard_content_area {
         border: unset;
