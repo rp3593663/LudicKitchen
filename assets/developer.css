@@ -2054,6 +2054,11 @@ input.edit_account_input.disabled {
     justify-content: flex-start;
     padding: 32px 44px 0px;
 }
+.sidebar_header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
