@@ -2175,6 +2175,7 @@ input.edit_account_input.disabled {
         flex-direction: column;
         justify-content: space-between;
         padding: 40px 18px 20px;
+        gap: 50px;
     }
     .sidebar_borders {
         border-top: 2px dotted #C7C8CA;
