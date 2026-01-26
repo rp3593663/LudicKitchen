@@ -2110,6 +2110,9 @@ input.edit_account_input.disabled {
     }
 }
 @media(max-width: 1023px){
+    .desktop_sidebar_content{
+        display: none;
+    }
     .account_sidebar_mobile {
         padding: 12px 18px;
         display: flex;
