@@ -2122,11 +2122,7 @@ input.edit_account_input.disabled {
         position: absolute;
         right: 18px;
         top: 18px;
-    }
-    .sidebar_header img {
-        width: 130px;
-        height: auto;
-    }
+    }  
     .main_account_head h2 {
         font-weight: 650;
         font-size: 18px;
