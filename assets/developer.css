@@ -2175,14 +2175,11 @@ input.edit_account_input.disabled {
         border-top: 2px dotted #C7C8CA;
     }
     .account_nav {
-        gap: 24px;
+        gap: 16px;
         margin: 30px 0px;
     }
     .account_nav .nav_link {
         gap: 8px;
-        font-size: 16px;
-        line-height: 16px;
-        letter-spacing: -.48px;
         color: var(--black);
     }
     .account_nav .nav_link svg{
