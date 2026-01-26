@@ -618,7 +618,7 @@ a.faq_btn.theme_btn {
     font-weight: 500;
     font-size: 10px;
     line-height: 10.85px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
 }
 .milestone-tooltip:before {
     content: "";
