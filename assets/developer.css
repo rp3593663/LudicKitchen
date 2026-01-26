@@ -2165,9 +2165,13 @@ input.edit_account_input.disabled {
         height: 100vh;
         background: #fff;
         z-index: 9999;
-        transform: translateX(-100%);
-        transition: 0.3s ease;
-    }
+        transform: translate(-100%);
+        transition: .3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 18px 20px;
+    }   
     .account_sidebar.is-open {
         transform: translateX(0);
     }
