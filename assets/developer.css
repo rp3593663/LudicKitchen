@@ -2195,13 +2195,13 @@ input.edit_account_input.disabled {
         height: 24px;
     }
     .account_nav .nav_link svg path{
-    stroke: var(--black);
+        stroke: var(--black);
     }
     .account_nav .nav_link.active{
-    color: var(--primary_color);
+        color: var(--primary_color);
     }
     .account_nav .nav_link.active svg path{
-    stroke: var(--primary_color);
+        stroke: var(--primary_color);
     }
     .account_sidebar.is-open {
         transform: translateX(0);
