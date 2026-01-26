@@ -2076,6 +2076,7 @@ input.edit_account_input.disabled {
     line-height: 14px;
     letter-spacing: -0.42px;
     color: #949598;
+    cursor: pointer;
 }
 .account_nav .nav_link svg{
     min-width: 16px;
