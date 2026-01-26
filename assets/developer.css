@@ -2098,6 +2098,7 @@ input.edit_account_input.disabled {
     border-radius: 16px;
     margin-right: 22px;
     min-height: calc(100dvh - 130px);
+    height: calc(100dvh - 130px);
     overflow: auto;
 }
 @media(min-width: 1024px){
