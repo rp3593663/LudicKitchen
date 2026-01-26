@@ -2796,6 +2796,9 @@ input.edit_account_input.disabled {
         letter-spacing: -.42px!important;
         margin-left: 16px!important;
     }
+    .profile_edit_form .form-message {
+        width: fit-content;
+    }
 }
 
 
