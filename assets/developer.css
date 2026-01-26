@@ -2075,6 +2075,12 @@ input.edit_account_input.disabled {
     font-size: 14px;
     line-height: 14px;
     letter-spacing: -0.42px;
+    color: #949598;
+}
+.account_nav .nav_link svg{
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
 }
 @media(min-width: 1024px){
     .account_sidebar_mobile,
