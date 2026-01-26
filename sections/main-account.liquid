@@ -159,41 +159,82 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav_link");
-  const contentBlocks = document.querySelectorAll(".account_content > div");
-  const sidebar = document.querySelector(".account_sidebar");
-  const toggleBtnOpen = document.querySelector(".nav_toggle_open");
-  const toggleBtnClose = document.querySelector(".nav_toggle_close");
-  function activateTab(name) {
-    navLinks.forEach(l => l.classList.remove("active"));
-    contentBlocks.forEach(c => c.classList.remove("active"));
-    const activeLink = document.querySelector(`.nav_link[data-nav="${name}"]`);
-    const activeContent = document.querySelector(`[data-content="${name}"]`);
-    if (activeLink) activeLink.classList.add("active");
-    if (activeContent) activeContent.classList.add("active");
-  }
-  activateTab("profile");
-  navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      const tab = this.dataset.nav;
-      activateTab(tab);
-      if (window.innerWidth < 992) {
-        sidebar.classList.remove("is-open");
-        document.body.classList.remove("sidebar-open");
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav_link");
+    const contentBlocks = document.querySelectorAll(".account_content > div");
+    const sidebar = document.querySelector(".account_sidebar");
+    const toggleBtnOpen = document.querySelector(".nav_toggle_open");
+    const toggleBtnClose = document.querySelector(".nav_toggle_close");
+
+    function activateTab(name, pushHash = true) {
+      navLinks.forEach(l => l.classList.remove("active"));
+      contentBlocks.forEach(c => c.classList.remove("active"));
+
+      const activeLink = document.querySelector(`.nav_link[data-nav="${name}"]`);
+      const activeContent = document.querySelector(`[data-content="${name}"]`);
+
+      if (activeLink) activeLink.classList.add("active");
+      if (activeContent) activeContent.classList.add("active");
+
+      // Update URL hash
+      if (pushHash) {
+        history.replaceState(null, "", "#" + name);
+      }
+    }
+
+    // ====== OPEN TAB FROM URL HASH ======
+    let initialTab = window.location.hash.replace("#", "");
+    const allowedTabs = ["profile", "ledger", "refer", "faqs", "contact"];
+
+    if (!allowedTabs.includes(initialTab)) {
+      initialTab = "profile";
+    }
+
+    activateTab(initialTab, false);
+
+    // ===== CLICK HANDLERS =====
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        const tab = this.dataset.nav;
+
+        // Logout bypass
+        if (tab === "logout") {
+          window.location.href = "/account/logout";
+          return;
+        }
+
+        activateTab(tab);
+
+        // Close sidebar on mobile
+        if (window.innerWidth < 992) {
+          sidebar.classList.remove("is-open");
+          document.body.classList.remove("sidebar-open");
+        }
+      });
+    });
+
+    // ===== TOGGLES =====
+    toggleBtnOpen.addEventListener("click", function () {
+      sidebar.classList.add("is-open");
+      document.body.classList.add("sidebar-open");
+    });
+
+    toggleBtnClose.addEventListener("click", function () {
+      sidebar.classList.remove("is-open");
+      document.body.classList.remove("sidebar-open");
+    });
+
+    // ===== HANDLE BACK/FORWARD BUTTON =====
+    window.addEventListener("hashchange", function () {
+      const tab = window.location.hash.replace("#", "");
+      if (allowedTabs.includes(tab)) {
+        activateTab(tab, false);
       }
     });
+
   });
-  toggleBtnOpen.addEventListener("click", function () {
-    sidebar.classList.add("is-open");
-    document.body.classList.add("sidebar-open");
-  });
-  toggleBtnClose.addEventListener("click", function () {
-    sidebar.classList.remove("is-open");
-    document.body.classList.remove("sidebar-open");
-  });
-});
 </script>
+
 
 <script>
   const form = document.getElementById('profile-form');
