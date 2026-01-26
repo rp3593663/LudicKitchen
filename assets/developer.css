@@ -2126,6 +2126,7 @@ input.edit_account_input.disabled {
         /* border-radius: 0; */
         width: calc(100% - 30px);
         margin: auto;
+        min-height: calc(100vh - 170px);
     }
     .account_dashboard_content {
         margin-top: 0px;
