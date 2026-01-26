@@ -105,7 +105,7 @@
         <a href="{{ shop.url }}">
           <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966">
         </a>
-        <div class="nav_toggle">
+        <div class="nav_toggle_open">
           <span class="hamburger">☰</span>
         </div>
       </div>
@@ -114,7 +114,7 @@
           <a href="{{ shop.url }}">
             <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966">
           </a>
-          <div class="nav_toggle">
+          <div class="nav_toggle_close">
             <span class="hamburger">✕</span>
           </div>
         </div>
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav_link");
   const contentBlocks = document.querySelectorAll(".account_content > div");
   const sidebar = document.querySelector(".account_sidebar");
-  const toggleBtn = document.querySelector(".nav_toggle");
+  const toggleBtn = document.querySelector(".nav_toggle_open");
 
   // ===== SET DEFAULT TAB =====
   function activateTab(name) {
