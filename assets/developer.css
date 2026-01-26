@@ -725,7 +725,7 @@ p.goal_info span{
     font-weight: 500;
     font-size: 15px;
     line-height: 15px;
-    letter-spacing: -0.75px;
+    letter-spacing: -0.45px;
 }
 
 .days-gauge {
@@ -2601,12 +2601,12 @@ input.edit_account_input.disabled {
     .tier_current_reached_data span {
         font-size: 8px;
         line-height: 8px;
-        letter-spacing: -.4px;
+        letter-spacing: -.24px;
     }
     p.goal_info {
         font-size: 8px;
         line-height: 12px;
-        letter-spacing: -.4px;
+        letter-spacing: -.24px;
     }
     .days-gauge {
         border-radius: 8px;
