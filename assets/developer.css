@@ -2128,11 +2128,6 @@ input.edit_account_input.disabled {
 .ledger_content_area .raised_progress_track {
     height: 12px;
 }
-.ledger_content_area .gauge-svg {
-    width: 200px;
-    height: 116px;
-    display: block;
-}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
