@@ -2030,15 +2030,17 @@ input.edit_account_input.disabled {
     height: 100dvh;
     align-items: flex-start;
 }
-.sidebar_content {
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
+.account_sidebar {
     min-height: 100dvh;
     height: 100dvh;
     overflow-y: auto;
     justify-content: flex-start;
     padding: 32px 42px 0px;
+}
+.sidebar_content{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
 }
 .sidebar_header a {
     display: flex;
