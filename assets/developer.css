@@ -2103,7 +2103,8 @@ input.edit_account_input.disabled {
 }
 @media(min-width: 1024px){
     .account_sidebar_mobile,
-    .account_sidebar .nav_toggle_close {
+    .account_sidebar .nav_toggle_close,
+    .mobile_sidebar_content {
         display: none;
     }
 }
