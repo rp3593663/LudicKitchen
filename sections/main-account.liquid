@@ -211,8 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav_link");
   const contentBlocks = document.querySelectorAll(".account_content > div");
   const sidebar = document.querySelector(".account_sidebar");
-  const toggleBtn = document.querySelector(".nav_toggle_open");
-
+  const toggleBtnOpen = document.querySelector(".nav_toggle_open");
+  const toggleBtnClose = document.querySelector(".nav_toggle_close");
+  
   // ===== SET DEFAULT TAB =====
   function activateTab(name) {
     navLinks.forEach(l => l.classList.remove("active"));
