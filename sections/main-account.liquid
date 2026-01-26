@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.querySelector(".account_sidebar");
   const toggleBtnOpen = document.querySelector(".nav_toggle_open");
   const toggleBtnClose = document.querySelector(".nav_toggle_close");
-  
+
   // ===== SET DEFAULT TAB =====
   function activateTab(name) {
     navLinks.forEach(l => l.classList.remove("active"));
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ===== TOGGLE SIDEBAR =====
-  toggleBtn.addEventListener("click", function () {
+  toggleBtnOpen.addEventListener("click", function () {
     sidebar.classList.toggle("is-open");
     document.body.classList.toggle("sidebar-open");
   });
