@@ -2092,6 +2092,9 @@ input.edit_account_input.disabled {
 .account_nav .nav_link.active svg path{
    stroke: var(--black);
 }
+.account_dashboard_content {
+    margin-top: 76px;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
