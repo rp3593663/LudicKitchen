@@ -383,7 +383,6 @@
           <div class="dashboard_content_area">
             <div class="ledger_content_area">
               {% if customer and customer.orders.size > 0 %}
-====== {{ customer.orders.size }}
                 {% for order in customer.orders %}
                   {% for line_item in order.line_items %}
                     {% assign product = line_item.product %}
