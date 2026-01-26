@@ -160,42 +160,30 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
   const navLinks = document.querySelectorAll(".nav_link");
   const contentBlocks = document.querySelectorAll(".account_content > div");
   const sidebar = document.querySelector(".account_sidebar");
   const toggleBtnOpen = document.querySelector(".nav_toggle_open");
   const toggleBtnClose = document.querySelector(".nav_toggle_close");
-
-  // ===== SET DEFAULT TAB =====
   function activateTab(name) {
     navLinks.forEach(l => l.classList.remove("active"));
     contentBlocks.forEach(c => c.classList.remove("active"));
-
     const activeLink = document.querySelector(`.nav_link[data-nav="${name}"]`);
     const activeContent = document.querySelector(`[data-content="${name}"]`);
-
     if (activeLink) activeLink.classList.add("active");
     if (activeContent) activeContent.classList.add("active");
   }
-
   activateTab("profile");
-
-  // ===== MENU CLICK =====
   navLinks.forEach(link => {
     link.addEventListener("click", function () {
       const tab = this.dataset.nav;
       activateTab(tab);
-
-      // Close sidebar on mobile
       if (window.innerWidth < 992) {
         sidebar.classList.remove("is-open");
         document.body.classList.remove("sidebar-open");
       }
     });
   });
-
-  // ===== TOGGLE SIDEBAR =====
   toggleBtnOpen.addEventListener("click", function () {
     sidebar.classList.add("is-open");
     document.body.classList.add("sidebar-open");
