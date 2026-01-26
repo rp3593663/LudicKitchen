@@ -1899,6 +1899,7 @@ input.edit_account_input.disabled {
 }
 
 .avatar-preview {
+  min-width: 56px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
