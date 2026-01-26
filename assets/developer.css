@@ -2037,7 +2037,11 @@ input.edit_account_input.disabled {
 .account_content > div.active {
   display: block;
 }
-
+@media(min-width: 1024px){
+    .account_sidebar_mobile {
+        display: none;
+    }
+}
 @media(max-width: 1023px){
     .account_sidebar {
         position: fixed;
