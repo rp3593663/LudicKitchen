@@ -2122,9 +2122,9 @@ input.edit_account_input.disabled {
     .dashboard_content_area {
         border: unset;
         background: var(--grey);
-        padding: 15px 18px;
+        padding: 15px;
         /* border-radius: 0; */
-        width: calc(100% - 32px);
+        width: calc(100% - 30px);
         margin: auto;
     }
     .account_dashboard_content {
