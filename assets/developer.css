@@ -2122,6 +2122,12 @@ input.edit_account_input.disabled {
     grid-template-columns: 1.34fr 0.66fr;
     gap: 16px;
 }
+.ledger_content_area .progress_data>* {
+    gap: 12px;
+}
+.ledger_content_area .raised_progress_track {
+    height: 12px;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
