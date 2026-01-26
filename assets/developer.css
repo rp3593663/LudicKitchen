@@ -2147,7 +2147,6 @@ input.edit_account_input.disabled {
         z-index: 9999;
         transform: translateX(-100%);
         transition: 0.3s ease;
-        box-shadow: 0 0 40px rgba(0,0,0,0.2);
     }
     .account_sidebar.is-open {
         transform: translateX(0);
