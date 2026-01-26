@@ -2107,7 +2107,9 @@ input.edit_account_input.disabled {
     display: grid;
     gap: 40px;
 }
-.ledger_content_area .project_progress_left {
+.ledger_content_area .project_progress_left,
+.ledger_content_area .project_progress_right .total_backers_data, 
+.ledger_content_area .tier_wised_contribution {
     background: var(--white);
     border-radius: 12px;
 }
