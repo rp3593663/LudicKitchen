@@ -2044,6 +2044,15 @@ input.edit_account_input.disabled {
     height: 100vh;
     align-items: flex-start;
 }
+.account_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
