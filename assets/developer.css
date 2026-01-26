@@ -2175,6 +2175,9 @@ input.edit_account_input.disabled {
         justify-content: space-between;
         padding: 40px 18px 20px;
     }
+    .sidebar_borders {
+        border-top: 2px dotted #C7C8CA;
+    }
     .account_sidebar.is-open {
         transform: translateX(0);
     }
