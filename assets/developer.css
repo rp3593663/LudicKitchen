@@ -2140,8 +2140,8 @@ input.edit_account_input.disabled {
         position: fixed;
         top: 0;
         left: 0;
-        width: 85%;
-        max-width: 360px;
+        width: 100%;
+        max-width: 400px;
         height: 100vh;
         background: #fff;
         z-index: 9999;
