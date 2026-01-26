@@ -2104,6 +2104,9 @@ input.edit_account_input.disabled {
     }
 }
 @media(max-width: 1023px){
+    .account_dashboard {
+        grid-template-columns: 1fr;
+    }
     .account_sidebar {
         position: fixed;
         top: 0;
@@ -2117,15 +2120,12 @@ input.edit_account_input.disabled {
         transition: 0.3s ease;
         box-shadow: 0 0 40px rgba(0,0,0,0.2);
     }
-
     .account_sidebar.is-open {
         transform: translateX(0);
     }
-
     body.sidebar-open {
         overflow: hidden;
     }
-
     .nav_toggle {
         display: block;
         cursor: pointer;
