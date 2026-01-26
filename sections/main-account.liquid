@@ -125,7 +125,212 @@
             <h2>Account Details</h2>
           </div>
           <div class="dashboard_content_area">
-            Test Account Data
+            <form id="profile-form" class="profile_edit_form">
+          <input type="hidden" name="customer_id" value="{{ customer.id }}">
+          <div class="all_forms_field_blocks">
+            <div class="form_field_box">
+              <div class="field_head">
+                <h4>Profile Image</h4>
+                <p>This image appears in your profile, creator badge, comments.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                  <div class="profile_pic_field">
+                    <div class="profile-image-uploader">
+                      {% assign profile_img = customer.metafields.custom.profile_image %}
+                      <div class="avatar-preview" id="avatarPreview">
+                        {% if profile_img != blank %}
+                          <img src="{{ profile_img }}" id="avatarImg">
+                        {% else %}
+                          <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
+                        {% endif %}
+                      </div>
+                      <div class="avatar-actions_info">
+                        <div class="avatar-actions">
+                          <label class="upload-btn">
+                            Upload Image
+                            <input type="file" id="avatarInput" accept="image/*" hidden>
+                          </label>
+                          <button type="button" id="removeAvatar" class="remove-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.0062 14H6.9938C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#C6C6C6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <small>Recommended size: 120x120</small>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Your Full Name</h4>
+                <p>This will appear in all places you're involved as a co-creator.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="first_name" value="{{ customer.first_name }}" class="edit_account_input" placeholder="First Name">
+                   <div class="field-error"></div>
+                </div>
+                <div class="edit_account_field">
+                  <input name="last_name" value="{{ customer.last_name }}" class="edit_account_input" placeholder="Last Name">
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Registered Email Address</h4>
+                <p>This is the email address you used to sign up into the Kitchen.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                  <input name="email" value="{{ customer.email }}" class="edit_account_input disabled" placeholder="Email Address" disabled>
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Contact Number</h4>
+                <p>This is the contact you used to sign up into the Kitchen.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field phone_edit_field">
+                  <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_287_35)">
+                    <path d="M0 0H24V5.33333H0V0Z" fill="#FF9933"/>
+                    <path d="M0 5H24V10.3333H0V5Z" fill="white"/>
+                    <path d="M0 10.6667H24V16H0V10.6667Z" fill="#138808"/>
+                    <path d="M12.0004 9.60002C12.884 9.60002 13.6004 8.88368 13.6004 8.00002C13.6004 7.11637 12.884 6.40002 12.0004 6.40002C11.1167 6.40002 10.4004 7.11637 10.4004 8.00002C10.4004 8.88368 11.1167 9.60002 12.0004 9.60002Z" stroke="#000080" stroke-width="0.187135"/>
+                    <path d="M11.9998 8.16003C12.0882 8.16003 12.1598 8.08839 12.1598 8.00003C12.1598 7.91166 12.0882 7.84003 11.9998 7.84003C11.9115 7.84003 11.8398 7.91166 11.8398 8.00003C11.8398 8.08839 11.9115 8.16003 11.9998 8.16003Z" fill="#000080"/>
+                    <path d="M12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305ZM11.9998 9.25728V6.07599V9.25728ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305Z" fill="black"/>
+                    <path d="M12.4115 6.13021L11.5881 9.20305M12.7951 6.28909L11.2045 9.04418M13.1246 6.54186L10.8751 8.7914M13.3774 6.87131L10.6223 8.46195M13.5362 7.25494L10.4634 8.07833M13.5905 7.66663H10.4092M13.5362 8.07833L10.4634 7.25494M13.3774 8.46195L10.6223 6.87131M13.1246 8.7914L10.8751 6.54186M12.7951 9.04418L11.2045 6.28909M12.4115 9.20305L11.5881 6.13021M11.9998 9.25728V6.07599" stroke="#000080" stroke-width="0.0935673"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_287_35">
+                    <rect width="24" height="16" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  <span>+91</span>
+                  <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input phone_input disabled" placeholder="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" disabled>
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>About You</h4>
+                <p>Identify your gender and the years on earth.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                    <select name="gender" class="edit_account_input">
+                      <option value="">Select Gender</option>
+                      <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
+                      <option value="Female" {% if customer.metafields.custom.gender == "Female" %}selected{% endif %}>Female</option>
+                      <option value="Prefer not to say" {% if customer.metafields.custom.gender == "Prefer not to say" %}selected{% endif %}>Prefer not to say</option>
+                    </select>
+                   <div class="field-error"></div>
+                </div>
+                <div class="edit_account_field">
+                  <select name="age" class="edit_account_input">
+                    <option value="">Select Age</option>
+                    {% for i in (18..99) %}
+                      <option value="{{ i }}" {% if customer.metafields.custom.age == i %}selected{% endif %}>{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Socials</h4>
+                <p>Where else do you exist?</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="instagram" value="{{ customer.metafields.custom.instagram }}" class="edit_account_input" placeholder="Instagram">
+                   <div class="field-error"></div>
+                </div>
+                <div class="edit_account_field">
+                  <input name="twitter" value="{{ customer.metafields.custom.twitter }}" class="edit_account_input" placeholder="Twitter">
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Shipping Address</h4>
+                <p>This is where your co-created product will be delivered.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                   <input name="address1" value="{{ customer.default_address.address1 }}" class="edit_account_input" placeholder="Address Line 1">
+                   <div class="field-error"></div>
+                </div>
+                <div class="edit_account_field">
+                  <input name="address2" value="{{ customer.default_address.address2 }}" class="edit_account_input" placeholder="Address Line 2">
+                </div>
+                <div class="edit_account_col">
+                  <div class="edit_account_field">
+                    <input name="city" value="{{ customer.default_address.city }}" class="edit_account_input" placeholder="City / District">
+                    <div class="field-error"></div>
+                  </div>
+                  <div class="edit_account_field">
+                    <input name="province" value="{{ customer.default_address.province }}" class="edit_account_input" placeholder="State / Province">
+                    <div class="field-error"></div>
+                  </div>
+                </div>
+                <div class="edit_account_col">
+                  <div class="edit_account_field">
+                    <input name="zip" value="{{ customer.default_address.zip }}" class="edit_account_input" placeholder="Postal Code">
+                    <div class="field-error"></div>
+                  </div>
+                  <div class="edit_account_field">
+                    <input name="country" value="{{ customer.default_address.country }}" class="edit_account_input" placeholder="Country">
+                    <div class="field-error"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form_field_box">
+               <div class="field_head">
+                <h4>Footwear Size</h4>
+                <p>Measure your true fit for right comfort and wear.</p>
+              </div>
+              <div class="fields">
+                <div class="edit_account_field">
+                  <select name="shoe_size" class="edit_account_input">
+                    <option value="">Select Shoe Size</option>
+                    {% for i in (3..12) %}
+                      {% assign size_value = "UK " | append: i %}
+                      <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
+                        {{ size_value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                  <div class="field-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_submit_wrap">
+              <div class="save_btn">
+                <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
+                <a href="{{ routes.account_logout_url }}" class="logout_link">
+                  {{ 'customer.log_out' | t }}
+                </a>
+              </div>
+              <div id="formMessage" class="form-message"></div>
+            </div>
+            
+          </div>
+        </form>
           </div>
         </div>
         <div class="account_ledger account_dashboard_content" data-content="ledger">
