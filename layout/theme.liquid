@@ -330,7 +330,7 @@
     {%- endif -%}
 
     
-    {% unless template.name == 'login' or template.name == 'register' %}
+    {% unless template.name == 'login' or template.name == 'register' or template.name == 'account' %}
       {% sections 'header-group' %}
     {% endunless %}
 
