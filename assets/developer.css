@@ -2094,7 +2094,7 @@ input.edit_account_input.disabled {
     padding: 40px 30px;
     border-radius: 16px;
     margin-right: 22px;
-    max-height: calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
     overflow: auto;
 }
 @media(min-width: 1024px){
