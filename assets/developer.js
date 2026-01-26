@@ -10,55 +10,57 @@
 
 
 
-const TOTAL_DAYS = 60;
-const daysLeftEl = document.getElementById("leftDays");
-const DAYS_LEFT = parseInt(daysLeftEl.textContent, 10);
-const DAYS_PASSED = TOTAL_DAYS - DAYS_LEFT;
-const progressPercent = (DAYS_PASSED / TOTAL_DAYS) * 100;
-console.log(progressPercent);
+document.querySelectorAll(".days-gauge").forEach((gauge) => {
 
-document.getElementById("progressArc").setAttribute("stroke-dasharray", `${progressPercent} 100`);
+  const TOTAL_DAYS = parseInt(gauge.dataset.totalDays || 60);
 
-const ticksGroup = document.getElementById("gaugeTicks");
-const TICK_COUNT = 35;
+  const daysLeftEl = gauge.querySelector(".daysLeftNumber");
+  const DAYS_LEFT = parseInt(daysLeftEl.textContent, 10);
 
-const cx = 100;
-const cy = 100;
+  const DAYS_PASSED = TOTAL_DAYS - DAYS_LEFT;
+  const progressPercent = (DAYS_PASSED / TOTAL_DAYS) * 100;
 
-const outerRadius = 98;
-const innerMinor = 80;
-const innerMajor = 80;
+  const progressArc = gauge.querySelector(".progressArc");
+  progressArc.setAttribute("stroke-dasharray", `${progressPercent} 100`);
 
-for (let i = 0; i <= TICK_COUNT; i++) {
-  const angle = Math.PI * (i / TICK_COUNT);
-  const cos = Math.cos(Math.PI - angle);
-  const sin = Math.sin(Math.PI - angle);
+  const ticksGroup = gauge.querySelector(".gaugeTicks");
 
-  const isMajor = i % 5 === 0;
+  const TICK_COUNT = 35;
+  const cx = 100;
+  const cy = 100;
+  const outerRadius = 98;
+  const innerMinor = 80;
+  const innerMajor = 80;
 
-  const x1 = cx + outerRadius * cos;
-  const y1 = cy - outerRadius * sin;
+  ticksGroup.innerHTML = ""; // Clear old ticks
 
-  const x2 = cx + (isMajor ? innerMajor : innerMinor) * cos;
-  const y2 = cy - (isMajor ? innerMajor : innerMinor) * sin;
+  for (let i = 0; i <= TICK_COUNT; i++) {
+    const angle = Math.PI * (i / TICK_COUNT);
+    const cos = Math.cos(Math.PI - angle);
+    const sin = Math.sin(Math.PI - angle);
 
-  const tick = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "line"
-  );
+    const isMajor = i % 5 === 0;
 
-  tick.setAttribute("x1", x1);
-  tick.setAttribute("y1", y1);
-  tick.setAttribute("x2", x2);
-  tick.setAttribute("y2", y2);
+    const x1 = cx + outerRadius * cos;
+    const y1 = cy - outerRadius * sin;
+    const x2 = cx + (isMajor ? innerMajor : innerMinor) * cos;
+    const y2 = cy - (isMajor ? innerMajor : innerMinor) * sin;
 
-  // STYLE MATCHING IMAGE-2
-  tick.setAttribute("stroke", isMajor ? "#214ECF" : "#000");
-  tick.setAttribute("stroke-width", isMajor ? "2" : "1");
-  tick.setAttribute("stroke-linecap", "round");
+    const tick = document.createElementNS("http://www.w3.org/2000/svg", "line");
 
-  ticksGroup.appendChild(tick);
-}
+    tick.setAttribute("x1", x1);
+    tick.setAttribute("y1", y1);
+    tick.setAttribute("x2", x2);
+    tick.setAttribute("y2", y2);
+    tick.setAttribute("stroke", isMajor ? "#214ECF" : "#000");
+    tick.setAttribute("stroke-width", isMajor ? "2" : "1");
+    tick.setAttribute("stroke-linecap", "round");
+
+    ticksGroup.appendChild(tick);
+  }
+
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
