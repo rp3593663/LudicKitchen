@@ -2085,6 +2085,12 @@ input.edit_account_input.disabled {
 .account_nav .nav_link svg path{
    fill: #949598;
 }
+.account_nav .nav_link.active{
+   color: var(--black);
+}
+.account_nav .nav_link.active svg path{
+   fill: var(--black);
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
