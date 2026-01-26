@@ -2110,6 +2110,23 @@ input.edit_account_input.disabled {
         align-items: center;
         justify-content: space-between;
     }
+    .main_account_head h2 {
+        font-weight: 650;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.9px;
+        margin: 0;
+        padding: 20px 18px;
+        background: var(--white);
+        border-top: 1px solid #F0F0F0;
+        border-bottom: 1px solid #F0F0F0;
+    }
+    .dashboard_content_area {
+        border: unset;
+        background: var(--grey);
+        padding: 15px 18px;
+        border-radius: 0;
+    }
     .account_dashboard_content {
         margin-top: 0px;
     }
@@ -2744,23 +2761,6 @@ input.edit_account_input.disabled {
     }
     .section-customer_account .page-width {
         padding: 0px;
-    }
-    .main_account_head h2 {
-        font-weight: 650;
-        font-size: 18px;
-        line-height: 18px;
-        letter-spacing: -0.9px;
-        margin: 0;
-        padding: 20px 18px;
-        background: var(--white);
-        border-top: 1px solid #F0F0F0;
-        border-bottom: 1px solid #F0F0F0;
-    }
-    .dashboard_content_area {
-        border: unset;
-        background: var(--grey);
-        padding: 15px 18px;
-        border-radius: 0;
     }
     .all_forms_field_blocks {
         display: flex;
