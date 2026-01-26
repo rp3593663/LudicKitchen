@@ -2091,7 +2091,7 @@ input.edit_account_input.disabled {
 .dashboard_content_area {
     border: 1px solid #EFEFEF;
     background: var(--grey);
-    padding: 36px 45px;
+    padding: 40px 30px;
     border-radius: 16px;
     margin-right: 22px;
 }
