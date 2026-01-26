@@ -1750,7 +1750,7 @@ a.redirect_recover {
 .dashboard_content_area .form_field_box {
     background: #FFFFFF;
     border-radius: 12px;
-    padding: 18px 20px 36px;
+    padding: 20px;
 }
 .dashboard_content_area .field_head {
     display: grid;
