@@ -244,8 +244,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ===== TOGGLE SIDEBAR =====
   toggleBtnOpen.addEventListener("click", function () {
-    sidebar.classList.toggle("is-open");
-    document.body.classList.toggle("sidebar-open");
+    sidebar.classList.add("is-open");
+    document.body.classList.add("sidebar-open");
+  });
+  toggleBtnClose.addEventListener("click", function () {
+    sidebar.classList.remove("is-open");
+    document.body.classList.remove("sidebar-open");
   });
 
 });
