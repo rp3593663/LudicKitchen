@@ -2216,6 +2216,14 @@ input.edit_account_input.disabled {
         flex-wrap: wrap;
         gap: 12px 20px;
     }
+    .sidebar_footer_links a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.42px;
+        text-decoration: unset;
+        color: #949598;
+    }
 }
 
 @media(min-width: 768px){
