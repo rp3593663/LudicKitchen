@@ -681,7 +681,7 @@ p.goal_info span{
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
-    letter-spacing: -1.1px;
+    letter-spacing: -0.66px;
 }
 .total_backers_data .total_raised_progress_bar {
     margin: 16px 0px 16px;
@@ -795,7 +795,7 @@ p.goal_info span{
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
-    letter-spacing: -1.1px;
+    letter-spacing: -0.66px;
 }
 .all_variant-tier-contribution {
     display: grid;
