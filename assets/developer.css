@@ -2026,16 +2026,16 @@ input.edit_account_input.disabled {
 .account_dashboard {
     display: grid;
     grid-template-columns: 210px 1fr;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 100dvh;
+    height: 100dvh;
     align-items: flex-start;
 }
 .account_sidebar {
     display: flex;
     flex-direction: column;
     gap: 46px;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 100dvh;
+    height: 100dvh;
     overflow-y: auto;
     justify-content: flex-start;
     padding: 32px 42px 0px;
@@ -2095,7 +2095,7 @@ input.edit_account_input.disabled {
     padding: 40px 30px;
     border-radius: 16px;
     margin-right: 22px;
-    min-height: calc(100vh - 130px);
+    min-height: calc(100dvh - 130px);
     overflow: auto;
 }
 @media(min-width: 1024px){
@@ -2126,7 +2126,7 @@ input.edit_account_input.disabled {
         /* border-radius: 0; */
         width: calc(100% - 30px);
         margin: auto;
-        min-height: calc(100vh - 170px);
+        min-height: calc(100dvh - 170px);
     }
     .account_dashboard_content {
         margin-top: 0px;
@@ -2143,7 +2143,7 @@ input.edit_account_input.disabled {
         left: 0;
         width: 100%;
         max-width: 400px;
-        height: 100vh;
+        height: 100dvh;
         background: #fff;
         z-index: 9999;
         transform: translateX(-100%);
