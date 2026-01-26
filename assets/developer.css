@@ -2063,6 +2063,10 @@ input.edit_account_input.disabled {
     width: 95px;
     height: auto;
 }
+.account_nav {
+    display: grid;
+    gap: 22px;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
