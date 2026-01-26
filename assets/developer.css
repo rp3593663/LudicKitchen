@@ -2111,6 +2111,11 @@ input.edit_account_input.disabled {
         align-items: center;
         justify-content: space-between;
     }
+    .nav_toggle_close {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+    }
     .main_account_head h2 {
         font-weight: 650;
         font-size: 18px;
