@@ -2223,6 +2223,9 @@ input.edit_account_input.disabled {
         letter-spacing: -0.42px;
         text-decoration: unset;
         color: #949598;
+        display: flex;
+        align-items: center;
+        gap: 4px;
     }
 }
 
