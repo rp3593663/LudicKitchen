@@ -50,6 +50,54 @@
 	{%- endif -%}
 {%- endstyle -%}
 
+
+<style>
+  /******** TAB CONTENT ********/
+.account_content > div {
+  display: none;
+}
+.account_content > div.active {
+  display: block;
+}
+
+/******** ACTIVE MENU ********/
+.account_nav .nav_link.active {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+/******** MOBILE SIDEBAR ********/
+@media (max-width: 991px) {
+  .account_sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 360px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  }
+
+  .account_sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  .nav_toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+</style>
+
 <div class="kretoss-section section-customer_account">
   <div class="{{ container }}" {{ max_width }}>
     <div class="account_dashboard">
