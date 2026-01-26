@@ -2059,6 +2059,10 @@ input.edit_account_input.disabled {
     align-items: center;
     justify-content: center;
 }
+.sidebar_header img {
+    width: 95px;
+    height: auto;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close {
