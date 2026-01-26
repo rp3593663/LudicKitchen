@@ -2110,8 +2110,7 @@ input.edit_account_input.disabled {
         align-items: center;
         justify-content: space-between;
     }
-    .account_sidebar_mobile img.account_logo
-account_logo {
+    .account_sidebar_mobile img.account_logo {
         width: 95px;
     }
     .account_dashboard {
