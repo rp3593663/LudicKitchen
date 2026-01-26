@@ -1747,12 +1747,6 @@ a.redirect_recover {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
-.dashboard_content_area {
-    border: 1px solid #EFEFEF;
-    background: var(--grey);
-    padding: 36px 45px;
-    border-radius: 16px;
-}
 .dashboard_content_area .form_field_box {
     background: #FFFFFF;
     border-radius: 12px;
@@ -2093,6 +2087,13 @@ input.edit_account_input.disabled {
     letter-spacing: -1.2px;
     vertical-align: middle;
     margin: 0px 0px 15px;
+}
+.dashboard_content_area {
+    border: 1px solid #EFEFEF;
+    background: var(--grey);
+    padding: 36px 45px;
+    border-radius: 16px;
+    margin-right: 22px;
 }
 @media(min-width: 1024px){
     .account_sidebar_mobile,
