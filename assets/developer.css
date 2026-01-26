@@ -2104,6 +2104,15 @@ input.edit_account_input.disabled {
     }
 }
 @media(max-width: 1023px){
+    .account_sidebar_mobile {
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .account_sidebar_mobile img {
+        width: 95px;
+    }
     .account_dashboard {
         grid-template-columns: 1fr;
     }
