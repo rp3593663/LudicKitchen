@@ -1756,23 +1756,23 @@ a.redirect_recover {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
-.account_dashboard_content {
+.dashboard_content_area {
     border: 1px solid #EFEFEF;
     background: var(--grey);
     padding: 36px 45px;
     border-radius: 16px;
 }
-.account_dashboard_content .form_field_box {
+.dashboard_content_area .form_field_box {
     background: #FFFFFF;
     border-radius: 12px;
     padding: 18px 20px 36px;
 }
-.account_dashboard_content .field_head {
+.dashboard_content_area .field_head {
     display: grid;
     gap: 8px;
     margin-bottom: 20px;
 }
-.account_dashboard_content .field_head h4 {
+.dashboard_content_area .field_head h4 {
     margin: 0px;
     font-weight: 600;
     font-size: 18px;
@@ -1781,7 +1781,7 @@ a.redirect_recover {
     vertical-align: middle;
     color: var(--primary_color);
 }
-.account_dashboard_content .field_head p {
+.dashboard_content_area .field_head p {
     margin: 0px;
     font-weight: 400;
     font-size: 13px;
@@ -1790,7 +1790,7 @@ a.redirect_recover {
     vertical-align: middle;
     color: #838383;
 }
-.account_dashboard_content .form_field_box .fields {
+.dashboard_content_area .form_field_box .fields {
     display: grid;
     gap: 12px;
 }
@@ -2739,7 +2739,7 @@ input.edit_account_input.disabled {
         border-top: 1px solid #F0F0F0;
         border-bottom: 1px solid #F0F0F0;
     }
-    .account_dashboard_content {
+    .dashboard_content_area {
         border: unset;
         background: var(--grey);
         padding: 15px 18px;
@@ -2750,13 +2750,13 @@ input.edit_account_input.disabled {
         flex-direction: column;
         gap: 22px;
     }
-    .account_dashboard_content .form_field_box {
+    .dashboard_content_area .form_field_box {
         padding: 20px;
     }
-    .account_dashboard_content .field_head {
+    .dashboard_content_area .field_head {
         margin-bottom: 22px;
     }
-    .account_dashboard_content .field_head p {
+    .dashboard_content_area .field_head p {
         font-size: 12px;
         line-height: 16px;
         letter-spacing: -.36px;
