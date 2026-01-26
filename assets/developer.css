@@ -3,7 +3,7 @@
     --black: #1A1A1A;
     --white: #FFFFFF;
     --grey: #F9F9F9;
-    --grey_dark: #949598;
+    --grey_text: #949598;
     --font-family: "Inter", sans-serif;
 }
 body{
@@ -964,7 +964,7 @@ p.goal_info span{
     font-size: 14px;
     line-height: 14px;
     letter-spacing: -0.7px;
-    color: #949598;
+    color: var(--grey_text);
 }
 .tier_price_block {
     margin: 34px 0px;
@@ -997,7 +997,7 @@ p.goal_info span{
     font-size: 13px;
     line-height: 13px;
     letter-spacing: -0.39px;
-    color: #949598;
+    color: var(--grey_text);
 }
 .tier_progress_btn {
     display: grid;
@@ -1207,7 +1207,7 @@ div#resend-otp {
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
-    color: #949598!important;
+    color: var(--grey_text)!important;
     font-size: 11px!important;
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
@@ -1217,7 +1217,7 @@ div#resend-otp {
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text {
     font-size: 11px!important;
-    color: #949598;
+    color: var(--grey_text);
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
     font-weight: 400!important;
@@ -1260,7 +1260,7 @@ div#resend-otp {
     line-height: 14px!important;
     letter-spacing: -0.42px!important;
     text-align: left!important;
-    color: #949598!important;
+    color: var(--grey_text)!important;
     margin: 0 0 32px!important;
 }
 .simply-otp-wrapper .olWrapper .ol .input-box-content, 
@@ -1320,7 +1320,7 @@ div#resend-otp {
 .simply-otp-wrapper .olWrapper .ol .verify-box .mn-container p, 
 .sotp-widget .olWrapper .ol .verify-box .mn-container p {
     margin: 0 4px 0 0!important;
-    color: #949598!important;
+    color: var(--grey_text)!important;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
@@ -1371,7 +1371,7 @@ div#resend-otp {
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .resend-otp p, 
 .sotp-widget .olWrapper .ol .verify-box .resend-otp p {
-    color: #949598!important;
+    color: var(--grey_text)!important;
     margin: 12px 0 0px!important;
     font-weight: 400;
     font-size: 14px!important;
@@ -1400,7 +1400,7 @@ div#resend-otp {
     letter-spacing: -0.42px;
     text-align: left;
     vertical-align: middle;
-    color: #949598;
+    color: var(--grey_text);
     margin-top: 10px;
 }
 .sotp-widget .update-user-box .input-box-content label {
@@ -1455,7 +1455,7 @@ span.error-message-phone, .error-message {
     line-height: 15px;
     letter-spacing: -0.3px;
     vertical-align: middle;
-    color: #949598;
+    color: var(--grey_text);
 }
 .simply-otp-wrapper .update-user-box .update-checkbox-wrapper, .sotp-widget .update-user-box .update-checkbox-wrapper {
     align-items: center!important;
@@ -1578,7 +1578,7 @@ img.account_head_logo {
     line-height: 14px;
     letter-spacing: -0.42px;
     text-align: left;
-    color: #949598;
+    color: var(--grey_text);
     margin: 0px;
 }
 .account_footer {
@@ -2064,7 +2064,7 @@ input.edit_account_input.disabled {
     font-size: 14px;
     line-height: 14px;
     letter-spacing: -0.42px;
-    color: #949598;
+    color: var(--grey_text);
     cursor: pointer;
     text-decoration: unset;
 }
@@ -2074,7 +2074,7 @@ input.edit_account_input.disabled {
     height: 16px;
 }
 .account_nav .nav_link svg path{
-   stroke: #949598;
+   stroke: var(--grey_text);
 }
 .account_nav .nav_link.active{
    color: var(--black);
@@ -2223,7 +2223,7 @@ input.edit_account_input.disabled {
         line-height: 20px;
         letter-spacing: -0.42px;
         text-decoration: unset;
-        color: #949598;
+        color: var(--grey_text);
         display: flex;
         align-items: center;
         gap: 4px;
@@ -2806,7 +2806,7 @@ input.edit_account_input.disabled {
         text-align: justify;
         padding: 8px 0px 0px;
         border-top: dotted 1px #949494;
-        color:#949598;
+        color:var(--grey_text);
     }
     .tier_benefits.active{
         padding: 16px 0 8px;
