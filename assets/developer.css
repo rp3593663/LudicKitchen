@@ -2065,10 +2065,7 @@ input.edit_account_input.disabled {
     letter-spacing: -0.42px;
     color: #949598;
     cursor: pointer;
-}
-.account_nav .nav_link a{
     text-decoration: unset;
-    color: #949598;
 }
 .account_nav .nav_link svg{
     min-width: 16px;
