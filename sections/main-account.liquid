@@ -382,215 +382,218 @@
           </div>
           <div class="dashboard_content_area">
             <div class="ledger_content_area">
-              {% for order in customer.orders %}
-                {% for line_item in order.line_items %}
-                  {% assign product = line_item.product %}
-                  {% if product != blank %}
-                    <div class="project_progress_inner">
-                      <div class="project_progress_left">
-                          {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
-                          {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
-                          {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
-                          {% if progress > 100 %}
-                              {% assign progress = 100 %}
-                          {% endif %}
+              {% if customer and customer.orders.size > 0 %}
+                1
+                {% for order in customer.orders %}
+                  {% for line_item in order.line_items %}
+                    {% assign product = line_item.product %}
+                    {% if product != blank %}
+                      <div class="project_progress_inner">
+                        <div class="project_progress_left">
+                            {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+                            {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
+                            {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+                            {% if progress > 100 %}
+                                {% assign progress = 100 %}
+                            {% endif %}
 
-                          {% assign bar_width = progress %}
-                          {% if bar_width < 2 %}
-                              {% assign bar_width = 2 %}
-                          {% endif %}
+                            {% assign bar_width = progress %}
+                            {% if bar_width < 2 %}
+                                {% assign bar_width = 2 %}
+                            {% endif %}
 
-                          {% assign raised = raised_amount | times: 1.0 %}
-                          {% if raised >= 10000000 %}
-                              {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
-                          {% elsif raised >= 100000 %}
-                              {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
-                          {% else %}
-                              {% assign raised_display = raised | money_without_currency %}
-                          {% endif %}
+                            {% assign raised = raised_amount | times: 1.0 %}
+                            {% if raised >= 10000000 %}
+                                {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif raised >= 100000 %}
+                                {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign raised_display = raised | money_without_currency %}
+                            {% endif %}
 
-                          {% assign goal = goal_amount | times: 1.0 %}
-                          {% if goal >= 10000000 %}
-                              {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
-                          {% elsif goal >= 100000 %}
-                              {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
-                          {% else %}
-                              {% assign goal_display = goal | money_without_currency %}
-                          {% endif %}
+                            {% assign goal = goal_amount | times: 1.0 %}
+                            {% if goal >= 10000000 %}
+                                {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif goal >= 100000 %}
+                                {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign goal_display = goal | money_without_currency %}
+                            {% endif %}
 
-                          <div class="goal_progress">
-                              <div class="progress_data">
-                                  <div class="goal_raised">
-                                      <h2>₹ {{ raised_display }}</h2>
-                                      <span>Raised till now</span>
-                                  </div>
-                                  <div class="goal_total">
-                                      <h2>₹ {{ goal_display }}</h2>
-                                      <span>Our total goal</span>
-                                  </div>
-                              </div>
-                              <div class="goal_raised_progress_bar">
-                                  <div class="raised_progress_track">
-                                      <div class="progress_fill" style="width: {{ bar_width }}%;"> </div>
-                                      <div class="milestone-75" style="--milestone_percentage: 75%;">
-                                          <span class="milestone-tooltip">Production starts from here</span>
+                            <div class="goal_progress">
+                                <div class="progress_data">
+                                    <div class="goal_raised">
+                                        <h2>₹ {{ raised_display }}</h2>
+                                        <span>Raised till now</span>
+                                    </div>
+                                    <div class="goal_total">
+                                        <h2>₹ {{ goal_display }}</h2>
+                                        <span>Our total goal</span>
+                                    </div>
+                                </div>
+                                <div class="goal_raised_progress_bar">
+                                    <div class="raised_progress_track">
+                                        <div class="progress_fill" style="width: {{ bar_width }}%;"> </div>
+                                        <div class="milestone-75" style="--milestone_percentage: 75%;">
+                                            <span class="milestone-tooltip">Production starts from here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total_raised_percentage">
+                                    <h3>{{ progress }}%</h3><span>Raised</span>
+                                </div>
+                                <p class="goal_info">Projects reaching <span>70-74%</span> may move into production, with Ludic bridging the remaining gap.</p>
+                            </div>
+                        </div>
+                        <div class="project_progress_right">
+                              <div class="top_data">
+
+                                  {% assign current_backers = 0 %}
+                                  {% assign target_backers = 0 %}
+
+                                  {% for variant in product.variants %}
+                                      {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                                      {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
+
+                                      {% assign current_backers = current_backers | plus: variant_current %}
+                                      {% assign target_backers = target_backers | plus: variant_total %}
+                                  {% endfor %}
+
+                                  {% if target_backers > 0 %}
+                                  {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
+                                  {% else %}
+                                  {% assign backers_progress = 0 %}
+                                  {% endif %}
+
+                                  {% if backers_progress > 100 %}
+                                  {% assign backers_progress = 100 %}
+                                  {% endif %}
+
+                                  {% assign backers_bar_width = backers_progress %}
+                                  {% if backers_bar_width < 2 %}
+                                  {% assign backers_bar_width = 2 %}
+                                  {% endif %}
+
+                                  <div class="total_backers_data">
+                                  <h4>Total Backers</h4>
+                                  <div class="total_raised_progress_bar">
+                                      <div class="total_backers_track">
+                                      <div
+                                          class="total_backers_progress_fill"
+                                          style="width: {{ backers_bar_width }}%;">
+                                      </div>
                                       </div>
                                   </div>
+                                  <div class="total_backers_percentage">
+                                      <h3>{{ current_backers }}</h3>
+                                      <span>Backers</span>
+                                  </div>
+                                  </div>
+
+                                  <div class="days-gauge">
+                                      {% assign total_days = 60 %}
+                                      {% assign start_date = product.metafields.custom.project_goal_start_date %}
+                                      {% assign start_ts = start_date | date: "%s" %}
+                                      {% assign today_ts = "now" | date: "%s" %}
+                                      {% assign seconds_diff = today_ts | minus: start_ts %}
+                                      {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
+                                      {% assign days_left = total_days | minus: days_passed %}
+                                      {% if days_left < 0 %}
+                                          {% assign days_left = 0 %}
+                                      {% endif %}
+                                      {% if days_left > total_days %}
+                                          {% assign days_left = total_days %}
+                                      {% endif %}
+                                      <div class="gauge-header">
+                                          <h3>Days</h3>
+                                          <span class="early-end">
+                                          Early ends in <strong id="leftDays">{{ days_left }} Days</strong>
+                                          </span>
+                                      </div>
+                                      <div class="gauge-wrapper">
+                                          <svg viewBox="0 0 200 120" class="gauge-svg">
+                                          <g id="gaugeTicks"></g>
+
+                                          <path
+                                              d="M30 100 A70 70 0 0 1 170 100"
+                                              fill="none"
+                                              stroke="#D9D9D9"
+                                              stroke-width="5"
+                                              pathLength="100"
+                                          />
+
+                                          <path
+                                              id="progressArc"
+                                              d="M30 100 A70 70 0 0 1 170 100"
+                                              fill="none"
+                                              stroke="#214ECF"
+                                              stroke-width="5"
+                                              stroke-linecap="round"
+                                              pathLength="100"
+                                              stroke-dasharray="0 100"
+                                          />
+                                          </svg>
+
+                                          <div class="gauge-center">
+                                          <h2 id="daysLeft">{{ days_left }}</h2>
+                                          <span>Days left</span>
+                                          </div>
+                                      </div>
+                                  </div>
+
                               </div>
-                              <div class="total_raised_percentage">
-                                  <h3>{{ progress }}%</h3><span>Raised</span>
+
+                              <div class="bottom_data">
+                                  <div class="tier_wised_contribution">
+                                  <h3 class="title">Tier wise contribution</h3>
+
+                                  <div class="all_variant-tier-contribution">
+                                      {% for variant in product.variants %}
+
+                                      {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                                      {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
+
+                                      {% if total_tier_goal > 0 %}
+                                          {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
+                                      {% else %}
+                                          {% assign tier_progress = 0 %}
+                                      {% endif %}
+
+                                      {% if tier_progress > 100 %}
+                                          {% assign tier_progress = 100 %}
+                                      {% endif %}
+
+                                      {% assign tier_bar_width = tier_progress %}
+                                      {% if tier_bar_width < 2 %}
+                                          {% assign tier_bar_width = 2 %}
+                                      {% endif %}
+
+                                      <div class="variant-tier-contribution">
+                                          <div class="tier_raised_progress_bar">
+                                              <div class="total_backers_track">
+                                                  <div
+                                                  class="total_backers_progress_fill"
+                                                  style="width: {{ tier_bar_width }}%;">
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                          <div class="tier_current_reached_data">
+                                              <h3>{{ current_reached_goal }}</h3>
+                                              <span>{{ variant.title }}</span>
+                                          </div>
+                                      </div>
+
+                                      {% endfor %}
+                                  </div>
+                                  </div>
                               </div>
-                              <p class="goal_info">Projects reaching <span>70-74%</span> may move into production, with Ludic bridging the remaining gap.</p>
-                          </div>
-                      </div>
-                      <div class="project_progress_right">
-                            <div class="top_data">
-
-                                {% assign current_backers = 0 %}
-                                {% assign target_backers = 0 %}
-
-                                {% for variant in product.variants %}
-                                    {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                                    {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
-
-                                    {% assign current_backers = current_backers | plus: variant_current %}
-                                    {% assign target_backers = target_backers | plus: variant_total %}
-                                {% endfor %}
-
-                                {% if target_backers > 0 %}
-                                {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
-                                {% else %}
-                                {% assign backers_progress = 0 %}
-                                {% endif %}
-
-                                {% if backers_progress > 100 %}
-                                {% assign backers_progress = 100 %}
-                                {% endif %}
-
-                                {% assign backers_bar_width = backers_progress %}
-                                {% if backers_bar_width < 2 %}
-                                {% assign backers_bar_width = 2 %}
-                                {% endif %}
-
-                                <div class="total_backers_data">
-                                <h4>Total Backers</h4>
-                                <div class="total_raised_progress_bar">
-                                    <div class="total_backers_track">
-                                    <div
-                                        class="total_backers_progress_fill"
-                                        style="width: {{ backers_bar_width }}%;">
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="total_backers_percentage">
-                                    <h3>{{ current_backers }}</h3>
-                                    <span>Backers</span>
-                                </div>
-                                </div>
-
-                                <div class="days-gauge">
-                                    {% assign total_days = 60 %}
-                                    {% assign start_date = product.metafields.custom.project_goal_start_date %}
-                                    {% assign start_ts = start_date | date: "%s" %}
-                                    {% assign today_ts = "now" | date: "%s" %}
-                                    {% assign seconds_diff = today_ts | minus: start_ts %}
-                                    {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
-                                    {% assign days_left = total_days | minus: days_passed %}
-                                    {% if days_left < 0 %}
-                                        {% assign days_left = 0 %}
-                                    {% endif %}
-                                    {% if days_left > total_days %}
-                                        {% assign days_left = total_days %}
-                                    {% endif %}
-                                    <div class="gauge-header">
-                                        <h3>Days</h3>
-                                        <span class="early-end">
-                                        Early ends in <strong id="leftDays">{{ days_left }} Days</strong>
-                                        </span>
-                                    </div>
-                                    <div class="gauge-wrapper">
-                                        <svg viewBox="0 0 200 120" class="gauge-svg">
-                                        <g id="gaugeTicks"></g>
-
-                                        <path
-                                            d="M30 100 A70 70 0 0 1 170 100"
-                                            fill="none"
-                                            stroke="#D9D9D9"
-                                            stroke-width="5"
-                                            pathLength="100"
-                                        />
-
-                                        <path
-                                            id="progressArc"
-                                            d="M30 100 A70 70 0 0 1 170 100"
-                                            fill="none"
-                                            stroke="#214ECF"
-                                            stroke-width="5"
-                                            stroke-linecap="round"
-                                            pathLength="100"
-                                            stroke-dasharray="0 100"
-                                        />
-                                        </svg>
-
-                                        <div class="gauge-center">
-                                        <h2 id="daysLeft">{{ days_left }}</h2>
-                                        <span>Days left</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="bottom_data">
-                                <div class="tier_wised_contribution">
-                                <h3 class="title">Tier wise contribution</h3>
-
-                                <div class="all_variant-tier-contribution">
-                                    {% for variant in product.variants %}
-
-                                    {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                                    {% assign total_tier_goal = variant.metafields.custom.total_tier_goal | default: 0 %}
-
-                                    {% if total_tier_goal > 0 %}
-                                        {% assign tier_progress = current_reached_goal | times: 100.0 | divided_by: total_tier_goal | round: 2 %}
-                                    {% else %}
-                                        {% assign tier_progress = 0 %}
-                                    {% endif %}
-
-                                    {% if tier_progress > 100 %}
-                                        {% assign tier_progress = 100 %}
-                                    {% endif %}
-
-                                    {% assign tier_bar_width = tier_progress %}
-                                    {% if tier_bar_width < 2 %}
-                                        {% assign tier_bar_width = 2 %}
-                                    {% endif %}
-
-                                    <div class="variant-tier-contribution">
-                                        <div class="tier_raised_progress_bar">
-                                            <div class="total_backers_track">
-                                                <div
-                                                class="total_backers_progress_fill"
-                                                style="width: {{ tier_bar_width }}%;">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tier_current_reached_data">
-                                            <h3>{{ current_reached_goal }}</h3>
-                                            <span>{{ variant.title }}</span>
-                                        </div>
-                                    </div>
-
-                                    {% endfor %}
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                    </div>  
-                  {% endif %}
+                              </div>
+                      </div>  
+                    {% endif %}
+                  {% endfor %}
                 {% endfor %}
-              {% endfor %}
+              {% endif %}
             </div>
           </div>
         </div>
