@@ -2030,7 +2030,7 @@ input.edit_account_input.disabled {
     height: 100dvh;
     align-items: flex-start;
 }
-.account_sidebar {
+.sidebar_content {
     display: flex;
     flex-direction: column;
     gap: 46px;
