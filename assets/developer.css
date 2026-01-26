@@ -2123,8 +2123,8 @@ input.edit_account_input.disabled {
         border: unset;
         background: var(--grey);
         padding: 15px;
-        /* border-radius: 0; */
-        width: calc(100% - 30px);
+        border-radius: 0;
+        width: 100%;
         margin: auto;
         min-height: calc(100dvh - 170px);
     }
