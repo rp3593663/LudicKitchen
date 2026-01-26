@@ -2105,9 +2105,6 @@ input.edit_account_input.disabled {
     }
 }
 @media(max-width: 1023px){
-    .sidebar_header {
-        position: relative;
-    }
     .account_sidebar_mobile {
         padding: 12px 18px;
         display: flex;
