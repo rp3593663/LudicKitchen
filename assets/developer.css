@@ -2164,6 +2164,9 @@ input.edit_account_input.disabled {
         max-width: 400px;
         height: 100vh;
         background: #fff;
+        background-image: url(/cdn/shop/files/Mobile-grid.svg?v=1766994643);
+        background-repeat: repeat;
+        background-size: cover;
         z-index: 9999;
         transform: translate(-100%);
         transition: .3s ease;
@@ -2171,7 +2174,7 @@ input.edit_account_input.disabled {
         flex-direction: column;
         justify-content: space-between;
         padding: 40px 18px 20px;
-    }   
+    }
     .account_sidebar.is-open {
         transform: translateX(0);
     }
