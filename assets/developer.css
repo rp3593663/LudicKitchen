@@ -1742,15 +1742,6 @@ a.redirect_recover {
 /*---------- Edit Account Form CSS ------------*/
 /*-----------------------------------------------*/
 
-
-.main_account_head h2 {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: -1.2px;
-    vertical-align: middle;
-    margin: 0px 0px 40px;
-}
 .all_forms_field_blocks {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2094,6 +2085,14 @@ input.edit_account_input.disabled {
 }
 .account_dashboard_content {
     margin-top: 76px;
+}
+.main_account_head h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+    vertical-align: middle;
+    margin: 0px 0px 15px;
 }
 @media(min-width: 1024px){
     .account_sidebar_mobile,
