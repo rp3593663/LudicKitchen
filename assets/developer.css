@@ -2128,6 +2128,9 @@ input.edit_account_input.disabled {
 .ledger_content_area .raised_progress_track {
     height: 12px;
 }
+.project_progress_inner + .project_progress_inner {
+    display: none;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
