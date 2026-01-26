@@ -2103,6 +2103,10 @@ input.edit_account_input.disabled {
     height: calc(100vh - 130px);
     overflow: auto;
 }
+.ledger_content_area .top_data {
+    display: grid;
+    gap: 16px;
+}
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
