@@ -2038,7 +2038,8 @@ input.edit_account_input.disabled {
   display: block;
 }
 @media(min-width: 1024px){
-    .account_sidebar_mobile {
+    .account_sidebar_mobile,
+    .account_sidebar .nav_toggle_close {
         display: none;
     }
 }
