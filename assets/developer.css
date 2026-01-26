@@ -2146,7 +2146,7 @@ input.edit_account_input.disabled {
         border-radius: 0;
         width: 100%;
         margin: auto;
-        min-height: calc(100vh - 145px);
+        min-height: calc(100vh - 157px);
     }
     .account_dashboard_content {
         margin-top: 0px;
