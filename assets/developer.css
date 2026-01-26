@@ -2115,6 +2115,9 @@ input.edit_account_input.disabled {
         align-items: center;
         justify-content: space-between;
     }
+    .sidebar_content {
+        gap: 30px;
+    }
     .nav_toggle_close {
         position: absolute;
         right: 18px;
