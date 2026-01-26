@@ -198,288 +198,247 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <script>
-const form = document.getElementById('profile-form');
-const btn = document.getElementById("saveProfileBtn");
+  const form = document.getElementById('profile-form');
+  const btn = document.getElementById("saveProfileBtn");
+  function updateSelectState(select) {
+    if (!select) return;
 
-
-// --------------------
-// DROPDOWN COLOR STATE
-// --------------------
-function updateSelectState(select) {
-  if (!select) return;
-
-  if (!select.value || select.selectedIndex === 0) {
-    select.classList.remove("is-selected-select");
-    select.classList.add("is-empty-select");
-  } else {
-    select.classList.add("is-selected-select");
-    select.classList.remove("is-empty-select");
-  }
-}
-
-// Apply only to SELECT fields
-document.querySelectorAll("select.edit_account_input").forEach(select => {
-  // Initial state on page load
-  updateSelectState(select);
-
-  // On change
-  select.addEventListener("change", function () {
-    updateSelectState(this);
-  });
-});
-
-
-// --------------------
-// IMAGE HANDLING
-// --------------------
-const input = document.getElementById('avatarInput');
-const preview = document.getElementById('avatarPreview');
-const removeBtn = document.getElementById('removeAvatar');
-
-// Existing saved image (string URL from metafield)
-let existingImageURL = "{{ customer.metafields.custom.profile_image | escape }}";
-
-// Newly selected file
-let selectedImageFile = null;
-
-// Remove flag
-let removeImage = false;
-
-if (input) {
-  input.addEventListener('change', function() {
-    const file = this.files[0];
-    if (!file) return;
-
-    selectedImageFile = file;
-    removeImage = false; // user selected new image
-
-    // Preview
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      preview.innerHTML = `<img src="${e.target.result}">`;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-if (removeBtn) {
-  removeBtn.addEventListener('click', function() {
-    preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
-    selectedImageFile = null;
-    existingImageURL = "";
-    removeImage = true; // 👈 mark for deletion
-  });
-}
-
-// --------------------
-// VALIDATION
-// --------------------
-const requiredFields = [
-  "first_name","last_name","email","phone",
-  "address1","city","zip","province","country",
-  "age","gender","shoe_size","instagram", "twitter"
-];
-
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let valid = true;
-
-  // Reset errors
-  document.querySelectorAll(".field-error").forEach(el => {
-    el.innerText = "";
-    el.style.display = "none";
-  });
-  document.querySelectorAll(".edit_account_input").forEach(el => {
-    el.classList.remove("input-error");
-  });
-
-  // Required fields
-  requiredFields.forEach(name => {
-    const input = form.querySelector(`[name="${name}"]`);
-    if (!input || input.value.trim() === "") {
-      showError(input, "This Field is Required.");
-      valid = false;
-    }
-  });
-
-  // Email
-  const emailInput = form.querySelector('[name="email"]');
-  if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
-    showError(emailInput, "Enter valid email address.");
-    valid = false;
-  }
-
-  // Phone (10 digits only)
-  const phoneInput = form.querySelector('[name="phone"]');
-  if (phoneInput) {
-    const phone = phoneInput.value.trim();
-
-    if (!/^[0-9]{10}$/.test(phone)) {
-      showError(phoneInput, "Phone must be 10 digits.");
-      valid = false;
+    if (!select.value || select.selectedIndex === 0) {
+      select.classList.remove("is-selected-select");
+      select.classList.add("is-empty-select");
+    } else {
+      select.classList.add("is-selected-select");
+      select.classList.remove("is-empty-select");
     }
   }
+  document.querySelectorAll("select.edit_account_input").forEach(select => {
+    // Initial state on page load
+    updateSelectState(select);
 
-  // Age number
-  const ageInput = form.querySelector('[name="age"]');
-  if (ageInput && isNaN(ageInput.value)) {
-    showError(ageInput, "Age must be a number.");
-    valid = false;
-  }
-
-  if (!valid) {
-    scrollToFirstError();
-    return;
-  }
-
-  submitProfile();
-});
-
-// --------------------
-// ERROR UI
-// --------------------
-function showError(input, message) {
-  if (!input) return;
-  input.classList.add("input-error");
-  let errorDiv = input.parentElement.querySelector(".field-error");
-  if (!errorDiv) {
-    errorDiv = document.createElement("div");
-    errorDiv.className = "field-error";
-    input.parentElement.appendChild(errorDiv);
-  }
-  errorDiv.innerText = message;
-  errorDiv.style.display = "block";
-}
-
-function scrollToFirstError() {
-  const first = document.querySelector(".input-error");
-  if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
-}
-
-
-// --------------------
-// SUBMIT
-// --------------------
-async function submitProfile() {
-  btn.disabled = true;
-  btn.innerText = "Saving...";
-
-  const msgBox = document.getElementById("formMessage");
-  msgBox.style.display = "none";
-  msgBox.className = "form-message";
-
-  const formData = new FormData(form);
-
-  const phoneInput = form.querySelector('[name="phone"]');
-  if (phoneInput) {
-    const rawPhone = phoneInput.value.trim(); // 10 digits from UI
-    formData.set("phone", "+91" + rawPhone);
-  }
-
-  // IMAGE LOGIC
-  if (removeImage) {
-    // Tell backend to remove image
-    formData.append("remove_profile_picture", "1");
-  } else if (selectedImageFile) {
-    // Send new file
-    formData.append("profile_picture", selectedImageFile);
-  } else {
-    // Keep existing
-    formData.append("profile_picture", existingImageURL || "");
-  }
-
-  const successIconSVG = `
-    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_344_31474)">
-    <path d="M11.001 6.00024C11.001 8.76164 8.76237 11.0002 6.00097 11.0002C3.23955 11.0002 1.00097 8.76164 1.00097 6.00024C1.00097 3.23882 3.23955 1.00024 6.00097 1.00024C8.76237 1.00024 11.001 3.23882 11.001 6.00024Z" fill="#008000" stroke="#008000" stroke-width="0.456675" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.74992 6L5.24992 7.5L8.24992 4.5" stroke="white" stroke-width="0.989462" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_344_31474">
-    <rect width="12" height="12" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    `;
-
-  try {
-    const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
-      method: "POST",
-      body: formData
+    // On change
+    select.addEventListener("change", function () {
+      updateSelectState(this);
     });
-    const result = await res.json();
-    if (!res.ok) throw result;
-    // ✅ SUCCESS
-    msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
-    msgBox.className = "form-message success";
-    msgBox.style.display = "flex";
-
-
-  } catch (err) {
-    console.error(err);
-    msgBox.innerText = "Something went wrong. Please try again.";
-    msgBox.classList.add("error");
-    msgBox.style.display = "block";
-  } finally {
-    btn.disabled = false;
-    btn.innerText = "Save Profile";
-  }
-}
-
-// --------------------
-// LIVE ERROR CLEARING
-// --------------------
-document.querySelectorAll(".edit_account_input").forEach(input => {
-  input.addEventListener("input", function() {
-    clearErrorIfValid(this);
   });
+  const input = document.getElementById('avatarInput');
+  const preview = document.getElementById('avatarPreview');
+  const removeBtn = document.getElementById('removeAvatar');
+  let existingImageURL = "{{ customer.metafields.custom.profile_image | escape }}";
+  let selectedImageFile = null;
+  let removeImage = false;
+  if (input) {
+    input.addEventListener('change', function() {
+      const file = this.files[0];
+      if (!file) return;
 
-  input.addEventListener("change", function() {
-    clearErrorIfValid(this);
+      selectedImageFile = file;
+      removeImage = false; // user selected new image
+
+      // Preview
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.innerHTML = `<img src="${e.target.result}">`;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+  if (removeBtn) {
+    removeBtn.addEventListener('click', function() {
+      preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
+      selectedImageFile = null;
+      existingImageURL = "";
+      removeImage = true; // 👈 mark for deletion
+    });
+  }
+  // --------------------
+  // VALIDATION
+  // --------------------
+  const requiredFields = [
+    "first_name","last_name","email","phone",
+    "address1","city","zip","province","country",
+    "age","gender","shoe_size","instagram", "twitter"
+  ];
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let valid = true;
+
+    // Reset errors
+    document.querySelectorAll(".field-error").forEach(el => {
+      el.innerText = "";
+      el.style.display = "none";
+    });
+    document.querySelectorAll(".edit_account_input").forEach(el => {
+      el.classList.remove("input-error");
+    });
+
+    // Required fields
+    requiredFields.forEach(name => {
+      const input = form.querySelector(`[name="${name}"]`);
+      if (!input || input.value.trim() === "") {
+        showError(input, "This Field is Required.");
+        valid = false;
+      }
+    });
+
+    // Email
+    const emailInput = form.querySelector('[name="email"]');
+    if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
+      showError(emailInput, "Enter valid email address.");
+      valid = false;
+    }
+
+    // Phone (10 digits only)
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput) {
+      const phone = phoneInput.value.trim();
+
+      if (!/^[0-9]{10}$/.test(phone)) {
+        showError(phoneInput, "Phone must be 10 digits.");
+        valid = false;
+      }
+    }
+
+    // Age number
+    const ageInput = form.querySelector('[name="age"]');
+    if (ageInput && isNaN(ageInput.value)) {
+      showError(ageInput, "Age must be a number.");
+      valid = false;
+    }
+
+    if (!valid) {
+      scrollToFirstError();
+      return;
+    }
+
+    submitProfile();
   });
-});
-
-function clearErrorIfValid(input) {
-  let isValid = true;
-  const name = input.name;
-  const value = input.value.trim();
-
-  // Required check
-  if (requiredFields.includes(name) && value === "") {
-    isValid = false;
+  // --------------------
+  // ERROR UI
+  // --------------------
+  function showError(input, message) {
+    if (!input) return;
+    input.classList.add("input-error");
+    let errorDiv = input.parentElement.querySelector(".field-error");
+    if (!errorDiv) {
+      errorDiv = document.createElement("div");
+      errorDiv.className = "field-error";
+      input.parentElement.appendChild(errorDiv);
+    }
+    errorDiv.innerText = message;
+    errorDiv.style.display = "block";
   }
-
-  // Email
-  if (name === "email" && value !== "" && !/^\S+@\S+\.\S+$/.test(value)) {
-    isValid = false;
+  function scrollToFirstError() {
+    const first = document.querySelector(".input-error");
+    if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
   }
+  // --------------------
+  // SUBMIT
+  // --------------------
+  async function submitProfile() {
+    btn.disabled = true;
+    btn.innerText = "Saving...";
 
-  // Phone
-  if (name === "phone" && value !== "" && !/^[0-9]{10}$/.test(value)) {
-    isValid = false;
+    const msgBox = document.getElementById("formMessage");
+    msgBox.style.display = "none";
+    msgBox.className = "form-message";
+
+    const formData = new FormData(form);
+
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput) {
+      const rawPhone = phoneInput.value.trim(); // 10 digits from UI
+      formData.set("phone", "+91" + rawPhone);
+    }
+
+    // IMAGE LOGIC
+    if (removeImage) {
+      // Tell backend to remove image
+      formData.append("remove_profile_picture", "1");
+    } else if (selectedImageFile) {
+      // Send new file
+      formData.append("profile_picture", selectedImageFile);
+    } else {
+      // Keep existing
+      formData.append("profile_picture", existingImageURL || "");
+    }
+
+    const successIconSVG = `
+      <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_344_31474)">
+      <path d="M11.001 6.00024C11.001 8.76164 8.76237 11.0002 6.00097 11.0002C3.23955 11.0002 1.00097 8.76164 1.00097 6.00024C1.00097 3.23882 3.23955 1.00024 6.00097 1.00024C8.76237 1.00024 11.001 3.23882 11.001 6.00024Z" fill="#008000" stroke="#008000" stroke-width="0.456675" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.74992 6L5.24992 7.5L8.24992 4.5" stroke="white" stroke-width="0.989462" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_344_31474">
+      <rect width="12" height="12" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+      `;
+
+    try {
+      const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
+        method: "POST",
+        body: formData
+      });
+      const result = await res.json();
+      if (!res.ok) throw result;
+      // ✅ SUCCESS
+      msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
+      msgBox.className = "form-message success";
+      msgBox.style.display = "flex";
+
+
+    } catch (err) {
+      console.error(err);
+      msgBox.innerText = "Something went wrong. Please try again.";
+      msgBox.classList.add("error");
+      msgBox.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Save Profile";
+    }
   }
-
-
-  // Age
-  if (name === "age" && value !== "" && isNaN(value)) {
-    isValid = false;
+  // --------------------
+  // LIVE ERROR CLEARING
+  // --------------------
+  document.querySelectorAll(".edit_account_input").forEach(input => {
+    input.addEventListener("input", function() {
+      clearErrorIfValid(this);
+    });
+    input.addEventListener("change", function() {
+      clearErrorIfValid(this);
+    });
+  });
+  function clearErrorIfValid(input) {
+    let isValid = true;
+    const name = input.name;
+    const value = input.value.trim();
+    if (requiredFields.includes(name) && value === "") {
+      isValid = false;
+    }
+    if (name === "email" && value !== "" && !/^\S+@\S+\.\S+$/.test(value)) {
+      isValid = false;
+    }
+    if (name === "phone" && value !== "" && !/^[0-9]{10}$/.test(value)) {
+      isValid = false;
+    }
+    if (name === "age" && value !== "" && isNaN(value)) {
+      isValid = false;
+    }
+    if (isValid) {
+      removeError(input);
+    }
   }
-
-  if (isValid) {
-    removeError(input);
+  function removeError(input) {
+    input.classList.remove("input-error");
+    const errorDiv = input.parentElement.querySelector(".field-error");
+    if (errorDiv) {
+      errorDiv.innerText = "";
+      errorDiv.style.display = "none";
+    }
   }
-}
-
-function removeError(input) {
-  input.classList.remove("input-error");
-  const errorDiv = input.parentElement.querySelector(".field-error");
-  if (errorDiv) {
-    errorDiv.innerText = "";
-    errorDiv.style.display = "none";
-  }
-}
-
 </script>
 
 
