@@ -578,7 +578,7 @@ a.faq_btn.theme_btn {
     font-weight: 650;
     font-size: 30px;
     line-height: 27px;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.2px;
     color: var(--primary_color);
 }
 .progress_data span {
@@ -2545,7 +2545,7 @@ input.edit_account_input.disabled {
     .progress_data h2 {
         font-size: 16px;
         line-height: 16px;
-        letter-spacing: -0.8px;
+        letter-spacing: -0.48px;
     }
     .progress_data span {
         font-size: 8px;
