@@ -182,13 +182,13 @@
 
                   {%- comment -%} -------- FORMAT RAISED (SHORT) -------- {%- endcomment -%}
                   {% assign raised = raised_amount | times: 1.0 %}
-                  {% if raised >= 10000000 %}
+                  {% comment %} {% if raised >= 10000000 %}
                     {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
                   {% elsif raised >= 100000 %}
                     {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
                   {% else %}
                     {% assign raised_display = raised | money_without_currency %}
-                  {% endif %}
+                  {% endif %} {% endcomment %}
 
                   {%- comment -%} -------- FORMAT GOAL (FULL VALUE) -------- {%- endcomment -%}
                   {% assign goal_display = goal_amount | times: 100 | money_without_currency %}
@@ -196,7 +196,7 @@
                   {%- comment -%} -------- OUTPUT -------- {%- endcomment -%}
                   <div class="raised_goal">
                     <span class="raised_amount js-indian-number" data-value="{{ raised_amount }}">₹</span>
-                    <span class="total_goal">Raised of ₹ {{ goal_display }} goal</span>
+                    <span class="total_goal js-indian-number" data-value="{{ raised_amount }}">Raised of ₹  goal</span>
                   </div>
 
                   <div class="pdp_raised_progress_bar">
