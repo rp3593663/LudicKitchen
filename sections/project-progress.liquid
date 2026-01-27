@@ -74,7 +74,6 @@
                 {% else %}
                     {% assign raised_display = raised | money_without_currency %}
                 {% endif %} {% endcomment %}
-                {% assign raised_display = raised | money_without_currency %}
                 
                 {% assign goal = goal_amount | times: 1.0 %}
                 {% comment %} {% if goal >= 10000000 %}
@@ -84,7 +83,6 @@
                 {% else %}
                     {% assign goal_display = goal | money_without_currency %}
                 {% endif %} {% endcomment %}
-                {% assign goal_display = goal_amount | money_without_currency %}
 
                 <div class="goal_progress">
                     <div class="progress_data">
@@ -93,7 +91,7 @@
                             <span>Raised till now</span>
                         </div>
                         <div class="goal_total">
-                            <h2>₹ {{ goal_display }}</h2>
+                            <h2 class="js-indian-number" data-value="{{ goal_amount }}">₹</h2>
                             <span>Our total goal</span>
                         </div>
                     </div>
