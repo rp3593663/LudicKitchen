@@ -55,24 +55,27 @@
         <div class="project_progress_inner">
             <div class="project_progress_left">
                 {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
-                {% assign ludic_spent_amount = product.metafields.custom.ludic_amount | default: 0 %}
-                {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
-                {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
-                {% if progress > 100 %}
-                    {% assign progress = 100 %}
-                {% endif %}
+{% assign ludic_spent_amount = product.metafields.custom.ludic_amount | default: 0 %}
+{% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
 
-                {% assign bar_width = progress %}
-                {% if bar_width < 2 %}
-                    {% assign bar_width = 2 %}
-                {% endif %}
+{%- comment -%} Calculate overall progress percentage {%- endcomment -%}
+{% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+{% if progress > 100 %}
+  {% assign progress = 100 %}
+{% endif %}
 
-                {% assign red_width = progress %}
-                {% if red_width > 20 %}
-                    {% assign red_width = 20 %}
-                {% endif %}
+{%- comment -%} Calculate Ludic spent percentage {%- endcomment -%}
+{% assign red_width = ludic_spent_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+{% if red_width > 100 %}
+  {% assign red_width = 100 %}
+{% endif %}
 
-                {% assign blue_width = progress | minus: red_width %}
+{%- comment -%} Remaining progress for blue bar {%- endcomment -%}
+{% assign blue_width = progress | minus: red_width %}
+{% if blue_width < 0 %}
+  {% assign blue_width = 0 %}
+{% endif %}
+
 
                 {% assign raised = raised_amount | times: 1.0 %}
                 {% comment %} {% if raised >= 10000000 %}
