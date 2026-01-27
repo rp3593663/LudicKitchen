@@ -139,10 +139,10 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 
-  const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
+  {% comment %} const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
   if(firstTab){
     openFirstFaq(firstTab);
-  }
+  } {% endcomment %}
 
   // TAB SWITCH
   scope.querySelectorAll(".faq-tab").forEach(tab=>{
