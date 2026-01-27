@@ -15,6 +15,9 @@ body{
     color: var(--black);
     background-attachment: fixed;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 #how_it_works,
 #faqs,
