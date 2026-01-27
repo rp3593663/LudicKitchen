@@ -2683,6 +2683,10 @@ input.edit_account_input.disabled {
         line-height: 22px;
         letter-spacing: -1.1px;
     }
+    .tier_badge img{
+        width: 12px;
+        height: 12px;
+    }
     .tier_title .current_tier_reached, 
     .tier_title .tier_badge {
         padding: 5px 10px;
