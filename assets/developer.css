@@ -1159,6 +1159,13 @@ p.goal_info span{
     margin: auto;
     display: flex;
 }
+span.tier_custom_text {
+    font-weight: 650;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    color: var(--primary_color);
+}
 .features_info .description {
     position: relative;
     font-weight: 500;
