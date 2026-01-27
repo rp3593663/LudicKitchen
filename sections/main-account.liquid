@@ -256,15 +256,14 @@
                 </div>
                 <div class="edit_account_field">
                   <label>Apparel size</label>
-                  {% assign saved_size = customer.metafields.custom.apparel_size %}
                   <select name="shoe_size" class="edit_account_input">
                     <option value="">Select Appereal Size</option>
-                    <option value="XS" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>XS</option>
-                    <option value="S" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>S</option>
-                    <option value="M" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>M</option>
-                    <option value="L" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>L</option>
-                    <option value="XL" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>XL</option>
-                    <option value="XXL" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>XXL</option>
+                    <option value="XS" {% if customer.metafields.custom.apparel_size == 'XS' %}selected{% endif %}>XS</option>
+                    <option value="S" {% if customer.metafields.custom.apparel_size == 'S' %}selected{% endif %}>S</option>
+                    <option value="M" {% if customer.metafields.custom.apparel_size == 'M' %}selected{% endif %}>M</option>
+                    <option value="L" {% if customer.metafields.custom.apparel_size == 'L' %}selected{% endif %}>L</option>
+                    <option value="XL" {% if customer.metafields.custom.apparel_size == 'XL' %}selected{% endif %}>XL</option>
+                    <option value="XXL" {% if customer.metafields.custom.apparel_size == 'XXL' %}selected{% endif %}>XXL</option>
                   </select>
                   <div class="field-error"></div>
                 </div>
