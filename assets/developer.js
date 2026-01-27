@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Animate all counters
-  document.querySelectorAll(".js-counter, .js-indian-number").forEach(el => {
+  document.querySelectorAll(".js-counter").forEach(el => {
     animateCounter(el, 1800);
   });
 
