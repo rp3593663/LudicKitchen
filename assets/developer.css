@@ -21,6 +21,9 @@ body{
 #about {
   scroll-margin-top: 150px;
 }
+#choose_product_tier {
+  scroll-margin-top: -150px;
+}
 
 /*-----------------------------------------------*/
 /*---------- Header CSS ------------*/
