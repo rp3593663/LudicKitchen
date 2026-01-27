@@ -2745,6 +2745,12 @@ input.edit_account_input.disabled {
         flex-direction: column;
         gap: 22px;
     }
+    .dashboard_content_area {
+        border: unset;
+        padding: 15px 20px;
+        border-radius: 0;
+        margin-right: 0;
+    }   
     .dashboard_content_area .form_field_box {
         padding: 20px;
     }
