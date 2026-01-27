@@ -80,24 +80,31 @@
           {% render 'product-media-gallery', variant_images: variant_images %}
         {%- endif -%}
         {% if template == 'product.kitchen-pdp'  %}
-    <div class="single-flipbook-wrapper">
-  <div id="product-flipbook" class="animated">
-    {% for media in product.media %}
-      {% if media.media_type == 'image' %}
-        <div class="page">
-          <img
-            src="{{ media | image_url: width: 1400 }}"
-            alt="{{ media.alt | escape }}"
-            loading="lazy"
-          >
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+          {% comment %} <div class="single-flipbook-wrapper">
+            <div id="product-flipbook" class="animated">
+              {% for media in product.media %}
+                {% if media.media_type == 'image' %}
+                  <div class="page">
+                    <img
+                      src="{{ media | image_url: width: 1400 }}"
+                      alt="{{ media.alt | escape }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
 
-  <button class="flip-btn prev" aria-label="Previous">‹</button>
-  <button class="flip-btn next" aria-label="Next">›</button>
-</div>
+            <button class="flip-btn prev" aria-label="Previous">‹</button>
+            <button class="flip-btn next" aria-label="Next">›</button>
+          </div> {% endcomment %}
+          <div id="book-gallery">
+            {% for image in product.images %}
+              <div class="page">
+                <img src="{{ image | img_url: 'master' }}" alt="{{ product.title }}">
+              </div>
+            {% endfor %}
+          </div>
 
         {%- endif -%}
       </div>

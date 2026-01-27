@@ -2081,6 +2081,22 @@ input.edit_account_input.disabled {
 .flip-btn.prev { left: -16px; }
 .flip-btn.next { right: -16px; }
 
+#book-gallery {
+  width: 450px;
+  height: 550px;
+  margin: auto;
+}
+
+#book-gallery .page {
+  background: #fff;
+}
+
+#book-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
 /*-----------------------------------------------*/
