@@ -166,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   $("#book-gallery").turn({
     height: 475,
+    display: 'single'
     autoCenter: true,
     gradients: true,
     acceleration: true
