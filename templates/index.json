@@ -21,7 +21,7 @@
         "description_bQpN6X": {
           "type": "description",
           "settings": {
-            "text": "It's where you, a curious, observant, and collaborative enthusiast, who believes in the Ludic way, gets a space to help shape\nwhat Ludic makes next. No credentials needed, just a willingness to stir the pot. Here, ideas are open, processes are\ntransparent, and every project is built with collective hands. You can follow it, fund it, vote on it, and be part of the journey as\nour creation takes shape. Your contribution doesn't buy you ownership - it gives you something better: a legacy; the pride of\nsaying, \"I helped make this.\""
+            "text": "It's where you, a curious, observant, and collaborative enthusiast, who believes in the Ludic way, gets a space to help shape\nwhat Ludic makes next. No credentials needed, just a willingness to stir the pot. Here, ideas are open, processes are\ntransparent, and every project is built with collective hands. You can follow it, fund it, vote on it, and be part of the journey as\nour creation takes shape. Your contribution doesn't buy you ownership - it gives you something better: a legacy; the pride of\nsaying, \"<span>I helped make this.</span>\""
           }
         }
       },
