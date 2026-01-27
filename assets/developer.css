@@ -618,6 +618,16 @@ a.faq_btn.theme_btn {
     background: var(--primary_color);
     z-index: 2;
 }
+span.milestone-percentage {
+    position: absolute;
+    left: 75%;
+    transform: translateX(-50%);
+    top: -18px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -0.3px;
+}
 .milestone-tooltip {
     position: absolute;
     top: calc(100% + 22px);
