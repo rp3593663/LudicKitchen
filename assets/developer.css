@@ -952,6 +952,10 @@ p.goal_info span{
     display: flex;
     gap: 4px;
 }
+.tier_badge img{
+    width: 16px;
+    height: 16px;
+}
 .tier_title .current_tier_reached, 
 .tier_title .tier_badge {
     background: #ebebeb;
