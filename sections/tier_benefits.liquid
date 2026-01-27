@@ -98,10 +98,12 @@
 
 
                             <div class="tier_benefit_yes_no">
-                                <img
-                                src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}"
-                                alt="{{ variant.title }}"
-                                >
+                              {% if custom_text != blank %}
+                                <span class="tier_custom_text">{{ custom_text }}</span>
+                              {% else %}
+                                 <img src="{% if enabled %}{{ section.settings.icon_yes | image_url }}{% else %}{{ section.settings.icon_no | image_url }}{% endif %}" alt="{{ variant.title }}">
+                              {% endif %}
+                               
                             </div>
                         {% endfor %}
                         <div class="tier_mobile_description">{{ block.settings.more_text }}</div>
