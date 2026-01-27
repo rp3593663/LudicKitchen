@@ -696,6 +696,19 @@ p.goal_info {
     letter-spacing: -0.45px;
     text-align: justify;
     margin: 0px;
+    position: relative;
+    padding-left: 22px;
+}
+p.goal_info:before {
+    width: 10px;
+    height: 10px;
+    content: "";
+    background: #E60013;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 p.goal_info span{
     font-weight: 650;
