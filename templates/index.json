@@ -128,7 +128,7 @@
         "tab_cnwFF6": {
           "type": "tab",
           "settings": {
-            "tab_title": "About Ludic Kitchen",
+            "tab_title": "About The Kitchen",
             "tab_handle": "about_ludic_kitchen"
           }
         },
@@ -159,7 +159,7 @@
         "tab_FHEXpU": {
           "type": "tab",
           "settings": {
-            "tab_title": "Participation & Contribution",
+            "tab_title": "Participation",
             "tab_handle": "participation_contribution"
           }
         },
@@ -221,7 +221,7 @@
         "tab_FaMVwi": {
           "type": "tab",
           "settings": {
-            "tab_title": "Campaign Activation, Cancellation & Outcomes",
+            "tab_title": "Campaign Progress",
             "tab_handle": "campaign_activation_cancellation_outcomes"
           }
         },
@@ -260,7 +260,7 @@
         "tab_G8M8iG": {
           "type": "tab",
           "settings": {
-            "tab_title": "Transparency & Updates",
+            "tab_title": "Updates",
             "tab_handle": "transparency_updates"
           }
         },
@@ -283,7 +283,7 @@
         "tab_bq9c46": {
           "type": "tab",
           "settings": {
-            "tab_title": "Delivery, Timelines & Quality",
+            "tab_title": "Shipping & Delivery",
             "tab_handle": "delivery_timelines_quality"
           }
         },
