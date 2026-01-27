@@ -166,32 +166,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const pageFlip = new St.PageFlip(
-      document.getElementById("flip-book"),
-      {
-        width: 847,
-        height: 475,
-        size: "fixed",
-        showCover: false,
-        drawShadow: true,
-        maxShadowOpacity: 0.5,
-        mobileScrollSupport: false
-      }
-    );
+document.addEventListener("DOMContentLoaded", function () {
 
-    pageFlip.loadFromHTML(
-      document.querySelectorAll("#flip-book .page")
-    );
+  /* ===============================
+     INIT PAGE FLIP
+  =============================== */
 
-    document.getElementById("flipPrev").addEventListener("click", () => {
+  const flipContainer = document.getElementById("flip-book");
+
+  if (!flipContainer) return;
+
+  const pageFlip = new St.PageFlip(flipContainer, {
+    width: 850,
+    height: 475,
+    size: "fixed",
+
+    // REAL PAGE FLIP SETTINGS
+    drawShadow: true,
+    maxShadowOpacity: 0.5,
+    showCover: false,
+    mobileScrollSupport: false,
+    useMouseEvents: true
+  });
+
+  pageFlip.loadFromHTML(
+    document.querySelectorAll("#flip-book .page")
+  );
+
+  /* ===============================
+     PREV / NEXT BUTTONS
+  =============================== */
+
+  const prevBtn = document.getElementById("flipPrev");
+  const nextBtn = document.getElementById("flipNext");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
       pageFlip.flipPrev();
     });
+  }
 
-    document.getElementById("flipNext").addEventListener("click", () => {
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function () {
       pageFlip.flipNext();
     });
+  }
+
+  /* ===============================
+     DISABLE BUTTONS AT EDGES
+  =============================== */
+
+  function updateButtons() {
+    const current = pageFlip.getCurrentPageIndex();
+    const total = pageFlip.getPageCount();
+
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === total - 1;
+  }
+
+  pageFlip.on("flip", updateButtons);
+  updateButtons();
+
+  /* ===============================
+     KEYBOARD SUPPORT (OPTIONAL)
+  =============================== */
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") pageFlip.flipPrev();
+    if (e.key === "ArrowRight") pageFlip.flipNext();
   });
+
+});
+
 
 
 
