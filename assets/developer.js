@@ -104,6 +104,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+
+    const scrollToSection = () => {
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        return true;
+      }
+      return false;
+    };
+
+    // Try immediately
+    if (!scrollToSection()) {
+      // Retry because Shopify sections load late
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (scrollToSection() || attempts > 20) {
+          clearInterval(interval);
+        }
+      }, 150);
+    }
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const $flipbook = $('#product-flipbook');
   if (!$flipbook.length) return;
