@@ -425,8 +425,9 @@ a.go_btn {
 .red_fill {
     background: #E60013!important;
 }
+
 .blue_fill {
-    background: var(--primary_color)!important;
+    background: var(--primary_color, #007bff); /* fallback blue */
 }
 .progress_labels {
     font-size: 10px;
