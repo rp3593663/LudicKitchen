@@ -948,14 +948,15 @@ p.goal_info span{
     letter-spacing: -1.3px;
     color: var(--primary_color);
 }
-.tier_title .current_tier_reached {
-    background: #EBEBEB;
+.tier_title .current_tier_reached, 
+.tier_title .tier_badge {
+    background: #ebebeb;
     padding: 6px 10px;
     font-family: Inter;
     font-weight: 500;
     font-size: 12px;
     line-height: 13px;
-    letter-spacing: -0.6px;
+    letter-spacing: -.6px;
     text-align: justify;
     vertical-align: middle;
     display: flex;
@@ -963,6 +964,7 @@ p.goal_info span{
     justify-content: center;
     gap: 4px;
     border-radius: 4px;
+    width: fit-content;
 }
 .tier_information {
     font-weight: 500;
