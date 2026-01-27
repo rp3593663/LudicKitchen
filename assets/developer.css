@@ -1885,6 +1885,7 @@ input.edit_account_input.disabled {
     line-height: 13px;
     letter-spacing: -0.4px;
     font-weight: 500;
+    color: var(--black);
 }
 .edit_account_field input::placeholder,
 .edit_account_field select.edit_account_input.is-empty-select{
