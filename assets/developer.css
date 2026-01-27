@@ -1880,6 +1880,12 @@ input.edit_account_input.disabled {
     background-position: right 12px center;
     color: var(--black);
 }
+.edit_account_field label {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.4px;
+    font-weight: 500;
+}
 .edit_account_field input::placeholder,
 .edit_account_field select.edit_account_input.is-empty-select{
     color: #C6C6C6;
