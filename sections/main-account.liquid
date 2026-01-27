@@ -408,6 +408,32 @@
 const form = document.getElementById('profile-form');
 const btn = document.getElementById("saveProfileBtn");
 
+// --------------------
+// FORM CHANGE TRACKING
+// --------------------
+let formDirty = false;
+
+// Enable button
+function enableSaveButton() {
+  if (!formDirty) {
+    formDirty = true;
+    btn.disabled = false;
+    btn.classList.add("active");
+  }
+}
+
+// Disable button (after successful save)
+function disableSaveButton() {
+  formDirty = false;
+  btn.disabled = true;
+  btn.classList.remove("active");
+}
+
+// Listen to ALL inputs/selects
+form.querySelectorAll("input, select, textarea").forEach(el => {
+  el.addEventListener("input", enableSaveButton);
+  el.addEventListener("change", enableSaveButton);
+});
 
 // --------------------
 // DROPDOWN COLOR STATE
@@ -460,6 +486,7 @@ if (input) {
     selectedImageFile = file;
     removeImage = false; // user selected new image
 
+    enableSaveButton();
     // Preview
     const reader = new FileReader();
     reader.onload = function(e) {
@@ -475,6 +502,7 @@ if (removeBtn) {
     selectedImageFile = null;
     existingImageURL = "";
     removeImage = true;
+    enableSaveButton();
   });
 }
 
