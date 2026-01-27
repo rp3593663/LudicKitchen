@@ -113,7 +113,7 @@ chances are it's already here.</p></div>
 document.addEventListener("DOMContentLoaded", function(){
   const scope = document.querySelector("#shopify-section-{{ section.id }}");
 
-  {% comment %} function openFirstFaq(tabKey){
+  function openFirstFaq(tabKey){
     const items = scope.querySelectorAll(".faq-item");
     let firstOpened = false;
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(){
         answer.style.maxHeight = null;
       }
     });
-  } {% endcomment %}
+  }
 
   // 👉 Init: open first FAQ of first tab
   {% comment %} const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .forEach(t=>t.classList.remove("active"));
       tab.classList.add("active");
 
-      //openFirstFaq(key);
+      openFirstFaq(key);
     });
   });
 
