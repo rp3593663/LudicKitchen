@@ -2082,9 +2082,6 @@ input.edit_account_input.disabled {
 .account_nav .nav_link.active svg path{
    stroke: var(--black);
 }
-.account_dashboard_content {
-    margin-top: 76px;
-}
 .main_account_head h2 {
     font-weight: 500;
     font-size: 24px;
