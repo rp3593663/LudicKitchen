@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
   document.addEventListener("DOMContentLoaded", function () {
     const pageFlip = new St.PageFlip(
       document.getElementById("flip-book"),
@@ -173,26 +172,20 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 420,
         height: 560,
         size: "fixed",
-        showCover: false,
+
+        // 👇 REAL PAPER EFFECT
         drawShadow: true,
         maxShadowOpacity: 0.5,
-        mobileScrollSupport: false
+        showCover: false,
+        mobileScrollSupport: false,
+
+        // 👇 SINGLE PAGE MODE
+        useMouseEvents: true
       }
     );
 
-    pageFlip.loadFromHTML(
-      document.querySelectorAll("#flip-book .page")
-    );
-
-    document.getElementById("flipPrev").addEventListener("click", () => {
-      pageFlip.flipPrev();
-    });
-
-    document.getElementById("flipNext").addEventListener("click", () => {
-      pageFlip.flipNext();
-    });
+    pageFlip.loadFromHTML(document.querySelectorAll("#flip-book .page"));
   });
-
 
 
 
