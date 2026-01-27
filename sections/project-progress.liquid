@@ -55,6 +55,7 @@
         <div class="project_progress_inner">
             <div class="project_progress_left">
                 {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+                {% assign ludic_spent_amount = product.metafields.custom.ludic_amount | default: 0 %}
                 {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
                 {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
                 {% if progress > 100 %}
@@ -67,8 +68,8 @@
                 {% endif %}
 
                 {% assign red_width = progress %}
-                {% if red_width > 15 %}
-                    {% assign red_width = 15 %}
+                {% if red_width > 20 %}
+                    {% assign red_width = 20 %}
                 {% endif %}
 
                 {% assign blue_width = progress | minus: red_width %}
