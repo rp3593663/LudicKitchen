@@ -164,31 +164,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  $(document).ready(function () {
-    $('#single-flip').turn({
-  width: 420,
-  height: 520,
-  display: 'single',
-  autoCenter: true,
 
-  // 👇 THESE CREATE REAL CORNER FEEL
-  gradients: true,
-  acceleration: true,
-  elevation: 50,
-  duration: 1200,
+  document.addEventListener("DOMContentLoaded", function () {
+    const pageFlip = new St.PageFlip(
+      document.getElementById("flip-book"),
+      {
+        width: 420,
+        height: 560,
+        size: "fixed",
 
-  when: {
-    turning: function (e, page) {
-      $(this).addClass('turning');
-    },
-    turned: function () {
-      $(this).removeClass('turning');
-    }
-  }
-});
-$('#single-flip').turn('peel', 'br');
+        // 👇 REAL PAPER EFFECT
+        drawShadow: true,
+        maxShadowOpacity: 0.5,
+        showCover: false,
+        mobileScrollSupport: false,
 
+        // 👇 SINGLE PAGE MODE
+        useMouseEvents: true
+      }
+    );
+
+    pageFlip.loadFromHTML(document.querySelectorAll("#flip-book .page"));
   });
+
+
 
 
 
