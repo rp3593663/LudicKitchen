@@ -139,11 +139,10 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 
-  // 👉 Init: open first FAQ of first tab
-  {% comment %} const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
+  const firstTab = scope.querySelector(".faq-tab.active")?.dataset.tab;
   if(firstTab){
     openFirstFaq(firstTab);
-  } {% endcomment %}
+  }
 
   // TAB SWITCH
   scope.querySelectorAll(".faq-tab").forEach(tab=>{
@@ -154,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .forEach(t=>t.classList.remove("active"));
       tab.classList.add("active");
 
-      //openFirstFaq(key);
+      openFirstFaq(key);
     });
   });
 
