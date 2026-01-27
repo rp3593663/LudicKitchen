@@ -423,10 +423,10 @@ a.go_btn {
     min-width: 4px; 
 }
 .red_fill {
-    background: #E60013;
+    background: #E60013!important;
 }
 .blue_fill {
-    background: var(--primary_color);
+    background: var(--primary_color)!important;
 }
 .progress_labels {
     font-size: 10px;
