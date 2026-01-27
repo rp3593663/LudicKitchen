@@ -477,7 +477,7 @@ a.pre_footer_list-menu__item {
                         </div>
                        
 
-                        <button class="copy-link-btn" id="copyLinkBtn">
+                        <div class="copy-link-btn" id="copyLinkBtn">
                             {% liquid
                             if template.name == 'index'
                                 assign share_url = request.origin
@@ -486,8 +486,8 @@ a.pre_footer_list-menu__item {
                             endif
                             render 'share-button', block.settings.share_label: 'Share', share_link: share_url
                             %}
-                        </button>
-                        <span class="copy-msg" id="copyMsg">Link Copied!</span>
+                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -620,12 +620,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const copyBtn = document.getElementById("copyLinkBtn");
   const copyMsg = document.getElementById("copyMsg");
 
-  copyBtn.addEventListener("click", function () {
+  {% comment %} copyBtn.addEventListener("click", function () {
     navigator.clipboard.writeText(window.location.href).then(() => {
       copyMsg.style.display = "block";
       setTimeout(() => copyMsg.style.display = "none", 2000);
     });
-  });
+  }); {% endcomment %}
 });
 </script>
 
