@@ -166,13 +166,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $(document).ready(function () {
     $('#single-flip').turn({
-      width: 420,
-      height: 520,
-      display: 'single',   // 👈 SINGLE PAGE MODE
-      autoCenter: true,
-      gradients: true,
-      acceleration: true
-    });
+  width: 420,
+  height: 520,
+  display: 'single',
+  autoCenter: true,
+
+  // 👇 THESE CREATE REAL CORNER FEEL
+  gradients: true,
+  acceleration: true,
+  elevation: 50,
+  duration: 1200,
+
+  when: {
+    turning: function (e, page) {
+      $(this).addClass('turning');
+    },
+    turned: function () {
+      $(this).removeClass('turning');
+    }
+  }
+});
+
   });
 
 
