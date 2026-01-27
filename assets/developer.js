@@ -186,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+$('#single-flip').turn('peel', 'br');
 
   });
 
