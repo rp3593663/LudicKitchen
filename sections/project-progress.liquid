@@ -108,12 +108,12 @@
                     </div>
                     <div class="goal_raised_progress_bar">
                         <div class="raised_progress_track">
-                            {% if red_width > 0 %}
-                                <div class="progress_fill red_fill" style="width: {{ red_width }}%;"> </div>
-                            {% endif %}
-                            {% if blue_width > 0 %}
-                                <div class="progress_fill blue_fill" style="width: {{ blue_width }}%;"> </div>
-                            {% endif %}
+                             {% if red_width > 0 %}
+    <div class="progress_fill red_fill" style="width: {{ red_width }}%;"> </div>
+  {% endif %}
+  {% if blue_width > 0 %}
+    <div class="progress_fill blue_fill" style="width: {{ blue_width }}%;"> </div>
+  {% endif %}
                             <div class="milestone-75" style="--milestone_percentage: 75%;">
                                 <span class="milestone-percentage">75%</span>
                                 <span class="milestone-tooltip">Production starts from here</span>
