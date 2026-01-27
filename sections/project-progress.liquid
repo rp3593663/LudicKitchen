@@ -67,14 +67,14 @@
                 {% endif %}
 
                 {% assign raised = raised_amount | times: 1.0 %}
-                {% if raised >= 10000000 %}
+                {% comment %} {% if raised >= 10000000 %}
                     {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
                 {% elsif raised >= 100000 %}
                     {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
                 {% else %}
                     {% assign raised_display = raised | money_without_currency %}
-                {% endif %}
-
+                {% endif %} {% endcomment %}
+                {% assign raised_display = raised | money_without_currency %}
                 {% assign goal = goal_amount | times: 1.0 %}
                 {% if goal >= 10000000 %}
                     {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
