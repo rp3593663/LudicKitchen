@@ -617,7 +617,7 @@ a.faq_btn.theme_btn {
     background: #ddd;
     border-radius: 20px;
     position: relative;
-    display: flex;
+    z-index: 1;
 }
 .milestone-75 {
     position: absolute;
