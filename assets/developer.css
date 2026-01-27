@@ -1965,6 +1965,26 @@ input.edit_account_input.disabled {
 #saveProfileBtn{
     cursor: pointer;
 }
+/***** Save button states *****/
+#saveProfileBtn {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  background: #999999;
+}
+
+#saveProfileBtn.active {
+  opacity: 1;
+  pointer-events: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  background: var(--primary_color);
+}
+
+#saveProfileBtn.theme_btn:disabled {
+  cursor: not-allowed;
+
+}
+
 
 
 /*-----------------------------------------------*/
