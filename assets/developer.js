@@ -170,6 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const pageFlip = new St.PageFlip(
       document.getElementById("flip-book"),
       {
+        width: 847,
+        height: 475,
         size: "fixed",
         showCover: false,
         drawShadow: true,
