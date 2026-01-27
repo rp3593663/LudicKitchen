@@ -66,7 +66,7 @@
                     {% assign bar_width = 2 %}
                 {% endif %}
 
-                {% assign raised = raised_amount | times: 1.0 %}
+                {% assign raised = raised_amount %}
                 {% comment %} {% if raised >= 10000000 %}
                     {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
                 {% elsif raised >= 100000 %}
@@ -74,18 +74,7 @@
                 {% else %}
                     {% assign raised_display = raised | money_without_currency %}
                 {% endif %} {% endcomment %}
-                {% capture raised_str %}{{ raw_raised }}{% endcapture %}
-{% assign len = raised_str.size %}
-
-{% if len > 3 %}
-  {% assign last3 = raised_str | slice: -3, 3 %}
-  {% assign rest = raised_str | slice: 0, len | slice: 0, len | remove: last3 %}
-  {% assign rest = rest | reverse | scan: '.{1,2}' | join: ',' | reverse %}
-  {% assign raised_display = rest | append: ',' | append: last3 %}
-{% else %}
-  {% assign raised_display = raised_str %}
-{% endif %}
-
+                {% assign raised_display = raised | money_without_trailing_zeros %}
                 
                 {% assign goal = goal_amount | times: 1.0 %}
                 {% comment %} {% if goal >= 10000000 %}
