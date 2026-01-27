@@ -150,9 +150,9 @@
         "benefit_8WedRm": {
           "type": "benefit",
           "settings": {
-            "title": "Product Reservation",
-            "short_text": "A unit reserved from the project you contributed to.",
-            "more_text": "Reservation is confirmed once the project moves into production. Delivery timelines follow the project schedule shared post-activation.",
+            "title": "Project Product",
+            "short_text": "A unit of the product from the project you contributed to.",
+            "more_text": "You get a unit of the product you co-create in the Kitchen. It gets delivered to you once the production is complete.",
             "tier_1": true,
             "tier_2": true,
             "tier_3": true,
@@ -166,7 +166,7 @@
           "settings": {
             "title": "Recipe Card",
             "short_text": "Documented notes from the product development process.",
-            "more_text": "Shared digitally after production begins. Covers key decisions around materials, construction, and design changes specific to the project.",
+            "more_text": "A printed recipe-style card that breaks down the steps of how the product was made.",
             "tier_1": true,
             "tier_2": true,
             "tier_3": true,
@@ -175,12 +175,12 @@
             "tier_6": false
           }
         },
-        "benefit_Rf7NME": {
+        "benefit_jaGc63": {
           "type": "benefit",
           "settings": {
-            "title": "Exclusive Freebie/Collectible",
-            "short_text": "A surprise collectible included with the product.",
-            "more_text": "The collectible varies by tier and may include items such as accessories or co-branded objects. Higher tiers receive expanded versions.",
+            "title": "Freebie",
+            "short_text": "A surprise add-on included with the product.",
+            "more_text": "An extra something to show the appreciation. Higher tiers receive expanded versions.",
             "tier_1": true,
             "tier_2": true,
             "tier_3": true,
@@ -189,11 +189,11 @@
             "tier_6": false
           }
         },
-        "benefit_qLLMEA": {
+        "benefit_FU8hCt": {
           "type": "benefit",
           "settings": {
             "title": "Stickers",
-            "short_text": "Campaign-themed stickers included with the product.",
+            "short_text": "Campaign-themed stickers.",
             "more_text": "Included as a physical insert with the final product. Designs are specific to the campaign.",
             "tier_1": true,
             "tier_2": true,
@@ -203,12 +203,12 @@
             "tier_6": false
           }
         },
-        "benefit_mUURkg": {
+        "benefit_xmJqb3": {
           "type": "benefit",
           "settings": {
-            "title": "Backer Icons based on the Tiers",
+            "title": "Co-creator Icons",
             "short_text": "A public visual marker of your contributor tier.",
-            "more_text": "Displayed on the Ludic Kitchen campaign page and grouped by tier. Icons remain visible as a permanent record for that campaign.",
+            "more_text": "Displayed on the Ludic Kitchen campaign page, publicly acknowledging every backer.",
             "tier_1": true,
             "tier_2": true,
             "tier_3": true,
@@ -217,12 +217,12 @@
             "tier_6": false
           }
         },
-        "benefit_wqAaME": {
+        "benefit_GAfJEy": {
           "type": "benefit",
           "settings": {
-            "title": "Early Product Access (Future Drops)",
-            "short_text": "Advance access to future Ludic product drops.",
-            "more_text": "Access is provided before the public release. Details and timelines are shared with contributors ahead of launch.",
+            "title": "Early Product Access",
+            "short_text": "Early access to future Ludic product drops.",
+            "more_text": "An access before the public release. Details are shared with contributors ahead of launch.",
             "tier_1": true,
             "tier_2": true,
             "tier_3": true,
@@ -231,10 +231,10 @@
             "tier_6": false
           }
         },
-        "benefit_6Kfj43": {
+        "benefit_qcDPcF": {
           "type": "benefit",
           "settings": {
-            "title": "Early News & Announcements",
+            "title": "News & Announcements",
             "short_text": "Project and brand updates shared ahead of others.",
             "more_text": "Includes updates on funding progress, new store launches, and key announcements, shared with contributors before public communication.",
             "tier_1": true,
@@ -245,12 +245,12 @@
             "tier_6": false
           }
         },
-        "benefit_4NkW83": {
+        "benefit_A4d6Ui": {
           "type": "benefit",
           "settings": {
             "title": "Ludic Credit",
-            "short_text": "Purchase credit equal to your contribution value.",
-            "more_text": "Issued once the project is activated. Redeemable against future Ludic purchases. Credits are not refundable or transferable.",
+            "short_text": "Credit with a purchasing power equal to your contribution value.",
+            "more_text": "Redeemable against future Ludic purchases only on the website. Valid for 12 months. Credits are not refundable or transferable.",
             "tier_1": false,
             "tier_2": true,
             "tier_3": true,
@@ -259,12 +259,12 @@
             "tier_6": false
           }
         },
-        "benefit_Cqitrt": {
+        "benefit_9fyxct": {
           "type": "benefit",
           "settings": {
-            "title": "Surprise Reward / Bonus Credit",
-            "short_text": "An appreciative store credit added to your contribution.",
-            "more_text": "Issued digitally alongside the main credit. Bonus value and validity depend on the contributor tier and are applied automatically.",
+            "title": "Additional Discount",
+            "short_text": "An appreciative discount in addition to the perks.",
+            "more_text": "The final discount value is at Ludic's discretion.",
             "tier_1": false,
             "tier_2": true,
             "tier_3": true,
@@ -273,7 +273,7 @@
             "tier_6": false
           }
         },
-        "benefit_kYNJML": {
+        "benefit_ttXgqd": {
           "type": "benefit",
           "settings": {
             "title": "Handwritten Note",
@@ -287,12 +287,12 @@
             "tier_6": false
           }
         },
-        "benefit_NUrWGE": {
+        "benefit_LWdnrJ": {
           "type": "benefit",
           "settings": {
             "title": "Certificate of Co-Creation",
             "short_text": "Formal acknowledgment of your role in the product’s creation.",
-            "more_text": "Issued post-production. Digital for Sous Chefs and physical for Head Chefs, with tier and contributor ID.",
+            "more_text": "Issued post-production. Digital for Sous Chefs and physical for Head Chefs. Signed digitally by the founders.",
             "tier_1": false,
             "tier_2": true,
             "tier_3": true,
@@ -301,12 +301,12 @@
             "tier_6": false
           }
         },
-        "benefit_D3PCMt": {
+        "benefit_9G43Np": {
           "type": "benefit",
           "settings": {
             "title": "Kitchen Ledger Access",
             "short_text": "Real-time visibility into the project’s progress and costs.",
-            "more_text": "Access opens once the campaign goes live. Includes funding status, production milestones, updates, and key cost breakdowns.",
+            "more_text": "Access opens after contribution. Includes funding status, production milestones, and key updates.",
             "tier_1": false,
             "tier_2": true,
             "tier_3": true,
@@ -315,140 +315,14 @@
             "tier_6": false
           }
         },
-        "benefit_TjcRhp": {
+        "benefit_jKwdhB": {
           "type": "benefit",
           "settings": {
             "title": "Kitchen Archive Access",
             "short_text": "Access to unused ideas and rejected directions.",
-            "more_text": "All the what-didn't-make-it shared digitally post-development. Includes early sketches, concepts, and prototypes.",
+            "more_text": "A section/newsletter showing unused ideas, rejected prototypes, early sketches.",
             "tier_1": false,
             "tier_2": true,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_gERRrj": {
-          "type": "benefit",
-          "settings": {
-            "title": "Voting Rights (Weighted)",
-            "short_text": "Voting power on select project decisions.",
-            "more_text": "Voting occurs during defined development stages. Sous Chefs hold partial voting weight, while Head Chefs receive full voting weight.",
-            "tier_1": false,
-            "tier_2": true,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_YXNcjy": {
-          "type": "benefit",
-          "settings": {
-            "title": "Custom Strap DIY Kit",
-            "short_text": "A modular add-on kit to personalise your pair.",
-            "more_text": "Included with final product dispatch. Contains interchangeable straps and accessories.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_pkwBg7": {
-          "type": "benefit",
-          "settings": {
-            "title": "Ludic Design Journal",
-            "short_text": "A physical journal to capture and submit future ideas.",
-            "more_text": "Delivered post-production. Includes prompts, sketch pages, and submission guidance.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_zjrFBi": {
-          "type": "benefit",
-          "settings": {
-            "title": "Episodic/Campaign Feature Opportunity",
-            "short_text": "A chance to be featured in Ludic exclusive content.",
-            "more_text": "Select Head Chefs may be featured in Ludic Episodics or campaign videos.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_QfnyAn": {
-          "type": "benefit",
-          "settings": {
-            "title": "Future Product Recommendations",
-            "short_text": "Ability to submit ideas for future Ludic products.",
-            "more_text": "Submissions open post-project via form. Feedback may be provided. Final decisions rest with Ludic.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_Xra7Ry": {
-          "type": "benefit",
-          "settings": {
-            "title": "Exclusive Launch Gatherings",
-            "short_text": "Invitation to closed-door product launches.",
-            "more_text": "Shared post-production. Attendance depends on location, capacity, and event format.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_tWb4wH": {
-          "type": "benefit",
-          "settings": {
-            "title": "Beta Tester Slot",
-            "short_text": "Early access to prototypes or first-run products.",
-            "more_text": "Offered via closed testing groups post-development for wear-testing and feedback.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_UaccpA": {
-          "type": "benefit",
-          "settings": {
-            "title": "Limited Edition Custom Colour",
-            "short_text": "Participation in creating an exclusive colourway.",
-            "more_text": "Head Chefs vote on shade and naming. Released as a limited edition after exclusivity period.",
-            "tier_1": false,
-            "tier_2": false,
-            "tier_3": true,
-            "tier_4": false,
-            "tier_5": false,
-            "tier_6": false
-          }
-        },
-        "benefit_knqrHw": {
-          "type": "benefit",
-          "settings": {
-            "title": "Core Heavy T-Shirt",
-            "short_text": "Customized Ludic Kitchen Core Heavy T-Shirt.",
-            "more_text": "",
-            "tier_1": false,
-            "tier_2": false,
             "tier_3": true,
             "tier_4": false,
             "tier_5": false,
@@ -459,26 +333,17 @@
       "block_order": [
         "benefit_8WedRm",
         "benefit_xKjCKQ",
-        "benefit_Rf7NME",
-        "benefit_qLLMEA",
-        "benefit_mUURkg",
-        "benefit_wqAaME",
-        "benefit_6Kfj43",
-        "benefit_4NkW83",
-        "benefit_Cqitrt",
-        "benefit_kYNJML",
-        "benefit_NUrWGE",
-        "benefit_D3PCMt",
-        "benefit_TjcRhp",
-        "benefit_gERRrj",
-        "benefit_YXNcjy",
-        "benefit_pkwBg7",
-        "benefit_zjrFBi",
-        "benefit_QfnyAn",
-        "benefit_Xra7Ry",
-        "benefit_tWb4wH",
-        "benefit_UaccpA",
-        "benefit_knqrHw"
+        "benefit_jaGc63",
+        "benefit_FU8hCt",
+        "benefit_xmJqb3",
+        "benefit_GAfJEy",
+        "benefit_qcDPcF",
+        "benefit_A4d6Ui",
+        "benefit_9fyxct",
+        "benefit_ttXgqd",
+        "benefit_LWdnrJ",
+        "benefit_9G43Np",
+        "benefit_jKwdhB"
       ],
       "name": "Project Tier Benefits",
       "settings": {
