@@ -2040,46 +2040,7 @@ input.edit_account_input.disabled {
 /*---------- Product Page Gallery CSS ------------*/
 /*-----------------------------------------------*/
 
-.single-flipbook-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: auto;
-}
 
-#product-flipbook {
-  width: 100%;
-  height: 475px;
-}
-
-#product-flipbook .page {
-  background: #fff;
-}
-
-#product-flipbook img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Arrows */
-.flip-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.flip-btn.prev { left: -16px; }
-.flip-btn.next { right: -16px; }
 
 #flip-book {
   width: 420px;
@@ -2095,6 +2056,38 @@ input.edit_account_input.disabled {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.flip-wrapper {
+  position: relative;
+  width: 420px;
+  margin: auto;
+}
+
+.flip-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.flip-btn.prev {
+  left: -55px;
+}
+
+.flip-btn.next {
+  right: -55px;
+}
+
+.flip-btn:hover {
+  background: rgba(0,0,0,0.8);
 }
 
 
