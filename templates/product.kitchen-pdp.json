@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "Project 01",
+            "text": "{{ product.title }}",
             "text_style": "body"
           }
         },
