@@ -233,10 +233,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 🔒 If not logged in → redirect to login first
       if (!window.__customerLoggedIn) {
-        const returnUrl = encodeURIComponent(window.__currentPageUrl);
+        const baseUrl = window.location.origin + window.location.pathname;
+        const returnUrl = encodeURIComponent(baseUrl + "#choose_product_tier");
         window.location.href = `/account/login?return_url=${returnUrl}`;
         return;
       }
+      
 
       // UI loading state
       this.disabled = true;
