@@ -948,6 +948,10 @@ p.goal_info span{
     letter-spacing: -1.3px;
     color: var(--primary_color);
 }
+.reached_tier {
+    display: flex;
+    gap: 4px;
+}
 .tier_title .current_tier_reached, 
 .tier_title .tier_badge {
     background: #ebebeb;
