@@ -143,6 +143,54 @@ document.querySelectorAll('.js-indian-number').forEach(el => {
   el.innerHTML += ' ' + formatted;
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  function animateCounter(el, duration = 1500) {
+    const finalValue = parseFloat(el.dataset.value || 0);
+    const isMoney = el.classList.contains("js-indian-number");
+
+    let start = 0;
+    let startTime = null;
+
+    function formatIndian(num) {
+      return Math.round(num).toLocaleString("en-IN");
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+
+      const current = start + (finalValue - start) * progress;
+
+      if (isMoney) {
+        el.textContent = "₹" + formatIndian(current);
+      } else {
+        el.textContent = Math.round(current);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        // Ensure final exact value
+        if (isMoney) {
+          el.textContent = "₹" + formatIndian(finalValue);
+        } else {
+          el.textContent = finalValue;
+        }
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  // Animate all counters
+  document.querySelectorAll(".js-counter, .js-indian-number").forEach(el => {
+    animateCounter(el, 1800);
+  });
+
+});
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const $flipbook = $('#product-flipbook');
 //   if (!$flipbook.length) return;
