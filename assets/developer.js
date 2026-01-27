@@ -165,27 +165,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
   document.addEventListener("DOMContentLoaded", function () {
     const pageFlip = new St.PageFlip(
       document.getElementById("flip-book"),
       {
-        width: 420,
-        height: 560,
         size: "fixed",
-
-        // 👇 REAL PAPER EFFECT
+        showCover: false,
         drawShadow: true,
         maxShadowOpacity: 0.5,
-        showCover: false,
-        mobileScrollSupport: false,
-
-        // 👇 SINGLE PAGE MODE
-        useMouseEvents: true
+        mobileScrollSupport: false
       }
     );
 
-    pageFlip.loadFromHTML(document.querySelectorAll("#flip-book .page"));
+    pageFlip.loadFromHTML(
+      document.querySelectorAll("#flip-book .page")
+    );
+
+    document.getElementById("flipPrev").addEventListener("click", () => {
+      pageFlip.flipPrev();
+    });
+
+    document.getElementById("flipNext").addEventListener("click", () => {
+      pageFlip.flipNext();
+    });
   });
+
 
 
 
