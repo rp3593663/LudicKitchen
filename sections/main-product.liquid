@@ -98,13 +98,20 @@
             <button class="flip-btn prev" aria-label="Previous">‹</button>
             <button class="flip-btn next" aria-label="Next">›</button>
           </div> {% endcomment %}
-<div id="flip-book">
-  {% for image in product.images %}
-    <div class="page">
-      <img src="{{ image | img_url: 'master' }}" alt="{{ product.title }}">
-    </div>
-  {% endfor %}
+<div class="flip-wrapper">
+  <button class="flip-btn prev" id="flipPrev">‹</button>
+
+  <div id="flip-book">
+    {% for image in product.images %}
+      <div class="page">
+        <img src="{{ image | img_url: 'master' }}" alt="{{ product.title }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="flip-btn next" id="flipNext">›</button>
 </div>
+
 
         {%- endif -%}
       </div>
