@@ -66,6 +66,13 @@
                     {% assign bar_width = 2 %}
                 {% endif %}
 
+                {% assign red_width = progress %}
+                {% if red_width > 15 %}
+                    {% assign red_width = 15 %}
+                {% endif %}
+
+                {% assign blue_width = progress | minus: red_width %}
+
                 {% assign raised = raised_amount | times: 1.0 %}
                 {% comment %} {% if raised >= 10000000 %}
                     {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
