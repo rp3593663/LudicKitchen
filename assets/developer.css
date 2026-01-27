@@ -2363,6 +2363,7 @@ input.edit_account_input.disabled {
         line-height: 18px;
         font-weight: 800;
         color: var(--primary_color);
+        font-family: var(--font-family);
     }
     .step_title {
         flex: 1;
