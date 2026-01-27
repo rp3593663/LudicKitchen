@@ -258,12 +258,12 @@
                   <label>Apparel size</label>
                   <select name="shoe_size" class="edit_account_input">
                     <option value="">Select Appereal Size</option>
-                    {% for i in (3..12) %}
-                      {% assign size_value = "UK " | append: i %}
-                      <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
-                        {{ size_value }}
-                      </option>
-                    {% endfor %}
+                    <option value="XS" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>XS</option>
+                    <option value="S" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>S</option>
+                    <option value="M" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>MS</option>
+                    <option value="L" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>L</option>
+                    <option value="XL" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>XL</option>
+                    <option value="XXL" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>XXL</option>
                   </select>
                   <div class="field-error"></div>
                 </div>
