@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     <div class="total_backers_percentage">
-                        <h3 class="js-counter">{{ current_backers }}</h3>
+                        <h3 class="js-counter" data-value="{{ current_backers }}">0</h3>
                         <span>Backers</span>
                     </div>
                     </div>
@@ -219,7 +219,7 @@
                             </svg>
 
                             <div class="gauge-center">
-                            <h2 id="daysLeft" class="daysLeftNumber js-counter">{{ days_left }}</h2>
+                            <h2 id="daysLeft" class="daysLeftNumber js-counter" data-value="{{ days_left }}">0</h2>
                             <span>Days left</span>
                             </div>
                         </div>
