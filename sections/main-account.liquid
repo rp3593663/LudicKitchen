@@ -649,7 +649,7 @@ async function submitProfile() {
     msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
     msgBox.className = "form-message success";
     msgBox.style.display = "flex";
-
+    disableSaveButton();
 
   } catch (err) {
     console.error(err);
