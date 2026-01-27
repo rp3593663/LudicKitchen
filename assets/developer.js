@@ -135,53 +135,48 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const $flipbook = $('#product-flipbook');
+//   if (!$flipbook.length) return;
+//   $flipbook.turn({
+//     display: 'single',
+//     page: 1,
+//     autoCenter: true,
+//     acceleration: true,
+//     gradients: true,
+//     elevation: 120,      
+//     duration: 900,
+//     turnCorners: 'tl,tr',
+//     when: {
+//       turning: function () {
+//         $(this).addClass('turning');
+//       },
+//       turned: function () {
+//         $(this).removeClass('turning');
+//       }
+//     }
+//   });
+//   document.querySelector('.flip-btn.next')
+//     .addEventListener('click', () => $flipbook.turn('next'));
+//   document.querySelector('.flip-btn.prev')
+//     .addEventListener('click', () => $flipbook.turn('previous'));
+// });
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  const $flipbook = $('#product-flipbook');
-  if (!$flipbook.length) return;
-  $flipbook.turn({
-    display: 'single',
-    page: 1,
-    autoCenter: true,
-    acceleration: true,
-    gradients: true,
-    elevation: 120,      
-    duration: 900,
-    turnCorners: 'tl,tr',
-    when: {
-      turning: function () {
-        $(this).addClass('turning');
-      },
-      turned: function () {
-        $(this).removeClass('turning');
-      }
-    }
-  });
-  document.querySelector('.flip-btn.next')
-    .addEventListener('click', () => $flipbook.turn('next'));
-  document.querySelector('.flip-btn.prev')
-    .addEventListener('click', () => $flipbook.turn('previous'));
-});
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* ===============================
-     INIT PAGE FLIP
-  =============================== */
 
   const flipContainer = document.getElementById("flip-book");
-
   if (!flipContainer) return;
 
   const pageFlip = new St.PageFlip(flipContainer, {
-    width: 850,
-    height: 475,
+    width: 420,
+    height: 560,
     size: "fixed",
 
-    // REAL PAGE FLIP SETTINGS
     drawShadow: true,
     maxShadowOpacity: 0.5,
     showCover: false,
@@ -193,27 +188,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("#flip-book .page")
   );
 
-  /* ===============================
-     PREV / NEXT BUTTONS
-  =============================== */
-
   const prevBtn = document.getElementById("flipPrev");
   const nextBtn = document.getElementById("flipNext");
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", function () {
-      pageFlip.flipPrev();
-    });
-  }
+  /* ===============================
+     FORCE SAME CURL DIRECTION
+  =============================== */
 
   if (nextBtn) {
     nextBtn.addEventListener("click", function () {
-      pageFlip.flipNext();
+      pageFlip.flipNext("top-right"); // 👉 real curl
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      pageFlip.flipPrev("top-left"); // 👉 SAME curl feeling
     });
   }
 
   /* ===============================
-     DISABLE BUTTONS AT EDGES
+     BUTTON STATE
   =============================== */
 
   function updateButtons() {
@@ -227,16 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
   pageFlip.on("flip", updateButtons);
   updateButtons();
 
-  /* ===============================
-     KEYBOARD SUPPORT (OPTIONAL)
-  =============================== */
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") pageFlip.flipPrev();
-    if (e.key === "ArrowRight") pageFlip.flipNext();
-  });
-
 });
+
+
 
 
 
