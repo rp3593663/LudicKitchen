@@ -482,7 +482,7 @@ a.pre_footer_list-menu__item {
     assign share_url = request.origin | append: request.path
   endif
 
-  render 'share-button', block: block, share_link: share_url
+  render 'share-button', share_link: share_url
 %}
 
                         <button class="copy-link-btn" id="copyLinkBtn">
