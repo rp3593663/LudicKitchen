@@ -1780,6 +1780,9 @@ a.redirect_recover {
     display: grid;
     gap: 12px;
 }
+.dashboard_content_area .form_field_box .fields.size_fields{
+    gap: 20px;
+}
 .edit_account_field {
     display: grid;
     width: 100%;
