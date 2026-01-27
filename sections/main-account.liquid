@@ -1,7 +1,3 @@
-
-
-
-
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.fullwidth -%}
@@ -54,684 +50,850 @@
 	{%- endif -%}
 {%- endstyle -%}
 
+
 <div class="kretoss-section section-customer_account">
   <div class="{{ container }}" {{ max_width }}>
-    <div class="customer account">
-      <div class="main_account_head">
-        <h2>My Account</h2>
+    <div class="account_dashboard">
+      <div class="account_sidebar_mobile">
+        <a href="{{ shop.url }}">
+          <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966" class="account_logo">
+        </a>
+        <div class="nav_toggle_open">
+          <svg width="20" height="16" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.9" y="1.56" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+            <rect x="0.9" y="5.88" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+            <rect x="0.9" y="10.21" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+          </svg>
+        </div>
       </div>
-      <div class="dashboard_content_area">
-        <form id="profile-form" class="profile_edit_form">
-          <input type="hidden" name="customer_id" value="{{ customer.id }}">
-          <div class="all_forms_field_blocks">
-            <div class="form_field_box">
-              <div class="field_head">
-                <h4>Profile Image</h4>
-                <p>This image appears in your My Account section.</p>
+      <div class="account_sidebar">
+        <div class="sidebar_content">
+          <div class="sidebar_header">
+            <a href="{{ shop.url }}">
+              <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966">
+            </a>
+            <div class="nav_toggle_close">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.83331 5.83333L9.99998 10M9.99998 10L14.1666 14.1667M9.99998 10L14.1666 5.83333M9.99998 10L5.83331 14.1667" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sidebar_navigation">
+            <div class="mobile_sidebar_content sidebar_borders"> </div>
+            <div class="account_nav">
+              <div class="nav_link" data-nav="profile">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.3335 14C13.3335 13.0696 13.3335 12.6045 13.2187 12.2259C12.9602 11.3737 12.2932 10.7067 11.4409 10.4481C11.0624 10.3333 10.5973 10.3333 9.66687 10.3333H6.33354C5.40316 10.3333 4.93797 10.3333 4.55944 10.4481C3.70717 10.7067 3.04023 11.3737 2.7817 12.2259C2.66687 12.6045 2.66687 13.0696 2.66687 14M11.0002 5C11.0002 6.65685 9.65707 8 8.0002 8C6.34335 8 5.0002 6.65685 5.0002 5C5.0002 3.34315 6.34335 2 8.0002 2C9.65707 2 11.0002 3.34315 11.0002 5Z" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Account Details
               </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                  <div class="profile_pic_field">
-                    <div class="profile-image-uploader">
-                      {% assign profile_img = customer.metafields.custom.profile_image %}
-                      <div class="avatar-preview" id="avatarPreview">
-                        {% if profile_img != blank %}
-                          <img src="{{ profile_img }}" id="avatarImg">
-                        {% else %}
-                          <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
-                        {% endif %}
-                      </div>
-                      <div class="avatar-actions_info">
-                        <div class="avatar-actions">
-                          <label class="upload-btn">
-                            Upload Image
-                            <input type="file" id="avatarInput" accept="image/*" hidden>
-                          </label>
-                          <button type="button" id="removeAvatar" class="remove-btn">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.0062 14H6.9938C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#C6C6C6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          </button>
+              <div class="nav_link" data-nav="ledger">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.23645 14C6.70653 14.4149 7.32406 14.6667 8.00033 14.6667C8.67666 14.6667 9.29413 14.4149 9.76419 14M12.0003 5.33333C12.0003 4.27246 11.5789 3.25505 10.8288 2.5049C10.0786 1.75475 9.06119 1.33333 8.00033 1.33333C6.93946 1.33333 5.92206 1.75475 5.17191 2.5049C4.42177 3.25505 4.00034 4.27246 4.00034 5.33333C4.00034 7.39346 3.48065 8.80399 2.90011 9.73693C2.41043 10.5239 2.16558 10.9174 2.17455 11.0272C2.1845 11.1487 2.21025 11.1951 2.30819 11.2677C2.39665 11.3333 2.7954 11.3333 3.59291 11.3333H12.4078C13.2053 11.3333 13.6041 11.3333 13.6925 11.2677C13.7905 11.1951 13.8162 11.1487 13.8261 11.0272C13.8351 10.9174 13.5903 10.5239 13.1006 9.73693C12.52 8.80399 12.0003 7.39346 12.0003 5.33333Z" stroke="#949598" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Ledger
+              </div>
+              <div class="nav_link" data-nav="refer">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_522_16186)">
+                  <path d="M4.5 15.0654H6.45772C6.71297 15.0654 6.96666 15.0958 7.21411 15.1565L9.28267 15.6592C9.73147 15.7685 10.1991 15.7792 10.6526 15.6911L12.9398 15.2461C13.5439 15.1284 14.0997 14.8391 14.5352 14.4154L16.1534 12.8413C16.6155 12.3926 16.6155 11.6643 16.1534 11.2148C15.7374 10.8101 15.0785 10.7645 14.6078 11.1077L12.722 12.4837C12.4519 12.6811 12.1232 12.7874 11.7853 12.7874H9.96412H11.1233C11.7767 12.7874 12.3059 12.2725 12.3059 11.6369V11.4069C12.3059 10.8791 11.9367 10.419 11.4106 10.2914L9.62145 9.85635C9.3303 9.7857 9.0321 9.75 8.73232 9.75C8.00872 9.75 6.69892 10.3491 6.69892 10.3491L4.5 11.2687M1.5 10.95V15.3C1.5 15.7201 1.5 15.9301 1.58174 16.0905C1.65365 16.2317 1.76839 16.3463 1.90951 16.4183C2.06994 16.5 2.27996 16.5 2.7 16.5H3.3C3.72004 16.5 3.93006 16.5 4.09049 16.4183C4.23161 16.3464 4.34635 16.2317 4.41826 16.0905C4.5 15.9301 4.5 15.7201 4.5 15.3V10.95C4.5 10.53 4.5 10.3199 4.41826 10.1595C4.34635 10.0184 4.23161 9.90368 4.09049 9.83175C3.93006 9.75 3.72004 9.75 3.3 9.75H2.7C2.27996 9.75 2.06994 9.75 1.90951 9.83175C1.76839 9.90368 1.65365 10.0184 1.58174 10.1595C1.5 10.3199 1.5 10.53 1.5 10.95ZM12.8936 2.6942C12.446 1.75756 11.4139 1.26135 10.4103 1.74029C9.40672 2.21924 8.97915 3.35505 9.39938 4.35213C9.65903 4.96836 10.403 6.16502 10.9336 6.98929C11.1296 7.29385 11.2276 7.44613 11.3708 7.53518C11.4935 7.6116 11.6473 7.65278 11.7918 7.64805C11.9603 7.64243 12.1214 7.55955 12.4433 7.39384C13.3149 6.94525 14.5576 6.28093 15.0906 5.87711C15.953 5.22371 16.1667 4.02269 15.521 3.1097C14.8753 2.19669 13.7495 2.10686 12.8936 2.6942Z" stroke="#949598" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_522_16186">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                Refer
+              </div>
+              <div class="nav_link" data-nav="faqs">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.64718 7.97406C9.64718 7.97406 10.3862 6.74106 11.7872 6.74106C13.6532 6.74106 14.3532 7.87906 14.3532 9.20706C14.3532 10.8521 11.7862 11.1671 11.7862 11.1671V12.4961M11.7862 14.9631H11.7952M20.0002 6.74006C20.0002 5.22706 18.7362 4.00006 17.1772 4.00006H6.82418C5.26418 4.00006 4.00018 5.22706 4.00018 6.74006V15.2121C4.00018 16.7251 5.26418 17.9521 6.82418 17.9521H15.5762C16.1762 17.9521 16.7612 18.1381 17.2462 18.4831L19.2512 19.9111C19.5612 20.1321 20.0002 19.9171 20.0002 19.5421V6.74106V6.74006Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                FAQ
+              </div>
+              <div class="nav_link" data-nav="contact">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.91949 5.9973C6.38349 6.96373 7.01604 7.86946 7.81704 8.67053C8.61811 9.4716 9.52391 10.1041 10.4903 10.5681C10.5734 10.608 10.615 10.628 10.6676 10.6433C10.8545 10.6978 11.084 10.6587 11.2422 10.5453C11.2868 10.5134 11.3249 10.4753 11.4011 10.3991C11.6342 10.166 11.7507 10.0495 11.8679 9.97333C12.3098 9.686 12.8796 9.686 13.3215 9.97333C13.4387 10.0495 13.5552 10.166 13.7883 10.3991L13.9182 10.529C14.2725 10.8833 14.4496 11.0605 14.5458 11.2507C14.7372 11.6291 14.7372 12.0759 14.5458 12.4543C14.4496 12.6445 14.2725 12.8217 13.9182 13.176L13.8131 13.2811C13.46 13.6342 13.2835 13.8107 13.0434 13.9455C12.7771 14.0951 12.3634 14.2027 12.058 14.2018C11.7827 14.201 11.5945 14.1476 11.2182 14.0408C9.19597 13.4668 7.28771 12.3839 5.69575 10.7919C4.10376 9.19986 3.02078 7.2916 2.4468 5.26936C2.33999 4.89306 2.28659 4.70491 2.28577 4.42961C2.28486 4.12413 2.39243 3.71047 2.54205 3.44413C2.67688 3.20411 2.85342 3.02757 3.20651 2.67448L3.31159 2.5694C3.66589 2.2151 3.84304 2.03795 4.03329 1.94172C4.41167 1.75034 4.85851 1.75034 5.23688 1.94172C5.42713 2.03795 5.60429 2.2151 5.95858 2.5694L6.08849 2.69931C6.32156 2.93238 6.4381 3.04892 6.51429 3.1661C6.80162 3.60803 6.80162 4.17775 6.51429 4.61968C6.4381 4.73686 6.32156 4.8534 6.08849 5.08646C6.01229 5.16268 5.97418 5.20078 5.94229 5.24532C5.82895 5.4036 5.78981 5.63311 5.84429 5.82002C5.85963 5.87261 5.87958 5.91417 5.91949 5.9973Z" stroke="#949598" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Contact
+              </div>
+              <div class="nav_link desktop_sidebar_content" data-nav="logout">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.6667 11.3333L14 8M14 8L10.6667 4.66667M14 8H6M6 2H5.2C4.07989 2 3.51984 2 3.09202 2.21799C2.71569 2.40973 2.40973 2.71569 2.21799 3.09202C2 3.51984 2 4.07989 2 5.2V10.8C2 11.9201 2 12.4801 2.21799 12.908C2.40973 13.2843 2.71569 13.5903 3.09202 13.782C3.51984 14 4.07989 14 5.2 14H6" stroke="#949598" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Log out
+              </div>
+            </div>
+            <div class="mobile_sidebar_content sidebar_borders"> </div>
+            <div class="account_nav mobile_sidebar_content">
+              <a class="nav_link" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.3335 14C13.3335 13.0696 13.3335 12.6045 13.2187 12.2259C12.9602 11.3737 12.2932 10.7067 11.4409 10.4481C11.0624 10.3333 10.5973 10.3333 9.66687 10.3333H6.33354C5.40316 10.3333 4.93797 10.3333 4.55944 10.4481C3.70717 10.7067 3.04023 11.3737 2.7817 12.2259C2.66687 12.6045 2.66687 13.0696 2.66687 14M11.0002 5C11.0002 6.65685 9.65707 8 8.0002 8C6.34335 8 5.0002 6.65685 5.0002 5C5.0002 3.34315 6.34335 2 8.0002 2C9.65707 2 11.0002 3.34315 11.0002 5Z" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Instagram
+              </a>
+              <a class="nav_link" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <rect width="24" height="24" fill="url(#pattern0_522_20949)"/>
+                  <defs>
+                  <pattern id="pattern0_522_20949" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_522_20949" transform="scale(0.0104167)"/>
+                  </pattern>
+                  <image id="image0_522_20949" width="96" height="96" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAYKADAAQAAAABAAAAYAAAAACpM19OAAAFeklEQVR4Ae1a7ZXbNhC8y/N/KxVkO7BKQAdRCezg1MExFcSuQOrgkgr4XME5FVCp4JQK7Bmf8YIwWIoUCRLQ7b43R3CxWMzOEuT54+7OzBQwBUwBU8AUMAVMAVPAFDAFTAFTwBQwBUwBU8AUMAUWUeB+kV2mbyJIsQM+AFtgEwDD73bCT+IL8NePK8dmVyrgsO534AX4eiVarDsAApgNVMAhrgGuFV1bx5wVYKYo4OBPIXy3IXtl/zft5qumK1Sq+/ZNK90pXnD/DKQSW8vboXHn4DgAbI5fQ1707YCbtC2qCgv2hWvXBvEfAQoiwAbwxvEW4FwNMLYvD6a/m+BnX6zP0SKOsTdjFGvIbzeMqQEKPNYECyqA4sWEHMrBryUXrineBBVcEn+K8DGBHJyEb6RgfImDFz68cg3XFmsC5i0QFtUdP2HeC4VhErvEocspvG+SMFoo6TP2CYvpjusFeOwucOhyit27BXjOvsXjhcKr2XeMJzz08Kgxx9NH7IGY+PQxR1EmYKsVQ38FLGXaKaTgXavhiPFuu4G53zdKISyuXph8TFD6+NR3jT4tvhub7b3rKeKwAmtN0JttQKM0oIVfVmgA9401oY5weVBi+RorwgQsY8XSF3vnLlHU8QInngTisSfugLkijEQpdhftiuxdhE+X36X73Yr8R21NoWPF1KOyzB/cKLxiXLu+dn46aTJue4qUNFsOzsr9X4CuuJfuuYZri7A9WMYKajJhzwdkTBMYyzXF2BOYxhpQZ1SBgEsLxHiGvgYxjC3KSDoswo9dhlXswOkIPAOeZ4vxAXBAkaYdbymymkSk7xPlZVo+STFLuWdsv6x97xKxEyXvWfHn5t6AUAXwegROQFEmYOvfpeG1LaAKcifPkPe+AN7/oSidAnwxJTTgEOHO7xlPw+z20+wZXxOKkvek+HNyS4QMxY/5I6HjXKkaMI5FGdFFnYAyJM2AZaoTIEpt/yj+nNx/K2RE8U9yp2qARoofM7NAgaUbEGxtQyqQqgGiyKsdbyV8FfdZ2VUU/yR3qgZMIrXyYq0BSWhZA5LIOjxpqgaIQmHRp0vhcMl9UgJ+UfyT3KkaoJEqoQEa9yT+pRuQpIiSk6ZqgHZcTwWIpZ3Sn1NwT9WAFFyXyqk14H0KAtaAFKqOyJmiAQ77i8JBe7qU8FXcJ2XXLfw7ZS4LtwML/oPL1x4I5nI3AcG+GlijA7KyB7DpI+3nJCvWcTLk6Pn2XR/jy5f38lj2EfVz7fLUrt6Rf2vrefdd3dU7zLiQwvaR9HP1jHumTrUfWBNr36Qm05e/wqQXWLvyaWJBpVkNwlpNoX/V2hqFZAs/iW2BDVCqkbsDKoA1hcL7cQP/aqa9K3erMUq3sUNqL3p4pQZX2/3VK18XkkjMpuaN5czBN3u9U/8gdlZUcYq/ZPdWIa9poITP626QLjyOftzCL/NutWo2is+afH3htZnCbOp/zv2MzV2EgMBHwm/B/lyzyA021z7E4VNyq2PWLlMaMMc34LcpBApf+wn8TznUUIPErT7lWl2sOSurwUYje0t+vnb2WSkfkBGMPwLPwK2JzppqgN+9m7Yjqos1b+xTpz0ELif1pn6EU9RyVpI+wD/06asQu1XyaPmV8Lfndig5dgLo41MtQJ85TL4AsRxt30Kb+1cBChUTkD7OPQLhE86T4YAnQFtHfw2YDVCgQkyfkNfMtcgpgNlABY6Iu0Zobc1u4L4WFihwxFgTdIy/CnLacKQCNeLHiB3GtljrALOJCgjWH4FQ3L4xfwuqAX6cs7b7rNn9n5zAxXf5rwDHBO0MnIAvwGfgD4A+M1PAFDAFTAFTwBQwBUwBU8AUMAVMAVPAFDAFTAFTwBQwBV4V+AbreStBZkw6DQAAAABJRU5ErkJggg=="/>
+                  </defs>
+                </svg>
+                Youtube
+              </a>
+            </div>
+            <div class="mobile_sidebar_content sidebar_borders"> </div>
+          </div>
+        </div>
+        <div class="sidebar_footer mobile_sidebar_content">
+          <div class="sidebar_footer_links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.99998 16.6666H5.83331C5.17027 16.6666 4.53439 16.4033 4.06555 15.9344C3.59671 15.4656 3.33331 14.8297 3.33331 14.1666V5.83331C3.33331 5.17027 3.59671 4.53439 4.06555 4.06555C4.53439 3.59671 5.17027 3.33331 5.83331 3.33331H9.99998M8.33331 9.99998H16.6666M16.6666 9.99998L13.4391 13.125M16.6666 9.99998L13.4391 6.87498" stroke="#949598" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Log Out
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="account_content">
+        <div class="customer account account_dashboard_content" data-content="profile">
+          <div class="main_account_head">
+            <h2>Account Details</h2>
+          </div>
+          <div class="dashboard_content_area">
+            <form id="profile-form" class="profile_edit_form">
+              <input type="hidden" name="customer_id" value="{{ customer.id }}">
+              <div class="all_forms_field_blocks">
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Profile Image</h4>
+                    <p>This image appears in your profile, creator badge, comments.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <div class="profile_pic_field">
+                        <div class="profile-image-uploader">
+                          {% assign profile_img = customer.metafields.custom.profile_image %}
+                          <div class="avatar-preview" id="avatarPreview">
+                            {% if profile_img != blank %}
+                              <img src="{{ profile_img }}" id="avatarImg">
+                            {% else %}
+                              <span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>
+                            {% endif %}
+                          </div>
+                          <div class="avatar-actions_info">
+                            <div class="avatar-actions">
+                              <label class="upload-btn">
+                                Upload Image
+                                <input type="file" id="avatarInput" accept="image/*" hidden>
+                              </label>
+                              <button type="button" id="removeAvatar" class="remove-btn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.0062 14H6.9938C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#C6C6C6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </button>
+                            </div>
+                            <small>Recommended size: 120x120</small>
+                          </div>
                         </div>
-                        <small>Recommended size: 120x120</small>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Your Full Name</h4>
+                    <p>This will appear in all places you're involved as a co-creator.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <input name="first_name" value="{{ customer.first_name }}" class="edit_account_input" placeholder="First Name">
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="edit_account_field">
+                      <input name="last_name" value="{{ customer.last_name }}" class="edit_account_input" placeholder="Last Name">
+                      <div class="field-error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Registered Email Address</h4>
+                    <p>This is the email address you used to sign up into the Kitchen.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <input name="email" value="{{ customer.email }}" class="edit_account_input disabled" placeholder="Email Address" disabled>
+                      <div class="field-error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Contact Number</h4>
+                    <p>This is the contact you used to sign up into the Kitchen.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field phone_edit_field">
+                      <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_287_35)">
+                        <path d="M0 0H24V5.33333H0V0Z" fill="#FF9933"/>
+                        <path d="M0 5H24V10.3333H0V5Z" fill="white"/>
+                        <path d="M0 10.6667H24V16H0V10.6667Z" fill="#138808"/>
+                        <path d="M12.0004 9.60002C12.884 9.60002 13.6004 8.88368 13.6004 8.00002C13.6004 7.11637 12.884 6.40002 12.0004 6.40002C11.1167 6.40002 10.4004 7.11637 10.4004 8.00002C10.4004 8.88368 11.1167 9.60002 12.0004 9.60002Z" stroke="#000080" stroke-width="0.187135"/>
+                        <path d="M11.9998 8.16003C12.0882 8.16003 12.1598 8.08839 12.1598 8.00003C12.1598 7.91166 12.0882 7.84003 11.9998 7.84003C11.9115 7.84003 11.8398 7.91166 11.8398 8.00003C11.8398 8.08839 11.9115 8.16003 11.9998 8.16003Z" fill="#000080"/>
+                        <path d="M12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305ZM11.9998 9.25728V6.07599V9.25728ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305Z" fill="black"/>
+                        <path d="M12.4115 6.13021L11.5881 9.20305M12.7951 6.28909L11.2045 9.04418M13.1246 6.54186L10.8751 8.7914M13.3774 6.87131L10.6223 8.46195M13.5362 7.25494L10.4634 8.07833M13.5905 7.66663H10.4092M13.5362 8.07833L10.4634 7.25494M13.3774 8.46195L10.6223 6.87131M13.1246 8.7914L10.8751 6.54186M12.7951 9.04418L11.2045 6.28909M12.4115 9.20305L11.5881 6.13021M11.9998 9.25728V6.07599" stroke="#000080" stroke-width="0.0935673"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_287_35">
+                        <rect width="24" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                      <span>+91</span>
+                      <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input phone_input disabled" placeholder="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" disabled>
+                      <div class="field-error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>About You</h4>
+                    <p>Identify your gender and the years on earth.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                        <select name="gender" class="edit_account_input">
+                          <option value="">Select Gender</option>
+                          <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
+                          <option value="Female" {% if customer.metafields.custom.gender == "Female" %}selected{% endif %}>Female</option>
+                          <option value="Prefer not to say" {% if customer.metafields.custom.gender == "Prefer not to say" %}selected{% endif %}>Prefer not to say</option>
+                        </select>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="edit_account_field">
+                      <select name="age" class="edit_account_input">
+                        <option value="">Select Age</option>
+                        {% for i in (18..99) %}
+                          <option value="{{ i }}" {% if customer.metafields.custom.age == i %}selected{% endif %}>{{ i }}</option>
+                        {% endfor %}
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Socials</h4>
+                    <p>Where else do you exist?</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <input name="instagram" value="{{ customer.metafields.custom.instagram }}" class="edit_account_input" placeholder="Instagram">
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="edit_account_field">
+                      <input name="twitter" value="{{ customer.metafields.custom.twitter }}" class="edit_account_input" placeholder="Twitter">
+                      <div class="field-error"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Shipping Address</h4>
+                    <p>This is where your co-created product will be delivered.</p>
+                  </div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <input name="address1" value="{{ customer.default_address.address1 }}" class="edit_account_input" placeholder="Address Line 1">
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="edit_account_field">
+                      <input name="address2" value="{{ customer.default_address.address2 }}" class="edit_account_input" placeholder="Address Line 2">
+                    </div>
+                    <div class="edit_account_col">
+                      <div class="edit_account_field">
+                        <input name="city" value="{{ customer.default_address.city }}" class="edit_account_input" placeholder="City / District">
+                        <div class="field-error"></div>
+                      </div>
+                      <div class="edit_account_field">
+                        <input name="province" value="{{ customer.default_address.province }}" class="edit_account_input" placeholder="State / Province">
+                        <div class="field-error"></div>
+                      </div>
+                    </div>
+                    <div class="edit_account_col">
+                      <div class="edit_account_field">
+                        <input name="zip" value="{{ customer.default_address.zip }}" class="edit_account_input" placeholder="Postal Code">
+                        <div class="field-error"></div>
+                      </div>
+                      <div class="edit_account_field">
+                        <input name="country" value="{{ customer.default_address.country }}" class="edit_account_input" placeholder="Country">
+                        <div class="field-error"></div>
                       </div>
                     </div>
                   </div>
-
                 </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Your Full Name</h4>
-                <p>This will appear in all places you're involved as a co-creator.</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                   <input name="first_name" value="{{ customer.first_name }}" class="edit_account_input" placeholder="First Name">
-                   <div class="field-error"></div>
-                </div>
-                <div class="edit_account_field">
-                  <input name="last_name" value="{{ customer.last_name }}" class="edit_account_input" placeholder="Last Name">
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Registered Email Address</h4>
-                <p>This is the email address you used to sign up into the Kitchen.</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                  <input name="email" value="{{ customer.email }}" class="edit_account_input disabled" placeholder="Email Address" disabled>
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Contact Number</h4>
-                <p>This is the contact you used to sign up into the Kitchen.</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field phone_edit_field">
-                  <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_287_35)">
-                    <path d="M0 0H24V5.33333H0V0Z" fill="#FF9933"/>
-                    <path d="M0 5H24V10.3333H0V5Z" fill="white"/>
-                    <path d="M0 10.6667H24V16H0V10.6667Z" fill="#138808"/>
-                    <path d="M12.0004 9.60002C12.884 9.60002 13.6004 8.88368 13.6004 8.00002C13.6004 7.11637 12.884 6.40002 12.0004 6.40002C11.1167 6.40002 10.4004 7.11637 10.4004 8.00002C10.4004 8.88368 11.1167 9.60002 12.0004 9.60002Z" stroke="#000080" stroke-width="0.187135"/>
-                    <path d="M11.9998 8.16003C12.0882 8.16003 12.1598 8.08839 12.1598 8.00003C12.1598 7.91166 12.0882 7.84003 11.9998 7.84003C11.9115 7.84003 11.8398 7.91166 11.8398 8.00003C11.8398 8.08839 11.9115 8.16003 11.9998 8.16003Z" fill="#000080"/>
-                    <path d="M12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305ZM11.9998 9.25728V6.07599V9.25728ZM12.4115 6.13021L11.5881 9.20305L12.4115 6.13021ZM12.7951 6.28909L11.2045 9.04418L12.7951 6.28909ZM13.1246 6.54186L10.8751 8.7914L13.1246 6.54186ZM13.3774 6.87131L10.6223 8.46195L13.3774 6.87131ZM13.5362 7.25494L10.4634 8.07833L13.5362 7.25494ZM13.5905 7.66663H10.4092H13.5905ZM13.5362 8.07833L10.4634 7.25494L13.5362 8.07833ZM13.3774 8.46195L10.6223 6.87131L13.3774 8.46195ZM13.1246 8.7914L10.8751 6.54186L13.1246 8.7914ZM12.7951 9.04418L11.2045 6.28909L12.7951 9.04418ZM12.4115 9.20305L11.5881 6.13021L12.4115 9.20305Z" fill="black"/>
-                    <path d="M12.4115 6.13021L11.5881 9.20305M12.7951 6.28909L11.2045 9.04418M13.1246 6.54186L10.8751 8.7914M13.3774 6.87131L10.6223 8.46195M13.5362 7.25494L10.4634 8.07833M13.5905 7.66663H10.4092M13.5362 8.07833L10.4634 7.25494M13.3774 8.46195L10.6223 6.87131M13.1246 8.7914L10.8751 6.54186M12.7951 9.04418L11.2045 6.28909M12.4115 9.20305L11.5881 6.13021M11.9998 9.25728V6.07599" stroke="#000080" stroke-width="0.0935673"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_287_35">
-                    <rect width="24" height="16" fill="white"/>
-                    </clipPath>
-                    </defs>
-                  </svg>
-                  <span>+91</span>
-                  <input name="phone" value="{{ customer.phone | remove: '+91' | strip }}" class="edit_account_input phone_input disabled" placeholder="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" disabled>
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>About You</h4>
-                <p>Identify your gender and the years on earth.</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                    <select name="gender" class="edit_account_input">
-                      <option value="">Select Gender</option>
-                      <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
-                      <option value="Female" {% if customer.metafields.custom.gender == "Female" %}selected{% endif %}>Female</option>
-                      <option value="Prefer not to say" {% if customer.metafields.custom.gender == "Prefer not to say" %}selected{% endif %}>Prefer not to say</option>
-                    </select>
-                   <div class="field-error"></div>
-                </div>
-                <div class="edit_account_field">
-                  <select name="age" class="edit_account_input">
-                    <option value="">Select Age</option>
-                    {% for i in (18..99) %}
-                      <option value="{{ i }}" {% if customer.metafields.custom.age == i %}selected{% endif %}>{{ i }}</option>
-                    {% endfor %}
-                  </select>
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Socials</h4>
-                <p>Where else do you exist?</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                   <input name="instagram" value="{{ customer.metafields.custom.instagram }}" class="edit_account_input" placeholder="Instagram">
-                   <div class="field-error"></div>
-                </div>
-                <div class="edit_account_field">
-                  <input name="twitter" value="{{ customer.metafields.custom.twitter }}" class="edit_account_input" placeholder="Twitter">
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Shipping Address</h4>
-                <p>This is where your co-created product will be delivered.</p>
-              </div>
-              <div class="fields">
-                <div class="edit_account_field">
-                   <input name="address1" value="{{ customer.default_address.address1 }}" class="edit_account_input" placeholder="Address Line 1">
-                   <div class="field-error"></div>
-                </div>
-                <div class="edit_account_field">
-                  <input name="address2" value="{{ customer.default_address.address2 }}" class="edit_account_input" placeholder="Address Line 2">
-                </div>
-                <div class="edit_account_col">
-                  <div class="edit_account_field">
-                    <input name="city" value="{{ customer.default_address.city }}" class="edit_account_input" placeholder="City / District">
-                    <div class="field-error"></div>
+                <div class="form_field_box">
+                  <div class="field_head">
+                    <h4>Footwear Size</h4>
+                    <p>Measure your true fit for right comfort and wear.</p>
                   </div>
-                  <div class="edit_account_field">
-                    <input name="province" value="{{ customer.default_address.province }}" class="edit_account_input" placeholder="State / Province">
-                    <div class="field-error"></div>
+                  <div class="fields">
+                    <div class="edit_account_field">
+                      <select name="shoe_size" class="edit_account_input">
+                        <option value="">Select Shoe Size</option>
+                        {% for i in (3..12) %}
+                          {% assign size_value = "UK " | append: i %}
+                          <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
+                            {{ size_value }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
                   </div>
                 </div>
-                <div class="edit_account_col">
-                  <div class="edit_account_field">
-                    <input name="zip" value="{{ customer.default_address.zip }}" class="edit_account_input" placeholder="Postal Code">
-                    <div class="field-error"></div>
+                <div class="form_submit_wrap">
+                  <div class="save_btn">
+                    <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
+                    <a href="{{ routes.account_logout_url }}" class="logout_link">
+                      {{ 'customer.log_out' | t }}
+                    </a>
                   </div>
-                  <div class="edit_account_field">
-                    <input name="country" value="{{ customer.default_address.country }}" class="edit_account_input" placeholder="Country">
-                    <div class="field-error"></div>
-                  </div>
+                  <div id="formMessage" class="form-message"></div>
                 </div>
+                
               </div>
-            </div>
-            <div class="form_field_box">
-               <div class="field_head">
-                <h4>Size and Fit</h4>
-                <p>Enter your true sizes for perfect wear.</p>
-              </div>
-              <div class="fields size_fields">
-                <div class="edit_account_field">
-                  <label>Footwear size</label>
-                  <select name="shoe_size" class="edit_account_input">
-                    <option value="">Select Footwear Size</option>
-                    {% for i in (3..12) %}
-                      {% assign size_value = "UK " | append: i %}
-                      <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
-                        {{ size_value }}
-                      </option>
-                    {% endfor %}
-                  </select>
-                  <div class="field-error"></div>
-                </div>
-                <div class="edit_account_field">
-                  <label>Apparel size</label>
-                  <select name="shoe_size" class="edit_account_input">
-                    <option value="">Select Appereal Size</option>
-                    <option value="XS" {% if customer.metafields.custom.apparel_size == 'XS' %}selected{% endif %}>XS</option>
-                    <option value="S" {% if customer.metafields.custom.apparel_size == 'S' %}selected{% endif %}>S</option>
-                    <option value="M" {% if customer.metafields.custom.apparel_size == 'M' %}selected{% endif %}>M</option>
-                    <option value="L" {% if customer.metafields.custom.apparel_size == 'L' %}selected{% endif %}>L</option>
-                    <option value="XL" {% if customer.metafields.custom.apparel_size == 'XL' %}selected{% endif %}>XL</option>
-                    <option value="XXL" {% if customer.metafields.custom.apparel_size == 'XXL' %}selected{% endif %}>XXL</option>
-                  </select>
-                  <div class="field-error"></div>
-                </div>
-              </div>
-            </div>
-            <div class="form_submit_wrap">
-              <div class="save_btn">
-                <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
-                <a href="{{ routes.account_logout_url }}" class="logout_link">
-                  {{ 'customer.log_out' | t }}
-                </a>
-              </div>
-              <div id="formMessage" class="form-message"></div>
-            </div>
-            
+            </form>
           </div>
-        </form>
-      </div>
-      
-      {% comment %} <div>
-        <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-        <a href="{{ routes.account_logout_url }}">
-          <span class="svg-wrapper">
-            {{- 'icon-account.svg' | inline_asset_content -}}
-          </span>
-          {{ 'customer.log_out' | t }}
-        </a>
-      </div>
-      <div>
-        <div>
-          <h2>{{ 'customer.orders.title' | t }}</h2>
-
-          {% paginate customer.orders by 20 %}
-            {%- if customer.orders.size > 0 -%}
-              <table role="table" class="order-history">
-                <caption class="visually-hidden">
-                  {{ 'customer.orders.title' | t }}
-                </caption>
-                <thead role="rowgroup">
-                  <tr role="row">
-                    <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
-                    <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
-                    <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
-                    <th id="ColumnFulfillment" scope="col" role="columnheader">
-                      {{ 'customer.orders.fulfillment_status' | t }}
-                    </th>
-                    <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
-                  </tr>
-                </thead>
-                <tbody role="rowgroup">
-                  {%- for order in customer.orders -%}
-                    <tr role="row">
-                      <td
-                        id="RowOrder"
-                        role="cell"
-                        headers="ColumnOrder"
-                        data-label="{{ 'customer.orders.order_number' | t }}"
-                      >
-                        <a
-                          href="{{ order.customer_url }}"
-                          aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
-                        >
-                          {{ order.name }}
-                        </a>
-                      </td>
-                      <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
-                        {{ order.created_at | time_tag: format: 'date' }}
-                      </td>
-                      <td
-                        headers="RowOrder ColumnPayment"
-                        role="cell"
-                        data-label="{{ 'customer.orders.payment_status' | t }}"
-                      >
-                        {{ order.financial_status_label }}
-                      </td>
-                      <td
-                        headers="RowOrder ColumnFulfillment"
-                        role="cell"
-                        data-label="{{ 'customer.orders.fulfillment_status' | t }}"
-                      >
-                        {{ order.fulfillment_status_label }}
-                      </td>
-                      <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
-                        {{ order.total_net_amount | money_with_currency }}
-                      </td>
-                    </tr>
-                  {%- endfor -%}
-                </tbody>
-              </table>
-            {%- else -%}
-              <p>{{ 'customer.orders.none' | t }}</p>
-            {%- endif -%}
-
-            {%- if paginate.pages > 1 -%}
-              {%- if paginate.parts.size > 0 -%}
-                <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-                  <ul role="list">
-                    {%- if paginate.previous -%}
-                      <li>
-                        <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
-                          <span class="svg-wrapper">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </span>
-                        </a>
-                      </li>
-                    {%- endif -%}
-
-                    {%- for part in paginate.parts -%}
-                      <li>
-                        {%- if part.is_link -%}
-                          <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
-                            {{- part.title -}}
-                          </a>
-                        {%- else -%}
-                          {%- if part.title == paginate.current_page -%}
-                            <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
-                              {{- part.title -}}
-                            </span>
-                          {%- else -%}
-                            <span>{{ part.title }}</span>
-                          {%- endif -%}
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-
-                    {%- if paginate.next -%}
-                      <li>
-                        <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}">
-                          <span class="svg-wrapper">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </span>
-                        </a>
-                      </li>
-                    {%- endif -%}
-                  </ul>
-                </nav>
-              {%- endif -%}
-            {%- endif -%}
-          {% endpaginate %}
         </div>
+        <div class="account_ledger account_dashboard_content" data-content="ledger">
+          <div class="main_account_head">
+            <h2>Ledger</h2>
+          </div>
+          <div class="dashboard_content_area">
+            <div class="ledger_content_area">
+              {% if customer and customer.orders.size > 0 %}
+                {% for order in customer.orders %}
+                  {% for line_item in order.line_items %}
+                    {% assign product = line_item.product %}
+                    {% if product != blank %}
+                      <div class="project_progress_inner">
+                        <div class="project_progress_left">
+                            {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+                            {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
+                            {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+                            {% if progress > 100 %}
+                                {% assign progress = 100 %}
+                            {% endif %}
 
-        <div>
-          <h2>{{ 'customer.account.details' | t }}</h2>
+                            {% assign bar_width = progress %}
+                            {% if bar_width < 2 %}
+                                {% assign bar_width = 2 %}
+                            {% endif %}
 
-          {{ customer.default_address | format_address }}
+                            {% assign raised = raised_amount | times: 1.0 %}
+                            {% if raised >= 10000000 %}
+                                {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif raised >= 100000 %}
+                                {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign raised_display = raised | money_without_currency %}
+                            {% endif %}
 
-          <a href="{{ routes.account_addresses_url }}">
-            {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-          </a>
+                            {% assign goal = goal_amount | times: 1.0 %}
+                            {% if goal >= 10000000 %}
+                                {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif goal >= 100000 %}
+                                {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign goal_display = goal | money_without_currency %}
+                            {% endif %}
+
+                            <div class="goal_progress">
+                                <div class="progress_data">
+                                    <div class="goal_raised">
+                                        <h2>₹ {{ raised_display }}</h2>
+                                        <span>Raised till now</span>
+                                    </div>
+                                    <div class="goal_total">
+                                        <h2>₹ {{ goal_display }}</h2>
+                                        <span>Our total goal</span>
+                                    </div>
+                                </div>
+                                <div class="goal_raised_progress_bar">
+                                    <div class="raised_progress_track">
+                                        <div class="progress_fill" style="width: {{ bar_width }}%;"> </div>
+                                        <div class="milestone-75" style="--milestone_percentage: 75%;">
+                                            <span class="milestone-tooltip">Production starts from here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total_raised_percentage">
+                                    <h3>{{ progress }}%</h3><span>Raised</span>
+                                </div>
+                                <p class="goal_info">Projects reaching <span>70-74%</span> may move into production, with Ludic bridging the remaining gap.</p>
+                            </div>
+                        </div>
+                        <div class="project_progress_right">
+                          <div class="top_data">
+
+                              {% assign current_backers = 0 %}
+                              {% assign target_backers = 0 %}
+
+                              {% for variant in product.variants %}
+                                  {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                                  {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
+
+                                  {% assign current_backers = current_backers | plus: variant_current %}
+                                  {% assign target_backers = target_backers | plus: variant_total %}
+                              {% endfor %}
+
+                              {% if target_backers > 0 %}
+                              {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
+                              {% else %}
+                              {% assign backers_progress = 0 %}
+                              {% endif %}
+
+                              {% if backers_progress > 100 %}
+                              {% assign backers_progress = 100 %}
+                              {% endif %}
+
+                              {% assign backers_bar_width = backers_progress %}
+                              {% if backers_bar_width < 2 %}
+                              {% assign backers_bar_width = 2 %}
+                              {% endif %}
+
+                              <div class="total_backers_data">
+                              <h4>Total Backers</h4>
+                              <div class="total_raised_progress_bar">
+                                  <div class="total_backers_track">
+                                  <div
+                                      class="total_backers_progress_fill"
+                                      style="width: {{ backers_bar_width }}%;">
+                                  </div>
+                                  </div>
+                              </div>
+                              <div class="total_backers_percentage">
+                                  <h3>{{ current_backers }}</h3>
+                                  <span>Backers</span>
+                              </div>
+                              </div>
+
+                              <div class="days-gauge">
+                                  {% assign total_days = 60 %}
+                                  {% assign start_date = product.metafields.custom.project_goal_start_date %}
+                                  {% assign start_ts = start_date | date: "%s" %}
+                                  {% assign today_ts = "now" | date: "%s" %}
+                                  {% assign seconds_diff = today_ts | minus: start_ts %}
+                                  {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
+                                  {% assign days_left = total_days | minus: days_passed %}
+                                  {% if days_left < 0 %}
+                                      {% assign days_left = 0 %}
+                                  {% endif %}
+                                  {% if days_left > total_days %}
+                                      {% assign days_left = total_days %}
+                                  {% endif %}
+                                  <div class="gauge-header">
+                                      <h3>Days</h3>
+                                      <span class="early-end">
+                                      Early ends in <strong id="leftDays"  class="leftDaysText">{{ days_left }} Days</strong>
+                                      </span>
+                                  </div>
+                                  <div class="gauge-wrapper">
+                                      <svg viewBox="0 0 200 120" class="gauge-svg">
+                                      <g id="gaugeTicks" class="gaugeTicks"></g>
+
+                                      <path
+                                          d="M30 100 A70 70 0 0 1 170 100"
+                                          fill="none"
+                                          stroke="#D9D9D9"
+                                          stroke-width="5"
+                                          pathLength="100"
+                                      />
+
+                                      <path
+                                         class="progressArc"
+                                          id="progressArc"
+                                          d="M30 100 A70 70 0 0 1 170 100"
+                                          fill="none"
+                                          stroke="#214ECF"
+                                          stroke-width="5"
+                                          stroke-linecap="round"
+                                          pathLength="100"
+                                          stroke-dasharray="0 100"
+                                      />
+                                      </svg>
+
+                                      <div class="gauge-center">
+                                      <h2 id="daysLeft" class="daysLeftNumber">{{ days_left }}</h2>
+                                      <span>Days left</span>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                        </div>
+                      </div>  
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
         </div>
-      </div> {% endcomment %}
+        <div class="account_refer account_dashboard_content" data-content="refer">
+          <div class="main_account_head">
+            <h2>Spread the word</h2>
+          </div>
+          <div class="dashboard_content_area">
+            Test Refer Data
+          </div>
+        </div>
+        <div class="account_faqs account_dashboard_content" data-content="faqs">
+          <div class="main_account_head">
+            <h2>FAQ</h2>
+          </div>
+          <div class="dashboard_content_area">
+            Test FAQ Data
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
 <script>
-const form = document.getElementById('profile-form');
-const btn = document.getElementById("saveProfileBtn");
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav_link");
+    const contentBlocks = document.querySelectorAll(".account_content > div");
+    const sidebar = document.querySelector(".account_sidebar");
+    const toggleBtnOpen = document.querySelector(".nav_toggle_open");
+    const toggleBtnClose = document.querySelector(".nav_toggle_close");
 
-// --------------------
-// FORM CHANGE TRACKING
-// --------------------
-let formDirty = false;
+    function activateTab(name, pushHash = true) {
+      navLinks.forEach(l => l.classList.remove("active"));
+      contentBlocks.forEach(c => c.classList.remove("active"));
 
-// Enable button
-function enableSaveButton() {
-  if (!formDirty) {
-    formDirty = true;
-    btn.disabled = false;
-    btn.classList.add("active");
-  }
-}
+      const activeLink = document.querySelector(`.nav_link[data-nav="${name}"]`);
+      const activeContent = document.querySelector(`[data-content="${name}"]`);
 
-// Disable button (after successful save)
-function disableSaveButton() {
-  formDirty = false;
-  btn.disabled = true;
-  btn.classList.remove("active");
-}
+      if (activeLink) activeLink.classList.add("active");
+      if (activeContent) activeContent.classList.add("active");
 
-// Listen to ALL inputs/selects
-form.querySelectorAll("input, select, textarea").forEach(el => {
-  el.addEventListener("input", enableSaveButton);
-  el.addEventListener("change", enableSaveButton);
-});
-
-// --------------------
-// DROPDOWN COLOR STATE
-// --------------------
-function updateSelectState(select) {
-  if (!select) return;
-
-  if (!select.value || select.selectedIndex === 0) {
-    select.classList.remove("is-selected-select");
-    select.classList.add("is-empty-select");
-  } else {
-    select.classList.add("is-selected-select");
-    select.classList.remove("is-empty-select");
-  }
-}
-
-// Apply only to SELECT fields
-document.querySelectorAll("select.edit_account_input").forEach(select => {
-  // Initial state on page load
-  updateSelectState(select);
-
-  // On change
-  select.addEventListener("change", function () {
-    updateSelectState(this);
-  });
-});
-
-
-// --------------------
-// IMAGE HANDLING
-// --------------------
-const input = document.getElementById('avatarInput');
-const preview = document.getElementById('avatarPreview');
-const removeBtn = document.getElementById('removeAvatar');
-
-// Existing saved image (string URL from metafield)
-let existingImageURL = "{{ customer.metafields.custom.profile_image | escape }}";
-
-// Newly selected file
-let selectedImageFile = null;
-
-// Remove flag
-let removeImage = false;
-
-if (input) {
-  input.addEventListener('change', function() {
-    const file = this.files[0];
-    if (!file) return;
-
-    selectedImageFile = file;
-    removeImage = false; // user selected new image
-
-    enableSaveButton();
-    // Preview
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      preview.innerHTML = `<img src="${e.target.result}">`;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-if (removeBtn) {
-  removeBtn.addEventListener('click', function() {
-    preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
-    selectedImageFile = null;
-    existingImageURL = "";
-    removeImage = true;
-    enableSaveButton();
-  });
-}
-
-// --------------------
-// VALIDATION
-// --------------------
-const requiredFields = [
-  "first_name","last_name","email","phone",
-  "address1","city","zip","province","country",
-  "age","gender","shoe_size"
-];
-
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let valid = true;
-
-  // Reset errors
-  document.querySelectorAll(".field-error").forEach(el => {
-    el.innerText = "";
-    el.style.display = "none";
-  });
-  document.querySelectorAll(".edit_account_input").forEach(el => {
-    el.classList.remove("input-error");
-  });
-
-  // Required fields
-  requiredFields.forEach(name => {
-    const input = form.querySelector(`[name="${name}"]`);
-    if (!input || input.value.trim() === "") {
-      showError(input, "This Field is Required.");
-      valid = false;
+      // Update URL hash
+      if (pushHash) {
+        history.replaceState(null, "", "#" + name);
+      }
     }
-  });
 
-  // Email
-  const emailInput = form.querySelector('[name="email"]');
-  if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
-    showError(emailInput, "Enter valid email address.");
-    valid = false;
-  }
+    // ====== OPEN TAB FROM URL HASH ======
+    let initialTab = window.location.hash.replace("#", "");
+    const allowedTabs = ["profile", "ledger", "refer", "faqs", "contact"];
 
-  // Phone (10 digits only)
-  const phoneInput = form.querySelector('[name="phone"]');
-  if (phoneInput) {
-    const phone = phoneInput.value.trim();
-
-    if (!/^[0-9]{10}$/.test(phone)) {
-      showError(phoneInput, "Phone must be 10 digits.");
-      valid = false;
+    if (!allowedTabs.includes(initialTab)) {
+      initialTab = "profile";
     }
-  }
 
-  // Age number
-  const ageInput = form.querySelector('[name="age"]');
-  if (ageInput && isNaN(ageInput.value)) {
-    showError(ageInput, "Age must be a number.");
-    valid = false;
-  }
+    activateTab(initialTab, false);
 
-  if (!valid) {
-    scrollToFirstError();
-    return;
-  }
+    // ===== CLICK HANDLERS =====
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        const tab = this.dataset.nav;
 
-  submitProfile();
-});
+        // Logout bypass
+        if (tab === "logout") {
+          window.location.href = "/account/logout";
+          return;
+        }
 
-// --------------------
-// ERROR UI
-// --------------------
-function showError(input, message) {
-  if (!input) return;
-  input.classList.add("input-error");
-  let errorDiv = input.parentElement.querySelector(".field-error");
-  if (!errorDiv) {
-    errorDiv = document.createElement("div");
-    errorDiv.className = "field-error";
-    input.parentElement.appendChild(errorDiv);
-  }
-  errorDiv.innerText = message;
-  errorDiv.style.display = "block";
-}
+        activateTab(tab);
 
-function scrollToFirstError() {
-  const first = document.querySelector(".input-error");
-  if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
-}
-
-
-// --------------------
-// SUBMIT
-// --------------------
-async function submitProfile() {
-  btn.disabled = true;
-  btn.innerText = "Saving...";
-
-  const msgBox = document.getElementById("formMessage");
-  msgBox.style.display = "none";
-  msgBox.className = "form-message";
-
-  const formData = new FormData(form);
-
-  const phoneInput = form.querySelector('[name="phone"]');
-  if (phoneInput) {
-    const rawPhone = phoneInput.value.trim(); // 10 digits from UI
-    formData.set("phone", "+91" + rawPhone);
-  }
-
-  // IMAGE LOGIC
-  if (removeImage) {
-    // Tell backend to remove image
-    formData.append("remove_profile_picture", "1");
-  } else if (selectedImageFile) {
-    // Send new file
-    formData.append("profile_picture", selectedImageFile);
-  } else {
-    // Keep existing
-    formData.append("profile_picture", existingImageURL || "");
-  }
-
-  const successIconSVG = `
-    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_344_31474)">
-    <path d="M11.001 6.00024C11.001 8.76164 8.76237 11.0002 6.00097 11.0002C3.23955 11.0002 1.00097 8.76164 1.00097 6.00024C1.00097 3.23882 3.23955 1.00024 6.00097 1.00024C8.76237 1.00024 11.001 3.23882 11.001 6.00024Z" fill="#008000" stroke="#008000" stroke-width="0.456675" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.74992 6L5.24992 7.5L8.24992 4.5" stroke="white" stroke-width="0.989462" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_344_31474">
-    <rect width="12" height="12" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    `;
-
-  try {
-    const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
-      method: "POST",
-      body: formData
+        // Close sidebar on mobile
+        if (window.innerWidth < 992) {
+          sidebar.classList.remove("is-open");
+          document.body.classList.remove("sidebar-open");
+        }
+      });
     });
-    const result = await res.json();
-    if (!res.ok) throw result;
-    // ✅ SUCCESS
-    msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
-    msgBox.className = "form-message success";
-    msgBox.style.display = "flex";
-    disableSaveButton();
 
-  } catch (err) {
-    console.error(err);
-    msgBox.innerText = "Something went wrong. Please try again.";
-    msgBox.classList.add("error");
-    msgBox.style.display = "block";
-  } finally {
-    btn.disabled = false;
-    btn.innerText = "Save Profile";
-  }
-}
+    // ===== TOGGLES =====
+    toggleBtnOpen.addEventListener("click", function () {
+      sidebar.classList.add("is-open");
+      document.body.classList.add("sidebar-open");
+    });
 
-// --------------------
-// LIVE ERROR CLEARING
-// --------------------
-document.querySelectorAll(".edit_account_input").forEach(input => {
-  input.addEventListener("input", function() {
-    clearErrorIfValid(this);
+    toggleBtnClose.addEventListener("click", function () {
+      sidebar.classList.remove("is-open");
+      document.body.classList.remove("sidebar-open");
+    });
+
+    // ===== HANDLE BACK/FORWARD BUTTON =====
+    window.addEventListener("hashchange", function () {
+      const tab = window.location.hash.replace("#", "");
+      if (allowedTabs.includes(tab)) {
+        activateTab(tab, false);
+      }
+    });
+
   });
-
-  input.addEventListener("change", function() {
-    clearErrorIfValid(this);
-  });
-});
-
-function clearErrorIfValid(input) {
-  let isValid = true;
-  const name = input.name;
-  const value = input.value.trim();
-
-  // Required check
-  if (requiredFields.includes(name) && value === "") {
-    isValid = false;
-  }
-
-  // Email
-  if (name === "email" && value !== "" && !/^\S+@\S+\.\S+$/.test(value)) {
-    isValid = false;
-  }
-
-  // Phone
-  if (name === "phone" && value !== "" && !/^[0-9]{10}$/.test(value)) {
-    isValid = false;
-  }
-
-
-  // Age
-  if (name === "age" && value !== "" && isNaN(value)) {
-    isValid = false;
-  }
-
-  if (isValid) {
-    removeError(input);
-  }
-}
-
-function removeError(input) {
-  input.classList.remove("input-error");
-  const errorDiv = input.parentElement.querySelector(".field-error");
-  if (errorDiv) {
-    errorDiv.innerText = "";
-    errorDiv.style.display = "none";
-  }
-}
-
 </script>
 
 
+<script>
+  const form = document.getElementById('profile-form');
+  const btn = document.getElementById("saveProfileBtn");
+  function updateSelectState(select) {
+    if (!select) return;
+
+    if (!select.value || select.selectedIndex === 0) {
+      select.classList.remove("is-selected-select");
+      select.classList.add("is-empty-select");
+    } else {
+      select.classList.add("is-selected-select");
+      select.classList.remove("is-empty-select");
+    }
+  }
+  document.querySelectorAll("select.edit_account_input").forEach(select => {
+    // Initial state on page load
+    updateSelectState(select);
+
+    // On change
+    select.addEventListener("change", function () {
+      updateSelectState(this);
+    });
+  });
+  const input = document.getElementById('avatarInput');
+  const preview = document.getElementById('avatarPreview');
+  const removeBtn = document.getElementById('removeAvatar');
+  let existingImageURL = "{{ customer.metafields.custom.profile_image | escape }}";
+  let selectedImageFile = null;
+  let removeImage = false;
+  if (input) {
+    input.addEventListener('change', function() {
+      const file = this.files[0];
+      if (!file) return;
+
+      selectedImageFile = file;
+      removeImage = false; // user selected new image
+
+      // Preview
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.innerHTML = `<img src="${e.target.result}">`;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+  if (removeBtn) {
+    removeBtn.addEventListener('click', function() {
+      preview.innerHTML = `<span class="avatar-letter">{{ customer.first_name | slice: 0, 1 }}</span>`;
+      selectedImageFile = null;
+      existingImageURL = "";
+      removeImage = true; // 👈 mark for deletion
+    });
+  }
+  // --------------------
+  // VALIDATION
+  // --------------------
+  const requiredFields = [
+    "first_name","last_name","email","phone",
+    "address1","city","zip","province","country",
+    "age","gender","shoe_size","instagram", "twitter"
+  ];
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let valid = true;
+
+    // Reset errors
+    document.querySelectorAll(".field-error").forEach(el => {
+      el.innerText = "";
+      el.style.display = "none";
+    });
+    document.querySelectorAll(".edit_account_input").forEach(el => {
+      el.classList.remove("input-error");
+    });
+
+    // Required fields
+    requiredFields.forEach(name => {
+      const input = form.querySelector(`[name="${name}"]`);
+      if (!input || input.value.trim() === "") {
+        showError(input, "This Field is Required.");
+        valid = false;
+      }
+    });
+
+    // Email
+    const emailInput = form.querySelector('[name="email"]');
+    if (emailInput && !/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
+      showError(emailInput, "Enter valid email address.");
+      valid = false;
+    }
+
+    // Phone (10 digits only)
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput) {
+      const phone = phoneInput.value.trim();
+
+      if (!/^[0-9]{10}$/.test(phone)) {
+        showError(phoneInput, "Phone must be 10 digits.");
+        valid = false;
+      }
+    }
+
+    // Age number
+    const ageInput = form.querySelector('[name="age"]');
+    if (ageInput && isNaN(ageInput.value)) {
+      showError(ageInput, "Age must be a number.");
+      valid = false;
+    }
+
+    if (!valid) {
+      scrollToFirstError();
+      return;
+    }
+
+    submitProfile();
+  });
+  // --------------------
+  // ERROR UI
+  // --------------------
+  function showError(input, message) {
+    if (!input) return;
+    input.classList.add("input-error");
+    let errorDiv = input.parentElement.querySelector(".field-error");
+    if (!errorDiv) {
+      errorDiv = document.createElement("div");
+      errorDiv.className = "field-error";
+      input.parentElement.appendChild(errorDiv);
+    }
+    errorDiv.innerText = message;
+    errorDiv.style.display = "block";
+  }
+  function scrollToFirstError() {
+    const first = document.querySelector(".input-error");
+    if (first) first.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  // --------------------
+  // SUBMIT
+  // --------------------
+  async function submitProfile() {
+    btn.disabled = true;
+    btn.innerText = "Saving...";
+
+    const msgBox = document.getElementById("formMessage");
+    msgBox.style.display = "none";
+    msgBox.className = "form-message";
+
+    const formData = new FormData(form);
+
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput) {
+      const rawPhone = phoneInput.value.trim(); // 10 digits from UI
+      formData.set("phone", "+91" + rawPhone);
+    }
+
+    // IMAGE LOGIC
+    if (removeImage) {
+      // Tell backend to remove image
+      formData.append("remove_profile_picture", "1");
+    } else if (selectedImageFile) {
+      // Send new file
+      formData.append("profile_picture", selectedImageFile);
+    } else {
+      // Keep existing
+      formData.append("profile_picture", existingImageURL || "");
+    }
+
+    const successIconSVG = `
+      <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_344_31474)">
+      <path d="M11.001 6.00024C11.001 8.76164 8.76237 11.0002 6.00097 11.0002C3.23955 11.0002 1.00097 8.76164 1.00097 6.00024C1.00097 3.23882 3.23955 1.00024 6.00097 1.00024C8.76237 1.00024 11.001 3.23882 11.001 6.00024Z" fill="#008000" stroke="#008000" stroke-width="0.456675" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.74992 6L5.24992 7.5L8.24992 4.5" stroke="white" stroke-width="0.989462" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_344_31474">
+      <rect width="12" height="12" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+      `;
+
+    try {
+      const res = await fetch("https://shopifycustom.kretosstechnology.com/api/v1/ludic-kitchen/customer/update", {
+        method: "POST",
+        body: formData
+      });
+      const result = await res.json();
+      if (!res.ok) throw result;
+      // ✅ SUCCESS
+      msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
+      msgBox.className = "form-message success";
+      msgBox.style.display = "flex";
+
+
+    } catch (err) {
+      console.error(err);
+      msgBox.innerText = "Something went wrong. Please try again.";
+      msgBox.classList.add("error");
+      msgBox.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Save Profile";
+    }
+  }
+  // --------------------
+  // LIVE ERROR CLEARING
+  // --------------------
+  document.querySelectorAll(".edit_account_input").forEach(input => {
+    input.addEventListener("input", function() {
+      clearErrorIfValid(this);
+    });
+    input.addEventListener("change", function() {
+      clearErrorIfValid(this);
+    });
+  });
+  function clearErrorIfValid(input) {
+    let isValid = true;
+    const name = input.name;
+    const value = input.value.trim();
+    if (requiredFields.includes(name) && value === "") {
+      isValid = false;
+    }
+    if (name === "email" && value !== "" && !/^\S+@\S+\.\S+$/.test(value)) {
+      isValid = false;
+    }
+    if (name === "phone" && value !== "" && !/^[0-9]{10}$/.test(value)) {
+      isValid = false;
+    }
+    if (name === "age" && value !== "" && isNaN(value)) {
+      isValid = false;
+    }
+    if (isValid) {
+      removeError(input);
+    }
+  }
+  function removeError(input) {
+    input.classList.remove("input-error");
+    const errorDiv = input.parentElement.querySelector(".field-error");
+    if (errorDiv) {
+      errorDiv.innerText = "";
+      errorDiv.style.display = "none";
+    }
+  }
+</script>
 
 {% schema %}
 {
@@ -769,3 +931,7 @@ function removeError(input) {
   ]
 }
 {% endschema %}
+
+
+
+
