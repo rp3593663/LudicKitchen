@@ -75,7 +75,13 @@
                     <!-- Variant Title -->
                     <div class="tier_title">
                         <h3>{{ variant.title }}</h3>
-                        <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div>
+                        <div class="reached_tier">
+                          <div class="tier_bagde">
+                            <img src="{{ 'tier_1.svg' | asset_url }}">
+                            Tier 1
+                          </div>
+                          <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div>
+                        </div>
                     </div>
 
                     <!-- Short Description -->
