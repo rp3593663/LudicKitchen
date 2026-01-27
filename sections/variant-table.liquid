@@ -77,8 +77,8 @@
                         <h3>{{ variant.title }}</h3>
                         <div class="reached_tier">
                           <div class="tier_badge">
-                            <img src="{{ 'tier_1.svg' | asset_url }}">
-                            Tier 1
+                            <img src="{{ 'tier_' | append: forloop.index | append: '.svg' | asset_url }}">
+                            Tier {{ forloop.index }}
                           </div>
                           <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div>
                         </div>
