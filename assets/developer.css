@@ -430,6 +430,7 @@ a.go_btn {
     background: var(--primary_color)!important;
     position: absolute;
     left: 0;
+    top: 0;
     z-index: -1;
 }
 .progress_labels {
