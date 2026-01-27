@@ -135,13 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// document.querySelectorAll('.js-indian-number').forEach(el => {
-//   const value = parseInt(el.dataset.value, 10);
-//   if (isNaN(value)) return;
+document.querySelectorAll('.js-indian-number').forEach(el => {
+  const value = parseInt(el.dataset.value, 10);
+  if (isNaN(value)) return;
 
-//   const formatted = value.toLocaleString('en-IN');
-//   el.innerHTML += ' ' + formatted;
-// });
+  const formatted = value.toLocaleString('en-IN');
+  el.innerHTML += ' ' + formatted;
+});
 
 document.addEventListener("DOMContentLoaded", function () {
 
