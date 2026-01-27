@@ -73,14 +73,29 @@
                         </div>
                         {% for variant in product.variants %}
                             {% case forloop.index %}
-                                {% when 1 %}{% assign enabled = block.settings.tier_1 %}
-                                {% when 2 %}{% assign enabled = block.settings.tier_2 %}
-                                {% when 3 %}{% assign enabled = block.settings.tier_3 %}
-                                {% when 4 %}{% assign enabled = block.settings.tier_4 %}
-                                {% when 5 %}{% assign enabled = block.settings.tier_5 %}
-                                {% when 6 %}{% assign enabled = block.settings.tier_6 %}
-                                {% else %}{% assign enabled = false %}
+                              {% when 1 %}
+                                {% assign enabled = block.settings.tier_1 %}
+                                {% assign custom_text = block.settings.tier_1_text %}
+                              {% when 2 %}
+                                {% assign enabled = block.settings.tier_2 %}
+                                {% assign custom_text = block.settings.tier_2_text %}
+                              {% when 3 %}
+                                {% assign enabled = block.settings.tier_3 %}
+                                {% assign custom_text = block.settings.tier_3_text %}
+                              {% when 4 %}
+                                {% assign enabled = block.settings.tier_4 %}
+                                {% assign custom_text = block.settings.tier_4_text %}
+                              {% when 5 %}
+                                {% assign enabled = block.settings.tier_5 %}
+                                {% assign custom_text = block.settings.tier_5_text %}
+                              {% when 6 %}
+                                {% assign enabled = block.settings.tier_6 %}
+                                {% assign custom_text = block.settings.tier_6_text %}
+                              {% else %}
+                                {% assign enabled = false %}
+                                {% assign custom_text = '' %}
                             {% endcase %}
+
 
                             <div class="tier_benefit_yes_no">
                                 <img
