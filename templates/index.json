@@ -40,7 +40,7 @@
         "border_text": "shared table",
         "border_image": "shopify://shop_images/round.svg",
         "button_text": "View Project",
-        "button_link": "shopify://products/project-01-dummy",
+        "button_link": "shopify://products/project-01",
         "padding": "60px 0px 0px | | | 55px 0px 0px",
         "margin": ""
       }
@@ -106,7 +106,7 @@
         "heading_after": "works",
         "description": "Many hands, one shared intention. Every project here follows a simple, 4-folded path - pick your tier, make your contribution, join the creative process, and finally collect what you helped bring to life. Here's how it unfolds:",
         "button_label": "Take a seat",
-        "button_link": "shopify://products/project-01-dummy",
+        "button_link": "shopify://products/project-01",
         "padding": "",
         "margin": ""
       }
@@ -117,7 +117,7 @@
       "settings": {
         "max_width": "",
         "fullwidth": false,
-        "project_product": "project-01-dummy",
+        "project_product": "project-01",
         "padding": "",
         "margin": "98px 0px"
       }
