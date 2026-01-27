@@ -587,6 +587,9 @@ a.faq_btn.theme_btn {
     display: grid;
     gap: 14px;
 }
+.progress_data .goal_total{
+    text-align: right;
+}
 .progress_data h2 {
     margin: 0px;
     font-weight: 650;
