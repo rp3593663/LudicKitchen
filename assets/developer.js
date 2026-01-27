@@ -135,32 +135,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const $flipbook = $('#product-flipbook');
-//   if (!$flipbook.length) return;
-//   $flipbook.turn({
-//     display: 'single',
-//     page: 1,
-//     autoCenter: true,
-//     acceleration: true,
-//     gradients: true,
-//     elevation: 120,      
-//     duration: 900,
-//     turnCorners: 'tl,tr',
-//     when: {
-//       turning: function () {
-//         $(this).addClass('turning');
-//       },
-//       turned: function () {
-//         $(this).removeClass('turning');
-//       }
-//     }
-//   });
-//   document.querySelector('.flip-btn.next')
-//     .addEventListener('click', () => $flipbook.turn('next'));
-//   document.querySelector('.flip-btn.prev')
-//     .addEventListener('click', () => $flipbook.turn('previous'));
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  const $flipbook = $('#product-flipbook');
+  if (!$flipbook.length) return;
+  $flipbook.turn({
+    display: 'single',
+    page: 1,
+    autoCenter: true,
+    acceleration: true,
+    gradients: true,
+    elevation: 120,      
+    duration: 900,
+    turnCorners: 'tl,tr',
+    when: {
+      turning: function () {
+        $(this).addClass('turning');
+      },
+      turned: function () {
+        $(this).removeClass('turning');
+      }
+    }
+  });
+  document.querySelector('.flip-btn.next')
+    .addEventListener('click', () => $flipbook.turn('next'));
+  document.querySelector('.flip-btn.prev')
+    .addEventListener('click', () => $flipbook.turn('previous'));
+});
 
 
 
