@@ -164,9 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
   const flipContainer = document.getElementById("flip-book");
@@ -176,8 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     width: 420,
     height: 560,
     size: "fixed",
- display: 'single',
-    page: 1,
     drawShadow: true,
     maxShadowOpacity: 0.5,
     showCover: false,
