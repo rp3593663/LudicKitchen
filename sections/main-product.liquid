@@ -121,12 +121,13 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <h1>{{ product.metafields.custom.project_name  }}</h1>
+                  {% comment %} <h1>{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
-                  </a>
+                  </a> {% endcomment %}
                 </div>
               {%- when 'short_description' -%}
                 {% if product.metafields.custom.short_description %}
