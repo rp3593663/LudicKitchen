@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="total_raised_percentage">
-                        <h3 class="js-counter" data-value="{{ progress }}">0</h3>%<span>Raised</span>
+                        <h3>{{ progress }}%</h3><span>Raised</span>
                     </div>
                     <p class="goal_info">Ludic has already put <span>₹15,00,000</span> on the table because we believed in this first.</p>
                 </div>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     <div class="total_backers_percentage">
-                        <h3 class="js-counter" data-value="{{ current_backers }}">0</h3>
+                        <h3>{{ current_backers }}</h3>
                         <span>Backers</span>
                     </div>
                     </div>
@@ -219,7 +219,7 @@
                             </svg>
 
                             <div class="gauge-center">
-                            <h2 id="daysLeft" class="daysLeftNumber js-counter" data-value="{{ days_left }}">0</h2>
+                            <h2 id="daysLeft" class="daysLeftNumber">{{ days_left }}</h2>
                             <span>Days left</span>
                             </div>
                         </div>
@@ -263,7 +263,7 @@
                             </div>
 
                             <div class="tier_current_reached_data">
-                                <h3 class="js-counter" data-value="{{ current_reached_goal }}">0</h3>
+                                <h3>{{ current_reached_goal }}</h3>
                                 <span>{{ variant.title }}</span>
                             </div>
                         </div>
@@ -277,7 +277,6 @@
         </div>
 	</div>
 </div>
-
 
 
 {% schema %}
