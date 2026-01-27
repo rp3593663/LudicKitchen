@@ -256,6 +256,7 @@
                 </div>
                 <div class="edit_account_field">
                   <label>Apparel size</label>
+                  {% assign saved_size = customer.metafields.custom.apparel_size %}
                   <select name="shoe_size" class="edit_account_input">
                     <option value="">Select Appereal Size</option>
                     <option value="XS" {% if customer.metafields.custom.apparel_size == size_value %}selected{% endif %}>XS</option>
