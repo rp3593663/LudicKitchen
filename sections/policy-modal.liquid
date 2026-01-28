@@ -70,21 +70,23 @@
     align-items: center;
     gap: 8px;
 }
-.policy_tabs li path{
-    fill: #C4C4C4;
+.policy_tabs li .svg_active {
+  display: none;
+}
+.policy_tabs li.active .svg_active {
+  display: block;
+}
+.policy_tabs li.active .svg_normal {
+  display: none;
 }
 .policy_tabs li:hover {
   color: var(--primary_color);
 }
-.policy_tabs li:hover path{
-  fill: var(--primary_color);
-}
+
 .policy_tabs li.active {
   color: var(--primary_color);
 }
-.policy_tabs li.active path{
-  fill: var(--primary_color);
-}
+
 .policy_tab_contents {
     flex: 1;
     max-height: 550px;
