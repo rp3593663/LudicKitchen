@@ -191,6 +191,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("policyModal");
+  if (!modal) return;
+
+  function openModal(tabId) {
+    modal.classList.add("active");
+
+    modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
+    modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
+
+    modal.querySelector(`.policy_tabs li[data-tab="${tabId}"]`)?.classList.add("active");
+    modal.querySelector(`#${tabId}`)?.classList.add("active");
+  }
+
+  // Open from ANY LINK with data-policy
+  document.querySelectorAll("[data-policy]").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      openModal(this.dataset.policy);
+    });
+  });
+
+  modal.querySelector(".policy_modal_close").onclick = () => modal.classList.remove("active");
+  modal.querySelector(".policy_modal_overlay").onclick = () => modal.classList.remove("active");
+});
+
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const $flipbook = $('#product-flipbook');
 //   if (!$flipbook.length) return;
