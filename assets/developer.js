@@ -218,33 +218,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ===== NEW: CONSENT LINKS SUPPORT ===== */
   document.querySelectorAll(".consent-link").forEach(link => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // stop page open
+      e.preventDefault();
       modal.classList.add("active");
 
       const href = this.getAttribute("href") || "";
-
-      // Optional: open correct tab automatically
       let tabId = null;
 
       if (href.includes("privacy")) {
         tabId = "tab-privacy";
-      }
-      if (href.includes("terms")) {
+      } else if (href.includes("terms")) {
         tabId = "tab-terms";
       }
 
-      if (tabId) {
-        modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
-        modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
+      // RESET tabs
+      modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
+      modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
 
+      // ✅ If tab matched → open it
+      if (tabId && modal.querySelector(`#${tabId}`)) {
         modal.querySelector(`.policy_tabs li[data-tab="${tabId}"]`)?.classList.add("active");
         modal.querySelector(`#${tabId}`)?.classList.add("active");
+      } 
+      // ✅ FALLBACK → open FIRST tab
+      else {
+        const firstTab = modal.querySelector(".policy_tabs li");
+        const firstContent = modal.querySelector(".policy_tab");
+
+        if (firstTab && firstContent) {
+          firstTab.classList.add("active");
+          firstContent.classList.add("active");
+        }
       }
     });
   });
+
 });
 
 
