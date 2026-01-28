@@ -188,12 +188,13 @@
         <!-- LEFT TABS -->
         <ul class="policy_tabs">
           {%- for block in section.blocks -%}
-            <li
-              class="{% if forloop.first %}active{% endif %}"
-              data-tab="tab-{{ block.id }}"
-              {{ block.shopify_attributes }}
-            >
-              {{ block.settings.tab_title }}
+            <li class="{% if forloop.first %}active{% endif %}" data-tab="tab-{{ block.id }}" {{ block.shopify_attributes }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.36719 8.72734V3.63643L5.82173 2.18188H7.63991H14.1854L16.3672 4.00007L20.0036 8.00007V9.09098V14.9092L19.2763 20.7273L17.8217 22.1819H16.0036H10.549H6.18537L4.36719 19.6364V17.4546V14.5455V8.72734Z" fill="#214ECF"/>
+                    <path d="M8.8 2H14L20 8V17.2C20 18.8802 20 19.7202 19.673 20.362C19.3854 20.9265 18.9265 21.3854 18.362 21.673C17.7202 22 16.8802 22 15.2 22H8.8C7.11984 22 6.27976 22 5.63803 21.673C5.07354 21.3854 4.6146 20.9265 4.32698 20.362C4 19.7202 4 18.8802 4 17.2V6.8C4 5.11984 4 4.27976 4.32698 3.63803C4.6146 3.07354 5.07354 2.6146 5.63803 2.32698C6.27976 2 7.11984 2 8.8 2Z" stroke="#214ECF" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 13H8M16 17H8M10 9H8" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {{ block.settings.tab_title }}
             </li>
           {%- endfor -%}
         </ul>
