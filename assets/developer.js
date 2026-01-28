@@ -195,27 +195,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("policyModal");
   if (!modal) return;
 
-  function openModal(tabId) {
-    modal.classList.add("active");
-
-    modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
-    modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
-
-    modal.querySelector(`.policy_tabs li[data-tab="${tabId}"]`)?.classList.add("active");
-    modal.querySelector(`#${tabId}`)?.classList.add("active");
-  }
-
-  // Open from ANY LINK with data-policy
-  document.querySelectorAll("[data-policy]").forEach(link => {
-    link.addEventListener("click", function (e) {
+  // Open modal from anywhere
+  document.querySelectorAll("[data-open-policy]").forEach(btn => {
+    btn.addEventListener("click", function (e) {
       e.preventDefault();
-      openModal(this.dataset.policy);
+      modal.classList.add("active");
     });
   });
 
+  // Close modal
   modal.querySelector(".policy_modal_close").onclick = () => modal.classList.remove("active");
   modal.querySelector(".policy_modal_overlay").onclick = () => modal.classList.remove("active");
+
+  // Tabs
+  modal.querySelectorAll(".policy_tabs li").forEach(tab => {
+    tab.addEventListener("click", function () {
+      const id = this.dataset.tab;
+
+      modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
+      modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
+
+      this.classList.add("active");
+      modal.querySelector("#" + id).classList.add("active");
+    });
+  });
 });
+
 
 
 
