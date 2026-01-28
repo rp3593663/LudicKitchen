@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("policyModal");
   if (!modal) return;
 
-  // Open modal from anywhere
+  /* ===== EXISTING CODE (UNCHANGED) ===== */
   document.querySelectorAll("[data-open-policy]").forEach(btn => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -203,11 +203,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close modal
   modal.querySelector(".policy_modal_close").onclick = () => modal.classList.remove("active");
   modal.querySelector(".policy_modal_overlay").onclick = () => modal.classList.remove("active");
 
-  // Tabs
   modal.querySelectorAll(".policy_tabs li").forEach(tab => {
     tab.addEventListener("click", function () {
       const id = this.dataset.tab;
@@ -219,7 +217,36 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.querySelector("#" + id).classList.add("active");
     });
   });
+
+  /* ===== NEW: CONSENT LINKS SUPPORT ===== */
+  document.querySelectorAll(".consent-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // stop page open
+      modal.classList.add("active");
+
+      const href = this.getAttribute("href") || "";
+
+      // Optional: open correct tab automatically
+      let tabId = null;
+
+      if (href.includes("privacy")) {
+        tabId = "tab-privacy";
+      }
+      if (href.includes("terms")) {
+        tabId = "tab-terms";
+      }
+
+      if (tabId) {
+        modal.querySelectorAll(".policy_tabs li").forEach(t => t.classList.remove("active"));
+        modal.querySelectorAll(".policy_tab").forEach(c => c.classList.remove("active"));
+
+        modal.querySelector(`.policy_tabs li[data-tab="${tabId}"]`)?.classList.add("active");
+        modal.querySelector(`#${tabId}`)?.classList.add("active");
+      }
+    });
+  });
 });
+
 
 
 
