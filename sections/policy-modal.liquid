@@ -1,0 +1,69 @@
+<section id="policy-modal-section">
+  <div class="policy_modal" id="policyModal">
+    <div class="policy_modal_overlay"></div>
+
+    <div class="policy_modal_box">
+      <button class="policy_modal_close">&times;</button>
+
+      <h2 class="policy_modal_title">
+        {{ section.settings.title }}
+      </h2>
+
+      <div class="policy_modal_content">
+
+        <!-- LEFT TABS -->
+        <ul class="policy_tabs">
+          {%- for link in section.settings.menu.links -%}
+            <li
+              class="{% if forloop.first %}active{% endif %}"
+              data-tab="{{ link.title | handle }}"
+            >
+              {{ link.title }}
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <!-- RIGHT CONTENT -->
+        <div class="policy_tab_contents">
+          {%- for link in section.settings.menu.links -%}
+            {% assign page_handle = link.url | split: '/' | last %}
+            {% assign page_obj = pages[page_handle] %}
+
+            <div
+              class="policy_tab {% if forloop.first %}active{% endif %}"
+              id="{{ link.title | handle }}"
+            >
+              <h3>{{ page_obj.title }}</h3>
+              {{ page_obj.content }}
+            </div>
+          {%- endfor -%}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Policy Modal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Modal Title",
+      "default": "Terms & Policies"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Policy Menu",
+      "default": "footer"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Policy Modal"
+    }
+  ]
+}
+{% endschema %}
