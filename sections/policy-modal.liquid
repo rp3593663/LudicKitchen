@@ -13,28 +13,26 @@
 
         <!-- LEFT TABS -->
         <ul class="policy_tabs">
-          {%- for link in section.settings.menu.links -%}
+          {%- for block in section.blocks -%}
             <li
               class="{% if forloop.first %}active{% endif %}"
-              data-tab="{{ link.title | handle }}"
+              data-tab="tab-{{ block.id }}"
+              {{ block.shopify_attributes }}
             >
-              {{ link.title }}
+              {{ block.settings.tab_title }}
             </li>
           {%- endfor -%}
         </ul>
 
         <!-- RIGHT CONTENT -->
         <div class="policy_tab_contents">
-          {%- for link in section.settings.menu.links -%}
-            {% assign page_handle = link.url | split: '/' | last %}
-            {% assign page_obj = pages[page_handle] %}
-
+          {%- for block in section.blocks -%}
             <div
               class="policy_tab {% if forloop.first %}active{% endif %}"
-              id="{{ link.title | handle }}"
+              id="tab-{{ block.id }}"
+              {{ block.shopify_attributes }}
             >
-              <h3>{{ page_obj.title }}</h3>
-              {{ page_obj.content }}
+              {{ block.settings.tab_content }}
             </div>
           {%- endfor -%}
         </div>
@@ -43,6 +41,8 @@
     </div>
   </div>
 </section>
+
+
 {% schema %}
 {
   "name": "Policy Modal",
@@ -52,6 +52,25 @@
       "id": "title",
       "label": "Modal Title",
       "default": "Terms & Policies"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Policy Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Tab title"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content"
+        }
+      ]
     }
   ],
   "presets": [
