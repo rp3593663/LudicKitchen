@@ -495,7 +495,13 @@ a.pre_footer_list-menu__item {
             </div>
             <div class="middle_pre_footer">
                 <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966">
-                <p>This is where our community comes together to shape what Ludic creates next. If you believe in the Ludic way, this is your space to join in. No credentials needed. Here, ideas stay open and every project grows with many hands. You can follow it, fund it, vote on it, and carry the pride of saying, "I helped make this."</p>
+                <p>This is where our community comes together to
+shape what Ludic creates next. If you believe in
+the Ludic way, this is your space to join in. No
+credentials needed. Here, ideas stay open and
+every project grows with many hands. You can
+follow it, fund it, vote on it, and carry the pride of
+saying, "I helped make this."</p>
                 <div class="newsletter_block">
                     {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                         <input type="hidden" name="contact[tags]" value="newsletter">
@@ -566,7 +572,6 @@ a.pre_footer_list-menu__item {
                             <a
                               href="{{ link.url }}"
                               class="pre_footer_list-menu__item"
-                              id="{{ link.title | handle }}
                             >
                               {{ link.title | escape }}
                             </a>
