@@ -565,13 +565,8 @@
                 <input name="link" value="ludic-kitchen.myshopify.com/" class="" placeholder="ludic-kitchen.myshopify.com/">
                 <div class="field-error"></div>
                 <div class="copy-link-btn" id="copyLinkBtn">
-                    {% liquid
-                    if template.name == 'index'
-                        assign share_url = request.origin
-                    else
-                        assign share_url = request.origin | append: request.path
-                    endif
-                    render 'share-button', block.settings.share_label: 'Share', share_link: share_url
+                    {% liquid 
+                      render 'share-button', block.settings.share_label: 'Share', share_link: share_url
                     %}
                 </div>
               </div>
