@@ -15,7 +15,7 @@
         "description_W9PcpU": {
           "type": "description",
           "settings": {
-            "text": "Ludic Kitchen is our community-led space where ideas are made on a shared table and the community becomes co-\ncreators."
+            "text": "Ludic Kitchen is our community-led space where ideas are made on a shared table and the community becomes co-creators."
           }
         },
         "description_bQpN6X": {
@@ -108,7 +108,11 @@
         "button_label": "Take a seat",
         "button_link": "shopify://products/project-01",
         "padding": "",
-        "margin": ""
+        "margin": "",
+        "section_video_title": "How this works",
+        "section_video_text": "Get a better understanding of how ludic kitchen works.",
+        "section_popup_title": "How Kitchen works",
+        "section_popup_text": "Many hands, one shared intention. Every project here follows a simple path..."
       }
     },
     "featured_project_Kx6wiz": {
