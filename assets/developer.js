@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closedVideos.add(currentSrc); // 🧠 remember only this one
     }
 
-    sticky.classList.add("hidden");
+    sticky.classList.add("hidden_sticky_video");
     activeSrc = null; // allow next section to trigger
   });
 
