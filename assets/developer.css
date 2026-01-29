@@ -3242,19 +3242,20 @@ input.edit_account_input.disabled {
 
 
 .sticky-video {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 340px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  z-index: 9999;
-  overflow: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 340px;
+    background: #F1F1F1;
+    border-radius: 6px;
+    z-index: 9999;
+    overflow: hidden;
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 15px 35px 0px #00000014;
 }
-
-.sticky-video.hidden { display: none; }
-
+.sticky-video.hidden { 
+    display: none; 
+}
 .sticky-content {
   display: flex;
   gap: 12px;
