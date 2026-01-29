@@ -3376,6 +3376,9 @@ p#stickyText {
 
 .spread_the_word_inner {
     display: flex;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    padding: 26px 30px;
 }
 .account_spread-the-word .edit_account_field {
     grid-template-columns: 1fr 0.2fr;
