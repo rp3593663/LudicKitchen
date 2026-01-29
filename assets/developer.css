@@ -3272,6 +3272,9 @@ input.edit_account_input.disabled {
     padding: 0;
     cursor: pointer;
 }
+.sticky_video_preview {
+    position: relative;
+}
 .sticky-content img {
   width: 120px;
   height: 80px;
