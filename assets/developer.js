@@ -310,6 +310,14 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.add("hidden");
   });
 
+  // popup.querySelector(".video-popup-close").addEventListener("click", () => {
+  //   popupVideo.pause();
+  //   popupVideo.removeAttribute("src"); // 🔥 force unload
+  //   popupVideo.load();                 // 🔥 reset video element
+  //   popup.classList.add("hidden");
+  // });
+
+
   // ❌ Close CURRENT sticky only
   sticky.querySelector(".sticky-close").addEventListener("click", () => {
     const currentSrc = sticky.dataset.video;
