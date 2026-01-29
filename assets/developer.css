@@ -2988,6 +2988,10 @@ input.edit_account_input.disabled {
         bottom: 18px;
         width: 260px;
     }
+    .sticky_video_preview {
+        min-width: 100px;
+        height: 60px;
+    }
 }
 
 
