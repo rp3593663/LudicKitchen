@@ -3386,6 +3386,7 @@ p#stickyText {
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    gap: 8px;
 }
 
 
