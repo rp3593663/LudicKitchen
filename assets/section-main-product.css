@@ -1497,7 +1497,8 @@ a.product__text {
 .js .product__media {
   overflow: hidden !important;
   border-radius: 16px;
-  padding-top: 58% !important;
+  /* padding-top: 58% !important; */
+  padding-top: 56% !important;
 }
 .product--thumbnail_slider .thumbnail-slider {
     margin-top: -132px;
