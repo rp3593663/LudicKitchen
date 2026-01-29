@@ -3379,6 +3379,8 @@ p#stickyText {
     border: 1px solid #E8E8E8;
     border-radius: 6px;
     padding: 26px 30px;
+    background: url(https://ludic-kitchen.myshopify.com/cdn/shop/files/page_bg_lines.svg);
+    background-size: cover;
 }
 .spread_the_word_content{
     flex:1;
