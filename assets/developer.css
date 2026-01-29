@@ -2998,6 +2998,11 @@ input.edit_account_input.disabled {
     p#stickyText {
         display: none;
     }
+    h5#stickyTitle {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -.36px;
+    }
 }
 
 
