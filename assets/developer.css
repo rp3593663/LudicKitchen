@@ -1874,7 +1874,7 @@ a.redirect_recover {
     line-height: 18px;
     letter-spacing: -0.54px;
     vertical-align: middle;
-    color: var(--primary_color);
+    color:#1a1a1a;
 }
 .dashboard_content_area .field_head p {
     margin: 0px;
