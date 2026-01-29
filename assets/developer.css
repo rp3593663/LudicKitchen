@@ -3271,6 +3271,7 @@ input.edit_account_input.disabled {
     gap: 10px;
     padding: 0;
     cursor: pointer;
+    align-items: center;
 }
 .sticky_video_preview {
     position: relative;
