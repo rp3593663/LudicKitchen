@@ -230,6 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+// ================= Video preview ===================
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const sticky = document.getElementById("stickyVideoPreview");
@@ -332,6 +336,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// 📱 Mobile fix: force observer to re-check on scroll
+let mobileScrollTimer = null;
+
+window.addEventListener("scroll", () => {
+  if (window.innerWidth > 768) return;
+
+  clearTimeout(mobileScrollTimer);
+  mobileScrollTimer = setTimeout(() => {
+    sections.forEach(sec => {
+      sec.getBoundingClientRect(); // 🔥 force layout recalculation
+    });
+  }, 50);
+}, { passive: true });
 
 
 
