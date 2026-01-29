@@ -3221,6 +3221,9 @@ p#stickyText {
         font-size: 14px;
         line-height: 20px;
     }
+    .video_popup_head {
+        gap: 16px;
+    }
 }
 
 
