@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sticky = document.getElementById("stickyVideoPreview");
   const stickyThumb = document.getElementById("stickyThumb");
   const stickyTitle = document.getElementById("stickyTitle");
+  const stickyText = document.getElementById("stickyText");
 
   const popup = document.getElementById("videoPopup");
   const popupVideo = document.getElementById("popupVideo");
@@ -286,6 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     stickyThumb.src = data.thumb || "";
     stickyTitle.textContent = data.title || "";
+    stickyText.textContent = data.text || "";
     sticky.dataset.video = data.src || "";
 
     sticky.classList.remove("hidden");
