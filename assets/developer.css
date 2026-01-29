@@ -3429,6 +3429,9 @@ p#stickyText {
     color: #fff;
     font-weight: 600;
 }
+.account_ledger .project_progress_left {
+    border: 1px solid #F0F0F0;
+}
 
 
 @media(min-width: 1024px){
