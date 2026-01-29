@@ -3380,7 +3380,13 @@ p#stickyText {
 .account_spread-the-word .edit_account_field {
     grid-template-columns: 1fr 0.2fr;
 }
-
+.account_spread-the-word .copy-link-btn {
+    display: flex;
+    background: #214ECF;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
 
 
 @media(min-width: 1024px){
