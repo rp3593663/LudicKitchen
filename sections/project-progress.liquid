@@ -55,6 +55,7 @@
     data-video-src="{{ section.settings.section_video.sources[0].url }}"
     data-thumb="{{ section.settings.section_video_poster | image_url }}"
     data-title="{{ section.settings.section_video_title | escape }}"
+    data-text="{{ section.settings.section_video_text | escape }}"
   {% endif %}>
 	<div class="{{ container }}" {{ max_width }}>
         <div class="project_progress_inner">
