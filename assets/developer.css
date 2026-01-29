@@ -3001,6 +3001,7 @@ input.edit_account_input.disabled {
     h5#stickyTitle {
         font-size: 12px;
         line-height: 18px;
+        padding-right: 12px;
         letter-spacing: -.36px;
     }
 }
