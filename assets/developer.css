@@ -440,7 +440,7 @@ a.go_btn {
     position: relative;
     padding-left: 15px;
 }
-p.goal_info:before {
+.featured_project_goal_info:before {
     width: 6px;
     height: 6px;
     content: "";
