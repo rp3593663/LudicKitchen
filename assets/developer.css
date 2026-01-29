@@ -3388,6 +3388,9 @@ p#stickyText {
     border-radius: 6px;
     gap: 8px;
 }
+.account_spread-the-word button.share-button__button {
+    padding: 14px 30px;
+}
 
 
 @media(min-width: 1024px){
