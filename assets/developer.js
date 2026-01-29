@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     stickyThumb.src = data.thumb || "";
     stickyTitle.textContent = data.title || "";
-    stickyText.htmlContent = data.text || "";
+    stickyText.innerHTML = data.text || "";
     sticky.dataset.video = data.src || "";
 
     sticky.classList.remove("hidden");
