@@ -111,6 +111,15 @@
                         {% assign blue_width = 0 %}
                         {% endif %}
 
+                        {% assign goal = goal_amount | times: 1.0 %}
+                        {% if goal >= 10000000 %}
+                            {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                        {% elsif goal >= 100000 %}
+                            {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                        {% else %}
+                            {% assign goal_display = goal | money_without_currency %}
+                        {% endif %}
+
                         {% comment %} <div class="raised_goal">
                             ₹ {{ raised_amount | times: 100 | money_without_currency }}
                             <span>
@@ -124,7 +133,7 @@
                                 <span>Raised till now</span>
                             </div>
                             <div class="goal_total">
-                                <h2 class="js-indian-number" data-value="{{ goal_amount }}">₹</h2>
+                                <h2 class="js-indian-number" data-value="{{ goal_display }}">₹</h2>
                                 <span>Our total goal</span>
                             </div>
                         </div>
