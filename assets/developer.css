@@ -3240,6 +3240,9 @@ p#stickyText {
     .popup_video_block {
         border-radius: 4.75px;
     }
+    .spread_the_word_inner {
+        flex-wrap: wrap;
+    }
 }
 
 
