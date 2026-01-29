@@ -3217,6 +3217,10 @@ p#stickyText {
         font-size: 26px;
         line-height: 26px;
     }
+    .video_popup_head p {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 
