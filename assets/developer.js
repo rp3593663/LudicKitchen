@@ -236,6 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const stickyThumb = document.getElementById("stickyThumb");
   const stickyTitle = document.getElementById("stickyTitle");
   const stickyText = document.getElementById("stickyText");
+  const popupTitle = document.getElementById("popupTitle");
+  const popupText = document.getElementById("popupText");
 
   const popup = document.getElementById("videoPopup");
   const popupVideo = document.getElementById("popupVideo");
