@@ -3243,6 +3243,10 @@ p#stickyText {
     .spread_the_word_inner {
         flex-wrap: wrap;
     }
+    .spread_the_word_content,
+    .spread_logo {
+        flex: auto;
+    }
 }
 
 
