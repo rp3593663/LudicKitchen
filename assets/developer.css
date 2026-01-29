@@ -382,6 +382,14 @@ a#HeaderMenu-shop {
     gap: 8px;
     text-align: end;
 }
+.featured_project_data h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: -0.66px;
+    color: var(--primary_color);
+    margin: 0px;
+}
 .project_data_counter {
     background: #F2F1F1;
     border-radius: 8px;
