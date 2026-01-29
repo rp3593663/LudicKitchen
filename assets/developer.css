@@ -3230,6 +3230,10 @@ p#stickyText {
         right: 16px;
         top: 16px;
     }
+     .video-popup-close svg{
+        width: 16px;
+        height: 16px;
+    }
 }
 
 
