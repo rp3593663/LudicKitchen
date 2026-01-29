@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ❌ Close popup
-  popup.querySelector(".popup-close").addEventListener("click", () => {
+  popup.querySelector(".video-popup-close").addEventListener("click", () => {
     popupVideo.pause();
     popupVideo.src = "";
     popup.classList.add("hidden");
