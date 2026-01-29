@@ -3226,6 +3226,10 @@ p#stickyText {
         gap: 16px;
         margin-bottom: 30px;
     }
+    .video-popup-close {
+        right: 16px;
+        top: 16px;
+    }
 }
 
 
