@@ -340,7 +340,7 @@
       {% sections 'footer-group' %}
     {% endunless %}
 
-    {% sections 'policy-modal' %}
+    {% section 'policy-modal' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -417,6 +417,29 @@
 
     <!-- OTP Login App -->
     {% section 'otp-section' %}
+
+    <!-- Sticky Video Preview -->
+    <div id="stickyVideoPreview" class="sticky-video hidden">
+      <button class="sticky-close">✕</button>
+
+      <div class="sticky-content">
+        <img id="stickyThumb" src="" />
+        <div class="sticky-text">
+          <strong id="stickyTitle"></strong>
+          <span>▶ Play</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="videoPopup" class="video-popup hidden">
+      <div class="popup-overlay"></div>
+      <div class="popup-box">
+        <button class="popup-close">✕</button>
+        <video id="popupVideo" controls autoplay playsinline></video>
+      </div>
+    </div>
+
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.js"></script>
