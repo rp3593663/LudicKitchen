@@ -258,6 +258,74 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (localStorage.getItem("stickyClosed") === "1") return;
+
+  const sticky = document.getElementById("stickyVideoPreview");
+  const stickyThumb = document.getElementById("stickyThumb");
+  const stickyTitle = document.getElementById("stickyTitle");
+
+  const popup = document.getElementById("videoPopup");
+  const popupVideo = document.getElementById("popupVideo");
+
+  const sections = document.querySelectorAll(".video-trigger-section");
+
+  let activeSrc = null;
+
+  function updateSticky(data) {
+    if (localStorage.getItem("stickyClosed") === "1") return;
+    if (activeSrc === data.src) return;
+
+    activeSrc = data.src;
+
+    stickyThumb.src = data.thumb;
+    stickyTitle.textContent = data.title;
+    sticky.dataset.video = data.src;
+
+    sticky.classList.remove("hidden");
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        updateSticky({
+          src: el.dataset.videoSrc,
+          title: el.dataset.title,
+          thumb: el.dataset.thumb
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(sec => observer.observe(sec));
+
+  // Click sticky → open popup
+  sticky.querySelector(".sticky-content").addEventListener("click", () => {
+    popupVideo.src = sticky.dataset.video;
+    popupVideo.currentTime = 0;
+    popupVideo.play();
+    popup.classList.remove("hidden");
+  });
+
+  // Close popup
+  popup.querySelector(".popup-close").addEventListener("click", () => {
+    popupVideo.pause();
+    popupVideo.src = "";
+    popup.classList.add("hidden");
+  });
+
+  // Close sticky forever
+  sticky.querySelector(".sticky-close").addEventListener("click", () => {
+    sticky.classList.add("hidden");
+    localStorage.setItem("stickyClosed", "1");
+  });
+
+});
+
+
 
 
 // document.addEventListener("DOMContentLoaded", function () {
