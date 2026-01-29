@@ -73,7 +73,8 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": "28px 0px 98px"
+        "margin": "28px 0px 98px",
+        "section_video_title": "How this works"
       }
     },
     "multicolumn_hdVUc3": {
@@ -141,7 +142,8 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": "98px 0px 16px"
+        "margin": "98px 0px 16px",
+        "section_video_title": "How this works"
       }
     },
     "tier_benefits_eQC8pN": {
@@ -654,7 +656,10 @@
         "button_label": "Take a seat",
         "button_link": "shopify://products/project-01",
         "padding": "",
-        "margin": "98px 0px"
+        "margin": "98px 0px",
+        "section_video": "shopify://files/videos/video3.mp4",
+        "section_video_poster": "shopify://shop_images/video3_preview.jpg",
+        "section_video_title": "How this works"
       }
     },
     "faqs_tab_JC9MXE": {
