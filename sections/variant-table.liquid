@@ -54,6 +54,8 @@
     data-thumb="{{ section.settings.section_video_poster | image_url }}"
     data-title="{{ section.settings.section_video_title | escape }}"
     data-text="{{ section.settings.section_video_text }}"
+    data-popup-title="{{ section.settings.section_popup_title | escape }}"
+    data-popup-text="{{ section.settings.section_popup_text | replace: '"', '&quot;' }}"
   {% endif %}
 >
 
