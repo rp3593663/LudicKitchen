@@ -260,7 +260,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  if (localStorage.getItem("stickyClosed") === "1") return;
+  // 🔒 If user already closed sticky, NEVER init system
+  if (localStorage.getItem("stickyClosed") === "1") {
+    return;
+  }
 
   const sticky = document.getElementById("stickyVideoPreview");
   const stickyThumb = document.getElementById("stickyThumb");
@@ -271,59 +274,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sections = document.querySelectorAll(".video-trigger-section");
 
+  if (!sticky || !popup || sections.length === 0) return;
+
   let activeSrc = null;
+  let stickyDisabled = false; // runtime lock
 
   function updateSticky(data) {
+    // 🔒 Double safety lock
+    if (stickyDisabled) return;
     if (localStorage.getItem("stickyClosed") === "1") return;
     if (activeSrc === data.src) return;
 
     activeSrc = data.src;
 
-    stickyThumb.src = data.thumb;
-    stickyTitle.textContent = data.title;
-    sticky.dataset.video = data.src;
+    stickyThumb.src = data.thumb || "";
+    stickyTitle.textContent = data.title || "";
+    sticky.dataset.video = data.src || "";
 
     sticky.classList.remove("hidden");
   }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
+      if (!entry.isIntersecting) return;
+      if (stickyDisabled) return;
 
-        updateSticky({
-          src: el.dataset.videoSrc,
-          title: el.dataset.title,
-          thumb: el.dataset.thumb
-        });
-      }
+      const el = entry.target;
+
+      updateSticky({
+        src: el.dataset.videoSrc,
+        title: el.dataset.title,
+        thumb: el.dataset.thumb
+      });
     });
   }, { threshold: 0.4 });
 
   sections.forEach(sec => observer.observe(sec));
 
-  // Click sticky → open popup
+  // ▶ Click sticky → open popup
   sticky.querySelector(".sticky-content").addEventListener("click", () => {
-    popupVideo.src = sticky.dataset.video;
+    if (stickyDisabled) return;
+
+    const src = sticky.dataset.video;
+    if (!src) return;
+
+    popupVideo.src = src;
     popupVideo.currentTime = 0;
     popupVideo.play();
     popup.classList.remove("hidden");
   });
 
-  // Close popup
-  popup.querySelector(".popup-close").addEventListener("click", () => {
+  // ❌ Close popup
+  popup.querySelector(".video-popup-close").addEventListener("click", () => {
     popupVideo.pause();
     popupVideo.src = "";
     popup.classList.add("hidden");
   });
 
-  // Close sticky forever
+  // ❌ Close sticky FOREVER
   sticky.querySelector(".sticky-close").addEventListener("click", () => {
     sticky.classList.add("hidden");
-    localStorage.setItem("stickyClosed", "1");
+
+    stickyDisabled = true; // runtime disable
+    localStorage.setItem("stickyClosed", "1"); // persistent disable
   });
 
 });
+
+
 
 
 
