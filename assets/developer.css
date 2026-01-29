@@ -3233,6 +3233,9 @@ p#stickyText {
         width: 16px;
         height: 16px;
     }
+    .popup_video_block {
+        border-radius: 4.75px;
+    }
 }
 
 
