@@ -564,6 +564,14 @@
               <div class="edit_account_field">
                 <input name="link" value="ludic-kitchen.myshopify.com/" class="" placeholder="ludic-kitchen.myshopify.com/">
                 <div class="field-error"></div>
+                <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
+                  <button class="share-button__button hidden">
+                    {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
+                    Share
+                  </button>
+                
+                </share-button>
+
               </div>
             </div>
         </div>
