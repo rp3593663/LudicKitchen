@@ -3361,6 +3361,7 @@ p#stickyText {
     max-width: 816px;
     height: 700px;
     width: 100%;
+    padding: 40px;
 }
 .popup-box video {
   width: 100%;
