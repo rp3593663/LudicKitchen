@@ -74,7 +74,9 @@
         "fullwidth": false,
         "padding": "",
         "margin": "28px 0px 98px",
-        "section_video_title": "How this works"
+        "section_video": "shopify://files/videos/video1_de58bb4e-f435-4d18-9e33-f47195f80d90.mp4",
+        "section_video_poster": "shopify://shop_images/video1_preview.jpg",
+        "section_video_title": "Main Video"
       }
     },
     "multicolumn_hdVUc3": {
@@ -143,7 +145,9 @@
         "fullwidth": false,
         "padding": "",
         "margin": "98px 0px 16px",
-        "section_video_title": "How this works"
+        "section_video": "shopify://files/videos/video2.mp4",
+        "section_video_poster": "shopify://shop_images/video2_preview.jpg",
+        "section_video_title": "Variant Table Video"
       }
     },
     "tier_benefits_eQC8pN": {
@@ -659,7 +663,7 @@
         "margin": "98px 0px",
         "section_video": "shopify://files/videos/video3.mp4",
         "section_video_poster": "shopify://shop_images/video3_preview.jpg",
-        "section_video_title": "How this works"
+        "section_video_title": "How this works Video"
       }
     },
     "faqs_tab_JC9MXE": {
