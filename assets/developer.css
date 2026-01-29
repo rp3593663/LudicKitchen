@@ -448,8 +448,7 @@ a.go_btn {
     border-radius: 10px;
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 5px;
 }
 .progress_fill {
     height: 100%;
