@@ -2147,6 +2147,7 @@ input.edit_account_input.disabled {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .sticky-content {
     display: flex;
