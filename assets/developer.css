@@ -2416,7 +2416,7 @@ p#stickyText {
 }
 .account_nav {
     display: grid;
-    gap: 22px;
+    gap: 24px;
 }
 .account_nav .nav_link {
     display: flex;
