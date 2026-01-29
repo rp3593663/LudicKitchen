@@ -3242,10 +3242,14 @@ p#stickyText {
     }
     .spread_the_word_inner {
         flex-wrap: wrap;
+        gap: 30px;
     }
     .spread_the_word_content,
     .spread_logo {
         flex: auto;
+    }
+    .account_spread-the-word .edit_account_field {
+        grid-template-columns: 1fr;
     }
 }
 
