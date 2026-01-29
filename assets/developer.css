@@ -3368,6 +3368,18 @@ p#stickyText {
 .project_progress_inner + .project_progress_inner {
     display: none;
 }
+
+
+
+
+
+
+.spread_the_word_inner {
+    display: flex;
+}
+
+
+
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
