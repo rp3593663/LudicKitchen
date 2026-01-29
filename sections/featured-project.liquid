@@ -111,14 +111,12 @@
                         {% assign blue_width = 0 %}
                         {% endif %}
 
-                        {% comment %} <span class="total_goal">Raised of  <span class="js-indian-number total_goal" data-value="{{ goal_amount }}">₹ </span> goal</span> {% endcomment %}
                         <div class="raised_goal">
-                            <span class="raised_amount js-indian-number js-counter" data-value="{{ raised_amount }}">₹</span>
+                            ₹ {{ raised_amount | times: 100 | money_without_currency }}
                             <span>
                                 Raise of ₹ {{ goal_amount | times: 100 | money_without_currency }} goal
                             </span>
                         </div>
-                        <span class="raised_amount js-indian-number js-counter" data-value="{{ raised_amount }}">₹</span>
 
 
                         <div class="raised_progress_bar">
