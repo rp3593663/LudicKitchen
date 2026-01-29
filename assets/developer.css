@@ -3251,6 +3251,10 @@ p#stickyText {
     .account_spread-the-word .edit_account_field {
         grid-template-columns: 1fr;
     }
+    .account_spread-the-word .dashboard_content_area .field_head h4 {
+        font-size: 14px;
+        line-height: 14px;
+    }
 }
 
 
