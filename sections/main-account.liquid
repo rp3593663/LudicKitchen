@@ -564,20 +564,16 @@
               <div class="edit_account_field">
                 <input name="link" value="ludic-kitchen.myshopify.com/" class="" placeholder="ludic-kitchen.myshopify.com/">
                 <div class="field-error"></div>
-                <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
-                  <button class="share-button__button hidden">
-                    {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
-                    Share
-                  </button>
-                  <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary class="share-button__button">
-                      {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
-                      Share
-                    </summary>
-                  
-                  </details>
-                </share-button>
-
+                <div class="copy-link-btn" id="copyLinkBtn">
+                    {% liquid
+                    if template.name == 'index'
+                        assign share_url = request.origin
+                    else
+                        assign share_url = request.origin | append: request.path
+                    endif
+                    render 'share-button', block.settings.share_label: 'Share', share_link: share_url
+                    %}
+                </div>
               </div>
             </div>
         </div>
