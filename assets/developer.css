@@ -2228,8 +2228,8 @@ p#stickyText {
     border-radius: 20px;
     overflow: hidden;
     max-width: 816px;
-    /* height: 700px; */
-    height: calc(100% - 10px);
+    height: 700px;
+    /* height: calc(100% - 10px); */
     width: 100%;
     padding: 40px;
 }
