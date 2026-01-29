@@ -257,13 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  // 🔒 If user already closed sticky, NEVER init system
-  if (localStorage.getItem("stickyClosed") === "1") {
-    return;
-  }
 
   const sticky = document.getElementById("stickyVideoPreview");
   const stickyThumb = document.getElementById("stickyThumb");
@@ -277,12 +271,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!sticky || !popup || sections.length === 0) return;
 
   let activeSrc = null;
-  let stickyDisabled = false; // runtime lock
+
+  // 🧠 Store only closed videos for THIS PAGE SESSION
+  const closedVideos = new Set();
 
   function updateSticky(data) {
-    // 🔒 Double safety lock
-    if (stickyDisabled) return;
-    if (localStorage.getItem("stickyClosed") === "1") return;
+    // ❌ If this video was closed by user → do not show
+    if (closedVideos.has(data.src)) return;
+
+    // ❌ If already showing this video → do nothing
     if (activeSrc === data.src) return;
 
     activeSrc = data.src;
@@ -297,7 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      if (stickyDisabled) return;
 
       const el = entry.target;
 
@@ -313,8 +309,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ▶ Click sticky → open popup
   sticky.querySelector(".sticky-content").addEventListener("click", () => {
-    if (stickyDisabled) return;
-
     const src = sticky.dataset.video;
     if (!src) return;
 
@@ -325,21 +319,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ❌ Close popup
-  popup.querySelector(".video-popup-close").addEventListener("click", () => {
+  popup.querySelector(".popup-close").addEventListener("click", () => {
     popupVideo.pause();
     popupVideo.src = "";
     popup.classList.add("hidden");
   });
 
-  // ❌ Close sticky FOREVER
+  // ❌ Close CURRENT sticky only
   sticky.querySelector(".sticky-close").addEventListener("click", () => {
-    sticky.classList.add("hidden");
+    const currentSrc = sticky.dataset.video;
 
-    stickyDisabled = true; // runtime disable
-    localStorage.setItem("stickyClosed", "1"); // persistent disable
+    if (currentSrc) {
+      closedVideos.add(currentSrc); // 🧠 remember only this one
+    }
+
+    sticky.classList.add("hidden");
+    activeSrc = null; // allow next section to trigger
   });
 
 });
+
+
 
 
 
