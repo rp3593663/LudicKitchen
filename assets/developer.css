@@ -3177,6 +3177,41 @@ p#stickyText {
         padding-right: 12px;
         letter-spacing: -.36px;
     }
+
+    .video-popup {
+        display: block !important;
+    }
+
+    .video-popup.hidden {
+        display: block !important;
+        pointer-events: none;
+    }
+
+    .video-popup .popup-overlay {
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .video-popup .popup-box {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        transition: transform 0.45s cubic-bezier(.22,1,.36,1);
+    }
+
+    /* When popup is visible */
+    .video-popup:not(.hidden) .popup-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .video-popup:not(.hidden) .popup-box {
+        transform: translateY(0%);
+    }
 }
 
 
