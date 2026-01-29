@@ -48,7 +48,14 @@
 
 {%- endstyle -%}
 
-<div class="kretoss-section section-project_variant_table" id="choose_product_tier">
+<div class="kretoss-section section-project_variant_table video-trigger-section" id="choose_product_tier"
+  {% if section.settings.section_video != blank %}
+    data-video-src="{{ section.settings.section_video.sources[0].url }}"
+    data-thumb="{{ section.settings.section_video_poster | image_url }}"
+    data-title="{{ section.settings.section_video_title | escape }}"
+  {% endif %}
+>
+
 	<div class="{{ container }}" {{ max_width }}>
         <div class="section_heading">
             <h2 class="h2_title">
@@ -129,52 +136,46 @@
 
                     <!-- Progress + Button -->
                     <div class="tier_progress_btn">
-                      {%- comment -%}
-  Time-based progress bar
-  Metafield: product.metafields.custom.project_goal_start_date
-  Total duration: 15 days
-{%- endcomment -%}
+                      {% assign goal_start_date = product.metafields.custom.project_goal_start_date %}
+                      {% assign total_days = 15 %}
 
-{% assign goal_start_date = product.metafields.custom.project_goal_start_date %}
-{% assign total_days = 15 %}
+                      {% if goal_start_date != blank %}
 
-{% if goal_start_date != blank %}
+                        {%- assign goal_start_ts = goal_start_date | date: "%s" -%}
+                        {%- assign today_ts = 'now' | date: "%s" -%}
 
-  {%- assign goal_start_ts = goal_start_date | date: "%s" -%}
-  {%- assign today_ts = 'now' | date: "%s" -%}
+                        {%- assign seconds_passed = today_ts | minus: goal_start_ts -%}
+                        {%- assign days_passed = seconds_passed | divided_by: 86400 -%}
 
-  {%- assign seconds_passed = today_ts | minus: goal_start_ts -%}
-  {%- assign days_passed = seconds_passed | divided_by: 86400 -%}
+                        {%- assign tier_progress = days_passed | times: 100.0 | divided_by: total_days | round: 2 -%}
 
-  {%- assign tier_progress = days_passed | times: 100.0 | divided_by: total_days | round: 2 -%}
+                      {% else %}
+                        {% assign tier_progress = 0 %}
+                      {% endif %}
 
-{% else %}
-  {% assign tier_progress = 0 %}
-{% endif %}
+                      {%- comment -%} Clamp progress between 0 and 100 {%- endcomment -%}
+                      {% if tier_progress > 100 %}
+                        {% assign tier_progress = 100 %}
+                      {% endif %}
 
-{%- comment -%} Clamp progress between 0 and 100 {%- endcomment -%}
-{% if tier_progress > 100 %}
-  {% assign tier_progress = 100 %}
-{% endif %}
+                      {% if tier_progress < 0 %}
+                        {% assign tier_progress = 0 %}
+                      {% endif %}
 
-{% if tier_progress < 0 %}
-  {% assign tier_progress = 0 %}
-{% endif %}
+                      {%- comment -%} Minimum visible bar width {%- endcomment -%}
+                      {% assign tier_bar_width = tier_progress %}
+                      {% if tier_bar_width < 2 %}
+                        {% assign tier_bar_width = 2 %}
+                      {% endif %}
 
-{%- comment -%} Minimum visible bar width {%- endcomment -%}
-{% assign tier_bar_width = tier_progress %}
-{% if tier_bar_width < 2 %}
-  {% assign tier_bar_width = 2 %}
-{% endif %}
-
-<div class="tier_progress_bar">
-  <div class="tier_track segmented">
-    <div
-      class="tier_track_progress_fill"
-      style="width: {{ tier_bar_width }}%;"
-    > </div>
-  </div>
-</div>
+                      <div class="tier_progress_bar">
+                        <div class="tier_track segmented">
+                          <div
+                            class="tier_track_progress_fill"
+                            style="width: {{ tier_bar_width }}%;"
+                          > </div>
+                        </div>
+                      </div>
 
 
                       <!-- Direct Checkout Link -->
