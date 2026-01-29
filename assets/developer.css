@@ -377,10 +377,14 @@ a#HeaderMenu-shop {
     justify-content: space-between;
     gap: 10px;
 }
-.goal_total {
+.featured_project_data .goal_total {
     display: grid;
     gap: 8px;
     text-align: end;
+}
+.featured_project_data .goal_raised {
+    display: grid;
+    gap: 8px;
 }
 .featured_project_data h2 {
     font-weight: 700;
