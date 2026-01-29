@@ -3305,6 +3305,14 @@ input.edit_account_input.disabled {
     display: grid;
     gap: 8px;
 }
+h5#stickyTitle {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.42px;
+    color: var(--black);
+}
 
 /* Popup */
 .video-popup {
