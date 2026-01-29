@@ -3375,12 +3375,20 @@ p#stickyText {
 .video_popup_head h3 {
     margin: 0;
     text-align: center;
-    font-family: Inter;
     font-weight: 700;
     font-size: 38px;
     line-height: 48px;
     letter-spacing: -1.1px;
+    color: var(--black);
     text-transform: capitalize;
+}
+.video_popup_head p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.54px;
+    text-align: justify;
+    color: var(--black);
 }
 .popup-box video {
   width: 100%;
