@@ -3205,6 +3205,7 @@ p#stickyText {
         border-radius: 22px 22px 0 0;
         padding: 30px 20px 20px;
         transition: transform 0.7s cubic-bezier(.22,1,.36,1);
+        height:auto;
     }
 
     /* When popup is visible */
