@@ -3264,6 +3264,11 @@ input.edit_account_input.disabled {
   transform: translateY(30px);
   pointer-events: none;
 }
+.sticky-video:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 .sticky-close {
     position: absolute;
