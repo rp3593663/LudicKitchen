@@ -3259,12 +3259,12 @@ input.edit_account_input.disabled {
     opacity 0.45s ease, 
     transform 0.45s cubic-bezier(.22,1,.36,1);
 }
-.sticky-video.hidden {
+.sticky-video.hidden_sticky_video {
   opacity: 0;
   transform: translateY(30px);
   pointer-events: none;
 }
-.sticky-video:not(.hidden) {
+.sticky-video:not(.hidden_sticky_video) {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;

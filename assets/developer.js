@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stickyText.textContent = data.text || "";
     sticky.dataset.video = data.src || "";
 
-    sticky.classList.remove("hidden");
+    sticky.classList.remove("hidden_sticky_video");
   }
 
   const observer = new IntersectionObserver((entries) => {
