@@ -371,21 +371,11 @@ a#HeaderMenu-shop {
     letter-spacing: -0.5px;
     margin: 0px;
 }
-.raised_goal {
-    display: grid;
-    gap: 6px;
-    font-weight: 650;
-    font-size: 22px;
-    line-height: 25px;
-    letter-spacing: -1.1px;
-    color: var(--primary_color);
-}
-.raised_goal span {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: -0.5px;
-    color: var(--black);
+.project_progress_data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 .project_data_counter {
     background: #F2F1F1;
