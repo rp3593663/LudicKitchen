@@ -2995,6 +2995,9 @@ input.edit_account_input.disabled {
     .sticky-content {
         gap: 20px;
     }
+    p#stickyText {
+        display: none;
+    }
 }
 
 
