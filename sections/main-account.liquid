@@ -569,7 +569,13 @@
                     {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
                     Share
                   </button>
-                
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary class="share-button__button">
+                      {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
+                      Share
+                    </summary>
+                  
+                  </details>
                 </share-button>
 
               </div>
