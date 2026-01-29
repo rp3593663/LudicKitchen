@@ -329,6 +329,9 @@ a.pre_footer_list-menu__item {
         letter-spacing: -1.1px;
     }
 }
+@media(min-width: 768px){
+
+}
 @media(max-width: 767px){
 .pre_footer_container {
     grid-template-columns: 1fr;
@@ -397,9 +400,6 @@ a.pre_footer_list-menu__item {
     letter-spacing: -0.42px;
 }
 .blank_block {
-    display: none;
-}
-.menu_block {
     display: none;
 }
 .copyright_block {
@@ -558,7 +558,7 @@ a.pre_footer_list-menu__item {
                 </div>
                 <span>Subscribe to stay updated on the latest Updates.</span>
             </div>
-            <div class="menu_block">
+            <div class="menu_block mobile">
                 <ul class="pre_footer_menu">
                     {%- for link in section.settings.menu.links -%}
                     {% assign link_handle = link.title | handle %}
@@ -577,7 +577,7 @@ a.pre_footer_list-menu__item {
                 </ul>
             </div>
             <div class="right_pre_footer">
-                <div class="menu_block">
+                <div class="menu_block desktop">
                     <ul class="pre_footer_menu">
                         {%- for link in section.settings.menu.links -%}
                         {% assign link_handle = link.title | handle %}
