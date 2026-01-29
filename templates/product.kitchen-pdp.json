@@ -652,7 +652,7 @@
         "heading_after": "works",
         "description": "Many hands, one shared intention. Every project here follows a simple, 4-folded path - pick your tier, make your contribution, join the creative process, and finally collect what you helped bring to life. Here's how it unfolds:",
         "button_label": "Take a seat",
-        "button_link": "shopify://products/project-01-dummy",
+        "button_link": "shopify://products/project-01",
         "padding": "",
         "margin": "98px 0px"
       }
