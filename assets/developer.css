@@ -2229,7 +2229,7 @@ p#stickyText {
     overflow: hidden;
     max-width: 816px;
     /* height: 700px; */
-    height: calc(100% - 10px;);
+    height: calc(100% - 10px);
     width: 100%;
     padding: 40px;
 }
