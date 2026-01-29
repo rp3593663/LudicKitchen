@@ -3397,3 +3397,11 @@ p#stickyText {
   height: 100%;
   object-fit: contain;
 }
+
+.popup_video_block {
+    width: 100%;
+    position: relative;
+    padding-top: 58%;
+    overflow: hidden;
+    border-radius: 10px;
+}
