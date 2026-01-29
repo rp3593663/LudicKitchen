@@ -3301,6 +3301,10 @@ input.edit_account_input.disabled {
     background: #D9D9D9B0;
     border-radius: 30px;
 }
+.sticky-text {
+    display: grid;
+    gap: 8px;
+}
 
 /* Popup */
 .video-popup {
