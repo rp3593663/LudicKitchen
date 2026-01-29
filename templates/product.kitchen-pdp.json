@@ -77,7 +77,9 @@
         "section_video": "shopify://files/videos/video1_de58bb4e-f435-4d18-9e33-f47195f80d90.mp4",
         "section_video_poster": "shopify://shop_images/video1_preview.jpg",
         "section_video_title": "Main Video",
-        "section_video_text": "Get a better understanding of how ludic kitchen works."
+        "section_video_text": "Get a better understanding of how ludic kitchen works.",
+        "section_popup_title": "How Kitchen works",
+        "section_popup_text": "Many hands, one shared intention. Every project here follows a simple path..."
       }
     },
     "multicolumn_hdVUc3": {
@@ -149,7 +151,9 @@
         "section_video": "shopify://files/videos/video2.mp4",
         "section_video_poster": "shopify://shop_images/video2_preview.jpg",
         "section_video_title": "Variant Table Video",
-        "section_video_text": "Better understanding of how ludic kitchen works."
+        "section_video_text": "Better understanding of how ludic kitchen works.",
+        "section_popup_title": "Variant Table Video",
+        "section_popup_text": "Variant Table Video Many hands, one shared intention. Every project here follows a simple path..."
       }
     },
     "tier_benefits_eQC8pN": {
@@ -666,7 +670,9 @@
         "section_video": "shopify://files/videos/video3.mp4",
         "section_video_poster": "shopify://shop_images/video3_preview.jpg",
         "section_video_title": "How this works Video",
-        "section_video_text": "Understanding of how ludic kitchen works."
+        "section_video_text": "Understanding of how ludic kitchen works.",
+        "section_popup_title": "How this works Video",
+        "section_popup_text": "How this works Video Many hands, one shared intention. Every project here follows a simple path..."
       }
     },
     "faqs_tab_JC9MXE": {
