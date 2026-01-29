@@ -3314,6 +3314,14 @@ h5#stickyTitle {
     letter-spacing: -0.42px;
     color: var(--black);
 }
+p#stickyText {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px; 
+    color: var(--black);
+}
 
 /* Popup */
 .video-popup {
