@@ -377,6 +377,11 @@ a#HeaderMenu-shop {
     justify-content: space-between;
     gap: 10px;
 }
+.goal_total {
+    display: grid;
+    gap: 8px;
+    text-align: end;
+}
 .project_data_counter {
     background: #F2F1F1;
     border-radius: 8px;
