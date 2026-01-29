@@ -121,7 +121,12 @@
 
                         <div class="raised_progress_bar">
                             <div class="progress_track">
-                                <div class="progress_fill" style="width: {{ bar_width }}%;"> </div>
+                                {% if red_width > 0 %}
+                                    <div class="progress_fill red_fill" style="width: {{ red_width }}%;"> </div>
+                                {% endif %}
+                                {% if bar_width > red_width %}
+                                    <div class="progress_fill blue_fill" style="width: {{ bar_width }}%;"> </div>
+                                {% endif %}
                             </div>
                             <div class="progress_labels">
                                 <span>{{ progress }}% funded</span>
