@@ -419,7 +419,7 @@
     {% section 'otp-section' %}
 
 
-    {% if request.url == 'products' %}
+    {% if request.path contains 'products' %}
     <!-- Sticky Video Preview -->
     <div id="stickyVideoPreview" class="sticky-video hidden_sticky_video">
       <div class="sticky-close">
