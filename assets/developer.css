@@ -3256,6 +3256,16 @@ input.edit_account_input.disabled {
 .sticky-video.hidden { 
     display: none; 
 }
+.sticky-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .sticky-content {
   display: flex;
   gap: 12px;
@@ -3270,11 +3280,6 @@ input.edit_account_input.disabled {
   border-radius: 8px;
 }
 
-.sticky-close {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-}
 
 /* Popup */
 .video-popup {
