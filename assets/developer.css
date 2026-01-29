@@ -3200,6 +3200,7 @@ p#stickyText {
         width: 100%;
         max-width: 100%;
         border-radius: 22px 22px 0 0;
+        padding: 20px;
         transition: transform 0.7s cubic-bezier(.22,1,.36,1);
     }
 
