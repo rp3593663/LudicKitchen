@@ -2423,8 +2423,8 @@ p#stickyText {
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 16px;
     letter-spacing: -0.42px;
     color: var(--grey_text);
     cursor: pointer;
