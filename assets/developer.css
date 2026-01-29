@@ -3429,7 +3429,8 @@ p#stickyText {
     color: #fff;
     font-weight: 600;
 }
-.account_ledger .project_progress_left {
+.account_ledger .project_progress_left,
+.account_ledger .total_backers_data {
     border: 1px solid #F0F0F0;
 }
 
