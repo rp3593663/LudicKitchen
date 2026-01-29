@@ -2992,6 +2992,9 @@ input.edit_account_input.disabled {
         min-width: 100px;
         height: 60px;
     }
+    .sticky-content {
+        gap: 20px;
+    }
 }
 
 
