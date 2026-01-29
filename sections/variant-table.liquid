@@ -53,7 +53,7 @@
     data-video-src="{{ section.settings.section_video.sources[0].url }}"
     data-thumb="{{ section.settings.section_video_poster | image_url }}"
     data-title="{{ section.settings.section_video_title | escape }}"
-    data-text="{{ section.settings.section_video_text | escape }}"
+    data-text="{{ section.settings.section_video_text }}"
   {% endif %}
 >
 
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "default": "How this works"
     },
     {
-      "type": "html",
+      "type": "text",
       "id": "section_video_text",
       "label": "Sticky Video Text",
       "default": "Get a better understanding of how ludic kitchen works."
