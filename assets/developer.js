@@ -264,6 +264,8 @@ document.addEventListener("DOMContentLoaded", () => {
     stickyTitle.textContent = data.title || "";
     stickyText.textContent = data.text || "";
     sticky.dataset.video = data.src || "";
+    sticky.dataset.popupTitle = data.popupTitle || "";
+    sticky.dataset.popupText = data.popupText || "";
 
     sticky.classList.remove("hidden_sticky_video");
   }
@@ -278,8 +280,11 @@ document.addEventListener("DOMContentLoaded", () => {
         src: el.dataset.videoSrc,
         title: el.dataset.title,
         text: el.dataset.text,
-        thumb: el.dataset.thumb
+        thumb: el.dataset.thumb,
+        popupTitle: el.dataset.popupTitle,
+        popupText: el.dataset.popupText
       });
+
     });
   }, { threshold: 0.4 });
 
