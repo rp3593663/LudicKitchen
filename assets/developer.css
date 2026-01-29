@@ -3368,6 +3368,10 @@ p#stickyText {
     right: 22px;
     top: 22px;
 }
+.video_popup_head {
+    display: grid;
+    gap: 18px;
+}
 .popup-box video {
   width: 100%;
   height: 100%;
