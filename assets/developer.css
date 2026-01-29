@@ -382,6 +382,13 @@ a#HeaderMenu-shop {
     gap: 8px;
     text-align: end;
 }
+.featured_project_data span {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -0.3px;
+    color: var(--black);
+}
 .featured_project_data .goal_raised {
     display: grid;
     gap: 8px;
