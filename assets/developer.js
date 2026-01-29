@@ -302,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateSticky({
         src: el.dataset.videoSrc,
         title: el.dataset.title,
+        text: el.dataset.text,
         thumb: el.dataset.thumb
       });
     });
