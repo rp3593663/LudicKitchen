@@ -2980,6 +2980,14 @@ input.edit_account_input.disabled {
     .profile_edit_form .form-message {
         width: fit-content;
     }
+
+    /*---------- Video Popup CSS ------------*/
+
+    .sticky-video {
+        right: 18px;
+        bottom: 18px;
+        width: 260px;
+    }
 }
 
 
