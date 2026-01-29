@@ -3371,6 +3371,7 @@ p#stickyText {
 .video_popup_head {
     display: grid;
     gap: 18px;
+    margin-bottom: 48px;
 }
 .video_popup_head h3 {
     margin: 0;
@@ -3389,6 +3390,7 @@ p#stickyText {
     letter-spacing: -0.54px;
     text-align: justify;
     color: var(--black);
+    margin: 0px;
 }
 .popup-box video {
   width: 100%;
