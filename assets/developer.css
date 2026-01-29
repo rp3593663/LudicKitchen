@@ -2237,6 +2237,7 @@ p#stickyText {
     position: absolute;
     right: 22px;
     top: 22px;
+    cursor: pointer;
 }
 .video_popup_head {
     display: grid;
