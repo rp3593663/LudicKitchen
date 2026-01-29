@@ -558,6 +558,24 @@ a.pre_footer_list-menu__item {
                 </div>
                 <span>Subscribe to stay updated on the latest Updates.</span>
             </div>
+            <div class="menu_block">
+                <ul class="pre_footer_menu">
+                    {%- for link in section.settings.menu.links -%}
+                    {% assign link_handle = link.title | handle %}
+                    <li>
+                        <a
+                            href="{{ link.url }}"
+                            class="pre_footer_list-menu__item"
+                            {% if link_handle == 'terms-conditions' %}
+                                data-open-policy
+                            {% endif %}
+                        >
+                            {{ link.title | escape }}
+                        </a>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
             <div class="right_pre_footer">
                 <div class="menu_block">
                     <ul class="pre_footer_menu">
