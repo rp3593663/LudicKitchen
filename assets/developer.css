@@ -2502,9 +2502,9 @@ p#stickyText {
         top: calc(100% + 12px);
         padding: 5px 7px;
         border-radius: 2px;
-        font-size: 6px;
-        line-height: 6px;
-        letter-spacing: -.3px;
+        font-size: 7px;
+        line-height: 7px;
+        letter-spacing: -.2px;
     }
     .total_raised_percentage {
         margin: 18px 0 12px;
