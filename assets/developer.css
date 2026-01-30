@@ -3190,6 +3190,18 @@ p#stickyText {
 .project_ledger_updates_fallback {
     position: relative;
 }
+.ledger_fallback_content_area {
+    max-width: 602px;
+    width: 100%;
+    margin: auto;
+    background: #FFF;
+    border: 1px solid #CECECE;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
