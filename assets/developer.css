@@ -30,7 +30,7 @@ html {
 .utility-bar{
     background-color: var(--primary_color);
 }
-.announcement-bar__message {
+.announcement-bar__message.h5 {
     font-size: 14px;
     line-height: 14px;
     letter-spacing: -0.42px;
