@@ -3424,7 +3424,7 @@ p#stickyText {
     body.sidebar-open {
         overflow: hidden;
     }
-    .nav_toggle {
+    .account_content .nav_toggle {
         display: block;
         cursor: pointer;
     }
