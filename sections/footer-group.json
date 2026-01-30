@@ -18,7 +18,7 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": "0px 0px 98px",
+        "margin": "0px 0px 98px | | | 0px 0px 12px",
         "menu": "footer-menu"
       }
     },
