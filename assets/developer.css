@@ -2632,6 +2632,9 @@ img.fallback_mobile_img {
     .desktop_sidebar_content{
         display: none;
     }
+    .nav_link.desktop_sidebar_content {
+        display: none;
+    }
     .account_sidebar_mobile {
         padding: 12px 18px;
         display: flex;
