@@ -148,11 +148,10 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top-=40% top",
-      end: () => "+=" + title.scrollWidth,
+      start: "-40% top",
+      end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
-       pinSpacing: true,
       anticipatePin: 1
     }
   });
