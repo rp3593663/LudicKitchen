@@ -3085,6 +3085,7 @@ p#stickyText {
 .ledger_update_head {
     display: grid;
     gap: 8px;
+    max-width: 478px;
 }
 .ledger_update_head h5 {
     font-weight: 600;
