@@ -3563,6 +3563,11 @@ img.fallback_mobile_img {
         grid-template-columns: 1fr;
         gap: 6px;
     }
+    .fallback_blur_right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
 }
 
 
