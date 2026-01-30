@@ -2392,6 +2392,9 @@ p#stickyText {
 .spread_the_word_content{
     flex:1;
 }
+.spread_the_word_content input{
+    pointer-events: none;
+}
 .spread_logo {
     width: 100%;
     flex: 1;
