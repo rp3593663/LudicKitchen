@@ -3215,6 +3215,16 @@ p#stickyText {
     display: grid;
     gap: 8px;
 }
+.ledger_fallback_data h4 {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.72px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--primary_color);
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
