@@ -3556,6 +3556,9 @@ img.fallback_mobile_img {
     img.fallback_desktop_img {
         display: none;
     }
+    img.fallback_mobile_img {
+        display: block;
+    }
 }
 
 
