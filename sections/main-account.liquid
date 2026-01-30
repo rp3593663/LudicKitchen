@@ -329,79 +329,79 @@
                     {% if product != blank %}
                       <div class="project_progress_inner">
                           <div class="project_progress_left">
-                              {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
-                              {% assign ludic_spent_amount = product.metafields.custom.ludic_amount | default: 0 %}
-                              {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
+                            {% assign raised_amount = product.metafields.custom.raised_amount | default: 0 %}
+                            {% assign ludic_spent_amount = product.metafields.custom.ludic_amount | default: 0 %}
+                            {% assign goal_amount = product.metafields.custom.project_goal | default: 1 %}
 
-                              {%- comment -%} Calculate overall progress percentage {%- endcomment -%}
-                              {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
-                              {% if progress > 100 %}
-                              {% assign progress = 100 %}
-                              {% endif %}
+                            {%- comment -%} Calculate overall progress percentage {%- endcomment -%}
+                            {% assign progress = raised_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+                            {% if progress > 100 %}
+                            {% assign progress = 100 %}
+                            {% endif %}
 
-                              {% assign bar_width = progress %} {% if bar_width < 2 %} {% assign bar_width = 2 %} {% endif %}
+                            {% assign bar_width = progress %} {% if bar_width < 2 %} {% assign bar_width = 2 %} {% endif %}
 
-                              {%- comment -%} Calculate Ludic spent percentage {%- endcomment -%}
-                              {% assign red_width = ludic_spent_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
-                              {% if red_width > 100 %}
-                              {% assign red_width = 100 %}
-                              {% endif %}
+                            {%- comment -%} Calculate Ludic spent percentage {%- endcomment -%}
+                            {% assign red_width = ludic_spent_amount | times: 100.0 | divided_by: goal_amount | round: 0 %}
+                            {% if red_width > 100 %}
+                            {% assign red_width = 100 %}
+                            {% endif %}
 
-                              {%- comment -%} Remaining progress for blue bar {%- endcomment -%}
-                              {% assign blue_width = progress | minus: red_width %}
-                              {% if blue_width < 0 %}
-                              {% assign blue_width = 0 %}
-                              {% endif %}
+                            {%- comment -%} Remaining progress for blue bar {%- endcomment -%}
+                            {% assign blue_width = progress | minus: red_width %}
+                            {% if blue_width < 0 %}
+                            {% assign blue_width = 0 %}
+                            {% endif %}
 
 
-                              {% assign raised = raised_amount | times: 1.0 %}
-                              {% comment %} {% if raised >= 10000000 %}
-                                  {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
-                              {% elsif raised >= 100000 %}
-                                  {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
-                              {% else %}
-                                  {% assign raised_display = raised | money_without_currency %}
-                              {% endif %} {% endcomment %}
-                              
-                              {% assign goal = goal_amount | times: 1.0 %}
-                              {% comment %} {% if goal >= 10000000 %}
-                                  {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
-                              {% elsif goal >= 100000 %}
-                                  {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
-                              {% else %}
-                                  {% assign goal_display = goal | money_without_currency %}
-                              {% endif %} {% endcomment %}
+                            {% assign raised = raised_amount | times: 1.0 %}
+                            {% comment %} {% if raised >= 10000000 %}
+                                {% assign raised_display = raised | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif raised >= 100000 %}
+                                {% assign raised_display = raised | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign raised_display = raised | money_without_currency %}
+                            {% endif %} {% endcomment %}
+                            
+                            {% assign goal = goal_amount | times: 1.0 %}
+                            {% comment %} {% if goal >= 10000000 %}
+                                {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
+                            {% elsif goal >= 100000 %}
+                                {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
+                            {% else %}
+                                {% assign goal_display = goal | money_without_currency %}
+                            {% endif %} {% endcomment %}
 
-                              <div class="goal_progress">
-                                  <div class="progress_data">
-                                      <div class="goal_raised">
-                                          <h2 class="js-indian-number js-counter" data-value="{{ raised_amount }}">₹</h2>
-                                          <span>Raised till now</span>
-                                      </div>
-                                      <div class="goal_total">
-                                          <h2 class="js-indian-number" data-value="{{ goal_amount }}">₹</h2>
-                                          <span>Our total goal</span>
-                                      </div>
-                                  </div>
-                                  <div class="goal_raised_progress_bar">
-                                      <div class="raised_progress_track">
-                                          {% if red_width > 0 %}
-                                              <div class="progress_fill red_fill" style="width: {{ red_width }}%;"> </div>
-                                          {% endif %}
-                                          {% if bar_width > red_width %}
-                                              <div class="progress_fill blue_fill" style="width: {{ bar_width }}%;"> </div>
-                                          {% endif %}
-                                          <div class="milestone-75" style="--milestone_percentage: 75%;">
-                                              <span class="milestone-percentage">75%</span>
-                                              <span class="milestone-tooltip">Production starts from here</span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="total_raised_percentage">
-                                      <h3>{{ progress }}%</h3><span>Raised</span>
-                                  </div>
-                                  <p class="goal_info">Ludic has already put <span class="js-indian-number" data-value="{{ ludic_spent_amount }}">₹</span> on the table because we believed in this first.</p>
-                              </div>
+                            <div class="goal_progress">
+                                <div class="progress_data">
+                                    <div class="goal_raised">
+                                        <h2 class="js-indian-number js-counter" data-value="{{ raised_amount }}">₹</h2>
+                                        <span>Raised till now</span>
+                                    </div>
+                                    <div class="goal_total">
+                                        <h2 class="js-indian-number" data-value="{{ goal_amount }}">₹</h2>
+                                        <span>Our total goal</span>
+                                    </div>
+                                </div>
+                                <div class="goal_raised_progress_bar">
+                                    <div class="raised_progress_track">
+                                        {% if red_width > 0 %}
+                                            <div class="progress_fill red_fill" style="width: {{ red_width }}%;"> </div>
+                                        {% endif %}
+                                        {% if bar_width > red_width %}
+                                            <div class="progress_fill blue_fill" style="width: {{ bar_width }}%;"> </div>
+                                        {% endif %}
+                                        <div class="milestone-75" style="--milestone_percentage: 75%;">
+                                            <span class="milestone-percentage">75%</span>
+                                            <span class="milestone-tooltip">Production starts from here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total_raised_percentage">
+                                    <h3>{{ progress }}%</h3><span>Raised</span>
+                                </div>
+                                <p class="goal_info">Ludic has already put <span class="js-indian-number" data-value="{{ ludic_spent_amount }}">₹</span> on the table because we believed in this first.</p>
+                            </div>
                           </div>
                           <div class="project_progress_right">
                             <div class="top_data">
