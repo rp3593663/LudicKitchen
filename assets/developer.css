@@ -3457,9 +3457,10 @@ img.fallback_mobile_img {
         background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/mobile_popup_grid.svg?v=1769772946);
         background-size: contain;
         background-repeat: repeat;
+        background-position: bottom;
     }
     .spread_the_word_inner:after {
-        background: linear-gradient(180deg, rgb(255 255 255 / 62%) 100%, #ffffff0a 100%);
+        background: linear-gradient(180deg, rgb(255 255 255 / 62%) 80%, #ffffff0a 100%);
         content: "";
         position: absolute;
         width: 100%;
