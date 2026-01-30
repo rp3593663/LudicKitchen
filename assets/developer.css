@@ -3453,6 +3453,23 @@ img.fallback_mobile_img {
         flex-wrap: wrap;
         gap: 68px;
     }
+    .spread_the_word_inner {
+        background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/mobile_popup_grid.png?v=1769770557);
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .spread_the_word_inner:after {
+        background: linear-gradient(180deg, rgb(255 255 255 / 62%) 100%, #ffffff0a 100%);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 58%;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        left: 0;
+        border-radius: 6px;
+    }
     .spread_the_word_content,
     .spread_logo {
         flex: auto;
