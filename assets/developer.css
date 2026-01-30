@@ -3550,6 +3550,9 @@ a.fallback_action {
         line-height: 12px;
         letter-spacing: -.36px;
     }
+    img.fallback_desktop_img {
+        display: none;
+    }
 }
 
 
