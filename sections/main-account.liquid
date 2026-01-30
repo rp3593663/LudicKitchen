@@ -327,6 +327,7 @@
                   {% for order in customer.orders %}
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
+                     ==== {{ line_item.variant.title }}
                       {% if product != blank %}
                         <div class="project_ledger_updates">
                           <div class="project_progress_inner">
