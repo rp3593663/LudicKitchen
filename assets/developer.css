@@ -3471,6 +3471,11 @@ a.fallback_action {
     .ledger_content_area .gauge-wrapper {
         margin: 0 auto auto;
     }
+    .ledger_update_area {
+        padding: 16px;
+        border-radius: 6px;
+        gap: 20px;
+    }
 }
 
 
