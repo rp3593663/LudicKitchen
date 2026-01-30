@@ -30,6 +30,12 @@ html {
 .utility-bar{
     background-color: var(--primary_color);
 }
+.announcement-bar__message {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.42px;
+    font-weight: 500;
+}
 .template-index .announcement-bar-section ,
 .template-product  .announcement-bar-section  {
     display: block;
