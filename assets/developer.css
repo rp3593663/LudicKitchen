@@ -3106,7 +3106,7 @@ p#stickyText {
 }
 .leader_update_info {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1.1fr 0.9fr;
     gap: 16px;
     border-bottom: 1px solid #EFEFEF;
     padding: 15px 8px;
