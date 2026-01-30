@@ -329,6 +329,33 @@
                       {% assign product = line_item.product %}
                       {% if product != blank %}
                         {% if line_item.variant.title == 'Taster' %}
+                          <div class="project_ledger_updates_fallback">
+                            <div class="fallback_blur_area">
+                              <div class="fallback_blur_top">
+                                <div class="fallback_blur_left">
+                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur1.png?v=1769758546">
+                                </div>
+                                <div class="fallback_blur_right">
+                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur2.png?v=1769758546">
+                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur3.png?v=1769758546">
+                                </div>
+                              </div>
+                              <div class="fallback_blur_bottom">
+                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur4.png?v=1769758546">
+                              </div>
+                            </div>
+                            <div class="ledger_fallback_content_area">
+                              <div class="ledger_fallback_content">
+                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/animation_logo.svg">
+                                <div class="ledger_fallback_data">
+                                  <h4>You don't have access to manage apps</h4>
+                                  <p>Permission from your IT administrator may be required to enable apps management.</p>
+                                </div>
+                                <a href="{{ shop.url }}/products/project-01" class="fallback_action">Back the project</a>
+                              </div>
+                            </div>
+                          </div>
+                        {% else %}  
                           <div class="project_ledger_updates">
                             <div class="project_progress_inner">
                                 <div class="project_progress_left">
@@ -537,33 +564,6 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        {% else %}  
-                          <div class="project_ledger_updates_fallback">
-                            <div class="fallback_blur_area">
-                              <div class="fallback_blur_top">
-                                <div class="fallback_blur_left">
-                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur1.png?v=1769758546">
-                                </div>
-                                <div class="fallback_blur_right">
-                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur2.png?v=1769758546">
-                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur3.png?v=1769758546">
-                                </div>
-                              </div>
-                              <div class="fallback_blur_bottom">
-                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/blur4.png?v=1769758546">
-                              </div>
-                            </div>
-                            <div class="ledger_fallback_content_area">
-                              <div class="ledger_fallback_content">
-                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/animation_logo.svg">
-                                <div class="ledger_fallback_data">
-                                  <h4>You don't have access to manage apps</h4>
-                                  <p>Permission from your IT administrator may be required to enable apps management.</p>
-                                </div>
-                                <a href="{{ shop.url }}/products/project-01" class="fallback_action">Back the project</a>
                               </div>
                             </div>
                           </div>
