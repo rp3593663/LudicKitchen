@@ -3363,7 +3363,7 @@ p#stickyText {
     }
     .account_sidebar {
         position: fixed;
-        top: 160px;
+        top: 151px;
         left: 0;
         width: 100%;
         max-width: 400px;
