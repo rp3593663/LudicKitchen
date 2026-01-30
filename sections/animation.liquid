@@ -148,7 +148,7 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "-30% top",
+      start: "-20% top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
@@ -165,8 +165,8 @@ document.fonts.ready.then(() => {
       scrollTrigger: {
         trigger: char,
         containerAnimation: horizontalTween,
-        start: "left 50%",
-        end: "left 0%",
+        start: "left 80%",
+        end: "left 20%",
         scrub: true
       }
     });
