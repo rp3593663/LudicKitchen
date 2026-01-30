@@ -3259,12 +3259,6 @@ p#stickyText {
 .project_progress_inner + .project_progress_inner {
     display: none;
 }
-
-
-
-
-
-
 .spread_the_word_inner {
     display: flex;
     border: 1px solid #E8E8E8;
