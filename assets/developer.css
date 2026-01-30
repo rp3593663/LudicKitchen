@@ -641,7 +641,7 @@ a.faq_btn.theme_btn {
     font-weight: 650;
     font-size: 30px;
     line-height: 27px;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.9px;
     color: var(--primary_color);
 }
 .progress_data span {
