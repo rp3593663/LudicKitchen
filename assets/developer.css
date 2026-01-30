@@ -3343,7 +3343,7 @@ p#stickyText {
         justify-content: space-between;
         background-color: var(--white);
         margin: 0;
-        padding: 20px 18px;
+        padding: 18px;
         border-top: 1px solid #F0F0F0;
         border-bottom: 1px solid #F0F0F0;
         z-index: 1;
