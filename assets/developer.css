@@ -1325,7 +1325,7 @@ div#resend-otp {
 }
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text {
-    font-size: 11px!important;
+    font-size: 10px!important;
     color: var(--grey_text);
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
