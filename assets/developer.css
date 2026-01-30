@@ -3380,11 +3380,13 @@ p#stickyText {
         justify-content: space-between;
         padding: 0px;
         gap: 50px;
+        opacity: 0;
         visibility: hidden;
         border-radius: 0px 0px 8px 8px;
     }
     .account_sidebar.is-open {
         transform: translateY(0);
+        opacity: 1;
         visibility: visible;
     }
     .sidebar_borders {
