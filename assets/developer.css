@@ -2226,7 +2226,7 @@ p#stickyText {
     min-height: 100vh;
     height: 100vh;
     overflow-y: auto;
-    padding: 32px 42px 0px;
+    padding: 32px 42px 32px;
 }
 .sidebar_content{
     display: flex;
