@@ -2937,6 +2937,9 @@ p#stickyText {
     .ledger_content_area .project_progress_left {
         padding: 16px;
     }
+    .ledger_content_area .progress_data > * {
+        gap: 6px;
+    }
 }
 
 
