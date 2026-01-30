@@ -2243,7 +2243,7 @@ p#stickyText {
         letter-spacing: -.33px;
     }
     .header {
-        background: #FFF;
+        background: transparent;
     }
 
     /*---------- Featured Project Section ------------*/
