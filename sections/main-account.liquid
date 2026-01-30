@@ -536,34 +536,47 @@
                                 <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.
                               </div>
                               <div class="ledger_updates">
-                                <div class="all_updates_ledger">
-                                  <div class="leader_update_info head">
-                                    <h2>Date</h2>
-                                    <h2>Event</h2>
-                                    <h2>Link</h2>
-                                  </div>
-                                  <div class="leader_update_info">
-                                    <p class="leader_update_date">12 June 2025</p>
-                                    <div class="leader_update_event">Changing your name below will update how your name appears when.</div>
-                                    <div class="leader_update_url">
-                                      <a href="https://ludic.life/pages/about">https://ludic.life/pages/about</a>
-                                    </div>
-                                  </div>
-                                  <div class="leader_update_info">
-                                    <p class="leader_update_date">12 June 2025</p>
-                                    <div class="leader_update_event">Changing your name below will update how your name appears when.</div>
-                                    <div class="leader_update_url">
-                                      <a href="https://ludic.life/pages/about">https://ludic.life/pages/about</a>
-                                    </div>
-                                  </div>
-                                  <div class="leader_update_info">
-                                    <p class="leader_update_date">12 June 2025</p>
-                                    <div class="leader_update_event">Changing your name below will update how your name appears when.</div>
-                                    <div class="leader_update_url">
-                                      <a href="https://ludic.life/pages/about">https://ludic.life/pages/about</a>
-                                    </div>
-                                  </div>
-                                </div>
+                                {% assign dates = product.metafields.custom.ledger_update_date.value %}
+{% assign events = product.metafields.custom.ledger_update_events.value %}
+{% assign links  = product.metafields.custom.ledger_update_link.value %}
+
+{% if dates != blank %}
+<div class="all_updates_ledger">
+  
+  <div class="leader_update_info head">
+    <h2>Date</h2>
+    <h2>Event</h2>
+    <h2>Link</h2>
+  </div>
+
+  {% for date_item in dates %}
+    {% assign index = forloop.index0 %}
+
+    {% assign date_parts  = date_item | split: '||' %}
+    {% assign event_parts = events[index] | split: '||' %}
+    {% assign link_parts  = links[index] | split: '||' %}
+
+    <div class="leader_update_info">
+      <p class="leader_update_date">
+        {{ date_parts[1] | strip }}
+      </p>
+
+      <div class="leader_update_event">
+        {{ event_parts[1] | strip }}
+      </div>
+
+      <div class="leader_update_url">
+        <a href="{{ link_parts[1] | strip }}" target="_blank">
+          {{ link_parts[1] | strip }}
+        </a>
+      </div>
+    </div>
+
+  {% endfor %}
+
+</div>
+{% endif %}
+
                               </div>
                             </div>
                           </div>
