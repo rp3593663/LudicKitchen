@@ -644,6 +644,7 @@
                   <input name="link" value="ludic-kitchen.myshopify.com/" class="" placeholder="ludic-kitchen.myshopify.com/">
                   <div class="field-error"></div>
                   <div class="copy-link-btn" id="copyLinkBtn">
+                     {% assign share_url = shop.url %}
                       {% liquid 
                         render 'share-button', block.settings.share_label: 'Share', share_link: share_url
                       %}
