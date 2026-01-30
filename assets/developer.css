@@ -3206,6 +3206,10 @@ p#stickyText {
     text-align: center;
     margin: auto;
 }
+.ledger_fallback_content img {
+    width: 175px;
+    height: auto;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
