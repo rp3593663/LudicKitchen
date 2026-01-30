@@ -3093,6 +3093,7 @@ p#stickyText {
     letter-spacing: -0.54px;
     vertical-align: middle;
     color: var(--black);
+    margin: 0px;
 }
 .spread_the_word_inner {
     display: flex;
