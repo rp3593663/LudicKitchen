@@ -2224,7 +2224,7 @@ p#stickyText {
         display: none;
     }
     .desktop_menu_linklist {
-        padding: 4px 6px 4px 26px;
+        padding: 4px 6px 4px 15px;
         gap: 20px;
     }
     .desktop_menu_linklist a.header_account {
