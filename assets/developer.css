@@ -3187,6 +3187,9 @@ p#stickyText {
 .fallback_blur_area img {
     width: 100%;
 }
+.project_ledger_updates_fallback {
+    position: relative;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
