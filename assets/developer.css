@@ -3407,6 +3407,7 @@ p#stickyText {
         opacity: 0;
         visibility: hidden;
         transition: .3s ease;
+        display: block;
     }
     .sidebar-open .account_sidebar_overlay {
         opacity: 1;
