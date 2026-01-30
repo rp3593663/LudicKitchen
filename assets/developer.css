@@ -1516,6 +1516,17 @@ div#resend-otp {
     text-decoration: unset!important;
     cursor: pointer;
 }
+.sotp-widget .olWrapper .update-btn span {
+    font-size: 0;
+}
+.sotp-widget .olWrapper .update-btn span:after {
+    content: "Create";
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+}
 
 .sotp-widget .olWrapper .ol .update-user-box .login-header {
     margin-bottom: 32px!important;
