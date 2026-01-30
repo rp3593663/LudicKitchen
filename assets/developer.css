@@ -3304,7 +3304,9 @@ p#stickyText {
 .account_ledger .total_backers_data {
     border: 1px solid #F0F0F0;
 }
-
+.account_sidebar_overlay {
+    display: none;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
