@@ -54,6 +54,18 @@
 <div class="kretoss-section section-customer_account">
   <div class="{{ container }}" {{ max_width }}>
     <div class="account_dashboard">
+      <div class="account_sidebar_mobile">
+        <a href="{{ shop.url }}">
+          <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/logo.svg?v=1766044966" class="account_logo">
+        </a>
+        <div class="nav_toggle_open">
+          <svg width="20" height="16" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.9" y="1.56" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+            <rect x="0.9" y="5.88" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+            <rect x="0.9" y="10.21" width="14.2" height="1.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.2"></rect>
+          </svg>
+        </div>
+      </div>
       <div class="account_sidebar">
         <div class="sidebar_content">
           <div class="sidebar_header">
@@ -536,6 +548,14 @@
               </div>
             </div>
         </div>
+        {% comment %} <div class="account_faqs account_dashboard_content" data-content="faqs">
+          <div class="main_account_head">
+            <h2>FAQ</h2>
+          </div>
+          <div class="dashboard_content_area">
+            Test FAQ Data
+          </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </div>
@@ -547,6 +567,8 @@
     const navLinks = document.querySelectorAll(".nav_link");
     const contentBlocks = document.querySelectorAll(".account_content > div");
     const sidebar = document.querySelector(".account_sidebar");
+    const toggleBtnOpen = document.querySelector(".nav_toggle_open");
+    const toggleBtnClose = document.querySelector(".nav_toggle_close");
 
     function activateTab(name, pushHash = true) {
       navLinks.forEach(l => l.classList.remove("active"));
@@ -586,7 +608,24 @@
         }
 
         activateTab(tab);
+
+        // Close sidebar on mobile
+        if (window.innerWidth < 992) {
+          sidebar.classList.remove("is-open");
+          document.body.classList.remove("sidebar-open");
+        }
       });
+    });
+
+    // ===== TOGGLES =====
+    toggleBtnOpen.addEventListener("click", function () {
+      sidebar.classList.add("is-open");
+      document.body.classList.add("sidebar-open");
+    });
+
+    toggleBtnClose.addEventListener("click", function () {
+      sidebar.classList.remove("is-open");
+      document.body.classList.remove("sidebar-open");
     });
 
     // ===== HANDLE BACK/FORWARD BUTTON =====
