@@ -2045,7 +2045,6 @@ p#stickyText {
     line-height: 48px;
     letter-spacing: -1.1px;
     color: var(--black);
-    text-transform: capitalize;
 }
 .video_popup_head p {
     font-weight: 400;
