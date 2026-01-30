@@ -113,7 +113,7 @@ document.querySelectorAll('.js-indian-number').forEach(el => {
   if (isNaN(value)) return;
 
   const formatted = value.toLocaleString('en-IN');
-  el.innerHTML += ' ' + formatted;
+  el.innerHTML += '' + formatted;
 });
 
 document.addEventListener("DOMContentLoaded", function () {
