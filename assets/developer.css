@@ -3475,6 +3475,12 @@ a.fallback_action {
         border-radius: 6px;
         gap: 20px;
     }
+    .ledger_content_area .project_progress_left, 
+    .ledger_content_area .project_progress_right .total_backers_data, 
+    .ledger_content_area .tier_wised_contribution, 
+    .ledger_content_area .days-gauge {
+        border-radius: 6px;
+    }
 }
 
 
