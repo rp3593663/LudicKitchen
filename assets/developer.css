@@ -3559,6 +3559,10 @@ img.fallback_mobile_img {
     img.fallback_mobile_img {
         display: block;
     }
+    .fallback_blur_top {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
 }
 
 
