@@ -53,6 +53,8 @@
         "fullwidth": true,
         "padding": "",
         "margin": "",
+        "section_video": "shopify://files/videos/IMG_9999.MOV",
+        "section_video_poster": "shopify://shop_images/Screenshot_2026-01-30_at_4.27.07_PM.png",
         "section_video_title": "where creations unfold ata shared table",
         "section_video_text": "Curious about the whole idea of Kitchen?Get the complete picture from the ground up.",
         "section_popup_title": "where creations unfold ata shared table",
@@ -113,10 +115,12 @@
         "button_link": "shopify://products/project-01",
         "padding": "",
         "margin": "",
-        "section_video_title": "How this works",
-        "section_video_text": "Get a better understanding of how ludic kitchen works.",
+        "section_video": "shopify://files/videos/IMG_0042.MOV",
+        "section_video_poster": "shopify://shop_images/Screenshot_2026-01-30_at_4.26.16_PM.png",
+        "section_video_title": "How Kitchen works",
+        "section_video_text": "What are Clogs?Understand the intention, vision, and the story behind them.",
         "section_popup_title": "How Kitchen works",
-        "section_popup_text": "Many hands, one shared intention. Every project here follows a simple path..."
+        "section_popup_text": "Many hands, one shared intention. Every project here follows a simple, 4-folded path --pick your tier, make your contribution, join the creative process, and finally collect what you helped bring to life.\nHere's how it unfolds:"
       }
     },
     "featured_project_Kx6wiz": {
