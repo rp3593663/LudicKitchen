@@ -2240,6 +2240,7 @@ p#stickyText {
     flex-direction: column;
     gap: 46px;
     justify-content: flex-start;
+    width: 100%;
 }
 .sidebar_header a {
     display: flex;
