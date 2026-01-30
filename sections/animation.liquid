@@ -134,7 +134,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 document.fonts.ready.then(() => {
 
-  const section = document.querySelector(".section-home-animation");
+  const section = document.querySelector(".horizontal-section");
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
 
@@ -148,10 +148,11 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "-40% top",
+      start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
+      anticipatePin: 1
     }
   });
 
