@@ -694,6 +694,30 @@
 <script>
   const form = document.getElementById('profile-form');
   const btn = document.getElementById("saveProfileBtn");
+  let formDirty = false;
+
+  // Enable button
+  function enableSaveButton() {
+    if (!formDirty) {
+      formDirty = true;
+      btn.disabled = false;
+      btn.classList.add("active");
+    }
+  }
+
+  // Disable button (after successful save)
+  function disableSaveButton() {
+    formDirty = false;
+    btn.disabled = true;
+    btn.classList.remove("active");
+  }
+
+  // Listen to ALL inputs/selects
+  form.querySelectorAll("input, select, textarea").forEach(el => {
+    el.addEventListener("input", enableSaveButton);
+    el.addEventListener("change", enableSaveButton);
+  });
+
   function updateSelectState(select) {
     if (!select) return;
 
