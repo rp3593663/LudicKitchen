@@ -3492,6 +3492,11 @@ a.fallback_action {
         line-height: 14px;
         letter-spacing: -.42px;
     }
+    .ledger_update_head p {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -.36px;
+    }
 }
 
 
