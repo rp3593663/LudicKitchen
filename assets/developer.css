@@ -3074,6 +3074,12 @@ p#stickyText {
     display: grid;
     gap: 22px;
 }
+.ledger_update_area {
+    background: #FFF;
+    border: 1px solid #E8E8E8;
+    padding: 20px 30px;
+    border-radius: 12px;
+}
 .spread_the_word_inner {
     display: flex;
     border: 1px solid #E8E8E8;
