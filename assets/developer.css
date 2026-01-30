@@ -2388,6 +2388,7 @@ p#stickyText {
     top: 0;
     z-index: -1;
     left: 0;
+    border-radius: 6px;
 }
 .spread_the_word_content{
     flex:1;
