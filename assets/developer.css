@@ -3521,6 +3521,12 @@ a.fallback_action {
         line-height: 12px;
         letter-spacing: -.36px;
     }
+    .ledger_fallback_content_area {
+        max-width: 318px;
+        padding: 42px 0 24px;
+        border-radius: 8px;
+        background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/mobile_popup_grid.png?v=1769770557);
+    }
 }
 
 
