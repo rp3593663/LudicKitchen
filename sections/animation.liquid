@@ -149,7 +149,7 @@ document.fonts.ready.then(() => {
     scrollTrigger: {
       trigger: section,
       start: "top-=40% top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
+      end: () => "+=" + title.scrollWidth,
       scrub: true,
       pin: wrapper,
        pinSpacing: true,
