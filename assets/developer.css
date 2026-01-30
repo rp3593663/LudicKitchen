@@ -3090,17 +3090,6 @@ p#stickyText {
     /*---------- Edit Account Form CSS ------------*/
 
 
-    .main_account_head h2 {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 18px;
-        letter-spacing: -0.9px;
-        background-color: var(--white);
-        margin: 0;
-        padding: 20px 18px;
-        border-top: 1px solid #F0F0F0;
-        border-bottom: 1px solid #F0F0F0;
-    }
     .simply-otp-wrapper .olWrapper .ol, 
     .sotp-widget .olWrapper .ol{
         padding: 28px 28px 70px!important;
