@@ -427,7 +427,6 @@ a.go_btn {
     height: 8px;
     background: #ddd;
     border-radius: 20px;
-    overflow: hidden;
     position: relative;
     z-index: 0;
 }
