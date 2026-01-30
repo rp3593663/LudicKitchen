@@ -547,8 +547,6 @@
     const navLinks = document.querySelectorAll(".nav_link");
     const contentBlocks = document.querySelectorAll(".account_content > div");
     const sidebar = document.querySelector(".account_sidebar");
-    const toggleBtnOpen = document.querySelector(".nav_toggle_open");
-    const toggleBtnClose = document.querySelector(".nav_toggle_close");
 
     function activateTab(name, pushHash = true) {
       navLinks.forEach(l => l.classList.remove("active"));
@@ -588,24 +586,7 @@
         }
 
         activateTab(tab);
-
-        // Close sidebar on mobile
-        if (window.innerWidth < 992) {
-          sidebar.classList.remove("is-open");
-          document.body.classList.remove("sidebar-open");
-        }
       });
-    });
-
-    // ===== TOGGLES =====
-    toggleBtnOpen.addEventListener("click", function () {
-      sidebar.classList.add("is-open");
-      document.body.classList.add("sidebar-open");
-    });
-
-    toggleBtnClose.addEventListener("click", function () {
-      sidebar.classList.remove("is-open");
-      document.body.classList.remove("sidebar-open");
     });
 
     // ===== HANDLE BACK/FORWARD BUTTON =====
