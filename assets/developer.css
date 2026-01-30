@@ -3544,6 +3544,12 @@ a.fallback_action {
         max-width: 262px;
         margin: 0px auto;
     }
+    a.fallback_action {
+        width: 128px;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.36px;
+    }
 }
 
 
