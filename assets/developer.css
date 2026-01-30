@@ -2186,15 +2186,12 @@ p#stickyText {
   cursor: pointer;
   z-index: 10;
 }
-
 .flip-btn.prev {
   left: -55px;
 }
-
 .flip-btn.next {
   right: -55px;
 }
-
 .flip-btn:hover {
   background: rgba(0,0,0,0.8);
 }
