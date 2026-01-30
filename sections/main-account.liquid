@@ -403,106 +403,105 @@
                                   <p class="goal_info">Ludic has already put <span class="js-indian-number" data-value="{{ ludic_spent_amount }}">₹</span> on the table because we believed in this first.</p>
                               </div>
                           </div>
-                        <div class="project_progress_right">
-                              <div class="top_data">
+                          <div class="project_progress_right">
+                            <div class="top_data">
 
-                                  {% assign current_backers = 0 %}
-                                  {% assign target_backers = 0 %}
+                                {% assign current_backers = 0 %}
+                                {% assign target_backers = 0 %}
 
-                                  {% for variant in product.variants %}
-                                      {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
-                                      {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
+                                {% for variant in product.variants %}
+                                    {% assign variant_current = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
+                                    {% assign variant_total = variant.metafields.custom.total_tier_goal | default: 0 %}
 
-                                      {% assign current_backers = current_backers | plus: variant_current %}
-                                      {% assign target_backers = target_backers | plus: variant_total %}
-                                  {% endfor %}
+                                    {% assign current_backers = current_backers | plus: variant_current %}
+                                    {% assign target_backers = target_backers | plus: variant_total %}
+                                {% endfor %}
 
-                                  {% if target_backers > 0 %}
-                                  {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
-                                  {% else %}
-                                  {% assign backers_progress = 0 %}
-                                  {% endif %}
+                                {% if target_backers > 0 %}
+                                {% assign backers_progress = current_backers | times: 100.0 | divided_by: target_backers | round: 2 %}
+                                {% else %}
+                                {% assign backers_progress = 0 %}
+                                {% endif %}
 
-                                  {% if backers_progress > 100 %}
-                                  {% assign backers_progress = 100 %}
-                                  {% endif %}
+                                {% if backers_progress > 100 %}
+                                {% assign backers_progress = 100 %}
+                                {% endif %}
 
-                                  {% assign backers_bar_width = backers_progress %}
-                                  {% if backers_bar_width < 2 %}
-                                  {% assign backers_bar_width = 2 %}
-                                  {% endif %}
+                                {% assign backers_bar_width = backers_progress %}
+                                {% if backers_bar_width < 2 %}
+                                {% assign backers_bar_width = 2 %}
+                                {% endif %}
 
-                                  <div class="total_backers_data">
-                                  <h4>Total Backers</h4>
-                                  <div class="total_raised_progress_bar">
-                                      <div class="total_backers_track">
-                                      <div
-                                          class="total_backers_progress_fill"
-                                          style="width: {{ backers_bar_width }}%;">
-                                      </div>
-                                      </div>
-                                  </div>
-                                  <div class="total_backers_percentage">
-                                      <h3>{{ current_backers }}</h3>
-                                      <span>Backers</span>
-                                  </div>
-                                  </div>
+                                <div class="total_backers_data">
+                                <h4>Total Backers</h4>
+                                <div class="total_raised_progress_bar">
+                                    <div class="total_backers_track">
+                                    <div
+                                        class="total_backers_progress_fill"
+                                        style="width: {{ backers_bar_width }}%;">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="total_backers_percentage">
+                                    <h3>{{ current_backers }}</h3>
+                                    <span>Backers</span>
+                                </div>
+                                </div>
 
-                                  <div class="days-gauge">
-                                      {% assign total_days = 60 %}
-                                      {% assign start_date = product.metafields.custom.project_goal_start_date %}
-                                      {% assign start_ts = start_date | date: "%s" %}
-                                      {% assign today_ts = "now" | date: "%s" %}
-                                      {% assign seconds_diff = today_ts | minus: start_ts %}
-                                      {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
-                                      {% assign days_left = total_days | minus: days_passed %}
-                                      {% if days_left < 0 %}
-                                          {% assign days_left = 0 %}
-                                      {% endif %}
-                                      {% if days_left > total_days %}
-                                          {% assign days_left = total_days %}
-                                      {% endif %}
-                                      <div class="gauge-header">
-                                          <h3>Days</h3>
-                                          <span class="early-end">
-                                          Early birds ends in <strong id="leftDays" class="leftDaysText">{{ days_left }} Days</strong>
-                                          </span>
-                                      </div>
-                                      <div class="gauge-wrapper">
-                                          <svg viewBox="0 0 200 120" class="gauge-svg">
-                                          <g id="gaugeTicks" class="gaugeTicks"></g>
+                                <div class="days-gauge">
+                                    {% assign total_days = 60 %}
+                                    {% assign start_date = product.metafields.custom.project_goal_start_date %}
+                                    {% assign start_ts = start_date | date: "%s" %}
+                                    {% assign today_ts = "now" | date: "%s" %}
+                                    {% assign seconds_diff = today_ts | minus: start_ts %}
+                                    {% assign days_passed = seconds_diff | divided_by: 86400 | floor %}
+                                    {% assign days_left = total_days | minus: days_passed %}
+                                    {% if days_left < 0 %}
+                                        {% assign days_left = 0 %}
+                                    {% endif %}
+                                    {% if days_left > total_days %}
+                                        {% assign days_left = total_days %}
+                                    {% endif %}
+                                    <div class="gauge-header">
+                                        <h3>Days</h3>
+                                        <span class="early-end">
+                                        Early birds ends in <strong id="leftDays" class="leftDaysText">{{ days_left }} Days</strong>
+                                        </span>
+                                    </div>
+                                    <div class="gauge-wrapper">
+                                        <svg viewBox="0 0 200 120" class="gauge-svg">
+                                        <g id="gaugeTicks" class="gaugeTicks"></g>
 
-                                          <path
-                                              d="M30 100 A70 70 0 0 1 170 100"
-                                              fill="none"
-                                              stroke="#D9D9D9"
-                                              stroke-width="5"
-                                              pathLength="100"
-                                          />
+                                        <path
+                                            d="M30 100 A70 70 0 0 1 170 100"
+                                            fill="none"
+                                            stroke="#D9D9D9"
+                                            stroke-width="5"
+                                            pathLength="100"
+                                        />
 
-                                          <path
-                                              class="progressArc"
-                                              id="progressArc"
-                                              d="M30 100 A70 70 0 0 1 170 100"
-                                              fill="none"
-                                              stroke="#214ECF"
-                                              stroke-width="5"
-                                              stroke-linecap="round"
-                                              pathLength="100"
-                                              stroke-dasharray="0 100"
-                                          />
-                                          </svg>
+                                        <path
+                                            class="progressArc"
+                                            id="progressArc"
+                                            d="M30 100 A70 70 0 0 1 170 100"
+                                            fill="none"
+                                            stroke="#214ECF"
+                                            stroke-width="5"
+                                            stroke-linecap="round"
+                                            pathLength="100"
+                                            stroke-dasharray="0 100"
+                                        />
+                                        </svg>
 
-                                          <div class="gauge-center">
-                                          <h2 id="daysLeft" class="daysLeftNumber">{{ days_left }}</h2>
-                                          <span>Days left</span>
-                                          </div>
-                                      </div>
-                                  </div>
+                                        <div class="gauge-center">
+                                        <h2 id="daysLeft" class="daysLeftNumber">{{ days_left }}</h2>
+                                        <span>Days left</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                              </div>
-                              </div>
-
+                            </div>
+                          </div>
                       </div> 
                     {% endif %}
                   {% endfor %}
