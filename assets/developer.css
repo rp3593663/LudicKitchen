@@ -2632,6 +2632,9 @@ img.fallback_mobile_img {
     .desktop_sidebar_content{
         display: none;
     }
+    .nav_link.mobile_sidebar_content {
+        display: block!important;
+    }
     .nav_link.desktop_sidebar_content {
         display: none;
     }
