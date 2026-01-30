@@ -176,7 +176,7 @@
       assign is_not_limited_to_single_item = true
     endif
   -%}
-  {%- if is_not_limited_to_single_item
+  {% comment %} {%- if is_not_limited_to_single_item
     and media_count > 1
     and section.settings.gallery_layout contains 'thumbnail'
     or section.settings.mobile_thumbnails == 'show'
@@ -328,5 +328,5 @@
         </span>
       </button>
     </slider-component>
-  {%- endif -%}
+  {%- endif -%} {% endcomment %}
 </media-gallery>
