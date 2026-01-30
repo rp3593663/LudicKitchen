@@ -30,6 +30,13 @@ html {
 .utility-bar{
     background-color: var(--primary_color);
 }
+.template-index .announcement-bar-section ,
+.template-product  .announcement-bar-section  {
+    display: block;
+}
+.announcement-bar-section  {
+    display: none;
+}
 
 /*-----------------------------------------------*/
 /*---------- Header CSS ------------*/
