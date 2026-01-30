@@ -3344,6 +3344,8 @@ p#stickyText {
         padding: 20px 18px;
         border-top: 1px solid #F0F0F0;
         border-bottom: 1px solid #F0F0F0;
+        z-index: 1;
+        position: relative;
     }
     .dashboard_content_area {
         border: unset;
