@@ -2621,6 +2621,8 @@ img.fallback_mobile_img {
     }
     .account_dashboard {
         grid-template-columns: 1fr;
+        min-height: calc(100vh - 92px);
+        height: auto;
     }
     .account_sidebar {
         position: fixed;
