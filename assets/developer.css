@@ -2377,6 +2377,17 @@ p#stickyText {
     background: #FFF;
     background-image: url(https://ludic-kitchen.myshopify.com/cdn/shop/files/page_bg_lines.svg);
     background-size: cover;
+    z-index: 1;
+}
+.spread_the_word_inner:after {
+    background: linear-gradient(90deg, #FFFFFF 90.6%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    left: 0;
 }
 .spread_the_word_content{
     flex:1;
