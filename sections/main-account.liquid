@@ -536,11 +536,11 @@
                                 <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.
                               </div>
                               <div class="ledger_updates">
-                               {% assign dates  = product.metafields.custom.ledger_update_date.value %}
-{% assign events = product.metafields.custom.ledger_update_events.value %}
-{% assign links  = product.metafields.custom.ledger_update_link.value %}
+                              {% assign dates  = product.metafields.custom.ledger_update_date.value | default: array %}
+{% assign events = product.metafields.custom.ledger_update_events.value | default: array %}
+{% assign links  = product.metafields.custom.ledger_update_link.value | default: array %}
 
-{% if dates != blank %}
+{% if dates.size > 0 %}
 <div class="all_updates_ledger">
 
   <div class="leader_update_info head">
@@ -550,8 +550,9 @@
   </div>
 
   {% for date in dates %}
-    {% assign index = forloop.index0 %}
-    {% assign link = links[index] %}
+    {% assign i = forloop.index0 %}
+    {% assign event = events[i] | default: '' %}
+    {% assign link  = links[i] | default: blank %}
 
     <div class="leader_update_info">
       <p class="leader_update_date">
@@ -559,11 +560,11 @@
       </p>
 
       <div class="leader_update_event">
-        {{ events[index] }}
+        {{ event }}
       </div>
 
       <div class="leader_update_url">
-        {% if link != blank %}
+        {% if link != blank and link.url != blank %}
           <a href="{{ link.url }}" target="_blank" rel="noopener">
             {{ link.text | default: link.url }}
           </a>
