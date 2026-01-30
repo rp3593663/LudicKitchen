@@ -3429,11 +3429,11 @@ p#stickyText {
         display: block;
         cursor: pointer;
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
         width: 100%;
         text-align: right;
-        padding: 20px 18px;
+        padding: 16px 18px;
     }
     .sidebar_footer_links {
         align-items: center;
