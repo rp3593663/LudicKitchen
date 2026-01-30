@@ -3210,6 +3210,11 @@ p#stickyText {
     width: 175px;
     height: auto;
 }
+.ledger_fallback_data {
+    margin: 45px auto 20px;
+    display: grid;
+    gap: 8px;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
