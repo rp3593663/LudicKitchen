@@ -3439,6 +3439,7 @@ p#stickyText {
         width: 100%;
         text-align: right;
         padding: 16px 18px;
+        z-index: 2;
     }
     .sidebar_footer_links {
         align-items: center;
