@@ -538,6 +538,7 @@
                               <div class="ledger_updates">
                                 {% assign dates = product.metafields.custom.ledger_update_date.value %}
                                 {% assign events = product.metafields.custom.ledger_update_events.value %}
+                                {% assign links_text  = product.metafields.custom.ledger_update_link_text.value %}
                                 {% assign links  = product.metafields.custom.ledger_update_link.value %}
 
                                 {% if dates != blank %}
