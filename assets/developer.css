@@ -3192,6 +3192,7 @@ p#stickyText {
 }
 .ledger_fallback_content_area {
     max-width: 602px;
+    padding: 45px 10px 30px;
     width: 100%;
     margin: auto;
     background: #FFF;
