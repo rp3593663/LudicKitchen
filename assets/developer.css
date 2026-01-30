@@ -1666,9 +1666,13 @@ span.error-message-phone, .error-message {
     color: var(--primary_color);
     font-weight: 600;
 }
-.loader-innerDiv {
+.loader-innerDiv,
+.simply-otp-wrapper .olWrapper .small-otp-loader, .sotp-widget .olWrapper .small-otp-loader {
     display: none!important;
 }
+
+
+ 
 
 /*-----------------------------------------------*/
 /*---------- Edit Account Form CSS ------------*/
