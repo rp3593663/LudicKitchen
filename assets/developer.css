@@ -2227,6 +2227,10 @@ p#stickyText {
     height: 100vh;
     overflow-y: auto;
     padding: 32px 42px 32px;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: space-betw
 }
 .sidebar_content{
     display: flex;
