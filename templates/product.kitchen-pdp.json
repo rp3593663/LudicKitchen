@@ -304,7 +304,7 @@
           "settings": {
             "title": "Ludic Credit",
             "short_text": "Credit with a purchasing power equal to your contribution value.",
-            "more_text": "Redeemable against future Ludic purchases only on the website. Valid for 12 months. Credits are not refundable or transferable.",
+            "more_text": "Redeemable against future Ludic purchases only on the website. Valid for 12 months. Credits are not refundable or transferable.The credit will be accessible once the campaign close.",
             "tier_1": false,
             "tier_1_text": "",
             "tier_2": true,
