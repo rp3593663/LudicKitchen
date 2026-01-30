@@ -3438,7 +3438,8 @@ p#stickyText {
 @media(min-width: 1024px){
     .account_sidebar_mobile,
     .account_sidebar .nav_toggle_close,
-    .mobile_sidebar_content {
+    .mobile_sidebar_content,
+    .template-account .header-wrapper {
         display: none;
     }
 }
