@@ -3532,6 +3532,11 @@ a.fallback_action {
         margin: 40px auto 20px;
         gap: 6px;
     }
+    .ledger_fallback_data h4 {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -.9px;
+    }
 }
 
 
