@@ -3402,13 +3402,11 @@ p#stickyText {
         left: 0px;
         top: 0px;
         z-index: 1;
-        transform: translateY(-30px);
         opacity: 0;
         visibility: hidden;
         transition: .3s ease;
     }
     .sidebar-open .account_sidebar_overlay {
-        transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
