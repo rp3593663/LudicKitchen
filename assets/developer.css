@@ -3235,6 +3235,22 @@ p#stickyText {
     letter-spacing: -0.42px;
     vertical-align: middle;
 }
+a.fallback_action {
+    width: 136px;
+    height: 34px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.39px;
+    color: var(--white);
+    background: var(--primary_color);
+    border: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: unset;
+    border-radius: 4px;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
