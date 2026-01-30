@@ -3463,6 +3463,11 @@ a.fallback_action {
         gap: 16px;
         grid-template-columns: 1fr 1fr;
     }
+    .ledger_content_area .total_backers_percentage h3, 
+    .ledger_content_area .tier_current_reached_data h3 {
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 
 
