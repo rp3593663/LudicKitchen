@@ -312,7 +312,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {{ template.name }}">
   
     {% comment %} <div id="site-preloader">
       <div class="preloader-content">
