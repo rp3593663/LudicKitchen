@@ -3202,6 +3202,10 @@ p#stickyText {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.ledger_fallback_content {
+    text-align: center;
+    margin: auto;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
