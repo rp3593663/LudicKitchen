@@ -305,9 +305,9 @@
                 <div class="form_submit_wrap">
                   <div class="save_btn">
                     <button type="submit" id="saveProfileBtn" class="btn theme_btn">Save Profile</button>
-                    <a href="{{ routes.account_logout_url }}" class="logout_link">
+                    {% comment %} <a href="{{ routes.account_logout_url }}" class="logout_link">
                       {{ 'customer.log_out' | t }}
-                    </a>
+                    </a> {% endcomment %}
                   </div>
                   <div id="formMessage" class="form-message"></div>
                 </div>
