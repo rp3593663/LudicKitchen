@@ -3535,7 +3535,9 @@ p#stickyText {
     .account_nav .nav_link.active{
         color: var(--primary_color);
     }
-    
+    .account_nav .nav_link:last-child{
+        border-bottom: unset;
+    }
     body.sidebar-open {
         overflow: hidden;
     }
