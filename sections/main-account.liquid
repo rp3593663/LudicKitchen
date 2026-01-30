@@ -752,6 +752,7 @@
       selectedImageFile = file;
       removeImage = false; // user selected new image
 
+      enableSaveButton();
       // Preview
       const reader = new FileReader();
       reader.onload = function(e) {
@@ -766,6 +767,7 @@
       selectedImageFile = null;
       existingImageURL = "";
       removeImage = true; // 👈 mark for deletion
+      enableSaveButton();
     });
   }
   // --------------------
