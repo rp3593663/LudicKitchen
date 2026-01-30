@@ -3487,6 +3487,11 @@ a.fallback_action {
     .project_ledger_updates {
         gap: 16px;
     }
+    .ledger_update_head h5 {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -.42px;
+    }
 }
 
 
