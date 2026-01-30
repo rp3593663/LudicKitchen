@@ -542,8 +542,7 @@
     const navLinks = document.querySelectorAll(".nav_link");
     const contentBlocks = document.querySelectorAll(".account_content > div");
     const sidebar = document.querySelector(".account_sidebar");
-    const toggleBtnOpen = document.querySelector(".nav_toggle_open");
-    const toggleBtnClose = document.querySelector(".nav_toggle_close");
+    const toggleBtn = document.querySelector(".nav_toggle");
 
     function activateTab(name, pushHash = true) {
       navLinks.forEach(l => l.classList.remove("active"));
@@ -555,15 +554,14 @@
       if (activeLink) activeLink.classList.add("active");
       if (activeContent) activeContent.classList.add("active");
 
-      // Update URL hash
       if (pushHash) {
         history.replaceState(null, "", "#" + name);
       }
     }
 
-    // ====== OPEN TAB FROM URL HASH ======
-    let initialTab = window.location.hash.replace("#", "");
+    // ===== INITIAL TAB =====
     const allowedTabs = ["profile", "ledger", "refer", "contact"];
+    let initialTab = window.location.hash.replace("#", "");
 
     if (!allowedTabs.includes(initialTab)) {
       initialTab = "profile";
@@ -571,12 +569,11 @@
 
     activateTab(initialTab, false);
 
-    // ===== CLICK HANDLERS =====
+    // ===== NAV CLICK =====
     navLinks.forEach(link => {
       link.addEventListener("click", function () {
         const tab = this.dataset.nav;
 
-        // Logout bypass
         if (tab === "logout") {
           window.location.href = "/account/logout";
           return;
@@ -584,7 +581,7 @@
 
         activateTab(tab);
 
-        // Close sidebar on mobile
+        // 👇 auto close on mobile
         if (window.innerWidth < 992) {
           sidebar.classList.remove("is-open");
           document.body.classList.remove("sidebar-open");
@@ -592,27 +589,24 @@
       });
     });
 
-    // ===== TOGGLES =====
-    toggleBtnOpen.addEventListener("click", function () {
-      sidebar.classList.add("is-open");
-      document.body.classList.add("sidebar-open");
-    });
+    // ===== SINGLE TOGGLE (OPEN / CLOSE) =====
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("is-open");
+        document.body.classList.toggle("sidebar-open");
+      });
+    }
 
-    toggleBtnClose.addEventListener("click", function () {
-      sidebar.classList.remove("is-open");
-      document.body.classList.remove("sidebar-open");
-    });
-
-    // ===== HANDLE BACK/FORWARD BUTTON =====
+    // ===== BACK / FORWARD =====
     window.addEventListener("hashchange", function () {
       const tab = window.location.hash.replace("#", "");
       if (allowedTabs.includes(tab)) {
         activateTab(tab, false);
       }
     });
-
   });
 </script>
+
 
 
 <script>
