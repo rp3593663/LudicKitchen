@@ -3179,6 +3179,11 @@ p#stickyText {
 .fallback_blur_area {
     display: grid;
 }
+.fallback_blur_top {
+    display: grid;
+    grid-template-columns: 1.34fr .66fr;
+    gap: 0px;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
