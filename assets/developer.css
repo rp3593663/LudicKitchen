@@ -2844,6 +2844,11 @@ p#stickyText {
         line-height: 18px;
         letter-spacing: -.6px;
     }
+    span.tier_custom_text {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.36px;
+    }
     .tier_box {
         border-radius: 16px;
         padding: 25px;
