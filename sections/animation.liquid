@@ -144,17 +144,25 @@ document.fonts.ready.then(() => {
   gsap.set(title, { xPercent: 100 });
 
   const horizontalTween = gsap.to(title, {
-    xPercent: -60,
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      start: "-40% top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
-      scrub: true,
-      pin: wrapper,
-      anticipatePin: 1
-    }
-  });
+  xPercent: -60,
+  ease: "none",
+  scrollTrigger: {
+    trigger: section,
+
+    // 👇 START EARLY
+    start: "top+=20% bottom",
+
+    // 👇 BUT PIN ONLY AT CENTER
+    pin: wrapper,
+    pinSpacing: true,
+
+    // 👇 END BASED ON CONTENT WIDTH
+    end: () => "+=" + title.scrollWidth,
+
+    scrub: true,
+    anticipatePin: 1
+  }
+});
 
   // ✨ Letter animation (already working)
   split.chars.forEach(char => {
