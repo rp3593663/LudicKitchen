@@ -2927,6 +2927,13 @@ p#stickyText {
         font-size: 14px;
         line-height: 14px;
     }
+
+    /*---------- Account Dashboard CSS ------------*/
+
+    .ledger_content_area .project_progress_inner {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
 }
 
 
