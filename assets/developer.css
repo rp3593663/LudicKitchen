@@ -3533,6 +3533,7 @@ p#stickyText {
         padding: 18px;
     }
     .account_nav .nav_link.active{
+        display: none;
         color: var(--primary_color);
     }
     .account_nav .nav_link:last-child{
