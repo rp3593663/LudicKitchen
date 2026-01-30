@@ -3146,7 +3146,8 @@ p#stickyText {
 .account_content{
     position: relative;
 }
-.account_content .account_dashboard_content {
+.account_content .account_dashboard_content,
+.account_content .nav_toggle {
   display: none;
 }
 .account_content .account_dashboard_content.active {
