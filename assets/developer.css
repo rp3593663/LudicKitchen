@@ -3466,6 +3466,12 @@ p#stickyText {
         font-size: 18px;
         line-height: 18px;
         letter-spacing: -0.9px;
+        margin: 0;
+    }
+    .main_account_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: var(--white);
         margin: 0;
         padding: 20px 18px;
