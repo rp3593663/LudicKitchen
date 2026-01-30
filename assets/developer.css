@@ -2473,7 +2473,7 @@ p#stickyText {
         padding: 15px 18px 12px;
     }
     .progress_data {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
     .progress_data > * {
         gap: 6px;
