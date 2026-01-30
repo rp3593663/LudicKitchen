@@ -3516,6 +3516,11 @@ a.fallback_action {
     .leader_update_event {
         padding-right: 15px;
     }
+    .leader_update_info.head h2 {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.36px;
+    }
 }
 
 
