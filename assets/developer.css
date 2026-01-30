@@ -3219,6 +3219,16 @@ p#stickyText {
     margin: 45px auto 20px;
     display: grid;
     gap: 8px;
+    position: relative;
+}
+.ledger_fallback_data:before {
+    content: "";
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 41.6%, #ffffff 100%);
+    width: 100%;
+    height: 225px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
 .ledger_fallback_data h4 {
     margin: 0px;
