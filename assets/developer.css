@@ -3070,8 +3070,9 @@ p#stickyText {
 .ledger_content_area .raised_progress_track {
     height: 12px;
 }
-.project_progress_inner + .project_progress_inner {
-    display: none;
+.project_ledger_updates {
+    display: grid;
+    gap: 22px;
 }
 .spread_the_word_inner {
     display: flex;
