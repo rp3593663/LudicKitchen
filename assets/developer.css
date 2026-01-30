@@ -3481,6 +3481,9 @@ a.fallback_action {
     .ledger_content_area .days-gauge {
         border-radius: 6px;
     }
+    .project_ledger_updates {
+        gap: 16px;
+    }
 }
 
 
