@@ -3457,7 +3457,7 @@ p#stickyText {
         top: 0;
         width: 100%;
         text-align: right;
-        padding: 16px 18px;
+        padding: 14px 18px;
         z-index: 2;
     }
     .sidebar_footer_links {
