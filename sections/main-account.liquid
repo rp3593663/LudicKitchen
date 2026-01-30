@@ -67,7 +67,6 @@
             </div>
           </div>
           <div class="sidebar_navigation">
-            <div class="mobile_sidebar_content sidebar_borders"> </div>
             <div class="account_nav">
               <div class="nav_link" data-nav="profile">
                 Account Details
@@ -85,28 +84,6 @@
                 Log out
               </div>
             </div>
-            <div class="mobile_sidebar_content sidebar_borders"> </div>
-            <div class="account_nav mobile_sidebar_content">
-              <a class="nav_link" href="#">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.3335 14C13.3335 13.0696 13.3335 12.6045 13.2187 12.2259C12.9602 11.3737 12.2932 10.7067 11.4409 10.4481C11.0624 10.3333 10.5973 10.3333 9.66687 10.3333H6.33354C5.40316 10.3333 4.93797 10.3333 4.55944 10.4481C3.70717 10.7067 3.04023 11.3737 2.7817 12.2259C2.66687 12.6045 2.66687 13.0696 2.66687 14M11.0002 5C11.0002 6.65685 9.65707 8 8.0002 8C6.34335 8 5.0002 6.65685 5.0002 5C5.0002 3.34315 6.34335 2 8.0002 2C9.65707 2 11.0002 3.34315 11.0002 5Z" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Instagram
-              </a>
-              <a class="nav_link" href="#">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <rect width="24" height="24" fill="url(#pattern0_522_20949)"/>
-                  <defs>
-                  <pattern id="pattern0_522_20949" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use xlink:href="#image0_522_20949" transform="scale(0.0104167)"/>
-                  </pattern>
-                  <image id="image0_522_20949" width="96" height="96" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
-                  </defs>
-                </svg>
-                Youtube
-              </a>
-            </div>
-            <div class="mobile_sidebar_content sidebar_borders"> </div>
           </div>
         </div>
         <div class="sidebar_footer mobile_sidebar_content">
