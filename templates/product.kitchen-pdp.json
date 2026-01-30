@@ -73,13 +73,7 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": "28px 0px 98px",
-        "section_video": "shopify://files/videos/video1_de58bb4e-f435-4d18-9e33-f47195f80d90.mp4",
-        "section_video_poster": "shopify://shop_images/video1_preview.jpg",
-        "section_video_title": "What is Early Bird?",
-        "section_video_text": "Early Bird is exactly how it sounds.Get to know the detailed whats and hows.",
-        "section_popup_title": "What is Early Bird?",
-        "section_popup_text": "Just for the early believers and extra curious beings, we open an Early Bird Window. Take a seat at reduced price with no change in your Kitchen experience."
+        "margin": "28px 0px 98px"
       }
     },
     "multicolumn_hdVUc3": {
@@ -137,7 +131,13 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "section_video": "shopify://files/videos/video1_de58bb4e-f435-4d18-9e33-f47195f80d90.mp4",
+        "section_video_poster": "shopify://shop_images/video1_preview.jpg",
+        "section_video_title": "How this works",
+        "section_video_text": "Get a better understanding of how ludic kitchen works.",
+        "section_popup_title": "How Kitchen works",
+        "section_popup_text": "Many hands, one shared intention. Every project here follows a simple path..."
       }
     },
     "variant_table_iPnWKa": {
