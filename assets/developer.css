@@ -1981,7 +1981,7 @@ input.edit_account_input.disabled {
 .sticky-text {
     display: grid;
     gap: 8px;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 h5#stickyTitle {
     margin: 0px;
