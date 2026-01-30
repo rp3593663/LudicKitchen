@@ -344,19 +344,33 @@
                 </div>
                 <div class="form_field_box">
                   <div class="field_head">
-                    <h4>Footwear Size</h4>
-                    <p>Measure your true fit for right comfort and wear.</p>
+                    <h4>Size and Fit</h4>
+                    <p>Enter your true sizes for perfect wear.</p>
                   </div>
-                  <div class="fields">
+                  <div class="fields size_fields">
                     <div class="edit_account_field">
+                      <label>Footwear size</label>
                       <select name="shoe_size" class="edit_account_input">
-                        <option value="">Select Shoe Size</option>
+                        <option value="">Select Footwear Size</option>
                         {% for i in (3..12) %}
                           {% assign size_value = "UK " | append: i %}
                           <option value="{{ size_value }}" {% if customer.metafields.custom.shoe_size == size_value %}selected{% endif %}>
                             {{ size_value }}
                           </option>
                         {% endfor %}
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="edit_account_field">
+                      <label>Apparel size</label>
+                      <select name="shoe_size" class="edit_account_input">
+                        <option value="">Select Appereal Size</option>
+                        <option value="XS" {% if customer.metafields.custom.apparel_size == 'XS' %}selected{% endif %}>XS</option>
+                        <option value="S" {% if customer.metafields.custom.apparel_size == 'S' %}selected{% endif %}>S</option>
+                        <option value="M" {% if customer.metafields.custom.apparel_size == 'M' %}selected{% endif %}>M</option>
+                        <option value="L" {% if customer.metafields.custom.apparel_size == 'L' %}selected{% endif %}>L</option>
+                        <option value="XL" {% if customer.metafields.custom.apparel_size == 'XL' %}selected{% endif %}>XL</option>
+                        <option value="XXL" {% if customer.metafields.custom.apparel_size == 'XXL' %}selected{% endif %}>XXL</option>
                       </select>
                       <div class="field-error"></div>
                     </div>
