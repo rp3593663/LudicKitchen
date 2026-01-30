@@ -3480,7 +3480,7 @@ p#stickyText {
     }
     .account_sidebar {
         position: fixed;
-        top: 152px;
+        top: 160px;
         left: 0;
         width: 100%;
         max-width: 400px;
