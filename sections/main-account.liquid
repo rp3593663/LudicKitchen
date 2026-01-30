@@ -536,9 +536,9 @@
                                 <p>Changing your name below will update how your name appears when sharing a Cap, and in your profile.
                               </div>
                               <div class="ledger_updates">
-                               {% assign dates  = product.metafields.custom.ledger_update_date %}
-{% assign events = product.metafields.custom.ledger_update_events %}
-{% assign links  = product.metafields.custom.ledger_update_link %}
+                               {% assign dates  = product.metafields.custom.ledger_update_date.value %}
+{% assign events = product.metafields.custom.ledger_update_events.value %}
+{% assign links  = product.metafields.custom.ledger_update_link.value %}
 
 {% if dates != blank %}
 <div class="all_updates_ledger">
