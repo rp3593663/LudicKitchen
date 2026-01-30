@@ -3225,6 +3225,15 @@ p#stickyText {
     vertical-align: middle;
     color: var(--primary_color);
 }
+.ledger_fallback_data p {
+    color: #A4A1A1;
+    margin: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.42px;
+    vertical-align: middle;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
