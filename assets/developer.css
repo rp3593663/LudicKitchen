@@ -3143,6 +3143,9 @@ p#stickyText {
 /*---------- Account Dashboard CSS ------------*/
 /*-----------------------------------------------*/
 
+.account_content{
+    position: relative;
+}
 .account_content .account_dashboard_content {
   display: none;
 }
