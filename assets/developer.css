@@ -2233,7 +2233,7 @@ p#stickyText {
     justify-content: space-between;
 }
 .nav_link.mobile_sidebar_content {
-    display: none;
+    display: none!important;
 }
 .sidebar_content{
     display: flex;
