@@ -3452,6 +3452,13 @@ a.fallback_action {
     .ledger_content_area .total_raised_percentage {
         margin: 18px 0;
     }
+    p.goal_info {
+        padding-left: 12px;
+    }
+    p.goal_info:before {
+        width: 7px;
+        height: 7px;
+    }
 }
 
 
