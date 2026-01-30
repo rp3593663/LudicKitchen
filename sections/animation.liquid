@@ -147,8 +147,8 @@ document.fonts.ready.then(() => {
     xPercent: -60,
     ease: "none",
     scrollTrigger: {
-      trigger: section + 40,
-      start: "-40% top",
+      trigger: section,
+      start: "top+=40 top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
       pin: wrapper,
