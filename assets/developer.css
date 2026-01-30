@@ -3082,6 +3082,10 @@ p#stickyText {
     display: grid;
     gap: 26px;
 }
+.ledger_update_head {
+    display: grid;
+    gap: 8px;
+}
 .spread_the_word_inner {
     display: flex;
     border: 1px solid #E8E8E8;
