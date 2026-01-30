@@ -3127,6 +3127,7 @@ p#stickyText {
     letter-spacing: -0.39px;
     vertical-align: middle;
     color: #838383;
+    text-decoration: unset;
 }
 .spread_the_word_inner {
     display: flex;
