@@ -3184,6 +3184,9 @@ p#stickyText {
     grid-template-columns: 1.34fr .66fr;
     gap: 0px;
 }
+.fallback_blur_area img {
+    width: 100%;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
