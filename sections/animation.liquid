@@ -148,7 +148,7 @@ document.fonts.ready.then(() => {
     xPercent: -60,
     ease: "none",
     scrollTrigger: {
-      trigger: prevSection,
+      trigger: section,
       start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
@@ -164,7 +164,7 @@ document.fonts.ready.then(() => {
       rotation: (Math.random() - 0.5) * 60,
       ease: "elastic.out(1.2, 1)",
       scrollTrigger: {
-        trigger: char,
+        trigger: prevSection,
         containerAnimation: horizontalTween,
         start: "left 80%",
         end: "left 20%",
