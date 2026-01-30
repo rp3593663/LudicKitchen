@@ -2934,6 +2934,9 @@ p#stickyText {
         grid-template-columns: 1fr;
         gap: 6px;
     }
+    .ledger_content_area .project_progress_left {
+        padding: 16px;
+    }
 }
 
 
