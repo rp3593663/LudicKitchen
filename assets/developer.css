@@ -3176,6 +3176,9 @@ p#stickyText {
 .account_sidebar_overlay {
     display: none;
 }
+.fallback_blur_area {
+    display: grid;
+}
 
 @media(min-width: 1024px){
     .account_sidebar_mobile,
