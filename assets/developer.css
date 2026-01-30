@@ -2361,6 +2361,12 @@ p#stickyText {
     vertical-align: middle;
     color: #838383;
     text-decoration: unset;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    white-space: normal;
+    display: block;
+    max-width: 100%;
 }
 .spread_the_word_inner {
     display: flex;
@@ -3496,6 +3502,11 @@ a.fallback_action {
         font-size: 12px;
         line-height: 16px;
         letter-spacing: -.36px;
+    }
+    .leader_update_info * {
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: -.3px;
     }
 }
 
