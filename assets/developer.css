@@ -2943,6 +2943,9 @@ p#stickyText {
     .ledger_content_area .raised_progress_track {
         height: 8px;
     }
+    .ledger_content_area .total_raised_percentage {
+        margin: 18px 0;
+    }
 }
 
 
