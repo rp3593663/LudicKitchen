@@ -3325,11 +3325,12 @@ p#stickyText {
         justify-content: space-between;
     }
     .main_account_head h2 {
-        font-weight: 650;
-        font-size: 18px;
+        font-weight: 500;
+        font-size: 16px;
         line-height: 18px;
-        letter-spacing: -0.9px;
+        letter-spacing: -.48px;
         margin: 0;
+        color: var(--black);
     }
     .main_account_head {
         display: flex;
