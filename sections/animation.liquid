@@ -144,32 +144,32 @@ document.fonts.ready.then(() => {
   gsap.set(title, { xPercent: 100 });
 
   const horizontalTween = gsap.to(title, {
-    xPercent: -60,
-    ease: "none",
-    scrollTrigger: {
-      trigger: section,
-      start: "top top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
-      scrub: true,
-      pin: wrapper,
-      anticipatePin: 1
-    }
-  });
+  xPercent: -60,
+  ease: "none",
+  scrollTrigger: {
+    trigger: section,
+    start: "top top",
+    end: () => "+=" + (window.innerWidth + title.scrollWidth),
+    scrub: true,
+    pin: wrapper,
+    anticipatePin: 1
+  }
+});
 
   // ✨ Letter animation (already working)
   split.chars.forEach(char => {
-    gsap.from(char, {
-      yPercent: (Math.random() - 0.5) * 300,
-      rotation: (Math.random() - 0.5) * 60,
-      ease: "elastic.out(1.2, 1)",
-      scrollTrigger: {
-        trigger: section,
-        containerAnimation: horizontalTween,
-        start: "left 80%",
-        end: "left 20%",
-        scrub: true
-      }
-    });
+    gsap.from(split.chars, {
+  yPercent: () => (Math.random() - 0.5) * 300,
+  rotation: () => (Math.random() - 0.5) * 60,
+  ease: "elastic.out(1.2, 1)",
+  stagger: 0.02,
+  scrollTrigger: {
+    trigger: section,
+    start: "top 60%",   // 👈 section half in viewport
+    end: "top 20%",
+    scrub: true
+  }
+});
   });
 
   // 👉 ARROW SVG DRAW ANIMATION
