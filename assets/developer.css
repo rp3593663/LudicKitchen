@@ -2940,6 +2940,9 @@ p#stickyText {
     .ledger_content_area .progress_data > * {
         gap: 6px;
     }
+    .ledger_content_area .raised_progress_track {
+        height: 8px;
+    }
 }
 
 
