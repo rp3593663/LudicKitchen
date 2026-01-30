@@ -3324,6 +3324,9 @@ p#stickyText {
         align-items: center;
         justify-content: space-between;
     }
+    .sidebar_header {
+        display: none;
+    }
     .main_account_head h2 {
         font-weight: 500;
         font-size: 16px;
