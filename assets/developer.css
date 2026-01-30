@@ -3513,6 +3513,9 @@ a.fallback_action {
         gap: 8px;
         padding: 12px 4px;
     }
+    .leader_update_event {
+        padding-right: 15px;
+    }
 }
 
 
