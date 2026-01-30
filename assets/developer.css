@@ -3508,6 +3508,11 @@ a.fallback_action {
         line-height: 14px;
         letter-spacing: -.3px;
     }
+    .leader_update_info {
+        grid-template-columns: .6fr 1fr .4fr;
+        gap: 8px;
+        padding: 12px 4px;
+    }
 }
 
 
