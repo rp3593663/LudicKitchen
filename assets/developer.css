@@ -3468,9 +3468,8 @@ a.fallback_action {
         font-size: 24px;
         line-height: 24px;
     }
-   .ledger_content_area  .gauge-svg {
-        width: 110px;
-        height: 62px;
+    .ledger_content_area .gauge-wrapper {
+        margin: 0 auto auto;
     }
 }
 
