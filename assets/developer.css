@@ -2474,10 +2474,10 @@ p#stickyText {
         padding: 20px 18px;
     }
     .featured_project_container h3.project_name {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 30px;
         letter-spacing: -1px;
-        max-width: 105px;
+        max-width: 135px;
     }
     .project_data_container {
         margin-top: 14px;
