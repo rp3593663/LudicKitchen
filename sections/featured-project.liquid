@@ -112,13 +112,13 @@
                         {% endif %}
 
                         {% assign goal = goal_amount | times: 1.0 %}
-                        {% if goal >= 10000000 %}
+                        {% comment %} {% if goal >= 10000000 %}
                             {% assign goal_display = goal | divided_by: 10000000.0 | round: 2 | append: 'Cr' %}
                         {% elsif goal >= 100000 %}
                             {% assign goal_display = goal | divided_by: 100000.0 | round: 1 | append: 'L' %}
                         {% else %}
                             {% assign goal_display = goal | money_without_currency %}
-                        {% endif %}
+                        {% endif %} {% endcomment %}
 
                         {% comment %} <div class="raised_goal">
                             ₹ {{ raised_amount | times: 100 | money_without_currency }}
