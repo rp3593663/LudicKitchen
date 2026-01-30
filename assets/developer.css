@@ -2711,12 +2711,16 @@ p#stickyText {
         letter-spacing: -.6px;
     }
 
-
     .tier_benefits_inner {
         background: unset;
         border-radius: 0px;
         padding: 0px;
     }
+
+    .tier_benefits_head {
+        display: none;
+    }
+
     .tier_benefits_head h2,
     .features_info .description {
         display: none;
