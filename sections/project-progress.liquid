@@ -50,15 +50,7 @@
 
 {%- endstyle -%}
 
-<div class="kretoss-section section-project_progress_data" 
-  {% if section.settings.section_video != blank %}
-    data-video-src="{{ section.settings.section_video.sources[0].url }}"
-    data-thumb="{{ section.settings.section_video_poster | image_url }}"
-    data-title="{{ section.settings.section_video_title | escape }}"
-    data-text="{{ section.settings.section_video_text }}"
-    data-popup-title="{{ section.settings.section_popup_title | escape }}"
-    data-popup-text="{{ section.settings.section_popup_text | replace: '"', '&quot;' }}"
-  {% endif %}>
+<div class="kretoss-section section-project_progress_data" >
 	<div class="{{ container }}" {{ max_width }}>
         <div class="project_progress_inner">
             <div class="project_progress_left">
@@ -319,40 +311,6 @@
       "label": "Margin",
       "placeholder": "0px 0px 0px 0px",
       "info":"Screen: desktop | 1200px | 991px | 767px"
-    },
-    {
-      "type": "video",
-      "id": "section_video",
-      "label": "Section Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "section_video_poster",
-      "label": "Video Poster / Thumbnail"
-    },
-    {
-      "type": "text",
-      "id": "section_video_title",
-      "label": "Sticky Video Title",
-      "default": "How this works"
-    },
-    {
-      "type": "text",
-      "id": "section_video_text",
-      "label": "Sticky Video Text",
-      "default": "Get a better understanding of how ludic kitchen works."
-    },
-    {
-        "type": "text",
-        "id": "section_popup_title",
-        "label": "Popup Title",
-        "default": "How Kitchen works"
-    },
-    {
-        "type": "textarea",
-        "id": "section_popup_text",
-        "label": "Popup Text",
-        "default": "Many hands, one shared intention. Every project here follows a simple path..."
     }
   ],
 	"presets": [
