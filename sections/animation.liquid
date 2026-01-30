@@ -134,7 +134,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 document.fonts.ready.then(() => {
 
-  const prevSection = document.querySelector(".section-hero");
   const section = document.querySelector(".horizontal-section");
   const wrapper = document.querySelector(".horizontal-wrapper");
   const title   = document.querySelector(".horizontal-title");
@@ -148,7 +147,7 @@ document.fonts.ready.then(() => {
     xPercent: -60,
     ease: "none",
     scrollTrigger: {
-      trigger: prevSection,
+      trigger: section,
       start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth),
       scrub: true,
