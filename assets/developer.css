@@ -3413,9 +3413,6 @@ img.fallback_mobile_img {
         letter-spacing: -.42px!important;
         margin-left: 16px!important;
     }
-    .profile_edit_form .form-message {
-        width: fit-content;
-    }
 
     .form_submit_wrap {
         gap: 15px;
