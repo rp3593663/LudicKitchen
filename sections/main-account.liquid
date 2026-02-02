@@ -978,7 +978,7 @@
       const result = await res.json();
       if (!res.ok) throw result;
       // ✅ SUCCESS
-      msgBox.innerHTML = `${successIconSVG}<span>Profile updated successfully.</span>`;
+      msgBox.innerHTML = `${successIconSVG}<span>Your changes have been saved.</span>`;
       msgBox.className = "form-message success";
       msgBox.style.display = "flex";
       disableSaveButton();
