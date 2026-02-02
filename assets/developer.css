@@ -3420,6 +3420,10 @@ img.fallback_mobile_img {
         gap: 15px;
         flex-wrap: wrap;
     }
+    .profile_edit_form .form-message {
+        font-size: 12px;
+        line-height: 10px;
+    }
 
 
     /*---------- Video Popup CSS ------------*/
