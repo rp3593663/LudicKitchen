@@ -296,6 +296,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+<script>
+  window.addEventListener("pageshow", function (event) {
+    // Safari back/forward cache restore
+    if (event.persisted) {
+      document.querySelectorAll(".js-tier-checkout").forEach(button => {
+        const btnText = button.querySelector(".btn-text");
+        const btnLoader = button.querySelector(".btn-loader");
+
+        // Reset UI state
+        button.disabled = false;
+        btnLoader.style.display = "none";
+        btnText.style.display = "inline-block";
+      });
+    }
+  });
+</script>
 
 
 
