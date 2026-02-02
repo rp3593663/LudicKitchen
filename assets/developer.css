@@ -2457,6 +2457,9 @@ p#stickyText {
     flex: 1;
     text-align: end;
 }
+.chefs-logo img {
+    margin-right: 60px;
+}
 .spread_logo img{
     width: 100%;
     max-width: 200px;
