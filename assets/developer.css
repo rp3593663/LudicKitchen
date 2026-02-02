@@ -3588,6 +3588,7 @@ img.fallback_mobile_img {
         flex-direction: column-reverse;
         gap:20px;
         padding: 18px;
+        z-index:0;
     }
     .chef_content span {
         font-size: 10px;
