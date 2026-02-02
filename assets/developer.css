@@ -3571,8 +3571,7 @@ img.fallback_mobile_img {
         background-repeat: repeat;
         background-position: bottom;
     }
-    .spread_the_word_inner:after,
-    .chef_inner:after {
+    .spread_the_word_inner:after {
         background: linear-gradient(180deg, rgb(255 255 255 / 62%) 80%, #ffffff0a 100%);
         content: "";
         position: absolute;
@@ -3583,6 +3582,20 @@ img.fallback_mobile_img {
         z-index: -1;
         left: 0;
         border-radius: 6px;
+    }
+    .chef_inner:after {
+        background: linear-gradient(
+    0deg,  rgb(255 255 255 / 62%) 80%, #ffffff0a);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 58%;
+        top: 100%;
+        bottom: 0;
+        z-index: -1;
+        left: 0;
+        border-radius: 6px;
+        transform: translateY(-100%);
     }
     .spread_the_word_content,
     .spread_logo {
