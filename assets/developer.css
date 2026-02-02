@@ -3586,7 +3586,9 @@ img.fallback_mobile_img {
     .chef_inner {
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        gap:20px;
     }
+    
 
     /*---------- Account Dashboard CSS ------------*/
 
