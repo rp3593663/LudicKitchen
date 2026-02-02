@@ -3155,8 +3155,8 @@ img.fallback_mobile_img {
     .total_raised_percentage span,
     .total_backers_percentage span,
     .tier_current_reached_data span {
-        font-size: 8px;
-        line-height: 8px;
+        font-size: 10px;
+        line-height: 10px;
         letter-spacing: -.24px;
     }
     p.goal_info {
