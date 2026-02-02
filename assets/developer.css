@@ -3603,6 +3603,9 @@ img.fallback_mobile_img {
         font-size: 10px!important;
         line-height: 14px!important;
     }
+    .chef_content .field_head {
+        margin-bottom: 0;
+    }
 
     /*---------- Account Dashboard CSS ------------*/
 
