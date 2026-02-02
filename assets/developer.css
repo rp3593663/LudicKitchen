@@ -2467,6 +2467,10 @@ p#stickyText {
     margin-bottom: 12px;
     letter-spacing: -.42px;
 }
+.chef_content h4 {
+    font-size: 32px;
+    line-height: 32px;
+}
 .spread_logo img{
     width: 100%;
     max-width: 200px;
