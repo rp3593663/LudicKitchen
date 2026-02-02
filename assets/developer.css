@@ -2447,11 +2447,15 @@ p#stickyText {
 .spread_the_word_content input{
     pointer-events: none;
 }
-.spread_logo,
-.chefs-logo {
+.spread_logo {
     width: 100%;
     flex: 1;
     text-align: center;
+}
+.chefs-logo {
+    width: 100%;
+    flex: 1;
+    text-align: end;
 }
 .spread_logo img{
     width: 100%;
