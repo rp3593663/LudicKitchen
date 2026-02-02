@@ -2440,7 +2440,8 @@ p#stickyText {
     left: 0;
     border-radius: 6px;
 }
-.spread_the_word_content{
+.spread_the_word_content,
+.sous-chef-content{
     flex:1;
 }
 .spread_the_word_content input{
