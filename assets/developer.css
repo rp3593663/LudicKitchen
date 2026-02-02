@@ -2310,7 +2310,8 @@ p#stickyText {
 }
 .ledger_content_area {
     display: grid;
-    gap: 40px;
+    /* gap: 40px; */
+    gap: 25px;
 }
 .ledger_content_area .project_progress_left,
 .ledger_content_area .project_progress_right .total_backers_data, 
