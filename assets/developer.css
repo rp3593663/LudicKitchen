@@ -3598,6 +3598,10 @@ img.fallback_mobile_img {
         line-height: 18px!important;
         margin-bottom: 9px!important;
     }
+    .chef_content p {
+        font-size: 10px!important;
+        line-height: 14px!important;
+    }
 
     /*---------- Account Dashboard CSS ------------*/
 
