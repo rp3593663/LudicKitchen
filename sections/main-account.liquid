@@ -700,6 +700,17 @@
     const contentBlocks = document.querySelectorAll(".account_content .account_dashboard_content");
     const sidebar = document.querySelector(".account_sidebar");
     const toggleBtn = document.querySelector(".nav_toggle");
+    const overlay = document.querySelector(".account_sidebar_overlay");
+
+    if (overlay) {
+      overlay.addEventListener("click", function () {
+        // ✅ mobile only
+        if (window.innerWidth < 992) {
+          sidebar.classList.remove("is-open");
+          document.body.classList.remove("sidebar-open");
+        }
+      });
+    }
 
     function activateTab(name, pushHash = true) {
       navLinks.forEach(l => l.classList.remove("active"));
