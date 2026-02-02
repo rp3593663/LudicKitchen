@@ -2452,30 +2452,6 @@ p#stickyText {
     flex: 1;
     text-align: center;
 }
-.chefs-logo {
-    width: 100%;
-    flex: 1;
-    text-align: end;
-}
-.chefs-logo img {
-    margin-right: 60px;
-}
-.chef_content span {
-    font-size: 12px;
-    line-height: 12px;
-    color: #838383;
-    margin-bottom: 12px;
-    letter-spacing: -.42px;
-}
-.chef_content h4 {
-    font-size: 32px;
-    line-height: 32px;
-}
-.chef_content h4 {
-    font-size: 32px !important;
-    line-height: 32px !important;
-    margin-bottom: 16px !important;
-}
 .spread_logo img{
     width: 100%;
     max-width: 200px;
@@ -2599,6 +2575,37 @@ a.fallback_action {
 }
 img.fallback_mobile_img {
     display: none;
+}
+
+
+.chefs-logo {
+    width: 100%;
+    flex: 1;
+    text-align: end;
+}
+.chefs-logo img {
+    margin-right: 60px;
+}
+.chef_content span {
+    font-size: 12px;
+    line-height: 12px;
+    color: #838383;
+    margin-bottom: 12px;
+    letter-spacing: -.42px;
+}
+.chef_content h4 {
+    font-size: 32px;
+    line-height: 32px;
+}
+.chef_content h4 {
+    font-size: 32px !important;
+    line-height: 32px !important;
+    margin-bottom: 16px !important;
+}
+.chef_content p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    text-align: justify;
 }
 
 
