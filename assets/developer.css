@@ -2578,6 +2578,10 @@ img.fallback_mobile_img {
 }
 
 
+
+.spread_the_word_inner, .chef_inner {
+    align-items: center;
+}
 .chefs-logo {
     width: 100%;
     flex: 1;
