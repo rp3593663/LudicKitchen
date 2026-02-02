@@ -2429,7 +2429,7 @@ p#stickyText {
     z-index: 1;
 }
 .spread_the_word_inner:after,
-.sous-chef_inner:after {
+.chef_inner:after {
     background: linear-gradient(90deg, #FFFFFF 90.6%, rgba(255, 255, 255, 0) 100%);
     content: "";
     position: absolute;
