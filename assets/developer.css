@@ -1742,9 +1742,7 @@ a.logout_link {
     border-radius: 6px;
 }
 .profile_edit_form .form-message.success {
-    background: #d0ecd0;
-    border: solid 1px #008000;
-    color: #008000;
+    color: #008200;
 }
 .profile_edit_form .form-message.error {
     background: #ecd0d0;
