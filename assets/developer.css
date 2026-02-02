@@ -1989,7 +1989,7 @@ input.edit_account_input.disabled {
     position: relative;
     border-radius: 6px 0px 0px 6px;
     overflow: hidden;
-    /* min-width: 150px; */
+    min-width: 150px;
     max-width: 150px;
     height: 96px;
 }
