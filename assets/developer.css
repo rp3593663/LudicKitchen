@@ -32,7 +32,7 @@ html {
 }
 .announcement-bar__message.h5 {
     font-size: 12px;
-    line-height: 12px;
+    line-height: 18px;
     letter-spacing: -0.42px;
     font-weight: 500;
 }
