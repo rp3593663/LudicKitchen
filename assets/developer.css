@@ -2612,6 +2612,10 @@ img.fallback_mobile_img {
     text-align: justify;
 }
 
+.chef_content .field_head {
+    margin-bottom: 0;
+}
+
 
 @media(min-width: 768px){
     .tier_benefits_head img,
