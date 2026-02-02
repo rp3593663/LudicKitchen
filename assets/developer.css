@@ -2471,6 +2471,11 @@ p#stickyText {
     font-size: 32px;
     line-height: 32px;
 }
+.chef_content h4 {
+    font-size: 32px !important;
+    line-height: 32px !important;
+    margin-bottom: 16px !important;
+}
 .spread_logo img{
     width: 100%;
     max-width: 200px;
