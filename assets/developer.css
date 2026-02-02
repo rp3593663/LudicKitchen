@@ -2855,6 +2855,9 @@ img.fallback_mobile_img {
 
 @media(max-width: 767px){
 
+    .announcement-bar__message.h5 {
+        font-size: 10px;
+    }
 
     /*---------- Header Section ------------*/
     
