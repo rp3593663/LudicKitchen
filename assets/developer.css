@@ -3657,6 +3657,8 @@ img.fallback_mobile_img {
     p.goal_info:before {
         width: 7px;
         height: 7px;
+        top: 20%;
+        transform: translateY(-20%);
     }
     .ledger_content_area .top_data {
         grid-template-columns: 1fr 1fr;
