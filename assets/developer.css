@@ -2580,8 +2580,11 @@ img.fallback_mobile_img {
 
 
 
-.spread_the_word_inner, .chef_inner {
+.chef_inner {
     align-items: center;
+}
+.chef_inner {
+    border-radius: 12px !important;
 }
 .chefs-logo {
     width: 100%;
