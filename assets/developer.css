@@ -3588,7 +3588,11 @@ img.fallback_mobile_img {
         flex-direction: column-reverse;
         gap:20px;
     }
-    
+    .chef_content span {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 7px;
+    }
 
     /*---------- Account Dashboard CSS ------------*/
 
