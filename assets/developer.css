@@ -3583,6 +3583,11 @@ img.fallback_mobile_img {
         line-height: 14px;
     }
 
+    .chef_inner {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
     /*---------- Account Dashboard CSS ------------*/
 
     .ledger_content_area .project_progress_inner {
