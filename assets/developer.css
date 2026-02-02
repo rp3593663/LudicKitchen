@@ -31,8 +31,8 @@ html {
     background-color: var(--primary_color);
 }
 .announcement-bar__message.h5 {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 12px;
     letter-spacing: -0.42px;
     font-weight: 500;
 }
