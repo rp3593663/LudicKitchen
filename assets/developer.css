@@ -3462,6 +3462,9 @@ img.fallback_mobile_img {
         font-size: 12px;
         line-height: 10px;
     }
+    .ledger_content_area {
+        gap: 15px;
+    }
 
 
     /*---------- Video Popup CSS ------------*/
