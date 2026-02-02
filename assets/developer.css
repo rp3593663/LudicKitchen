@@ -2460,6 +2460,13 @@ p#stickyText {
 .chefs-logo img {
     margin-right: 60px;
 }
+.chef_content span {
+    font-size: 12px;
+    line-height: 12px;
+    color: #838383;
+    margin-bottom: 12px;
+    letter-spacing: -.42px;
+}
 .spread_logo img{
     width: 100%;
     max-width: 200px;
