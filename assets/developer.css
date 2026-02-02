@@ -3417,6 +3417,12 @@ img.fallback_mobile_img {
         width: fit-content;
     }
 
+    .form_submit_wrap {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+
     /*---------- Video Popup CSS ------------*/
 
     .sticky-video {
