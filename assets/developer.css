@@ -2583,7 +2583,8 @@ img.fallback_mobile_img {
 .chef_inner {
     align-items: center;
 }
-.chef_inner {
+.chef_inner ,
+.chef_inner:after{
     border-radius: 12px !important;
 }
 .chefs-logo {
