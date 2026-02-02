@@ -1763,7 +1763,6 @@ a.logout_link {
     margin: 0;
     align-items: center;
     gap: 6px;
-    justify-content: center;
 }
 .profile_edit_form .field-error {
     color: #ff0000;
