@@ -2416,7 +2416,8 @@ p#stickyText {
     display: block;
     max-width: 100%;
 }
-.spread_the_word_inner {
+.spread_the_word_inner,
+.sous-chef_inner {
     position: relative;
     display: flex;
     border: 1px solid #E8E8E8;
