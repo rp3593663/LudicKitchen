@@ -64,7 +64,10 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
-      {%- if product.selected_or_first_available_variant.featured_media != null -%}
+      {%- if product.selected_or_first_available_variant.featured_media != null
+        and excluded_alts contains product.selected_or_first_available_variant.featured_media.alt == false
+      -%}
+
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
           id="Slide-{{ section.id }}-{{ featured_media.id }}"
