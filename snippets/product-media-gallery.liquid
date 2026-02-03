@@ -86,7 +86,7 @@
         </li>
       {%- endif -%}
       {%- for media in product.media -%}
-        
+
         {% assign alt_text = media.preview_image.alt | downcase %}
 
           {% if alt_text == 'taster-image'
