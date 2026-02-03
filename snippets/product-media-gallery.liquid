@@ -20,7 +20,13 @@
     assign single_media_visible = true
   endif
 
-  assign media_count = product.media.size
+  assign media_count = 0
+    for m in product.media
+      unless excluded_alts contains m.alt
+        assign media_count = media_count | plus: 1
+      endunless
+    endfor
+
   if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
     assign media_count = media_count | minus: variant_images.size | plus: 1
   endif
