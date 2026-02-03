@@ -86,6 +86,16 @@
         </li>
       {%- endif -%}
       {%- for media in product.media -%}
+        
+        {% assign alt_text = media.preview_image.alt | downcase %}
+
+          {% if alt_text == 'taster-image'
+            or alt_text == 'sous-chef-image'
+            or alt_text == 'head-chef-image'
+          %}
+            {% continue %}
+          {% endif %}
+
         {% if media_position >= limit
           or media_position >= 1
           and section.settings.hide_variants
