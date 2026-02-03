@@ -42,6 +42,9 @@
   endif
 -%}
 
+{% assign excluded_alts = 'taster-image,sous-chef-image,head-chef-image' | split: ',' %}
+
+
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
