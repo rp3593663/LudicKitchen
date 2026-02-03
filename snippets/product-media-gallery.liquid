@@ -62,6 +62,7 @@
       role="list"
     >
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
+        {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         {%- assign featured_alt = product.selected_or_first_available_variant.featured_media.preview_image.alt | downcase | strip -%}
 
         {%- unless featured_alt contains 'taster-image'
