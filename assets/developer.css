@@ -1196,7 +1196,7 @@ p.goal_info span{
 .tier_timer_inner {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .tier_timer_inner p {
