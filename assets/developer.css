@@ -3473,6 +3473,10 @@ img.fallback_mobile_img {
         width: 13px;
         height: 13px;
     }
+    .status-indicator .dot {
+        width: 6px;
+        height: 6px;
+    }
 
     /*---------- Edit Account Form CSS ------------*/
 
