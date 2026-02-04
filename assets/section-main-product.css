@@ -1538,7 +1538,7 @@ p.product__text {
 }
 .product__title h1 {
     color: var(--primary_color);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 28px;
     line-height: 32px;
     letter-spacing: -1.4px;
