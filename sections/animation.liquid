@@ -208,11 +208,11 @@ document.fonts.ready.then(() => {
       gsap.set(title, { xPercent: 100 });
 
       const horizontalTween = gsap.to(title, {
-        xPercent: -50,
+        xPercent: -80,
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "top 10%",
+          start: "top 50%",
           end: () => "+=" + window.innerHeight * 1.2,
           scrub: 0.8,
           pin: wrapper,
