@@ -2428,8 +2428,9 @@ input[type='checkbox'] {
 }
 
 .header__heading-logo {
-  height: auto;
-  max-width: 100%;
+  /* height: auto; */
+  width: 100%;
+  max-width:95px;
 }
 @media(max-width: 767px){
   .header__heading-logo {
