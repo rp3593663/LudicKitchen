@@ -1177,7 +1177,7 @@ p.goal_info span{
   inset: 0;
   border-radius: 50%;
   background: #13880826;
-  animation: pulseZoom 2.5s ease-in-out infinite;
+  animation: pulseZoom 1.5s ease-in-out infinite;
 }
 
 /* Solid center dot */
