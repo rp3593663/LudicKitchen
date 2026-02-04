@@ -183,7 +183,7 @@ document.fonts.ready.then(() => {
     // ✅ DESKTOP (unchanged behavior)
     "(min-width: 768px)": function () {
 
-      gsap.set(title, { xPercent: 80 });
+      gsap.set(title, { xPercent: -10 });
 
       const horizontalTween = gsap.to(title, {
         xPercent: -60,
