@@ -1165,6 +1165,60 @@ p.goal_info span{
 }
 
 
+.status-indicator {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+/* Background pulse */
+.status-indicator .pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #13880826;
+  animation: pulseZoom 2.5s ease-in-out infinite;
+}
+
+/* Solid center dot */
+.status-indicator .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #138808;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: dotBlink 2.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes pulseZoom {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+@keyframes dotBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+
 
 
 /*-----------------------------------------------*/
