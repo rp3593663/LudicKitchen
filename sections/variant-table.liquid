@@ -333,10 +333,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
   function startEarlyBirdTimer() {
-    // SET YOUR END DATE HERE (YYYY, MM-1, DD, HH, MM, SS)
-    const endDate = new Date(2026, 1, 20, 12, 0, 0); // Feb = 1
+    // END DATE: 22 Feb, 12:00 PM
+    const endDate = new Date(2026, 1, 22, 12, 0, 0); // Feb = 1
 
     const timerEl = document.querySelector(".earlyBirdTimer");
+    if (!timerEl) return;
 
     function updateTimer() {
       const now = new Date();
@@ -365,6 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("DOMContentLoaded", startEarlyBirdTimer);
 </script>
+
 
 
 
