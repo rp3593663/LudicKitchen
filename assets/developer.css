@@ -157,13 +157,18 @@ a#HeaderMenu-shop {
         letter-spacing: -.6px;
         border-radius: 4px;
     }
-    body{
+    /* body{
         background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Mobile-grid.svg?v=1766994643)!important;
         background-repeat: repeat!important;
         background-size: cover!important;
         font-family: var(--font-family)!important;
         color: var(--black);
         background-attachment: fixed;
+    } */
+    body:before{
+        background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Mobile-grid.svg?v=1766994643)!important;
+        background-repeat: repeat!important;
+        background-size: cover!important;
     }
 }
 
