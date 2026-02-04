@@ -102,6 +102,16 @@
           line-height: 22px;
           letter-spacing: -0.8px;
       }
+      .horizontal-wrapper {
+        height: 100svh; /* mobile-safe viewport */
+      }
+
+      @supports not (height: 100svh) {
+        .horizontal-wrapper {
+          height: 100vh;
+        }
+      }
+
     }
 {%- endstyle -%}
 <div class="kretoss-section section-home-animation video-trigger-section"
