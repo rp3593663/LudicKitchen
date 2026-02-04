@@ -205,7 +205,7 @@ document.fonts.ready.then(() => {
     "(max-width: 767px)": function () {
 
       // MUCH smaller movement
-      gsap.set(title, { xPercent: 100 });
+      gsap.set(title, { xPercent: 30 });
 
       const horizontalTween = gsap.to(title, {
         xPercent: -80,
@@ -213,7 +213,7 @@ document.fonts.ready.then(() => {
         scrollTrigger: {
           trigger: section,
           start: "top 10%",
-          end: () => "+=" + window.innerHeight * 0.8,
+          end: () => "+=" + window.innerHeight * 1.8,
           scrub: 0.8,
           pin: wrapper,
           anticipatePin: 1
