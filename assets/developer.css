@@ -3516,6 +3516,9 @@ img.fallback_mobile_img {
     .tier_timer_inner {
         flex-wrap: wrap;
     }
+    .tier_timer_inner p {
+        line-height: 28px;
+    }
 
     /*---------- Edit Account Form CSS ------------*/
 
