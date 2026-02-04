@@ -1224,7 +1224,6 @@ p.goal_info span{
 }
 p.earlyBirdTimer .timer_main{
     display: flex;
-    align-items: center;
     gap: 3px;
 }
 
