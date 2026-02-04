@@ -1225,7 +1225,7 @@ p.goal_info span{
 .timer-unit {
   display: flex;
   align-items: baseline;
-  gap: 3px;
+  gap: 2px;
 }
 
 /* Animations */
