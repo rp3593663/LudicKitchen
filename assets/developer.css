@@ -3469,6 +3469,11 @@ img.fallback_mobile_img {
         margin-top: 16px;
     }
 
+    .status-indicator {
+        width: 13px;
+        height: 13px;
+    }
+
     /*---------- Edit Account Form CSS ------------*/
 
 
