@@ -3513,6 +3513,10 @@ img.fallback_mobile_img {
         height: 6px;
     }
 
+    .tier_timer_inner {
+        flex-wrap: wrap;
+    }
+
     /*---------- Edit Account Form CSS ------------*/
 
 
