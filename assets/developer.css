@@ -3522,6 +3522,9 @@ img.fallback_mobile_img {
     .tier_early_bird_timer {
         margin-bottom: 22px;
     }
+    .earlyBirdTimer {
+        gap: 7px;
+    }
 
     /*---------- Edit Account Form CSS ------------*/
 
