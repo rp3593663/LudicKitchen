@@ -204,24 +204,25 @@ document.fonts.ready.then(() => {
     // ✅ MOBILE (FIXED)
     "(max-width: 767px)": function () {
 
-        gsap.set(title, { xPercent: 100 });
+      gsap.set(title, { xPercent: 100 });
 
-        const horizontalTween = gsap.to(title, {
-          xPercent: -100,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * 1.1, // shorter
-            scrub: 0.8,
-            pin: wrapper,
-            pinSpacing: false, // 🔥 THIS IS THE KEY
-            anticipatePin: 1
-          }
-        });
+      const horizontalTween = gsap.to(title, {
+        xPercent: -60, // 🔥 reduced travel
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => "+=" + window.innerHeight * 1.05,
+          scrub: 0.8,
+          pin: wrapper,
+          pinSpacing: false, // keep this
+          anticipatePin: 1
+        }
+      });
 
-        setupChildAnimations(horizontalTween);
-      }
+      setupChildAnimations(horizontalTween);
+    }
+
 
 
   });
