@@ -1221,7 +1221,7 @@ p.goal_info span{
     /* display: flex;
     gap: 5px; */
 }
-span.earlyBirdTimer .timer-num {
+.earlyBirdTimer .timer-num {
     font-size: 18px;
     font-weight: 600;
     letter-spacing:-0.9px;
