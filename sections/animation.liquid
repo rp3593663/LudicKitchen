@@ -151,7 +151,7 @@ document.fonts.ready.then(() => {
   const split = new SplitText(title, { type: "chars" });
 
   // Move title horizontally
-  {% comment %} gsap.set(title, { xPercent: 100 });
+  gsap.set(title, { xPercent: 100 });
 
   const horizontalTween = gsap.to(title, {
     xPercent: -60,
@@ -175,117 +175,10 @@ document.fonts.ready.then(() => {
       pin: wrapper,
       anticipatePin: 1
     }
-  }); {% endcomment %}
-
-
-  ScrollTrigger.matchMedia({
-
-    // ✅ DESKTOP (unchanged behavior)
-    "(min-width: 768px)": function () {
-
-      gsap.set(title, { xPercent: 100 });
-
-      const horizontalTween = gsap.to(title, {
-        xPercent: -60,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => "+=" + (window.innerWidth + title.scrollWidth),
-          scrub: true,
-          pin: wrapper,
-          anticipatePin: 1
-        }
-      });
-
-      setupChildAnimations(horizontalTween);
-    },
-
-    // ✅ MOBILE (FIXED)
-    "(max-width: 767px)": function () {
-
-      // MUCH smaller movement
-      gsap.set(title, { xPercent: 100 });
-
-      const horizontalTween = gsap.to(title, {
-        xPercent: -60,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 10%",
-          end: () => "+=" + window.innerHeight * 1.8,
-          scrub: 0.8,
-          pin: wrapper,
-          anticipatePin: 1
-        }
-      });
-
-      setupChildAnimations(horizontalTween);
-    }
-
   });
-
-
-  function setupChildAnimations(horizontalTween) {
-
-  // ✨ Letter animation
-  split.chars.forEach(char => {
-    gsap.from(char, {
-      yPercent: (Math.random() - 0.5) * 300,
-      rotation: (Math.random() - 0.5) * 60,
-      ease: "elastic.out(1.2, 1)",
-      scrollTrigger: {
-        trigger: char,
-        containerAnimation: horizontalTween,
-        start: "left 80%",
-        end: "left 20%",
-        scrub: true
-      }
-    });
-  });
-
-  // 👉 ARROW SVG DRAW
-  const arrowPaths = document.querySelectorAll(
-    ".horizontal-words__arrow-end-svg path"
-  );
-
-  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
-
-  gsap.to(arrowPaths, {
-    drawSVG: "0% 100%",
-    ease: "none",
-    scrollTrigger: {
-      trigger: arrowPaths[0],
-      containerAnimation: horizontalTween,
-      start: "left 90%",
-      end: "left 50%",
-      scrub: 0.5
-    }
-  });
-
-  // 👉 DESCRIPTION FADE-UP
-  const desc = document.querySelector(".horizontal-desc");
-
-  gsap.set(desc, { opacity: 0, y: 40 });
-
-  gsap.to(desc, {
-    opacity: 1,
-    y: 0,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: arrowPaths[0],
-      containerAnimation: horizontalTween,
-      start: "left 55%",
-      end: "left 35%",
-      scrub: true
-    }
-  });
-}
-
-
 
   // ✨ Letter animation (already working)
-  {% comment %} split.chars.forEach(char => {
+  split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
       rotation: (Math.random() - 0.5) * 60,
@@ -341,7 +234,7 @@ document.fonts.ready.then(() => {
       end: "left 35%",
       scrub: true
     }
-  }); {% endcomment %}
+  });
 });
 </script>
 
