@@ -91,7 +91,13 @@
                             Tier {{ forloop.index }}
                           </div>
                           {% comment %} <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div> {% endcomment %}
-                          <div class="current_tier_reached">Early Bird</div>
+                          <div class="current_tier_reached">
+                            <div class="status-indicator">
+                              <span class="pulse"></span>
+                              <span class="dot"></span>
+                            </div>
+                            Early Bird
+                          </div>
                         </div>
                     </div>
 
