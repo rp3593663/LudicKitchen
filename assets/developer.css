@@ -2410,7 +2410,7 @@ p#stickyText {
     letter-spacing: -0.39px;
     vertical-align: middle;
     color: #838383;
-    text-decoration: unset;
+    /* text-decoration: unset; */
     word-break: break-all;
     overflow-wrap: anywhere;
     word-wrap: break-word;
