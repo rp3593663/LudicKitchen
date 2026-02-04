@@ -6,7 +6,7 @@
     --grey_text: #949598;
     --font-family: "Inter", sans-serif;
 }
-body{
+/* body{
     background-color: unset!important;
     background-image: url(https://cdn.shopify.com/s/files/1/0962/3794/5196/files/page_bg_lines.svg?v=1766044402)!important;
     background-repeat: no-repeat!important;
@@ -14,7 +14,25 @@ body{
     font-family: var(--font-family)!important;
     color: var(--black);
     background-attachment: fixed;
+} */
+body {
+    position: relative;
+    font-family: var(--font-family)!important;
+    color: var(--black);
 }
+body:before {
+    background-color: unset!important;
+    background-image: url(/cdn/shop/files/page_bg_lines.svg?v=1766044402)!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-attachment: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.7;
+}
+
 html {
   scroll-behavior: smooth;
 }
