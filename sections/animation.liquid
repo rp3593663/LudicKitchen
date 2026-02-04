@@ -159,7 +159,13 @@ document.fonts.ready.then(() => {
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: () => "+=" + (window.innerWidth + title.scrollWidth),
+      {% comment %} end: () => "+=" + (window.innerWidth + title.scrollWidth), {% endcomment %}
+       end: () => {
+          if (window.innerWidth < 768) {
+            return "+=" + window.innerWidth * 1.2; // SHORT mobile scroll
+          }
+          return "+=" + (window.innerWidth + title.scrollWidth);
+        },
       scrub: true,
       pin: wrapper,
       anticipatePin: 1
