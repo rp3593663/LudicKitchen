@@ -158,7 +158,8 @@ document.fonts.ready.then(() => {
 
 
   const horizontalTween = gsap.to(title, {
-    xPercent: -60,
+    {% comment %} xPercent: -60, {% endcomment %}
+     xPercent: window.innerWidth < 768 ? -30 : -60,
     ease: "none",
     scrollTrigger: {
       trigger: section,
