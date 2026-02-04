@@ -90,7 +90,8 @@
                             <img src="{{ 'tier_' | append: forloop.index | append: '.svg' | asset_url }}">
                             Tier {{ forloop.index }}
                           </div>
-                          <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div>
+                          {% comment %} <div class="current_tier_reached">{{ current_reached_goal }} {{ variant.title }}</div> {% endcomment %}
+                          <div class="current_tier_reached">Early Bird</div>
                         </div>
                     </div>
 
