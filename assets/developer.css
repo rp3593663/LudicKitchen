@@ -1200,7 +1200,7 @@ p.goal_info span{
 .tier_timer_inner {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .tier_timer_inner p {
@@ -1221,6 +1221,11 @@ p.goal_info span{
     font-size: 18px;
     font-weight: 600;
     letter-spacing:-0.9px;
+}
+p.earlyBirdTimer .timer_main{
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 
