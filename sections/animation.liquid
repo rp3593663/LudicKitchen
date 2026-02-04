@@ -204,26 +204,24 @@ document.fonts.ready.then(() => {
     // ✅ MOBILE (FIXED)
     "(max-width: 767px)": function () {
 
+      // MUCH smaller movement
       gsap.set(title, { xPercent: 100 });
 
       const horizontalTween = gsap.to(title, {
-        xPercent: -60, // 🔥 reduced travel
+        xPercent: -100,
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "top top",
-          end: () => "+=" + window.innerHeight * 1.05,
+          start: "top 0%",
+          end: () => "+=" + window.innerHeight * 1.8,
           scrub: 0.8,
           pin: wrapper,
-          pinSpacing: false, // keep this
           anticipatePin: 1
         }
       });
 
       setupChildAnimations(horizontalTween);
     }
-
-
 
   });
 
