@@ -1218,8 +1218,8 @@ p.goal_info span{
     line-height:13px;
     font-weight:500;
     letter-spacing:-0.65px;
-    display: flex;
-    gap: 5px;
+    /* display: flex;
+    gap: 5px; */
 }
 span.earlyBirdTimer .timer-num {
     font-size: 18px;
