@@ -1193,6 +1193,25 @@ p.goal_info span{
   animation: dotBlink 1.5s ease-in-out infinite;
 }
 
+.tier_timer_inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tier_timer_inner p {
+  color: #8b8b8b;
+  font-size: 16px;
+  margin: 0;
+}
+
+#earlyBirdTimer {
+  color: #1f4dff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
 /* Animations */
 @keyframes pulseZoom {
   0% {
