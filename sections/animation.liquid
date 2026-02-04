@@ -151,7 +151,11 @@ document.fonts.ready.then(() => {
   const split = new SplitText(title, { type: "chars" });
 
   // Move title horizontally
-  gsap.set(title, { xPercent: 100 });
+  {% comment %} gsap.set(title, { xPercent: 100 }); {% endcomment %}
+   gsap.set(title, { 
+    xPercent: window.innerWidth < 768 ? 60 : 100 
+  });
+
 
   const horizontalTween = gsap.to(title, {
     xPercent: -60,
