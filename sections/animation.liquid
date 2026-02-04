@@ -163,7 +163,7 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: () => window.innerWidth < 768 ? "top 80%" : "top top",
+      start: () => window.innerWidth < 768 ? "top 0%" : "top top",
       {% comment %} start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth), {% endcomment %}
        end: () => {
