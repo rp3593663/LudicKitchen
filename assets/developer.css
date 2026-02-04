@@ -1212,7 +1212,7 @@ p.goal_info span{
   margin: 0;
 }
 
-#earlyBirdTimer {
+.earlyBirdTimer {
   color: #214ECF;
   font-size: 13px;
   line-height:13px;
