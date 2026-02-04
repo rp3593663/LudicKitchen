@@ -1194,7 +1194,7 @@ p.goal_info span{
 }
 
 .tier_early_bird_timer {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 }
 
 .tier_timer_inner {
@@ -3518,9 +3518,6 @@ img.fallback_mobile_img {
     }
     .tier_timer_inner p {
         line-height: 28px;
-    }
-    .tier_early_bird_timer {
-        margin-bottom: 22px;
     }
     .earlyBirdTimer {
         gap: 7px;
