@@ -1200,7 +1200,7 @@ p.goal_info span{
 .tier_timer_inner {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .tier_timer_inner p {
