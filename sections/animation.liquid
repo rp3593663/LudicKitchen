@@ -160,7 +160,7 @@ document.fonts.ready.then(() => {
       trigger: section,
       start: () => {
         return window.innerWidth < 768
-          ? "top 75%"   // starts while section is half visible
+          ? "top 50%"   // starts while section is half visible
           : "top top";
       },
       {% comment %} start: "top top",
