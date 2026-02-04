@@ -1219,6 +1219,10 @@ p.goal_info span{
   font-weight:500;
   letter-spacing:-0.42px;
 }
+span.earlyBirdTimer .timer-num {
+    font-size: 18px;
+    font-weight: 600;
+}
 
 
 /* Animations */
