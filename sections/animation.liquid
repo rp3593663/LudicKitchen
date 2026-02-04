@@ -226,9 +226,66 @@ document.fonts.ready.then(() => {
   });
 
 
+  function setupChildAnimations(horizontalTween) {
+
+  // ✨ Letter animation
+  split.chars.forEach(char => {
+    gsap.from(char, {
+      yPercent: (Math.random() - 0.5) * 300,
+      rotation: (Math.random() - 0.5) * 60,
+      ease: "elastic.out(1.2, 1)",
+      scrollTrigger: {
+        trigger: char,
+        containerAnimation: horizontalTween,
+        start: "left 80%",
+        end: "left 20%",
+        scrub: true
+      }
+    });
+  });
+
+  // 👉 ARROW SVG DRAW
+  const arrowPaths = document.querySelectorAll(
+    ".horizontal-words__arrow-end-svg path"
+  );
+
+  gsap.set(arrowPaths, { drawSVG: "0% 0%" });
+
+  gsap.to(arrowPaths, {
+    drawSVG: "0% 100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: arrowPaths[0],
+      containerAnimation: horizontalTween,
+      start: "left 90%",
+      end: "left 50%",
+      scrub: 0.5
+    }
+  });
+
+  // 👉 DESCRIPTION FADE-UP
+  const desc = document.querySelector(".horizontal-desc");
+
+  gsap.set(desc, { opacity: 0, y: 40 });
+
+  gsap.to(desc, {
+    opacity: 1,
+    y: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: arrowPaths[0],
+      containerAnimation: horizontalTween,
+      start: "left 55%",
+      end: "left 35%",
+      scrub: true
+    }
+  });
+}
+
+
 
   // ✨ Letter animation (already working)
-  split.chars.forEach(char => {
+  {% comment %} split.chars.forEach(char => {
     gsap.from(char, {
       yPercent: (Math.random() - 0.5) * 300,
       rotation: (Math.random() - 0.5) * 60,
@@ -284,7 +341,7 @@ document.fonts.ready.then(() => {
       end: "left 35%",
       scrub: true
     }
-  });
+  }); {% endcomment %}
 });
 </script>
 
