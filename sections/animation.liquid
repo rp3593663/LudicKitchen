@@ -151,7 +151,7 @@ document.fonts.ready.then(() => {
   const split = new SplitText(title, { type: "chars" });
 
   // Move title horizontally
-  gsap.set(title, { xPercent: 100 });
+  {% comment %} gsap.set(title, { xPercent: 100 });
 
   const horizontalTween = gsap.to(title, {
     xPercent: -60,
@@ -175,7 +175,57 @@ document.fonts.ready.then(() => {
       pin: wrapper,
       anticipatePin: 1
     }
+  }); {% endcomment %}
+
+
+  ScrollTrigger.matchMedia({
+
+    // ✅ DESKTOP (unchanged behavior)
+    "(min-width: 768px)": function () {
+
+      gsap.set(title, { xPercent: 100 });
+
+      const horizontalTween = gsap.to(title, {
+        xPercent: -60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => "+=" + (window.innerWidth + title.scrollWidth),
+          scrub: true,
+          pin: wrapper,
+          anticipatePin: 1
+        }
+      });
+
+      setupChildAnimations(horizontalTween);
+    },
+
+    // ✅ MOBILE (FIXED)
+    "(max-width: 767px)": function () {
+
+      // MUCH smaller movement
+      gsap.set(title, { xPercent: 30 });
+
+      const horizontalTween = gsap.to(title, {
+        xPercent: -15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 10%",
+          end: () => "+=" + window.innerHeight * 0.8,
+          scrub: 0.8,
+          pin: wrapper,
+          anticipatePin: 1
+        }
+      });
+
+      setupChildAnimations(horizontalTween);
+    }
+
   });
+
+
 
   // ✨ Letter animation (already working)
   split.chars.forEach(char => {
