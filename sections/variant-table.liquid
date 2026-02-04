@@ -328,6 +328,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
+<script>
+  function startEarlyBirdTimer() {
+    // SET YOUR END DATE HERE (YYYY, MM-1, DD, HH, MM, SS)
+    const endDate = new Date(2026, 1, 22, 12, 0, 0); // Feb = 1
+
+    const timerEl = document.getElementById("earlyBirdTimer");
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = endDate - now;
+
+      if (diff <= 0) {
+        timerEl.innerHTML = "Expired";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      timerEl.innerHTML =
+        `${days} Day${days !== 1 ? "s" : ""} ` +
+        `${hours} Hour${hours !== 1 ? "s" : ""} ` +
+        `${minutes} Minute${minutes !== 1 ? "s" : ""} ` +
+        `${seconds} Second${seconds !== 1 ? "s" : ""}`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  document.addEventListener("DOMContentLoaded", startEarlyBirdTimer);
+</script>
+
 
 
 {% schema %}
