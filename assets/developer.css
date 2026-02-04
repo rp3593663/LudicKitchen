@@ -1193,6 +1193,10 @@ p.goal_info span{
   animation: dotBlink 1.5s ease-in-out infinite;
 }
 
+.tier_early_bird_timer {
+    margin-bottom: 28px;
+}
+
 .tier_timer_inner {
   display: flex;
   align-items: center;
