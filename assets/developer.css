@@ -1214,8 +1214,8 @@ p.goal_info span{
 
 .earlyBirdTimer {
     color: #214ECF !important;
-    /* display: flex;
-    gap: 5px; */
+    display: flex;
+    gap: 5px;
 }
 .earlyBirdTimer .timer-num {
     font-size: 18px;
