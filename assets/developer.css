@@ -1200,7 +1200,7 @@ p.goal_info span{
 .tier_timer_inner {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .tier_timer_inner p {
@@ -1214,10 +1214,6 @@ p.goal_info span{
 
 .earlyBirdTimer {
     color: #214ECF !important;
-    font-size: 13px;
-    line-height:13px;
-    font-weight:500;
-    letter-spacing:-0.65px;
     /* display: flex;
     gap: 5px; */
 }
