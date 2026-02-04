@@ -1222,7 +1222,11 @@ p.goal_info span{
     font-weight: 600;
     letter-spacing:-0.9px;
 }
-
+.timer-unit {
+  display: flex;
+  align-items: center;
+  gap: 3px;               /* space between number & label */
+}
 
 /* Animations */
 @keyframes pulseZoom {
