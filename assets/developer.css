@@ -1222,11 +1222,11 @@ p.goal_info span{
     font-weight: 600;
     letter-spacing:-0.9px;
 }
-p.earlyBirdTimer .timer_main{
+/* p.earlyBirdTimer .timer_main{
     display: flex;
     gap: 3px;
     align-items:end;
-}
+} */
 
 
 /* Animations */
