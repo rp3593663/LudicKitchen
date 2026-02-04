@@ -158,11 +158,7 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: () => {
-        return window.innerWidth < 768
-          ? "top 0%"   // starts while section is half visible
-          : "top top";
-      },
+      start: () => window.innerWidth < 768 ? "top 80%" : "top top",
       {% comment %} start: "top top",
       end: () => "+=" + (window.innerWidth + title.scrollWidth), {% endcomment %}
        end: () => {
