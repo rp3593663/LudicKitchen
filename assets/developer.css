@@ -3519,6 +3519,9 @@ img.fallback_mobile_img {
     .tier_timer_inner p {
         line-height: 28px;
     }
+    .tier_early_bird_timer {
+        margin-bottom: 22px;
+    }
 
     /*---------- Edit Account Form CSS ------------*/
 
