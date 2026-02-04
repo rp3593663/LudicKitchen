@@ -3514,6 +3514,9 @@ img.fallback_mobile_img {
     }
 
     .tier_timer_inner {
+        gap: 0px;
+    }
+    .tier_timer_inner {
         flex-wrap: wrap;
     }
     .tier_timer_inner p {
