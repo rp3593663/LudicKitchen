@@ -158,8 +158,13 @@ document.fonts.ready.then(() => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top top",
-      {% comment %} end: () => "+=" + (window.innerWidth + title.scrollWidth), {% endcomment %}
+      start: () => {
+        return window.innerWidth < 768
+          ? "top 60%"   // starts while section is half visible
+          : "top top";
+      },
+      {% comment %} start: "top top",
+      end: () => "+=" + (window.innerWidth + title.scrollWidth), {% endcomment %}
        end: () => {
           if (window.innerWidth < 768) {
             return "+=" + window.innerWidth * 1.2; // SHORT mobile scroll
