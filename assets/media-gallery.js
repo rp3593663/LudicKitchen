@@ -58,16 +58,6 @@ if (!customElements.get('media-gallery')) {
         this.setActiveThumbnail(thumbnail, event.detail.currentElement.dataset.mediaId);
       }
 
-      pauseFromZoom() {
-        this.stopAutoSlide();
-      }
-
-      resumeFromZoom() {
-        if (!this.autoSlideTimer) {
-          this.startAutoSlide();
-        }
-      }
-
       setActiveMedia(mediaId, prepend) {
         const activeMedia =
           this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`) ||
