@@ -330,6 +330,20 @@
                   {% for order in customer.orders %}
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
+                      {%- comment -%} 🔑 VARIANT ROLE DETECTION {%- endcomment -%}
+                        {% assign variant_title = line_item.variant.title %}
+                        {% assign is_taster = false %}
+                        {% assign is_sous_chef = false %}
+                        {% assign is_head_chef = false %}
+
+                        {% if variant_title == 'Taster' %}
+                          {% assign is_taster = true %}
+                        {% elsif variant_title == 'Sous Chef' %}
+                          {% assign is_sous_chef = true %}
+                        {% elsif variant_title == 'Head Chef' %}
+                          {% assign is_head_chef = true %}
+                        {% endif %}
+
                       {% if product != blank %}
                         {% if line_item.variant.title == 'Taster' %}
                           <div class="project_ledger_updates_fallback">
