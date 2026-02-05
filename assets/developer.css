@@ -2759,6 +2759,10 @@ img.fallback_mobile_img {
     transition: all .5s ease;
     background-color: #00000012;
 }
+.product__media-wrapper .thumbnail-slider .thumbnail-list .thumbnail-list__item .thumbnail[aria-current=true] {
+    width: 32px;
+    transition: all .5s ease;
+}
 .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     width: auto !important;
 }
