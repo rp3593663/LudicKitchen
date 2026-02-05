@@ -1154,7 +1154,6 @@
 </script>
 
 
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1164,34 +1163,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const stateInput = document.querySelector('input[name="province"]');
   const countryInput = document.querySelector('input[name="country"]');
 
-  if (!address1) return;
+  if (!address1 || !zipInput) return;
 
-  /* ===============================
+  /* ===================================
+     FORCE INPUT TO STAY EDITABLE
+  =================================== */
+  address1.removeAttribute("disabled");
+  address1.style.pointerEvents = "auto";
+  address1.style.userSelect = "auto";
+
+  /* ===================================
      ADDRESS AUTOCOMPLETE
-  =============================== */
-
+  =================================== */
   const autocomplete = new google.maps.places.Autocomplete(address1, {
-    types: ["address"],
-    fields: ["address_components"]
+    types: ["geocode"],
+    componentRestrictions: { country: "in" } // India bias
   });
 
   autocomplete.addListener("place_changed", function () {
     const place = autocomplete.getPlace();
     if (!place.address_components) return;
-
-    fillFromComponents(place.address_components);
+    fillAddress(place.address_components);
   });
 
-  function fillFromComponents(components) {
+  function fillAddress(components) {
     let zip = "", city = "", state = "", country = "";
 
-    components.forEach(component => {
-      const types = component.types;
+    components.forEach(c => {
+      const t = c.types;
 
-      if (types.includes("postal_code")) zip = component.long_name;
-      if (types.includes("locality")) city = component.long_name;
-      if (types.includes("administrative_area_level_1")) state = component.long_name;
-      if (types.includes("country")) country = component.long_name;
+      if (t.includes("postal_code")) zip = c.long_name;
+      if (t.includes("locality")) city = c.long_name;
+      if (t.includes("administrative_area_level_2") && !city) city = c.long_name;
+      if (t.includes("administrative_area_level_1")) state = c.long_name;
+      if (t.includes("country")) country = c.long_name;
     });
 
     if (zip) zipInput.value = zip;
@@ -1200,24 +1205,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (country) countryInput.value = country;
   }
 
-  /* ===============================
-     PIN / ZIP MANUAL ENTRY
-  =============================== */
-
-  let zipTimeout = null;
+  /* ===================================
+     PIN / ZIP MANUAL ENTRY (INDIA SAFE)
+  =================================== */
+  let zipTimer = null;
 
   zipInput.addEventListener("input", function () {
-    clearTimeout(zipTimeout);
+    clearTimeout(zipTimer);
 
     const zip = zipInput.value.trim();
-    if (zip.length < 4) return;
+    if (zip.length < 5) return;
 
-    zipTimeout = setTimeout(() => {
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${zip}&key=YOUR_GOOGLE_API_KEY`)
+    zipTimer = setTimeout(() => {
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${zip}|country:IN&key=YOUR_GOOGLE_API_KEY`)
         .then(res => res.json())
         .then(data => {
           if (!data.results || !data.results[0]) return;
-          fillFromComponents(data.results[0].address_components);
+          fillAddress(data.results[0].address_components);
         })
         .catch(() => {});
     }, 600);
