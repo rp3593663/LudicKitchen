@@ -2741,6 +2741,11 @@ img.fallback_mobile_img {
     margin-bottom: 0;
 }
 
+
+/* ================================================= */
+/* ============ Product Thumbnail PDP ============== */
+/* ================================================= */
+
 .thumbnail.global-media-settings img{
     display:none;
 }
@@ -2760,6 +2765,14 @@ img.fallback_mobile_img {
 .product__column-sticky {
     position: unset !important;
 }
+
+
+
+
+
+
+
+
 @media(min-width: 768px){
     .tier_benefits_head img,
     .tier_mobile_description
