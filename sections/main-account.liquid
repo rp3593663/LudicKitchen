@@ -628,11 +628,11 @@
                                       <h2>Link</h2>
                                     </div>
 
-                                    {% for date_item in dates %}
+                                    {% for date_item in ledger_dates %}
                                       {% assign index = forloop.index0 %}
 
                                       {% assign date_parts  = date_item | split: '||' %}
-                                      {% assign event_parts = events[index] | split: '||' %}
+                                      {% assign event_parts = ledger_events[index] | split: '||' %}
                                       {% assign link_text_parts  = links_text[index] | split: '||' %}
                                       {% assign link_parts  = links[index] | split: '||' %}
 
