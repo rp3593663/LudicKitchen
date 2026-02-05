@@ -2763,6 +2763,9 @@ img.fallback_mobile_img {
     width: 32px;
     transition: all .5s ease;
 }
+.thumbnail-list__item:before {
+    padding-bottom: 0;
+}
 .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     width: auto !important;
 }
