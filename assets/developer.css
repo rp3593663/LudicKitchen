@@ -2755,9 +2755,11 @@ img.fallback_mobile_img {
     background-color: #00000012;
 }
 .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
-    width: auto;
+    width: auto !important;
 }
-
+.product__column-sticky {
+    position: unset !important;
+}
 @media(min-width: 768px){
     .tier_benefits_head img,
     .tier_mobile_description
