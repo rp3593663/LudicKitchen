@@ -474,45 +474,6 @@
     <!------------------------------------------>
     <!------------------------------------------>
     <!------------------------------------------>
-
-
-
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-
-        document.querySelectorAll("media-gallery").forEach(gallery => {
-          const slider = gallery.querySelector(".slider");
-          if (!slider) return;
-
-          const slides = slider.querySelectorAll(".slider__slide");
-          if (slides.length <= 1) return;
-
-          const dotsWrap = document.createElement("div");
-          dotsWrap.className = "media-gallery-dots";
-
-          slides.forEach((_, index) => {
-            const dot = document.createElement("button");
-            dot.type = "button";
-            dot.className = "media-dot";
-            if (index === 0) dot.classList.add("is-active");
-
-            dot.addEventListener("click", () => {
-              slider.scrollTo({
-                left: slides[index].offsetLeft,
-                behavior: "smooth"
-              });
-            });
-
-            dotsWrap.appendChild(dot);
-          });
-
-          slider.after(dotsWrap);
-        });
-
-      });
-      </script>
-
     
   </body>
 </html>

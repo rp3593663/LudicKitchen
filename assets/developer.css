@@ -2747,6 +2747,26 @@ img.fallback_mobile_img {
 .thumbnail-slider {
   display: none !important;
 }
+.media-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.media-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d1d1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.media-dot.is-active {
+  background: #000;
+}
 
 
 
