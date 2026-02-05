@@ -2764,7 +2764,7 @@ img.fallback_mobile_img {
     transition: all .5s ease;
 }
 .thumbnail-list__item:before {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
 .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     width: auto !important;
