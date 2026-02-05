@@ -572,10 +572,35 @@
                                 <p>Tracks the process, progress, updates transparently to ensure that contribution comes with visibility.</p>
                               </div>
                               <div class="ledger_updates">
-                                {% assign dates = product.metafields.custom.ledger_update_date.value %}
+                                {% comment %} {% assign dates = product.metafields.custom.ledger_update_date.value %}
                                 {% assign events = product.metafields.custom.ledger_update_events.value %}
                                 {% assign links_text  = product.metafields.custom.ledger_update_link_text.value %}
-                                {% assign links  = product.metafields.custom.ledger_update_link.value %}
+                                {% assign links  = product.metafields.custom.ledger_update_link.value %} {% endcomment %}
+
+                                {%- comment -%} Ledger source resolution: Variant → Product fallback {%- endcomment -%}
+                                {% assign dates = blank %}
+                                {% assign events = blank %}
+                                {% assign links_text = blank %}
+                                {% assign links = blank %}
+
+                                {%- comment -%} 1️⃣ Variant metafields (highest priority) {%- endcomment -%}
+                                {% if line_item.variant.metafields.custom.ledger_update_date.value != blank %}
+                                  {% assign dates = line_item.variant.metafields.custom.ledger_update_date.value %}
+                                  {% assign events = line_item.variant.metafields.custom.ledger_update_events.value %}
+                                  {% assign links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
+                                  {% assign links = line_item.variant.metafields.custom.ledger_update_link.value %}
+                                {% endif %}
+
+                                {%- comment -%} 2️⃣ Product metafields fallback (Sous + Head only) {%- endcomment -%}
+                                {% if dates == blank and line_item.variant.title != 'Taster' %}
+                                  {% if product.metafields.custom.ledger_update_date.value != blank %}
+                                    {% assign dates = product.metafields.custom.ledger_update_date.value %}
+                                    {% assign events = product.metafields.custom.ledger_update_events.value %}
+                                    {% assign links_text = product.metafields.custom.ledger_update_link_text.value %}
+                                    {% assign links = product.metafields.custom.ledger_update_link.value %}
+                                  {% endif %}
+                                {% endif %}
+
 
                                 {% if dates != blank %}
                                 <div class="all_updates_ledger">
