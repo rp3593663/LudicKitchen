@@ -1153,6 +1153,80 @@
   }
 </script>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const address1 = document.querySelector('input[name="address1"]');
+  const zipInput = document.querySelector('input[name="zip"]');
+  const cityInput = document.querySelector('input[name="city"]');
+  const stateInput = document.querySelector('input[name="province"]');
+  const countryInput = document.querySelector('input[name="country"]');
+
+  if (!address1) return;
+
+  /* ===============================
+     ADDRESS AUTOCOMPLETE
+  =============================== */
+
+  const autocomplete = new google.maps.places.Autocomplete(address1, {
+    types: ["address"],
+    fields: ["address_components"]
+  });
+
+  autocomplete.addListener("place_changed", function () {
+    const place = autocomplete.getPlace();
+    if (!place.address_components) return;
+
+    fillFromComponents(place.address_components);
+  });
+
+  function fillFromComponents(components) {
+    let zip = "", city = "", state = "", country = "";
+
+    components.forEach(component => {
+      const types = component.types;
+
+      if (types.includes("postal_code")) zip = component.long_name;
+      if (types.includes("locality")) city = component.long_name;
+      if (types.includes("administrative_area_level_1")) state = component.long_name;
+      if (types.includes("country")) country = component.long_name;
+    });
+
+    if (zip) zipInput.value = zip;
+    if (city) cityInput.value = city;
+    if (state) stateInput.value = state;
+    if (country) countryInput.value = country;
+  }
+
+  /* ===============================
+     PIN / ZIP MANUAL ENTRY
+  =============================== */
+
+  let zipTimeout = null;
+
+  zipInput.addEventListener("input", function () {
+    clearTimeout(zipTimeout);
+
+    const zip = zipInput.value.trim();
+    if (zip.length < 4) return;
+
+    zipTimeout = setTimeout(() => {
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${zip}&key=YOUR_GOOGLE_API_KEY`)
+        .then(res => res.json())
+        .then(data => {
+          if (!data.results || !data.results[0]) return;
+          fillFromComponents(data.results[0].address_components);
+        })
+        .catch(() => {});
+    }, 600);
+  });
+
+});
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-account.name",
