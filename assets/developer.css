@@ -2807,7 +2807,7 @@ img.fallback_mobile_img {
         display: none;
     }
     .nav_link.mobile_sidebar_content {
-        display: block!important;
+        display: flex!important;
     }
     .nav_link.desktop_sidebar_content {
         display: none;
