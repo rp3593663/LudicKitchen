@@ -3854,6 +3854,7 @@ img.fallback_mobile_img {
     }
     .leader_update_event {
         padding-right: 15px;
+        word-break: unset;
     }
     .leader_update_info.head h2 {
         font-size: 12px;
