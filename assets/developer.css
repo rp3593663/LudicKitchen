@@ -2742,6 +2742,15 @@ img.fallback_mobile_img {
 }
 
 
+
+
+.thumbnail-slider {
+  display: none !important;
+}
+
+
+
+
 @media(min-width: 768px){
     .tier_benefits_head img,
     .tier_mobile_description
