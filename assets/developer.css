@@ -2754,7 +2754,9 @@ img.fallback_mobile_img {
     transition: all .5s ease;
     background-color: #00000012;
 }
-
+.thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+    width: auto;
+}
 
 @media(min-width: 768px){
     .tier_benefits_head img,
