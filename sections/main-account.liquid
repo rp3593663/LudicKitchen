@@ -572,10 +572,55 @@
                                 <p>Tracks the process, progress, updates transparently to ensure that contribution comes with visibility.</p>
                               </div>
                               <div class="ledger_updates">
-                                {% assign dates = product.metafields.custom.ledger_update_date.value %}
+                                {% comment %} {% assign dates = product.metafields.custom.ledger_update_date.value %}
                                 {% assign events = product.metafields.custom.ledger_update_events.value %}
                                 {% assign links_text  = product.metafields.custom.ledger_update_link_text.value %}
-                                {% assign links  = product.metafields.custom.ledger_update_link.value %}
+                                {% assign links  = product.metafields.custom.ledger_update_link.value %} {% endcomment %}
+
+
+
+
+
+                                
+                                {%- comment -%} Ledger source resolution: Variant + Product (append) {%- endcomment -%}
+                                {% assign dates = blank %}
+                                {% assign events = blank %}
+                                {% assign links_text = blank %}
+                                {% assign links = blank %}
+
+                                {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date.value %}
+                                {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events.value %}
+                                {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
+                                {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link.value %}
+
+                                {% assign product_dates = product.metafields.custom.ledger_update_date.value %}
+                                {% assign product_events = product.metafields.custom.ledger_update_events.value %}
+                                {% assign product_links_text = product.metafields.custom.ledger_update_link_text.value %}
+                                {% assign product_links = product.metafields.custom.ledger_update_link.value %}
+
+                                {%- comment -%} 1️⃣ Add VARIANT data first {%- endcomment -%}
+                                {% if variant_dates != blank %}
+                                  {% assign dates = variant_dates %}
+                                  {% assign events = variant_events %}
+                                  {% assign links_text = variant_links_text %}
+                                  {% assign links = variant_links %}
+                                {% endif %}
+
+                                {%- comment -%} 2️⃣ Append PRODUCT data (Sous + Head only) {%- endcomment -%}
+                                {% if line_item.variant.title != 'Taster' and product_dates != blank %}
+                                  {% if dates != blank %}
+                                    {% assign dates = dates | concat: product_dates %}
+                                    {% assign events = events | concat: product_events %}
+                                    {% assign links_text = links_text | concat: product_links_text %}
+                                    {% assign links = links | concat: product_links %}
+                                  {% else %}
+                                    {% assign dates = product_dates %}
+                                    {% assign events = product_events %}
+                                    {% assign links_text = product_links_text %}
+                                    {% assign links = product_links %}
+                                  {% endif %}
+                                {% endif %}
+
 
                                 {% if dates != blank %}
                                 <div class="all_updates_ledger">
