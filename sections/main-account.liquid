@@ -620,49 +620,47 @@
                                 {% endif %}
 
                                 {% if ledger_dates != blank %}
-                                  <!-- KEEP YOUR EXISTING LEDGER HTML LOOP HERE -->
+                                  <div class="all_updates_ledger">
+                                    
+                                    <div class="leader_update_info head">
+                                      <h2>Date</h2>
+                                      <h2>Event</h2>
+                                      <h2>Link</h2>
+                                    </div>
+
+                                    {% for date_item in dates %}
+                                      {% assign index = forloop.index0 %}
+
+                                      {% assign date_parts  = date_item | split: '||' %}
+                                      {% assign event_parts = events[index] | split: '||' %}
+                                      {% assign link_text_parts  = links_text[index] | split: '||' %}
+                                      {% assign link_parts  = links[index] | split: '||' %}
+
+                                      <div class="leader_update_info">
+                                        <p class="leader_update_date">
+                                          {{ date_parts[1] | strip | date: "%a, %b %d"  }}
+                                        </p>
+
+                                        <div class="leader_update_event">
+                                          {{ event_parts[1] | strip }}
+                                        </div>
+
+                                        <div class="leader_update_url">
+                                          <a href="{{ link_parts[1] | strip }}" target="_blank">
+                                            {{ link_text_parts[1] | strip }}
+                                          </a>
+                                        </div>
+                                      </div>
+
+                                    {% endfor %}
+
+                                  </div>
                                 {% endif %}
 
                               {% endunless %}
 
 
-                                {% if dates != blank %}
-                                <div class="all_updates_ledger">
-                                  
-                                  <div class="leader_update_info head">
-                                    <h2>Date</h2>
-                                    <h2>Event</h2>
-                                    <h2>Link</h2>
-                                  </div>
-
-                                  {% for date_item in dates %}
-                                    {% assign index = forloop.index0 %}
-
-                                    {% assign date_parts  = date_item | split: '||' %}
-                                    {% assign event_parts = events[index] | split: '||' %}
-                                    {% assign link_text_parts  = links_text[index] | split: '||' %}
-                                    {% assign link_parts  = links[index] | split: '||' %}
-
-                                    <div class="leader_update_info">
-                                      <p class="leader_update_date">
-                                        {{ date_parts[1] | strip | date: "%a, %b %d"  }}
-                                      </p>
-
-                                      <div class="leader_update_event">
-                                        {{ event_parts[1] | strip }}
-                                      </div>
-
-                                      <div class="leader_update_url">
-                                        <a href="{{ link_parts[1] | strip }}" target="_blank">
-                                          {{ link_text_parts[1] | strip }}
-                                        </a>
-                                      </div>
-                                    </div>
-
-                                  {% endfor %}
-
-                                </div>
-                                {% endif %}
+                            
                               </div>
                             </div>
                           </div>
