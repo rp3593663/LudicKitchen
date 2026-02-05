@@ -330,20 +330,6 @@
                   {% for order in customer.orders %}
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
-                      {%- comment -%} 🔑 VARIANT ROLE DETECTION {%- endcomment -%}
-                        {% assign variant_title = line_item.variant.title %}
-                        {% assign is_taster = false %}
-                        {% assign is_sous_chef = false %}
-                        {% assign is_head_chef = false %}
-
-                        {% if variant_title == 'Taster' %}
-                          {% assign is_taster = true %}
-                        {% elsif variant_title == 'Sous Chef' %}
-                          {% assign is_sous_chef = true %}
-                        {% elsif variant_title == 'Head Chef' %}
-                          {% assign is_head_chef = true %}
-                        {% endif %}
-
                       {% if product != blank %}
                         {% if line_item.variant.title == 'Taster' %}
                           <div class="project_ledger_updates_fallback">
@@ -586,87 +572,48 @@
                                 <p>Tracks the process, progress, updates transparently to ensure that contribution comes with visibility.</p>
                               </div>
                               <div class="ledger_updates">
-                                {% comment %} {% assign dates = product.metafields.custom.ledger_update_date.value %}
+                                {% assign dates = product.metafields.custom.ledger_update_date.value %}
                                 {% assign events = product.metafields.custom.ledger_update_events.value %}
                                 {% assign links_text  = product.metafields.custom.ledger_update_link_text.value %}
-                                {% assign links  = product.metafields.custom.ledger_update_link.value %} {% endcomment %}
-                                 {% unless is_taster %}
+                                {% assign links  = product.metafields.custom.ledger_update_link.value %}
 
-                                  {% assign ledger_dates = blank %}
-                                  {% assign ledger_events = blank %}
-                                  {% assign ledger_links_text = blank %}
-                                  {% assign ledger_links = blank %}
+                                {% if dates != blank %}
+                                <div class="all_updates_ledger">
+                                  
+                                  <div class="leader_update_info head">
+                                    <h2>Date</h2>
+                                    <h2>Event</h2>
+                                    <h2>Link</h2>
+                                  </div>
 
-                                  {%- comment -%} 1️⃣ Variant metafields override {%- endcomment -%}
-                                  {% if line_item.variant.metafields.custom.ledger_update_date.value != blank %}
-                                    {% assign ledger_dates = line_item.variant.metafields.custom.ledger_update_date.value %}
-                                    {% assign ledger_events = line_item.variant.metafields.custom.ledger_update_events.value %}
-                                    {% assign ledger_links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
-                                    {% assign ledger_links = line_item.variant.metafields.custom.ledger_update_link.value %}
-                                  {% endif %}
+                                  {% for date_item in dates %}
+                                    {% assign index = forloop.index0 %}
 
-                                  {%- comment -%} 2️⃣ Product fallback for Sous Chef {%- endcomment -%}
-                                  {% if ledger_dates == blank and is_sous_chef %}
-                                    {% if product.metafields.custom.ledger_update_date.value != blank %}
-                                      {% assign ledger_dates = product.metafields.custom.ledger_update_date.value %}
-                                      {% assign ledger_events = product.metafields.custom.ledger_update_events.value %}
-                                      {% assign ledger_links_text = product.metafields.custom.ledger_update_link_text.value %}
-                                      {% assign ledger_links = product.metafields.custom.ledger_update_link.value %}
-                                    {% endif %}
-                                  {% endif %}
+                                    {% assign date_parts  = date_item | split: '||' %}
+                                    {% assign event_parts = events[index] | split: '||' %}
+                                    {% assign link_text_parts  = links_text[index] | split: '||' %}
+                                    {% assign link_parts  = links[index] | split: '||' %}
 
-                                  {%- comment -%} 3️⃣ Product fallback for Head Chef {%- endcomment -%}
-                                  {% if ledger_dates == blank and is_head_chef %}
-                                    {% if product.metafields.custom.ledger_update_date.value != blank %}
-                                      {% assign ledger_dates = product.metafields.custom.ledger_update_date.value %}
-                                      {% assign ledger_events = product.metafields.custom.ledger_update_events.value %}
-                                      {% assign ledger_links_text = product.metafields.custom.ledger_update_link_text.value %}
-                                      {% assign ledger_links = product.metafields.custom.ledger_update_link.value %}
-                                    {% endif %}
-                                  {% endif %}
+                                    <div class="leader_update_info">
+                                      <p class="leader_update_date">
+                                        {{ date_parts[1] | strip | date: "%a, %b %d"  }}
+                                      </p>
 
-                                {% if ledger_dates != blank %}
-                                  <div class="all_updates_ledger">
-                                    
-                                    <div class="leader_update_info head">
-                                      <h2>Date</h2>
-                                      <h2>Event</h2>
-                                      <h2>Link</h2>
-                                    </div>
-
-                                    {% for date_item in ledger_dates %}
-                                      {% assign index = forloop.index0 %}
-
-                                      {% assign date_parts  = date_item | split: '||' %}
-                                      {% assign event_parts = ledger_events[index] | split: '||' %}
-                                      {% assign link_text_parts  = ledger_links_text[index] | split: '||' %}
-                                      {% assign link_parts  = ledger_links[index] | split: '||' %}
-
-                                      <div class="leader_update_info">
-                                        <p class="leader_update_date">
-                                          {{ date_parts[1] | strip | date: "%a, %b %d"  }}
-                                        </p>
-
-                                        <div class="leader_update_event">
-                                          {{ event_parts[1] | strip }}
-                                        </div>
-
-                                        <div class="leader_update_url">
-                                          <a href="{{ link_parts[1] | strip }}" target="_blank">
-                                            {{ link_text_parts[1] | strip }}
-                                          </a>
-                                        </div>
+                                      <div class="leader_update_event">
+                                        {{ event_parts[1] | strip }}
                                       </div>
 
-                                    {% endfor %}
+                                      <div class="leader_update_url">
+                                        <a href="{{ link_parts[1] | strip }}" target="_blank">
+                                          {{ link_text_parts[1] | strip }}
+                                        </a>
+                                      </div>
+                                    </div>
 
-                                  </div>
+                                  {% endfor %}
+
+                                </div>
                                 {% endif %}
-
-                              {% endunless %}
-
-
-                            
                               </div>
                             </div>
                           </div>
