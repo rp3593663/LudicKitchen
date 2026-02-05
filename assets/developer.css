@@ -2356,6 +2356,9 @@ p#stickyText {
     color: var(--grey_text);
     cursor: pointer;
     text-decoration: unset;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .sidebar_content{
     display: flex;
