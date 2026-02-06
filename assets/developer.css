@@ -4079,13 +4079,17 @@ img.fallback_mobile_img {
         justify-content: center;
         padding-right: 0px!important;
     } */
-     .swiper.mySwiper.custom-product-slider {
-        margin-bottom: 16px;
+
+    .swiper.mySwiper.custom-product-slider {
         border-radius: 10px;
     }
-    
     .custom-product-slider .swiper-slide img {
         border-radius: 10px;
+    }
+    .product_custom_slider .swiper-pagination {
+        text-align: center;
+        padding-right: 0px;
+        position: unset;
     }
 }
 
