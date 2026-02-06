@@ -1501,10 +1501,10 @@ a.product__text {
   /* padding-top: 58% !important; */
   padding-top: 55% !important;
 }
-.product--thumbnail_slider .thumbnail-slider {
+/* .product--thumbnail_slider .thumbnail-slider {
     margin-top: -132px;
     margin-left: 30px;
-}
+} */
 .thumbnail-list__item:before {
     padding-bottom: 58%;
 }
