@@ -4077,6 +4077,7 @@ img.fallback_mobile_img {
     } */
      .swiper.mySwiper.custom-product-slider {
         margin-bottom: 16px;
+        border-radius: 10px;
     }
 }
 
