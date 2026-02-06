@@ -2827,8 +2827,7 @@ img.fallback_mobile_img {
     background: #FEFEFE;
 }
 
-.custom-product-slider .swiper-slide img,
-.custom-product-slider .swiper-slide video {
+.custom-product-slider .swiper-slide img {
     width: 100%;
     object-fit: contain;
     margin: auto;
@@ -2836,8 +2835,10 @@ img.fallback_mobile_img {
     border-radius: 16px;
 }
 
-.custom-product-slider .swiper-slide {
-    text-align: center;
+.custom-product-slider  .swiper-pagination {
+    bottom: 20px !important;
+    text-align: right;
+    padding-right: 30px;
 }
 
 .custom-product-slider .swiper-pagination-bullet {
