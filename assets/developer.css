@@ -2851,6 +2851,7 @@ img.fallback_mobile_img {
   border: 0;
   overflow: hidden;
   transition: width 0.5s ease, border-radius 0.5s ease;
+  opacity:1;
 }
 
 /* When active, expand the bullet from left */
