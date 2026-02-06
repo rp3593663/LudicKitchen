@@ -2384,11 +2384,11 @@ p#stickyText {
     display: flex;
     align-items: center;
     gap:8px;
-    font-weight: 500;
+    font-weight: 450;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: -0.8px;
-    color: var(--grey_text);
+    color: #c4c4c4;
     cursor: pointer;
     text-decoration: unset;
 }
