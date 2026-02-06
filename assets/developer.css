@@ -2784,6 +2784,7 @@ img.fallback_mobile_img {
 }
 .thumbnail {
   overflow: hidden;
+  position: relative;
 }
 
 .thumbnail::after {
