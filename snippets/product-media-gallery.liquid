@@ -11,7 +11,7 @@
   {% render 'product-media-gallery' %}
 {% endcomment %}
 
-{%- liquid
+{% comment %} {%- liquid
   if section.settings.hide_variants and variant_images.size == product.media.size
     assign single_media_visible = true
   endif
@@ -364,7 +364,7 @@
       </button>
     </slider-component>
   {%- endif -%}
-</media-gallery>
+</media-gallery> {% endcomment %}
 
 
 
