@@ -2826,7 +2826,18 @@ img.fallback_mobile_img {
 .product__media-list:active {
   cursor: grabbing;
 }
+.custom-product-slider .swiper-slide img,
+.custom-product-slider .swiper-slide video {
+    width: 60%;
+    object-fit: contain;
+    margin: auto;
+}
 
+.custom-product-slider .swiper-slide {
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
 
 
