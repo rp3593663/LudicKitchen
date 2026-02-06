@@ -2784,7 +2784,7 @@ img.fallback_mobile_img {
 }
 .thumbnail {
   overflow: hidden;
-  position: relative;
+  position: relative !important;
 }
 
 .thumbnail::after {
@@ -2794,13 +2794,13 @@ img.fallback_mobile_img {
   bottom: 0;
   height: 100%;
   width: 0%;
-  background: #AAAAAA;
-  transition: width linear;
+  background: #AAAAAA !important;
+  transition: width linear !important;
 }
 
 /* Active dot progress */
 .thumbnail[aria-current="true"]::after {
-  animation: dotProgress 10s linear forwards;
+  animation: dotProgress 10s linear forwards !important;
 }
 
 @keyframes dotProgress {
