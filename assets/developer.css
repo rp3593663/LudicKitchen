@@ -2917,6 +2917,9 @@ img.fallback_mobile_img {
         margin: 0;
         color: var(--black);
     }
+    .main_account_head svg{
+        display:block;
+    }
     .main_account_head {
         display: flex;
         align-items: center;
