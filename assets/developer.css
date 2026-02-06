@@ -2772,7 +2772,9 @@ img.fallback_mobile_img {
 .product__column-sticky {
     position: unset !important;
 }
-
+.thumbnail-list {
+    justify-content: end;
+}
 
 
 
