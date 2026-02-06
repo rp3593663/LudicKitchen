@@ -2387,7 +2387,7 @@ p#stickyText {
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
-    letter-spacing: -0.42px;
+    letter-spacing: -0.8px;
     color: var(--grey_text);
     cursor: pointer;
     text-decoration: unset;
