@@ -2750,17 +2750,16 @@ img.fallback_mobile_img {
     display:none;
 }
 .product--thumbnail_slider .thumbnail-slider .thumbnail {
-    border: 1px solid #00000012;
     border-radius: 8px;
     width: 7px;
     height: 7px;
     padding: 0;
     position: relative;
     transition: all .5s ease;
-    background-color: #00000012;
+    background-color: #D2D2D2;
 }
 .product__media-wrapper .thumbnail-slider .thumbnail-list .thumbnail-list__item .thumbnail[aria-current=true] {
-    width: 32px;
+    width: 35px;
     transition: all .5s ease;
     box-shadow:none;
 }
