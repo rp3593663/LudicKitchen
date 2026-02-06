@@ -18,8 +18,9 @@ if (!customElements.get('media-gallery')) {
         this.autoSlideTimer = null;
         this.userIsDragging = false;
         this.dragStartX = 0;
-        this.dragEndX = 0;
-        this.dragThreshold = 50; // px needed to trigger slide
+        this.currentTranslate = 0;
+        this.isDragging = false;
+
 
 
         if (!this.elements.thumbnails) return;
@@ -45,45 +46,51 @@ if (!customElements.get('media-gallery')) {
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
 
 
-        this.elements.viewer.addEventListener('pointerdown', (e) => {
-        this.dragStartX = e.clientX;
-        this.stopAutoSlide();
-      });
+        this.mediaList.addEventListener('pointerdown', (e) => {
+          this.isDragging = true;
+          this.dragStartX = e.clientX;
+          this.mediaList.style.transition = 'none';
+          this.stopAutoSlide();
+        });
 
-      this.elements.viewer.addEventListener('pointermove', (e) => {
-        this.dragEndX = e.clientX;
-      });
+        this.mediaList.addEventListener('pointermove', (e) => {
+          if (!this.isDragging) return;
 
-      this.elements.viewer.addEventListener('pointerup', () => {
-        const diff = this.dragStartX - this.dragEndX;
+          const diff = e.clientX - this.dragStartX;
+          this.mediaList.style.transform = `translateX(${this.currentTranslate + diff}px)`;
+        });
 
-        if (Math.abs(diff) > this.dragThreshold) {
-          const current = this.elements.viewer.querySelector('.is-active');
-          if (!current) return;
+        this.mediaList.addEventListener('pointerup', (e) => {
+          if (!this.isDragging) return;
+          this.isDragging = false;
 
-          let targetSlide;
+          const diff = e.clientX - this.dragStartX;
+          const threshold = this.mediaList.offsetWidth * 0.2;
 
-          if (diff > 0) {
-            // 👉 Swipe left → next
-            targetSlide =
-              current.nextElementSibling ||
-              this.elements.viewer.querySelector('[data-media-id]');
-          } else {
-            // 👈 Swipe right → previous
-            targetSlide =
-              current.previousElementSibling ||
-              this.elements.viewer.querySelector('[data-media-id]:last-child');
+          this.mediaList.style.transition = 'transform 0.6s ease';
+
+          const slides = Array.from(this.mediaList.children);
+          const activeIndex = slides.findIndex(slide =>
+            slide.classList.contains('is-active')
+          );
+
+          let targetIndex = activeIndex;
+
+          if (diff < -threshold && activeIndex < slides.length - 1) {
+            targetIndex = activeIndex + 1; // swipe left
+          } else if (diff > threshold && activeIndex > 0) {
+            targetIndex = activeIndex - 1; // swipe right
           }
 
+          const targetSlide = slides[targetIndex];
           if (targetSlide) {
+            this.currentTranslate = -targetIndex * this.mediaList.offsetWidth;
+            this.mediaList.style.transform = `translateX(${this.currentTranslate}px)`;
             this.setActiveMedia(targetSlide.dataset.mediaId, false);
           }
-        }
 
-        this.dragStartX = 0;
-        this.dragEndX = 0;
-        this.startAutoSlide();
-      });
+          this.startAutoSlide();
+        });
 
 
 
