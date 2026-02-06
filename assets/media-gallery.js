@@ -39,6 +39,31 @@ if (!customElements.get('media-gallery')) {
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
       }
 
+      // ✅ Enable Swiper ONLY for drag
+      this.swiper = new Swiper(this.elements.viewer, {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        simulateTouch: true,
+        grabCursor: true,
+        speed: 600,
+        resistanceRatio: 0.85,
+        autoplay: false,
+        pagination: false,
+        navigation: false,
+        on: {
+          slideChange: () => {
+            const activeIndex = this.swiper.activeIndex;
+            const slides = this.elements.viewer.querySelectorAll('[data-media-id]');
+            const targetSlide = slides[activeIndex];
+
+            if (targetSlide) {
+              this.setActiveMedia(targetSlide.dataset.mediaId, false);
+            }
+          }
+        }
+      });
+
+
       startAutoSlide() {
         // ✅ Prevent multiple intervals
         this.stopAutoSlide();
