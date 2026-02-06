@@ -2828,7 +2828,7 @@ img.fallback_mobile_img {
 }
 .custom-product-slider .swiper-slide img,
 .custom-product-slider .swiper-slide video {
-    width: 60%;
+    width: 100%;
     object-fit: contain;
     margin: auto;
     height:100%;
