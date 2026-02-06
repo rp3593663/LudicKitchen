@@ -2835,8 +2835,8 @@ img.fallback_mobile_img {
 }
 
 .custom-product-slider .swiper-slide {
-    margin: auto;
-    margin-bottom: 40px;
+    /* margin: auto; */
+    /* margin-bottom: 40px; */
     text-align: center;
 }
 
