@@ -2833,6 +2833,7 @@ img.fallback_mobile_img {
     margin: auto;
     height:100%;
     border-radius: 16px;
+    display: block;
 }
 
 .custom-product-slider  .swiper-pagination {
@@ -2876,7 +2877,7 @@ img.fallback_mobile_img {
 }
  
 .custom-product-slider .swiper-pagination-bullet .progress.active {
-  animation: progressAnim 5s linear forwards;
+  animation: progressAnim 10s linear forwards;
 }
 
 @keyframes progressAnim {
