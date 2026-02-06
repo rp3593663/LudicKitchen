@@ -37,33 +37,6 @@ if (!customElements.get('media-gallery')) {
         // this.elements.viewer.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
         this.elements.viewer.addEventListener('mouseleave', this.startAutoSlide.bind(this));
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
-
-
-
-
-        // ✅ Init Swiper ONLY for drag
-        this.swiper = new Swiper(this.elements.viewer, {
-          slidesPerView: 1,
-          allowTouchMove: true,
-          simulateTouch: true,
-          grabCursor: true,
-          speed: 600,
-          resistanceRatio: 0.85,
-          autoplay: false,
-          pagination: false,
-          navigation: false,
-          on: {
-            slideChange: () => {
-              const slides = Array.from(this.elements.viewer.querySelectorAll('[data-media-id]'));
-              const targetSlide = slides[this.swiper.activeIndex];
-
-              if (targetSlide) {
-                this.setActiveMedia(targetSlide.dataset.mediaId, false);
-              }
-            }
-          }
-        });
-
       }
 
       startAutoSlide() {
@@ -130,11 +103,11 @@ if (!customElements.get('media-gallery')) {
         }
 
         this.preventStickyHeader();
-        // window.setTimeout(() => {
-        //   if (!this.mql.matches || this.elements.thumbnails) {
-        //     activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-        //   }
-        // });
+        window.setTimeout(() => {
+          if (!this.mql.matches || this.elements.thumbnails) {
+            // activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+          }
+        });
 
         this.playActiveMedia(activeMedia);
 
@@ -162,18 +135,6 @@ if (!customElements.get('media-gallery')) {
 
           this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
         }
-
-
-        // ✅ Sync Swiper position
-        if (this.swiper) {
-          const slides = Array.from(this.elements.viewer.querySelectorAll('[data-media-id]'));
-          const index = slides.indexOf(activeMedia);
-
-          if (index >= 0 && this.swiper.activeIndex !== index) {
-            this.swiper.slideTo(index, 0, false);
-          }
-        }
-
       }
 
       setActiveThumbnail(thumbnail, mediaId) {
