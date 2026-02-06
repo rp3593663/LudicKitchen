@@ -4068,12 +4068,15 @@ img.fallback_mobile_img {
 
 
     /* ----------------- PDP Image slider ----------------- */
-    .product--thumbnail_slider .thumbnail-slider {
+    /* .product--thumbnail_slider .thumbnail-slider {
         margin-top: 0;
     }
     .thumbnail-list {
         justify-content: center;
         padding-right: 0px!important;
+    } */
+     .swiper.mySwiper.custom-product-slider {
+        margin-bottom: 16px;
     }
 }
 
