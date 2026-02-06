@@ -106,10 +106,10 @@ if (!customElements.get('media-gallery')) {
         window.setTimeout(() => {
           if (!this.mql.matches || this.elements.thumbnails) {
             // activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-            activeMedia.parentElement.scrollTo({
-              left: activeMedia.offsetLeft,
-              behavior: 'smooth'
-            });
+            const list = activeMedia.parentElement;
+            const index = Array.from(list.children).indexOf(activeMedia);
+
+            list.style.transform = `translateX(-${index * 100}%)`;
 
           }
         });
