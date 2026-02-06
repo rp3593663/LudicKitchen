@@ -2771,6 +2771,7 @@ img.fallback_mobile_img {
 }
 .product__column-sticky {
     position: unset !important;
+    height:100%;
 }
 .thumbnail-list {
     justify-content: end;
