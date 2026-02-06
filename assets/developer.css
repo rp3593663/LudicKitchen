@@ -2783,6 +2783,34 @@ img.fallback_mobile_img {
     margin-top: -60px;
     margin-left: 0;
 }
+.thumbnail {
+  overflow: hidden;
+}
+
+.thumbnail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0%;
+  background: #AAAAAA;
+  transition: width linear;
+}
+
+/* Active dot progress */
+.thumbnail[aria-current="true"]::after {
+  animation: dotProgress 10s linear forwards;
+}
+
+@keyframes dotProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 
 
