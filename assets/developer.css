@@ -2790,6 +2790,7 @@ img.fallback_mobile_img {
 .thumbnail[aria-current="true"]:after {
   content: "";
   position: absolute;
+  top:0;
   left: 0;
   bottom: 0;
   height: 100%;
