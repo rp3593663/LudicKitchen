@@ -4091,6 +4091,9 @@ img.fallback_mobile_img {
         padding-right: 0px;
         position: unset;
     }
+    .product_custom_slider {
+        margin-bottom: 16px;
+    }
 }
 
 
