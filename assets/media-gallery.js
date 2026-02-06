@@ -15,6 +15,10 @@ if (!customElements.get('media-gallery')) {
         this.autoSlideInterval = 10000; // Auto-slide every 10 seconds
         this.autoSlideTimer = null;
         this.userIsDragging = false;
+        this.dragStartX = 0;
+        this.dragEndX = 0;
+        this.dragThreshold = 50; // px needed to trigger slide
+
 
         if (!this.elements.thumbnails) return;
 
