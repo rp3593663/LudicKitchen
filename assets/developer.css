@@ -2797,6 +2797,7 @@ img.fallback_mobile_img {
   background: #AAAAAA !important;
   transition: width linear !important;
   animation: dotProgress 10s linear forwards !important;
+  z-index:1;
 }
 
 
