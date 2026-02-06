@@ -82,6 +82,14 @@ if (!customElements.get('media-gallery')) {
         this.elements.viewer.querySelectorAll('[data-media-id]').forEach((el) => el.classList.remove('is-active'));
         activeMedia.classList.add('is-active');
 
+        // ✅ Restart progress animation
+        this.elements.thumbnails.querySelectorAll('.thumbnail').forEach((dot) => {
+          dot.style.animation = 'none';
+          dot.offsetHeight; // force reflow
+          dot.style.animation = '';
+        });
+
+
         if (prepend) {
           activeMedia.parentElement.firstChild !== activeMedia && activeMedia.parentElement.prepend(activeMedia);
 
