@@ -12,7 +12,7 @@
 {% endcomment %}
 
 
-{%- liquid
+{% comment %} {%- liquid
   if section.settings.hide_variants and variant_images.size == product.media.size
     assign single_media_visible = true
   endif
@@ -62,35 +62,7 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  {% comment %} <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter"> {% endcomment %}
-   <div
-      id="GalleryViewer-{{ section.id }}"
-      class="swiper mySwiper custom-product-slider slider-mobile-gutter"
-    >
-      <div class="swiper-wrapper">
-        {% for media in product.media %}
-          {% unless excluded_alts contains media.alt %}
-            <div
-              class="swiper-slide product__media-item"
-              data-media-id="{{ section.id }}-{{ media.id }}"
-            >
-              {% case media.media_type %}
-                {% when 'image' %}
-                  {{ media.preview_image | image_url: width: media.preview_image.width | image_tag: loading: "lazy" }}
-
-                {% when 'video' or 'external_video' %}
-                  {{ media | media_tag: autoplay: true, controls: false, loop: true, muted: true }}
-
-                {% when 'model' %}
-                  {{ media | media_tag }}
-              {% endcase %}
-            </div>
-          {% endunless %}
-        {% endfor %}
-      </div>
-
-      <div class="swiper-pagination"></div>
-
+  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
@@ -217,8 +189,7 @@
         </span>
       </button>
     </div>
-  {% comment %} </slider-component> {% endcomment %}
-  </div>
+  </slider-component>
   {%- if first_3d_model -%}
     <button
       class="button button--full-width product__xr-button"
@@ -394,11 +365,11 @@
       </button>
     </slider-component>
   {%- endif -%}
-</media-gallery>
+</media-gallery> {% endcomment %}
 
 
 
-  {% comment %} <div class="{% if section.settings.enable_sticky_info %} product__column-sticky {% endif %}">
+  <div class="{% if section.settings.enable_sticky_info %} product__column-sticky {% endif %}">
     <div class="swiper mySwiper custom-product-slider">
       <div class="swiper-wrapper">
         {% for media in product.media %}
@@ -418,4 +389,4 @@
         </div>
       <div class="swiper-pagination"></div>
     </div>
-  </div> {% endcomment %}
+  </div>
