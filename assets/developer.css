@@ -3982,6 +3982,15 @@ img.fallback_mobile_img {
         grid-template-columns: 1fr 1fr;
         gap: 6px;
     }
+
+
+    /* PDP Image slider */
+    .product--thumbnail_slider .thumbnail-slider {
+        margin-top: 0;
+    }
+    .thumbnail-list {
+        justify-content: center;
+    }
 }
 
 
