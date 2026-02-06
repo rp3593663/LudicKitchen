@@ -2802,6 +2802,9 @@ img.fallback_mobile_img {
   z-index:1;
 }
 
+.product--thumbnail_slider .slider-mobile-gutter .slider-button {
+    display: none;
+  }
 
 @keyframes dotProgress {
   from {
