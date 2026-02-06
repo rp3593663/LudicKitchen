@@ -2821,7 +2821,7 @@ img.fallback_mobile_img {
 } */
 
 
-.swiper.mySwiper.custom-product-slider {
+.custom-product-slider .swiper-slide {
     border-radius: 16px;
     border: 1px solid #C7C8CA;
     background: #FEFEFE;
