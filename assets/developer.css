@@ -2349,11 +2349,11 @@ p#stickyText {
     display: none!important;
 }
 .nav_link.desktop_sidebar_content{
-    font-weight: 500;
+    font-weight: 450;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: -0.42px;
-    color: var(--grey_text);
+    color: #c4c4c4;
     cursor: pointer;
     text-decoration: unset;
     display: flex;
