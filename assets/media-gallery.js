@@ -162,6 +162,15 @@ if (!customElements.get('media-gallery')) {
         }
       }
 
+      if (this.swiper) {
+        const slides = Array.from(this.elements.viewer.querySelectorAll('[data-media-id]'));
+        const index = slides.indexOf(activeMedia);
+        if (index >= 0) {
+          this.swiper.slideTo(index, 0, false);
+        }
+      }
+
+
       setActiveThumbnail(thumbnail, mediaId) {
         if (!this.elements.thumbnails || !thumbnail) {
           console.warn('❌ setActiveThumbnail: No matching thumbnail for mediaId:', mediaId);
