@@ -45,48 +45,46 @@ if (!customElements.get('media-gallery')) {
         this.elements.viewer.addEventListener('mouseleave', this.startAutoSlide.bind(this));
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
 
+        let startX = 0;
+        let isDragging = false;
 
-        this.mediaList.addEventListener('pointerdown', (e) => {
-          this.isDragging = true;
-          this.dragStartX = e.clientX;
-          this.mediaList.style.transition = 'none';
+        this.elements.viewer.addEventListener('pointerdown', (e) => {
+          startX = e.clientX;
+          isDragging = true;
           this.stopAutoSlide();
         });
 
-        this.mediaList.addEventListener('pointermove', (e) => {
-          if (!this.isDragging) return;
+        this.elements.viewer.addEventListener('pointerup', (e) => {
+          if (!isDragging) return;
+          isDragging = false;
 
-          const diff = e.clientX - this.dragStartX;
-          this.mediaList.style.transform = `translateX(${this.currentTranslate + diff}px)`;
-        });
+          const diff = e.clientX - startX;
+          const threshold = 80; // swipe sensitivity
 
-        this.mediaList.addEventListener('pointerup', (e) => {
-          if (!this.isDragging) return;
-          this.isDragging = false;
-
-          const diff = e.clientX - this.dragStartX;
-          const threshold = this.mediaList.offsetWidth * 0.2;
-
-          this.mediaList.style.transition = 'transform 0.6s ease';
-
-          const slides = Array.from(this.mediaList.children);
-          const activeIndex = slides.findIndex(slide =>
-            slide.classList.contains('is-active')
-          );
-
-          let targetIndex = activeIndex;
-
-          if (diff < -threshold && activeIndex < slides.length - 1) {
-            targetIndex = activeIndex + 1; // swipe left
-          } else if (diff > threshold && activeIndex > 0) {
-            targetIndex = activeIndex - 1; // swipe right
+          if (Math.abs(diff) < threshold) {
+            this.startAutoSlide();
+            return;
           }
 
-          const targetSlide = slides[targetIndex];
-          if (targetSlide) {
-            this.currentTranslate = -targetIndex * this.mediaList.offsetWidth;
-            this.mediaList.style.transform = `translateX(${this.currentTranslate}px)`;
-            this.setActiveMedia(targetSlide.dataset.mediaId, false);
+          const current = this.elements.viewer.querySelector('.is-active');
+          if (!current) return;
+
+          let target;
+
+          if (diff < 0) {
+            // swipe left → next
+            target =
+              current.nextElementSibling ||
+              this.elements.viewer.querySelector('[data-media-id]');
+          } else {
+            // swipe right → prev
+            target =
+              current.previousElementSibling ||
+              this.elements.viewer.querySelector('[data-media-id]:last-child');
+          }
+
+          if (target) {
+            this.setActiveMedia(target.dataset.mediaId, false);
           }
 
           this.startAutoSlide();
