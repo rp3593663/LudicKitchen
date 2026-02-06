@@ -11,17 +11,10 @@ if (!customElements.get('media-gallery')) {
           viewer: this.querySelector('[id^="GalleryViewer"]'),
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
         };
-        this.mediaList = this.querySelector('.product__media-list');
-
         this.mql = window.matchMedia('(min-width: 750px)');
         this.autoSlideInterval = 10000; // Auto-slide every 10 seconds
         this.autoSlideTimer = null;
         this.userIsDragging = false;
-        this.dragStartX = 0;
-        this.currentTranslate = 0;
-        this.isDragging = false;
-
-
 
         if (!this.elements.thumbnails) return;
 
@@ -44,56 +37,6 @@ if (!customElements.get('media-gallery')) {
         // this.elements.viewer.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
         this.elements.viewer.addEventListener('mouseleave', this.startAutoSlide.bind(this));
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
-
-        let startX = 0;
-        let isDragging = false;
-
-        this.elements.viewer.addEventListener('pointerdown', (e) => {
-          startX = e.clientX;
-          isDragging = true;
-          this.stopAutoSlide();
-        });
-
-        this.elements.viewer.addEventListener('pointerup', (e) => {
-          if (!isDragging) return;
-          isDragging = false;
-
-          const diff = e.clientX - startX;
-          const threshold = 80; // swipe sensitivity
-
-          if (Math.abs(diff) < threshold) {
-            this.startAutoSlide();
-            return;
-          }
-
-          const current = this.elements.viewer.querySelector('.is-active');
-          if (!current) return;
-
-          let target;
-
-          if (diff < 0) {
-            // swipe left → next
-            target =
-              current.nextElementSibling ||
-              this.elements.viewer.querySelector('[data-media-id]');
-          } else {
-            // swipe right → prev
-            target =
-              current.previousElementSibling ||
-              this.elements.viewer.querySelector('[data-media-id]:last-child');
-          }
-
-          if (target) {
-            this.setActiveMedia(target.dataset.mediaId, false);
-          }
-
-          this.startAutoSlide();
-        });
-
-
-
-
-
       }
 
       startAutoSlide() {
@@ -160,11 +103,11 @@ if (!customElements.get('media-gallery')) {
         }
 
         this.preventStickyHeader();
-        // window.setTimeout(() => {
-        //   if (!this.mql.matches || this.elements.thumbnails) {
-        //     activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-        //   }
-        // });
+        window.setTimeout(() => {
+          if (!this.mql.matches || this.elements.thumbnails) {
+            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+          }
+        });
 
         this.playActiveMedia(activeMedia);
 
@@ -192,14 +135,6 @@ if (!customElements.get('media-gallery')) {
 
           this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
         }
-
-        const slides = Array.from(activeMedia.parentElement.children);
-        const index = slides.indexOf(activeMedia);
-
-        this.currentTranslate = -index * activeMedia.parentElement.offsetWidth;
-        activeMedia.parentElement.style.transform =
-          `translateX(${this.currentTranslate}px)`;
-
       }
 
       setActiveThumbnail(thumbnail, mediaId) {
