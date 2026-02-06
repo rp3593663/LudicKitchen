@@ -2820,6 +2820,13 @@ img.fallback_mobile_img {
   }
 } */
 
+
+.swiper.mySwiper.custom-product-slider {
+    border-radius: 16px;
+    border: 1px solid #C7C8CA;
+    background: #FEFEFE;
+}
+
 .custom-product-slider .swiper-slide img,
 .custom-product-slider .swiper-slide video {
     width: 100%;
