@@ -194,6 +194,14 @@ if (!customElements.get('media-gallery')) {
 
           this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
         }
+
+        const slides = Array.from(activeMedia.parentElement.children);
+        const index = slides.indexOf(activeMedia);
+
+        this.currentTranslate = -index * activeMedia.parentElement.offsetWidth;
+        activeMedia.parentElement.style.transform =
+          `translateX(${this.currentTranslate}px)`;
+
       }
 
       setActiveThumbnail(thumbnail, mediaId) {
