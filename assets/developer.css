@@ -2826,14 +2826,6 @@ img.fallback_mobile_img {
 .product__media-list:active {
   cursor: grabbing;
 }
-.product__media-list {
-  display: flex;
-}
-
-.product__media-item {
-  flex-shrink: 0;
-  width: 100%;
-}
 
 
 
