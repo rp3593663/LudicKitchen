@@ -2339,7 +2339,7 @@ p#stickyText {
     min-height: 100vh;
     height: 100vh;
     overflow-y: auto;
-    padding: 32px 35px;
+    padding: 32px 34px;
     display: flex;
     align-items: baseline;
     flex-direction: column;
