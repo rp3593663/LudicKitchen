@@ -2831,6 +2831,7 @@ img.fallback_mobile_img {
     width: 60%;
     object-fit: contain;
     margin: auto;
+    height:100%;
 }
 
 .custom-product-slider .swiper-slide {
