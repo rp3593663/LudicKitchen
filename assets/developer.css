@@ -2816,22 +2816,12 @@ img.fallback_mobile_img {
 }
 
 .product__media-list {
-  touch-action: pan-y;
   cursor: grab;
 }
 .product__media-list:active {
   cursor: grabbing;
 }
-.product__media-list {
-  display: flex;
-  width: 100%;
-  will-change: transform;
-}
 
-.product__media-item {
-  min-width: 100%;
-  flex-shrink: 0;
-}
 
 
 
