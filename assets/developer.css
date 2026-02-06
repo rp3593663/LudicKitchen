@@ -2877,6 +2877,15 @@ img.fallback_mobile_img {
   animation: progressAnim 5s linear forwards;
 }
 
+@keyframes progressAnim {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 
 
 @media(min-width: 768px){
