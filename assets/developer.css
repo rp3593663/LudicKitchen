@@ -2775,6 +2775,7 @@ img.fallback_mobile_img {
 }
 .thumbnail-list {
     justify-content: end;
+    padding-right: 20px !important;
 }
 .product--thumbnail_slider .thumbnail-slider {
     margin-top: -60px;
