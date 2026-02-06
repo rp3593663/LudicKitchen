@@ -2417,6 +2417,9 @@ p#stickyText {
     vertical-align: middle;
     margin: 0px 0px 15px;
 }
+.main_account_head svg{
+    display:none;
+}
 .dashboard_content_area {
     border: 1px solid #EFEFEF;
     background: var(--grey);
