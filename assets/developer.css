@@ -4079,6 +4079,10 @@ img.fallback_mobile_img {
         margin-bottom: 16px;
         border-radius: 10px;
     }
+    
+    .custom-product-slider .swiper-slide img {
+        border-radius: 10px;
+    }
 }
 
 
