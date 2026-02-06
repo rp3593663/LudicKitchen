@@ -162,11 +162,11 @@ if (!customElements.get('media-gallery')) {
         }
 
         this.preventStickyHeader();
-        window.setTimeout(() => {
-          if (!this.mql.matches || this.elements.thumbnails) {
-            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-          }
-        });
+        // window.setTimeout(() => {
+        //   if (!this.mql.matches || this.elements.thumbnails) {
+        //     activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+        //   }
+        // });
 
         this.playActiveMedia(activeMedia);
 
