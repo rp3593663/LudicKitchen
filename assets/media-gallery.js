@@ -11,6 +11,8 @@ if (!customElements.get('media-gallery')) {
           viewer: this.querySelector('[id^="GalleryViewer"]'),
           thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
         };
+        this.mediaList = this.querySelector('.product__media-list');
+
         this.mql = window.matchMedia('(min-width: 750px)');
         this.autoSlideInterval = 10000; // Auto-slide every 10 seconds
         this.autoSlideTimer = null;
