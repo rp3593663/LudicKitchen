@@ -2855,9 +2855,9 @@ img.fallback_mobile_img {
 
 /* When active, expand the bullet from left */
 .custom-product-slider .swiper-pagination-bullet-active {
-  width: 32px;
+  width: 35px;
   border-radius: 8px;
-  background-color: #00000012;
+  background-color: #d2d2d2;
   border: 0;
 }
 
