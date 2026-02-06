@@ -3024,7 +3024,7 @@ img.fallback_mobile_img {
         font-size: 16px;
         line-height: 16px;
         letter-spacing: -.42px;
-        color: var(--grey_text);
+        color: #c4c4c4;
         cursor: pointer;
         text-decoration: unset;
         border-bottom: 1px solid #F0F0F0;
