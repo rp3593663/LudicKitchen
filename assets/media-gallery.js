@@ -105,7 +105,12 @@ if (!customElements.get('media-gallery')) {
         this.preventStickyHeader();
         window.setTimeout(() => {
           if (!this.mql.matches || this.elements.thumbnails) {
-            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+            // activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+            activeMedia.parentElement.scrollTo({
+              left: activeMedia.offsetLeft,
+              behavior: 'smooth'
+            });
+
           }
         });
 
