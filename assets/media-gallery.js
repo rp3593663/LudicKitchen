@@ -27,23 +27,17 @@ if (!customElements.get('media-gallery')) {
 
         this.startAutoSlide();
 
+        // ✅ Force initial active dot sync
+        const firstActive = this.elements.viewer.querySelector('.is-active');
+        if (firstActive) {
+          this.setActiveMedia(firstActive.dataset.mediaId, false);
+        }
+
+
         // this.elements.viewer.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
         this.elements.viewer.addEventListener('mouseleave', this.startAutoSlide.bind(this));
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
       }
-
-      
-
-      // startAutoSlide() {
-      //   this.autoSlideTimer = setInterval(() => {
-      //     const currentSlide = this.elements.viewer.querySelector('.is-active');
-      //     if (currentSlide) {
-      //       const nextSlide = currentSlide.nextElementSibling || this.elements.viewer.firstElementChild;
-      //       this.setActiveMedia(nextSlide.dataset.mediaId, false);
-      //     }
-      //   }, this.autoSlideInterval);
-      // }
-
 
       startAutoSlide() {
         // ✅ Prevent multiple intervals
@@ -62,14 +56,6 @@ if (!customElements.get('media-gallery')) {
           }
         }, this.autoSlideInterval);
       }
-
-
-      // stopAutoSlide() {
-      //   if (this.autoSlideTimer) {
-      //     clearInterval(this.autoSlideTimer);
-      //     this.autoSlideTimer = null;
-      //   }
-      // }
 
 
       stopAutoSlide() {
