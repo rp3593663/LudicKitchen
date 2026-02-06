@@ -2762,6 +2762,8 @@ img.fallback_mobile_img {
     width: 35px;
     transition: all .5s ease;
     box-shadow:none;
+    border-color: transparent;
+    background: #AAAAAA;
 }
 .thumbnail-list__item:before {
     padding-bottom: 0 !important;
