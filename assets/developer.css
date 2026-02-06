@@ -3020,7 +3020,7 @@ img.fallback_mobile_img {
         display: flex;
         align-items: center;
         gap: 8px;
-        font-weight: 500;
+        font-weight: 450;
         font-size: 16px;
         line-height: 16px;
         letter-spacing: -.42px;
