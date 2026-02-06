@@ -2920,6 +2920,9 @@ img.fallback_mobile_img {
     .main_account_head svg{
         display:block;
     }
+    .account_content .account_dashboard_content.active .main_account_head svg path {
+        stroke: #1a1a1a;
+    }
     .main_account_head {
         display: flex;
         align-items: end;
