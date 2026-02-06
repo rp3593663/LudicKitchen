@@ -2762,6 +2762,7 @@ img.fallback_mobile_img {
 .product__media-wrapper .thumbnail-slider .thumbnail-list .thumbnail-list__item .thumbnail[aria-current=true] {
     width: 32px;
     transition: all .5s ease;
+    box-shadow:none;
 }
 .thumbnail-list__item:before {
     padding-bottom: 0 !important;
