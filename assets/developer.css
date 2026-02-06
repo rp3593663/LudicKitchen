@@ -2833,6 +2833,7 @@ img.fallback_mobile_img {
     object-fit: contain;
     margin: auto;
     height:100%;
+    border-radius: 16px;
 }
 
 .custom-product-slider .swiper-slide {
