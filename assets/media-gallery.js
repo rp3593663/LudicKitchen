@@ -162,6 +162,18 @@ if (!customElements.get('media-gallery')) {
 
           this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
         }
+
+        
+        // ✅ Sync Swiper position
+        if (this.swiper) {
+          const slides = Array.from(this.elements.viewer.querySelectorAll('[data-media-id]'));
+          const index = slides.indexOf(activeMedia);
+
+          if (index >= 0 && this.swiper.activeIndex !== index) {
+            this.swiper.slideTo(index, 0, false);
+          }
+        }
+
       }
 
       setActiveThumbnail(thumbnail, mediaId) {
