@@ -997,7 +997,8 @@ a.product__text {
   }
 
   .product--thumbnail_slider .slider-mobile-gutter .slider-button {
-    display: flex;
+    /* display: flex; */
+    display: none;
   }
 }
 
