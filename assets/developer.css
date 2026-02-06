@@ -2835,7 +2835,7 @@ img.fallback_mobile_img {
     background: #FEFEFE;
 }
 
-.product--thumbnail_slider .swiper-slide img {
+.product_custom_slider .swiper-slide img {
     width: 100%;
     object-fit: contain;
     margin: auto;
@@ -2844,13 +2844,13 @@ img.fallback_mobile_img {
     display: block;
 }
 
-.product--thumbnail_slider  .swiper-pagination {
+.product_custom_slider  .swiper-pagination {
     bottom: 20px !important;
     text-align: right;
     padding-right: 30px;
 }
 
-.product--thumbnail_slider .swiper-pagination-bullet {
+.product_custom_slider .swiper-pagination-bullet {
   position: relative;
   width: 7px;
   height: 7px;
@@ -2864,14 +2864,14 @@ img.fallback_mobile_img {
 }
 
 /* When active, expand the bullet from left */
-.product--thumbnail_slider .swiper-pagination-bullet-active {
+.product_custom_slider .swiper-pagination-bullet-active {
   width: 35px;
   border-radius: 8px;
   background-color: #d2d2d2;
   border: 0;
 }
 
-.product--thumbnail_slider .swiper-pagination-bullet .progress {
+.product_custom_slider .swiper-pagination-bullet .progress {
   position: absolute;
   top: 0;
   left: 0;
@@ -2884,7 +2884,7 @@ img.fallback_mobile_img {
   transition: all .5s ease;
 }
  
-.product--thumbnail_slider .swiper-pagination-bullet .progress.active {
+.product_custom_slider .swiper-pagination-bullet .progress.active {
   animation: progressAnim 10s linear forwards;
 }
 
