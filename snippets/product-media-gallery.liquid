@@ -371,7 +371,7 @@
 
 {% assign excluded_alts = 'taster-image,sous-chef-image,head-chef-image' | split: ',' %}
 
-<div class="{% if section.settings.enable_sticky_info %} product__column-sticky {% endif %}">
+<div class="{% if section.settings.enable_sticky_info %} product__column-sticky {% endif %} product_custom_slider">
   <div class="swiper mySwiper custom-product-slider">
     <div class="swiper-wrapper">
       {% for media in product.media %}
