@@ -2393,9 +2393,9 @@ p#stickyText {
     text-decoration: unset;
 }
 .account_nav .nav_link svg{
-    min-width: 16px;
+    /* min-width: 16px;
     width: 16px;
-    height: 16px;
+    height: 16px; */
 }
 .account_nav .nav_link svg path{
    stroke: var(--grey_text);
