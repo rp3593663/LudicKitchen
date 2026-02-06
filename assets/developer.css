@@ -2825,7 +2825,7 @@ img.fallback_mobile_img {
     align-items:center;
 }
 
-.swiper-wrapper {
+.swiper.mySwiper.custom-product-slider {
     border-radius: 16px;
     border: 1px solid #C7C8CA;
     background: #FEFEFE;
