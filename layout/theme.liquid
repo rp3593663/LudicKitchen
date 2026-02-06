@@ -474,5 +474,48 @@
     <!------------------------------------------>
     <!------------------------------------------>
     <!------------------------------------------>
+
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const zipInput = document.querySelector('input[name="zip"]');
+        const cityInput = document.querySelector('input[name="city"]');
+        const stateInput = document.querySelector('input[name="province"]');
+        const countryInput = document.querySelector('input[name="country"]');
+
+        if (!zipInput) return;
+
+        zipInput.addEventListener('input', function () {
+          const pin = zipInput.value.trim();
+
+          // 🇮🇳 India PIN = exactly 6 digits
+          if (!/^\d{6}$/.test(pin)) return;
+
+          fetch(`https://api.postalpincode.in/pincode/${pin}`)
+            .then(res => res.json())
+            .then(data => {
+              if (
+                data[0].Status === "Success" &&
+                data[0].PostOffice &&
+                data[0].PostOffice.length
+              ) {
+                const postOffice = data[0].PostOffice[0];
+
+                cityInput.value = postOffice.District || '';
+                stateInput.value = postOffice.State || '';
+                countryInput.value = 'India';
+              } else {
+                console.warn('Invalid PIN code');
+              }
+            })
+            .catch(err => {
+              console.error('PIN lookup failed', err);
+            });
+        });
+      });
+      </script>
+
   </body>
 </html>
