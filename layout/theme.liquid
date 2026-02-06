@@ -528,8 +528,8 @@
             const swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-              delay: 5000,
-              disableOnInteraction: false
+              {% comment %} delay: 5000, {% endcomment %}
+              {% comment %} disableOnInteraction: false {% endcomment %}
             },
             pagination: {
               el: ".swiper-pagination",
