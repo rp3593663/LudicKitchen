@@ -2776,6 +2776,10 @@ img.fallback_mobile_img {
 .thumbnail-list {
     justify-content: end;
 }
+.product--thumbnail_slider .thumbnail-slider {
+    margin-top: -60px;
+    margin-left: 0;
+}
 
 
 
