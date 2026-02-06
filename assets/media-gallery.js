@@ -287,168 +287,36 @@ if (!customElements.get('media-gallery')) {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('media-gallery').forEach((gallery) => {
+    const sliderList = gallery.querySelector('.product__media-list');
 
-if (!customElements.get('media-gallery')) {
-  customElements.define(
-    'media-gallery',
-    class MediaGallery extends HTMLElement {
-      constructor() {
-        super();
-        this.elements = {
-          liveRegion: this.querySelector('[id^="GalleryStatus"]'),
-          viewer: this.querySelector('[id^="GalleryViewer"]'),
-          thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
-        };
-        this.mql = window.matchMedia('(min-width: 750px)');
-        this.autoSlideInterval = 10000; // Auto-slide every 10 seconds
-        this.autoSlideTimer = null;
-        this.userIsDragging = false;
+    if (!sliderList || sliderList.classList.contains('swiper-initialized')) return;
 
-        if (!this.elements.thumbnails) return;
+    // Add Swiper classes
+    sliderList.classList.add('swiper-wrapper');
+    sliderList.classList.remove('grid', 'slider', 'slider--mobile');
 
-        this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 100));
-        this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
-          mediaToSwitch
-            .querySelector('button')
-            .addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
-        });
+    sliderList.querySelectorAll('.product__media-item').forEach(slide => {
+      slide.classList.add('swiper-slide');
+      slide.classList.remove('slider__slide');
+    });
 
-        this.startAutoSlide();
+    // Create pagination
+    const pagination = document.createElement('div');
+    pagination.className = 'swiper-pagination';
+    sliderList.parentNode.appendChild(pagination);
 
-        // this.elements.viewer.addEventListener('mouseenter', this.stopAutoSlide.bind(this));
-        this.elements.viewer.addEventListener('mouseleave', this.startAutoSlide.bind(this));
-        if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
-      }
-
-      
-
-      startAutoSlide() {
-        this.autoSlideTimer = setInterval(() => {
-          const currentSlide = this.elements.viewer.querySelector('.is-active');
-          if (currentSlide) {
-            const nextSlide = currentSlide.nextElementSibling || this.elements.viewer.firstElementChild;
-            this.setActiveMedia(nextSlide.dataset.mediaId, false);
-          }
-        }, this.autoSlideInterval);
-      }
-
-      stopAutoSlide() {
-        if (this.autoSlideTimer) {
-          clearInterval(this.autoSlideTimer);
-          this.autoSlideTimer = null;
-        }
-      }
-
-      onSlideChanged(event) {
-        const thumbnail = this.elements.thumbnails.querySelector(
-          `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
-        );
-        this.setActiveThumbnail(thumbnail, event.detail.currentElement.dataset.mediaId);
-      }
-
-      setActiveMedia(mediaId, prepend) {
-        const activeMedia =
-          this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`) ||
-          this.elements.viewer.querySelector('[data-media-id]');
-        if (!activeMedia) return;
-
-        this.elements.viewer.querySelectorAll('[data-media-id]').forEach((el) => el.classList.remove('is-active'));
-        activeMedia.classList.add('is-active');
-
-        if (prepend) {
-          activeMedia.parentElement.firstChild !== activeMedia && activeMedia.parentElement.prepend(activeMedia);
-
-          if (this.elements.thumbnails) {
-            const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);
-            activeThumbnail?.parentElement.firstChild !== activeThumbnail &&
-              activeThumbnail?.parentElement.prepend(activeThumbnail);
-          }
-
-          if (this.elements.viewer.slider) this.elements.viewer.resetPages();
-        }
-
-        this.preventStickyHeader();
-        window.setTimeout(() => {
-          if (!this.mql.matches || this.elements.thumbnails) {
-            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-          }
-        });
-
-        this.playActiveMedia(activeMedia);
-
-        if (!this.elements.thumbnails) return;
-
-        let activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);
-
-        // ✅ Clear previous aria-current
-        this.elements.thumbnails.querySelectorAll('button').forEach((btn) => {
-          btn.removeAttribute('aria-current');
-        });
-
-        // ✅ Fallback to first thumbnail if not found
-        if (!activeThumbnail) {
-          activeThumbnail = this.elements.thumbnails.querySelector('[data-target]');
-          console.warn('⚠️ Fallback: no thumbnail matched mediaId:', mediaId);
-        }
-
-        if (activeThumbnail) {
-          activeThumbnail.querySelector('button').setAttribute('aria-current', true);
-
-          if (!this.elements.thumbnails.isSlideVisible(activeThumbnail, 10)) {
-            this.elements.thumbnails.slider.scrollTo({ left: activeThumbnail.offsetLeft });
-          }
-
-          this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
-        }
-      }
-
-      setActiveThumbnail(thumbnail, mediaId) {
-        if (!this.elements.thumbnails || !thumbnail) {
-          console.warn('❌ setActiveThumbnail: No matching thumbnail for mediaId:', mediaId);
-          return;
-        }
-
-        this.elements.thumbnails.querySelectorAll('button').forEach((el) => {
-          el.removeAttribute('aria-current');
-        });
-
-        thumbnail.querySelector('button').setAttribute('aria-current', true);
-
-        if (!this.elements.thumbnails.isSlideVisible(thumbnail, 10)) {
-          this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });
-        }
-      }
-
-      announceLiveRegion(activeItem, position) {
-        const image = activeItem.querySelector('.product__modal-opener--image img');
-        if (!image) return;
-        image.onload = () => {
-          this.elements.liveRegion.setAttribute('aria-hidden', false);
-          this.elements.liveRegion.innerHTML = window.accessibilityStrings.imageAvailable.replace('[index]', position);
-          setTimeout(() => {
-            this.elements.liveRegion.setAttribute('aria-hidden', true);
-          }, 2000);
-        };
-        image.src = image.src;
-      }
-
-      playActiveMedia(activeItem) {
-        window.pauseAllMedia();
-        const deferredMedia = activeItem.querySelector('.deferred-media');
-        if (deferredMedia) deferredMedia.loadContent(false);
-      }
-
-      preventStickyHeader() {
-        this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
-        if (!this.stickyHeader) return;
-        this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-      }
-
-      removeListSemantic() {
-        if (!this.elements.viewer.slider) return;
-        this.elements.viewer.slider.setAttribute('role', 'presentation');
-        this.elements.viewer.sliderItems.forEach((slide) => slide.setAttribute('role', 'presentation'));
-      }
-    }
-  );
-}
+    // Init Swiper
+    new Swiper(sliderList.parentNode, {
+      slidesPerView: 1,
+      loop: false,
+      pagination: {
+        el: pagination,
+        clickable: true
+      },
+      observer: true,
+      observeParents: true
+    });
+  });
+});
