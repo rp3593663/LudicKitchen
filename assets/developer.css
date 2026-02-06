@@ -2757,6 +2757,7 @@ img.fallback_mobile_img {
     position: relative;
     transition: all .5s ease;
     background-color: #D2D2D2;
+    border: 0;
 }
 .product__media-wrapper .thumbnail-slider .thumbnail-list .thumbnail-list__item .thumbnail[aria-current=true] {
     width: 35px;
