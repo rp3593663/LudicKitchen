@@ -130,11 +130,11 @@ if (!customElements.get('media-gallery')) {
         }
 
         this.preventStickyHeader();
-        window.setTimeout(() => {
-          if (!this.mql.matches || this.elements.thumbnails) {
-            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-          }
-        });
+        // window.setTimeout(() => {
+        //   if (!this.mql.matches || this.elements.thumbnails) {
+        //     activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+        //   }
+        // });
 
         this.playActiveMedia(activeMedia);
 
@@ -163,7 +163,7 @@ if (!customElements.get('media-gallery')) {
           this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
         }
 
-        
+
         // ✅ Sync Swiper position
         if (this.swiper) {
           const slides = Array.from(this.elements.viewer.querySelectorAll('[data-media-id]'));
