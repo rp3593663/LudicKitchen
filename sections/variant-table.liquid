@@ -294,7 +294,8 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(() => {
         // 🚀 Go to checkout with ONLY this product
-        window.location.href = "/checkout";
+        {% comment %} window.location.href = "/checkout"; {% endcomment %}
+         window.location.href = `/checkout?variant=${variantId}&quantity=1`;
       })
       .catch(error => {
         console.error(error);
