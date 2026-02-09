@@ -188,29 +188,29 @@ if (!customElements.get('media-gallery')) {
   );
 }
 
+document.addEventListener('DOMContentLoaded', function () {
 
-  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  if (!window.PhotoSwipeLightbox) {
+    console.error('PhotoSwipeLightbox not loaded');
+    return;
+  }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.custom-product-slider',
+    children: 'a.pswp-item',
+    pswpModule: PhotoSwipe,
 
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '.custom-product-slider',
-      children: 'a.pswp-item',
-      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js'),
-
-      bgOpacity: 1,
-      showHideAnimationType: 'fade',
-      initialZoomLevel: 'fit',
-      secondaryZoomLevel: 1.5,
-      maxZoomLevel: 2,
-      wheelToZoom: true,
-
-      // 👇 THIS is critical with Swiper
-      clickToCloseNonZoomable: false
-    });
-
-    lightbox.init();
+    bgOpacity: 1,
+    showHideAnimationType: 'fade',
+    initialZoomLevel: 'fit',
+    secondaryZoomLevel: 1.5,
+    maxZoomLevel: 2,
+    wheelToZoom: true,
+    clickToCloseNonZoomable: false
   });
+
+  lightbox.init();
+});
 
 
 
