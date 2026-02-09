@@ -61,6 +61,8 @@ html {
 .template-index .announcement-bar-section ,
 .template-product  .announcement-bar-section  {
     display: block;
+    position:sticky;
+    top:0;
 }
 .announcement-bar-section  {
     display: none;
