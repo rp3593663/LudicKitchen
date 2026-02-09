@@ -2931,12 +2931,11 @@ button.pswp__button.pswp__button--zoom {
   margin: 0 5px;
   display: block!important; 
   background-color: #d2d2d2;
-  transition: width 0.5s ease, border-radius 0.5s ease;
+  /* transition: width 0.5s ease, border-radius 0.5s ease; */
 }
 .pswp__bullet--active { 
   position: relative;
   width: 30px;
-  animation: progressAnim 10s linear forwards;
 }
 .pswp__bullet--active:before {
     background-color: #AAAAAA;
