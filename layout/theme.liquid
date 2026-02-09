@@ -591,5 +591,54 @@
       </div>
 
 
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+
+            document.body.addEventListener('click', function (e) {
+              const img = e.target.closest('.pswp-trigger');
+              if (!img) return;
+
+              e.preventDefault();
+              e.stopPropagation();
+
+              const images = document.querySelectorAll('.pswp-trigger');
+
+              const items = Array.from(images).map(el => ({
+                src: el.dataset.pswpSrc,
+                w: parseInt(el.dataset.pswpWidth, 10),
+                h: parseInt(el.dataset.pswpHeight, 10)
+              }));
+
+              const index = parseInt(img.dataset.pswpIndex, 10);
+
+              const pswpElement = document.querySelector('.pswp');
+
+              if (!pswpElement || !window.PhotoSwipe || !window.PhotoSwipeUI_Default) {
+                console.error('❌ PhotoSwipe not loaded');
+                return;
+              }
+
+              const gallery = new PhotoSwipe(
+                pswpElement,
+                PhotoSwipeUI_Default,
+                items,
+                {
+                  index: index,
+                  bgOpacity: 0.9,
+                  history: false,
+                  focus: false,
+                  showHideOpacity: true,
+                  closeOnScroll: false
+                }
+              );
+
+              gallery.init();
+            });
+
+          });
+      </script>
+
+
   </body>
 </html>
