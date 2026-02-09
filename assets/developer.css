@@ -2932,23 +2932,24 @@ button.pswp__button.pswp__button--zoom {
   display: block!important; 
   background-color: #d2d2d2;
 }
-.pswp__bullet--active { 
+/* .pswp__bullet--active { 
   position: relative;
   width: 30px;
-}
+} */
 .pswp__bullet--active:before {
-    background-color: #AAAAAA;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    box-sizing: border-box;
-    animation: progressAnim 10s linear forwards;
-    opacity: .7;
+  background-color: #AAAAAA;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  animation: progressAnim 10s linear forwards;
+  opacity: .7;
 }
+
 .pswp__icn-shadow {
     stroke-width: 0!important;
 }
