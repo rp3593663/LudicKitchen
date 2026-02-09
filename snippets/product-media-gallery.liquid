@@ -383,16 +383,16 @@
         <div class="swiper-slide">
           {% case media.media_type %}
 
-                {% when 'image' %}
-                  <img
-                    src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
-                    data-pswp-src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
-                    data-pswp-width="{{ media.preview_image.width }}"
-                    data-pswp-height="{{ media.preview_image.height }}"
-                    data-pswp-index="{{ forloop.index0 }}"
-                    class="pswp-trigger"
-                    loading="lazy"
-                  >
+          {% when 'image' %}
+            <img
+              src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
+              data-pswp-src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
+              data-pswp-width="{{ media.preview_image.width }}"
+              data-pswp-height="{{ media.preview_image.height }}"
+              data-pswp-index="{{ forloop.index0 }}"
+              class="pswp-trigger"
+              loading="lazy"
+            >
 
 
             {% when 'video' or 'external_video' %}
