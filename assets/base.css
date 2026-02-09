@@ -2321,6 +2321,9 @@ input[type='checkbox'] {
   position: relative;
   /* background-color: rgb(var(--color-background)); */
 }
+sticky-header.header-wrapper{
+  top:38px;
+}
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
