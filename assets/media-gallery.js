@@ -199,11 +199,14 @@ if (!customElements.get('media-gallery')) {
       pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js'),
 
       bgOpacity: 1,
-      wheelToZoom: true,
       showHideAnimationType: 'fade',
-      imageClickAction: 'zoom',
-      tapAction: 'zoom',
-      doubleTapAction: 'zoom'
+      initialZoomLevel: 'fit',
+      secondaryZoomLevel: 1.5,
+      maxZoomLevel: 2,
+      wheelToZoom: true,
+
+      // 👇 THIS is critical with Swiper
+      clickToCloseNonZoomable: false
     });
 
     lightbox.init();
