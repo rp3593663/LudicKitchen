@@ -2900,6 +2900,10 @@ img.fallback_mobile_img {
 button.pswp__button.pswp__button--zoom {
     display: none!important;
 }
+.pswp__bg {
+    display: block!important;
+    background-color: #f9f9f9!important;
+}
 
 
 
