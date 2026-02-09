@@ -1807,7 +1807,7 @@ span.error-message-phone, .error-message {
 }
 .dashboard_content_area .field_head {
     display: grid;
-    gap: 8px;
+    /* gap: 8px; */
     margin-bottom: 20px;
 }
 .dashboard_content_area .field_head h4 {
