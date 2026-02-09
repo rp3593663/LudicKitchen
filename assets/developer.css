@@ -2948,7 +2948,6 @@ button.pswp__button.pswp__button--zoom {
     pointer-events: none;
     box-sizing: border-box;
     animation: progressAnim 10s linear forwards;
-    opacity: .7;
 }
 .pswp__icn-shadow {
     stroke-width: 0!important;
