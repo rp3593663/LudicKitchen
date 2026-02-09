@@ -385,14 +385,15 @@
 
           {% when 'image' %}
             <img
-              src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
-              data-pswp-src="{{ media.preview_image | image_url: width: media.preview_image.width }}"
+              src="{{ media.preview_image | image_url: width: 1200 }}"
+              data-pswp-src="{{ media.preview_image | image_url: width: 2000 }}"
               data-pswp-width="{{ media.preview_image.width }}"
               data-pswp-height="{{ media.preview_image.height }}"
               data-pswp-index="{{ forloop.index0 }}"
               class="pswp-trigger"
               loading="lazy"
-            >
+            />
+
 
 
             {% when 'video' or 'external_video' %}
