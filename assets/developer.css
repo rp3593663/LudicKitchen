@@ -2935,6 +2935,7 @@ button.pswp__button.pswp__button--zoom {
 .pswp__bullet--active { 
   position: relative;
   width: 30px;
+  border-radius: 100px !important;
 }
 .pswp__bullet--active:before {
   content: "";
