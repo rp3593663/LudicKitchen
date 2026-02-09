@@ -2935,7 +2935,6 @@ button.pswp__button.pswp__button--zoom {
 }
 .pswp__bullet--active { 
   position: relative;
-  /* background: #a0a0a1; */
   width: 30px;
 }
 .pswp__bullet--active:before {
@@ -2954,6 +2953,10 @@ button.pswp__button.pswp__button--zoom {
 .pswp__icn-shadow {
     stroke-width: 0!important;
 }
+.custom-product-slider a.pswp-item {
+  pointer-events: auto;
+}
+
 
 @media(max-width: 767px){
   .pswp__button--arrow--prev,
