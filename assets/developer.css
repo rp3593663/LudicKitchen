@@ -2903,6 +2903,7 @@ button.pswp__button.pswp__button--zoom {
 .pswp__bg {
     display: block!important;
     background-color: #f9f9f9!important;
+    opacity:1 !important;
 }
 
 
