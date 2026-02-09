@@ -2938,7 +2938,7 @@ button.pswp__button.pswp__button--zoom {
   width: 30px;
 }
 .pswp__bullet--active:before {
-    background-color: #d2d2d2;
+    background-color: #AAAAAA;
     content: "";
     position: absolute;
     top: 0;
