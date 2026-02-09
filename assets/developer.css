@@ -2932,10 +2932,10 @@ button.pswp__button.pswp__button--zoom {
   display: block!important; 
   background-color: #d2d2d2;
 }
-/* .pswp__bullet--active { 
+.pswp__bullet--active { 
   position: relative;
   width: 30px;
-} */
+}
 .pswp__bullet--active:before {
   background-color: #AAAAAA;
   content: "";
