@@ -577,8 +577,8 @@
           `;
 
           const lightbox = new PhotoSwipeLightbox({
-            gallery: '.product__media-list',
-            children: '.desktop-zoom-hover',
+            gallery: '.custom-product-slider',
+            children: 'a.pswp-item',
             pswpModule: () => import('https://unpkg.com/photoswipe'),
             arrowPrevSVG: leftArrowSVGString,
             arrowNextSVG: leftArrowSVGString,
@@ -634,6 +634,6 @@
       </script>
 
 
-      
+
   </body>
 </html>
