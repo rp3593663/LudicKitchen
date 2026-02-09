@@ -384,7 +384,7 @@
           {% case media.media_type %}
 
           {% when 'image' %}
-            <img
+            {% comment %} <img
               src="{{ media.preview_image | image_url: width: 1200 }}"
               data-pswp-src="{{ media.preview_image | image_url: width: 2000 }}"
               data-pswp-width="{{ media.preview_image.width }}"
@@ -392,7 +392,21 @@
               data-pswp-index="{{ forloop.index0 }}"
               class="pswp-trigger"
               loading="lazy"
-            />
+            /> {% endcomment %}
+
+            <a
+              href="{{ media.preview_image | image_url: width: 2400 }}"
+              data-pswp-width="{{ media.preview_image.width }}"
+              data-pswp-height="{{ media.preview_image.height }}"
+              class="pswp-item"
+            >
+              <img
+                src="{{ media.preview_image | image_url: width: 1200 }}"
+                loading="lazy"
+                draggable="false"
+              >
+            </a>
+
 
 
 
