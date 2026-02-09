@@ -2934,23 +2934,21 @@ button.pswp__button.pswp__button--zoom {
   /* transition: width 0.5s ease, border-radius 0.5s ease; */
 }
 .pswp__bullet--active { 
-  /* position: relative;
-  width: 30px; */
-    width: 35px;
-    border-radius: 8px;
+  position: relative;
+  width: 30px;
+}
+.pswp__bullet--active:before {
+    background-color: #AAAAAA;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #AAAAAA;
-    transform: scaleX(0);
-    transform-origin: left;
-    opacity: 0.7;
-    transition: all .5s ease;
-}
-.pswp__bullet--active:before {
+    pointer-events: none;
+    box-sizing: border-box;
     animation: progressAnim 10s linear forwards;
+    opacity: .7;
 }
 .pswp__icn-shadow {
     stroke-width: 0!important;
