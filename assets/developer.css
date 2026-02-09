@@ -2897,6 +2897,10 @@ img.fallback_mobile_img {
   }
 }
 
+button.pswp__button.pswp__button--zoom {
+    display: none!important;
+}
+
 
 
 @media(min-width: 768px){
