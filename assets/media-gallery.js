@@ -188,33 +188,6 @@ if (!customElements.get('media-gallery')) {
   );
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-
-  if (!window.PhotoSwipeLightbox) {
-    console.error('PhotoSwipeLightbox not loaded');
-    return;
-  }
-
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '.custom-product-slider',
-    children: 'a.pswp-item',
-    pswpModule: PhotoSwipe,
-
-    bgOpacity: 1,
-    showHideAnimationType: 'fade',
-    initialZoomLevel: 'fit',
-    secondaryZoomLevel: 1.5,
-    maxZoomLevel: 2,
-    wheelToZoom: true,
-    clickToCloseNonZoomable: false
-  });
-
-  lightbox.init();
-});
-
-
-
-
 // if (!customElements.get('media-gallery')) {
 //   customElements.define(
 //     'media-gallery',
