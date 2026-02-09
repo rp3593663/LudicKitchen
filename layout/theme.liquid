@@ -559,113 +559,11 @@
 
         </script>
 
-      <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css">
-      <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
 
-      <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.min.js" defer></script>
-      <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" defer></script>
+    <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.min.js"></script>
 
-
-
-      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="pswp__bg"></div>
-
-        <div class="pswp__scroll-wrap">
-
-          <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-          </div>
-
-          <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-              <div class="pswp__counter"></div>
-
-              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-              <button class="pswp__button pswp__button--share" title="Share"></button>
-              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-              <div class="pswp__preloader">
-                <div class="pswp__preloader__icn">
-                  <div class="pswp__preloader__cut">
-                    <div class="pswp__preloader__donut"></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous"></button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next"></button>
-
-            <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-
-            document.body.addEventListener('click', function (e) {
-              const img = e.target.closest('.pswp-trigger');
-              if (!img) return;
-
-              e.preventDefault();
-              e.stopPropagation();
-
-              const images = document.querySelectorAll('.pswp-trigger');
-
-              const items = Array.from(images).map(el => ({
-                src: el.dataset.pswpSrc,
-                w: parseInt(el.dataset.pswpWidth, 10),
-                h: parseInt(el.dataset.pswpHeight, 10)
-              }));
-
-              const index = parseInt(img.dataset.pswpIndex, 10);
-
-              const pswpElement = document.querySelector('.pswp');
-
-              if (!pswpElement || !window.PhotoSwipe || !window.PhotoSwipeUI_Default) {
-                console.error('❌ PhotoSwipe not loaded');
-                return;
-              }
-
-              const gallery = new PhotoSwipe(
-                pswpElement,
-                PhotoSwipeUI_Default,
-                items,
-                {
-                  index: index,
-                  bgOpacity: 0.9,
-                  history: false,
-                  focus: false,
-                  showHideOpacity: true,
-                  closeOnScroll: false
-                }
-              );
-
-              gallery.init();
-            });
-
-          });
-      </script>
 
 
   </body>
