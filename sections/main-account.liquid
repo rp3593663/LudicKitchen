@@ -420,7 +420,7 @@
                             </div>
                           </div>
                         {% else %}
-                          {% if line_item.variant.title == 'Sous Chef' %}
+                        {% if line_item.variant.title == 'Sous Chef' %}
                           <div class="chef_inner">
                             <div class="chef_content">
                               <div class="field_head">
@@ -433,20 +433,21 @@
                               <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef.svg?v=1770017692">
                             </div>
                           </div>
-                          {% elsif line_item.variant.title == 'Head Chef' %}
-                             <div class="chef_inner">
-                                <div class="chef_content">
-                                  <div class="field_head">
-                                    <span>Project 01</span>
-                                    <h4>Head Chef, {{ customer.first_name }}</h4>
-                                    <p>You're at the front of the Kitchen - close, decisive, and deeply involved. As a Head Chef, you use the Ludic Ledger to follow projects from idea to product. You see progress as it happens, and stay ahead of the process, with access that goes beyond the surface and into how things truly get made.</p>
-                                  </div>
-                                </div>
-                                <div class="chefs-logo">
-                                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/head_chef.svg?v=1770017691">
-                                </div>
+                        {% elsif line_item.variant.title == 'Head Chef' %}
+                          <div class="chef_inner">
+                            <div class="chef_content">
+                              <div class="field_head">
+                                <span>Project 01</span>
+                                <h4>Head Chef, {{ customer.first_name }}</h4>
+                                <p>You're at the front of the Kitchen - close, decisive, and deeply involved. As a Head Chef, you use the Ludic Ledger to follow projects from idea to product. You see progress as it happens, and stay ahead of the process, with access that goes beyond the surface and into how things truly get made.</p>
                               </div>
-                          {% endif %}
+                            </div>
+                            <div class="chefs-logo">
+                              <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/head_chef.svg?v=1770017691">
+                            </div>
+                          </div>
+                        {% endif %}
+
                           <div class="project_ledger_updates">
                             <div class="project_progress_inner">
                                 <div class="project_progress_left">
