@@ -2964,10 +2964,9 @@ button.pswp__button.pswp__button--zoom {
 
 
 @media(max-width: 767px){
-  .pswp__button--arrow--prev,
-  .pswp__button--arrow--next{
-    display: none;
-  }
+    .pswp--has_mouse .pswp__button--arrow {
+        display: none !important;
+    }
 }
 
 @media(min-width: 768px){
