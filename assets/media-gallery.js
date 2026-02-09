@@ -188,6 +188,30 @@ if (!customElements.get('media-gallery')) {
   );
 }
 
+
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.custom-product-slider',
+      children: 'a.pswp-item',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js'),
+
+      bgOpacity: 1,
+      wheelToZoom: true,
+      showHideAnimationType: 'fade',
+      imageClickAction: 'zoom',
+      tapAction: 'zoom',
+      doubleTapAction: 'zoom'
+    });
+
+    lightbox.init();
+  });
+
+
+
+
 // if (!customElements.get('media-gallery')) {
 //   customElements.define(
 //     'media-gallery',
