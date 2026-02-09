@@ -559,5 +559,12 @@
 
         </script>
 
+      {{ 'photoswipe.css' | asset_url | stylesheet_tag }}
+      {{ 'photoswipe-ui-default.css' | asset_url | stylesheet_tag }}
+
+      <script src="{{ 'photoswipe.min.js' | asset_url }}" defer></script>
+      <script src="{{ 'photoswipe-ui-default.min.js' | asset_url }}" defer></script>
+
+
   </body>
 </html>
