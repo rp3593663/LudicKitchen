@@ -350,6 +350,8 @@ a#HeaderMenu-shop {
     background: var(--grey);
     border-radius: 16px;
     padding: 24px 40px 32px;
+    border: 1px solid #DADADA;
+
 } 
 .featured_project_container h6.project_title {
     margin: 0px 0px 12px;
