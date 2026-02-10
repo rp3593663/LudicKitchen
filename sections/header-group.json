@@ -31,7 +31,7 @@
         "announcement_cKgGVC": {
           "type": "announcement",
           "settings": {
-            "text": "20% OFF Ludic Kitchen | Early Bird Live Now | Ends 15th Feb",
+            "text": "Early Bird seats are open. 20% off, for a short while.⏳",
             "link": ""
           }
         }
@@ -43,7 +43,7 @@
       ],
       "name": "t:sections.announcement-bar.presets.name",
       "settings": {
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "color_scheme": "",
         "show_line_separator": true,
