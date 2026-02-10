@@ -566,6 +566,13 @@ a.go_btn {
 .faqs_top p {
   margin: 0px 0 12px 0;
 }
+.faq_button_content p {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.8px;
+    color: #1a1a1a;
+    margin: 12px 0px 0px 32px;
+}
 .faq-tabs {
     display: grid;
     gap: 22px;
