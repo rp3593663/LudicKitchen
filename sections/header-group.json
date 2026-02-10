@@ -14,6 +14,20 @@
     "announcement_bar_XAwDCG": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_AiaVJw": {
+          "type": "announcement",
+          "settings": {
+            "text": "Come on in. The Kitchen’s open.🥦",
+            "link": ""
+          }
+        },
+        "announcement_yzQPzb": {
+          "type": "announcement",
+          "settings": {
+            "text": "Project 01: Ludic Clogs is shaped by the people who show up early. CTA <a href=\"\">Know more</a>",
+            "link": ""
+          }
+        },
         "announcement_cKgGVC": {
           "type": "announcement",
           "settings": {
@@ -23,6 +37,8 @@
         }
       },
       "block_order": [
+        "announcement_AiaVJw",
+        "announcement_yzQPzb",
         "announcement_cKgGVC"
       ],
       "name": "t:sections.announcement-bar.presets.name",
