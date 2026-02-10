@@ -59,14 +59,16 @@
                 {% if first_tab == '' %}
                   {% assign first_tab = block.settings.tab_handle %}
                 {% endif %}
-                <button
-                  class="faq-tab {% if forloop.first %}active{% endif %}"
-                  data-tab="{{ block.settings.tab_handle }}"
-                  {{ block.shopify_attributes }}>
-                  <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
-                  {{ block.settings.tab_title }}
-                </button>
-                <p>What it is, what it isn’t, and why it exists</p>
+                <div class="faq_button_content">
+                  <button
+                    class="faq-tab {% if forloop.first %}active{% endif %}"
+                    data-tab="{{ block.settings.tab_handle }}"
+                    {{ block.shopify_attributes }}>
+                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
+                    {{ block.settings.tab_title }}
+                  </button>
+                  <p>What it is, what it isn’t, and why it exists</p>
+                </div>
               {% endif %}
             {% endfor %}
           </div>
