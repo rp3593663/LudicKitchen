@@ -69,7 +69,7 @@
           "settings": {
             "step_number": "01",
             "title": "Choose Tier",
-            "text": "Pick the tier that matches how much you want to contribute and how closely you want to be involved."
+            "text": "Pick how closely you want to be involved. Each tier defines your access, participation, and benefits."
           }
         },
         "step_cAKipH": {
@@ -77,7 +77,7 @@
           "settings": {
             "step_number": "02",
             "title": "Contribute",
-            "text": "Make your payment for the tier\nyou've chosen. This secures\nyour participation and unlocks\nyour tier access."
+            "text": "Confirm your participation & secure your place. Your contribution unlocks your tier access & moves  project forward."
           }
         },
         "step_kmmyYP": {
@@ -85,7 +85,7 @@
           "settings": {
             "step_number": "03",
             "title": "Co-create",
-            "text": "The project begins. Follow the\nprocess, explore your access,\nand participate as your tier\nallows."
+            "text": "The project begins. Follow the process, get access, and participate as your tier allows."
           }
         },
         "step_Cepxjf": {
@@ -93,7 +93,7 @@
           "settings": {
             "step_number": "04",
             "title": "Redeem",
-            "text": "When the project is complete,\nclaim your product and all your\nco-creator benefits included in\nyour tier."
+            "text": "Get the final product and your tier benefits. And the pride of having been part of the journey."
           }
         }
       },
