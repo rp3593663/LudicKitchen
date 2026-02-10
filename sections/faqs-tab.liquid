@@ -199,6 +199,23 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
+
+  // OPEN FIRST TAB DESCRIPTION ON LOAD
+  const firstActiveTab = scope.querySelector(".faq-tab.active");
+  if (firstActiveTab) {
+    const firstDesc = firstActiveTab
+      .closest(".faq_button_content")
+      .querySelector(".faq-tab-desc");
+
+    if (firstDesc) {
+      firstDesc.style.maxHeight = firstDesc.scrollHeight + "px";
+    }
+
+    // Also ensure correct FAQs are visible
+    openFirstFaq(firstActiveTab.dataset.tab);
+  }
+
+
 });
 </script>
 
