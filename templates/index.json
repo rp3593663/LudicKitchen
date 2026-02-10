@@ -141,6 +141,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "About The Kitchen",
+            "tab_description": "What it is, what it isn't and why it exists",
             "tab_handle": "about_ludic_kitchen"
           }
         },
@@ -172,6 +173,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Participation",
+            "tab_description": "Tiers, access and how involvement works",
             "tab_handle": "participation_contribution"
           }
         },
@@ -203,6 +205,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Credit & Value",
+            "tab_description": "Contributions, credits, and what you recieve",
             "tab_handle": "credit_value"
           }
         },
@@ -234,6 +237,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Campaign Progress",
+            "tab_description": "Goals, activation, and what happens if things change",
             "tab_handle": "campaign_activation_cancellation_outcomes"
           }
         },
@@ -272,7 +276,8 @@
         "tab_G8M8iG": {
           "type": "tab",
           "settings": {
-            "tab_title": "Updates",
+            "tab_title": "Communication & Updates",
+            "tab_description": "How we share progress, decisions, and changes",
             "tab_handle": "transparency_updates"
           }
         },
@@ -296,6 +301,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Shipping & Delivery",
+            "tab_description": "Timelines, fulfillment, and logistics",
             "tab_handle": "delivery_timelines_quality"
           }
         },
