@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   // TAB SWITCH
-  scope.querySelectorAll(".faq-tab").forEach(tab=>{
+  {% comment %} scope.querySelectorAll(".faq-tab").forEach(tab=>{
     tab.addEventListener("click",()=>{
       const key = tab.dataset.tab;
 
@@ -144,7 +144,34 @@ document.addEventListener("DOMContentLoaded", function(){
 
       openFirstFaq(key);
     });
+  }); {% endcomment %}
+
+  
+  // TAB SWITCH
+  scope.querySelectorAll(".faq-tab").forEach(tab=>{
+    tab.addEventListener("click",()=>{
+
+      const key = tab.dataset.tab;
+
+      // Active state
+      scope.querySelectorAll(".faq-tab")
+        .forEach(t=>t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Accordion behavior for descriptions
+      scope.querySelectorAll(".faq-tab-desc").forEach(desc=>{
+        desc.style.maxHeight = null;
+      });
+
+      const desc = tab.closest(".faq_button_content").querySelector(".faq-tab-desc");
+      if(desc){
+        desc.style.maxHeight = desc.scrollHeight + "px";
+      }
+
+      openFirstFaq(key);
+    });
   });
+
 
   // ACCORDION CLICK
   scope.querySelectorAll(".faq-question").forEach(q=>{
