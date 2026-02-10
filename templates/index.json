@@ -141,7 +141,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "About The Kitchen",
-            "tab_description": "What it is, what it isn't and why it exists",
+            "tab_description": "What it is, what it isn't, and why it exists",
             "tab_handle": "about_ludic_kitchen"
           }
         },
