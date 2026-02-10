@@ -58,6 +58,9 @@ html {
     letter-spacing: -0.42px;
     font-weight: 500;
 }
+.announcement-bar__message.h5 a{
+    color:#fff;
+}
 .template-index .announcement-bar-section ,
 .template-product  .announcement-bar-section  {
     display: block;
