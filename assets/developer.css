@@ -593,7 +593,7 @@ a.go_btn {
     gap: 8px;
     font-family: var(--font-family);
     align-items: center;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: -0.6px;
@@ -612,7 +612,6 @@ a.faq_btn.theme_btn {
 }
 .faq-tab.active{
   color: var(--primary_color);
-  font-weight: 600;
 }
 .faqs_left_content {
     display: flex;
