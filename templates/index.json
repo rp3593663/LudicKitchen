@@ -173,7 +173,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Participation",
-            "tab_description": "Tiers, access and how involvement works",
+            "tab_description": "Tiers, access, and how involvement works",
             "tab_handle": "participation_contribution"
           }
         },
