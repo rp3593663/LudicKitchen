@@ -130,6 +130,21 @@ document.addEventListener("DOMContentLoaded", function(){
         answer.style.maxHeight = null;
       }
     });
+
+
+
+    // Open first tab description on load
+    const firstActiveTab = scope.querySelector(".faq-tab.active");
+    if(firstActiveTab){
+      const firstDesc = firstActiveTab
+        .closest(".faq_button_content")
+        .querySelector(".faq-tab-desc");
+
+      if(firstDesc){
+        firstDesc.style.maxHeight = firstDesc.scrollHeight + "px";
+      }
+    }
+
   }
 
 
@@ -146,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }); {% endcomment %}
 
-  
+
   // TAB SWITCH
   scope.querySelectorAll(".faq-tab").forEach(tab=>{
     tab.addEventListener("click",()=>{
