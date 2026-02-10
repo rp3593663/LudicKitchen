@@ -568,7 +568,7 @@ a.go_btn {
 }
 .faq-tabs {
     display: grid;
-    gap: 18px;
+    gap: 22px;
 }
 .faq-tab {
     padding: 0px;
