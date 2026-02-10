@@ -564,7 +564,7 @@ a.go_btn {
     text-align: justify;
 }
 .faqs_top p {
-  margin: 0px;
+  margin: 0px 0 12px 0;
 }
 .faq-tabs {
     display: grid;
