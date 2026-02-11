@@ -83,8 +83,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/product_img4.png",
-            "title": "Why this is worth backing ?",
-            "text": "<p>Ludic Clogs take the comfort-first thinking of Ludic Sliders and evolve it into a more structured, everyday form. Designed in-house, they focus on ease, breathability, and long-wear comfort, backed by thoughtful details like a relaxed last, asterisk bridge deboss, side air vents, and a durable TPU outsole. With design cues that stay true to Ludic and room for future customisation, this is a product built to last and grow with the ecosystem.</p>",
+            "title": " Why back Ludic Clogs?",
+            "text": "<p>Ludic Clogs is an extension of Ludic Sliders archetype, a product we sold 50000+ units in a year. Thanks to you. The injection  moulded construction is versatile for weather conditions. With a dual material construction - EVA for comfort & TPU for grip in wet conditions, Ludic Clogs will be first of its kind designed & developed in India. Custom straps & hardware for a touch of personalisation is a core thought behind product.</p>",
             "link_label": "",
             "link": ""
           }
@@ -93,7 +93,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/product_img4.png",
-            "title": "How are Clogs made?",
+            "title": "The making of Ludic Clogs",
             "text": "<p>The process starts with in-house design & detailed tech packs defining form, fit, & function. These are shared with the manufacturer, followed by R&D through maquette development & fit testing. A PLA prototype helps lock proportions before finalising fit & creating a master mould in UK 8. From there, EVA prototypes are developed, fit is refined further, moulds are opened across all sizes, colorways are tested, & the product moves into final production.</p>",
             "link_label": "",
             "link": ""
@@ -103,7 +103,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/product_img4.png",
-            "title": "How are these different/better ?",
+            "title": " Not your usual Clogs",
             "text": "<p>Ludic Clogs are designed as a complete system rather than a single product. Comfort, grip, breathability, and visual language are developed together, seen in the dual-material construction, wave-pattern footbed, side air vents, and elastic woven back straps. Each element connects back to Ludic's design philosophy, making the clogs adaptable, customisable, and part of a larger ecosystem rather than a usual one-off slip-on.</p>",
             "link_label": "",
             "link": ""
@@ -682,6 +682,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Comfort",
+            "tab_description": "",
             "tab_handle": "comfort"
           }
         },
@@ -713,6 +714,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Sizing",
+            "tab_description": "",
             "tab_handle": "sizing"
           }
         },
@@ -736,6 +738,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Material & Build",
+            "tab_description": "",
             "tab_handle": "material_build"
           }
         },
@@ -775,6 +778,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Shipping Updates",
+            "tab_description": "",
             "tab_handle": "shipping_updates"
           }
         },
