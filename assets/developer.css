@@ -1164,6 +1164,7 @@ p.goal_info span{
     font-weight: 500;
     line-height: 21px;
     letter-spacing: -0.42px;
+    margin: 12px 0;
 }
 .tier_feature span {
     font-weight: 500;
