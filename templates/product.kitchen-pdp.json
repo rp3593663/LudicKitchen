@@ -682,7 +682,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Comfort",
-            "tab_description": "",
+            "tab_description": "All-day comfort, breathability, and support Sizing & Fit",
             "tab_handle": "comfort"
           }
         },
@@ -714,8 +714,8 @@
           "type": "tab",
           "settings": {
             "tab_title": "Sizing",
-            "tab_description": "",
-            "tab_handle": "sizing"
+            "tab_description": "Relaxed fit explained and size guidance",
+            "tab_handle": "Sizing & Fit"
           }
         },
         "faq_Q96dx8": {
