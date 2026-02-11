@@ -630,24 +630,24 @@ a.pre_footer_list-menu__item {
                    
                 </div>
             </div>
-            <div class="menu_block mobile">
-                <ul class="pre_footer_menu">
-                    {%- for link in section.settings.menu.links -%}
-                    {% assign link_handle = link.title | handle %}
-                    <li>
-                        <a
-                            href="{{ link.url }}"
-                            class="pre_footer_list-menu__item"
-                            {% if link_handle == 'terms-conditions' %}
-                                data-open-policy
-                            {% endif %}
-                        >
-                            {{ link.title | escape }}
-                        </a>
-                    </li>
-                    {%- endfor -%}
-                </ul>
-            </div>
+        </div>
+        <div class="menu_block mobile">
+            <ul class="pre_footer_menu">
+                {%- for link in section.settings.menu.links -%}
+                {% assign link_handle = link.title | handle %}
+                <li>
+                    <a
+                        href="{{ link.url }}"
+                        class="pre_footer_list-menu__item"
+                        {% if link_handle == 'terms-conditions' %}
+                            data-open-policy
+                        {% endif %}
+                    >
+                        {{ link.title | escape }}
+                    </a>
+                </li>
+                {%- endfor -%}
+            </ul>
         </div>
         <div class="right_pre_footer">
             <div class="menu_block desktop">
