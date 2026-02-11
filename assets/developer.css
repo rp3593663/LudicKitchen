@@ -3318,7 +3318,7 @@ button.pswp__button.pswp__button--zoom {
         margin-top: 14px;
         padding-top: 18px;
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 16px;
     }
     .project_information {
         order: -1;
