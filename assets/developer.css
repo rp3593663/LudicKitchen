@@ -3525,6 +3525,9 @@ button.pswp__button.pswp__button--zoom {
         letter-spacing: -.6px;
         margin-left: 22px;
     }
+    .active-tab-content {
+        margin-bottom: 24px;
+    }
 
 
     /*---------- PDP Project Progess CSS ------------*/
