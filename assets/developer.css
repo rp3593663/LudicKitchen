@@ -3499,6 +3499,10 @@ button.pswp__button.pswp__button--zoom {
         line-height: 16px;
         letter-spacing: -.5px;
     }
+    .faq-icon {
+        font-size: 12px;
+        height: 15px;
+    }
     .faq-icon svg {
         width: 14px;
         height: 14px;
