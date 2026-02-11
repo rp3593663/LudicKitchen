@@ -574,11 +574,7 @@ a.go_btn {
     color: #1a1a1a;
     margin: 12px 0px 10px 32px;
 }
-.faq-tab-desc{
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease;
-}
+
 
 .faq-tabs {
     display: grid;
