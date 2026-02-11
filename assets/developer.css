@@ -3812,7 +3812,7 @@ button.pswp__button.pswp__button--zoom {
     .tier_benefits_head img {
         display: none;
     }
-    .tier_benefits_head h2,
+    /* .tier_benefits_head h2, */
     .features_info .description {
         display: none;
     }
