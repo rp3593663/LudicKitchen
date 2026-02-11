@@ -1413,7 +1413,7 @@ span.tier_custom_text {
 }
 .features_info .description {
     position: relative;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.6px;
