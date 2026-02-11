@@ -3518,6 +3518,13 @@ button.pswp__button.pswp__button--zoom {
     .active-tab-content h3 img {
         width: 16px;
     }
+    .active-tab-description {
+        color: #949598;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -.6px;
+        margin-left: 22px;
+    }
 
 
     /*---------- PDP Project Progess CSS ------------*/
