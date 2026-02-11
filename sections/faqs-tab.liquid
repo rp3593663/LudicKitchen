@@ -222,18 +222,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // OPEN FIRST TAB DESCRIPTION ON LOAD
   const firstActiveTab = scope.querySelector(".faq-tab.active");
+  // Ensure correct active header on load
   if (firstActiveTab) {
-    const firstDesc = firstActiveTab
-      .closest(".faq_button_content")
-      .querySelector(".faq-tab-desc");
+    const key = firstActiveTab.dataset.tab;
 
-    if (firstDesc) {
-      firstDesc.style.maxHeight = firstDesc.scrollHeight + "px";
-    }
+    scope.querySelectorAll(".active-tab-content").forEach(content=>{
+      if(content.dataset.tab === key){
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    });
 
-    // Also ensure correct FAQs are visible
-    openFirstFaq(firstActiveTab.dataset.tab);
+    openFirstFaq(key);
   }
+
 
 
 });
