@@ -682,6 +682,17 @@ a.faq_btn.theme_btn {
     align-items: center;
     gap: 8px;
 }
+.active-tab-content h3 img{
+   width:20px;
+}
+.active-tab-description {
+    color: #1A1A1A;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.8px;
+}
 
 
 
