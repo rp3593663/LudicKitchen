@@ -1047,6 +1047,10 @@ p.goal_info span{
     flex-direction:column;
 }
 
+.section-project_tier_benefits {
+    order: 2;
+}
+
 .section-project_variant_table h2.h2_title {
     font-weight: 800;
     font-size: 48px;
