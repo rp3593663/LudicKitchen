@@ -159,6 +159,30 @@
     line-height: 27px;
     height: 27px;
 }
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 700px;
+}
+
+.social-item {
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+  border: 1px solid #e0e0e0;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
 #copyLinkBtn button{
     background: var(--black);
     display: flex;
@@ -540,7 +564,7 @@ a.pre_footer_list-menu__item {
                     <h2>You know who to send this to</h2>
                     <p>If this feels like something your circle would appreciate, pass it on. Good ideas tend to travel that way.</p>
                     <div class="share-icons">
-                        <a href="#" class="share-btn" data-type="facebook" aria-label="Facebook">
+                        {% comment %} <a href="#" class="share-btn" data-type="facebook" aria-label="Facebook">
                             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_348_34104)">
                                 <path d="M21.375 0H5.625C2.51888 0 0 2.51888 0 5.625V21.375C0 24.4811 2.51888 27 5.625 27H21.375C24.4823 27 27 24.4811 27 21.375V5.625C27 2.51888 24.4823 0 21.375 0ZM18 7.875H15.8355C15.1436 7.875 14.625 8.1585 14.625 8.87512V10.125H18L17.7323 13.5H14.625V22.5H11.25V13.5H9V10.125H11.25V7.96163C11.25 5.68687 12.447 4.5 15.1436 4.5H18V7.875Z" fill="black"/>
@@ -590,7 +614,37 @@ a.pre_footer_list-menu__item {
                                 </clipPath>
                                 </defs>
                             </svg>
-                        </a>
+                        </a> {% endcomment %}
+
+
+                        <div class="social-grid">
+                            
+                            <a href="https://linkedin.com" target="_blank" class="social-item">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="https://example.com/announce" target="_blank" class="social-item">
+                                <i class="fas fa-bullhorn"></i>
+                            </a>
+
+                            <a href="mailto:info@example.com" class="social-item">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                            <a href="https://x.com" target="_blank" class="social-item">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+
+                            <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                            <a href="https://example.com/chat" target="_blank" class="social-item">
+                                <i class="fas fa-comments"></i>
+                            </a>
+
+                            </div>
+
                     </div>
                    
                     <div class="copy-link-btn" id="copyLinkBtn">
