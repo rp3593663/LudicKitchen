@@ -3508,6 +3508,13 @@ button.pswp__button.pswp__button--zoom {
     .faq_content_desktop{
         display:none;
     }
+    .active-tab-content h3 {
+        font-size: 16px;
+        line-height: 14px;
+        letter-spacing: -.48px;
+        gap: 6px;
+        margin: 0 0 6px;
+    }
 
 
     /*---------- PDP Project Progess CSS ------------*/
