@@ -1380,7 +1380,7 @@ p.goal_info span{
     line-height: 24px;
     letter-spacing: -0.54px;
     margin: 0 0 6px;
-    color: var(--primary_color);
+    color: #1a1a1a;
 }
 .tier_benefit_yes_no {
     margin: auto;
