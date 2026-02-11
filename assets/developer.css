@@ -352,6 +352,10 @@ a#HeaderMenu-shop {
 .p_right_image img {
     width: 100%;
 }
+
+.p_right_mobile {
+    display: none;
+}
 .p_left_content {
     background: var(--grey);
     border-radius: 16px;
