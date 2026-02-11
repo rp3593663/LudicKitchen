@@ -134,7 +134,8 @@
                                
                             </div>
                         {% endfor %}
-                        <div class="tier_mobile_description">{{ block.settings.more_text }}</div>
+                        {% comment %} <div class="tier_mobile_description">{{ block.settings.more_text }}</div> {% endcomment %}
+                        <div class="tier_mobile_description">{{ block.settings.short_text }}</div>
                     </div>  
                 {% endfor %}
             </div>
