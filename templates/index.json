@@ -361,7 +361,9 @@
         "max_width": "",
         "fullwidth": false,
         "padding": "",
-        "margin": "98px 0px"
+        "margin": "98px 0px",
+        "heading": "Everything,<span> clearly explained</span>",
+        "description": "Ludic Kitchen works differently from traditional launches. So we’ve laid out the details — how participation works, how contributions are treated, timelines, credits, and what happens at every stage. <br><br>If you’re deciding whether to join, this is where clarity lives."
       }
     }
   },
