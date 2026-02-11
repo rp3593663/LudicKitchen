@@ -1418,7 +1418,7 @@ span.tier_custom_text {
     line-height: 16px;
     letter-spacing: -0.6px;
     color: #949598;
-    text-align: justify;
+    /* text-align: justify; */
     width: fit-content;
 }
 .features_info .description span.more_info{
