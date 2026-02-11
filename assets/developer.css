@@ -578,7 +578,7 @@ a.go_btn {
 
 .faq-tabs {
     display: grid;
-    gap: 20px;
+    gap: 22px;
 }
 .faq-tab {
     padding: 0px;
@@ -698,9 +698,6 @@ a.faq_btn.theme_btn {
 
 .faq_content_mobile{
     display:none;
-}
-.active-tab-header {
-    margin-bottom: 14px;
 }
 
 
