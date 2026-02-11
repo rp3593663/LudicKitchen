@@ -327,7 +327,7 @@
           "type": "benefit",
           "settings": {
             "title": "Kitchen Archive Access",
-            "short_text": "Access to selected ideas, prototypes, and iterations that didn’t make the final cut.<br>A view into the decisions behind what was chosen — and what wasn’t.",
+            "short_text": "Access to selected ideas, prototypes, and iterations that didn’t make the final cut. A view into the decisions behind what was chosen — and what wasn’t.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -347,7 +347,7 @@
           "type": "benefit",
           "settings": {
             "title": "Voting Rights",
-            "short_text": "A chance to weigh in on select design decisions during the project.<br>Your input helps shape how the final outcome comes together.",
+            "short_text": "A chance to weigh in on select design decisions during the project. Your input helps shape how the final outcome comes together.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -367,7 +367,7 @@
           "type": "benefit",
           "settings": {
             "title": "Exclusive DIY Kit",
-            "short_text": "A hands-on kit created for deeper participation.<br>Designed for contributors who want to engage beyond the finished product.",
+            "short_text": "A hands-on kit created for deeper participation. Designed for contributors who want to engage beyond the finished product.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -387,7 +387,7 @@
           "type": "benefit",
           "settings": {
             "title": "Ludic Design Journal",
-            "short_text": "A designed journal created by Ludic for the Kitchen community.<br>Filled with sketches, ideas, and playful explorations from the process.",
+            "short_text": "A designed journal created by Ludic for the Kitchen community. Filled with sketches, ideas, and playful explorations from the process.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -407,7 +407,7 @@
           "type": "benefit",
           "settings": {
             "title": "Campaign Feature",
-            "short_text": "Your name featured as part of Project 01’s story.<br>A public acknowledgement of your contribution.",
+            "short_text": "Your name featured as part of Project 01’s story. A public acknowledgement of your contribution.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -427,7 +427,7 @@
           "type": "benefit",
           "settings": {
             "title": "New Product Ideas",
-            "short_text": "An opportunity to submit ideas for future Ludic projects.<br>Selected inputs may inform what the Kitchen explores next.",
+            "short_text": "An opportunity to submit ideas for future Ludic projects. Selected inputs may inform what the Kitchen explores next.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -447,7 +447,7 @@
           "type": "benefit",
           "settings": {
             "title": "Exclusive Event Gatherings",
-            "short_text": "Invite-only gatherings with the Ludic team and fellow contributors.<br>Designed for deeper connection beyond the digital process.",
+            "short_text": "Invite-only gatherings with the Ludic team and fellow contributors. Designed for deeper connection beyond the digital process.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -467,7 +467,7 @@
           "type": "benefit",
           "settings": {
             "title": "Limited Edition Custom Colorway",
-            "short_text": "Access to a colourway created exclusively for Kitchen contributors.<br>Available only as part of Project 01.",
+            "short_text": "Access to a colourway created exclusively for Kitchen contributors. Available only as part of Project 01.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
