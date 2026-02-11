@@ -1293,10 +1293,10 @@ p.goal_info span{
 
 .tier_timer_inner p {
   color: #949598;
-  font-size: 13px;
-  line-height:13px;
+  font-size: 14px;
+  line-height:30px;
   font-weight:500;
-  letter-spacing:-0.65px;
+  letter-spacing:-0.7px;
   margin: 0;
 }
 
