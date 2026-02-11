@@ -696,6 +696,9 @@ a.faq_btn.theme_btn {
     margin-left: 28px;
 }
 
+.faq_content_mobile{
+    display:none;
+}
 
 
 /*-----------------------------------------------*/
@@ -3499,6 +3502,12 @@ button.pswp__button.pswp__button--zoom {
         height: 14px;
     }
 
+    .faq_content_mobile{
+        display:block;
+    }
+    .faq_content_desktop{
+        display:none;
+    }
 
 
     /*---------- PDP Project Progess CSS ------------*/
