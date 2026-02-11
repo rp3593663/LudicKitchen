@@ -78,7 +78,11 @@
                     <div> </div>
                     {% for variant in product.variants %}
                     <div>
-                        <h2><a href="{{ variant.title }}">{{ variant.title }}</a></h2>
+                        <h2>
+                          <a href="#tier-{{ variant.title | handleize }}">
+                              {{ variant.title }}
+                          </a>
+                        </h2>
                         <img src="{{ variant.metafields.custom.tier_image | image_url }}">
                     </div>
                     {% endfor %}
