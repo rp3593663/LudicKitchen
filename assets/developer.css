@@ -1041,6 +1041,11 @@ p.goal_info span{
 /*---------- PDP Project Tier Table ------------*/
 /*-----------------------------------------------*/
 
+
+.section-project_variant_table .page-width{
+    display:flex;
+}
+
 .section-project_variant_table h2.h2_title {
     font-weight: 800;
     font-size: 48px;
