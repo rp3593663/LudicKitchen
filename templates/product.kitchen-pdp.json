@@ -327,7 +327,7 @@
           "type": "benefit",
           "settings": {
             "title": "Kitchen Archive Access",
-            "short_text": "Access to selected ideas, prototypes, and iterations that didn’t make the final cut.A view into the decisions behind what was chosen — and what wasn’t.",
+            "short_text": "Access to selected ideas, prototypes, and iterations that didn’t make the final cut.<br>A view into the decisions behind what was chosen — and what wasn’t.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
