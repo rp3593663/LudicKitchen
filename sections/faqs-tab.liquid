@@ -150,19 +150,6 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 
-  // TAB SWITCH
-  {% comment %} scope.querySelectorAll(".faq-tab").forEach(tab=>{
-    tab.addEventListener("click",()=>{
-      const key = tab.dataset.tab;
-
-      scope.querySelectorAll(".faq-tab")
-        .forEach(t=>t.classList.remove("active"));
-      tab.classList.add("active");
-
-      openFirstFaq(key);
-    });
-  }); {% endcomment %}
-
 
   // TAB SWITCH
   scope.querySelectorAll(".faq-tab").forEach(tab=>{
@@ -170,10 +157,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
       const key = tab.dataset.tab;
 
-      // Active state
-      scope.querySelectorAll(".faq-tab")
-        .forEach(t=>t.classList.remove("active"));
+      // Active state + hide active tab on left
+      scope.querySelectorAll(".faq-tab").forEach(t=>{
+        t.classList.remove("active");
+        t.closest(".faq_button_content").style.display = "block";
+      });
+
       tab.classList.add("active");
+      tab.closest(".faq_button_content").style.display = "none";
+
 
       // Show correct right-side tab header
       scope.querySelectorAll(".active-tab-content").forEach(content=>{
