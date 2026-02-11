@@ -178,15 +178,15 @@ document.addEventListener("DOMContentLoaded", function(){
         .forEach(t=>t.classList.remove("active"));
       tab.classList.add("active");
 
-      // Accordion behavior for descriptions
-      scope.querySelectorAll(".faq-tab-desc").forEach(desc=>{
-        desc.style.maxHeight = null;
+      // Show correct right-side tab header
+      scope.querySelectorAll(".active-tab-content").forEach(content=>{
+        if(content.dataset.tab === key){
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
       });
 
-      const desc = tab.closest(".faq_button_content").querySelector(".faq-tab-desc");
-      if(desc){
-        desc.style.maxHeight = desc.scrollHeight + "px";
-      }
 
       openFirstFaq(key);
     });
