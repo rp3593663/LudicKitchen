@@ -3338,6 +3338,12 @@ button.pswp__button.pswp__button--zoom {
     .p_right_image{
         border-radius:8px;
     }
+    .p_right_mobile {
+        display: block;
+    }
+    .p_right_image {
+        display: none;
+    }
     .raised_progress_bar {
         margin: 12px 0 22px;
     }
