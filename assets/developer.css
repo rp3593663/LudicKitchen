@@ -1058,7 +1058,7 @@ p.goal_info span{
 .section-project_variant_table h2.h2_title span.border_text img{
     position: absolute;
     left: -5px;
-    top: -3px;
+    top: 0;
     width: 100%;
 }
 .section-project_variant_table .section_heading p {
