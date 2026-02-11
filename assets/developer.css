@@ -578,7 +578,7 @@ a.go_btn {
 
 .faq-tabs {
     display: grid;
-    gap: 22px;
+    gap: 20px;
 }
 .faq-tab {
     padding: 0px;
@@ -698,6 +698,9 @@ a.faq_btn.theme_btn {
 
 .faq_content_mobile{
     display:none;
+}
+.active-tab-header {
+    margin-bottom: 14px;
 }
 
 
@@ -3053,12 +3056,6 @@ button.pswp__button.pswp__button--zoom {
     .works_left_content .top_content {
         margin-bottom: 20px;
     }
-    /* .faq-item {
-        padding: 10px 0px;
-    } */
-    .faq-content {
-        gap: 12px;
-    }
     .tier_price .sale_price {
         font-size: 25px;
         line-height: 25px;
@@ -3503,7 +3500,7 @@ button.pswp__button.pswp__button--zoom {
     }
 
     .faq_content_mobile{
-        display:block;
+        display:grid;
     }
     .faq_content_desktop{
         display:none;
@@ -3524,9 +3521,6 @@ button.pswp__button.pswp__button--zoom {
         line-height: 12px;
         letter-spacing: -.6px;
         margin-left: 22px;
-    }
-    .active-tab-content {
-        margin-bottom: 24px;
     }
 
 
