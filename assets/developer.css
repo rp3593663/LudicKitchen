@@ -551,7 +551,7 @@ a.go_btn {
 }
 
 .faqs_top h2 {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -2.4px;
@@ -1053,7 +1053,7 @@ p.goal_info span{
 }
 
 .section-project_variant_table h2.h2_title {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -1.44px;
@@ -1405,7 +1405,7 @@ p.goal_info span{
     display: flex;
 }
 span.tier_custom_text {
-    font-weight: 650;
+    font-weight: 550;
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.54px;
@@ -3745,8 +3745,8 @@ button.pswp__button.pswp__button--zoom {
         letter-spacing: -.6px;
     }
     span.tier_custom_text {
-        font-size: 12px;
-        line-height: 12px;
+        font-size: 10px;
+        line-height: 10px;
         letter-spacing: -0.36px;
     }
     .tier_box {
@@ -3843,6 +3843,9 @@ button.pswp__button.pswp__button--zoom {
     .tier_benefits_head img {
         width: 48px;
         height: auto;
+    }
+    .tier_benefits_body .tier_benefits:first-child {
+        border-top: 0;
     }
     .tier_benefits_body .tier_benefits,
     .tier_benefits_head {
