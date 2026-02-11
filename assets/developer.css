@@ -3510,6 +3510,7 @@ button.pswp__button.pswp__button--zoom {
 
     .faq_content_mobile{
         display:grid;
+        margin-bottom: 48px;
     }
     .faq_content_desktop{
         display:none;
