@@ -1158,6 +1158,13 @@ p.goal_info span{
     gap: 8px;
     align-items: center;
 }
+.tier_access p {
+    color: var(--secondary-steel, #949598);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.42px;
+}
 .tier_feature span {
     font-weight: 500;
     font-size: 14px;
