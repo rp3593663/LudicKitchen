@@ -3494,6 +3494,11 @@ button.pswp__button.pswp__button--zoom {
         gap: 28px;
         letter-spacing: -0.36px;
     }
+    .faq-answer p, .faq-answer li {
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: -.5px;
+    }
     .faq-icon svg {
         width: 14px;
         height: 14px;
