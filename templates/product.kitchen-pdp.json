@@ -966,6 +966,7 @@
         "benefit_HL94Hm",
         "benefit_TCMPha"
       ],
+      "disabled": true,
       "name": "Project Tier Benefits",
       "settings": {
         "max_width": "",
