@@ -672,6 +672,17 @@ a.faq_btn.theme_btn {
 .faq-item.active .faq-icon{
   transform:rotate(45deg);
 }
+.active-tab-content h3 {
+    color: #214ECF;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.66px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 
 
 /*-----------------------------------------------*/
