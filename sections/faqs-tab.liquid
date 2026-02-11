@@ -85,7 +85,7 @@
                   style="display:none"
                 {% endunless %}
               >
-                <h3>{{ block.settings.tab_title }}</h3>
+                {{ block.settings.tab_title }}
                 {% if block.settings.tab_description != blank %}
                   <div class="active-tab-description faq-tab-desc">
                     {{ block.settings.tab_description }}
