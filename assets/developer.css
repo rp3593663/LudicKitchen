@@ -699,6 +699,9 @@ a.faq_btn.theme_btn {
 .faq_content_mobile{
     display:none;
 }
+.active-tab-header {
+    margin-bottom: 14px;
+}
 
 
 /*-----------------------------------------------*/
