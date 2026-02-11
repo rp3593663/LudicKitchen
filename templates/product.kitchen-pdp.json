@@ -713,9 +713,9 @@
         "tab_hxhwgy": {
           "type": "tab",
           "settings": {
-            "tab_title": "Sizing",
+            "tab_title": "Sizing & Fit",
             "tab_description": "Relaxed fit explained and size guidance",
-            "tab_handle": "Sizing & Fit"
+            "tab_handle": "sizing"
           }
         },
         "faq_Q96dx8": {
@@ -737,8 +737,8 @@
         "tab_HF3nAw": {
           "type": "tab",
           "settings": {
-            "tab_title": "Material & Build",
-            "tab_description": "",
+            "tab_title": "Materials & Construction",
+            "tab_description": "Build, materials, and durability details",
             "tab_handle": "material_build"
           }
         },
@@ -777,8 +777,8 @@
         "tab_e7M4Pp": {
           "type": "tab",
           "settings": {
-            "tab_title": "Shipping Updates",
-            "tab_description": "",
+            "tab_title": "Production & Shipping",
+            "tab_description": "Activation, timelines, and delivery.",
             "tab_handle": "shipping_updates"
           }
         },
