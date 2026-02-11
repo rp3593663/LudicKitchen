@@ -3378,10 +3378,11 @@ button.pswp__button.pswp__button--zoom {
         letter-spacing: -1.2px;
     }
     .work_step_item {
-        background: #F1F1F1;
-        border-radius: 6px;
         margin-bottom: 12px;
         overflow: hidden;
+        border-radius: 6px;
+        border: 1px solid #E5E5E5;
+        background: #EBEBEB;
     }
     .work_step_header {
         width: 100%;
@@ -3434,7 +3435,7 @@ button.pswp__button.pswp__button--zoom {
     }
     .work_step_item.active .work_step_content {
         max-height: 200px;
-        border-top: dotted 1.5px var(--black);
+        border-top: dotted 1.5px #949598;
         padding-top: 24px;
     }
     .work_step_item.active .step_icon {
