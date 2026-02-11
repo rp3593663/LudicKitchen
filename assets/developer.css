@@ -3515,6 +3515,9 @@ button.pswp__button.pswp__button--zoom {
         gap: 6px;
         margin: 0 0 6px;
     }
+    .active-tab-content h3 img {
+        width: 16px;
+    }
 
 
     /*---------- PDP Project Progess CSS ------------*/
