@@ -3489,10 +3489,10 @@ button.pswp__button.pswp__button--zoom {
         padding: 0px;
     }
     .faq-question {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 12px;
+        line-height: 16px;
         gap: 28px;
-        letter-spacing: -0.42px;
+        letter-spacing: -0.36px;
     }
     .faq-icon svg {
         width: 14px;
