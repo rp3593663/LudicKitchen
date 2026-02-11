@@ -3906,6 +3906,9 @@ button.pswp__button.pswp__button--zoom {
         top: 0;
         max-width: 110px;
     }
+    .section-project_tier_benefits {
+        order: 0;
+    }
 
     /*---------- Edit Account Form CSS ------------*/
 
