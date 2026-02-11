@@ -637,7 +637,7 @@ a.faq_btn.theme_btn {
     color: var(--black);
 }
 .faq-item {
-    padding: 18px 28px;
+    /* padding: 18px 28px; */
 }
 .faq-item.active .faq-answer {
     padding-top: 12px;
@@ -3053,9 +3053,9 @@ button.pswp__button.pswp__button--zoom {
     .works_left_content .top_content {
         margin-bottom: 20px;
     }
-    .faq-item {
+    /* .faq-item {
         padding: 10px 0px;
-    }
+    } */
     .faq-content {
         gap: 12px;
     }
