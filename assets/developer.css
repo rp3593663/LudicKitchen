@@ -1389,6 +1389,9 @@ p.goal_info span{
     text-align: center;
     text-decoration:none;
 }
+.tier_benefits_head h2 {
+    text-align:center;
+}
 .features_info h4 {
     font-weight: 600;
     font-size: 18px;
