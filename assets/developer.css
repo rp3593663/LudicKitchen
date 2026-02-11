@@ -282,7 +282,7 @@ a#HeaderMenu-shop {
 }
 .works_left_content .top_content {
     display: grid;
-    gap: 30px;
+    gap: 18px;
     max-width: 430px;
 }   
 .works_left_content .top_content h2 {
