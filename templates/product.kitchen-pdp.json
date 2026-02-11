@@ -147,7 +147,7 @@
           "type": "benefit",
           "settings": {
             "title": "Ludic Clogs",
-            "short_text": "The final product created through Project 01.<br>Delivered after completion — shaped by the community, from start to finish.",
+            "short_text": "The final product created through Project 01. Delivered after completion — shaped by the community, from start to finish.",
             "more_text": "",
             "tier_1": true,
             "tier_1_text": "",
@@ -167,7 +167,7 @@
           "type": "benefit",
           "settings": {
             "title": "Recipe Card",
-            "short_text": "A printed card that captures the idea, materials, and thinking behind Project 01. <br>A small keepsake from the process you were part of.",
+            "short_text": "A printed card that captures the idea, materials, and thinking behind Project 01. A small keepsake from the process you were part of.",
             "more_text": "",
             "tier_1": true,
             "tier_1_text": "",
@@ -187,7 +187,7 @@
           "type": "benefit",
           "settings": {
             "title": "Freebies",
-            "short_text": "Few additional items included with your Project 01 delivery.<br>Created exclusively for the Kitchen community.",
+            "short_text": "Few additional items included with your Project 01 delivery. Created exclusively for the Kitchen community.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -207,7 +207,7 @@
           "type": "benefit",
           "settings": {
             "title": "Stickers",
-            "short_text": "A small set created for Project 01.<br>A simple marker of being part of the Kitchen.",
+            "short_text": "A small set created for Project 01. A simple marker of being part of the Kitchen.",
             "more_text": "",
             "tier_1": true,
             "tier_1_text": "",
@@ -227,7 +227,7 @@
           "type": "benefit",
           "settings": {
             "title": "Early Product Access",
-            "short_text": "Access to the product before it’s released publicly.<br>A way to experience it first, as a contributor.",
+            "short_text": "Access to the product before it’s released publicly. A way to experience it first, as a contributor.",
             "more_text": "",
             "tier_1": true,
             "tier_1_text": "",
@@ -247,7 +247,7 @@
           "type": "benefit",
           "settings": {
             "title": "Ludic Credit",
-            "short_text": "Store credit issued after the campaign concludes.<br>Redeemable across Ludic for future purchases.",
+            "short_text": "Store credit issued after the campaign concludes. Redeemable across Ludic for future purchases.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -267,7 +267,7 @@
           "type": "benefit",
           "settings": {
             "title": "Additional Discount",
-            "short_text": "An extra discount applied on future Ludic purchases.Available exclusively to Kitchen contributors.",
+            "short_text": "An extra discount applied on future Ludic purchases. Available exclusively to Kitchen contributors.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -287,7 +287,7 @@
           "type": "benefit",
           "settings": {
             "title": "Certificate of Co-creation",
-            "short_text": "A digital certificate recognising your role in Project 01.<br>Issued after the project is complete.",
+            "short_text": "A digital certificate recognising your role in Project 01. Issued after the project is complete.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
@@ -307,7 +307,7 @@
           "type": "benefit",
           "settings": {
             "title": "Kitchen Ledger Access",
-            "short_text": "Access to the project’s transparency dashboard.<br>Track progress, milestones, and how the project moves forward.",
+            "short_text": "Access to the project’s transparency dashboard. Track progress, milestones, and how the project moves forward.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
