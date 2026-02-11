@@ -50,7 +50,62 @@
         <div class="faqs_top">
           <h2>Everything,<span> clearly explained</span></h2>
           <div class="faqs_description"><p>Ludic Kitchen works differently from traditional launches. So we’ve laid out the details — how participation works, how contributions are treated, timelines, credits, and what happens at every stage.</p>
-          <p> If you’re deciding whether to join, this is where clarity lives.</p></div>
+            <p> If you’re deciding whether to join, this is where clarity lives.</p>
+          </div>
+
+
+          <div class="faq-content faq_content_mobile">
+            <div class="active-tab-header">
+                {% for block in section.blocks %}
+                  {% if block.type == 'tab' %}
+                    <div 
+                      class="active-tab-content"
+                      data-tab="{{ block.settings.tab_handle }}"
+                      {% unless block.settings.tab_handle == first_tab %}
+                        style="display:none"
+                      {% endunless %}
+                    >
+                      <h3 class="">
+                      <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
+                        {{ block.settings.tab_title }}</h3>
+                      {% if block.settings.tab_description != blank %}
+                        <div class="active-tab-description">
+                          {{ block.settings.tab_description }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+
+              {% for block in section.blocks %}
+                {% if block.type == 'faq' %}
+                  <div
+                    class="faq-item"
+                    data-tab="{{ block.settings.tab_handle }}"
+                    {% unless block.settings.tab_handle == first_tab %}
+                      style="display:none"
+                    {% endunless %}
+                    {{ block.shopify_attributes }}>
+
+                    <button class="faq-question">
+                      {{ block.settings.question }}
+                      <span class="faq-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.0001 4.16675V15.8334M4.16675 10.0001H15.8334" stroke="#1A1A1A" stroke-width="1.83333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>  
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                      {{ block.settings.answer }}
+                    </div>
+
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
           <div class="faq-tabs">
             {% assign first_tab = '' %}
             {% for block in section.blocks %}
