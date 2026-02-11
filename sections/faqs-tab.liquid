@@ -66,6 +66,9 @@
                     <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
                     {{ block.settings.tab_title }}
                   </button>
+                  <div class="faq-tab-desc">
+                    <p>{{ block.settings.tab_description }}</p>
+                  </div>
                 </div>
               {% endif %}
             {% endfor %}
@@ -75,28 +78,27 @@
       </div>
 
       <div class="faq-content">
-        <div class="faq-tabs">
-            {% assign first_tab = '' %}
-            {% for block in section.blocks %}
-              {% if block.type == 'tab' %}
-                {% if first_tab == '' %}
-                  {% assign first_tab = block.settings.tab_handle %}
-                {% endif %}
-                <div class="faq_button_content">
-                  <button
-                    class="faq-tab {% if forloop.first %}active{% endif %}"
-                    data-tab="{{ block.settings.tab_handle }}"
-                    {{ block.shopify_attributes }}>
-                    <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
-                    {{ block.settings.tab_title }}
-                  </button>
-                  <div class="faq-tab-desc">
-                    <p>{{ block.settings.tab_description }}</p>
+       <div class="active-tab-header">
+          {% for block in section.blocks %}
+            {% if block.type == 'tab' %}
+              <div 
+                class="active-tab-content"
+                data-tab="{{ block.settings.tab_handle }}"
+                {% unless block.settings.tab_handle == first_tab %}
+                  style="display:none"
+                {% endunless %}
+              >
+                <h3>{{ block.settings.tab_title }}</h3>
+                {% if block.settings.tab_description != blank %}
+                  <div class="active-tab-description faq-tab-desc">
+                    {{ block.settings.tab_description }}
                   </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
         {% for block in section.blocks %}
           {% if block.type == 'faq' %}
             <div
