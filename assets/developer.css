@@ -1374,7 +1374,7 @@ p.goal_info span{
 .tier_benefits_body .tier_benefits{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 24px 0px;
+    padding: 14px 0px;
     border-top: 2px dotted #AEAEAE;
     align-items: center;
 }
