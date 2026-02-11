@@ -3343,7 +3343,7 @@ button.pswp__button.pswp__button--zoom {
         border-radius:8px;
     }
     .p_right_mobile {
-        display: block;
+        display: block !important;
     }
     .p_right_image {
         display: none;
