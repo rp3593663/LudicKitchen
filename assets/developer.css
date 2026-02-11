@@ -1378,7 +1378,7 @@ p.goal_info span{
     border-top: 2px dotted #AEAEAE;
     align-items: center;
 }
-.tier_benefits_head h2 {
+.tier_benefits_head h2 a{
     font-weight: 650;
     font-style: Italic;
     font-size: 25px;
@@ -1387,6 +1387,7 @@ p.goal_info span{
     color: var(--primary_color);
     margin: 0px;
     text-align: center;
+    text-decoration:none;
 }
 .features_info h4 {
     font-weight: 600;
@@ -3824,7 +3825,7 @@ button.pswp__button.pswp__button--zoom {
     .tier_benefits_head img {
         display: none;
     }
-    .tier_benefits_head h2 {
+    .tier_benefits_head h2 A{
         font-size: 13px;
         line-height: 13px;
         letter-spacing: -0.65px;
