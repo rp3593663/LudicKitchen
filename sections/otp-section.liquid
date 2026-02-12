@@ -298,11 +298,12 @@
       otpConsentPrivacyPolicy : simplyOtp.otp_widgets.otp_consent_privacy_link || '/pages/privacy-policy',
       otpConsentTerms : simplyOtp.otp_widgets.otp_consent_terms_link || '/pages/terms-and-conditions',
       otpConsentElement : `
-      <p class="consent-text">By creating an account, you agree to the </p>
-      <div class="consent-links-wrapper">
+      <p class="consent-text">By creating an account, you agree to the 
+      {% comment %} <div class="consent-links-wrapper"> {% endcomment %}
         <a href="${otpConsentTermsLink}" target="_blank" class="consent-link">Terms of Service and </a>
           <a href="${otpConsentPrivacyLink}" target="_blank" class="consent-link">Privacy Policy.</a>
-      </div>`,
+      {% comment %} </div>  {% endcomment %}
+      </p>`,
     };
     let ec = simplyOtp.language.enableCountries.split(',');
     simplyOtp.settings = {
