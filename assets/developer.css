@@ -3030,7 +3030,7 @@ img.fallback_mobile_img {
 }
 
 /* Optional: mobile only */
-@media(min-width: 992px){
+@media(min-width: 768px){
   .sticky-tier-bar {
     display: none !important;
   }
