@@ -1525,9 +1525,9 @@ div#resend-otp {
     line-height: 15px!important;
     height: 15px!important;
 }
-.consent-links-wrapper .consent-link:last-child {
+/* .consent-links-wrapper .consent-link:last-child {
     display: none;
-}
+} */
 .simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
 .sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
     color: var(--grey_text)!important;
