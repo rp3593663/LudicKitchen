@@ -3666,7 +3666,8 @@ button.pswp__button.pswp__button--zoom {
         line-height: 10px;
         letter-spacing: -.24px;
     }
-    p.goal_info {
+    p.goal_info,
+    p.goal_info_blue {
         font-size: 9px;
         line-height: 12px;
         letter-spacing: -.24px;
@@ -4200,7 +4201,8 @@ button.pswp__button.pswp__button--zoom {
     .ledger_content_area .total_raised_percentage {
         margin: 18px 0;
     }
-    p.goal_info {
+    p.goal_info,
+    p.goal_info_blue {
         padding-left: 12px;
     }
     p.goal_info:before {
