@@ -4239,6 +4239,8 @@ button.pswp__button.pswp__button--zoom {
     }
     .mobile_tag{
         display:block;
+        color: #214ECF;
+        font-weight:500;
     }
     .leader_update_info.head {
         display: none;
@@ -4246,6 +4248,8 @@ button.pswp__button.pswp__button--zoom {
     p.leader_update_date {
         display: flex;
         gap: 2px;
+        color: #214ECF;
+        font-weight:500;
     }
     .leader_update_info {
         /* grid-template-columns: .6fr 1fr .4fr; */
