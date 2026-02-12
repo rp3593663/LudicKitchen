@@ -714,7 +714,8 @@
 
                                         {% assign date_parts  = date_item | split: '||' %}
                                         {% assign event_parts = events[index] | split: '||' %}
-                                        {% assign tag  = tag[index] | split: '||' %}
+                                        {% comment %} {% assign tag  = tag[index] | split: '||' %} {% endcomment %}
+                                         {% assign tag_parts = tag[index] | split: '||' %}
                                         {% assign link_text_parts  = links_text[index] | split: '||' %}
                                         {% assign link_parts  = links[index] | split: '||' %}
 
@@ -728,7 +729,9 @@
                                           </div>
 
                                           <div class="leader_update_tag">
-                                            {{ tag[1] | strip }}
+                                            {% comment %} {{ tag[1] | strip }} {% endcomment %}
+                                             {{ tag_parts[1] | strip }}
+
                                           </div>
 
                                           <div class="leader_update_url">
