@@ -1620,6 +1620,9 @@ span.total_goal {
     line-height: 16px;
     letter-spacing: -0.48px;
 }
+.product__custom_btns .share-button__button svg{
+  display:none;
+}
 a.join_project_btn {
     height: 48px;
     width: 100%;
