@@ -1726,7 +1726,7 @@ div#resend-otp {
     position: relative;
 }
 .sotp-widget .olWrapper .ol .update-user-box .login-header:after {
-    content: "One step closer to getting started.";
+    content: "Just a few details so your Kitchen is set up properly. ";
     display: block;
     font-weight: 400;
     font-size: 14px;
