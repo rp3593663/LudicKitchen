@@ -1703,6 +1703,9 @@ a.join_project_btn {
     letter-spacing: -.48px;
     border-radius: 4px;
   }
+  .sticky-tier-bar a.join_project_btn {
+    border-radius: 0;
+  }
   .product__custom_btns p {
     font-size: 10px;
     line-height: 14px;
