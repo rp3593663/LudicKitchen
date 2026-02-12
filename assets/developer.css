@@ -4056,6 +4056,10 @@ button.pswp__button.pswp__button--zoom {
         right: 18px;
         bottom: 18px;
         width: 260px;
+        transition: bottom 0.3s ease; /* smooth movement */
+    }
+    .sticky-video.move-up {
+        bottom: 58px;
     }
     .sticky_video_preview {
         min-width: 103px;
