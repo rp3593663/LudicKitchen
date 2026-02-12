@@ -4243,6 +4243,10 @@ button.pswp__button.pswp__button--zoom {
     .leader_update_info.head {
         display: none;
     }
+    p.leader_update_date {
+        display: flex;
+        gap: 2px;
+    }
     .leader_update_info {
         /* grid-template-columns: .6fr 1fr .4fr; */
         grid-template-columns: 1fr;
