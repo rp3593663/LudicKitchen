@@ -1585,7 +1585,7 @@ div#resend-otp {
     letter-spacing: -0.42px!important;
     text-align: left!important;
     color: var(--grey_text)!important;
-    margin: 0 0 32px!important;
+    margin: 0 0 20px!important;
 }
 .simply-otp-wrapper .olWrapper .ol .input-box-content, 
 .sotp-widget .olWrapper .ol .input-box-content {
@@ -1595,7 +1595,7 @@ div#resend-otp {
     margin-bottom: 8px!important;
 }
 .verify-box-details.login-description span {
-    display: none;
+    display: none !important;
 }
 .simply-otp-wrapper .olWrapper .ol .input-box-content input, 
 .sotp-widget .olWrapper .ol .input-box-content input {
