@@ -386,7 +386,7 @@
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
                       {% if product != blank %}
-                        {% if line_item.variant.title == 'Taster' or order.cancelled_at != blank %}
+                        {% if line_item.variant.title == 'Taster' %}
                           <div class="project_ledger_updates_fallback">
                             <div class="fallback_blur_area">
                               <div class="fallback_blur_top">
