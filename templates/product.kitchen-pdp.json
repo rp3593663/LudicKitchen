@@ -507,8 +507,8 @@
       "settings": {
         "max_width": "",
         "fullwidth": false,
-        "padding": "",
-        "margin": "98px 0px 16px",
+        "padding": "98px 0px 16px",
+        "margin": "",
         "section_video": "shopify://files/videos/IMG_0042.MOV",
         "section_video_poster": "shopify://shop_images/Screenshot_2026-01-30_at_4.26.16_PM.png",
         "section_video_title": "Have doubts about participation?",
