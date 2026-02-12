@@ -1594,6 +1594,9 @@ div#resend-otp {
     margin-top: 0px!important;
     margin-bottom: 8px!important;
 }
+.verify-box-details.login-description span {
+    display: none;
+}
 .simply-otp-wrapper .olWrapper .ol .input-box-content input, 
 .sotp-widget .olWrapper .ol .input-box-content input {
     padding: 10px 12px!important;
