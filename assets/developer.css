@@ -4208,6 +4208,12 @@ button.pswp__button.pswp__button--zoom {
         top: 20%;
         transform: translateY(-20%);
     }
+    p.goal_info_blue:before {
+        width: 7px;
+        height: 7px;
+        top: 20%;
+        transform: translateY(-20%);
+    }
     .ledger_content_area .top_data {
         grid-template-columns: 1fr 1fr;
     }
