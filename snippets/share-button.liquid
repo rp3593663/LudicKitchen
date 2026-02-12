@@ -14,9 +14,9 @@
 
 <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
   <button class="share-button__button hidden">
-    {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
       <path d="M11.084 4.08326V0.583258M11.084 0.583258H7.58398M11.084 0.583258L5.83398 5.83325M4.66732 0.583252H3.38398C2.40389 0.583252 1.91384 0.583252 1.5395 0.77399C1.21022 0.941769 0.942501 1.20948 0.774723 1.53877C0.583984 1.91311 0.583984 2.40316 0.583984 3.38325V8.28325C0.583984 9.26337 0.583984 9.75337 0.774723 10.1278C0.942501 10.457 1.21022 10.7247 1.5395 10.8925C1.91384 11.0833 2.40389 11.0833 3.38398 11.0833H8.28398C9.2641 11.0833 9.7541 11.0833 10.1285 10.8925C10.4578 10.7247 10.7255 10.457 10.8932 10.1278C11.084 9.75337 11.084 9.26337 11.084 8.28325V6.99992" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg> {% endcomment %}
+    </svg>
     {% if request.path contains 'account' %}
        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.0835 4.08335V0.583349M11.0835 0.583349H7.5835M11.0835 0.583349L5.8335 5.83334M4.66683 0.583344H3.3835C2.4034 0.583344 1.91336 0.583344 1.53901 0.774082C1.20973 0.94186 0.942013 1.20958 0.774234 1.53886C0.583496 1.9132 0.583496 2.40325 0.583496 3.38334V8.28334C0.583496 9.26346 0.583496 9.75346 0.774234 10.1278C0.942013 10.4571 1.20973 10.7248 1.53901 10.8926C1.91336 11.0833 2.4034 11.0833 3.3835 11.0833H8.2835C9.26361 11.0833 9.75361 11.0833 10.128 10.8926C10.4573 10.7248 10.725 10.4571 10.8927 10.1278C11.0835 9.75346 11.0835 9.26346 11.0835 8.28334V7.00001" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -28,9 +28,9 @@
   </button>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
         <path d="M11.084 4.08326V0.583258M11.084 0.583258H7.58398M11.084 0.583258L5.83398 5.83325M4.66732 0.583252H3.38398C2.40389 0.583252 1.91384 0.583252 1.5395 0.77399C1.21022 0.941769 0.942501 1.20948 0.774723 1.53877C0.583984 1.91311 0.583984 2.40316 0.583984 3.38325V8.28325C0.583984 9.26337 0.583984 9.75337 0.774723 10.1278C0.942501 10.457 1.21022 10.7247 1.5395 10.8925C1.91384 11.0833 2.40389 11.0833 3.38398 11.0833H8.28398C9.2641 11.0833 9.7541 11.0833 10.1285 10.8925C10.4578 10.7247 10.7255 10.457 10.8932 10.1278C11.084 9.75337 11.084 9.26337 11.084 8.28325V6.99992" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      </svg> {% endcomment %}
       {% comment %} <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span> {% endcomment %}
       Share
     </summary>
