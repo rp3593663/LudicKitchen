@@ -836,6 +836,9 @@ p.goal_info_blue {
     position: relative;
     padding-left: 22px;
 }
+p.goal_info_blue{
+    margin-top:8px;
+}
 p.goal_info:before {
     width: 10px;
     height: 10px;
