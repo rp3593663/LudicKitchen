@@ -1488,9 +1488,11 @@ button.otp-btn {
     order: 5;
 }
 .sotp-consent-wrapper,
-.sotp-widget .olWrapper .ol .verify-box .verify-content, 
-.sotp-widget .update-user-box .update-checkbox-wrapper {
+.sotp-widget .olWrapper .ol .verify-box .verify-content {
     order: 3;
+}
+.sotp-widget .update-user-box .update-checkbox-wrapper {
+    display:none !important;
 }
 .toast-box-wrapper,
 .sotp-widget .update-user-box .button-wrapper{
