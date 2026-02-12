@@ -2646,6 +2646,9 @@ p#stickyText {
     /* z-index: 1; */
     z-index: 0;
 }
+.spread_the_word_inner{
+    align-items:center;
+}
 .spread_the_word_inner:after,
 .chef_inner:after {
     background: linear-gradient(90deg, #FFFFFF 90.6%, rgba(255, 255, 255, 0) 100%);
