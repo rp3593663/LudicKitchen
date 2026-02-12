@@ -1528,8 +1528,8 @@ div#resend-otp {
 /* .consent-links-wrapper .consent-link:last-child {
     display: none;
 } */
-.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link, 
-.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link {
+.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text .consent-link, 
+.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-text .consent-link {
     color: var(--grey_text)!important;
     font-size: 11px!important;
     line-height: 15px!important;
