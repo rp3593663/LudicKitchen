@@ -2337,57 +2337,6 @@ p#stickyText {
 
 
 /*-----------------------------------------------*/
-/*---------- Product Page Gallery CSS ------------*/
-/*-----------------------------------------------*/
-
-#flip-book {
-  width: 100%;
-  height: 475px;
-  margin: auto;
-}
-
-#flip-book .page {
-  background: white;
-}
-
-#flip-book img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.flip-wrapper {
-  position: relative;
-  width: 100%;
-  margin: auto;
-}
-
-.flip-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10;
-}
-.flip-btn.prev {
-  left: -55px;
-}
-.flip-btn.next {
-  right: -55px;
-}
-.flip-btn:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-
-
-/*-----------------------------------------------*/
 /*---------- Account Dashboard CSS ------------*/
 /*-----------------------------------------------*/
 
