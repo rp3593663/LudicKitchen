@@ -420,21 +420,21 @@
                             </div>
                           </div>
                         {% else %}
-                        {% if line_item.variant.title == 'Sous Chef' %}
-                          <div class="chef_inner">
-                            <div class="chef_content">
-                              <div class="field_head">
-                                <span>Project 01</span>
-                                <h4>{{ customer.first_name }}, you're a Sous Chef</h4>
-                                <p>You’re part of Project 01 at a level that keeps you close to the process. This is where you’ll follow progress, see decisions unfold, and stay connected as things move forward.</p>
-                                <p>Simple. Grounded. No metaphors.</p>
+                          {% if line_item.variant.title == 'Sous Chef' %}
+                            <div class="chef_inner">
+                              <div class="chef_content">
+                                <div class="field_head">
+                                  <span>Project 01</span>
+                                  <h4>{{ customer.first_name }}, you're a Sous Chef</h4>
+                                  <p>You’re part of Project 01 at a level that keeps you close to the process. This is where you’ll follow progress, see decisions unfold, and stay connected as things move forward.</p>
+                                  <p>Simple. Grounded. No metaphors.</p>
+                                </div>
+                              </div>
+                              <div class="chefs-logo">
+                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef.svg?v=1770017692">
                               </div>
                             </div>
-                            <div class="chefs-logo">
-                              <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef.svg?v=1770017692">
-                            </div>
-                          </div>
-                        {% elsif line_item.variant.title == 'Head Chef' %}
+                          {% elsif line_item.variant.title == 'Head Chef' %}
                           <div class="chef_inner">
                             <div class="chef_content">
                               <div class="field_head">
@@ -448,7 +448,7 @@
                               <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/head_chef.svg?v=1770017691">
                             </div>
                           </div>
-                        {% endif %}
+                          {% endif %}
 
                           <div class="project_ledger_updates">
                             <div class="project_progress_inner">
@@ -725,7 +725,7 @@
                     {% endfor %}
                   {% endfor %}
                 {% else %}  
-                  <div class="project_ledger_updates_fallback">
+                  {% comment %} <div class="project_ledger_updates_fallback">
                     <div class="fallback_blur_area">
                       <div class="fallback_blur_top">
                         <div class="fallback_blur_left">
@@ -756,7 +756,7 @@
                         <a href="{{ shop.url }}/products/project-01" class="fallback_action">Back the project</a>
                       </div>
                     </div>
-                  </div>
+                  </div> {% endcomment %}
                 {% endif %}
               {% endif %}
             </div>
