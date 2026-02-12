@@ -1520,16 +1520,16 @@ div#resend-otp {
     flex-wrap: wrap;
     font-family: var(--font-family);
 }
-.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper,
-.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper {
+.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link,
+.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link {
     line-height: 15px!important;
     height: 15px!important;
 }
 /* .consent-links-wrapper .consent-link:last-child {
     display: none;
 } */
-.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link, 
-.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-links-wrapper .consent-link {
+.simply-otp-wrapper .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link, 
+.sotp-widget .olWrapper .ol .login-box .sotp-consent-wrapper .consent-link {
     color: var(--grey_text)!important;
     font-size: 11px!important;
     line-height: 15px!important;
@@ -1544,6 +1544,7 @@ div#resend-otp {
     line-height: 15px!important;
     letter-spacing: -0.3px!important;
     font-weight: 400!important;
+    text-align:left;
 }
 .simply-otp-wrapper .olWrapper .ol, 
 .sotp-widget .olWrapper .ol {
