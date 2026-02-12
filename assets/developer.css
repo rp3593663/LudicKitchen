@@ -806,7 +806,7 @@ span.milestone-percentage {
     border-bottom: 15px solid #E7E7E7;
 }
 .total_raised_percentage {
-    margin: 45px 0px 28px;
+    margin: 45px 0px 30px;
     display: flex;
     gap: 4px;
     align-items: baseline;
