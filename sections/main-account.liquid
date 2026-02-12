@@ -659,7 +659,7 @@
                                     {% assign links_text = blank %}
                                     {% assign links = blank %}
 
-                                    {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date %}
+                                    {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date.value %}
                                     {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events.value %}
                                     {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
                                     {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link.value %}
