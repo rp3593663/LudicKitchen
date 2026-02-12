@@ -4259,6 +4259,7 @@ button.pswp__button.pswp__button--zoom {
         grid-template-columns: 1fr;
         gap: 8px;
         padding: 12px 4px;
+        border-bottom: 0;
     }
     .leader_update_event {
         padding-right: 15px;
