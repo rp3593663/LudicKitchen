@@ -1719,7 +1719,7 @@ div#resend-otp {
     font-size: 0;
 }
 .sotp-widget .olWrapper .update-btn span:after {
-    content: "Create";
+    content: "Save & Continue";
     position: absolute;
     font-size: 12px;
     text-align: center;
