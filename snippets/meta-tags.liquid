@@ -13,12 +13,6 @@
   endif
 %}
 
-    <title>
-      {% if template == 'customers/account' %}
-        Your Profile | {{ shop.name }}
-      {% endif %}
-    </title>
-
 <meta property="og:site_name" content="{{ shop.name }}">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:title" content="{{ og_title | escape }}">
