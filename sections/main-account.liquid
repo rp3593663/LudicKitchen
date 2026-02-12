@@ -382,6 +382,9 @@
             <div class="ledger_content_area">
               {% if customer %}
                 {% if customer.orders.size > 0 %}
+                  {% assign chef_rendered = false %}
+                  {% assign taster_rendered = false %}
+
                   {% for order in customer.orders %}
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
