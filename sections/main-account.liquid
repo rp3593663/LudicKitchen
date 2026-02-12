@@ -386,8 +386,8 @@
                     {% for line_item in order.line_items %}
                       {% assign product = line_item.product %}
                       {% if product != blank %}
-                        {% if line_item.variant.title == 'Taster' %}
-                          <div class="project_ledger_updates_fallback rrr">
+                        {% if line_item.variant.title == 'Taster' or order.cancelled_at != blank %}
+                          <div class="project_ledger_updates_fallback">
                             <div class="fallback_blur_area">
                               <div class="fallback_blur_top">
                                 <div class="fallback_blur_left">
@@ -420,21 +420,21 @@
                             </div>
                           </div>
                         {% else %}
-                          {% if line_item.variant.title == 'Sous Chef' %}
-                            <div class="chef_inner">
-                              <div class="chef_content">
-                                <div class="field_head">
-                                  <span>Project 01</span>
-                                  <h4>{{ customer.first_name }}, you're a Sous Chef</h4>
-                                  <p>You’re part of Project 01 at a level that keeps you close to the process. This is where you’ll follow progress, see decisions unfold, and stay connected as things move forward.</p>
-                                  <p>Simple. Grounded. No metaphors.</p>
-                                </div>
-                              </div>
-                              <div class="chefs-logo">
-                                <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef.svg?v=1770017692">
+                        {% if line_item.variant.title == 'Sous Chef' %}
+                          <div class="chef_inner">
+                            <div class="chef_content">
+                              <div class="field_head">
+                                <span>Project 01</span>
+                                <h4>{{ customer.first_name }}, you're a Sous Chef</h4>
+                                <p>You’re part of Project 01 at a level that keeps you close to the process. This is where you’ll follow progress, see decisions unfold, and stay connected as things move forward.</p>
+                                <p>Simple. Grounded. No metaphors.</p>
                               </div>
                             </div>
-                          {% elsif line_item.variant.title == 'Head Chef' %}
+                            <div class="chefs-logo">
+                              <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/sous_chef.svg?v=1770017692">
+                            </div>
+                          </div>
+                        {% elsif line_item.variant.title == 'Head Chef' %}
                           <div class="chef_inner">
                             <div class="chef_content">
                               <div class="field_head">
@@ -448,7 +448,7 @@
                               <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/head_chef.svg?v=1770017691">
                             </div>
                           </div>
-                          {% endif %}
+                        {% endif %}
 
                           <div class="project_ledger_updates">
                             <div class="project_progress_inner">
