@@ -1903,6 +1903,7 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.39px;
     vertical-align: middle;
     color: #838383;
+    margin-bottom:6px;
 }
 .dashboard_content_area .form_field_box .fields {
     display: grid;
