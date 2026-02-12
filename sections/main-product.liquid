@@ -852,14 +852,9 @@
 </product-info>
 
 
+
+{% comment %} ========= Sticky Button Logic ======= {% endcomment %}
 <div class="sticky-tier-bar" id="stickyTierBar">
-  {% comment %} <button 
-    class="sticky-tier-btn js-tier-checkout"
-    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-  >
-    <span class="btn-text">Join this project</span>
-    <span class="btn-loader" style="display:none;">Loading...</span>
-  </button> {% endcomment %}
   <div class="product__custom_btns mobile_sticky_atc">
     <div class="share_join_btn">
       <a href="#choose_product_tier" class="join_project_btn">
@@ -870,7 +865,7 @@
 </div>
 
 
-
+{% comment %} ============= Sticky Button Logic ========== {% endcomment %}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -882,39 +877,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   stickyBar.style.display = "none";
 
-  const observerOptions = {
-    root: null,
-    threshold: 0
-  };
+  function checkStickyVisibility() {
 
-  // 1️⃣ Show when progress section enters
-  const progressObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        stickyBar.style.display = "block";
-      }
-    });
-  }, observerOptions);
+    const progressBottom = progressSection.getBoundingClientRect().bottom;
+    const variantTop = variantTable.getBoundingClientRect().top;
 
-  progressObserver.observe(progressSection);
+    // ✅ Show only AFTER progress section is fully passed
+    if (progressBottom < 0 && variantTop > window.innerHeight) {
+      stickyBar.style.display = "block";
+    } else {
+      stickyBar.style.display = "none";
+    }
 
+    // ✅ Show again AFTER variant table is passed
+    if (variantTable.getBoundingClientRect().bottom < 0) {
+      stickyBar.style.display = "block";
+    }
 
-  // 2️⃣ Hide when variant table enters
-  const variantObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        stickyBar.style.display = "none";
-      } else {
-        // 3️⃣ Show again when variant table leaves screen
-        stickyBar.style.display = "block";
-      }
-    });
-  }, observerOptions);
+  }
 
-  variantObserver.observe(variantTable);
+  window.addEventListener("scroll", checkStickyVisibility);
+  window.addEventListener("resize", checkStickyVisibility);
 
 });
 </script>
+
 
 
 {% schema %}
