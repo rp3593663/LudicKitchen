@@ -1892,6 +1892,9 @@ span.error-message-phone, .error-message {
     /* gap: 8px; */
     margin-bottom: 20px;
 }
+.account_spread-the-word .dashboard_content_area .field_head{
+    margin-bottom: 26px;
+}
 .dashboard_content_area .field_head h4 {
     margin: 0px;
     font-weight: 600;
