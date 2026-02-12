@@ -2637,6 +2637,10 @@ p#stickyText {
     display: block;
     max-width: 100%;
 }
+
+.mobile_tag{
+    display:none;
+}
 .spread_the_word_inner,
 .chef_inner {
     position: relative;
