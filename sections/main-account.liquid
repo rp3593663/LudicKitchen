@@ -387,7 +387,7 @@
                       {% assign product = line_item.product %}
                       {% if product != blank %}
                         {% if line_item.variant.title == 'Taster' or order.cancelled_at != blank %}
-                          <div class="project_ledger_updates_fallback">
+                          <div class="project_ledger_updates_fallback rrr">
                             <div class="fallback_blur_area">
                               <div class="fallback_blur_top">
                                 <div class="fallback_blur_left">
@@ -725,7 +725,7 @@
                     {% endfor %}
                   {% endfor %}
                 {% else %}  
-                  {% comment %} <div class="project_ledger_updates_fallback">
+                  <div class="project_ledger_updates_fallback">
                     <div class="fallback_blur_area">
                       <div class="fallback_blur_top">
                         <div class="fallback_blur_left">
@@ -756,7 +756,7 @@
                         <a href="{{ shop.url }}/products/project-01" class="fallback_action">Back the project</a>
                       </div>
                     </div>
-                  </div> {% endcomment %}
+                  </div>
                 {% endif %}
               {% endif %}
             </div>
