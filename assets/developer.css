@@ -1900,6 +1900,7 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.54px;
     vertical-align: middle;
     color:#214ECF;
+    margin-bottom:7px;
 }
 .account_spread-the-word .dashboard_content_area .field_head h4 {
     margin-bottom:12px;
