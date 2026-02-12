@@ -4240,6 +4240,9 @@ button.pswp__button.pswp__button--zoom {
     .mobile_tag{
         display:block;
     }
+    .leader_update_info.head {
+        display: none;
+    }
     .leader_update_info {
         grid-template-columns: .6fr 1fr .4fr;
         gap: 8px;
