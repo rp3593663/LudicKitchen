@@ -881,26 +881,33 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkStickyVisibility() {
 
     const progressTop = progressSection.getBoundingClientRect().top;
-    const variantTop = variantTable.getBoundingClientRect().top;
-    const variantBottom = variantTable.getBoundingClientRect().bottom;
+    const variantRect = variantTable.getBoundingClientRect();
+
+    const variantHeight = variantRect.height;
+    const visiblePart = Math.min(window.innerHeight, variantRect.bottom) - Math.max(0, variantRect.top);
+    const visibleRatio = visiblePart / variantHeight;
 
     let isVisible = false;
 
-    // ✅ Show when progress section STARTS
-    if (progressTop <= 0 && variantTop > 0) {
-      stickyBar.style.display = "block";
-      isVisible = true;
-    } else {
-      stickyBar.style.display = "none";
-    }
-
-    // ✅ Show again after variant table ends
-    if (variantBottom < 0) {
-      stickyBar.style.display = "block";
+    // ✅ Show when progress section starts
+    if (progressTop <= 0) {
       isVisible = true;
     }
 
-    // 🔥 Move video smoothly
+    // 🔴 Hide when variant section is 30% visible
+    if (visibleRatio >= 0.3) {
+      isVisible = false;
+    }
+
+    // 🟢 Show again when variant section completely leaves viewport
+    if (variantRect.bottom < 0) {
+      isVisible = true;
+    }
+
+    // Apply visibility
+    stickyBar.style.display = isVisible ? "block" : "none";
+
+    // Move video smoothly
     if (stickyVideo) {
       if (isVisible) {
         stickyVideo.classList.add("move-up");
