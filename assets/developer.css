@@ -2630,7 +2630,7 @@ p#stickyText {
     vertical-align: middle;
     color: #838383;
     /* text-decoration: unset; */
-    word-break: break-all;
+    /* word-break: break-all; */
     overflow-wrap: anywhere;
     word-wrap: break-word;
     white-space: normal;
