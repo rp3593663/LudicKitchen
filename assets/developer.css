@@ -4237,6 +4237,9 @@ button.pswp__button.pswp__button--zoom {
         line-height: 14px;
         letter-spacing: -.3px;
     }
+    .mobile_tag{
+        display:block;
+    }
     .leader_update_info {
         grid-template-columns: .6fr 1fr .4fr;
         gap: 8px;
