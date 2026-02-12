@@ -2674,7 +2674,7 @@ p#stickyText {
 }
 .spread_the_word_inner:after,
 .chef_inner:after {
-    background: linear-gradient(90deg, #FFFFFF 90.6%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #ffffff 80%, #ffffff0a);
     content: "";
     position: absolute;
     width: 52%;
