@@ -879,18 +879,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkStickyVisibility() {
 
-    const progressBottom = progressSection.getBoundingClientRect().bottom;
+    const progressTop = progressSection.getBoundingClientRect().top;
     const variantTop = variantTable.getBoundingClientRect().top;
+    const variantBottom = variantTable.getBoundingClientRect().bottom;
 
-    // ✅ Show only AFTER progress section is fully passed
-    if (progressBottom < 0 && variantTop > window.innerHeight) {
+    // ✅ Show when progress section STARTS (touches top)
+    if (progressTop <= 0 && variantTop > 0) {
       stickyBar.style.display = "block";
     } else {
       stickyBar.style.display = "none";
     }
 
-    // ✅ Show again AFTER variant table is passed
-    if (variantTable.getBoundingClientRect().bottom < 0) {
+    // ✅ Show again after variant table ends
+    if (variantBottom < 0) {
       stickyBar.style.display = "block";
     }
 
