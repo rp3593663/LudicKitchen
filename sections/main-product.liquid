@@ -866,6 +866,57 @@
 
 
 {% comment %} ============= Sticky Button Logic ========== {% endcomment %}
+{% comment %} <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const stickyBar = document.getElementById("stickyTierBar");
+  const progressSection = document.querySelector(".section-project_progress_data");
+  const variantTable = document.querySelector(".section-project_variant_table");
+  const stickyVideo = document.querySelector(".sticky-video");
+
+  if (!stickyBar || !progressSection || !variantTable) return;
+
+  stickyBar.style.display = "none";
+
+  function checkStickyVisibility() {
+
+    const progressTop = progressSection.getBoundingClientRect().top;
+    const variantTop = variantTable.getBoundingClientRect().top;
+    const variantBottom = variantTable.getBoundingClientRect().bottom;
+
+    let isVisible = false;
+
+    // ✅ Show when progress section STARTS
+    if (progressTop <= 0 && variantTop > 0) {
+      stickyBar.style.display = "block";
+      isVisible = true;
+    } else {
+      stickyBar.style.display = "none";
+    }
+
+    // ✅ Show again after variant table ends
+    if (variantBottom < 0) {
+      stickyBar.style.display = "block";
+      isVisible = true;
+    }
+
+    // 🔥 Move video smoothly
+    if (stickyVideo) {
+      if (isVisible) {
+        stickyVideo.classList.add("move-up");
+      } else {
+        stickyVideo.classList.remove("move-up");
+      }
+    }
+
+  }
+
+  window.addEventListener("scroll", checkStickyVisibility);
+  window.addEventListener("resize", checkStickyVisibility);
+
+});
+</script> {% endcomment %}
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -882,10 +933,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const progressTop = progressSection.getBoundingClientRect().top;
     const variantRect = variantTable.getBoundingClientRect();
-
-    const variantHeight = variantRect.height;
-    const visiblePart = Math.min(window.innerHeight, variantRect.bottom) - Math.max(0, variantRect.top);
-    const visibleRatio = visiblePart / variantHeight;
+    const windowHeight = window.innerHeight;
 
     let isVisible = false;
 
@@ -894,17 +942,17 @@ document.addEventListener("DOMContentLoaded", function () {
       isVisible = true;
     }
 
-    // 🔴 Hide when variant section is 30% visible
-    if (visibleRatio >= 0.3) {
+    // 🔴 Hide when variant section reaches 30% of viewport height
+    if (variantRect.top <= windowHeight * 0.7 && variantRect.bottom > 0) {
       isVisible = false;
     }
 
-    // 🟢 Show again when variant section completely leaves viewport
+    // 🟢 Show again after variant section completely passes
     if (variantRect.bottom < 0) {
       isVisible = true;
     }
 
-    // Apply visibility
+    // Apply sticky visibility
     stickyBar.style.display = isVisible ? "block" : "none";
 
     // Move video smoothly
@@ -923,7 +971,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
 
 
 
