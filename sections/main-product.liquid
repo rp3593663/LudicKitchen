@@ -872,6 +872,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const stickyBar = document.getElementById("stickyTierBar");
   const progressSection = document.querySelector(".section-project_progress_data");
   const variantTable = document.querySelector(".section-project_variant_table");
+  const stickyVideo = document.querySelector(".sticky-video");
 
   if (!stickyBar || !progressSection || !variantTable) return;
 
@@ -883,9 +884,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const variantTop = variantTable.getBoundingClientRect().top;
     const variantBottom = variantTable.getBoundingClientRect().bottom;
 
-    // ✅ Show when progress section STARTS (touches top)
+    let isVisible = false;
+
+    // ✅ Show when progress section STARTS
     if (progressTop <= 0 && variantTop > 0) {
       stickyBar.style.display = "block";
+      isVisible = true;
     } else {
       stickyBar.style.display = "none";
     }
@@ -893,6 +897,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // ✅ Show again after variant table ends
     if (variantBottom < 0) {
       stickyBar.style.display = "block";
+      isVisible = true;
+    }
+
+    // 🔥 Move video smoothly
+    if (stickyVideo) {
+      if (isVisible) {
+        stickyVideo.classList.add("move-up");
+      } else {
+        stickyVideo.classList.remove("move-up");
+      }
     }
 
   }
@@ -902,6 +916,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
 
 
 
