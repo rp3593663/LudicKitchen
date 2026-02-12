@@ -851,6 +851,18 @@
   </div>
 </product-info>
 
+
+<div class="sticky-tier-bar" id="stickyTierBar">
+  <button 
+    class="sticky-tier-btn js-tier-checkout"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  >
+    <span class="btn-text">Join this project</span>
+    <span class="btn-loader" style="display:none;">Loading...</span>
+  </button>
+</div>
+
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
