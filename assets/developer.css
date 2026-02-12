@@ -4244,7 +4244,8 @@ button.pswp__button.pswp__button--zoom {
         display: none;
     }
     .leader_update_info {
-        grid-template-columns: .6fr 1fr .4fr;
+        /* grid-template-columns: .6fr 1fr .4fr; */
+        grid-template-columns: 1fr;
         gap: 8px;
         padding: 12px 4px;
     }
