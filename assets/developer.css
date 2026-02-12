@@ -1894,7 +1894,12 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.54px;
     vertical-align: middle;
     color:#214ECF;
+}
+.account_spread-the-word .dashboard_content_area .field_head h4 {
     margin-bottom:12px;
+}
+.account_spread-the-word .dashboard_content_area .field_head p {
+
 }
 .dashboard_content_area .field_head p {
     margin: 0px;
@@ -1904,7 +1909,6 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.39px;
     vertical-align: middle;
     color: #838383;
-    margin-bottom:6px;
 }
 .dashboard_content_area .form_field_box .fields {
     display: grid;
