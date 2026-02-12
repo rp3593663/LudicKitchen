@@ -1894,6 +1894,7 @@ span.error-message-phone, .error-message {
     letter-spacing: -0.54px;
     vertical-align: middle;
     color:#214ECF;
+    margin-bottom:12px;
 }
 .dashboard_content_area .field_head p {
     margin: 0px;
