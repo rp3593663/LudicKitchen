@@ -686,11 +686,13 @@
                                       {% if dates != blank %}
                                         {% assign dates = dates | concat: product_dates %}
                                         {% assign events = events | concat: product_events %}
+                                        {% assign tag = tag | concat: product_tag %}
                                         {% assign links_text = links_text | concat: product_links_text %}
                                         {% assign links = links | concat: product_links %}
                                       {% else %}
                                         {% assign dates = product_dates %}
                                         {% assign events = product_events %}
+                                        {% assign tag = product_tag %}
                                         {% assign links_text = product_links_text %}
                                         {% assign links = product_links %}
                                       {% endif %}
