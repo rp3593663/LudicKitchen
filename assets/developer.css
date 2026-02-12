@@ -4248,8 +4248,13 @@ button.pswp__button.pswp__button--zoom {
     .leader_update_info.head {
         display: none;
     }
-    .leader_update_url {
+   .leader_update_url {
         margin-top: 4px;
+        display: flex;
+        gap: 2px;
+    }
+    .leader_update_url:before {
+        content: '➝';
     }
     p.leader_update_date {
         display: flex;
