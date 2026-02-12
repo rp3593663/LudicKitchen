@@ -4242,6 +4242,9 @@ button.pswp__button.pswp__button--zoom {
         color: #214ECF;
         font-weight:500;
     }
+    .leader_update_tag {
+        display: none;
+    }
     .leader_update_info.head {
         display: none;
     }
