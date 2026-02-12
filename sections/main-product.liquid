@@ -870,6 +870,53 @@
 </div>
 
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const stickyBar = document.getElementById("stickyTierBar");
+  const progressSection = document.querySelector(".section-project_progress_data");
+  const variantTable = document.querySelector(".section-project_variant_table");
+
+  if (!stickyBar || !progressSection || !variantTable) return;
+
+  stickyBar.style.display = "none";
+
+  const observerOptions = {
+    root: null,
+    threshold: 0
+  };
+
+  // 1️⃣ Show when progress section enters
+  const progressObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        stickyBar.style.display = "block";
+      }
+    });
+  }, observerOptions);
+
+  progressObserver.observe(progressSection);
+
+
+  // 2️⃣ Hide when variant table enters
+  const variantObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        stickyBar.style.display = "none";
+      } else {
+        // 3️⃣ Show again when variant table leaves screen
+        stickyBar.style.display = "block";
+      }
+    });
+  }, observerOptions);
+
+  variantObserver.observe(variantTable);
+
+});
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
