@@ -2801,6 +2801,9 @@ p#stickyText {
     letter-spacing: -0.42px;
     vertical-align: middle;
 }
+.ledger_fallback_data p b {
+    color: #1a1a1a;
+}
 a.fallback_action {
     width: 136px;
     height: 34px;
