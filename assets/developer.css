@@ -846,6 +846,17 @@ p.goal_info:before {
     top: 50%;
     transform: translateY(-50%);
 }
+p.goal_info_blue:before {
+    width: 10px;
+    height: 10px;
+    content: "";
+    background: #214ECF;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 p.goal_info span{
     font-weight: 650;
 }
