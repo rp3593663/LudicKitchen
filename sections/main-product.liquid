@@ -853,13 +853,20 @@
 
 
 <div class="sticky-tier-bar" id="stickyTierBar">
-  <button 
+  {% comment %} <button 
     class="sticky-tier-btn js-tier-checkout"
     data-variant-id="{{ product.selected_or_first_available_variant.id }}"
   >
     <span class="btn-text">Join this project</span>
     <span class="btn-loader" style="display:none;">Loading...</span>
-  </button>
+  </button> {% endcomment %}
+  <div class="product__custom_btns">
+    <div class="share_join_btn">
+      <a href="#choose_product_tier" class="join_project_btn">
+        Join this project
+      </a>
+    </div>
+  </div>
 </div>
 
 
