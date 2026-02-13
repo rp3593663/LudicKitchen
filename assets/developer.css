@@ -3720,10 +3720,13 @@ button.pswp__button.pswp__button--zoom {
         letter-spacing: -1px;
     }
     .pdp_muticolumn .multicolumn-card__info .rte {
-        margin-top: 10px;
+        margin-top: 14px;
         font-size: 12px;
         line-height: 20px;
         letter-spacing: -.36px;
+    }
+    .pdp_muticolumn .multicolumn-list p {
+        margin-bottom: 8px;
     }
 
     /*---------- PDP Project Tier Table ------------*/
