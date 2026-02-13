@@ -1705,7 +1705,7 @@ div#resend-otp {
     font-family: inter;
     letter-spacing: 43px !important;
     padding: 0 0 0 15px !important;
-    text-align: left;
+    text-align: center !important;
     background: repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 40px, transparent 40px, transparent 52px),
     repeating-linear-gradient(to right, #cfcfcf 0, #cfcfcf 40px,transparent 40px, transparent 52px),
     repeating-linear-gradient( to right, #cfcfcf 0, #cfcfcf 1px, transparent 1px, transparent 40px, #cfcfcf 40px,  #cfcfcf 41px, transparent 41px, transparent 52px) !important;
