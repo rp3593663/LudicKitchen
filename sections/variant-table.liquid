@@ -306,7 +306,7 @@
         </div>
 	</div>
 </div>
-<script>
+{% comment %} <script>
   {% if customer %}
     window.__customerLoggedIn = true;
     window.__customerHasOrders = {{ customer.orders_count | json }};
@@ -316,7 +316,26 @@
   {% endif %}
 
   window.__currentPageUrl = {{ request.path | json }};
+</script> {% endcomment %}
+
+<script>
+  {% if customer %}
+    window.__customerLoggedIn = true;
+
+    {% if customer.orders.size > 0 %}
+      window.__customerHasOrders = 1;
+    {% else %}
+      window.__customerHasOrders = 0;
+    {% endif %}
+
+  {% else %}
+    window.__customerLoggedIn = false;
+    window.__customerHasOrders = 0;
+  {% endif %}
+
+  window.__currentPageUrl = {{ request.path | json }};
 </script>
+
 
 
 
