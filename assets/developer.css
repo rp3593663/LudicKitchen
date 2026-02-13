@@ -1716,6 +1716,7 @@ div#resend-otp {
     position: relative!important;
     left: unset!important;
     transform: unset!important;
+    text-overflow: unset !important;
 }
 .simply-otp-wrapper .olWrapper .ol .verify-box .resend-otp p, 
 .sotp-widget .olWrapper .ol .verify-box .resend-otp p {
