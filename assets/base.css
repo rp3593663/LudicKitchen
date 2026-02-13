@@ -1798,9 +1798,11 @@ input[type='checkbox'] {
 .form__message {
   align-items: center;
   display: flex;
-  font-size: 1.4rem;
   line-height: 1;
   margin-top: 1rem;
+  letter-spacing: -0.7px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .form__message--large {
