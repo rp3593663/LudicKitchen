@@ -1343,14 +1343,6 @@ p.goal_info span{
     letter-spacing:-0.9px;
 }
 
-.timer-label{
-    line-height:30px;
-}
-.timer-unit {
-  /* display: flex;
-  align-items: baseline; */
-  gap: 2px;
-}
 
 /* Animations */
 @keyframes pulseZoom {
