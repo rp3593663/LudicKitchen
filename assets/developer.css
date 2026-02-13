@@ -3890,6 +3890,7 @@ button.pswp__button.pswp__button--zoom {
     }
     .tier_timer_inner p {
         line-height: 28px;
+        font-size:13px;
     }
     .earlyBirdTimer {
         gap: 7px;
