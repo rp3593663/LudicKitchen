@@ -1327,6 +1327,11 @@ p.goal_info span{
   margin: 0;
 }
 
+.tier_timer_inner {
+    display: flex;
+    gap: 5px;
+}
+
 .earlyBirdTimer {
     color: #214ECF !important;
     display: flex;
