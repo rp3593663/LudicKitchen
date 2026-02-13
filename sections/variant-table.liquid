@@ -464,12 +464,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+
 <script>
   function initEarlyBirdTimers() {
     const endDate = new Date(2026, 1, 22, 12, 0, 0); // Feb 22, 12 PM
 
     document.querySelectorAll(".earlyBirdTimer").forEach(timerEl => {
-
       function updateTimer() {
         const now = new Date();
         const diff = endDate - now;
@@ -480,24 +480,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
 
-        timerEl.innerHTML =
+       timerEl.innerHTML =
         `<span class="timer-unit">
           <span class="timer-num">${days}</span>
           <span class="timer-label">Days</span>
+        </span>
+        <span class="timer-unit">
+          <span class="timer-num">${hours}</span>
+          <span class="timer-label">Hours</span>
+        </span>
+        <span class="timer-unit">
+          <span class="timer-num">${minutes}</span>
+          <span class="timer-label">Minutes</span>
+        </span>
+        <span class="timer-unit">
+          <span class="timer-num">${seconds}</span>
+          <span class="timer-label">Seconds</span>
         </span>`;
       }
 
       updateTimer();
-
-      // 🔥 Since only days are shown, update once every hour is enough
-      setInterval(updateTimer, 60 * 60 * 1000);
+      setInterval(updateTimer, 1000);
     });
   }
 
   document.addEventListener("DOMContentLoaded", initEarlyBirdTimers);
 
-  // Re-run when variant changes
+  // 🔥 IMPORTANT: Re-run when variant changes
   document.addEventListener("variant:change", initEarlyBirdTimers);
 </script>
 
