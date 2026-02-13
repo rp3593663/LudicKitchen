@@ -433,7 +433,7 @@
             "tier_1_text": "",
             "tier_2": false,
             "tier_2_text": "",
-            "tier_3": false,
+            "tier_3": true,
             "tier_3_text": "",
             "tier_4": false,
             "tier_4_text": "",
