@@ -434,9 +434,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        {% comment %} const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+        const seconds = Math.floor((diff / 1000) % 60); {% endcomment %}
 
        timerEl.innerHTML =
         `<span class="timer-unit">
