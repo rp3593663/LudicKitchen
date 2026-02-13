@@ -1343,11 +1343,6 @@ p.goal_info span{
     align-items: anchor-center;
 }
 
-.tier_timer_inner {
-    display: flex;
-    gap: 5px;
-}
-
 .earlyBirdTimer {
     color: #214ECF !important;
     display: flex;
