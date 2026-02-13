@@ -47,7 +47,8 @@ html {
   scroll-margin-top: 150px;
 }
 #choose_product_tier {
-  scroll-margin-top: -400px;
+  /* scroll-margin-top: -400px; */
+  scroll-margin-top: -100px;
 }
 .utility-bar{
     background-color: var(--primary_color);
