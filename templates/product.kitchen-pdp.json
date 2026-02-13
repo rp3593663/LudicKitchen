@@ -40,10 +40,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "cashfree_bnpl_plus_app_block_MebbH8": {
-          "type": "shopify://apps/cashfree-bnpl-plus/blocks/app-block/8838736b-192a-4b71-9361-cfe027ad983b",
-          "settings": {}
         }
       },
       "block_order": [
@@ -52,8 +48,7 @@
         "short_description_hWpmcz",
         "project_info_points_4rFK8g",
         "raised_goal_q7H3MD",
-        "custom_join_btns_XDY8qB",
-        "cashfree_bnpl_plus_app_block_MebbH8"
+        "custom_join_btns_XDY8qB"
       ],
       "settings": {
         "enable_sticky_info": true,
