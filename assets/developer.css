@@ -1737,7 +1737,8 @@ div#resend-otp {
     background-repeat: repeat-x !important;
     caret-color: transparent !important;
     position: relative!important;
-    left: unset!important;
+    left: 0!important;
+    right: 0!important;
     transform: unset!important;
     text-overflow: unset !important;
     overflow: hidden !important;
