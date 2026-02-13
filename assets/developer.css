@@ -1447,7 +1447,7 @@ p.goal_info span{
     display: flex;
 }
 span.tier_custom_text {
-    font-weight: 550;
+    font-weight: 600;
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.54px;
