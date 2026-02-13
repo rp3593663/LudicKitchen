@@ -1344,7 +1344,7 @@ p.goal_info span{
 }
 .timer-unit {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 2px;
 }
 
