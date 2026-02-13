@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-  window.addEventListener("pageshow", function (event) {
+  {% comment %} window.addEventListener("pageshow", function (event) {
     // Safari back/forward cache restore
     if (event.persisted) {
       document.querySelectorAll(".js-tier-checkout").forEach(button => {
@@ -416,7 +416,32 @@ document.addEventListener("DOMContentLoaded", function () {
         btnText.style.display = "inline-block";
       });
     }
-  });
+  }); {% endcomment %}
+  
+  window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+
+    document.querySelectorAll(".js-tier-checkout").forEach(button => {
+      const btnText = button.querySelector(".btn-text");
+      const btnLoader = button.querySelector(".btn-loader");
+
+      btnLoader.style.display = "none";
+      btnText.style.display = "inline-block";
+
+      // 🚫 If already joined → keep disabled
+      if (window.__customerLoggedIn && window.__customerHasOrders > 0) {
+        button.disabled = true;
+        button.classList.add("is-disabled");
+        btnText.textContent = "Already Joined";
+      } else {
+        button.disabled = false;
+      }
+
+    });
+
+  }
+});
+
 </script>
 
 <script>
