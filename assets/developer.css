@@ -504,6 +504,9 @@ a.go_btn {
     position: relative;
     padding-left: 15px;
 }
+.featured_project_goal_info_blue {
+    margin-top: 8px;
+}
 .featured_project_goal_info:before {
     width: 6px;
     height: 6px;
