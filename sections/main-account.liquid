@@ -321,7 +321,7 @@
                   <div class="fields size_fields">
                     <div class="edit_account_field">
                       <label>Footwear size</label>
-                      <select name="shoe_size" class="edit_account_input">
+                      {% comment %} <select name="shoe_size" class="edit_account_input">
                         <option value="">Select Footwear Size</option>
                         {% for i in (3..12) %}
                           {% assign size_value = "UK " | append: i %}
@@ -329,6 +329,37 @@
                             {{ size_value }}
                           </option>
                         {% endfor %}
+                      </select> {% endcomment %}
+                      <select name="shoe_size" class="edit_account_input">
+                        <option value="">Select Footwear Size</option>
+
+                        {% assign size_chart = 
+                          "3:4:36,
+                          4:5:37,
+                          5:6:38,
+                          6:7:39,
+                          7:8:40.5,
+                          8:9:42,
+                          9:10:44.5,
+                          10:11:44.5,
+                          11:12:45,
+                          12:13:47" | split: "," 
+                        %}
+
+                        {% for size in size_chart %}
+                          {% assign parts = size | strip | split: ":" %}
+                          {% assign uk = parts[0] %}
+                          {% assign us = parts[1] %}
+                          {% assign eu = parts[2] %}
+
+                          {% assign display_value = "UK " | append: uk | append: " | US " | append: us | append: " | EU " | append: eu %}
+
+                          <option value="{{ display_value }}" 
+                            {% if customer.metafields.custom.shoe_size == display_value %}selected{% endif %}>
+                            {{ display_value }}
+                          </option>
+                        {% endfor %}
+
                       </select>
                       <div class="field-error"></div>
                     </div>
