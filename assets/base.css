@@ -2313,6 +2313,9 @@ input[type='checkbox'] {
   top:38px;
   background:#fff;
 }
+.template-account .section-header.animate {
+    top: 0;
+}
 
 .shopify-section-group-header-group {
   z-index: 4;
