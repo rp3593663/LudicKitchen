@@ -1041,6 +1041,9 @@ p.goal_info span{
 .pdp_muticolumn .multicolumn-list p{
     margin-bottom:12px;
 }
+.pdp_muticolumn .multicolumn-list p:last-child{
+    margin-bottom:0px;
+}
 .pdp_muticolumn .multicolumn-card__image-wrapper {
     margin: 0px!important;
     border-radius: 10px!important;
