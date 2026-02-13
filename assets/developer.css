@@ -3870,13 +3870,6 @@ button.pswp__button.pswp__button--zoom {
         width: 6px;
         height: 6px;
     }
-
-    .tier_timer_inner {
-        gap: 0px;
-    }
-    .tier_timer_inner {
-        flex-wrap: wrap;
-    }
     .tier_timer_inner p {
         line-height: 28px;
     }
