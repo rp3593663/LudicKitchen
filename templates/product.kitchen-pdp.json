@@ -1177,8 +1177,8 @@
         "fullwidth": false,
         "padding": "",
         "margin": "98px 0px",
-        "heading": "All your questions, answered",
-        "description": "Project 01- Ludic Clogs  is built in the open.<br>This section answers practical questions about the product, process, and delivery; so you can decide with confidence."
+        "heading": "All your questions,<span> answered</span>",
+        "description": "Project 01- Ludic Clogs  is built in the open.This section answers practical questions about the product, process, and delivery; so you can decide with confidence."
       }
     },
     "related-products": {
