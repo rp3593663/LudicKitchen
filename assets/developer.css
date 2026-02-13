@@ -1038,6 +1038,9 @@ p.goal_info span{
     background: var(--grey);
     height:100%;
 }
+.pdp_muticolumn .multicolumn-list p{
+    margin-bottom:12px;
+}
 .pdp_muticolumn .multicolumn-card__image-wrapper {
     margin: 0px!important;
     border-radius: 10px!important;
