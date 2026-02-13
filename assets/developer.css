@@ -3948,6 +3948,7 @@ button.pswp__button.pswp__button--zoom {
     .form_submit_wrap {
         gap: 15px;
         flex-wrap: wrap;
+        margin-bottom:20px;
     }
     .profile_edit_form .form-message {
         font-size: 12px;
