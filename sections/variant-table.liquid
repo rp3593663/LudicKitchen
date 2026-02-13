@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <span class="timer-num">${days}</span>
           <span class="timer-label">Days</span>
         </span>
-        <span class="timer-unit">
+        {% comment %} <span class="timer-unit">
           <span class="timer-num">${hours}</span>
           <span class="timer-label">Hours</span>
         </span>
@@ -454,7 +454,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="timer-unit">
           <span class="timer-num">${seconds}</span>
           <span class="timer-label">Seconds</span>
-        </span>`;
+        </span> {% endcomment %}
+        `;
       }
 
       updateTimer();
