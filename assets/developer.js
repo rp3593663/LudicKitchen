@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     verifyBox.insertAdjacentHTML(
       "beforeend",
       `<div class="help-support-box">
-        If something isn’t working, email us at <a href="mailto:kitchen@ludic.life" target="_blank">kitchen@ludic.life</a>
+        If something isn’t working, Contact us at <a href="mailto:kitchen@ludic.life" target="_blank">kitchen@ludic.life</a>
       </div>`
     );
   }
