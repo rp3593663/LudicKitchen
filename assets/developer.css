@@ -3288,7 +3288,10 @@ button.pswp__button.pswp__button--zoom {
 
     /*---------- Header Section ------------*/
     
-    .desktop_menu_linklist > a:nth-child(2) {
+    /* .desktop_menu_linklist > a:nth-child(2) {
+        display: none;
+    } */
+     a.mobile_sign_up {
         display: none;
     }
     .desktop_menu_linklist {
