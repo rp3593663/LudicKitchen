@@ -1803,6 +1803,7 @@ input[type='checkbox'] {
   letter-spacing: -0.7px;
   font-weight: 500;
   font-size: 12px;
+  color: green;
 }
 
 .form__message--large {
