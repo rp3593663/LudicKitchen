@@ -1057,7 +1057,7 @@
     requiredFields.forEach(name => {
       const input = form.querySelector(`[name="${name}"]`);
       if (!input || input.value.trim() === "") {
-        showError(input, "This Field is Required.");
+        showError(input, "This field is required.");
         valid = false;
       }
     });
