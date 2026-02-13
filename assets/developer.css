@@ -514,6 +514,16 @@ a.go_btn {
     left: 0;
     top: 5px;
 }
+.featured_project_goal_info_blue:before{
+    width: 6px;
+    height: 6px;
+    content: "";
+    background: #214ECF;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
 .progress_fill {
     height: 100%;
     background: var(--primary_color);
