@@ -94,7 +94,7 @@
           "settings": {
             "image": "shopify://shop_images/product_img4.png",
             "title": "The making of Ludic Clogs",
-            "text": "<p>Ludic Clogs follow the fundamentals of any industrial design project. It starts in sketchbooks, post-its, design huddles — and lives rent free in our heads for a while. That’s ideation.<br/>Some concepts move into development. We use traditional CAD and modern tools like 3D printing to understand shape, volume and fit better. This is the back-and-forth phase — constant fine-tuning, almost like a badminton rally. Materials, colours, hardware and accessories are tested in parallel.<br/>Once resolved, we move into production. Moulds are opened across selected sizes, wear tests are done, and when everything checks out, production begins.</p>",
+            "text": "<p>Ludic Clogs follow the fundamentals of any industrial design project. It starts in sketchbooks, post-its, design huddles — and lives rent free in our heads for a while. That’s ideation.</p><p><br/>Some concepts move into development. We use traditional CAD and modern tools like 3D printing to understand shape, volume and fit better. This is the back-and-forth phase — constant fine-tuning, almost like a badminton rally. Materials, colours, hardware and accessories are tested in parallel.</p><p><br/>Once resolved, we move into production. Moulds are opened across selected sizes, wear tests are done, and when everything checks out, production begins.</p>",
             "link_label": "",
             "link": ""
           }
@@ -104,7 +104,7 @@
           "settings": {
             "image": "shopify://shop_images/product_img4.png",
             "title": " Not your usual Clogs",
-            "text": "<p>Ludic Clogs are designed as a complete system, not a standalone product. Comfort, grip, breathability and visual language are developed together — seen in the dual-material construction, wave-pattern footbed, side air vents and elastic woven back straps.</p><p>Each element ties back to Ludic’s design philosophy. The result is a clog that’s adaptable, customisable and part of a larger ecosystem — not just another one-off slip-on.</p>",
+            "text": "<p>Ludic Clogs are designed as a complete system, not a standalone product. Comfort, grip, breathability and visual language are developed together — seen in the dual-material construction, wave-pattern footbed, side air vents and elastic woven back straps.</p><p></p><p>Each element ties back to Ludic’s design philosophy. The result is a clog that’s adaptable, customisable and part of a larger ecosystem — not just another one-off slip-on.</p>",
             "link_label": "",
             "link": ""
           }
