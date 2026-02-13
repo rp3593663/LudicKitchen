@@ -246,6 +246,7 @@
                           <option value="">Select Gender</option>
                           <option value="Male" {% if customer.metafields.custom.gender == "Male" %}selected{% endif %}>Male</option>
                           <option value="Female" {% if customer.metafields.custom.gender == "Female" %}selected{% endif %}>Female</option>
+                          <option value="Other" {% if customer.metafields.custom.gender == 'Other' %}selected{% endif %}>Other</option>
                           <option value="Prefer not to say" {% if customer.metafields.custom.gender == "Prefer not to say" %}selected{% endif %}>Prefer not to say</option>
                         </select>
                       <div class="field-error"></div>
