@@ -329,7 +329,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnLoader = button.querySelector(".btn-loader");
 
     // 🚫 If user is logged in AND already has an order → disable button
-    if (window.__customerLoggedIn && window.__customerHasOrders > 0) {
+    {% comment %} if (window.__customerLoggedIn && window.__customerHasOrders > 0) { {% endcomment %}
+    if (window.__customerLoggedIn === true && Number(window.__customerHasOrders) > 0){
       button.disabled = true;
       button.classList.add("is-disabled");
       btnText.textContent = "Already Joined";
@@ -417,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }); {% endcomment %}
-  
+
   window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
 
