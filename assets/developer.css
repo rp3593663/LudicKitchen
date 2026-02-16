@@ -352,7 +352,7 @@ a#HeaderMenu-shop {
 
 }
 .mobile_right_image{
-    dispay:none;
+    display:none;
 }
 .p_right_image img {
     width: 100%;
@@ -3398,6 +3398,9 @@ button.pswp__button.pswp__button--zoom {
     }
     .p_right_image {
         display: none;
+    }
+    .mobile_right_image{
+        display:block;
     }
     .raised_progress_bar {
         margin: 12px 0 22px;
