@@ -3400,6 +3400,10 @@ button.pswp__button.pswp__button--zoom {
         border: 1px solid #E5E5E5;
     }
 
+    p.week_text {
+        margin: 30px 0px;
+    }
+
     /*---------- How Works CSS ------------*/
 
     .how_works_container {
