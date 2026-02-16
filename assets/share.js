@@ -30,7 +30,12 @@ if (!customElements.get('share-button')) {
           this.mainDetailsToggle.setAttribute('hidden', '');
           this.elements.shareButton.classList.remove('hidden');
           this.elements.shareButton.addEventListener('click', () => {
-            navigator.share({ url: this.urlToShare, title: document.title });
+            // navigator.share({ url: this.urlToShare, title: document.title });
+            navigator.share({
+              title: document.title,
+              text: this.customShareText
+            });
+
           });
         } else {
           this.mainDetailsToggle.addEventListener('toggle', this.toggleDetails.bind(this));
