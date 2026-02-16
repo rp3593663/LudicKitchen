@@ -267,7 +267,7 @@
           "type": "benefit",
           "settings": {
             "title": "Additional Discount",
-            "short_text": "An extra discount applied on future Ludic purchases. Available exclusively to Kitchen contributors.",
+            "short_text": "An extra discount applied on future Ludic purchases. Available exclusively to Kitchen contributors. Valid for 6 months.",
             "more_text": "",
             "tier_1": false,
             "tier_1_text": "",
