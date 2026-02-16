@@ -3907,6 +3907,7 @@ button.pswp__button.pswp__button--zoom {
     }
     .tier_benefits.active .tier_mobile_description{
         margin-top: 16px;
+        border-top: 0;
     }
 
     .status-indicator {
