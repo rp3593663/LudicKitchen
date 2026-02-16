@@ -17,7 +17,11 @@ if (!customElements.get('share-button')) {
           ? this.elements.urlInput.value
           : document.location.href;
 
-        this.customShareText = `<p>We’ve started something new called Ludic Kitchen.</p> <p>Instead of launching finished products the usual way, we’re building them in the open — sharing progress, decisions, and milestones as they happen. People can follow the journey and choose how closely they want to be involved.</p> <p>It’s a different way of creating things. Would love for you to explore it.</p>
+        this.customShareText = `We’ve started something new called Ludic Kitchen.
+
+        Instead of launching finished products the usual way, we’re building them in the open — sharing progress, decisions, and milestones as they happen. People can follow the journey and choose how closely they want to be involved.
+
+        It’s a different way of creating things. Would love for you to explore it.
 
         ${this.urlToShare}`;
 
