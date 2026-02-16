@@ -171,18 +171,26 @@
 
               {% assign first_faq_found = false %}
 
+
+              {% for block in section.blocks %}
+                {% if block.type == 'faq' and block.settings.tab_handle == first_tab %}
+                  {% assign first_faq_id = block.id %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              
                 {% for block in section.blocks %}
                   {% if block.type == 'faq' %}
 
                     {% assign make_active = false %}
 
                     {% if block.settings.tab_handle == first_tab and first_faq_found == false %}
-                      {% assign make_active = true %}
                       {% assign first_faq_found = true %}
                     {% endif %}
 
                     <div
-                      class="faq-item sdjhbs {% if make_active %}active{% endif %}"
+                     class="faq-item sdjhbs {% if block.id == first_faq_id %}active{% endif %}"
                       data-tab="{{ block.settings.tab_handle }}"
                       {% unless block.settings.tab_handle == first_tab %}
                         style="display:none"
