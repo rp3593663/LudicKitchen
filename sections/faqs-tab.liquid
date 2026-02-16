@@ -90,7 +90,7 @@
                 {% for block in section.blocks %}
                   {% if block.type == 'faq' %}
                     <div
-                      class="faq-item {% if block.settings.tab_handle == first_tab and forloop.first %}active{% endif %}"
+                      class="faq-item"
                       data-tab="{{ block.settings.tab_handle }}"
                       {% unless block.settings.tab_handle == first_tab %}
                         style="display:none"
@@ -121,7 +121,7 @@
               {% if block.type == 'tab' %}
                 <div class="faq_button_content">
                   <button
-                    class="faq-tab {% if forloop.first %}active{% endif %}"
+                    class="faq-tab"
                     data-tab="{{ block.settings.tab_handle }}"
                     {{ block.shopify_attributes }}>
                     <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
