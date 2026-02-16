@@ -4271,6 +4271,10 @@ button.pswp__button.pswp__button--zoom {
     .leader_update_event {
         padding-right: 15px;
         word-break: unset;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.6px;
+        color: #1a1a1a;
     }
     .leader_update_info.head h2 {
         font-size: 12px;
