@@ -300,7 +300,7 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
 
 
   // OPEN FIRST TAB DESCRIPTION ON LOAD
-  const firstActiveTab = scope.querySelector(".faq-tab.active");
+  {% comment %} const firstActiveTab = scope.querySelector(".faq-tab.active");
 
     if (firstActiveTab) {
       const key = firstActiveTab.dataset.tab;
@@ -314,6 +314,37 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
       });
 
       openFirstFaq(key);
+    } {% endcomment %}
+
+
+    function openFirstFaq(tabKey){
+      const items = scope.querySelectorAll(".faq-item");
+      let firstMatch = null;
+
+      items.forEach(item => {
+        const answer = item.querySelector(".faq-answer");
+
+        if(item.dataset.tab === tabKey){
+          item.style.display = "block";
+
+          // store first visible item
+          if(!firstMatch){
+            firstMatch = item;
+          }
+
+        } else {
+          item.style.display = "none";
+          item.classList.remove("active");
+          answer.style.maxHeight = null;
+        }
+      });
+
+      // ✅ Make first one active
+      if(firstMatch){
+        const firstAnswer = firstMatch.querySelector(".faq-answer");
+        firstMatch.classList.add("active");
+        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+      }
     }
 
 
