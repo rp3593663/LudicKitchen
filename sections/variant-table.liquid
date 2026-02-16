@@ -221,7 +221,8 @@
                     <div class="tier_price_block">
                       <div class="tier_price">
                           <div class="sale_price">
-                          {{ variant.price | money }}
+                            {{ product.metafields.custom.discounted_price }}
+                          {% comment %} {{ variant.price | money }} {% endcomment %}
                           </div>
 
                           {% if variant.compare_at_price > variant.price %}
