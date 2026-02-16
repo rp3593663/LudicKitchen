@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   // TAB SWITCH
-  scope.querySelectorAll(".faq-tab").forEach(tab=>{
+  {% comment %} scope.querySelectorAll(".faq-tab").forEach(tab=>{
     tab.addEventListener("click",()=>{
 
       const key = tab.dataset.tab;
@@ -235,7 +235,41 @@ document.addEventListener("DOMContentLoaded", function(){
 
       openFirstFaq(key);
     });
+  }); {% endcomment %}
+
+  // TAB SWITCH
+scope.querySelectorAll(".faq-tab").forEach(tab=>{
+  tab.addEventListener("click",()=>{
+
+    const key = tab.dataset.tab;
+
+    scope.querySelectorAll(".faq-tab").forEach(t=>{
+      t.classList.remove("active");
+
+      // Show all left buttons first
+      t.closest(".faq_button_content").style.display = "block";
+    });
+
+    // Add active to clicked
+    tab.classList.add("active");
+
+    // Hide the active one from left content
+    tab.closest(".faq_button_content").style.display = "none";
+
+
+    // Show correct right-side tab header
+    scope.querySelectorAll(".active-tab-content").forEach(content=>{
+      if(content.dataset.tab === key){
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    });
+
+    openFirstFaq(key);
   });
+});
+
 
 
   // ACCORDION CLICK
