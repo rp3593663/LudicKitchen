@@ -1461,6 +1461,11 @@ span.tier_custom_text {
     line-height: 18px;
     letter-spacing: -0.54px;
     color: var(--primary_color);
+    text-align:center;
+}
+.tier_benefit_yes_no span.tier_custom_text span {
+    display: block;
+    text-align: center;
 }
 .features_info .description {
     position: relative;
