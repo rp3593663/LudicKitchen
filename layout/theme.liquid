@@ -641,5 +641,19 @@
 
 
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const logo = document.querySelector('.login-img');
+
+          if (logo) {
+            logo.style.cursor = "pointer";
+            logo.addEventListener("click", function () {
+              window.location.href = "https://ludic-kitchen.myshopify.com/"; // change to your desired URL
+            });
+          }
+        });
+      </script>
+
+
   </body>
 </html>
