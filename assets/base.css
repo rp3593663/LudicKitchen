@@ -2347,6 +2347,9 @@ input[type='checkbox'] {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
   }
+  .section-header.animate {
+    top: 56px;
+  }
 }
 
 @media screen and (min-width: 990px) {
