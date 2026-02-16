@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function openFirstFaq(tabKey){
     const items = scope.querySelectorAll(".faq-item");
-    //let firstOpened = false;
+    let firstOpened = false;
 
     items.forEach(item => {
       const answer = item.querySelector(".faq-answer");
