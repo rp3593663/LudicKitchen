@@ -159,7 +159,7 @@
           {% endfor %}
         </div>
 
-        {% comment %} {% for block in section.blocks %}
+        {% for block in section.blocks %}
           {% if block.type == 'faq' %}
             <div
               class="faq-item sdjhbs {% if forloop.first %}active{% endif %}"
@@ -167,29 +167,7 @@
               {% unless block.settings.tab_handle == first_tab %}
                 style="display:none"
               {% endunless %}
-              {{ block.shopify_attributes }}> {% endcomment %}
-
-              {% assign first_faq_found = false %}
-
-
-              {% for block in section.blocks %}
-                {% if block.type == 'faq' and block.settings.tab_handle == first_tab %}
-                  {% assign first_faq_id = block.id %}
-                  {% break %}
-                {% endif %}
-              {% endfor %}
-
-              
-                {% for block in section.blocks %}
-                  {% if block.type == 'faq' %}
-                    <div
-                     class="faq-item sdjhbs {% if block.id == first_faq_id %}active{% endif %}"
-                      data-tab="{{ block.settings.tab_handle }}"
-                      {% unless block.settings.tab_handle == first_tab %}
-                        style="display:none"
-                      {% endunless %}
-                      {{ block.shopify_attributes }}>
-
+              {{ block.shopify_attributes }}>
 
               <button class="faq-question">
                 {{ block.settings.question }}
