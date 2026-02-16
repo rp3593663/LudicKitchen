@@ -357,6 +357,13 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
       openFirstFaq(key); 
     }
 
+    // OPEN FIRST ACTIVE FAQ ON LOAD
+    const firstActiveItem = scope.querySelector(".faq-item.active");
+    if(firstActiveItem){
+      const answer = firstActiveItem.querySelector(".faq-answer");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+
 
 
 });
