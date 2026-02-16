@@ -55,14 +55,25 @@ if (!customElements.get('share-button')) {
         }
       }
 
+      // copyToClipboard() {
+      //   navigator.clipboard.writeText(this.elements.urlInput.value).then(() => {
+      //     this.elements.successMessage.classList.remove('hidden');
+      //     this.elements.successMessage.textContent = window.accessibilityStrings.shareSuccess;
+      //     this.elements.closeButton.classList.remove('hidden');
+      //     this.elements.closeButton.focus();
+      //   });
+      // }
+
       copyToClipboard() {
-        navigator.clipboard.writeText(this.elements.urlInput.value).then(() => {
+        navigator.clipboard.writeText(this.customShareText).then(() => {
           this.elements.successMessage.classList.remove('hidden');
-          this.elements.successMessage.textContent = window.accessibilityStrings.shareSuccess;
+          this.elements.successMessage.textContent =
+            window.accessibilityStrings.shareSuccess;
           this.elements.closeButton.classList.remove('hidden');
           this.elements.closeButton.focus();
         });
       }
+
 
       updateUrl(url) {
         this.urlToShare = url;
