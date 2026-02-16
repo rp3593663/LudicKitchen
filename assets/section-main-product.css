@@ -1602,6 +1602,9 @@ span.total_goal {
     align-items: center;
     width: 100%;
 }
+.share_join_btn .product_custom_text{
+  display:none;
+}
 .product__custom_btns .share-button__button {
     color: var(--primary_color);
     margin: 0;
@@ -1695,6 +1698,9 @@ a.join_project_btn {
   }
   .share_join_btn {
     gap: 6px;
+  }
+  .share_join_btn .product_custom_text{
+    display:block;
   }
   a.join_project_btn,
   .product__custom_btns .share-button__button {
