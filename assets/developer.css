@@ -1467,6 +1467,7 @@ span.tier_custom_text {
     display: block;
     text-align: center;
     font-size: 12px;
+    font-weight: 500;
 }
 .features_info .description {
     position: relative;
