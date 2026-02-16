@@ -189,9 +189,9 @@
 document.addEventListener("DOMContentLoaded", function(){
   const scope = document.querySelector("#shopify-section-{{ section.id }}");
 
-  function openFirstFaq(tabKey){
+  {% comment %} function openFirstFaq(tabKey){
     const items = scope.querySelectorAll(".faq-item");
-    let firstOpened = false;
+    //let firstOpened = false;
 
     items.forEach(item => {
       const answer = item.querySelector(".faq-answer");
@@ -204,7 +204,38 @@ document.addEventListener("DOMContentLoaded", function(){
         answer.style.maxHeight = null;
       }
     });
+  } {% endcomment %}
+
+  function openFirstFaq(tabKey){
+  const items = scope.querySelectorAll(".faq-item");
+  let firstVisible = null;
+
+  items.forEach(item => {
+    const answer = item.querySelector(".faq-answer");
+
+    if(item.dataset.tab === tabKey){
+      item.style.display = "block";
+
+      // Store first visible item
+      if(!firstVisible){
+        firstVisible = item;
+      }
+
+    } else {
+      item.style.display = "none";
+      item.classList.remove("active");
+      answer.style.maxHeight = null;
+    }
+  });
+
+  // 🔥 Automatically open first FAQ of active tab
+  if(firstVisible){
+    const firstAnswer = firstVisible.querySelector(".faq-answer");
+    firstVisible.classList.add("active");
+    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
   }
+}
+
 
 
 
