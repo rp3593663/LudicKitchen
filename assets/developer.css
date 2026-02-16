@@ -403,6 +403,7 @@ p.week_text {
     font-weight: 500;
     line-height: 14px;
     letter-spacing: -0.7px;
+    margin: 30px 0;
 }
 .info_li {
     display: flex;
