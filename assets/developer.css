@@ -396,6 +396,14 @@ a#HeaderMenu-shop {
     display: grid;
     gap: 12px;
 }
+p.week_text {
+    color: var(--secondary-steel, #949598);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.7px;
+}
 .info_li {
     display: flex;
     gap: 10px;
