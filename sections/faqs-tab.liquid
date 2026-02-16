@@ -196,8 +196,8 @@ document.addEventListener("DOMContentLoaded", function(){
   const scope = document.querySelector("#shopify-section-{{ section.id }}");
 
   function openFirstFaq(tabKey){
-    const items = scope.querySelectorAll(".faq-item");
-    //let firstOpened = false;
+    const items = scope.querySelectorAll(".faq-item.active");
+    let firstOpened = false;
 
     items.forEach(item => {
       const answer = item.querySelector(".faq-answer");
