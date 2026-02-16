@@ -1466,6 +1466,7 @@ span.tier_custom_text {
 .tier_benefit_yes_no span.tier_custom_text span {
     display: block;
     text-align: center;
+    font-size: 12px;
 }
 .features_info .description {
     position: relative;
