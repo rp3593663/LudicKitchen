@@ -351,9 +351,6 @@ a#HeaderMenu-shop {
     border: 1px solid #DADADA;
 
 }
-.mobile_right_image{
-    display:none;
-}
 .p_right_image img {
     width: 100%;
     height: 100%;
@@ -3398,12 +3395,6 @@ button.pswp__button.pswp__button--zoom {
     }
     .p_right_image {
         display: none;
-    }
-    .mobile_right_image{
-        display:block;
-    }
-    .desktop_right_image{
-        display:none;
     }
     .raised_progress_bar {
         margin: 12px 0 22px;
