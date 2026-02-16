@@ -324,12 +324,13 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
 
     const firstActiveTab = scope.querySelector(".faq-tab.active"); 
     if (firstActiveTab) { 
-      
+
       const key = firstActiveTab.dataset.tab; 
       // Hide active tab from left on load 
       firstActiveTab.closest(".faq_button_content").style.display = "none"; 
-      scope.querySelectorAll(".active-tab-content").forEach(content=>{ 
-        if(content.dataset.tab === key){ content.style.display = "block"; 
+      scope.querySelectorAll(".active-tab-content").forEach( content => { 
+        if(content.dataset.tab === key){ 
+          content.style.display = "block"; 
         } 
         else { 
           content.style.display = "none"; 
