@@ -162,7 +162,7 @@
         {% for block in section.blocks %}
           {% if block.type == 'faq' %}
             <div
-              class="faq-item {% if block.settings.tab_handle == first_tab and forloop.first %}active{% endif %}"
+              class="faq-item sdjhbs {% if forloop.first %}active{% endif %}"
               data-tab="{{ block.settings.tab_handle }}"
               {% unless block.settings.tab_handle == first_tab %}
                 style="display:none"
