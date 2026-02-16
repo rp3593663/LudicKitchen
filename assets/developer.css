@@ -3779,6 +3779,9 @@ button.pswp__button.pswp__button--zoom {
         line-height: 10px;
         letter-spacing: -0.36px;
     }
+    .tier_benefit_yes_no span.tier_custom_text span {
+        font-size: 8px;
+    }
     .tier_box {
         border-radius: 16px;
         padding: 25px;
