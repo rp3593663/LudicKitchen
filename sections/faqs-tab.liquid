@@ -279,7 +279,7 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
 
 
   // ACCORDION CLICK
-  {% comment %} scope.querySelectorAll(".faq-question").forEach(q=>{
+  scope.querySelectorAll(".faq-question").forEach(q=>{
     q.addEventListener("click",()=>{
       const item = q.closest(".faq-item");
       const answer = item.querySelector(".faq-answer");
@@ -302,11 +302,11 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
         answer.style.maxHeight = answer.scrollHeight + "px";
       }
     });
-  }); {% endcomment %}
+  });
 
 
   // OPEN FIRST TAB DESCRIPTION ON LOAD
-  const firstActiveTab = scope.querySelector(".faq-tab.active");
+  {% comment %} const firstActiveTab = scope.querySelector(".faq-tab.active");
 
     if (firstActiveTab) {
       const key = firstActiveTab.dataset.tab;
@@ -320,9 +320,12 @@ scope.querySelectorAll(".faq-tab").forEach(tab=>{
       });
 
       openFirstFaq(key);
-    }
+    } {% endcomment %}
 
-    const firstActiveTab = scope.querySelector(".faq-tab.active"); if (firstActiveTab) { const key = firstActiveTab.dataset.tab; 
+    const firstActiveTab = scope.querySelector(".faq-tab.active"); 
+    if (firstActiveTab) { 
+      
+      const key = firstActiveTab.dataset.tab; 
       // Hide active tab from left on load 
       firstActiveTab.closest(".faq_button_content").style.display = "none"; 
       scope.querySelectorAll(".active-tab-content").forEach(content=>{ 
