@@ -3402,6 +3402,9 @@ button.pswp__button.pswp__button--zoom {
     .mobile_right_image{
         display:block;
     }
+    .desktop_right_image{
+        display:none;
+    }
     .raised_progress_bar {
         margin: 12px 0 22px;
     }
