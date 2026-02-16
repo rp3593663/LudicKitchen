@@ -220,16 +220,23 @@
                     <!-- Prices -->
                     <div class="tier_price_block">
                       <div class="tier_price">
-                          <div class="sale_price">
-                            {{ product.metafields.custom.discounted_price }}
-                          {% comment %} {{ variant.price | money }} {% endcomment %}
+                          {% comment %} <div class="sale_price">
+                          {{ variant.price | money }}
                           </div>
 
                           {% if variant.compare_at_price > variant.price %}
                           <div class="regular_price">
                               {{ variant.compare_at_price | money }}
                           </div>
-                          {% endif %}
+                          {% endif %} {% endcomment %}
+
+                           <div class="sale_price">
+                            {{ product.metafields.custom.discounted_price }}
+                          </div>
+
+                          <div class="regular_price">
+                              {{ variant.price | money }}
+                          </div>
                       </div>
                       <span>(Inclusive of all taxes)</span>
                     </div>
