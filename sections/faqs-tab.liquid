@@ -182,13 +182,6 @@
               
                 {% for block in section.blocks %}
                   {% if block.type == 'faq' %}
-
-                    {% assign make_active = false %}
-
-                    {% if block.settings.tab_handle == first_tab and first_faq_found == false %}
-                      {% assign first_faq_found = true %}
-                    {% endif %}
-
                     <div
                      class="faq-item sdjhbs {% if block.id == first_faq_id %}active{% endif %}"
                       data-tab="{{ block.settings.tab_handle }}"
