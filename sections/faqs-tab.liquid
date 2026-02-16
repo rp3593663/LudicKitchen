@@ -43,16 +43,6 @@
 
 {%- endstyle -%}
 
-
-{% assign first_tab = '' %}
-{% for block in section.blocks %}
-  {% if block.type == 'tab' %}
-    {% assign first_tab = block.settings.tab_handle %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-
 <div class="kretoss-section section-faqs-tab" id="faqs">
   <div class="{{ container }}" {{ max_width }}>
     <div class="faqs_tab_container">
@@ -125,7 +115,7 @@
                 {% endif %}
                 <div class="faq_button_content">
                   <button
-                    class="faq-tab {% if block.settings.tab_handle == first_tab %}active{% endif %}"
+                    class="faq-tab {% if forloop.first %}active{% endif %}"
                     data-tab="{{ block.settings.tab_handle }}"
                     {{ block.shopify_attributes }}>
                     <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/file.svg?v=1766138300">
@@ -173,7 +163,7 @@
               {% endunless %}
               {{ block.shopify_attributes }}>
 
-              <button class="faq-question {% if block.settings.tab_handle == first_tab %}active{% endif %}">
+              <button class="faq-question">
                 {{ block.settings.question }}
                 <span class="faq-icon">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,7 +189,7 @@
 document.addEventListener("DOMContentLoaded", function(){
   const scope = document.querySelector("#shopify-section-{{ section.id }}");
 
-  {% comment %} function openFirstFaq(tabKey){
+  function openFirstFaq(tabKey){
     const items = scope.querySelectorAll(".faq-item");
     //let firstOpened = false;
 
@@ -214,36 +204,7 @@ document.addEventListener("DOMContentLoaded", function(){
         answer.style.maxHeight = null;
       }
     });
-  } {% endcomment %}
-
-  function openFirstFaq(tabKey){
-    const items = scope.querySelectorAll(".faq-item");
-    let firstVisible = null;
-
-    items.forEach(item => {
-      const answer = item.querySelector(".faq-answer");
-
-      if(item.dataset.tab === tabKey){
-        item.style.display = "block";
-
-        if(!firstVisible){
-          firstVisible = item;
-        }
-      } else {
-        item.style.display = "none";
-        item.classList.remove("active");
-        answer.style.maxHeight = null;
-      }
-    });
-
-    // Open first FAQ automatically
-    if(firstVisible){
-      const answer = firstVisible.querySelector(".faq-answer");
-      firstVisible.classList.add("active");
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    }
   }
-
 
 
 
