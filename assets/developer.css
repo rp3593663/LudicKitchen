@@ -4231,6 +4231,9 @@ button.pswp__button.pswp__button--zoom {
         display:block;
         color: #214ECF;
         font-weight:500;
+        font-size: 12px;
+        line-height: 10px;
+        letter-spacing: -0.6px;
     }
     .leader_update_tag {
         display: none;
