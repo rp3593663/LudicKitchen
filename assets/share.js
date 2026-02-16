@@ -30,10 +30,12 @@ if (!customElements.get('share-button')) {
           this.elements.shareButton.classList.remove('hidden');
           this.elements.shareButton.addEventListener('click', () => {
             // navigator.share({ url: this.urlToShare, title: document.title });
-            navigator.share({
+           navigator.share({
               title: document.title,
-              text: this.customShareText
+              text: this.customShareText,
+              url: this.urlToShare
             });
+
 
           });
         } else {
