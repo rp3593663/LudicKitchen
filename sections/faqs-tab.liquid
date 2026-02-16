@@ -43,6 +43,15 @@
 
 {%- endstyle -%}
 
+{% assign first_tab = '' %}
+{% for block in section.blocks %}
+  {% if block.type == 'tab' %}
+    {% assign first_tab = block.settings.tab_handle %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+
 <div class="kretoss-section section-faqs-tab" id="faqs">
   <div class="{{ container }}" {{ max_width }}>
     <div class="faqs_tab_container">
