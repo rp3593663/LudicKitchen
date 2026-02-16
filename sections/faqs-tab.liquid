@@ -92,7 +92,7 @@
                     <div
                       {% comment %} class="faq-item gfsd {% if block.settings.tab_handle == first_tab and forloop.first %}active{% endif %}" 
                        {% endcomment %}
-                        class="faq-item dsd {% if block.settings.tab_handle == first_tab and forloop.index == 1 %}active{% endif %}"
+                        class="faq-item dsd {% if forloop.index == 1 %}active{% endif %}"
                       data-tab="{{ block.settings.tab_handle }}"
                       {% unless block.settings.tab_handle == first_tab %}
                         style="display:none"
@@ -165,7 +165,7 @@
           {% if block.type == 'faq' %}
             <div
               {% comment %} class="faq-item sdjhbs {% if forloop.first %}active{% endif %}" {% endcomment %}
-               class="faq-item {% if block.settings.tab_handle == first_tab and forloop.index == 1 %}active{% endif %}"
+               class="faq-item {% if forloop.index == 1 %}active{% endif %}"
               data-tab="{{ block.settings.tab_handle }}"
               {% unless block.settings.tab_handle == first_tab %}
                 style="display:none"
