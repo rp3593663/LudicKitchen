@@ -213,34 +213,7 @@ document.addEventListener("DOMContentLoaded", function(){
   } {% endcomment %}
 
 
-  function openFirstFaq(tabKey){
-  const items = scope.querySelectorAll(".faq-item");
-  let firstOpened = false;
-
-  items.forEach(item => {
-    const answer = item.querySelector(".faq-answer");
-
-    if(item.dataset.tab === tabKey){
-      item.style.display = "block";
-
-      // 👉 Activate ONLY the first FAQ of this tab
-      if(!firstOpened){
-        item.classList.add("active");
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        firstOpened = true;
-      } else {
-        item.classList.remove("active");
-        answer.style.maxHeight = null;
-      }
-
-    } else {
-      item.style.display = "none";
-      item.classList.remove("active");
-      answer.style.maxHeight = null;
-    }
-  });
-}
-
+  
 
 
 
