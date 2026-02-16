@@ -351,6 +351,9 @@ a#HeaderMenu-shop {
     border: 1px solid #DADADA;
 
 }
+.mobile_right_image{
+    dispay:none;
+}
 .p_right_image img {
     width: 100%;
     height: 100%;
