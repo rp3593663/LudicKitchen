@@ -4254,6 +4254,9 @@ button.pswp__button.pswp__button--zoom {
         gap: 2px;
         color: #214ECF;
         font-weight:500;
+        font-size: 12px;
+        line-height: 10px;
+        letter-spacing: -0.6px;
     }
     .leader_update_info {
         /* grid-template-columns: .6fr 1fr .4fr; */
