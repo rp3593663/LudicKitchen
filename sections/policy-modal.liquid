@@ -326,8 +326,11 @@
               id="tab-{{ block.id }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.tab_content_text }}
-              {% comment %} {{ block.settings.tab_content }} {% endcomment %}
+              {% if block.settings.tab_content != blank %}
+                {{ block.settings.tab_content }}
+              {% else %}
+                {{ block.settings.tab_content_text }}
+              {% endif %}
             </div>
           {%- endfor -%}
         </div>
