@@ -216,8 +216,16 @@ document.addEventListener("DOMContentLoaded", function(){
   } {% endcomment %}
 
 
-  function openFirstFaq(tabKey){
-  const items = scope.querySelectorAll(".faq-item");
+function openFirstFaq(tabKey){
+
+  // Only target VISIBLE faq container (desktop or mobile)
+  const visibleContainer = scope.querySelector(
+    ".faq-content:not([style*='display: none'])"
+  );
+
+  if(!visibleContainer) return;
+
+  const items = visibleContainer.querySelectorAll(".faq-item");
   let firstItem = null;
 
   items.forEach(item => {
@@ -226,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function(){
     if(item.dataset.tab === tabKey){
       item.style.display = "block";
 
-      // store first item of this tab
       if(!firstItem){
         firstItem = item;
       }
@@ -238,10 +245,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   });
 
-  // 🔥 Open first FAQ of selected tab
   if(firstItem){
     const firstAnswer = firstItem.querySelector(".faq-answer");
-
     firstItem.classList.add("active");
     firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
   }
