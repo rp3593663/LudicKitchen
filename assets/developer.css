@@ -2903,9 +2903,9 @@ img.fallback_mobile_img {
 } */
 
 
-.product--thumbnail_slider{
+/* .product--thumbnail_slider{
     align-items:center;
-}
+} */
 
 .product_custom_slider{
   position: relative;
@@ -2915,6 +2915,7 @@ img.fallback_mobile_img {
     border-radius: 16px;
     border: 1px solid #C7C8CA;
     background: #FEFEFE;
+    height:100%;
 }
 
 .product_custom_slider .swiper-slide img {
