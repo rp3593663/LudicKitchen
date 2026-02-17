@@ -2909,6 +2909,7 @@ img.fallback_mobile_img {
 
 .product_custom_slider{
   position: relative;
+  height:100%;
 }
 
 .swiper.mySwiper.custom-product-slider {
