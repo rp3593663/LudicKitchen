@@ -1098,6 +1098,14 @@
             "answer": "<p>Yes, Ludic Clogs follow a unisex sizing system. Sizes UK 3–6 are graded for women, while sizes above are graded for men. If you’re a woman with larger feet, we recommend using the centimetre (cm) measurement as a reference to select the best fit.</p>"
           }
         },
+        "faq_E7wfDA": {
+          "type": "faq",
+          "settings": {
+            "tab_handle": "sizing",
+            "question": "What if my clogs don’t fit or arrive damaged?",
+            "answer": "<p>If there’s an issue with your clogs, you can request an exchange within 7 days of delivery, in line with Ludic’s exchange policy.</p><p>Refunds are non-applicable in Ludic Kitchen. Any refunds only happen if the campaign does not meet the 75% threshold and fails to activate. </p>"
+          }
+        },
         "tab_HF3nAw": {
           "type": "tab",
           "settings": {
@@ -1140,6 +1148,7 @@
         },
         "tab_e7M4Pp": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "tab_title": "Production & Shipping",
             "tab_description": "Activation, timelines, and delivery.",
@@ -1148,6 +1157,7 @@
         },
         "faq_acCT4P": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "tab_handle": "shipping_updates",
             "question": "What if my clogs don’t fit or arrive damaged?",
@@ -1163,6 +1173,7 @@
         "tab_hxhwgy",
         "faq_Q96dx8",
         "faq_EF9zyH",
+        "faq_E7wfDA",
         "tab_HF3nAw",
         "faq_HQKGhV",
         "faq_LQWPQC",
