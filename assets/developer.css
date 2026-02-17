@@ -4380,6 +4380,7 @@ button.pswp__button.pswp__button--zoom {
     }
     .product_custom_slider {
         margin-bottom: 16px;
+        height: auto;
     }
 }
 
