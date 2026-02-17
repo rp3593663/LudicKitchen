@@ -326,11 +326,7 @@
               id="tab-{{ block.id }}"
               {{ block.shopify_attributes }}
             >
-              {% if block.settings.tab_content != blank %}
-                {{ block.settings.tab_content }}
-              {% else %}
-                {{ block.settings.tab_content_text }}
-              {% endif %}
+              {{ block.settings.tab_content }}
             </div>
           {%- endfor -%}
         </div>
@@ -366,11 +362,6 @@
         {
           "type": "richtext",
           "id": "tab_content",
-          "label": "Tab Content"
-        },
-        {
-          "type": "textarea",
-          "id": "tab_content_text",
           "label": "Tab Content"
         }
       ]
