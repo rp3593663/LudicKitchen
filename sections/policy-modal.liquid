@@ -326,7 +326,8 @@
               id="tab-{{ block.id }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.tab_content }}
+              {{ block.settings.tab_content_text }}
+              {% comment %} {{ block.settings.tab_content }} {% endcomment %}
             </div>
           {%- endfor -%}
         </div>
