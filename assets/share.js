@@ -20,8 +20,7 @@ if (!customElements.get('share-button')) {
         this.customShareText =
           "We’ve started something new called Ludic Kitchen.\n\n" +
           "Instead of launching finished products the usual way, we’re building them in the open — sharing progress, decisions, and milestones as they happen. People can follow the journey and choose how closely they want to be involved.\n\n" +
-          "It’s a different way of creating things. Would love for you to explore it.\n\n" +
-          this.urlToShare;
+          "It’s a different way of creating things. Would love for you to explore it.\n\n";
 
 
 
