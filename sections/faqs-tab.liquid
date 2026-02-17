@@ -218,39 +218,40 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function openFirstFaq(tabKey){
 
-  // Only target VISIBLE faq container (desktop or mobile)
-  const visibleContainer = scope.querySelector(
-    ".faq-content:not([style*='display: none'])"
-  );
+  const containers = scope.querySelectorAll(".faq-content");
 
-  if(!visibleContainer) return;
+  containers.forEach(container => {
 
-  const items = visibleContainer.querySelectorAll(".faq-item");
-  let firstItem = null;
+    const items = container.querySelectorAll(".faq-item");
+    let firstItem = null;
 
-  items.forEach(item => {
-    const answer = item.querySelector(".faq-answer");
+    items.forEach(item => {
+      const answer = item.querySelector(".faq-answer");
 
-    if(item.dataset.tab === tabKey){
-      item.style.display = "block";
+      if(item.dataset.tab === tabKey){
+        item.style.display = "block";
 
-      if(!firstItem){
-        firstItem = item;
+        if(!firstItem){
+          firstItem = item;
+        }
+
+      } else {
+        item.style.display = "none";
+        item.classList.remove("active");
+        answer.style.maxHeight = null;
       }
+    });
 
-    } else {
-      item.style.display = "none";
-      item.classList.remove("active");
-      answer.style.maxHeight = null;
+    // Open first item inside THIS container
+    if(firstItem){
+      const firstAnswer = firstItem.querySelector(".faq-answer");
+      firstItem.classList.add("active");
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
     }
-  });
 
-  if(firstItem){
-    const firstAnswer = firstItem.querySelector(".faq-answer");
-    firstItem.classList.add("active");
-    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
-  }
+  });
 }
+
 
 
 
