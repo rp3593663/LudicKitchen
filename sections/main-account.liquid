@@ -710,6 +710,41 @@
                                     {% endif %}
 
 
+                                    {%- comment -%} Auto Entry: Customer became Sous / Head Chef {%- endcomment -%}
+                                    {% assign order_date = line_item.order.created_at | date: "%Y-%m-%d" %}
+
+                                    {% assign auto_event = '' %}
+                                    {% if line_item.variant.title contains 'Sous Chef' %}
+                                      {% assign auto_event = 'You are the Sous Chef now' %}
+                                    {% elsif line_item.variant.title contains 'Head Chef' %}
+                                      {% assign auto_event = 'You are the Head Chef now' %}
+                                    {% endif %}
+
+                                    {% if auto_event != '' %}
+                                      {% assign auto_date_arr = order_date | split: ',' %}
+                                      {% assign auto_event_arr = auto_event | split: ',' %}
+                                      {% assign auto_tag_arr = 'Update' | split: ',' %}
+                                      {% assign auto_link_text_arr = '' | split: ',' %}
+                                      {% assign auto_link_arr = '' | split: ',' %}
+
+                                      {% if dates != blank %}
+                                        {% assign dates = dates | concat: auto_date_arr %}
+                                        {% assign events = events | concat: auto_event_arr %}
+                                        {% assign tag = tag | concat: auto_tag_arr %}
+                                        {% assign links_text = links_text | concat: auto_link_text_arr %}
+                                        {% assign links = links | concat: auto_link_arr %}
+                                      {% else %}
+                                        {% assign dates = auto_date_arr %}
+                                        {% assign events = auto_event_arr %}
+                                        {% assign tag = auto_tag_arr %}
+                                        {% assign links_text = auto_link_text_arr %}
+                                        {% assign links = auto_link_arr %}
+                                      {% endif %}
+                                    {% endif %}
+
+
+
+
                                     {% if dates != blank %}
                                     <div class="all_updates_ledger">
                                       
