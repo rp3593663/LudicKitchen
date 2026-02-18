@@ -664,156 +664,96 @@
                                   </div>
                                   <div class="ledger_updates">
                                     
-                                    {% assign dates = '' | split: '' %}
-                                    {% assign events = '' | split: '' %}
-                                    {% assign tag = '' | split: '' %}
-                                    {% assign links_text = '' | split: '' %}
-                                    {% assign links = '' | split: '' %}
+                                    {%- comment -%} Ledger source resolution: Variant + Product (append) {%- endcomment -%}
+                                    {% assign dates = blank %}
+                                    {% assign events = blank %}
+                                    {% assign tag = blank %}
+                                    {% assign links_text = blank %}
+                                    {% assign links = blank %}
 
-                                    {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date %}
-                                    {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events %}
-                                    {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag %}
-                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
-                                    {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link %}
+                                    {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date.value %}
+                                    {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events.value %}
+                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
+                                    {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag.value %}
+                                    {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link.value %}
 
-                                    {% assign product_dates = line_item.product.metafields.custom.ledger_update_date %}
-                                    {% assign product_events = line_item.product.metafields.custom.ledger_update_events %}
-                                    {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag %}
-                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
-                                    {% assign product_links = line_item.product.metafields.custom.ledger_update_link %}
+                                    {% assign product_dates = product.metafields.custom.ledger_update_date.value %}
+                                    {% assign product_events = product.metafields.custom.ledger_update_events.value %}
+                                    {% assign product_links_text = product.metafields.custom.ledger_update_link_text.value %}
+                                    {% assign product_tag = product.metafields.custom.ledger_update_tag.value %}
+                                    {% assign product_links = product.metafields.custom.ledger_update_link.value %}
 
-                                    {%- comment -%} Add variant entries {%- endcomment -%}
+                                    {%- comment -%} 1️⃣ Add VARIANT data first {%- endcomment -%}
                                     {% if variant_dates != blank %}
-                                      {% for item in variant_dates %}
-                                        {% assign dates = dates | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in variant_events %}
-                                        {% assign events = events | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in variant_tag %}
-                                        {% assign tag = tag | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in variant_links_text %}
-                                        {% assign links_text = links_text | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in variant_links %}
-                                        {% assign links = links | push: item.value %}
-                                      {% endfor %}
+                                      {% assign dates = variant_dates %}
+                                      {% assign events = variant_events %}
+                                      {% assign tag = variant_tag %}
+                                      {% assign links_text = variant_links_text %}
+                                      {% assign links = variant_links %}
                                     {% endif %}
 
-                                    {%- comment -%} Append product entries for Sous + Head {%- endcomment -%}
+                                    {%- comment -%} 2️⃣ Append PRODUCT data (Sous + Head only) {%- endcomment -%}
                                     {% if line_item.variant.title != 'Taster' and product_dates != blank %}
-                                      {% for item in product_dates %}
-                                        {% assign dates = dates | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in product_events %}
-                                        {% assign events = events | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in product_tag %}
-                                        {% assign tag = tag | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in product_links_text %}
-                                        {% assign links_text = links_text | push: item.value %}
-                                      {% endfor %}
-                                      {% for item in product_links %}
-                                        {% assign links = links | push: item.value %}
-                                      {% endfor %}
-                                    {% endif %}
-
-                                    {%- comment -%} Add static order entry {%- endcomment -%}
-                                    {% if line_item.variant.title != 'Taster' %}
-                                      {% assign dates = dates | push: line_item.created_at %}
-                                      {% assign events = events | push: "You joined as a " | append: line_item.variant.title | append: ". Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery." %}
-                                      {% assign tag = tag | push: "Update" %}
-                                      {% assign links_text = links_text | push: "" %}
-                                      {% assign links = links | push: "" %}
-                                    {% endif %}
-
-
-
-                                    {% assign combined = '' | split: '' %}
-
-                                    {% for date_item in dates %}
-                                      {% assign index = forloop.index0 %}
-
-                                      {% assign raw_date = date_item.value | default: date_item | strip %}
-                                      {% assign raw_event = events[index].value | default: events[index] | strip %}
-                                      {% assign raw_tag = tag[index].value | default: tag[index] | strip %}
-                                      {% assign raw_link_text = links_text[index].value | default: links_text[index] | strip %}
-                                      {% assign raw_link = links[index].value | default: links[index] | strip %}
-
-                                      {% assign hide_date = false %}
-                                      {% if raw_date contains '|hide' %}
-                                        {% assign hide_date = true %}
-                                        {% assign raw_date = raw_date | remove: '|hide' | strip %}
+                                      {% if dates != blank %}
+                                        {% assign dates = dates | concat: product_dates %}
+                                        {% assign events = events | concat: product_events %}
+                                        {% assign tag = tag | concat: product_tag %}
+                                        {% assign links_text = links_text | concat: product_links_text %}
+                                        {% assign links = links | concat: product_links %}
+                                      {% else %}
+                                        {% assign dates = product_dates %}
+                                        {% assign events = product_events %}
+                                        {% assign tag = product_tag %}
+                                        {% assign links_text = product_links_text %}
+                                        {% assign links = product_links %}
                                       {% endif %}
-
-                                      {% assign timestamp = raw_date | date: "%s" %}
-                                      {% capture entry %}
-                                      {{ timestamp }}@@{{ raw_date }}@@{{ hide_date }}@@{{ raw_event }}@@{{ raw_tag }}@@{{ raw_link_text }}@@{{ raw_link }}
-                                      {% endcapture %}
-
-                                      {% assign combined = combined | push: entry %}
-                                    {% endfor %}
-
-                                    {% assign combined = combined | sort | reverse %}
+                                    {% endif %}
 
 
-
-
-                                   <div class="all_updates_ledger">
-
-                                    <div class="leader_update_info head">
-                                      <h2>Date</h2>
-                                      <h2>Update</h2>
-                                      <h2>Tag</h2>
-                                      <h2>Details</h2>
-                                    </div>
-
-                                    {% for item in combined %}
-                                      {% assign parts = item | split: '@@' %}
-
-                                      {% assign entry_date = parts[1] %}
-                                      {% assign hide_date = parts[2] %}
-                                      {% assign entry_event = parts[3] %}
-                                      {% assign entry_tag = parts[4] %}
-                                      {% assign entry_link_text = parts[5] %}
-                                      {% assign entry_link = parts[6] %}
-
-                                      <div class="leader_update_info">
-
-                                        <p class="leader_update_date">
-                                          {% unless hide_date == 'true' %}
-                                            {{ entry_date | date: "%a, %b %d" }}
-                                          {% endunless %}
-
-                                          {% if entry_tag != blank %}
-                                            <span class="mobile_tag">|| {{ entry_tag }}</span>
-                                          {% endif %}
-                                        </p>
-
-                                        <div class="leader_update_event">
-                                          {{ entry_event }}
-                                        </div>
-
-                                        <div class="leader_update_tag">
-                                          {{ entry_tag }}
-                                        </div>
-
-                                        <div class="leader_update_url">
-                                          {% if entry_link != blank %}
-                                            <a href="{{ entry_link }}" target="_blank">
-                                              {{ entry_link_text }}
-                                            </a>
-                                          {% endif %}
-                                        </div>
-
+                                    {% if dates != blank %}
+                                    <div class="all_updates_ledger">
+                                      
+                                      <div class="leader_update_info head">
+                                        <h2>Date</h2>
+                                        <h2>Update</h2>
+                                        <h2>Tag</h2>
+                                        <h2>Details</h2>
                                       </div>
 
-                                    {% endfor %}
+                                      {% for date_item in dates %}
+                                        {% assign index = forloop.index0 %}
 
-                                  </div>
+                                        {% assign date_parts  = date_item | split: '||' %}
+                                        {% assign event_parts = events[index] | split: '||' %}
+                                         {% assign tag_parts = tag[index] | split: '||' %}
+                                        {% assign link_text_parts  = links_text[index] | split: '||' %}
+                                        {% assign link_parts  = links[index] | split: '||' %}
 
+                                        <div class="leader_update_info">
+                                          <p class="leader_update_date">
+                                            {{ date_parts[1] | strip | date: "%a, %b %d"  }}
+                                            <span class="mobile_tag">|| {{ tag_parts[1] | strip }}</span>
+                                          </p>
+
+                                          <div class="leader_update_event">
+                                            {{ event_parts[1] | strip }}
+                                          </div>
+
+                                          <div class="leader_update_tag">
+                                             {{ tag_parts[1] | strip }}
+                                          </div>
+
+                                          <div class="leader_update_url">
+                                            <a href="{{ link_parts[1] | strip }}" target="_blank">
+                                              {{ link_text_parts[1] | strip }}
+                                            </a>
+                                          </div>
+                                        </div>
+
+                                      {% endfor %}
+
+                                    </div>
+                                    {% endif %}
                                   </div>
                                 </div>
                               </div>
