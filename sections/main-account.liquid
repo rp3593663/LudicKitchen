@@ -664,44 +664,25 @@
                                   </div>
                                   <div class="ledger_updates">
                                     
-                                    {%- comment -%} Ledger source resolution: Variant + Product (append) {%- endcomment -%}
-                                    {% assign dates = blank %}
+                                   {% assign dates = blank %}
                                     {% assign events = blank %}
                                     {% assign tag = blank %}
                                     {% assign links_text = blank %}
                                     {% assign links = blank %}
 
-                                    {% comment %} {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date.value %}
-                                    {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events.value %}
-                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text.value %}
-                                    {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag.value %}
-                                    {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link.value %} {% endcomment %}
-
-
-
                                     {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date %}
                                     {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events %}
-                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
                                     {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag %}
+                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
                                     {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link %}
-
-
-
-                                    {% comment %} {% assign product_dates = product.metafields.custom.ledger_update_date.value %}
-                                    {% assign product_events = product.metafields.custom.ledger_update_events.value %}
-                                    {% assign product_links_text = product.metafields.custom.ledger_update_link_text.value %}
-                                    {% assign product_tag = product.metafields.custom.ledger_update_tag.value %}
-                                    {% assign product_links = product.metafields.custom.ledger_update_link.value %} {% endcomment %}
 
                                     {% assign product_dates = line_item.product.metafields.custom.ledger_update_date %}
                                     {% assign product_events = line_item.product.metafields.custom.ledger_update_events %}
-                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
                                     {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag %}
+                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
                                     {% assign product_links = line_item.product.metafields.custom.ledger_update_link %}
 
-
-
-                                    {%- comment -%} 1️⃣ Add VARIANT data first {%- endcomment -%}
+                                    {%- comment -%} Variant first {%- endcomment -%}
                                     {% if variant_dates != blank %}
                                       {% assign dates = variant_dates %}
                                       {% assign events = variant_events %}
@@ -710,7 +691,7 @@
                                       {% assign links = variant_links %}
                                     {% endif %}
 
-                                    {%- comment -%} 2️⃣ Append PRODUCT data (Sous + Head only) {%- endcomment -%}
+                                    {%- comment -%} Append product entries for Sous + Head {%- endcomment -%}
                                     {% if line_item.variant.title != 'Taster' and product_dates != blank %}
                                       {% if dates != blank %}
                                         {% assign dates = dates | concat: product_dates %}
@@ -727,53 +708,70 @@
                                       {% endif %}
                                     {% endif %}
 
-                                    {% assign ledger_entries = '' | split: '' %}
 
                                     {% if dates != blank %}
 
-                                      {%- comment -%} Build entries from metafields {%- endcomment -%}
-                                      {% for date_item in dates %}
+                                    <div class="all_updates_ledger">
+
+                                      <div class="leader_update_info head">
+                                        <h2>Date</h2>
+                                        <h2>Update</h2>
+                                        <h2>Tag</h2>
+                                        <h2>Details</h2>
+                                      </div>
+
+                                      {% for date_item in dates reversed %}
                                         {% assign index = forloop.index0 %}
+                                        {% assign actual_index = dates.size | minus: forloop.index %}
 
-                                        {% assign raw_date = date_item.value | strip %}
-                                        {% assign raw_event = events[index].value | strip %}
-                                        {% assign raw_tag = tag[index].value | strip %}
-                                        {% assign raw_link_text = links_text[index].value | strip %}
-                                        {% assign raw_link = links[index].value | strip %}
+                                        {% assign raw_date = dates[actual_index].value | strip %}
+                                        {% assign raw_event = events[actual_index].value | strip %}
+                                        {% assign raw_tag = tag[actual_index].value | strip %}
+                                        {% assign raw_link_text = links_text[actual_index].value | strip %}
+                                        {% assign raw_link = links[actual_index].value | strip %}
 
-
-                                        {%- comment -%} Hide date logic {%- endcomment -%}
                                         {% assign hide_date = false %}
                                         {% if raw_date contains '|hide' %}
                                           {% assign hide_date = true %}
                                           {% assign raw_date = raw_date | remove: '|hide' | strip %}
                                         {% endif %}
 
-                                        {%- comment -%} Convert to timestamp for sorting {%- endcomment -%}
-                                          {%- comment -%} Ensure year exists {%- endcomment -%}
-                                            {% assign processed_date = raw_date %}
+                                        <div class="leader_update_info">
 
-                                            {% unless raw_date contains '20' %}
-                                              {% assign current_year = 'now' | date: "%Y" %}
-                                              {% assign processed_date = raw_date | append: ' ' | append: current_year %}
+                                          <p class="leader_update_date">
+                                            {% unless hide_date %}
+                                              {{ raw_date | date: "%a, %b %d" }}
                                             {% endunless %}
 
-                                            {% assign timestamp = processed_date | date: "%s" %}
-
-                                            {%- comment -%} Fallback if parsing fails {%- endcomment -%}
-                                            {% if timestamp == blank %}
-                                              {% assign timestamp = forloop.index0 | plus: 1 %}
+                                            {% if raw_tag != blank %}
+                                              <span class="mobile_tag">|| {{ raw_tag }}</span>
                                             {% endif %}
+                                          </p>
 
+                                          <div class="leader_update_event">
+                                            {{ raw_event }}
+                                          </div>
 
-                                        {% capture entry %}
-                                    {{ timestamp }}@@{{ raw_date }}@@{{ hide_date }}@@{{ raw_event }}@@{{ raw_tag }}@@{{ raw_link_text }}@@{{ raw_link }}
-                                        {% endcapture %}
+                                          <div class="leader_update_tag">
+                                            {{ raw_tag }}
+                                          </div>
 
-                                        {% assign ledger_entries = ledger_entries | push: entry %}
+                                          <div class="leader_update_url">
+                                            {% if raw_link != blank %}
+                                              <a href="{{ raw_link }}" target="_blank">
+                                                {{ raw_link_text }}
+                                              </a>
+                                            {% endif %}
+                                          </div>
+
+                                        </div>
+
                                       {% endfor %}
 
+                                    </div>
+
                                     {% endif %}
+
 
 
                                     {%- comment -%} ============================= {%- endcomment -%}
