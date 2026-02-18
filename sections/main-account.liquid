@@ -709,10 +709,9 @@
                                       {% endif %}
                                     {% endif %}
 
+                                    {% assign ledger_entries = '' | split: '' %}
 
                                     {% if dates != blank %}
-
-                                      {% assign ledger_entries = '' | split: '' %}
 
                                       {%- comment -%} Build entries from metafields {%- endcomment -%}
                                       {% for date_item in dates %}
@@ -741,77 +740,84 @@
                                         {% assign ledger_entries = ledger_entries | push: entry %}
                                       {% endfor %}
 
+                                    {% endif %}
 
-                                      {%- comment -%} Add STATIC ORDER ENTRY {%- endcomment -%}
-                                      {% assign order_date_raw = line_item.created_at %}
-                                      {% assign order_timestamp = order_date_raw | date: "%s" %}
 
-                                      {% capture static_entry %}
+                                    {%- comment -%} ============================= {%- endcomment -%}
+                                    {%- comment -%} STATIC ORDER ENTRY (WELCOME) {%- endcomment -%}
+                                    {%- comment -%} ============================= {%- endcomment -%}
+
+                                    {% assign order_date_raw = line_item.created_at %}
+                                    {% assign order_timestamp = order_date_raw | date: "%s" %}
+
+                                    {% capture static_entry %}
                                     {{ order_timestamp }}@@{{ order_date_raw }}@@false@@You joined as a {{ line_item.variant.title }}. Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery.@@Update@@@@
-                                      {% endcapture %}
+                                    {% endcapture %}
 
-                                      {% assign ledger_entries = ledger_entries | push: static_entry %}
-
-
-                                      {%- comment -%} Sort newest first {%- endcomment -%}
-                                      {% assign ledger_entries = ledger_entries | sort | reverse %}
+                                    {% assign ledger_entries = ledger_entries | push: static_entry %}
 
 
-                                      <div class="all_updates_ledger">
+                                    {%- comment -%} Sort newest first {%- endcomment -%}
+                                    {% assign ledger_entries = ledger_entries | sort | reverse %}
 
-                                        <div class="leader_update_info head">
-                                          <h2>Date</h2>
-                                          <h2>Update</h2>
-                                          <h2>Tag</h2>
-                                          <h2>Details</h2>
-                                        </div>
 
-                                        {% for entry in ledger_entries %}
-                                          {% assign parts = entry | split: '@@' %}
+                                    {%- comment -%} ============================= {%- endcomment -%}
+                                    {%- comment -%} RENDER LEDGER {%- endcomment -%}
+                                    {%- comment -%} ============================= {%- endcomment -%}
 
-                                          {% assign entry_timestamp = parts[0] %}
-                                          {% assign entry_date = parts[1] %}
-                                          {% assign hide_date = parts[2] %}
-                                          {% assign entry_event = parts[3] %}
-                                          {% assign entry_tag = parts[4] %}
-                                          {% assign entry_link_text = parts[5] %}
-                                          {% assign entry_link = parts[6] %}
+                                    <div class="all_updates_ledger">
 
-                                          <div class="leader_update_info">
-
-                                            <p class="leader_update_date">
-                                              {% unless hide_date == 'true' %}
-                                                {{ entry_date | date: "%a, %b %d" }}
-                                              {% endunless %}
-
-                                              {% if entry_tag != blank %}
-                                                <span class="mobile_tag">|| {{ entry_tag }}</span>
-                                              {% endif %}
-                                            </p>
-
-                                            <div class="leader_update_event">
-                                              {{ entry_event }}
-                                            </div>
-
-                                            <div class="leader_update_tag">
-                                              {{ entry_tag }}
-                                            </div>
-
-                                            <div class="leader_update_url">
-                                              {% if entry_link != blank %}
-                                                <a href="{{ entry_link }}" target="_blank">
-                                                  {{ entry_link_text }}
-                                                </a>
-                                              {% endif %}
-                                            </div>
-
-                                          </div>
-
-                                        {% endfor %}
-
+                                      <div class="leader_update_info head">
+                                        <h2>Date</h2>
+                                        <h2>Update</h2>
+                                        <h2>Tag</h2>
+                                        <h2>Details</h2>
                                       </div>
 
-                                    {% endif %}
+                                      {% for entry in ledger_entries %}
+                                        {% assign parts = entry | split: '@@' %}
+
+                                        {% assign entry_timestamp = parts[0] %}
+                                        {% assign entry_date = parts[1] %}
+                                        {% assign hide_date = parts[2] %}
+                                        {% assign entry_event = parts[3] %}
+                                        {% assign entry_tag = parts[4] %}
+                                        {% assign entry_link_text = parts[5] %}
+                                        {% assign entry_link = parts[6] %}
+
+                                        <div class="leader_update_info">
+
+                                          <p class="leader_update_date">
+                                            {% unless hide_date == 'true' %}
+                                              {{ entry_date | date: "%a, %b %d" }}
+                                            {% endunless %}
+
+                                            {% if entry_tag != blank %}
+                                              <span class="mobile_tag">|| {{ entry_tag }}</span>
+                                            {% endif %}
+                                          </p>
+
+                                          <div class="leader_update_event">
+                                            {{ entry_event }}
+                                          </div>
+
+                                          <div class="leader_update_tag">
+                                            {{ entry_tag }}
+                                          </div>
+
+                                          <div class="leader_update_url">
+                                            {% if entry_link != blank %}
+                                              <a href="{{ entry_link }}" target="_blank">
+                                                {{ entry_link_text }}
+                                              </a>
+                                            {% endif %}
+                                          </div>
+
+                                        </div>
+
+                                      {% endfor %}
+
+                                    </div>
 
 
 
