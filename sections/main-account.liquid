@@ -742,26 +742,38 @@
                                           {% endif %}
                                         {% endfor %}
 
-                                        <div class="leader_update_info">
+                                       <div class="leader_update_info">
                                           <p class="leader_update_date">
-                                            {{ sorted_date | strip | date: "%a, %b %d" }}
-                                            <span class="mobile_tag">|| {{ tag[index] | strip }}</span>
+                                            {% unless sorted_date contains '| hide' %}
+                                              {{ sorted_date | remove: '| hide' | strip | date: "%a, %b %d" }}
+                                            {% endunless %}
+
+                                            {% unless tag[index] contains '| hide' %}
+                                              <span class="mobile_tag">|| {{ tag[index] | remove: '| hide' | strip }}</span>
+                                            {% endunless %}
                                           </p>
 
                                           <div class="leader_update_event">
-                                            {{ events[index] | strip }}
+                                            {% unless events[index] contains '| hide' %}
+                                              {{ events[index] | remove: '| hide' | strip }}
+                                            {% endunless %}
                                           </div>
 
                                           <div class="leader_update_tag">
-                                            {{ tag[index] | strip }}
+                                            {% unless tag[index] contains '| hide' %}
+                                              {{ tag[index] | remove: '| hide' | strip }}
+                                            {% endunless %}
                                           </div>
 
                                           <div class="leader_update_url">
-                                            <a href="{{ links[index] | strip }}" target="_blank">
-                                              {{ links_text[index] | strip }}
-                                            </a>
+                                            {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
+                                              <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
+                                                {{ links_text[index] | remove: '| hide' | strip }}
+                                              </a>
+                                            {% endunless %}
                                           </div>
                                         </div>
+
 
                                       {% endfor %}
 
