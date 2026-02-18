@@ -960,7 +960,7 @@ p.goal_info span{
 }
 
 .leader_update_event{
-    max-width: 85%;
+    max-width: 85% !important;
 }
 
 .days-gauge {
