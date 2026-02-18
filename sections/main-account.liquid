@@ -684,7 +684,11 @@
 
                                     {%- comment -%} Variant first {%- endcomment -%}
                                     {% if variant_dates != blank %}
-                                      {% assign dates = variant_dates %}
+                                     {% assign dates = '' | split: '' %}
+                                      {% for item in variant_dates %}
+                                        {% assign dates = dates | push: item.value %}
+                                      {% endfor %}
+
                                       {% assign events = variant_events %}
                                       {% assign tag = variant_tag %}
                                       {% assign links_text = variant_links_text %}
