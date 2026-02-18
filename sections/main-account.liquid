@@ -757,14 +757,14 @@
                                       </div>
 
                                      {%- comment -%} Build sortable array (date||index) {%- endcomment -%}
-                                      {%- comment -%} Build sortable rows using REAL timestamp (timestamp||index) {%- endcomment -%}
+                                      {%- comment -%} Build sortable rows using timestamp||index (stable & safe) {%- endcomment -%}
 {% assign sortable = '' | split: '' %}
 
 {% for d in dates %}
-  {% assign clean_date = d | remove: '| hide' | strip %}
-  {% assign ts = clean_date | date: "%s" %}
+  {% assign clean = d | remove: '| hide' | strip %}
+  {% assign ts = clean | date: "%s" %}
 
-  {%- comment -%} If date invalid, force very old timestamp so it goes bottom {%- endcomment -%}
+  {%- comment -%} If invalid date, push very old timestamp so it goes bottom but NEVER disappears {%- endcomment -%}
   {% if ts == blank %}
     {% assign ts = 0 %}
   {% endif %}
@@ -773,11 +773,10 @@
   {% assign sortable = sortable | push: row %}
 {% endfor %}
 
-{%- comment -%} Sort newest → oldest (numeric timestamp) {%- endcomment -%}
+{%- comment -%} Newest → Oldest {%- endcomment -%}
 {% assign sortable = sortable | sort | reverse %}
 
 {% for item in sortable %}
-
   {% assign parts = item | split: '||' %}
   {% assign index = parts[1] | plus: 0 %}
   {% assign sorted_date = dates[index] %}
@@ -813,7 +812,6 @@
       {% endunless %}
     </div>
   </div>
-
 {% endfor %}
 
 
