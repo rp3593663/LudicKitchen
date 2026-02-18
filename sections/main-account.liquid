@@ -663,6 +663,21 @@
                                     <p>A transparent record of everything that moves this project forward; decisions, progress, and milestones.</p>
                                   </div>
                                   <div class="ledger_updates">
+
+
+
+
+                                    <div style="background:#000;color:#0f0;padding:20px;font-size:14px;">
+                                      <h3>DEBUG VARIANT DATES</h3>
+                                      {{ line_item.variant.metafields.custom.ledger_update_date | json }}
+
+                                      <h3>DEBUG VARIANT EVENTS</h3>
+                                      {{ line_item.variant.metafields.custom.ledger_update_events | json }}
+
+                                      <h3>DEBUG PRODUCT DATES</h3>
+                                      {{ line_item.product.metafields.custom.ledger_update_date | json }}
+                                    </div>
+
                                     
                                    {% assign dates = blank %}
                                     {% assign events = blank %}
