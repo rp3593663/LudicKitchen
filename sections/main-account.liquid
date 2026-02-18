@@ -757,27 +757,31 @@
                                       </div>
 
                                      {%- comment -%} Build sortable array (date||index) {%- endcomment -%}
-                                      {%- comment -%} Build sortable rows using timestamp||index (stable & safe) {%- endcomment -%}
-{% assign sortable = '' | split: '' %}
+            {%- comment -%} Build sortable string: timestamp::index||timestamp::index {%- endcomment -%}
+{% assign sortable_string = '' %}
 
 {% for d in dates %}
   {% assign clean = d | remove: '| hide' | strip %}
   {% assign ts = clean | date: "%s" %}
 
-  {%- comment -%} If invalid date, push very old timestamp so it goes bottom but NEVER disappears {%- endcomment -%}
   {% if ts == blank %}
     {% assign ts = 0 %}
   {% endif %}
 
-  {% assign row = ts | append: '||' | append: forloop.index0 %}
-  {% assign sortable = sortable | push: row %}
+  {% assign row = ts | append: '::' | append: forloop.index0 %}
+
+  {% if sortable_string == '' %}
+    {% assign sortable_string = row %}
+  {% else %}
+    {% assign sortable_string = sortable_string | append: '||' | append: row %}
+  {% endif %}
 {% endfor %}
 
-{%- comment -%} Newest → Oldest {%- endcomment -%}
-{% assign sortable = sortable | sort | reverse %}
+{%- comment -%} Convert to array + sort newest first {%- endcomment -%}
+{% assign sortable_array = sortable_string | split: '||' | sort | reverse %}
 
-{% for item in sortable %}
-  {% assign parts = item | split: '||' %}
+{% for item in sortable_array %}
+  {% assign parts = item | split: '::' %}
   {% assign index = parts[1] | plus: 0 %}
   {% assign sorted_date = dates[index] %}
 
@@ -813,7 +817,6 @@
     </div>
   </div>
 {% endfor %}
-
 
 
 
