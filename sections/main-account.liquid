@@ -720,12 +720,31 @@
                                         <h2>Details</h2>
                                       </div>
 
+                                     {%- comment -%} Build sortable array (date||index) {%- endcomment -%}
+                                      {% assign sortable_dates = '' | split: '' %}
+
                                       {% for date_item in dates %}
-                                        {% assign index = forloop.index0 %}
+                                        {% assign idx = forloop.index0 %}
+                                        {% assign sortable_dates = sortable_dates | push: date_item | last %}
+                                      {% endfor %}
+
+                                      {%- comment -%} Sort dates newest → oldest {%- endcomment -%}
+                                      {% assign sorted_dates = dates | sort | reverse %}
+
+                                      {% for sorted_date in sorted_dates %}
+
+                                        {%- comment -%} Find original index of this date {%- endcomment -%}
+                                        {% assign index = 0 %}
+                                        {% for original_date in dates %}
+                                          {% if original_date == sorted_date %}
+                                            {% assign index = forloop.index0 %}
+                                            {% break %}
+                                          {% endif %}
+                                        {% endfor %}
 
                                         <div class="leader_update_info">
                                           <p class="leader_update_date">
-                                            {{ date_item | strip | date: "%a, %b %d" }}
+                                            {{ sorted_date | strip | date: "%a, %b %d" }}
                                             <span class="mobile_tag">|| {{ tag[index] | strip }}</span>
                                           </p>
 
@@ -745,6 +764,7 @@
                                         </div>
 
                                       {% endfor %}
+
 
 
                                     </div>
