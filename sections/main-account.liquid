@@ -757,61 +757,65 @@
                                       </div>
 
                                      {%- comment -%} Build sortable array (date||index) {%- endcomment -%}
-                                      {% assign sortable_dates = '' | split: '' %}
+                                      {%- comment -%} Build sortable rows using REAL timestamp (timestamp||index) {%- endcomment -%}
+{% assign sortable = '' | split: '' %}
 
-                                      {% for date_item in dates %}
-                                        {% assign idx = forloop.index0 %}
-                                        {% assign sortable_dates = sortable_dates | push: date_item | last %}
-                                      {% endfor %}
+{% for d in dates %}
+  {% assign clean_date = d | remove: '| hide' | strip %}
+  {% assign ts = clean_date | date: "%s" %}
 
-                                      {%- comment -%} Sort dates newest → oldest {%- endcomment -%}
-                                      {% assign sorted_dates = dates | sort | reverse %}
+  {%- comment -%} If date invalid, force very old timestamp so it goes bottom {%- endcomment -%}
+  {% if ts == blank %}
+    {% assign ts = 0 %}
+  {% endif %}
 
-                                      {% for sorted_date in sorted_dates %}
+  {% assign row = ts | append: '||' | append: forloop.index0 %}
+  {% assign sortable = sortable | push: row %}
+{% endfor %}
 
-                                        {%- comment -%} Find original index of this date {%- endcomment -%}
-                                        {% assign index = 0 %}
-                                        {% for original_date in dates %}
-                                          {% if original_date == sorted_date %}
-                                            {% assign index = forloop.index0 %}
-                                            {% break %}
-                                          {% endif %}
-                                        {% endfor %}
+{%- comment -%} Sort newest → oldest (numeric timestamp) {%- endcomment -%}
+{% assign sortable = sortable | sort | reverse %}
 
-                                       <div class="leader_update_info">
-                                          <p class="leader_update_date">
-                                            {% unless sorted_date contains '| hide' %}
-                                              {{ sorted_date | remove: '| hide' | strip | date: "%a, %b %d" }}
-                                            {% endunless %}
+{% for item in sortable %}
 
-                                            {% unless tag[index] contains '| hide' %}
-                                              <span class="mobile_tag">|| {{ tag[index] | remove: '| hide' | strip }}</span>
-                                            {% endunless %}
-                                          </p>
+  {% assign parts = item | split: '||' %}
+  {% assign index = parts[1] | plus: 0 %}
+  {% assign sorted_date = dates[index] %}
 
-                                          <div class="leader_update_event">
-                                            {% unless events[index] contains '| hide' %}
-                                              {{ events[index] | remove: '| hide' | strip }}
-                                            {% endunless %}
-                                          </div>
+  <div class="leader_update_info">
+    <p class="leader_update_date">
+      {% unless sorted_date contains '| hide' %}
+        {{ sorted_date | remove: '| hide' | strip | date: "%a, %b %d" }}
+      {% endunless %}
 
-                                          <div class="leader_update_tag">
-                                            {% unless tag[index] contains '| hide' %}
-                                              {{ tag[index] | remove: '| hide' | strip }}
-                                            {% endunless %}
-                                          </div>
+      {% unless tag[index] contains '| hide' %}
+        <span class="mobile_tag">|| {{ tag[index] | remove: '| hide' | strip }}</span>
+      {% endunless %}
+    </p>
 
-                                          <div class="leader_update_url">
-                                            {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
-                                              <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
-                                                {{ links_text[index] | remove: '| hide' | strip }}
-                                              </a>
-                                            {% endunless %}
-                                          </div>
-                                        </div>
+    <div class="leader_update_event">
+      {% unless events[index] contains '| hide' %}
+        {{ events[index] | remove: '| hide' | strip }}
+      {% endunless %}
+    </div>
 
+    <div class="leader_update_tag">
+      {% unless tag[index] contains '| hide' %}
+        {{ tag[index] | remove: '| hide' | strip }}
+      {% endunless %}
+    </div>
 
-                                      {% endfor %}
+    <div class="leader_update_url">
+      {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
+        <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
+          {{ links_text[index] | remove: '| hide' | strip }}
+        </a>
+      {% endunless %}
+    </div>
+  </div>
+
+{% endfor %}
+
 
 
 
