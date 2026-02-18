@@ -711,6 +711,111 @@
 
 
                                     {% if dates != blank %}
+
+                                      {% assign ledger_entries = '' | split: '' %}
+
+                                      {%- comment -%} Build entries from metafields {%- endcomment -%}
+                                      {% for date_item in dates %}
+                                        {% assign index = forloop.index0 %}
+
+                                        {% assign raw_date = date_item | strip %}
+                                        {% assign raw_event = events[index] | strip %}
+                                        {% assign raw_tag = tag[index] | strip %}
+                                        {% assign raw_link_text = links_text[index] | strip %}
+                                        {% assign raw_link = links[index] | strip %}
+
+                                        {%- comment -%} Hide date logic {%- endcomment -%}
+                                        {% assign hide_date = false %}
+                                        {% if raw_date contains '|hide' %}
+                                          {% assign hide_date = true %}
+                                          {% assign raw_date = raw_date | remove: '|hide' | strip %}
+                                        {% endif %}
+
+                                        {%- comment -%} Convert to timestamp for sorting {%- endcomment -%}
+                                        {% assign timestamp = raw_date | date: "%s" %}
+
+                                        {% capture entry %}
+                                    {{ timestamp }}@@{{ raw_date }}@@{{ hide_date }}@@{{ raw_event }}@@{{ raw_tag }}@@{{ raw_link_text }}@@{{ raw_link }}
+                                        {% endcapture %}
+
+                                        {% assign ledger_entries = ledger_entries | push: entry %}
+                                      {% endfor %}
+
+
+                                      {%- comment -%} Add STATIC ORDER ENTRY {%- endcomment -%}
+                                      {% assign order_date_raw = line_item.created_at %}
+                                      {% assign order_timestamp = order_date_raw | date: "%s" %}
+
+                                      {% capture static_entry %}
+                                    {{ order_timestamp }}@@{{ order_date_raw }}@@false@@You joined as a {{ line_item.variant.title }}. Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery.@@Update@@@@
+                                      {% endcapture %}
+
+                                      {% assign ledger_entries = ledger_entries | push: static_entry %}
+
+
+                                      {%- comment -%} Sort newest first {%- endcomment -%}
+                                      {% assign ledger_entries = ledger_entries | sort | reverse %}
+
+
+                                      <div class="all_updates_ledger">
+
+                                        <div class="leader_update_info head">
+                                          <h2>Date</h2>
+                                          <h2>Update</h2>
+                                          <h2>Tag</h2>
+                                          <h2>Details</h2>
+                                        </div>
+
+                                        {% for entry in ledger_entries %}
+                                          {% assign parts = entry | split: '@@' %}
+
+                                          {% assign entry_timestamp = parts[0] %}
+                                          {% assign entry_date = parts[1] %}
+                                          {% assign hide_date = parts[2] %}
+                                          {% assign entry_event = parts[3] %}
+                                          {% assign entry_tag = parts[4] %}
+                                          {% assign entry_link_text = parts[5] %}
+                                          {% assign entry_link = parts[6] %}
+
+                                          <div class="leader_update_info">
+
+                                            <p class="leader_update_date">
+                                              {% unless hide_date == 'true' %}
+                                                {{ entry_date | date: "%a, %b %d" }}
+                                              {% endunless %}
+
+                                              {% if entry_tag != blank %}
+                                                <span class="mobile_tag">|| {{ entry_tag }}</span>
+                                              {% endif %}
+                                            </p>
+
+                                            <div class="leader_update_event">
+                                              {{ entry_event }}
+                                            </div>
+
+                                            <div class="leader_update_tag">
+                                              {{ entry_tag }}
+                                            </div>
+
+                                            <div class="leader_update_url">
+                                              {% if entry_link != blank %}
+                                                <a href="{{ entry_link }}" target="_blank">
+                                                  {{ entry_link_text }}
+                                                </a>
+                                              {% endif %}
+                                            </div>
+
+                                          </div>
+
+                                        {% endfor %}
+
+                                      </div>
+
+                                    {% endif %}
+
+
+
+                                    {% comment %} {% if dates != blank %}
                                     <div class="all_updates_ledger">
                                       
                                       <div class="leader_update_info head">
@@ -753,7 +858,7 @@
                                       {% endfor %}
 
                                     </div>
-                                    {% endif %}
+                                    {% endif %} {% endcomment %}
                                   </div>
                                 </div>
                               </div>
