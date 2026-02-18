@@ -663,33 +663,8 @@
                                     <p>A transparent record of everything that moves this project forward; decisions, progress, and milestones.</p>
                                   </div>
                                   <div class="ledger_updates">
-
-
-
-
-                                    <div style="background:#fff;color:#0f0;padding:20px;font-size:14px;">
-                                      <h3>DEBUG VARIANT DATES</h3>
-                                      {{ line_item.variant.metafields.custom.ledger_update_date | json }}
-
-                                      <h3>DEBUG VARIANT EVENTS</h3>
-                                      {{ line_item.variant.metafields.custom.ledger_update_events | json }}
-
-                                      <h3>DEBUG PRODUCT DATES</h3>
-                                      {{ line_item.product.metafields.custom.ledger_update_date | json }}
-                                    </div>
-
-
-                                    <div style="background:red;color:white;padding:10px;">
-                                      VARIANT TITLE: {{ line_item.variant.title }}
-                                      <br>
-                                      chef_rendered: {{ chef_rendered }}
-                                      <br>
-                                      taster_rendered: {{ taster_rendered }}
-                                    </div>
-
-
                                     
-                                   {% assign dates = blank %}
+                                    {% assign dates = blank %}
                                     {% assign events = blank %}
                                     {% assign tag = blank %}
                                     {% assign links_text = blank %}
@@ -697,14 +672,14 @@
 
                                     {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date %}
                                     {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events %}
-                                    {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag %}
                                     {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
+                                    {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag %}
                                     {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link %}
 
                                     {% assign product_dates = line_item.product.metafields.custom.ledger_update_date %}
                                     {% assign product_events = line_item.product.metafields.custom.ledger_update_events %}
-                                    {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag %}
                                     {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
+                                    {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag %}
                                     {% assign product_links = line_item.product.metafields.custom.ledger_update_link %}
 
                                     {%- comment -%} Variant first {%- endcomment -%}
@@ -716,7 +691,7 @@
                                       {% assign links = variant_links %}
                                     {% endif %}
 
-                                    {%- comment -%} Append product entries for Sous + Head {%- endcomment -%}
+                                    {%- comment -%} Append product for Sous + Head {%- endcomment -%}
                                     {% if line_item.variant.title != 'Taster' and product_dates != blank %}
                                       {% if dates != blank %}
                                         {% assign dates = dates | concat: product_dates %}
@@ -733,180 +708,102 @@
                                       {% endif %}
                                     {% endif %}
 
+                                    {%- comment -%} STATIC ENTRY (Order Joined) {%- endcomment -%}
+                                    {% assign static_date = line_item.created_at %}
+                                    {% assign static_event = "You joined as a " | append: line_item.variant.title | append: ". Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery." %}
 
-                                    {% if dates != blank %}
-
-                                    <div class="all_updates_ledger">
-
-                                      <div class="leader_update_info head">
-                                        <h2>Date</h2>
-                                        <h2>Update</h2>
-                                        <h2>Tag</h2>
-                                        <h2>Details</h2>
-                                      </div>
-
-                                      {% for date_item in dates reversed %}
-                                        {% assign index = forloop.index0 %}
-                                        {% assign actual_index = dates.size | minus: forloop.index %}
-
-                                        {% assign raw_date = dates[actual_index].value | strip %}
-                                        {% assign raw_event = events[actual_index].value | strip %}
-                                        {% assign raw_tag = tag[actual_index].value | strip %}
-                                        {% assign raw_link_text = links_text[actual_index].value | strip %}
-                                        {% assign raw_link = links[actual_index].value | strip %}
-
-                                        {% assign hide_date = false %}
-                                        {% if raw_date contains '|hide' %}
-                                          {% assign hide_date = true %}
-                                          {% assign raw_date = raw_date | remove: '|hide' | strip %}
-                                        {% endif %}
-
-                                        <div class="leader_update_info">
-
-                                          <p class="leader_update_date">
-                                            {% unless hide_date %}
-                                              {{ raw_date | date: "%a, %b %d" }}
-                                            {% endunless %}
-
-                                            {% if raw_tag != blank %}
-                                              <span class="mobile_tag">|| {{ raw_tag }}</span>
-                                            {% endif %}
-                                          </p>
-
-                                          <div class="leader_update_event">
-                                            {{ raw_event }}
-                                          </div>
-
-                                          <div class="leader_update_tag">
-                                            {{ raw_tag }}
-                                          </div>
-
-                                          <div class="leader_update_url">
-                                            {% if raw_link != blank %}
-                                              <a href="{{ raw_link }}" target="_blank">
-                                                {{ raw_link_text }}
-                                              </a>
-                                            {% endif %}
-                                          </div>
-
-                                        </div>
-
-                                      {% endfor %}
-
-                                    </div>
-
+                                    {% if line_item.variant.title != 'Taster' %}
+                                      {% assign dates = dates | push: static_date %}
+                                      {% assign events = events | push: static_event %}
+                                      {% assign tag = tag | push: "Update" %}
+                                      {% assign links_text = links_text | push: "" %}
+                                      {% assign links = links | push: "" %}
                                     {% endif %}
 
 
-                                    {% if dates != blank %}
+                                    {% assign combined = '' | split: '' %}
 
-                                    <div class="all_updates_ledger">
+                                    {% for date_item in dates %}
+                                      {% assign index = forloop.index0 %}
 
-                                      <div class="leader_update_info head">
-                                        <h2>Date</h2>
-                                        <h2>Update</h2>
-                                        <h2>Tag</h2>
-                                        <h2>Details</h2>
-                                      </div>
+                                      {% assign raw_date = date_item.value | default: date_item | strip %}
+                                      {% assign raw_event = events[index].value | default: events[index] | strip %}
+                                      {% assign raw_tag = tag[index].value | default: tag[index] | strip %}
+                                      {% assign raw_link_text = links_text[index].value | default: links_text[index] | strip %}
+                                      {% assign raw_link = links[index].value | default: links[index] | strip %}
 
-                                      {% for date_item in dates reversed %}
-                                        {% assign actual_index = dates.size | minus: forloop.index %}
+                                      {% assign hide_date = false %}
+                                      {% if raw_date contains '|hide' %}
+                                        {% assign hide_date = true %}
+                                        {% assign raw_date = raw_date | remove: '|hide' | strip %}
+                                      {% endif %}
 
-                                        {% assign raw_date = dates[actual_index].value | strip %}
-                                        {% assign raw_event = events[actual_index].value | strip %}
-                                        {% assign raw_tag = tag[actual_index].value | strip %}
-                                        {% assign raw_link_text = links_text[actual_index].value | strip %}
-                                        {% assign raw_link = links[actual_index].value | strip %}
+                                      {% assign timestamp = raw_date | date: "%s" %}
+                                      {% capture entry %}
+                                      {{ timestamp }}@@{{ raw_date }}@@{{ hide_date }}@@{{ raw_event }}@@{{ raw_tag }}@@{{ raw_link_text }}@@{{ raw_link }}
+                                      {% endcapture %}
 
-                                        {% assign hide_date = false %}
-                                        {% if raw_date contains '|hide' %}
-                                          {% assign hide_date = true %}
-                                          {% assign raw_date = raw_date | remove: '|hide' | strip %}
-                                        {% endif %}
+                                      {% assign combined = combined | push: entry %}
+                                    {% endfor %}
 
-                                        <div class="leader_update_info">
+                                    {% assign combined = combined | sort | reverse %}
 
-                                          <p class="leader_update_date">
-                                            {% unless hide_date %}
-                                              {{ raw_date | date: "%a, %b %d" }}
-                                            {% endunless %}
 
-                                            {% if raw_tag != blank %}
-                                              <span class="mobile_tag">|| {{ raw_tag }}</span>
-                                            {% endif %}
-                                          </p>
 
-                                          <div class="leader_update_event">
-                                            {{ raw_event }}
-                                          </div>
 
-                                          <div class="leader_update_tag">
-                                            {{ raw_tag }}
-                                          </div>
+                                   <div class="all_updates_ledger">
 
-                                          <div class="leader_update_url">
-                                            {% if raw_link != blank %}
-                                              <a href="{{ raw_link }}" target="_blank">
-                                                {{ raw_link_text }}
-                                              </a>
-                                            {% endif %}
-                                          </div>
-
-                                        </div>
-
-                                      {% endfor %}
-
+                                    <div class="leader_update_info head">
+                                      <h2>Date</h2>
+                                      <h2>Update</h2>
+                                      <h2>Tag</h2>
+                                      <h2>Details</h2>
                                     </div>
 
-                                    {% endif %}
+                                    {% for item in combined %}
+                                      {% assign parts = item | split: '@@' %}
 
+                                      {% assign entry_date = parts[1] %}
+                                      {% assign hide_date = parts[2] %}
+                                      {% assign entry_event = parts[3] %}
+                                      {% assign entry_tag = parts[4] %}
+                                      {% assign entry_link_text = parts[5] %}
+                                      {% assign entry_link = parts[6] %}
 
+                                      <div class="leader_update_info">
 
+                                        <p class="leader_update_date">
+                                          {% unless hide_date == 'true' %}
+                                            {{ entry_date | date: "%a, %b %d" }}
+                                          {% endunless %}
 
-                                    {% comment %} {% if dates != blank %}
-                                    <div class="all_updates_ledger">
-                                      
-                                      <div class="leader_update_info head">
-                                        <h2>Date</h2>
-                                        <h2>Update</h2>
-                                        <h2>Tag</h2>
-                                        <h2>Details</h2>
-                                      </div>
+                                          {% if entry_tag != blank %}
+                                            <span class="mobile_tag">|| {{ entry_tag }}</span>
+                                          {% endif %}
+                                        </p>
 
-                                      {% for date_item in dates %}
-                                        {% assign index = forloop.index0 %}
+                                        <div class="leader_update_event">
+                                          {{ entry_event }}
+                                        </div>
 
-                                        {% assign date_parts  = date_item | split: '||' %}
-                                        {% assign event_parts = events[index] | split: '||' %}
-                                         {% assign tag_parts = tag[index] | split: '||' %}
-                                        {% assign link_text_parts  = links_text[index] | split: '||' %}
-                                        {% assign link_parts  = links[index] | split: '||' %}
+                                        <div class="leader_update_tag">
+                                          {{ entry_tag }}
+                                        </div>
 
-                                        <div class="leader_update_info">
-                                          <p class="leader_update_date">
-                                            {{ date_parts[1] | strip | date: "%a, %b %d"  }}
-                                            <span class="mobile_tag">|| {{ tag_parts[1] | strip }}</span>
-                                          </p>
-
-                                          <div class="leader_update_event">
-                                            {{ event_parts[1] | strip }}
-                                          </div>
-
-                                          <div class="leader_update_tag">
-                                             {{ tag_parts[1] | strip }}
-                                          </div>
-
-                                          <div class="leader_update_url">
-                                            <a href="{{ link_parts[1] | strip }}" target="_blank">
-                                              {{ link_text_parts[1] | strip }}
+                                        <div class="leader_update_url">
+                                          {% if entry_link != blank %}
+                                            <a href="{{ entry_link }}" target="_blank">
+                                              {{ entry_link_text }}
                                             </a>
-                                          </div>
+                                          {% endif %}
                                         </div>
 
-                                      {% endfor %}
+                                      </div>
 
-                                    </div>
-                                    {% endif %} {% endcomment %}
+                                    {% endfor %}
+
+                                  </div>
+
                                   </div>
                                 </div>
                               </div>
