@@ -711,7 +711,8 @@
 
 
                                     {%- comment -%} Auto Entry: Customer became Sous / Head Chef {%- endcomment -%}
-                                    {% assign order_date = line_item.order.created_at | date: "%Y-%m-%d" %}
+                                    {% assign order_date = order.created_at | date: "%Y-%m-%d" %}
+
 
                                     {% assign auto_event = '' %}
                                     {% if line_item.variant.title contains 'Sous Chef' %}
