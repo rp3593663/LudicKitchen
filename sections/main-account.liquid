@@ -757,66 +757,66 @@
                                       </div>
 
                                      {%- comment -%} Build sortable array (date||index) {%- endcomment -%}
-            {%- comment -%} Build sortable string: timestamp::index||timestamp::index {%- endcomment -%}
-{% assign sortable_string = '' %}
+                                    {%- comment -%} Build sortable string: timestamp::index||timestamp::index {%- endcomment -%}
+                                      {% assign sortable_string = '' %}
 
-{% for d in dates %}
-  {% assign clean = d | remove: '| hide' | strip %}
-  {% assign ts = clean | date: "%s" %}
+                                      {% for d in dates %}
+                                        {% assign clean = d | remove: '| hide' | strip %}
+                                        {% assign ts = clean | date: "%s" %}
 
-  {% if ts == blank %}
-    {% assign ts = 0 %}
-  {% endif %}
+                                        {% if ts == blank %}
+                                          {% assign ts = 0 %}
+                                        {% endif %}
 
-  {% assign row = ts | append: '::' | append: forloop.index0 %}
+                                        {% assign row = ts | append: '::' | append: forloop.index0 %}
 
-  {% if sortable_string == '' %}
-    {% assign sortable_string = row %}
-  {% else %}
-    {% assign sortable_string = sortable_string | append: '||' | append: row %}
-  {% endif %}
-{% endfor %}
+                                        {% if sortable_string == '' %}
+                                          {% assign sortable_string = row %}
+                                        {% else %}
+                                          {% assign sortable_string = sortable_string | append: '||' | append: row %}
+                                        {% endif %}
+                                      {% endfor %}
 
-{%- comment -%} Convert to array + sort newest first {%- endcomment -%}
-{% assign sortable_array = sortable_string | split: '||' | sort | reverse %}
+                                      {%- comment -%} Convert to array + sort newest first {%- endcomment -%}
+                                      {% assign sortable_array = sortable_string | split: '||' | sort | reverse %}
 
-{% for item in sortable_array %}
-  {% assign parts = item | split: '::' %}
-  {% assign index = parts[1] | plus: 0 %}
-  {% assign sorted_date = dates[index] %}
+                                      {% for item in sortable_array %}
+                                        {% assign parts = item | split: '::' %}
+                                        {% assign index = parts[1] | plus: 0 %}
+                                        {% assign sorted_date = dates[index] %}
 
-  <div class="leader_update_info">
-    <p class="leader_update_date">
-      {% unless sorted_date contains '| hide' %}
-        {{ sorted_date | remove: '| hide' | strip | date: "%a, %b %d" }}
-      {% endunless %}
+                                        <div class="leader_update_info">
+                                          <p class="leader_update_date">
+                                            {% unless sorted_date contains '| hide' %}
+                                              {{ sorted_date | remove: '| hide' | strip | date: "%a, %b %d" }}
+                                            {% endunless %}
 
-      {% unless tag[index] contains '| hide' %}
-        <span class="mobile_tag">|| {{ tag[index] | remove: '| hide' | strip }}</span>
-      {% endunless %}
-    </p>
+                                            {% unless tag[index] contains '| hide' %}
+                                              <span class="mobile_tag">|| {{ tag[index] | remove: '| hide' | strip }}</span>
+                                            {% endunless %}
+                                          </p>
 
-    <div class="leader_update_event">
-      {% unless events[index] contains '| hide' %}
-        {{ events[index] | remove: '| hide' | strip }}
-      {% endunless %}
-    </div>
+                                          <div class="leader_update_event">
+                                            {% unless events[index] contains '| hide' %}
+                                              {{ events[index] | remove: '| hide' | strip }}
+                                            {% endunless %}
+                                          </div>
 
-    <div class="leader_update_tag">
-      {% unless tag[index] contains '| hide' %}
-        {{ tag[index] | remove: '| hide' | strip }}
-      {% endunless %}
-    </div>
+                                          <div class="leader_update_tag">
+                                            {% unless tag[index] contains '| hide' %}
+                                              {{ tag[index] | remove: '| hide' | strip }}
+                                            {% endunless %}
+                                          </div>
 
-    <div class="leader_update_url">
-      {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
-        <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
-          {{ links_text[index] | remove: '| hide' | strip }}
-        </a>
-      {% endunless %}
-    </div>
-  </div>
-{% endfor %}
+                                          <div class="leader_update_url">
+                                            {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
+                                              <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
+                                                {{ links_text[index] | remove: '| hide' | strip }}
+                                              </a>
+                                            {% endunless %}
+                                          </div>
+                                        </div>
+                                      {% endfor %}
 
 
 
