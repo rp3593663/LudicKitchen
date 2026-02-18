@@ -731,7 +731,21 @@
                                         {% endif %}
 
                                         {%- comment -%} Convert to timestamp for sorting {%- endcomment -%}
-                                        {% assign timestamp = raw_date | date: "%s" %}
+                                          {%- comment -%} Ensure year exists {%- endcomment -%}
+                                            {% assign processed_date = raw_date %}
+
+                                            {% unless raw_date contains '20' %}
+                                              {% assign current_year = 'now' | date: "%Y" %}
+                                              {% assign processed_date = raw_date | append: ' ' | append: current_year %}
+                                            {% endunless %}
+
+                                            {% assign timestamp = processed_date | date: "%s" %}
+
+                                            {%- comment -%} Fallback if parsing fails {%- endcomment -%}
+                                            {% if timestamp == blank %}
+                                              {% assign timestamp = forloop.index0 | plus: 1 %}
+                                            {% endif %}
+
 
                                         {% capture entry %}
                                     {{ timestamp }}@@{{ raw_date }}@@{{ hide_date }}@@{{ raw_event }}@@{{ raw_tag }}@@{{ raw_link_text }}@@{{ raw_link }}
