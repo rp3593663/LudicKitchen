@@ -667,7 +667,7 @@
 
 
 
-                                    <div style="background:#000;color:#0f0;padding:20px;font-size:14px;">
+                                    <div style="background:#fff;color:#0f0;padding:20px;font-size:14px;">
                                       <h3>DEBUG VARIANT DATES</h3>
                                       {{ line_item.variant.metafields.custom.ledger_update_date | json }}
 
@@ -677,6 +677,16 @@
                                       <h3>DEBUG PRODUCT DATES</h3>
                                       {{ line_item.product.metafields.custom.ledger_update_date | json }}
                                     </div>
+
+
+                                    <div style="background:#ffff;color:white;padding:10px;">
+                                      VARIANT TITLE: {{ line_item.variant.title }}
+                                      <br>
+                                      chef_rendered: {{ chef_rendered }}
+                                      <br>
+                                      taster_rendered: {{ taster_rendered }}
+                                    </div>
+
 
                                     
                                    {% assign dates = blank %}
