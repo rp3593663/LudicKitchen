@@ -959,6 +959,10 @@ p.goal_info span{
     letter-spacing: -0.45px;
 }
 
+.leader_update_event{
+    max-width: 85%;
+}
+
 .days-gauge {
     background: #F6F6F6;
     border-radius: 16px;
