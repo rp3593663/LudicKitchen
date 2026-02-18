@@ -735,11 +735,12 @@
                                       {% for date_item in dates %}
                                         {% assign index = forloop.index0 %}
 
-                                        {% assign raw_date = date_item | strip %}
-                                        {% assign raw_event = events[index] | strip %}
-                                        {% assign raw_tag = tag[index] | strip %}
-                                        {% assign raw_link_text = links_text[index] | strip %}
-                                        {% assign raw_link = links[index] | strip %}
+                                        {% assign raw_date = date_item.value | strip %}
+                                        {% assign raw_event = events[index].value | strip %}
+                                        {% assign raw_tag = tag[index].value | strip %}
+                                        {% assign raw_link_text = links_text[index].value | strip %}
+                                        {% assign raw_link = links[index].value | strip %}
+
 
                                         {%- comment -%} Hide date logic {%- endcomment -%}
                                         {% assign hide_date = false %}
