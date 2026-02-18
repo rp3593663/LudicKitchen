@@ -4310,6 +4310,7 @@ button.pswp__button.pswp__button--zoom {
         line-height: 16px;
         letter-spacing: -0.6px;
         color: #1a1a1a;
+        max-width:100% !important;
     }
     .leader_update_info.head h2 {
         font-size: 12px;
