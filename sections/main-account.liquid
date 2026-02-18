@@ -723,34 +723,29 @@
                                       {% for date_item in dates %}
                                         {% assign index = forloop.index0 %}
 
-                                        {% assign date_parts  = date_item | split: '||' %}
-                                        {% assign event_parts = events[index] | split: '||' %}
-                                         {% assign tag_parts = tag[index] | split: '||' %}
-                                        {% assign link_text_parts  = links_text[index] | split: '||' %}
-                                        {% assign link_parts  = links[index] | split: '||' %}
-
                                         <div class="leader_update_info">
                                           <p class="leader_update_date">
-                                            {{ date_parts[1] | strip | date: "%a, %b %d"  }}
-                                            <span class="mobile_tag">|| {{ tag_parts[1] | strip }}</span>
+                                            {{ date_item | strip | date: "%a, %b %d" }}
+                                            <span class="mobile_tag">|| {{ tag[index] | strip }}</span>
                                           </p>
 
                                           <div class="leader_update_event">
-                                            {{ event_parts[1] | strip }}
+                                            {{ events[index] | strip }}
                                           </div>
 
                                           <div class="leader_update_tag">
-                                             {{ tag_parts[1] | strip }}
+                                            {{ tag[index] | strip }}
                                           </div>
 
                                           <div class="leader_update_url">
-                                            <a href="{{ link_parts[1] | strip }}" target="_blank">
-                                              {{ link_text_parts[1] | strip }}
+                                            <a href="{{ links[index] | strip }}" target="_blank">
+                                              {{ links_text[index] | strip }}
                                             </a>
                                           </div>
                                         </div>
 
                                       {% endfor %}
+
 
                                     </div>
                                     {% endif %}
