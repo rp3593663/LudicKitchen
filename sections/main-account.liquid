@@ -677,11 +677,18 @@
                                     {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag.value %}
                                     {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link.value %}
 
-                                    {% assign product_dates = product.metafields.custom.ledger_update_date.value %}
+                                    {% comment %} {% assign product_dates = product.metafields.custom.ledger_update_date.value %}
                                     {% assign product_events = product.metafields.custom.ledger_update_events.value %}
                                     {% assign product_links_text = product.metafields.custom.ledger_update_link_text.value %}
                                     {% assign product_tag = product.metafields.custom.ledger_update_tag.value %}
-                                    {% assign product_links = product.metafields.custom.ledger_update_link.value %}
+                                    {% assign product_links = product.metafields.custom.ledger_update_link.value %} {% endcomment %}
+
+                                    {% assign product_dates = line_item.product.metafields.custom.ledger_update_date.value %}
+                                    {% assign product_events = line_item.product.metafields.custom.ledger_update_events.value %}
+                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text.value %}
+                                    {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag.value %}
+                                    {% assign product_links = line_item.product.metafields.custom.ledger_update_link.value %}
+
 
                                     {%- comment -%} 1️⃣ Add VARIANT data first {%- endcomment -%}
                                     {% if variant_dates != blank %}
