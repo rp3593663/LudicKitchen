@@ -664,65 +664,71 @@
                                   </div>
                                   <div class="ledger_updates">
                                     
-                                    {% assign dates = blank %}
-                                    {% assign events = blank %}
-                                    {% assign tag = blank %}
-                                    {% assign links_text = blank %}
-                                    {% assign links = blank %}
+                                    {% assign dates = '' | split: '' %}
+                                    {% assign events = '' | split: '' %}
+                                    {% assign tag = '' | split: '' %}
+                                    {% assign links_text = '' | split: '' %}
+                                    {% assign links = '' | split: '' %}
 
                                     {% assign variant_dates = line_item.variant.metafields.custom.ledger_update_date %}
                                     {% assign variant_events = line_item.variant.metafields.custom.ledger_update_events %}
-                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
                                     {% assign variant_tag = line_item.variant.metafields.custom.ledger_update_tag %}
+                                    {% assign variant_links_text = line_item.variant.metafields.custom.ledger_update_link_text %}
                                     {% assign variant_links = line_item.variant.metafields.custom.ledger_update_link %}
 
                                     {% assign product_dates = line_item.product.metafields.custom.ledger_update_date %}
                                     {% assign product_events = line_item.product.metafields.custom.ledger_update_events %}
-                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
                                     {% assign product_tag = line_item.product.metafields.custom.ledger_update_tag %}
+                                    {% assign product_links_text = line_item.product.metafields.custom.ledger_update_link_text %}
                                     {% assign product_links = line_item.product.metafields.custom.ledger_update_link %}
 
-                                    {%- comment -%} Variant first {%- endcomment -%}
+                                    {%- comment -%} Add variant entries {%- endcomment -%}
                                     {% if variant_dates != blank %}
-                                     {% assign dates = '' | split: '' %}
                                       {% for item in variant_dates %}
                                         {% assign dates = dates | push: item.value %}
                                       {% endfor %}
-
-                                      {% assign events = variant_events %}
-                                      {% assign tag = variant_tag %}
-                                      {% assign links_text = variant_links_text %}
-                                      {% assign links = variant_links %}
+                                      {% for item in variant_events %}
+                                        {% assign events = events | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in variant_tag %}
+                                        {% assign tag = tag | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in variant_links_text %}
+                                        {% assign links_text = links_text | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in variant_links %}
+                                        {% assign links = links | push: item.value %}
+                                      {% endfor %}
                                     {% endif %}
 
-                                    {%- comment -%} Append product for Sous + Head {%- endcomment -%}
+                                    {%- comment -%} Append product entries for Sous + Head {%- endcomment -%}
                                     {% if line_item.variant.title != 'Taster' and product_dates != blank %}
-                                      {% if dates != blank %}
-                                        {% assign dates = dates | concat: product_dates %}
-                                        {% assign events = events | concat: product_events %}
-                                        {% assign tag = tag | concat: product_tag %}
-                                        {% assign links_text = links_text | concat: product_links_text %}
-                                        {% assign links = links | concat: product_links %}
-                                      {% else %}
-                                        {% assign dates = product_dates %}
-                                        {% assign events = product_events %}
-                                        {% assign tag = product_tag %}
-                                        {% assign links_text = product_links_text %}
-                                        {% assign links = product_links %}
-                                      {% endif %}
+                                      {% for item in product_dates %}
+                                        {% assign dates = dates | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in product_events %}
+                                        {% assign events = events | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in product_tag %}
+                                        {% assign tag = tag | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in product_links_text %}
+                                        {% assign links_text = links_text | push: item.value %}
+                                      {% endfor %}
+                                      {% for item in product_links %}
+                                        {% assign links = links | push: item.value %}
+                                      {% endfor %}
                                     {% endif %}
 
-                                    {%- comment -%} STATIC ENTRY (Order Joined) {%- endcomment -%}
-                                    {% assign static_date = line_item.created_at %}
-                                    {% assign static_event = "You joined as a " | append: line_item.variant.title | append: ". Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery." %}
-
+                                    {%- comment -%} Add static order entry {%- endcomment -%}
                                     {% if line_item.variant.title != 'Taster' %}
-                                      {% assign dates = dates | push: static_date %}
-                                      {% assign events = events | push: static_event %}
+                                      {% assign dates = dates | push: line_item.created_at %}
+                                      {% assign events = events | push: "You joined as a " | append: line_item.variant.title | append: ". Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery." %}
                                       {% assign tag = tag | push: "Update" %}
                                       {% assign links_text = links_text | push: "" %}
                                       {% assign links = links | push: "" %}
                                     {% endif %}
+
 
 
                                     {% assign combined = '' | split: '' %}
