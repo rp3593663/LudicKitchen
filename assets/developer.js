@@ -237,7 +237,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
 
   const sticky = document.getElementById("stickyVideoPreview");
-  const stickyThumb = document.getElementById("stickyThumb");
+  // const stickyThumb = document.getElementById("stickyThumb");
+  const stickyPreviewVideo = document.getElementById("stickyPreviewVideo");
   const stickyTitle = document.getElementById("stickyTitle");
   const stickyText = document.getElementById("stickyText");
   const popupTitle = document.getElementById("popupTitle");
@@ -264,7 +265,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     activeSrc = data.src;
 
-    stickyThumb.src = data.thumb || "";
+    // stickyThumb.src = data.thumb || "";
+    if (data.src) {
+      stickyPreviewVideo.src = data.src;
+      stickyPreviewVideo.load();
+      stickyPreviewVideo.play().catch(() => {});
+    }
     stickyTitle.textContent = data.title || "";
     stickyText.textContent = data.text || "";
     sticky.dataset.video = data.src || "";
