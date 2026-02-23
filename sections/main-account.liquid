@@ -716,9 +716,9 @@
 
                                     {% assign auto_event = '' %}
                                     {% if line_item.variant.title contains 'Sous Chef' %}
-                                      {% assign auto_event = 'You are the Sous Chef now' %}
+                                      {% assign auto_event = 'You joined as a Sous Chef.Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery.' %}
                                     {% elsif line_item.variant.title contains 'Head Chef' %}
-                                      {% assign auto_event = 'You are the Head Chef now' %}
+                                      {% assign auto_event = 'You joined as a Head Chef.Your participation is confirmed. You’re now part of Project 01 as it moves toward activation and final delivery.' %}
                                     {% endif %}
 
                                     {% if auto_event != '' %}
