@@ -53,12 +53,10 @@
         "fullwidth": true,
         "padding": "",
         "margin": "",
-        "section_video": "shopify://files/videos/IMG_9999.MOV",
-        "section_video_poster": "shopify://shop_images/Screenshot_2026-01-30_at_4.27.07_PM.png",
-        "section_video_title": "Curious about the whole idea of Kitchen?",
-        "section_video_text": "Get the complete picture from the ground up.",
-        "section_popup_title": "What is Ludic Kitchen?",
-        "section_popup_text": "It is our community-led space where ideas are made on a shared table. It’s where you, a curious, observant, and collaborative enthusiast, who believes in the Ludic way, gets a space to help shape what Ludic makes next. Here's the full story:"
+        "section_video_title": "",
+        "section_video_text": "",
+        "section_popup_title": "",
+        "section_popup_text": ""
       }
     },
     "how_works_XGp7pm": {
