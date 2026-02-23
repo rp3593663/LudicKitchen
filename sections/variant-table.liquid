@@ -151,7 +151,7 @@
 
 
 
-        <div class="tier_table_inner">
+        <div class="tier_table_inner" id="tier-table-inner">
             {% for variant in product.variants %}
               {% assign current_reached_goal = variant.metafields.custom.current_reached_tier_goal | default: 0 %}
                 <div class="tier_box" id="tier-{{ variant.title | handleize }}">
