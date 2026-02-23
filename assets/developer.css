@@ -2282,6 +2282,9 @@ input.edit_account_input.disabled {
     height: 100%;
     object-fit: cover;
 }
+#stickyPreviewVideo{
+    width:100%;
+}
 .preview_play_btn {
     position: absolute;
     top: 50%;
