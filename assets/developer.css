@@ -2358,12 +2358,11 @@ p#stickyText {
 }
 .video_popup_head h3 {
     margin: 0;
-    text-align: center;
-    font-weight: 650;
-    font-size: 38px;
+    color: #1A1A1A;
+    font-size: 34px;
+    font-weight: 600;
     line-height: 48px;
-    letter-spacing: -1.1px;
-    color: var(--black);
+    letter-spacing: -1.7px;
 }
 .video_popup_head p {
     font-weight: 400;
