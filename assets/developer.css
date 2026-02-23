@@ -2310,12 +2310,12 @@ h5#stickyTitle {
     color: var(--black);
 }
 p#stickyText {
-    margin: 0px;
-    font-weight: 400;
+    margin: 0;
+    color: var(--secondary-steel, #949598);
     font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.36px; 
-    color: var(--black);
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.6px;
 }
 
 .video-popup {
