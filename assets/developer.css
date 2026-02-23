@@ -4284,6 +4284,9 @@ button.pswp__button.pswp__button--zoom {
     .leader_update_url:before {
         content: '➝';
     }
+    .leader_update_url:has(a:empty)::before {
+        display: none;
+    }
     .leader_update_url a {
         font-weight: 500;
     }
