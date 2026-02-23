@@ -530,11 +530,9 @@ a.pre_footer_list-menu__item {
                         <p>Some people prefer a document they can sit with, revisit, or pass along. These two explain <b>Ludic Kitchen</b> and <b>Project 01</b> in more detail, at your own pace.</p>
                     </div>
                     <img src="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/scanner.svg?v=1770793653">
-                    {% comment %} <a href="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic-clogs-pdf.zip?v=1771825774" download>
+                    <a href="https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic-clogs-pdf.zip?v=1771825774" download>
                         Tap & Download
-                    </a> {% endcomment %}
-                    <a href="#" id="downloadAll">Tap & Download</a>
-
+                    </a>
                 </div>
             </div>
             <div class="footer_share_block">
@@ -705,28 +703,6 @@ a.pre_footer_list-menu__item {
 	</div>
 </div>
 
-
-<script>
-document.getElementById('downloadAll').addEventListener('click', function(e) {
-  e.preventDefault();
-
-  const pdfs = [
-    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242",
-    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241"
-  ];
-
-  pdfs.forEach((pdf, i) => {
-    setTimeout(() => {
-      const a = document.createElement('a');
-      a.href = pdf + "&download=1";
-      a.setAttribute("download", "");
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    }, i * 1200);
-  });
-});
-</script>
 
 <script>
 {% comment %} document.addEventListener("DOMContentLoaded", function () {
