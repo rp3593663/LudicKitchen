@@ -4120,7 +4120,7 @@ button.pswp__button.pswp__button--zoom {
     }
     .video-popup-close {
         right: 16px;
-        top: 16px;
+        top: 10px;
     }
      .video-popup-close svg{
         width: 16px;
