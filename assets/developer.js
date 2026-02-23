@@ -304,7 +304,8 @@ document.addEventListener("DOMContentLoaded", () => {
     popupVideo.currentTime = 0;
     popupVideo.play();
     popupTitle.textContent = sticky.dataset.popupTitle || "";
-    popupText.textContent = sticky.dataset.popupText || "";
+    // popupText.textContent = sticky.dataset.popupText || "";
+    popupText.innerHTML = sticky.dataset.popupText || "";
     popup.classList.remove("hidden");
   });
 
