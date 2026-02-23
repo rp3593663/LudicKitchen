@@ -2354,7 +2354,7 @@ p#stickyText {
 .video_popup_head {
     display: grid;
     gap: 18px;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
 }
 .video_popup_head h3 {
     margin: 0;
@@ -4102,7 +4102,6 @@ button.pswp__button.pswp__button--zoom {
     }
     .video_popup_head {
         gap: 16px;
-        margin-bottom: 30px;
     }
     .video-popup-close {
         right: 16px;
