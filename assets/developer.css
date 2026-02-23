@@ -4064,6 +4064,11 @@ button.pswp__button.pswp__button--zoom {
         letter-spacing: -.36px;
     }
 
+    .video_popup_content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
     .video-popup {
         display: block !important;
     }
