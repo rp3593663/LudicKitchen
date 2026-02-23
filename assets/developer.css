@@ -4279,7 +4279,7 @@ button.pswp__button.pswp__button--zoom {
    .leader_update_url {
         margin-top: 4px;
         display: flex;
-        gap: 2px;
+        gap: 4px;
     }
     .leader_update_url:before {
         content: '➝';
