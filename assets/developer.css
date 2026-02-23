@@ -4113,6 +4113,7 @@ button.pswp__button.pswp__button--zoom {
     .video_popup_head p {
         font-size: 14px;
         line-height: 18px;
+        letter-spacing: -.7px;
     }
     .video_popup_head {
         gap: 16px;
