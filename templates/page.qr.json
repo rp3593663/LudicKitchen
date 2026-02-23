@@ -11,13 +11,25 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_6m39DG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align:center;padding:40px;font-family:sans-serif;\">\n  <h2>Preparing your files...</h2>\n  <p>Your documents will open automatically.</p>\n</div>\n\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n\n  const pdf1 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241\";\n  const pdf2 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242\";\n\n  // Open first PDF\n  window.open(pdf1, \"_blank\");\n\n  // Open second PDF quickly after\n  setTimeout(function() {\n    window.open(pdf2, \"_blank\");\n  }, 600);\n\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_6m39DG"
   ]
 }
