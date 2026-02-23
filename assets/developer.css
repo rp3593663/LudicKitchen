@@ -4068,7 +4068,7 @@ button.pswp__button.pswp__button--zoom {
         display: flex;
         flex-direction: column-reverse;
     }
-    
+
     .video-popup {
         display: block !important;
     }
@@ -4115,6 +4115,8 @@ button.pswp__button.pswp__button--zoom {
     }
     .video_popup_head {
         gap: 16px;
+        margin-bottom:0;
+        margin-top:20px;
     }
     .video-popup-close {
         right: 16px;
