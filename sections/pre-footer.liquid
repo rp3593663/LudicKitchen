@@ -706,29 +706,23 @@ document.querySelector('.download_both').addEventListener('click', function(e) {
   e.preventDefault();
 
   const files = [
-    {
-      url: "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242",
-      name: "Ludic_Clogs_One_Pager.pdf"
-    },
-    {
-      url: "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241",
-      name: "Kitchen_One_Pager.pdf"
-    }
+    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242",
+    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241"
   ];
 
   files.forEach((file, index) => {
     setTimeout(() => {
-      const link = document.createElement('a');
-      link.href = file.url;
-      link.setAttribute('download', file.name);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }, index * 800); // delay prevents blocking
-  });
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = file;
+      document.body.appendChild(iframe);
 
+      setTimeout(() => iframe.remove(), 5000);
+    }, index * 1000);
+  });
 });
 </script>
+
 
 
 <script>
