@@ -703,6 +703,30 @@ a.pre_footer_list-menu__item {
 	</div>
 </div>
 
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  // First PDF
+  const link1 = document.createElement("a");
+  link1.href = "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241";
+  link1.download = "Kitchen_One_Pager.pdf";
+  document.body.appendChild(link1);
+  link1.click();
+  document.body.removeChild(link1);
+
+  // Wait 2 seconds, then download second PDF
+  setTimeout(function() {
+    const link2 = document.createElement("a");
+    link2.href = "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242";
+    link2.download = "Ludic_Clogs_One_Pager.pdf";
+    document.body.appendChild(link2);
+    link2.click();
+    document.body.removeChild(link2);
+  }, 2000); // 2000ms = 2 seconds delay
+});
+</script>
+
 
 <script>
 {% comment %} document.addEventListener("DOMContentLoaded", function () {
