@@ -21,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center;padding:40px;font-family:sans-serif;\">\n  <h2>Preparing your files...</h2>\n  <p>Your documents will open automatically.</p>\n</div>\n\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n\n  const pdf1 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241\";\n  const pdf2 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242\";\n\n  // Open first PDF\n  window.open(pdf1, \"_blank\");\n\n  // Open second PDF quickly after\n  setTimeout(function() {\n    window.open(pdf2, \"_blank\");\n  }, 600);\n\n});\n</script>",
+        "custom_liquid": "<!DOCTYPE html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Preparing your files...</title>\n</head>\n<body style=\"margin:0; text-align:center; padding:40px; font-family:sans-serif;\">\n\n<h2>Preparing your files...</h2>\n<p>Your documents will open automatically.</p>\n\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n\n  const pdf1 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241\";\n  const pdf2 = \"https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242\";\n\n  window.open(pdf1, \"_blank\");\n\n  setTimeout(function() {\n    window.open(pdf2, \"_blank\");\n  }, 500);\n\n});\n</script>\n\n</body>\n</html>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
