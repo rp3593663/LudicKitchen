@@ -704,26 +704,38 @@ a.pre_footer_list-menu__item {
 </div>
 
 <script>
-document.getElementById("downloadBtn").addEventListener("click", function(e) {
+document.getElementById("downloadBtn").addEventListener("click", async function(e) {
   e.preventDefault();
 
-  // First PDF
-  const link1 = document.createElement("a");
-  link1.href = "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241";
-  link1.download = "Kitchen_One_Pager.pdf";
-  document.body.appendChild(link1);
-  link1.click();
-  document.body.removeChild(link1);
+  async function forceDownload(url, filename) {
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
 
-  // Wait 2 seconds, then download second PDF
-  setTimeout(function() {
-    const link2 = document.createElement("a");
-    link2.href = "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242";
-    link2.download = "Ludic_Clogs_One_Pager.pdf";
-    document.body.appendChild(link2);
-    link2.click();
-    document.body.removeChild(link2);
-  }, 2000); // 2000ms = 2 seconds delay
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    window.URL.revokeObjectURL(blobUrl);
+  }
+
+  // First PDF
+  await forceDownload(
+    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241",
+    "Kitchen_One_Pager.pdf"
+  );
+
+  // Small delay before second
+  setTimeout(async () => {
+    await forceDownload(
+      "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242",
+      "Ludic_Clogs_One_Pager.pdf"
+    );
+  }, 1500);
+
 });
 </script>
 
