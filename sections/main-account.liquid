@@ -808,13 +808,25 @@
                                             {% endunless %}
                                           </div>
 
-                                          <div class="leader_update_url">
+                                          {% comment %} <div class="leader_update_url">
                                             {% unless links[index] contains '| hide' or links_text[index] contains '| hide' %}
                                               <a href="{{ links[index] | remove: '| hide' | strip }}" target="_blank">
                                                 {{ links_text[index] | remove: '| hide' | strip }}
                                               </a>
                                             {% endunless %}
-                                          </div>
+                                          </div> {% endcomment %}
+                                          {% assign link_text = links_text[index] | remove: '| hide' | strip %}
+                                          {% assign link_url = links[index] | remove: '| hide' | strip %}
+
+                                          {% unless links_text[index] contains '| hide' or link_text == blank %}
+                                            <div class="leader_update_url">
+                                              <a href="{{ link_url }}" target="_blank">
+                                                {{ link_text }}
+                                              </a>
+                                            </div>
+                                          {% endunless %}
+
+
                                         </div>
                                       {% endfor %}
 
