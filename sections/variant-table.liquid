@@ -326,7 +326,7 @@
   window.__currentPageUrl = {{ request.path | json }};
 </script> {% endcomment %}
 
-<script>
+{% comment %} <script>
   {% if customer %}
     window.__customerLoggedIn = true;
 
@@ -342,9 +342,28 @@
   {% endif %}
 
   window.__currentPageUrl = {{ request.path | json }};
+</script> {% endcomment %}
+
+<script>
+  {% if customer %}
+    window.__customerLoggedIn = true;
+
+    {% assign valid_orders = 0 %}
+    {% for order in customer.orders %}
+      {% unless order.cancelled %}
+        {% assign valid_orders = valid_orders | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+
+    window.__customerHasOrders = {{ valid_orders }};
+
+  {% else %}
+    window.__customerLoggedIn = false;
+    window.__customerHasOrders = 0;
+  {% endif %}
+
+  window.__currentPageUrl = {{ request.path | json }};
 </script>
-
-
 
 
 <script>
