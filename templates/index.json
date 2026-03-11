@@ -245,7 +245,7 @@
           "settings": {
             "tab_handle": "campaign_activation_cancellation_outcomes",
             "question": "What does “project activation” mean?",
-            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><p>Once 75% of the target is reached:</p><ul><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
+            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><p></p><p>Once 75% of the target is reached:</p><ul><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
           }
         },
         "faq_gJChJK": {
