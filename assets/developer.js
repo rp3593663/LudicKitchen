@@ -255,12 +255,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const src = sec.dataset.videoSrc;
     if (!src) return;
 
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = "video";
-    link.href = src;
+    const v = document.createElement("video");
+    v.src = src;
+    v.preload = "auto";
+    v.muted = true;
+    v.playsInline = true;
 
-    document.head.appendChild(link);
+    // important: start loading
+    v.load();
+
+    // keep it in memory
+    v.style.display = "none";
+    document.body.appendChild(v);
   });
 
 
