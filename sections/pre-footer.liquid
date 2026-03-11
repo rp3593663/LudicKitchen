@@ -529,10 +529,13 @@ a.pre_footer_list-menu__item {
                         <h6>If you like things in writing</h6>
                         <p>Some people prefer a document they can sit with, revisit, or pass along. These two explain <b>Ludic Kitchen</b> and <b>Project 01</b> in more detail, at your own pace.</p>
                     </div>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://kitchen.ludic.life/pages/qr">
-                    <a href="#" id="downloadBtn">
-                        Tap & Download
-                    </a>
+                    <div class="pdf-content">
+                        <p>
+                            Ludic Kitchen:
+                            <a href="" download>Tap To Download</a>
+                        </p>
+                    </div>
+
                 </div>
             </div>
             <div class="footer_share_block">
@@ -702,72 +705,6 @@ a.pre_footer_list-menu__item {
         </div>
 	</div>
 </div>
-
-{% comment %} <script>
-document.getElementById("downloadBtn").addEventListener("click", async function(e) {
-  e.preventDefault();
-
-  async function forceDownload(url, filename) {
-    const response = await fetch(url);
-    const blob = await response.blob();
-    const blobUrl = window.URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = blobUrl;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-
-    window.URL.revokeObjectURL(blobUrl);
-  }
-
-  // First PDF
-  await forceDownload(
-    "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Kitchen_One_Pager.pdf?v=1771825241",
-    "Kitchen_One_Pager.pdf"
-  );
-
-  // Small delay before second
-  setTimeout(async () => {
-    await forceDownload(
-      "https://cdn.shopify.com/s/files/1/0962/3794/5196/files/Ludic_Clogs_One_Pager.pdf?v=1771825242",
-      "Ludic_Clogs_One_Pager.pdf"
-    );
-  }, 1500);
-
-});
-</script> {% endcomment %}
-
-<script>
-document.getElementById("downloadBtn").addEventListener("click", async function(e) {
-  e.preventDefault();
-
-  async function forceDownload(url, filename) {
-    const response = await fetch(url);
-    const buffer = await response.arrayBuffer();
-
-    const blob = new Blob([buffer], { type: "application/pdf" });
-    const blobUrl = window.URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = blobUrl;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-
-    window.URL.revokeObjectURL(blobUrl);
-  }
-
-  await forceDownload("PDF_URL_1", "Kitchen_One_Pager.pdf");
-
-  setTimeout(async () => {
-    await forceDownload("PDF_URL_2", "Ludic_Clogs_One_Pager.pdf");
-  }, 1000);
-
-});
-</script>
 
 
 <script>
