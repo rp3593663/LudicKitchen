@@ -1008,8 +1008,16 @@
           return;
         }
 
-        if (tab === "contact") {
+        {% comment %} if (tab === "contact") {
           window.location.href = "mailto:kitchen@ludic.life";
+          return;
+        } {% endcomment %}
+
+        if (tab === "contact") {
+          window.open(
+            "https://mail.google.com/mail/?view=cm&fs=1&to=kitchen@ludic.life",
+            "_blank"
+          );
           return;
         }
 
