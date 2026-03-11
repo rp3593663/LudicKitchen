@@ -251,6 +251,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!sticky || !popup || sections.length === 0) return;
 
+  sections.forEach(sec => {
+    const src = sec.dataset.videoSrc;
+    if (!src) return;
+
+    const v = document.createElement("video");
+    v.src = src;
+    v.preload = "auto";
+  });
+
+
+
   let activeSrc = null;
 
   // 🧠 Store only closed videos for THIS PAGE SESSION
