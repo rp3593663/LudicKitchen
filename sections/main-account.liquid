@@ -1014,9 +1014,10 @@
         } {% endcomment %}
 
         if (tab === "contact") {
-          window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=kitchen@ludic.life";
+          window.location.assign("mailto:kitchen@ludic.life");
           return;
         }
+
         activateTab(tab);
 
         // 👇 auto close on mobile
