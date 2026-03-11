@@ -730,6 +730,32 @@ a.pre_footer_list-menu__item {
 </div>
 
 
+
+
+<script>
+document.querySelectorAll('.pdf-content a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const url = this.href;
+    const filename = url.split('/').pop().split('?')[0];
+
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        const blobUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(blobUrl);
+      });
+  });
+});
+</script>
+
 <script>
 {% comment %} document.addEventListener("DOMContentLoaded", function () {
   const pageUrl = encodeURIComponent(window.location.href);
