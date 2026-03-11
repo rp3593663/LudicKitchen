@@ -285,13 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // stickyPreviewVideo.load();
       // stickyPreviewVideo.play().catch(() => {});
       stickyPreviewVideo.src = data.src;
-      stickyPreviewVideo.load();
 
-      stickyPreviewVideo.addEventListener("canplay", function handler() {
+      stickyPreviewVideo.onloadeddata = () => {
         stickyPreviewVideo.play().catch(() => {});
         sticky.classList.remove("hidden_sticky_video");
-        stickyPreviewVideo.removeEventListener("canplay", handler);
-      });
+      };
     }
     stickyTitle.textContent = data.title || "";
     stickyText.textContent = data.text || "";
