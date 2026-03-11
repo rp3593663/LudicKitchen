@@ -244,7 +244,7 @@
           "settings": {
             "tab_handle": "campaign_activation_cancellation_outcomes",
             "question": "What does “project activation” mean?",
-            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><ul><li>Once 75% of the target is reached:</li><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
+            "answer": "<p>Each Ludic Kitchen project has a minimum funding threshold.</p><p>Once 75% of the target is reached:</p><ul><li>The project is considered activated</li><li>Production planning begins</li></ul><p>Contributions are confirmed as consumer advances. </p>"
           }
         },
         "faq_gJChJK": {
@@ -360,7 +360,7 @@
         "fullwidth": false,
         "padding": "",
         "margin": "98px 0px",
-        "heading": "Everything,<span> clearly explained</span>",
+        "heading": "Everything, <span>clearly explained</span>",
         "description": "Ludic Kitchen works differently from traditional launches. So we’ve laid out the details — how participation works, how contributions are treated, timelines, credits, and what happens at every stage. If you’re deciding whether to join, this is where clarity lives."
       }
     }
