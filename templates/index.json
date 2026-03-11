@@ -53,10 +53,11 @@
         "fullwidth": true,
         "padding": "",
         "margin": "",
-        "section_video_title": "",
-        "section_video_text": "",
-        "section_popup_title": "",
-        "section_popup_text": ""
+        "section_video": "shopify://files/videos/5.mp4",
+        "section_video_title": "Main Video",
+        "section_video_text": "01 : 24 min",
+        "section_popup_title": "Main Video",
+        "section_popup_text": "Main Video"
       }
     },
     "how_works_XGp7pm": {
