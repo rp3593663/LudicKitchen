@@ -220,7 +220,7 @@
           "settings": {
             "tab_handle": "credit_value",
             "question": "What is Ludic Credit?",
-            "answer": "<p>Ludic Credit is closed-loop store credit that can be redeemed only on Ludic’s official website.<br/>It is:</p><ul><li>Issued shortly after the campaign closes</li><li>Valid for 12 months</li><li>Non-transferable and non-redeemable for cash</li></ul>"
+            "answer": "<p>Ludic Credit is closed-loop store credit that can be redeemed only on Ludic’s official website.<br/>It is:</p><ul><li>Issued shortly after the campaign closes</li><li>Valid for 6 to 12 months, depending on the tier.</li><li>Non-transferable and non-redeemable for cash</li></ul>"
           }
         },
         "faq_jJzDej": {
@@ -360,7 +360,7 @@
         "fullwidth": false,
         "padding": "",
         "margin": "98px 0px",
-        "heading": "Everything, <span> clearly explained</span>",
+        "heading": "Everything,  clearly explained",
         "description": "Ludic Kitchen works differently from traditional launches. So we’ve laid out the details — how participation works, how contributions are treated, timelines, credits, and what happens at every stage. If you’re deciding whether to join, this is where clarity lives."
       }
     }
