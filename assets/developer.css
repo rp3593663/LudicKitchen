@@ -672,7 +672,7 @@ a.faq_btn.theme_btn {
     /* padding: 18px 28px; */
 }
 .faq-item[data-tab="campaign_activation_cancellation_outcomes"] .faq-answer ul{
-    margin:0;
+    margin-top:0;
 }
 
 
