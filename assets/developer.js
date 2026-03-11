@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sticky.dataset.popupTitle = data.popupTitle || "";
     sticky.dataset.popupText = data.popupText || "";
 
-    sticky.classList.remove("hidden_sticky_video");
+    // sticky.classList.remove("hidden_sticky_video");
   }
 
   const observer = new IntersectionObserver((entries) => {
