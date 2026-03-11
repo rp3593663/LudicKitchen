@@ -278,9 +278,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // stickyThumb.src = data.thumb || "";
     if (data.src) {
+      // stickyPreviewVideo.src = data.src;
+      // stickyPreviewVideo.load();
+      // stickyPreviewVideo.play().catch(() => {});
       stickyPreviewVideo.src = data.src;
       stickyPreviewVideo.load();
-      stickyPreviewVideo.play().catch(() => {});
+
+      stickyPreviewVideo.addEventListener("canplay", function handler() {
+        stickyPreviewVideo.play().catch(() => {});
+        sticky.classList.remove("hidden_sticky_video");
+        stickyPreviewVideo.removeEventListener("canplay", handler);
+      });
     }
     stickyTitle.textContent = data.title || "";
     stickyText.textContent = data.text || "";
