@@ -255,9 +255,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const src = sec.dataset.videoSrc;
     if (!src) return;
 
-    const v = document.createElement("video");
-    v.src = src;
-    v.preload = "auto";
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "video";
+    link.href = src;
+
+    document.head.appendChild(link);
   });
 
 
